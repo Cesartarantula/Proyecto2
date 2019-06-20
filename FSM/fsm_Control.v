@@ -10,10 +10,12 @@
 module fsmControl  ( input clk,
               input reset,
               input init,
-              input [7:0] umbral_VCFC,
+              input [1:0] umbral_MF,
+	      input [1:0] umbral_D,
+	      input [3:0] umbral_VC,
               input FIFO_error,
               input FIFO_empty,
-              output reg [7:0] umbrales_VCFC,
+              output reg [7:0] umbrales_I,
               output reg active_out,
               output reg idle_out,
               output reg error_out);
@@ -41,7 +43,7 @@ module fsmControl  ( input clk,
     error_out = 0;
     active_out = 0;
     idle_out = 0;
-    umbrales_VCFC = 0;
+    umbrales_I = 0;
     nxt_state = state;
     //Estados.
     case(state)
@@ -51,7 +53,7 @@ module fsmControl  ( input clk,
       end
 
       INIT: begin
-        umbrales_VCFC = umbral_VCFC;
+	umbrales_I = {umbral_MF,umbral_VC,umbral_D};
         if (FIFO_error)
           nxt_state = ERROR;
         else
@@ -59,7 +61,7 @@ module fsmControl  ( input clk,
       end
 
       IDLE: begin
-        umbrales_VCFC = umbral_VCFC;
+        umbrales_I = {umbral_MF,umbral_VC,umbral_D};
         if (FIFO_error)
           nxt_state = ERROR;
         else begin
@@ -72,7 +74,7 @@ module fsmControl  ( input clk,
       end
 
     ACTIVE: begin
-      umbrales_VCFC = umbral_VCFC;
+      umbrales_I = {umbral_MF,umbral_VC,umbral_D};
       idle_out = 0;
       active_out = 1;
       if (FIFO_error) begin

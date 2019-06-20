@@ -15,7 +15,10 @@ fsm; opt;
 memory; opt;
 
 #Mapeo a biblioteca interna de celdas
-techmap; opt
+techmap; opt;
+
+#Hace un solo modulo
+flatten; opt;
 
 #Mapea los flip flops de libreria cmos_cells
 dfflibmap -liberty cmos_cells.lib
@@ -23,11 +26,11 @@ dfflibmap -liberty cmos_cells.lib
 #Usa librería cmos_cells
 abc -liberty cmos_cells.lib
 
-#Diagrama
-#show -lib cmos_cells.v
+#Calcula el area
+stat -liberty cmos_cells.lib
 
 #Limpieza
 clean
 
-#Escritura archivo sintetizado
-write_verilog fsm_ControlEstructural.v
+#Escritura archivo sintetizado, sin atributos
+write_verilog -noattr fsm_ControlEstructural.v

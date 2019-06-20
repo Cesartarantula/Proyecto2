@@ -9,7 +9,7 @@
 `include "fsm_Control.v"
 `include "cmos_cells.v"
 
-// módulo banco de pruebas del diseño
+//Módulo Banco de Pruebas
 module testbench;
    /*AUTOWIRE*/
    // Beginning of automatic wires (for undeclared instantiated-module outputs)
@@ -21,10 +21,12 @@ module testbench;
    wire			idle_condu;			// From fsm of fsmControl.v
    wire			init;			// From prob of probador.v
    wire			reset;		// From prob of probador.v
-   wire	[7:0] umbral_VCFC;		// From prob of probador.v
-   wire	[7:0] umbrales_VCFC_condu;		// From fsm of fsmControl.v
-   wire [7:0] umbrales_VCFC_estru;
-   wire  	        	active_estru;
+   wire	[1:0] umbral_MF;		
+   wire	[1:0] umbral_D;		
+   wire	[3:0] umbral_VC;
+   wire	[7:0] umbrales_I_condu;		// From fsm of fsmControl.v
+   wire [7:0] umbrales_I_estru;
+   wire  	        active_estru;
    wire			idle_estru;
    wire			error_estru;
    // End of automatics
@@ -32,7 +34,7 @@ module testbench;
    //Instancia FSM Conductual
    fsmControl fsmCondu(/*AUTOINST*/
 		  // Outputs
-		  .umbrales_VCFC	(umbrales_VCFC_condu),
+		  .umbrales_I	(umbrales_I_condu),
 		  .active_out		(active_condu),
 		  .idle_out			(idle_condu),
 		  .error_out		(error_condu),
@@ -40,13 +42,15 @@ module testbench;
 		  .clk			(clk),
 		  .reset		(reset),
 		  .init			(init),
-		  .umbral_VCFC		(umbral_VCFC),
+	          .umbral_MF		(umbral_MF),
+		  .umbral_VC		(umbral_VC),
+                  .umbral_D		(umbral_D),
 		  .FIFO_error		(FIFO_error),
 		  .FIFO_empty		(FIFO_empty));
   //Instancia FSM Estructural
   fsmControlEstructural fsmEstru(/*AUTOINST*/
 		  // Outputs
-		  .umbrales_VCFC	(umbrales_VCFC_estru),
+		  .umbrales_I	(umbrales_I_estru),
 		  .active_out		(active_estru),
 		  .idle_out			(idle_estru),
 		  .error_out		(error_estru),
@@ -54,7 +58,9 @@ module testbench;
 		  .clk			(clk),
 		  .reset		(reset),
 		  .init			(init),
-		  .umbral_VCFC		(umbral_VCFC),
+		  .umbral_MF		(umbral_MF),
+		  .umbral_VC		(umbral_VC),
+                  .umbral_D		(umbral_D),
 		  .FIFO_error		(FIFO_error),
 		  .FIFO_empty		(FIFO_empty));
    
@@ -64,15 +70,17 @@ module testbench;
 		 .clk			(clk),
 		 .reset		(reset),
 		 .init			(init),
-		 .umbral_VCFC		(umbral_VCFC),
+		 .umbral_MF		(umbral_MF),
+		 .umbral_VC		(umbral_VC),
+                 .umbral_D		(umbral_D),
 		 .FIFO_error		(FIFO_error),
 		 .FIFO_empty		(FIFO_empty),
 		 // Inputs
-		 .umbrales_VCFC_condu		(umbrales_VCFC_condu),
+		 .umbrales_I_condu		(umbrales_I_condu),
 		 .active_condu		        (active_condu),
 		 .idle_condu			(idle_condu),
 		 .error_condu			(error_condu),
-		 .umbrales_VCFC_estru		(umbrales_VCFC_estru),
+		 .umbrales_I_estru		(umbrales_I_estru),
 		 .active_estru		        (active_estru),
 		 .idle_estru			(idle_estru),
 		 .error_estru			(error_estru));
