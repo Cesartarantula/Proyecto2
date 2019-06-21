@@ -51,32 +51,41 @@ Removed a total of 0 dead cases.
 3.4. Executing PROC_ARST pass (detect async resets in processes).
 
 3.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
-Creating decoders for process `\dual_port_memory.$proc$dual_port_memory.v:13$2'.
-     1/4: $0\oDataOut0[5:0]
-     2/4: $0$memwr$\Ram$dual_port_memory.v:17$1_EN[5:0]$5
-     3/4: $0$memwr$\Ram$dual_port_memory.v:17$1_DATA[5:0]$4
-     4/4: $0$memwr$\Ram$dual_port_memory.v:17$1_ADDR[7:0]$3
+Creating decoders for process `\dual_port_memory.$proc$dual_port_memory.v:23$6'.
+     1/4: $1\oDataOut0[0:0]
+     2/4: $1\oDataOut[5:0]
+     3/4: $0\oDataOut0[0:0]
+     4/4: $0\oDataOut[5:0]
+Creating decoders for process `\dual_port_memory.$proc$dual_port_memory.v:15$2'.
+     1/3: $0$memwr$\Ram$dual_port_memory.v:19$1_EN[5:0]$5
+     2/3: $0$memwr$\Ram$dual_port_memory.v:19$1_DATA[5:0]$4
+     3/3: $0$memwr$\Ram$dual_port_memory.v:19$1_ADDR[7:0]$3
 
 3.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\dual_port_memory.\oDataOut' from process `\dual_port_memory.$proc$dual_port_memory.v:23$6'.
+Latch inferred for signal `\dual_port_memory.\oDataOut0' from process `\dual_port_memory.$proc$dual_port_memory.v:23$6': $auto$proc_dlatch.cc:408:proc_dlatch$34
 
 3.7. Executing PROC_DFF pass (convert process syncs to FFs).
-Creating register for signal `\dual_port_memory.\oDataOut0' using process `\dual_port_memory.$proc$dual_port_memory.v:13$2'.
-  created $dff cell `$procdff$17' with positive edge clock.
-Creating register for signal `\dual_port_memory.$memwr$\Ram$dual_port_memory.v:17$1_ADDR' using process `\dual_port_memory.$proc$dual_port_memory.v:13$2'.
-  created $dff cell `$procdff$18' with positive edge clock.
-Creating register for signal `\dual_port_memory.$memwr$\Ram$dual_port_memory.v:17$1_DATA' using process `\dual_port_memory.$proc$dual_port_memory.v:13$2'.
-  created $dff cell `$procdff$19' with positive edge clock.
-Creating register for signal `\dual_port_memory.$memwr$\Ram$dual_port_memory.v:17$1_EN' using process `\dual_port_memory.$proc$dual_port_memory.v:13$2'.
-  created $dff cell `$procdff$20' with positive edge clock.
+Creating register for signal `\dual_port_memory.$memwr$\Ram$dual_port_memory.v:19$1_ADDR' using process `\dual_port_memory.$proc$dual_port_memory.v:15$2'.
+  created $dff cell `$procdff$35' with positive edge clock.
+Creating register for signal `\dual_port_memory.$memwr$\Ram$dual_port_memory.v:19$1_DATA' using process `\dual_port_memory.$proc$dual_port_memory.v:15$2'.
+  created $dff cell `$procdff$36' with positive edge clock.
+Creating register for signal `\dual_port_memory.$memwr$\Ram$dual_port_memory.v:19$1_EN' using process `\dual_port_memory.$proc$dual_port_memory.v:15$2'.
+  created $dff cell `$procdff$37' with positive edge clock.
 
 3.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
-Found and cleaned up 1 empty switch in `\dual_port_memory.$proc$dual_port_memory.v:13$2'.
-Removing empty process `dual_port_memory.$proc$dual_port_memory.v:13$2'.
-Cleaned up 1 empty switch.
+Found and cleaned up 1 empty switch in `\dual_port_memory.$proc$dual_port_memory.v:23$6'.
+Removing empty process `dual_port_memory.$proc$dual_port_memory.v:23$6'.
+Found and cleaned up 1 empty switch in `\dual_port_memory.$proc$dual_port_memory.v:15$2'.
+Removing empty process `dual_port_memory.$proc$dual_port_memory.v:15$2'.
+Cleaned up 2 empty switches.
 
 4. Executing OPT pass (performing simple optimizations).
 
 4.1. Executing OPT_EXPR pass (perform const folding).
+Replacing $mux cell `$procmux$10' (?) in module `\dual_port_memory' with constant driver `$procmux$10_Y = $memrd$\Ram$dual_port_memory.v:25$7_DATA [0]'.
+Replacing $reduce_or cell `$auto$proc_dlatch.cc:247:make_hold$26' (const_or) in module `\dual_port_memory' with constant driver `$auto$rtlil.cc:1604:ReduceOr$27 = 1'1'.
+Replacing $reduce_or cell `$auto$proc_dlatch.cc:247:make_hold$30' (unary_buffer) in module `\dual_port_memory' with constant driver `$auto$rtlil.cc:1604:ReduceOr$31 = $auto$rtlil.cc:1629:And$29'.
 
 4.2. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\dual_port_memory'.
@@ -86,18 +95,19 @@ Removed a total of 0 cells.
 Running muxtree optimizer on module \dual_port_memory..
   Creating internal representation of mux trees.
   Evaluating internal representation of mux trees.
-    Root of a mux tree: $procmux$15 (pure)
-    Root of a mux tree: $procmux$12 (pure)
-    Root of a mux tree: $procmux$9 (pure)
+    Root of a mux tree: $procmux$22 (pure)
+    Root of a mux tree: $procmux$19 (pure)
+    Root of a mux tree: $procmux$16 (pure)
+    Root of a mux tree: $procmux$13 (pure)
   Analyzing evaluation results.
 Removed 0 multiplexer ports.
 
 4.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
   Optimizing cells in module \dual_port_memory.
-    Consolidated identical input bits for $mux cell $procmux$9:
-      Old ports: A=6'000000, B=6'111111, Y=$procmux$9_Y
-      New ports: A=1'0, B=1'1, Y=$procmux$9_Y [0]
-      New connections: $procmux$9_Y [5:1] = { $procmux$9_Y [0] $procmux$9_Y [0] $procmux$9_Y [0] $procmux$9_Y [0] $procmux$9_Y [0] }
+    Consolidated identical input bits for $mux cell $procmux$16:
+      Old ports: A=6'000000, B=6'111111, Y=$procmux$16_Y
+      New ports: A=1'0, B=1'1, Y=$procmux$16_Y [0]
+      New connections: $procmux$16_Y [5:1] = { $procmux$16_Y [0] $procmux$16_Y [0] $procmux$16_Y [0] $procmux$16_Y [0] $procmux$16_Y [0] }
   Optimizing cells in module \dual_port_memory.
 Performed a total of 1 changes.
 
@@ -109,6 +119,12 @@ Removed a total of 0 cells.
 
 4.7. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \dual_port_memory..
+  removing unused `$not' cell `$auto$proc_dlatch.cc:238:make_hold$24'.
+  removing unused `$and' cell `$auto$proc_dlatch.cc:251:make_hold$28'.
+  removing unused `$not' cell `$auto$proc_dlatch.cc:408:proc_dlatch$32'.
+  removing unused `$dlatch' cell `$auto$proc_dlatch.cc:408:proc_dlatch$34'.
+  removing unused non-port wire \oDataOut0.
+  removed 1 unused temporary wires.
 
 4.8. Executing OPT_EXPR pass (perform const folding).
 
@@ -118,9 +134,10 @@ Finding unused cells or wires in module \dual_port_memory..
 Running muxtree optimizer on module \dual_port_memory..
   Creating internal representation of mux trees.
   Evaluating internal representation of mux trees.
-    Root of a mux tree: $procmux$12 (pure)
-    Root of a mux tree: $procmux$15 (pure)
-    Root of a mux tree: $procmux$9 (pure)
+    Root of a mux tree: $procmux$13 (pure)
+    Root of a mux tree: $procmux$16 (pure)
+    Root of a mux tree: $procmux$19 (pure)
+    Root of a mux tree: $procmux$22 (pure)
   Analyzing evaluation results.
 Removed 0 multiplexer ports.
 
@@ -153,9 +170,10 @@ Removed a total of 0 cells.
 Running muxtree optimizer on module \dual_port_memory..
   Creating internal representation of mux trees.
   Evaluating internal representation of mux trees.
-    Root of a mux tree: $procmux$12 (pure)
-    Root of a mux tree: $procmux$15 (pure)
-    Root of a mux tree: $procmux$9 (pure)
+    Root of a mux tree: $procmux$13 (pure)
+    Root of a mux tree: $procmux$16 (pure)
+    Root of a mux tree: $procmux$19 (pure)
+    Root of a mux tree: $procmux$22 (pure)
   Analyzing evaluation results.
 Removed 0 multiplexer ports.
 
@@ -179,7 +197,7 @@ Finding unused cells or wires in module \dual_port_memory..
 6. Executing FSM pass (extract and optimize FSM).
 
 6.1. Executing FSM_DETECT pass (finding FSMs in design).
-Not marking dual_port_memory.$memwr$\Ram$dual_port_memory.v:17$1_EN as FSM state register:
+Not marking dual_port_memory.$memwr$\Ram$dual_port_memory.v:19$1_EN as FSM state register:
     Users of register don't seem to benefit from recoding.
 
 6.2. Executing FSM_EXTRACT pass (extracting FSM from design).
@@ -209,9 +227,10 @@ Removed a total of 0 cells.
 Running muxtree optimizer on module \dual_port_memory..
   Creating internal representation of mux trees.
   Evaluating internal representation of mux trees.
-    Root of a mux tree: $procmux$12 (pure)
-    Root of a mux tree: $procmux$15 (pure)
-    Root of a mux tree: $procmux$9 (pure)
+    Root of a mux tree: $procmux$13 (pure)
+    Root of a mux tree: $procmux$16 (pure)
+    Root of a mux tree: $procmux$19 (pure)
+    Root of a mux tree: $procmux$22 (pure)
   Analyzing evaluation results.
 Removed 0 multiplexer ports.
 
@@ -235,15 +254,14 @@ Finding unused cells or wires in module \dual_port_memory..
 8. Executing MEMORY pass.
 
 8.1. Executing MEMORY_DFF pass (merging $dff cells to $memrd and $memwr).
-Checking cell `$memwr$\Ram$dual_port_memory.v:17$7' in module `\dual_port_memory': merged $dff to cell.
-Checking cell `$memrd$\Ram$dual_port_memory.v:18$6' in module `\dual_port_memory': merged data $dff to cell.
+Checking cell `$memwr$\Ram$dual_port_memory.v:19$8' in module `\dual_port_memory': merged $dff to cell.
+Checking cell `$memrd$\Ram$dual_port_memory.v:25$7' in module `\dual_port_memory': no (compatible) $dff found.
 
 8.2. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \dual_port_memory..
-  removing unused `$dff' cell `$procdff$18'.
-  removing unused `$dff' cell `$procdff$17'.
-  removing unused `$dff' cell `$procdff$19'.
-  removing unused `$dff' cell `$procdff$20'.
+  removing unused `$dff' cell `$procdff$36'.
+  removing unused `$dff' cell `$procdff$35'.
+  removing unused `$dff' cell `$procdff$37'.
 
 8.3. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
 
@@ -252,24 +270,24 @@ Finding unused cells or wires in module \dual_port_memory..
 
 8.5. Executing MEMORY_COLLECT pass (generating $mem cells).
 Collecting $memrd, $memwr and $meminit for memory `\Ram' in module `\dual_port_memory':
-  $memwr$\Ram$dual_port_memory.v:17$7 ($memwr)
-  $memrd$\Ram$dual_port_memory.v:18$6 ($memrd)
+  $memwr$\Ram$dual_port_memory.v:19$8 ($memwr)
+  $memrd$\Ram$dual_port_memory.v:25$7 ($memrd)
 
 8.6. Executing MEMORY_MAP pass (converting $mem cells to logic and flip-flops).
 Mapping memory cell \Ram in module \dual_port_memory:
   created 8 $dff cells and 0 static cells of width 6.
-  read interface: 1 $dff and 7 $mux cells.
+  read interface: 0 $dff and 7 $mux cells.
   write interface: 8 write mux blocks.
 
 9. Executing OPT pass (performing simple optimizations).
 
 9.1. Executing OPT_EXPR pass (perform const folding).
-Replacing $eq cell `$auto$memory_map.cc:65:addr_decode$62' in module `dual_port_memory' with inverter.
-Replacing $eq cell `$auto$memory_map.cc:65:addr_decode$64' in module `dual_port_memory' with inverter.
-Replacing $eq cell `$auto$memory_map.cc:65:addr_decode$66' in module `dual_port_memory' with inverter.
-Replacing $eq cell `$auto$memory_map.cc:65:addr_decode$76' (1) in module `\dual_port_memory' with constant driver `$auto$rtlil.cc:1641:Eq$77 = $0$memwr$\Ram$dual_port_memory.v:17$1_ADDR[7:0]$3 [0]'.
-Replacing $eq cell `$auto$memory_map.cc:65:addr_decode$84' (1) in module `\dual_port_memory' with constant driver `$auto$rtlil.cc:1641:Eq$85 = $0$memwr$\Ram$dual_port_memory.v:17$1_ADDR[7:0]$3 [1]'.
-Replacing $eq cell `$auto$memory_map.cc:65:addr_decode$100' (1) in module `\dual_port_memory' with constant driver `$auto$rtlil.cc:1641:Eq$101 = $0$memwr$\Ram$dual_port_memory.v:17$1_ADDR[7:0]$3 [2]'.
+Replacing $eq cell `$auto$memory_map.cc:65:addr_decode$76' in module `dual_port_memory' with inverter.
+Replacing $eq cell `$auto$memory_map.cc:65:addr_decode$78' in module `dual_port_memory' with inverter.
+Replacing $eq cell `$auto$memory_map.cc:65:addr_decode$80' in module `dual_port_memory' with inverter.
+Replacing $eq cell `$auto$memory_map.cc:65:addr_decode$90' (1) in module `\dual_port_memory' with constant driver `$auto$rtlil.cc:1641:Eq$91 = $0$memwr$\Ram$dual_port_memory.v:19$1_ADDR[7:0]$3 [0]'.
+Replacing $eq cell `$auto$memory_map.cc:65:addr_decode$98' (1) in module `\dual_port_memory' with constant driver `$auto$rtlil.cc:1641:Eq$99 = $0$memwr$\Ram$dual_port_memory.v:19$1_ADDR[7:0]$3 [1]'.
+Replacing $eq cell `$auto$memory_map.cc:65:addr_decode$114' (1) in module `\dual_port_memory' with constant driver `$auto$rtlil.cc:1641:Eq$115 = $0$memwr$\Ram$dual_port_memory.v:19$1_ADDR[7:0]$3 [2]'.
 
 9.2. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\dual_port_memory'.
@@ -279,18 +297,18 @@ Removed a total of 0 cells.
 Running muxtree optimizer on module \dual_port_memory..
   Creating internal representation of mux trees.
   Evaluating internal representation of mux trees.
-    Root of a mux tree: $memory\Ram$wrmux[5][0][0]$114 (pure)
-    Root of a mux tree: $memory\Ram$wrmux[4][0][0]$108 (pure)
-    Root of a mux tree: $memory\Ram$wrmux[6][0][0]$122 (pure)
-    Root of a mux tree: $memory\Ram$wrmux[3][0][0]$98 (pure)
-    Root of a mux tree: $memory\Ram$wrmux[2][0][0]$92 (pure)
-    Root of a mux tree: $memory\Ram$wrmux[1][0][0]$82 (pure)
-    Root of a mux tree: $memory\Ram$wrmux[0][0][0]$74 (pure)
-    Root of a mux tree: $memory\Ram$rdmux[0][0][0]$41 (pure)
-    Root of a mux tree: $memory\Ram$wrmux[7][0][0]$128 (pure)
-    Root of a mux tree: $procmux$12
-    Root of a mux tree: $procmux$15 (pure)
-    Root of a mux tree: $procmux$9 (pure)
+    Root of a mux tree: $memory\Ram$wrmux[5][0][0]$128 (pure)
+    Root of a mux tree: $memory\Ram$wrmux[4][0][0]$122 (pure)
+    Root of a mux tree: $memory\Ram$wrmux[6][0][0]$136 (pure)
+    Root of a mux tree: $memory\Ram$wrmux[3][0][0]$112 (pure)
+    Root of a mux tree: $memory\Ram$wrmux[2][0][0]$106 (pure)
+    Root of a mux tree: $memory\Ram$wrmux[1][0][0]$96 (pure)
+    Root of a mux tree: $memory\Ram$wrmux[0][0][0]$88 (pure)
+    Root of a mux tree: $memory\Ram$wrmux[7][0][0]$142 (pure)
+    Root of a mux tree: $procmux$13 (pure)
+    Root of a mux tree: $procmux$16 (pure)
+    Root of a mux tree: $procmux$19
+    Root of a mux tree: $procmux$22 (pure)
   Analyzing evaluation results.
 Removed 0 multiplexer ports.
 
@@ -336,62 +354,62 @@ Generating RTLIL representation for module `\_90_pow'.
 Generating RTLIL representation for module `\_90_pmux'.
 Generating RTLIL representation for module `\_90_lut'.
 Successfully finished Verilog frontend.
-Mapping dual_port_memory.$memory\Ram[3]$29 ($dff) with simplemap.
-Mapping dual_port_memory.$memory\Ram[1]$25 ($dff) with simplemap.
-Mapping dual_port_memory.$memory\Ram[2]$27 ($dff) with simplemap.
-Mapping dual_port_memory.$procmux$9 ($mux) with simplemap.
-Mapping dual_port_memory.$procmux$12 ($mux) with simplemap.
-Mapping dual_port_memory.$procmux$15 ($mux) with simplemap.
-Mapping dual_port_memory.$memory\Ram[0]$23 ($dff) with simplemap.
-Mapping dual_port_memory.$memory\Ram[4]$31 ($dff) with simplemap.
-Mapping dual_port_memory.$memory\Ram[5]$33 ($dff) with simplemap.
-Mapping dual_port_memory.$memory\Ram[6]$35 ($dff) with simplemap.
-Mapping dual_port_memory.$memory\Ram[7]$37 ($dff) with simplemap.
-Mapping dual_port_memory.$memory\Ram$rdreg[0]$39 ($dff) with simplemap.
-Mapping dual_port_memory.$memory\Ram$rdmux[0][0][0]$41 ($mux) with simplemap.
-Mapping dual_port_memory.$memory\Ram$rdmux[0][1][0]$44 ($mux) with simplemap.
-Mapping dual_port_memory.$memory\Ram$rdmux[0][1][1]$47 ($mux) with simplemap.
-Mapping dual_port_memory.$memory\Ram$rdmux[0][2][0]$50 ($mux) with simplemap.
-Mapping dual_port_memory.$memory\Ram$rdmux[0][2][1]$53 ($mux) with simplemap.
-Mapping dual_port_memory.$memory\Ram$rdmux[0][2][2]$56 ($mux) with simplemap.
-Mapping dual_port_memory.$memory\Ram$rdmux[0][2][3]$59 ($mux) with simplemap.
-Mapping dual_port_memory.$auto$memory_map.cc:65:addr_decode$62 ($not) with simplemap.
-Mapping dual_port_memory.$auto$memory_map.cc:65:addr_decode$64 ($not) with simplemap.
-Mapping dual_port_memory.$auto$memory_map.cc:65:addr_decode$66 ($not) with simplemap.
-Mapping dual_port_memory.$auto$memory_map.cc:70:addr_decode$68 ($and) with simplemap.
-Mapping dual_port_memory.$auto$memory_map.cc:70:addr_decode$70 ($and) with simplemap.
-Mapping dual_port_memory.$memory\Ram$wren[0][0][0]$72 ($and) with simplemap.
-Mapping dual_port_memory.$memory\Ram$wrmux[0][0][0]$74 ($mux) with simplemap.
-Mapping dual_port_memory.$auto$memory_map.cc:70:addr_decode$78 ($and) with simplemap.
-Mapping dual_port_memory.$memory\Ram$wren[1][0][0]$80 ($and) with simplemap.
-Mapping dual_port_memory.$memory\Ram$wrmux[1][0][0]$82 ($mux) with simplemap.
-Mapping dual_port_memory.$auto$memory_map.cc:70:addr_decode$86 ($and) with simplemap.
-Mapping dual_port_memory.$auto$memory_map.cc:70:addr_decode$88 ($and) with simplemap.
-Mapping dual_port_memory.$memory\Ram$wren[2][0][0]$90 ($and) with simplemap.
-Mapping dual_port_memory.$memory\Ram$wrmux[2][0][0]$92 ($mux) with simplemap.
-Mapping dual_port_memory.$auto$memory_map.cc:70:addr_decode$94 ($and) with simplemap.
-Mapping dual_port_memory.$memory\Ram$wren[3][0][0]$96 ($and) with simplemap.
-Mapping dual_port_memory.$memory\Ram$wrmux[3][0][0]$98 ($mux) with simplemap.
+Mapping dual_port_memory.$memory\Ram[6]$51 ($dff) with simplemap.
+Mapping dual_port_memory.$memory\Ram[1]$41 ($dff) with simplemap.
+Mapping dual_port_memory.$memory\Ram[5]$49 ($dff) with simplemap.
+Mapping dual_port_memory.$memory\Ram[4]$47 ($dff) with simplemap.
+Mapping dual_port_memory.$procmux$13 ($mux) with simplemap.
+Mapping dual_port_memory.$procmux$16 ($mux) with simplemap.
+Mapping dual_port_memory.$memory\Ram[3]$45 ($dff) with simplemap.
+Mapping dual_port_memory.$procmux$19 ($mux) with simplemap.
+Mapping dual_port_memory.$memory\Ram[2]$43 ($dff) with simplemap.
+Mapping dual_port_memory.$procmux$22 ($mux) with simplemap.
+Mapping dual_port_memory.$memory\Ram$rdmux[0][0][0]$55 ($mux) with simplemap.
+Mapping dual_port_memory.$memory\Ram$rdmux[0][1][1]$61 ($mux) with simplemap.
+Mapping dual_port_memory.$memory\Ram$rdmux[0][1][0]$58 ($mux) with simplemap.
+Mapping dual_port_memory.$memory\Ram[7]$53 ($dff) with simplemap.
+Mapping dual_port_memory.$memory\Ram[0]$39 ($dff) with simplemap.
+Mapping dual_port_memory.$memory\Ram$rdmux[0][2][0]$64 ($mux) with simplemap.
+Mapping dual_port_memory.$memory\Ram$rdmux[0][2][1]$67 ($mux) with simplemap.
+Mapping dual_port_memory.$memory\Ram$rdmux[0][2][2]$70 ($mux) with simplemap.
+Mapping dual_port_memory.$memory\Ram$rdmux[0][2][3]$73 ($mux) with simplemap.
+Mapping dual_port_memory.$auto$memory_map.cc:65:addr_decode$76 ($not) with simplemap.
+Mapping dual_port_memory.$auto$memory_map.cc:65:addr_decode$78 ($not) with simplemap.
+Mapping dual_port_memory.$auto$memory_map.cc:65:addr_decode$80 ($not) with simplemap.
+Mapping dual_port_memory.$auto$memory_map.cc:70:addr_decode$82 ($and) with simplemap.
+Mapping dual_port_memory.$auto$memory_map.cc:70:addr_decode$84 ($and) with simplemap.
+Mapping dual_port_memory.$memory\Ram$wren[0][0][0]$86 ($and) with simplemap.
+Mapping dual_port_memory.$memory\Ram$wrmux[0][0][0]$88 ($mux) with simplemap.
+Mapping dual_port_memory.$auto$memory_map.cc:70:addr_decode$92 ($and) with simplemap.
+Mapping dual_port_memory.$memory\Ram$wren[1][0][0]$94 ($and) with simplemap.
+Mapping dual_port_memory.$memory\Ram$wrmux[1][0][0]$96 ($mux) with simplemap.
+Mapping dual_port_memory.$auto$memory_map.cc:70:addr_decode$100 ($and) with simplemap.
 Mapping dual_port_memory.$auto$memory_map.cc:70:addr_decode$102 ($and) with simplemap.
-Mapping dual_port_memory.$auto$memory_map.cc:70:addr_decode$104 ($and) with simplemap.
-Mapping dual_port_memory.$memory\Ram$wren[4][0][0]$106 ($and) with simplemap.
-Mapping dual_port_memory.$memory\Ram$wrmux[4][0][0]$108 ($mux) with simplemap.
-Mapping dual_port_memory.$auto$memory_map.cc:70:addr_decode$110 ($and) with simplemap.
-Mapping dual_port_memory.$memory\Ram$wren[5][0][0]$112 ($and) with simplemap.
-Mapping dual_port_memory.$memory\Ram$wrmux[5][0][0]$114 ($mux) with simplemap.
+Mapping dual_port_memory.$memory\Ram$wren[2][0][0]$104 ($and) with simplemap.
+Mapping dual_port_memory.$memory\Ram$wrmux[2][0][0]$106 ($mux) with simplemap.
+Mapping dual_port_memory.$auto$memory_map.cc:70:addr_decode$108 ($and) with simplemap.
+Mapping dual_port_memory.$memory\Ram$wren[3][0][0]$110 ($and) with simplemap.
+Mapping dual_port_memory.$memory\Ram$wrmux[3][0][0]$112 ($mux) with simplemap.
 Mapping dual_port_memory.$auto$memory_map.cc:70:addr_decode$116 ($and) with simplemap.
 Mapping dual_port_memory.$auto$memory_map.cc:70:addr_decode$118 ($and) with simplemap.
-Mapping dual_port_memory.$memory\Ram$wren[6][0][0]$120 ($and) with simplemap.
-Mapping dual_port_memory.$memory\Ram$wrmux[6][0][0]$122 ($mux) with simplemap.
+Mapping dual_port_memory.$memory\Ram$wren[4][0][0]$120 ($and) with simplemap.
+Mapping dual_port_memory.$memory\Ram$wrmux[4][0][0]$122 ($mux) with simplemap.
 Mapping dual_port_memory.$auto$memory_map.cc:70:addr_decode$124 ($and) with simplemap.
-Mapping dual_port_memory.$memory\Ram$wren[7][0][0]$126 ($and) with simplemap.
-Mapping dual_port_memory.$memory\Ram$wrmux[7][0][0]$128 ($mux) with simplemap.
+Mapping dual_port_memory.$memory\Ram$wren[5][0][0]$126 ($and) with simplemap.
+Mapping dual_port_memory.$memory\Ram$wrmux[5][0][0]$128 ($mux) with simplemap.
+Mapping dual_port_memory.$auto$memory_map.cc:70:addr_decode$130 ($and) with simplemap.
+Mapping dual_port_memory.$auto$memory_map.cc:70:addr_decode$132 ($and) with simplemap.
+Mapping dual_port_memory.$memory\Ram$wren[6][0][0]$134 ($and) with simplemap.
+Mapping dual_port_memory.$memory\Ram$wrmux[6][0][0]$136 ($mux) with simplemap.
+Mapping dual_port_memory.$auto$memory_map.cc:70:addr_decode$138 ($and) with simplemap.
+Mapping dual_port_memory.$memory\Ram$wren[7][0][0]$140 ($and) with simplemap.
+Mapping dual_port_memory.$memory\Ram$wrmux[7][0][0]$142 ($mux) with simplemap.
 No more expansions possible.
 
 11. Executing OPT pass (performing simple optimizations).
 
 11.1. Executing OPT_EXPR pass (perform const folding).
-Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$192' (01?) in module `\dual_port_memory' with constant driver `$0$memwr$\Ram$dual_port_memory.v:17$1_EN[5:0]$5 [5] = \iWriteEnable'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$218' (01?) in module `\dual_port_memory' with constant driver `$0$memwr$\Ram$dual_port_memory.v:19$1_EN[5:0]$5 [5] = \iWriteEnable'.
 
 11.2. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\dual_port_memory'.
@@ -415,11 +433,11 @@ Removed a total of 0 cells.
 
 11.7. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \dual_port_memory..
-  removing unused `$_MUX_' cell `$auto$simplemap.cc:277:simplemap_mux$202'.
-  removing unused `$_MUX_' cell `$auto$simplemap.cc:277:simplemap_mux$203'.
-  removing unused `$_MUX_' cell `$auto$simplemap.cc:277:simplemap_mux$204'.
-  removing unused `$_MUX_' cell `$auto$simplemap.cc:277:simplemap_mux$205'.
-  removing unused `$_MUX_' cell `$auto$simplemap.cc:277:simplemap_mux$206'.
+  removing unused `$_MUX_' cell `$auto$simplemap.cc:277:simplemap_mux$240'.
+  removing unused `$_MUX_' cell `$auto$simplemap.cc:277:simplemap_mux$241'.
+  removing unused `$_MUX_' cell `$auto$simplemap.cc:277:simplemap_mux$242'.
+  removing unused `$_MUX_' cell `$auto$simplemap.cc:277:simplemap_mux$243'.
+  removing unused `$_MUX_' cell `$auto$simplemap.cc:277:simplemap_mux$244'.
 
 11.8. Executing OPT_EXPR pass (perform const folding).
 
@@ -524,26 +542,26 @@ Finding unused cells or wires in module \dual_port_memory..
     DFFSR _DFFSR_PPN_ (.C( C), .D( D), .Q( Q), .R(~R), .S( S));
     DFFSR _DFFSR_PPP_ (.C( C), .D( D), .Q( Q), .R( R), .S( S));
 Mapping DFF cells in module `\dual_port_memory':
-  mapped 54 $_DFF_P_ cells to \DFF cells.
+  mapped 48 $_DFF_P_ cells to \DFF cells.
 
 16. Executing ABC pass (technology mapping using ABC).
 
 16.1. Extracting gate netlist of module `\dual_port_memory' to `<abc-temp-dir>/input.blif'..
-Extracted 122 gates and 184 wires to a netlist network with 61 inputs and 54 outputs.
+Extracted 128 gates and 192 wires to a netlist network with 62 inputs and 54 outputs.
 
 16.1.1. Executing ABC.
 Running ABC command: berkeley-abc -s -f <abc-temp-dir>/abc.script 2>&1
 ABC: ABC command line: "source <abc-temp-dir>/abc.script".
 ABC: 
 ABC: + read_blif <abc-temp-dir>/input.blif 
-ABC: + read_lib -w /home/xu/files/i2019/varios/verilog/Proyecto_2_2019/RAM/cmos_cells.lib 
+ABC: + read_lib -w /home/xu/files/i2019/varios/verilog/memories/Memoria_proyecto/20jun2019_2257/cmos_cells.lib 
 ABC: Parsing finished successfully.  Parsing time =     0.00 sec
 ABC: Warning: Templates are not defined.
 ABC: Libery parser cannot read "time_unit".  Assuming   time_unit : "1ns".
 ABC: Libery parser cannot read "capacitive_load_unit". Assuming   capacitive_load_unit(1, pf).
 ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFF".
 ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFSR".
-ABC: Library "demo" from "/home/xu/files/i2019/varios/verilog/Proyecto_2_2019/RAM/cmos_cells.lib" has 4 cells (2 skipped: 2 seq; 0 tri-state; 0 no func).  Time =     0.00 sec
+ABC: Library "demo" from "/home/xu/files/i2019/varios/verilog/memories/Memoria_proyecto/20jun2019_2257/cmos_cells.lib" has 4 cells (2 skipped: 2 seq; 0 tri-state; 0 no func).  Time =     0.00 sec
 ABC: Memory =    0.00 MB. Time =     0.00 sec
 ABC: + strash 
 ABC: + dc2 
@@ -557,11 +575,11 @@ ABC: + map
 ABC: + write_blif <abc-temp-dir>/output.blif 
 
 16.1.2. Re-integrating ABC results.
-ABC RESULTS:              NAND cells:      246
-ABC RESULTS:               NOR cells:       51
-ABC RESULTS:               NOT cells:       17
-ABC RESULTS:        internal signals:       69
-ABC RESULTS:           input signals:       61
+ABC RESULTS:              NAND cells:      207
+ABC RESULTS:               NOR cells:       89
+ABC RESULTS:               NOT cells:       58
+ABC RESULTS:        internal signals:       76
+ABC RESULTS:           input signals:       62
 ABC RESULTS:          output signals:       54
 Removing temp directory.
 
@@ -569,27 +587,27 @@ Removing temp directory.
 
 === dual_port_memory ===
 
-   Number of wires:                429
-   Number of wire bits:            580
-   Number of public wires:          14
-   Number of public wire bits:      78
+   Number of wires:                472
+   Number of wire bits:            623
+   Number of public wires:          15
+   Number of public wire bits:      79
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                368
-     DFF                            54
-     NAND                          246
-     NOR                            51
-     NOT                            17
+   Number of cells:                402
+     DFF                            48
+     NAND                          207
+     NOR                            89
+     NOT                            58
 
-   Chip area for this module: 2211.000000
+   Chip area for this module: 2222.000000
 
-Removed 0 unused cells and 101 unused wires.
+Removed 0 unused cells and 109 unused wires.
 
 18. Executing Verilog backend.
 Dumping module `\dual_port_memory'.
 
-End of script. Logfile hash: 6f5355ed59
-CPU: user 0.20s system 0.01s, MEM: 36.48 MB total, 9.46 MB resident
+End of script. Logfile hash: f78955e69a
+CPU: user 0.22s system 0.00s, MEM: 36.46 MB total, 9.68 MB resident
 Yosys 0.7 (git sha1 61f6811, gcc 6.2.0-11ubuntu1 -O2 -fdebug-prefix-map=/build/yosys-OIL3SR/yosys-0.7=. -fstack-protector-strong -fPIC -Os)
 Time spent: 19% 14x opt_expr (0 sec), 17% 14x opt_merge (0 sec), ...

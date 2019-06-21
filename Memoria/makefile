@@ -1,6 +1,6 @@
 .PHONY: all simu run com synth clean cleanall
 
-#Objects 
+#Objects
 OBJS = dut.v
 EXE = dut.o
 VCD = test.vcd
@@ -18,12 +18,12 @@ all: synth com run simu
 #waveform viewer with gtkwave
 runtest: com run simu
 
-simu: 
-	$(VIEW) $(VCD)
+simu:
+	$(VIEW) $(VCD) config.gtkw
 
 #vvp runtime will generate VCD dump output
 run:
-	$(VVP) $(EXE) 
+	$(VVP) $(EXE)
 
 #Verilog simulation
 com:
