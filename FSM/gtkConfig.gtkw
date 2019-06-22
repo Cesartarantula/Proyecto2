@@ -1,17 +1,16 @@
 [*]
 [*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
-[*] Wed Jun 19 20:17:48 2019
+[*] Sat Jun 22 20:04:36 2019
 [*]
-[dumpfile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Actual/Avance1/FSM_Control/fsmControl.vcd"
-[dumpfile_mtime] "Wed Jun 19 20:02:42 2019"
-[dumpfile_size] 8650
-[savefile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Actual/Avance1/FSM_Control/gtkConfig.gtkw"
+[dumpfile] "/home/cesar/Desktop/DigitalesII/Proyecto2/FSMPRUEBA/fsmControl.vcd"
+[dumpfile_mtime] "Sat Jun 22 19:57:01 2019"
+[dumpfile_size] 24978
+[savefile] "/home/cesar/Desktop/DigitalesII/Proyecto2/FSMPRUEBA/gtkConfig.gtkw"
 [timestart] 0
 [size] 1280 751
 [pos] 1143 0
-*-3.280759 6 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-3.280759 11 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] testbench.
-[treeopen] testbench.fsmEstru.
 [sst_width] 229
 [signals_width] 222
 [sst_expanded] 1
@@ -20,34 +19,42 @@
 testbench.prob.clk
 testbench.prob.reset
 testbench.fsmCondu.init
-testbench.fsmCondu.FIFO_error
-testbench.fsmCondu.FIFO_empty
+testbench.prob.umbral_MF[1:0]
 @22
-testbench.prob.umbral_VCFC[7:0]
-testbench.prob.umbrales_VCFC_condu[7:0]
+testbench.prob.umbral_VC0[3:0]
+@28
+testbench.prob.umbral_D0[1:0]
+@22
+testbench.prob.umbral_VC1[3:0]
+@28
+testbench.prob.umbral_D1[1:0]
+@22
+testbench.prob.FIFO_empty[4:0]
+testbench.prob.FIFO_error[4:0]
 @200
 -Conductual
+@28
+testbench.fsmCondu.clk
+testbench.fsmCondu.reset
 @24
 testbench.fsmCondu.state[4:0]
 testbench.fsmCondu.nxt_state[4:0]
 @28
-testbench.prob.active_condu
-testbench.prob.idle_condu
-testbench.prob.error_condu
-@22
-testbench.fsmCondu.umbral_VCFC[7:0]
-testbench.prob.umbrales_VCFC_condu[7:0]
+testbench.fsmCondu.active_out
+testbench.fsmCondu.idle_out
+testbench.fsmCondu.error_out
 @200
 -Estructural
 @28
 testbench.fsmEstru.reset
+@23
+testbench.fsmEstru.state[4:0]
 @22
+testbench.fsmEstru.nxt_state[4:0]
 testbench.fsmEstru.state[4:0]
 @28
 testbench.prob.active_estru
 testbench.prob.idle_estru
 testbench.prob.error_estru
-@22
-testbench.prob.umbrales_VCFC_estru[7:0]
 [pattern_trace] 1
 [pattern_trace] 0

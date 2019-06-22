@@ -1,0 +1,794 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2016  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.7 (git sha1 61f6811, gcc 6.2.0-11ubuntu1 -O2 -fdebug-prefix-map=/build/yosys-zWLHjG/yosys-0.7=. -fstack-protector-strong -fPIC -Os)
+
+
+-- Executing script file `sintesis.ys' --
+
+1. Executing Verilog-2005 frontend.
+Parsing Verilog input from `fsm_Control.v' to AST representation.
+Generating RTLIL representation for module `\fsmControl'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \fsmControl
+
+2.2. Analyzing design hierarchy..
+Top module:  \fsmControl
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\fsmControl.$proc$fsm_Control.v:42$1'.
+Cleaned up 1 empty switch.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_INIT pass (extract init attributes).
+
+3.4. Executing PROC_ARST pass (detect async resets in processes).
+
+3.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\fsmControl.$proc$fsm_Control.v:42$1'.
+     1/14: $2\nxt_state[4:0]
+     2/14: $1\nxt_state[4:0]
+     3/14: $0\nxt_state[4:0]
+     4/14: $0\nxt_umbrales[13:0]
+     5/14: $0\state[4:0]
+     6/14: $0\nxt_umbral_VC1[3:0]
+     7/14: $0\nxt_umbral_VC0[3:0]
+     8/14: $0\nxt_umbral_D1[1:0]
+     9/14: $0\nxt_umbral_D0[1:0]
+    10/14: $0\nxt_umbral_MF[1:0]
+    11/14: $0\error_out[0:0]
+    12/14: $0\idle_out[0:0]
+    13/14: $0\active_out[0:0]
+    14/14: $0\umbrales_I[13:0]
+
+3.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\fsmControl.\umbrales_I' using process `\fsmControl.$proc$fsm_Control.v:42$1'.
+  created $dff cell `$procdff$98' with positive edge clock.
+Creating register for signal `\fsmControl.\active_out' using process `\fsmControl.$proc$fsm_Control.v:42$1'.
+  created $dff cell `$procdff$99' with positive edge clock.
+Creating register for signal `\fsmControl.\idle_out' using process `\fsmControl.$proc$fsm_Control.v:42$1'.
+  created $dff cell `$procdff$100' with positive edge clock.
+Creating register for signal `\fsmControl.\error_out' using process `\fsmControl.$proc$fsm_Control.v:42$1'.
+  created $dff cell `$procdff$101' with positive edge clock.
+Creating register for signal `\fsmControl.\nxt_umbral_MF' using process `\fsmControl.$proc$fsm_Control.v:42$1'.
+  created $dff cell `$procdff$102' with positive edge clock.
+Creating register for signal `\fsmControl.\nxt_umbral_D0' using process `\fsmControl.$proc$fsm_Control.v:42$1'.
+  created $dff cell `$procdff$103' with positive edge clock.
+Creating register for signal `\fsmControl.\nxt_umbral_D1' using process `\fsmControl.$proc$fsm_Control.v:42$1'.
+  created $dff cell `$procdff$104' with positive edge clock.
+Creating register for signal `\fsmControl.\nxt_umbral_VC0' using process `\fsmControl.$proc$fsm_Control.v:42$1'.
+  created $dff cell `$procdff$105' with positive edge clock.
+Creating register for signal `\fsmControl.\nxt_umbral_VC1' using process `\fsmControl.$proc$fsm_Control.v:42$1'.
+  created $dff cell `$procdff$106' with positive edge clock.
+Creating register for signal `\fsmControl.\state' using process `\fsmControl.$proc$fsm_Control.v:42$1'.
+  created $dff cell `$procdff$107' with positive edge clock.
+Creating register for signal `\fsmControl.\nxt_state' using process `\fsmControl.$proc$fsm_Control.v:42$1'.
+  created $dff cell `$procdff$108' with positive edge clock.
+Creating register for signal `\fsmControl.\nxt_umbrales' using process `\fsmControl.$proc$fsm_Control.v:42$1'.
+  created $dff cell `$procdff$109' with positive edge clock.
+
+3.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 9 empty switches in `\fsmControl.$proc$fsm_Control.v:42$1'.
+Removing empty process `fsmControl.$proc$fsm_Control.v:42$1'.
+Cleaned up 9 empty switches.
+
+4. Executing OPT pass (performing simple optimizations).
+
+4.1. Executing OPT_EXPR pass (perform const folding).
+Replacing $ne cell `$ne$fsm_Control.v:74$3' in module `fsmControl' with $logic_not.
+Replacing $ne cell `$ne$fsm_Control.v:84$4' in module `fsmControl' with $logic_not.
+Replacing $eq cell `$eq$fsm_Control.v:87$5' in module `fsmControl' with $logic_not.
+Replacing $ne cell `$ne$fsm_Control.v:97$6' in module `fsmControl' with $logic_not.
+Replacing $ne cell `$ne$fsm_Control.v:100$7' in module `fsmControl' with $logic_not.
+Optimizing away select inverter for $mux cell `$procmux$12' in module `fsmControl'.
+Optimizing away select inverter for $mux cell `$procmux$46' in module `fsmControl'.
+Optimizing away select inverter for $mux cell `$procmux$49' in module `fsmControl'.
+Optimizing away select inverter for $mux cell `$procmux$52' in module `fsmControl'.
+Optimizing away select inverter for $mux cell `$procmux$55' in module `fsmControl'.
+Optimizing away select inverter for $mux cell `$procmux$58' in module `fsmControl'.
+Optimizing away select inverter for $mux cell `$procmux$61' in module `fsmControl'.
+Optimizing away select inverter for $mux cell `$procmux$64' in module `fsmControl'.
+Optimizing away select inverter for $mux cell `$procmux$70' in module `fsmControl'.
+Optimizing away select inverter for $mux cell `$procmux$82' in module `fsmControl'.
+Optimizing away select inverter for $mux cell `$procmux$92' in module `fsmControl'.
+
+4.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fsmControl'.
+  Cell `$procmux$86_CMP0' is identical to cell `$procmux$96_CMP0'.
+    Redirecting output \Y: $procmux$86_CMP = $procmux$96_CMP
+    Removing $eq cell `$procmux$86_CMP0' from module `\fsmControl'.
+  Cell `$procmux$75_CMP0' is identical to cell `$procmux$87_CMP0'.
+    Redirecting output \Y: $procmux$75_CMP = $procmux$87_CMP
+    Removing $eq cell `$procmux$75_CMP0' from module `\fsmControl'.
+  Cell `$procmux$74_CMP0' is identical to cell `$procmux$96_CMP0'.
+    Redirecting output \Y: $procmux$74_CMP = $procmux$96_CMP
+    Removing $eq cell `$procmux$74_CMP0' from module `\fsmControl'.
+  Cell `$procmux$68_CMP0' is identical to cell `$procmux$96_CMP0'.
+    Redirecting output \Y: $procmux$68_CMP = $procmux$96_CMP
+    Removing $eq cell `$procmux$68_CMP0' from module `\fsmControl'.
+  Cell `$procmux$41_CMP0' is identical to cell `$procmux$97_CMP0'.
+    Redirecting output \Y: $procmux$41_CMP = $procmux$97_CMP
+    Removing $eq cell `$procmux$41_CMP0' from module `\fsmControl'.
+  Cell `$procmux$40_CMP0' is identical to cell `$procmux$96_CMP0'.
+    Redirecting output \Y: $procmux$40_CMP = $procmux$96_CMP
+    Removing $eq cell `$procmux$40_CMP0' from module `\fsmControl'.
+  Cell `$procmux$36_CMP0' is identical to cell `$procmux$97_CMP0'.
+    Redirecting output \Y: $procmux$36_CMP = $procmux$97_CMP
+    Removing $eq cell `$procmux$36_CMP0' from module `\fsmControl'.
+  Cell `$procmux$32_CMP0' is identical to cell `$procmux$80_CMP0'.
+    Redirecting output \Y: $procmux$32_CMP = $procmux$80_CMP
+    Removing $eq cell `$procmux$32_CMP0' from module `\fsmControl'.
+  Cell `$procmux$25_CMP0' is identical to cell `$procmux$87_CMP0'.
+    Redirecting output \Y: $procmux$25_CMP = $procmux$87_CMP
+    Removing $eq cell `$procmux$25_CMP0' from module `\fsmControl'.
+  Cell `$procmux$18_CMP0' is identical to cell `$procmux$96_CMP0'.
+    Redirecting output \Y: $procmux$18_CMP = $procmux$96_CMP
+    Removing $eq cell `$procmux$18_CMP0' from module `\fsmControl'.
+  Cell `$procmux$15_CMP0' is identical to cell `$procmux$96_CMP0'.
+    Redirecting output \Y: $procmux$15_CMP = $procmux$96_CMP
+    Removing $eq cell `$procmux$15_CMP0' from module `\fsmControl'.
+  Cell `$ne$fsm_Control.v:84$4' is identical to cell `$ne$fsm_Control.v:97$6'.
+    Redirecting output \Y: $ne$fsm_Control.v:84$4_Y = $ne$fsm_Control.v:97$6_Y
+    Removing $reduce_bool cell `$ne$fsm_Control.v:84$4' from module `\fsmControl'.
+  Cell `$ne$fsm_Control.v:74$3' is identical to cell `$ne$fsm_Control.v:97$6'.
+    Redirecting output \Y: $ne$fsm_Control.v:74$3_Y = $ne$fsm_Control.v:97$6_Y
+    Removing $reduce_bool cell `$ne$fsm_Control.v:74$3' from module `\fsmControl'.
+  Cell `$not$fsm_Control.v:43$2' is identical to cell `$not$fsm_Control.v:112$9'.
+    Redirecting output \Y: $not$fsm_Control.v:43$2_Y = $not$fsm_Control.v:112$9_Y
+    Removing $not cell `$not$fsm_Control.v:43$2' from module `\fsmControl'.
+Removed a total of 14 cells.
+
+4.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fsmControl..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+    Root of a mux tree: $procmux$85 (pure)
+    Root of a mux tree: $procmux$73 (pure)
+    Root of a mux tree: $procmux$67 (pure)
+    Root of a mux tree: $procmux$61 (pure)
+    Root of a mux tree: $procmux$58 (pure)
+    Root of a mux tree: $procmux$55 (pure)
+    Root of a mux tree: $procmux$52 (pure)
+    Root of a mux tree: $procmux$49 (pure)
+    Root of a mux tree: $procmux$46 (pure)
+    Root of a mux tree: $procmux$39 (pure)
+    Root of a mux tree: $procmux$17 (pure)
+    Root of a mux tree: $procmux$95 (pure)
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$14.
+Removed 1 multiplexer ports.
+
+4.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fsmControl.
+    New ctrl vector for $pmux cell $procmux$73: { $procmux$80_CMP $auto$opt_reduce.cc:132:opt_mux$111 }
+    New ctrl vector for $pmux cell $procmux$39: $auto$opt_reduce.cc:132:opt_mux$113
+    New ctrl vector for $pmux cell $procmux$95: $auto$opt_reduce.cc:132:opt_mux$115
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:126:opt_mux$112: { $procmux$96_CMP $procmux$97_CMP }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:126:opt_mux$114: { $procmux$96_CMP $procmux$97_CMP }
+  Optimizing cells in module \fsmControl.
+Performed a total of 5 changes.
+
+4.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fsmControl'.
+  Cell `$auto$opt_reduce.cc:126:opt_mux$112' is identical to cell `$auto$opt_reduce.cc:126:opt_mux$114'.
+    Redirecting output \Y: $auto$opt_reduce.cc:132:opt_mux$113 = $auto$opt_reduce.cc:132:opt_mux$115
+    Removing $reduce_or cell `$auto$opt_reduce.cc:126:opt_mux$112' from module `\fsmControl'.
+Removed a total of 1 cells.
+
+4.6. Executing OPT_RMDFF pass (remove dff with constant values).
+Removing $procdff$106 ($dff) from module fsmControl.
+Removing $procdff$105 ($dff) from module fsmControl.
+Removing $procdff$104 ($dff) from module fsmControl.
+Removing $procdff$103 ($dff) from module fsmControl.
+Removing $procdff$102 ($dff) from module fsmControl.
+Replaced 5 DFF cells.
+
+4.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fsmControl..
+  removing unused `$eq' cell `$eq$fsm_Control.v:109$8'.
+  removing unused `$not' cell `$not$fsm_Control.v:112$9'.
+  removing unused `$mux' cell `$procmux$49'.
+  removing unused `$mux' cell `$procmux$52'.
+  removing unused `$mux' cell `$procmux$55'.
+  removing unused `$mux' cell `$procmux$58'.
+  removing unused `$mux' cell `$procmux$61'.
+  removing unused non-port wire \error_out_w.
+  removing unused non-port wire \nxt_umbral_VC1.
+  removing unused non-port wire \nxt_umbral_VC0.
+  removing unused non-port wire \nxt_umbral_D1.
+  removing unused non-port wire \nxt_umbral_D0.
+  removing unused non-port wire \nxt_umbral_MF.
+  removed 6 unused temporary wires.
+
+4.8. Executing OPT_EXPR pass (perform const folding).
+
+4.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fsmControl..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+    Root of a mux tree: $procmux$17 (pure)
+    Root of a mux tree: $procmux$39 (pure)
+    Root of a mux tree: $procmux$46 (pure)
+    Root of a mux tree: $procmux$67 (pure)
+    Root of a mux tree: $procmux$73 (pure)
+    Root of a mux tree: $procmux$85 (pure)
+    Root of a mux tree: $procmux$95 (pure)
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+4.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fsmControl.
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:126:opt_mux$110: { $procmux$15_CMP $procmux$25_CMP }
+  Optimizing cells in module \fsmControl.
+Performed a total of 1 changes.
+
+4.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fsmControl'.
+Removed a total of 0 cells.
+
+4.13. Executing OPT_RMDFF pass (remove dff with constant values).
+Removing $procdff$109 ($dff) from module fsmControl.
+Replaced 1 DFF cells.
+
+4.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fsmControl..
+  removing unused `$mux' cell `$procmux$39'.
+  removing unused non-port wire \nxt_umbrales.
+  removed 1 unused temporary wires.
+
+4.15. Executing OPT_EXPR pass (perform const folding).
+
+4.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fsmControl..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+    Root of a mux tree: $procmux$17 (pure)
+    Root of a mux tree: $procmux$46 (pure)
+    Root of a mux tree: $procmux$67 (pure)
+    Root of a mux tree: $procmux$73 (pure)
+    Root of a mux tree: $procmux$85 (pure)
+    Root of a mux tree: $procmux$95 (pure)
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+4.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fsmControl.
+Performed a total of 0 changes.
+
+4.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fsmControl'.
+Removed a total of 0 cells.
+
+4.20. Executing OPT_RMDFF pass (remove dff with constant values).
+
+4.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fsmControl..
+
+4.22. Executing OPT_EXPR pass (perform const folding).
+
+4.23. Finished OPT passes. (There is nothing left to do.)
+
+5. Executing FSM pass (extract and optimize FSM).
+
+5.1. Executing FSM_DETECT pass (finding FSMs in design).
+Not marking fsmControl.nxt_state as FSM state register:
+    Users of register don't seem to benefit from recoding.
+Not marking fsmControl.umbrales_I as FSM state register:
+    Register is connected to module port.
+    Users of register don't seem to benefit from recoding.
+
+5.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+5.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+5.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fsmControl..
+
+5.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+5.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+5.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+5.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+6. Executing OPT pass (performing simple optimizations).
+
+6.1. Executing OPT_EXPR pass (perform const folding).
+
+6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fsmControl'.
+Removed a total of 0 cells.
+
+6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fsmControl..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+    Root of a mux tree: $procmux$17 (pure)
+    Root of a mux tree: $procmux$46 (pure)
+    Root of a mux tree: $procmux$67 (pure)
+    Root of a mux tree: $procmux$73 (pure)
+    Root of a mux tree: $procmux$85 (pure)
+    Root of a mux tree: $procmux$95 (pure)
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fsmControl.
+Performed a total of 0 changes.
+
+6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fsmControl'.
+Removed a total of 0 cells.
+
+6.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fsmControl..
+
+6.8. Executing OPT_EXPR pass (perform const folding).
+
+6.9. Finished OPT passes. (There is nothing left to do.)
+
+7. Executing MEMORY pass.
+
+7.1. Executing MEMORY_DFF pass (merging $dff cells to $memrd and $memwr).
+
+7.2. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fsmControl..
+
+7.3. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fsmControl..
+
+7.5. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+7.6. Executing MEMORY_MAP pass (converting $mem cells to logic and flip-flops).
+
+8. Executing OPT pass (performing simple optimizations).
+
+8.1. Executing OPT_EXPR pass (perform const folding).
+
+8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fsmControl'.
+Removed a total of 0 cells.
+
+8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fsmControl..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+    Root of a mux tree: $procmux$17 (pure)
+    Root of a mux tree: $procmux$46 (pure)
+    Root of a mux tree: $procmux$67 (pure)
+    Root of a mux tree: $procmux$73 (pure)
+    Root of a mux tree: $procmux$85 (pure)
+    Root of a mux tree: $procmux$95 (pure)
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fsmControl.
+Performed a total of 0 changes.
+
+8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fsmControl'.
+Removed a total of 0 cells.
+
+8.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fsmControl..
+
+8.8. Executing OPT_EXPR pass (perform const folding).
+
+8.9. Finished OPT passes. (There is nothing left to do.)
+
+9. Executing TECHMAP pass (map to technology primitives).
+
+9.1. Executing Verilog-2005 frontend.
+Parsing Verilog input from `<techmap.v>' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+Mapping fsmControl.$auto$opt_reduce.cc:126:opt_mux$114 ($reduce_or) with simplemap.
+Mapping fsmControl.$eq$fsm_Control.v:87$5 ($logic_not) with simplemap.
+Mapping fsmControl.$ne$fsm_Control.v:97$6 ($reduce_bool) with simplemap.
+Mapping fsmControl.$ne$fsm_Control.v:100$7 ($reduce_bool) with simplemap.
+Mapping fsmControl.$procmux$12 ($mux) with simplemap.
+
+9.2. Executing AST frontend in derive mode using pre-parsed AST for module `\_90_pmux'.
+Parameter \WIDTH = 5
+Parameter \S_WIDTH = 5
+Generating RTLIL representation for module `$paramod\_90_pmux\WIDTH=5\S_WIDTH=5'.
+
+9.3. Continuing TECHMAP pass.
+Mapping fsmControl.$procmux$17 using $paramod\_90_pmux\WIDTH=5\S_WIDTH=5.
+Mapping fsmControl.$procmux$20 ($mux) with simplemap.
+Mapping fsmControl.$procmux$23 ($mux) with simplemap.
+Mapping fsmControl.$procmux$27 ($mux) with simplemap.
+Mapping fsmControl.$procmux$30 ($mux) with simplemap.
+Mapping fsmControl.$procmux$34 ($mux) with simplemap.
+Mapping fsmControl.$procmux$37_CMP0 ($eq) with simplemap.
+Mapping fsmControl.$procmux$43 ($mux) with simplemap.
+Mapping fsmControl.$procmux$46 ($mux) with simplemap.
+Mapping fsmControl.$procmux$64 ($mux) with simplemap.
+Mapping fsmControl.$procmux$67 ($mux) with simplemap.
+Mapping fsmControl.$procmux$70 ($mux) with simplemap.
+
+9.4. Executing AST frontend in derive mode using pre-parsed AST for module `\_90_pmux'.
+Parameter \WIDTH = 1
+Parameter \S_WIDTH = 2
+Generating RTLIL representation for module `$paramod\_90_pmux\WIDTH=1\S_WIDTH=2'.
+
+9.5. Continuing TECHMAP pass.
+Mapping fsmControl.$procmux$73 using $paramod\_90_pmux\WIDTH=1\S_WIDTH=2.
+Mapping fsmControl.$procmux$80_CMP0 ($eq) with simplemap.
+Mapping fsmControl.$procmux$82 ($mux) with simplemap.
+Mapping fsmControl.$procmux$85 using $paramod\_90_pmux\WIDTH=1\S_WIDTH=2.
+Mapping fsmControl.$procmux$87_CMP0 ($eq) with simplemap.
+Mapping fsmControl.$procmux$89 ($mux) with simplemap.
+Mapping fsmControl.$procmux$92 ($mux) with simplemap.
+Mapping fsmControl.$procmux$96_CMP0 ($eq) with simplemap.
+Mapping fsmControl.$procmux$95 ($mux) with simplemap.
+Mapping fsmControl.$procmux$97_CMP0 ($eq) with simplemap.
+Mapping fsmControl.$procdff$98 ($dff) with simplemap.
+Mapping fsmControl.$procdff$99 ($dff) with simplemap.
+Mapping fsmControl.$procdff$100 ($dff) with simplemap.
+Mapping fsmControl.$procdff$101 ($dff) with simplemap.
+Mapping fsmControl.$procdff$107 ($dff) with simplemap.
+Mapping fsmControl.$procdff$108 ($dff) with simplemap.
+Mapping fsmControl.$auto$opt_reduce.cc:126:opt_mux$110 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$17.$reduce_or$<techmap.v>:441$199 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$17.$reduce_or$<techmap.v>:441$200 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$17.$reduce_or$<techmap.v>:441$198 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$17.$reduce_or$<techmap.v>:441$197 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$17.$reduce_or$<techmap.v>:441$196 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$17.$and$<techmap.v>:434$195 ($and) with simplemap.
+Mapping fsmControl.$techmap$procmux$17.$and$<techmap.v>:434$194 ($and) with simplemap.
+Mapping fsmControl.$techmap$procmux$17.$and$<techmap.v>:434$193 ($and) with simplemap.
+Mapping fsmControl.$techmap$procmux$17.$and$<techmap.v>:434$192 ($and) with simplemap.
+Mapping fsmControl.$techmap$procmux$17.$and$<techmap.v>:434$191 ($and) with simplemap.
+Mapping fsmControl.$techmap$procmux$17.$ternary$<techmap.v>:445$190 ($mux) with simplemap.
+Mapping fsmControl.$techmap$procmux$17.$reduce_or$<techmap.v>:445$189 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$73.$and$<techmap.v>:434$260 ($and) with simplemap.
+Mapping fsmControl.$techmap$procmux$73.$reduce_or$<techmap.v>:441$261 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$73.$and$<techmap.v>:434$259 ($and) with simplemap.
+Mapping fsmControl.$techmap$procmux$73.$ternary$<techmap.v>:445$258 ($mux) with simplemap.
+Mapping fsmControl.$techmap$procmux$73.$reduce_or$<techmap.v>:445$257 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$85.$and$<techmap.v>:434$260 ($and) with simplemap.
+Mapping fsmControl.$techmap$procmux$85.$reduce_or$<techmap.v>:441$261 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$85.$and$<techmap.v>:434$259 ($and) with simplemap.
+Mapping fsmControl.$techmap$procmux$85.$ternary$<techmap.v>:445$258 ($mux) with simplemap.
+Mapping fsmControl.$techmap$procmux$85.$reduce_or$<techmap.v>:445$257 ($reduce_or) with simplemap.
+No more expansions possible.
+
+10. Executing OPT pass (performing simple optimizations).
+
+10.1. Executing OPT_EXPR pass (perform const folding).
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$287' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$281 [4] = \state [4]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$283' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$281 [0] = \state [0]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$284' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$281 [1] = \state [1]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$285' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$281 [2] = \state [2]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$329' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$327 [0] = \state [0]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$330' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$327 [1] = \state [1]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$331' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$327 [2] = \state [2]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$332' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$327 [3] = \state [3]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$365' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$359 [4] = \state [4]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$361' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$359 [0] = \state [0]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$363' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$359 [2] = \state [2]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$364' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$359 [3] = \state [3]'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$212' in module `fsmControl'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$211' in module `fsmControl'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$213' in module `fsmControl'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$214' in module `fsmControl'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$215' in module `fsmControl'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$222' (00?) in module `\fsmControl' with constant driver `$procmux$34_Y [1] = 1'0'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$221' (00?) in module `\fsmControl' with constant driver `$procmux$34_Y [0] = 1'0'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$224' (00?) in module `\fsmControl' with constant driver `$procmux$34_Y [3] = 1'0'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$225' (01?) in module `\fsmControl' with constant driver `$procmux$34_Y [4] = $ne$fsm_Control.v:74$3_Y'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$229' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$226 [1] = \state [1]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$230' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$226 [2] = \state [2]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$231' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$226 [3] = \state [3]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$232' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$226 [4] = \state [4]'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$255' in module `fsmControl'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$264' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$262 [0] = \state [0]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$265' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$262 [1] = \state [1]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$267' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$262 [3] = \state [3]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$268' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$262 [4] = \state [4]'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$449' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$17.$and$<techmap.v>:434$194_Y [3] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$408' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:127:simplemap_reduce$406 [1] = $techmap$procmux$17.$and$<techmap.v>:434$193_Y [3]'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$444' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$17.$and$<techmap.v>:434$195_Y [3] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$412' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$17.$reduce_or$<techmap.v>:441$199_Y = $auto$simplemap.cc:127:simplemap_reduce$409'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$445' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$17.$and$<techmap.v>:434$195_Y [4] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$419' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$17.$reduce_or$<techmap.v>:441$200_Y = $auto$simplemap.cc:127:simplemap_reduce$416'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$443' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$17.$and$<techmap.v>:434$195_Y [2] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$426' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$17.$reduce_or$<techmap.v>:441$198_Y = $auto$simplemap.cc:127:simplemap_reduce$423'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$447' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$17.$and$<techmap.v>:434$194_Y [1] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$429' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:127:simplemap_reduce$427 [1] = $techmap$procmux$17.$and$<techmap.v>:434$193_Y [1]'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$442' (1?) in module `\fsmControl' with constant driver `$techmap$procmux$17.$and$<techmap.v>:434$195_Y [1] = $procmux$37_CMP'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$446' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$17.$and$<techmap.v>:434$194_Y [0] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$436' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:127:simplemap_reduce$434 [1] = $techmap$procmux$17.$and$<techmap.v>:434$193_Y [0]'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$441' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$17.$and$<techmap.v>:434$195_Y [0] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$440' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$17.$reduce_or$<techmap.v>:441$196_Y = $auto$simplemap.cc:127:simplemap_reduce$437'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$478' (1?) in module `\fsmControl' with constant driver `$techmap$procmux$73.$and$<techmap.v>:434$260_Y = $procmux$32_CMP'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$481' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$73.$and$<techmap.v>:434$259_Y = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$480' (0?) in module `\fsmControl' with constant driver `$techmap$procmux$73.$reduce_or$<techmap.v>:441$261_Y = $procmux$32_CMP'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$485' (1?) in module `\fsmControl' with constant driver `$techmap$procmux$85.$and$<techmap.v>:434$260_Y = $procmux$25_CMP'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$488' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$85.$and$<techmap.v>:434$259_Y = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$487' (0?) in module `\fsmControl' with constant driver `$techmap$procmux$85.$reduce_or$<techmap.v>:441$261_Y = $procmux$25_CMP'.
+
+10.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fsmControl'.
+  Cell `$auto$simplemap.cc:136:simplemap_reduce$338' is identical to cell `$auto$simplemap.cc:136:simplemap_reduce$370'.
+    Redirecting output \Y: $auto$simplemap.cc:127:simplemap_reduce$336 [1] = $auto$simplemap.cc:127:simplemap_reduce$368 [1]
+    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$338' from module `\fsmControl'.
+  Cell `$auto$simplemap.cc:136:simplemap_reduce$291' is identical to cell `$auto$simplemap.cc:136:simplemap_reduce$337'.
+    Redirecting output \Y: $auto$simplemap.cc:127:simplemap_reduce$290 [0] = $auto$simplemap.cc:127:simplemap_reduce$336 [0]
+    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$291' from module `\fsmControl'.
+  Cell `$auto$simplemap.cc:136:simplemap_reduce$272' is identical to cell `$auto$simplemap.cc:136:simplemap_reduce$337'.
+    Redirecting output \Y: $auto$simplemap.cc:127:simplemap_reduce$271 [0] = $auto$simplemap.cc:127:simplemap_reduce$336 [0]
+    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$272' from module `\fsmControl'.
+  Cell `$auto$simplemap.cc:136:simplemap_reduce$237' is identical to cell `$auto$simplemap.cc:136:simplemap_reduce$370'.
+    Redirecting output \Y: $auto$simplemap.cc:127:simplemap_reduce$235 [1] = $auto$simplemap.cc:127:simplemap_reduce$368 [1]
+    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$237' from module `\fsmControl'.
+  Cell `$auto$simplemap.cc:177:logic_reduce$164' is identical to cell `$auto$simplemap.cc:136:simplemap_reduce$179'.
+    Redirecting output \Y: $auto$simplemap.cc:168:logic_reduce$162 [1] = $auto$simplemap.cc:127:simplemap_reduce$177 [1]
+    Removing $_OR_ cell `$auto$simplemap.cc:177:logic_reduce$164' from module `\fsmControl'.
+  Cell `$auto$simplemap.cc:177:logic_reduce$163' is identical to cell `$auto$simplemap.cc:136:simplemap_reduce$178'.
+    Redirecting output \Y: $auto$simplemap.cc:168:logic_reduce$162 [0] = $auto$simplemap.cc:127:simplemap_reduce$177 [0]
+    Removing $_OR_ cell `$auto$simplemap.cc:177:logic_reduce$163' from module `\fsmControl'.
+  Cell `$auto$simplemap.cc:136:simplemap_reduce$405' is identical to cell `$auto$simplemap.cc:136:simplemap_reduce$472'.
+    Redirecting output \Y: $auto$opt_reduce.cc:132:opt_mux$111 = $auto$simplemap.cc:127:simplemap_reduce$471 [0]
+    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$405' from module `\fsmControl'.
+  Cell `$auto$simplemap.cc:136:simplemap_reduce$491' is identical to cell `$auto$simplemap.cc:136:simplemap_reduce$472'.
+    Redirecting output \Y: $techmap$procmux$85.$reduce_or$<techmap.v>:445$257_Y = $auto$simplemap.cc:127:simplemap_reduce$471 [0]
+    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$491' from module `\fsmControl'.
+  Cell `$auto$simplemap.cc:177:logic_reduce$166' is identical to cell `$auto$simplemap.cc:136:simplemap_reduce$181'.
+    Redirecting output \Y: $auto$simplemap.cc:168:logic_reduce$165 = $auto$simplemap.cc:127:simplemap_reduce$180
+    Removing $_OR_ cell `$auto$simplemap.cc:177:logic_reduce$166' from module `\fsmControl'.
+  Cell `$auto$simplemap.cc:136:simplemap_reduce$183' is identical to cell `$auto$simplemap.cc:177:logic_reduce$168'.
+    Redirecting output \Y: $ne$fsm_Control.v:100$7_Y = $auto$simplemap.cc:168:logic_reduce$167
+    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$183' from module `\fsmControl'.
+Removed a total of 10 cells.
+
+10.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fsmControl..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+10.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fsmControl.
+Performed a total of 0 changes.
+
+10.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fsmControl'.
+Removed a total of 0 cells.
+
+10.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+10.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fsmControl..
+  removing unused `$_NOT_' cell `$auto$simplemap.cc:206:simplemap_lognot$169'.
+
+10.8. Executing OPT_EXPR pass (perform const folding).
+
+10.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+10.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fsmControl..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+10.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fsmControl.
+Performed a total of 0 changes.
+
+10.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fsmControl'.
+Removed a total of 0 cells.
+
+10.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+10.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fsmControl..
+
+10.15. Executing OPT_EXPR pass (perform const folding).
+
+10.16. Finished OPT passes. (There is nothing left to do.)
+
+11. Executing FLATTEN pass (flatten design).
+No more expansions possible.
+
+12. Executing OPT pass (performing simple optimizations).
+
+12.1. Executing OPT_EXPR pass (perform const folding).
+
+12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fsmControl'.
+Removed a total of 0 cells.
+
+12.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \fsmControl..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+12.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \fsmControl.
+Performed a total of 0 changes.
+
+12.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\fsmControl'.
+Removed a total of 0 cells.
+
+12.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+12.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \fsmControl..
+
+12.8. Executing OPT_EXPR pass (perform const folding).
+
+12.9. Finished OPT passes. (There is nothing left to do.)
+
+13. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell DFF (noninv, pins=3, area=18.00) is a direct match for cell type $_DFF_P_.
+  cell DFFSR (noninv, pins=5, area=18.00) is a direct match for cell type $_DFFSR_PPP_.
+  create mapping for $_DFFSR_PNP_ from mapping for $_DFFSR_PPP_.
+  create mapping for $_DFFSR_PNN_ from mapping for $_DFFSR_PNP_.
+  create mapping for $_DFFSR_PPN_ from mapping for $_DFFSR_PNN_.
+  create mapping for $_DFF_N_ from mapping for $_DFF_P_.
+  create mapping for $_DFFSR_NNN_ from mapping for $_DFFSR_PNN_.
+  create mapping for $_DFFSR_NPN_ from mapping for $_DFFSR_NNN_.
+  create mapping for $_DFFSR_NNP_ from mapping for $_DFFSR_NNN_.
+  create mapping for $_DFFSR_NPP_ from mapping for $_DFFSR_NNP_.
+  create mapping for $_DFF_NN0_ from mapping for $_DFFSR_NNN_.
+  create mapping for $_DFF_NN1_ from mapping for $_DFFSR_NNN_.
+  create mapping for $_DFF_NP0_ from mapping for $_DFFSR_NPP_.
+  create mapping for $_DFF_NP1_ from mapping for $_DFFSR_NPP_.
+  create mapping for $_DFF_PN0_ from mapping for $_DFFSR_PNN_.
+  create mapping for $_DFF_PN1_ from mapping for $_DFFSR_PNN_.
+  create mapping for $_DFF_PP0_ from mapping for $_DFFSR_PPP_.
+  create mapping for $_DFF_PP1_ from mapping for $_DFFSR_PPP_.
+  final dff cell mappings:
+    DFF _DFF_N_ (.C(~C), .D( D), .Q( Q));
+    DFF _DFF_P_ (.C( C), .D( D), .Q( Q));
+    DFFSR _DFF_NN0_ (.C(~C), .D( D), .Q( Q), .R(~R), .S( 0));
+    DFFSR _DFF_NN1_ (.C(~C), .D( D), .Q( Q), .R( 0), .S(~R));
+    DFFSR _DFF_NP0_ (.C(~C), .D( D), .Q( Q), .R( R), .S( 0));
+    DFFSR _DFF_NP1_ (.C(~C), .D( D), .Q( Q), .R( 0), .S( R));
+    DFFSR _DFF_PN0_ (.C( C), .D( D), .Q( Q), .R(~R), .S( 0));
+    DFFSR _DFF_PN1_ (.C( C), .D( D), .Q( Q), .R( 0), .S(~R));
+    DFFSR _DFF_PP0_ (.C( C), .D( D), .Q( Q), .R( R), .S( 0));
+    DFFSR _DFF_PP1_ (.C( C), .D( D), .Q( Q), .R( 0), .S( R));
+    DFFSR _DFFSR_NNN_ (.C(~C), .D( D), .Q( Q), .R(~R), .S(~S));
+    DFFSR _DFFSR_NNP_ (.C(~C), .D( D), .Q( Q), .R( R), .S(~S));
+    DFFSR _DFFSR_NPN_ (.C(~C), .D( D), .Q( Q), .R(~R), .S( S));
+    DFFSR _DFFSR_NPP_ (.C(~C), .D( D), .Q( Q), .R( R), .S( S));
+    DFFSR _DFFSR_PNN_ (.C( C), .D( D), .Q( Q), .R(~R), .S(~S));
+    DFFSR _DFFSR_PNP_ (.C( C), .D( D), .Q( Q), .R( R), .S(~S));
+    DFFSR _DFFSR_PPN_ (.C( C), .D( D), .Q( Q), .R(~R), .S( S));
+    DFFSR _DFFSR_PPP_ (.C( C), .D( D), .Q( Q), .R( R), .S( S));
+Mapping DFF cells in module `\fsmControl':
+  mapped 27 $_DFF_P_ cells to \DFF cells.
+
+14. Executing ABC pass (technology mapping using ABC).
+
+14.1. Extracting gate netlist of module `\fsmControl' to `<abc-temp-dir>/input.blif'..
+Extracted 159 gates and 200 wires to a netlist network with 39 inputs and 27 outputs.
+
+14.1.1. Executing ABC.
+Running ABC command: berkeley-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/FSM/cmos_cells.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Warning: Templates are not defined.
+ABC: Libery parser cannot read "time_unit".  Assuming   time_unit : "1ns".
+ABC: Libery parser cannot read "capacitive_load_unit". Assuming   capacitive_load_unit(1, pf).
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFF".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFSR".
+ABC: Library "demo" from "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/FSM/cmos_cells.lib" has 4 cells (2 skipped: 2 seq; 0 tri-state; 0 no func).  Time =     0.00 sec
+ABC: Memory =    0.00 MB. Time =     0.00 sec
+ABC: + strash 
+ABC: + dc2 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + ifraig 
+ABC: + retime -o 
+ABC: + strash 
+ABC: + dch -f 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+14.1.2. Re-integrating ABC results.
+ABC RESULTS:              NAND cells:       61
+ABC RESULTS:               NOR cells:       46
+ABC RESULTS:               NOT cells:       23
+ABC RESULTS:        internal signals:      134
+ABC RESULTS:           input signals:       39
+ABC RESULTS:          output signals:       27
+Removing temp directory.
+
+15. Printing statistics.
+
+=== fsmControl ===
+
+   Number of wires:                250
+   Number of wire bits:            423
+   Number of public wires:          16
+   Number of public wire bits:      54
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                157
+     DFF                            27
+     NAND                           61
+     NOR                            46
+     NOT                            23
+
+   Chip area for this module: 983.000000
+
+Removed 0 unused cells and 125 unused wires.
+
+16. Executing Verilog backend.
+Dumping module `\fsmControl'.
+
+End of script. Logfile hash: d98f159184
+CPU: user 0.38s system 0.01s, MEM: 14.07 MB total, 9.51 MB resident
+Yosys 0.7 (git sha1 61f6811, gcc 6.2.0-11ubuntu1 -O2 -fdebug-prefix-map=/build/yosys-zWLHjG/yosys-0.7=. -fstack-protector-strong -fPIC -Os)
+Time spent: 21% 13x opt_merge (0 sec), 19% 13x opt_expr (0 sec), ...

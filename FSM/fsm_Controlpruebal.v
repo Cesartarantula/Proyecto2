@@ -34,7 +34,6 @@ module fsmControl  ( input clk,
   reg [3:0] nxt_umbral_VC0, nxt_umbral_VC1;
   reg [4:0] state, nxt_state;
   reg [13:0] nxt_umbrales;
-  reg [4:0] error_out_w;
 
   //Reset de salidas y demás señales
   //Asignación de estado inicial.
@@ -57,21 +56,28 @@ module fsmControl  ( input clk,
     end
     else if (init) begin
           state <= INIT;
+          //nxt_state <= INIT;
     end
     else begin
       state <= nxt_state;
       umbrales_I <= nxt_umbrales;
     end
-
+    
     case(state)
       RESET: begin
 	nxt_state <=INIT;
+        if (init) begin 
+          nxt_state <= INIT;
+        end
       end
 
       INIT: begin
-        nxt_umbrales <= {nxt_umbral_MF,nxt_umbral_VC0,nxt_umbral_VC1,nxt_umbral_D0,nxt_umbral_D1};
+        //nxt_umbrales <= {nxt_umbral_MF,nxt_umbral_VC0,nxt_umbral_VC1,nxt_umbral_D0,nxt_umbral_D1};
         umbrales_I <= nxt_umbrales;
         if (FIFO_error!=0)begin
+          nxt_state <= ERROR;
+        end
+	else if (FIFO_empty!=0)begin
           nxt_state <= ERROR;
         end
         else begin
@@ -80,13 +86,19 @@ module fsmControl  ( input clk,
       end
 
       IDLE: begin
-	idle_out <= 1;
+        //umbrales_VCFC = umbral_VCFC;
         if (FIFO_error!=0)begin
           nxt_state <= ERROR;
         end
-        else if (FIFO_empty==0) begin
-            idle_out <= 1;
+	else if (FIFO_empty!=0)begin
+          nxt_state <= ERROR;
+        end
+        else begin
+          idle_out <= 1;
+          if (FIFO_empty==0) begin
+            idle_out <= 0;
             nxt_state <= ACTIVE;
+          end
         end
       end
 
@@ -96,27 +108,23 @@ module fsmControl  ( input clk,
       active_out <= 1;
       if (FIFO_error!=0)begin
           nxt_state <= ERROR;
-      end
-      else if (FIFO_empty!=0)begin
-          nxt_state <= ACTIVE;
-      end
+        end
+	else if (FIFO_empty!=0)begin
+          nxt_state <= ERROR;
+        end
     end
 
     ERROR: begin
       error_out <= 1;
       active_out <= 0;
       idle_out <= 0;
-      if (FIFO_error==16) begin
-		nxt_state <= RESET;
-      end	//error_out_w <=
       if (~reset) begin
         nxt_state = RESET;
       end
-      nxt_umbrales <= {nxt_umbral_MF,nxt_umbral_VC0,nxt_umbral_VC1,nxt_umbral_D0,nxt_umbral_D1};
-      umbrales_I <= nxt_umbrales;
     end
     default:
       nxt_state = RESET;
     endcase
 end
+
 endmodule

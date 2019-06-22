@@ -16,7 +16,7 @@ crearVCD:
 	vvp fsmControl
 
 sintetizar:
-	$(CC1) $(TARGET2)
+	$(CC1) $(TARGET2) > sintesis.log
 	sed -i 's/fsmControl/fsmControlEstructural/g' fsm_ControlEstructural.v
 
 compilarSynth:
