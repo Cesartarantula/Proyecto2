@@ -15,17 +15,17 @@ module fsmControl  ( input clk,
               input [3:0] umbral_VC1, 	
 	      input [1:0] umbral_D0, 	//Viene del Flow Control_D0
               input [1:0] umbral_D1, 	
-              input [4:0] FIFO_error, 	//FIFO Full (MF,VCO,VC1,D0,D1) Orden de los bits
-              input [4:0] FIFO_empty, 	//FIFO Empty 
+              input [4:0] FIFO_error, 	//FIFO Full (MF,VCO,VC1,D0,D1) Orden de los bits //Flow Control escribe en estos registros
+              input [4:0] FIFO_empty, 	//FIFO Empty //Flow Control escribe en estos registros
               output reg [13:0] umbrales_I,	//Esta salida es de 14 bits? (MF,VCO,VC1,D0,D1)= bits(2,4,4,2,2)
               output reg active_out,
               output reg idle_out,
-              output reg error_out);
+              output reg [4:0] error_out);
 
   //Parámetros del Case
   parameter RESET = 5'b00001;
   parameter INIT = 5'b00010;
-  parameter IDLE = 5'b00100;
+  parameter IDLE = 5'b0100;
   parameter ACTIVE = 5'b01000;
   parameter ERROR = 5'b10000;
 
@@ -43,17 +43,6 @@ module fsmControl  ( input clk,
     if (~reset) begin
       //Estado Inicial 
       state <= RESET;
-      //Salidas
-      umbrales_I <= 0;
-      active_out <= 0;
-      idle_out <= 0;
-      error_out <= 0;
-      //Registros Internos
-      nxt_umbral_MF<=0;
-      nxt_umbral_VC0<=0;
-      nxt_umbral_VC1<=0;
-      nxt_umbral_D0<=0;
-      nxt_umbral_D1<=0;
     end
     else if (init) begin
           state <= INIT;
@@ -66,6 +55,17 @@ module fsmControl  ( input clk,
     case(state)
       RESET: begin
 	nxt_state <=INIT;
+        //Salidas
+      	umbrales_I <= 0;
+      	active_out <= 0;
+      	idle_out <= 0;
+      	error_out <= 0;
+      	//Registros Internos
+      	nxt_umbral_MF<=0;
+      	nxt_umbral_VC0<=0;
+      	nxt_umbral_VC1<=0;
+      	nxt_umbral_D0<=0;
+      	nxt_umbral_D1<=0;
       end
 
       INIT: begin
@@ -80,43 +80,64 @@ module fsmControl  ( input clk,
       end
 
       IDLE: begin
-	idle_out <= 1;
         if (FIFO_error!=0)begin
           nxt_state <= ERROR;
         end
         else if (FIFO_empty==0) begin
             idle_out <= 1;
+            nxt_state <= IDLE;
+        end
+	else if (FIFO_empty!=0) begin
+            idle_out <= 0;
             nxt_state <= ACTIVE;
         end
       end
 
     ACTIVE: begin
-      //umbrales_VCFC = umbral_VCFC;
       idle_out <= 0;
       active_out <= 1;
       if (FIFO_error!=0)begin
+	  active_out <= 0;
           nxt_state <= ERROR;
       end
-      else if (FIFO_empty!=0)begin
-          nxt_state <= ACTIVE;
+      else if (FIFO_empty==0)begin
+          active_out <= 0;
+	  nxt_state <= IDLE;
       end
     end
 
     ERROR: begin
-      error_out <= 1;
-      active_out <= 0;
-      idle_out <= 0;
-      if (FIFO_error==16) begin
-		nxt_state <= RESET;
-      end	//error_out_w <=
-      if (~reset) begin
-        nxt_state = RESET;
+      //error_out <= 1;
+      //active_out <= 0;
+      //idle_out <= 0;
+      if (FIFO_error[4]==1) begin
+		nxt_state <= ERROR;
+		error_out[4] <=1;
+      end	
+      else if (FIFO_error==8) begin
+		nxt_state <= ERROR;
+		error_out <=8;
       end
-      nxt_umbrales <= {nxt_umbral_MF,nxt_umbral_VC0,nxt_umbral_VC1,nxt_umbral_D0,nxt_umbral_D1};
-      umbrales_I <= nxt_umbrales;
+      else if (FIFO_error==4) begin
+		nxt_state <= ERROR;
+		error_out <=4;
+      end
+      else if (FIFO_error==2) begin
+		nxt_state <= ERROR;
+		error_out <=2;
+      end
+      else if (FIFO_error==1) begin
+		nxt_state <= ERROR;
+		error_out <=1;
+      end
+      if (~reset) begin
+        nxt_state <= RESET;
+      end
+      //nxt_umbrales <= {nxt_umbral_MF,nxt_umbral_VC0,nxt_umbral_VC1,nxt_umbral_D0,nxt_umbral_D1};
+      //umbrales_I <= nxt_umbrales;
     end
     default:
-      nxt_state = RESET;
+      nxt_state <= RESET;
     endcase
 end
 endmodule
