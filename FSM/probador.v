@@ -57,7 +57,7 @@ module probador (	input [13:0] umbrales_I_condu,
            umbral_VC0<=4'b0001;
            umbral_VC1<=4'b0001;
 
-	   #5
+	   #10
 	   //Prueba4 Recibe señal de FIFO_error=1 E Init=0
 	   @(posedge clk);
            init <= 0;
@@ -80,6 +80,7 @@ module probador (	input [13:0] umbrales_I_condu,
 	   FIFO_error <= 0;
 	   #6 reset <= 1;
 
+	   #15
 	   //Prueba7
 	   @(posedge clk);
 	   FIFO_empty <=5'b11110;

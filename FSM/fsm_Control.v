@@ -48,7 +48,6 @@ module fsmControl  ( input clk,
     end
     else begin
       state <= nxt_state;
-      umbrales_I <= nxt_umbrales;
     end
 
     case(state)
@@ -69,8 +68,7 @@ module fsmControl  ( input clk,
       end
 
       INIT: begin
-        nxt_umbrales <= {nxt_umbral_MF,nxt_umbral_VC0,nxt_umbral_VC1,nxt_umbral_D0,nxt_umbral_D1};
-        umbrales_I <= nxt_umbrales;
+        umbrales_I <= {nxt_umbral_MF,nxt_umbral_VC0,nxt_umbral_VC1,nxt_umbral_D0,nxt_umbral_D1};
         if (FIFO_error!=0)begin
           nxt_state <= ERROR;
         end
@@ -80,7 +78,7 @@ module fsmControl  ( input clk,
       end
 
       IDLE: begin
-	//idle_out <= 1;
+	idle_out <= 1;
       	active_out <= 0;
 	if (FIFO_empty!=0) begin
             idle_out <= 0;
@@ -109,9 +107,15 @@ module fsmControl  ( input clk,
     end
 
     ERROR: begin
+	nxt_umbral_MF<=umbral_MF;
+      	nxt_umbral_VC0<=umbral_VC0;
+      	nxt_umbral_VC1<=umbral_VC1;
+      	nxt_umbral_D0<=umbral_D0;
+      	nxt_umbral_D1<=umbral_D1;
 	if (FIFO_error!=0) begin//Profe se queda aquí en el estado error? o sale a reset en el proximo estado? nxt_state <= RESET;  
 		nxt_state <= ERROR;
         	error_out<=FIFO_error;
+		umbrales_I <= {nxt_umbral_MF,nxt_umbral_VC0,nxt_umbral_VC1,nxt_umbral_D0,nxt_umbral_D1};
 	        if (reset) begin
         		nxt_state <= RESET;
 			end else begin
