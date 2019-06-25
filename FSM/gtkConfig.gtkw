@@ -1,15 +1,15 @@
 [*]
 [*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
-[*] Tue Jun 25 18:55:56 2019
+[*] Tue Jun 25 20:44:29 2019
 [*]
 [dumpfile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/FSM/fsmControl.vcd"
-[dumpfile_mtime] "Tue Jun 25 18:55:51 2019"
-[dumpfile_size] 54768
+[dumpfile_mtime] "Tue Jun 25 20:43:37 2019"
+[dumpfile_size] 49040
 [savefile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/FSM/gtkConfig.gtkw"
 [timestart] 0
 [size] 1280 751
 [pos] 1143 0
-*-4.647541 49 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-4.647541 5 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] testbench.
 [sst_width] 229
 [signals_width] 222
@@ -47,7 +47,7 @@ testbench.fsmCondu.nxt_state[4:0]
 (4)testbench.fsmCondu.nxt_state[4:0]
 @1401200
 -group_end
-@23
+@22
 testbench.fsmCondu.umbrales_I[13:0]
 @200
 -Estructural
@@ -55,8 +55,10 @@ testbench.fsmCondu.umbrales_I[13:0]
 testbench.fsmEstru.reset
 testbench.prob.active_estru
 testbench.prob.idle_estru
+@23
+testbench.fsmEstru.state[4:0]
 @22
 testbench.fsmEstru.nxt_state[4:0]
-testbench.fsmEstru.nxt_state[4:0]
+testbench.fsmEstru.umbrales_I[13:0]
 [pattern_trace] 1
 [pattern_trace] 0

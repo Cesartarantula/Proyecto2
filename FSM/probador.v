@@ -46,7 +46,7 @@ module probador (	input [13:0] umbrales_I_condu,
  
 	   //Prueba2 Estado de Reset
 	   @(posedge clk);
-	   reset <= 1;
+	   #10 reset <= 1;
 
 	   //Prueba3 Forzado de estado de Init
 	   @(posedge clk);
@@ -94,7 +94,7 @@ module probador (	input [13:0] umbrales_I_condu,
 	   #16  FIFO_error <=5'b00100;
 	   
 	   //Tiempo de Espera
-	   #100 $finish;
+	   #120 $finish;
 	   
 	end
 
