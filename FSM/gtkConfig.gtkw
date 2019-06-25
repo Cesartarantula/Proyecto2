@@ -1,15 +1,15 @@
 [*]
 [*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
-[*] Mon Jun 24 20:35:24 2019
+[*] Tue Jun 25 16:34:10 2019
 [*]
-[dumpfile] "/home/cesar/Desktop/DigitalesII/FSMPrueba/fsmControl.vcd"
-[dumpfile_mtime] "Mon Jun 24 20:34:48 2019"
-[dumpfile_size] 30268
-[savefile] "/home/cesar/Desktop/DigitalesII/FSMPrueba/gtkConfig.gtkw"
+[dumpfile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/FSM/fsmControl.vcd"
+[dumpfile_mtime] "Tue Jun 25 16:33:38 2019"
+[dumpfile_size] 31225
+[savefile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/FSM/gtkConfig.gtkw"
 [timestart] 0
 [size] 1280 751
 [pos] 1143 0
-*-3.280759 12 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-4.647541 55 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] testbench.
 [sst_width] 229
 [signals_width] 222
@@ -19,7 +19,7 @@
 testbench.prob.clk
 testbench.prob.reset
 testbench.fsmCondu.init
-@25
+@24
 testbench.prob.umbral_MF[1:0]
 testbench.prob.umbral_VC0[3:0]
 testbench.prob.umbral_D0[1:0]
@@ -34,9 +34,10 @@ testbench.fsmCondu.clk
 testbench.fsmCondu.reset
 testbench.fsmCondu.active_out
 testbench.fsmCondu.idle_out
-@25
+@24
+testbench.fsmCondu.error_out[4:0]
 testbench.fsmCondu.state[4:0]
-@c00025
+@c00024
 testbench.fsmCondu.nxt_state[4:0]
 @28
 (0)testbench.fsmCondu.nxt_state[4:0]
@@ -44,15 +45,18 @@ testbench.fsmCondu.nxt_state[4:0]
 (2)testbench.fsmCondu.nxt_state[4:0]
 (3)testbench.fsmCondu.nxt_state[4:0]
 (4)testbench.fsmCondu.nxt_state[4:0]
-@1401205
+@1401200
 -group_end
-@25
-testbench.fsmCondu.error_out[4:0]
+@23
+testbench.fsmCondu.umbrales_I[13:0]
 @200
 -Estructural
 @28
 testbench.fsmEstru.reset
 testbench.prob.active_estru
 testbench.prob.idle_estru
+@22
+testbench.fsmEstru.nxt_state[4:0]
+testbench.fsmEstru.nxt_state[4:0]
 [pattern_trace] 1
 [pattern_trace] 0

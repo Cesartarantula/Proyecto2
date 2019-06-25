@@ -20,7 +20,7 @@ module fsmControl  ( input clk,
               output reg [13:0] umbrales_I,	//Esta salida es de 14 bits? (MF,VCO,VC1,D0,D1)= bits(2,4,4,2,2)
               output reg active_out,
               output reg idle_out,
-              output reg [4:0] error_out);
+              output reg [4:0] error_out);// Profe una consulta? error out=error_full? Por donde se saca el id del fifo error?
 
   //Parámetros del Case
   parameter RESET = 5'b00001;
@@ -34,8 +34,6 @@ module fsmControl  ( input clk,
   reg [3:0] nxt_umbral_VC0, nxt_umbral_VC1;
   reg [4:0] state, nxt_state;
   reg [13:0] nxt_umbrales;
-  reg error_out_0, error_out_1, error_out_2, error_out_3, error_out_4;
-  reg [4:0] error_out_w;
 
   //Reset de salidas y demás señales
   //Asignación de estado inicial.
@@ -62,16 +60,12 @@ module fsmControl  ( input clk,
       	idle_out <= 0;
       	error_out <= 0;
       	//Registros Internos
+	nxt_umbrales <=0;
       	nxt_umbral_MF<=0;
       	nxt_umbral_VC0<=0;
       	nxt_umbral_VC1<=0;
       	nxt_umbral_D0<=0;
       	nxt_umbral_D1<=0;
-	error_out_0<=0;
-      	error_out_1<=0;
-      	error_out_2<=0;
-      	error_out_3<=0;
-      	error_out_4<=0;
       end
 
       INIT: begin
@@ -86,91 +80,46 @@ module fsmControl  ( input clk,
       end
 
       IDLE: begin
-        if (FIFO_error!=0)begin
-          nxt_state <= ERROR;
-        end
-        else if (FIFO_empty==0) begin
-            idle_out <= 1;
-            nxt_state <= IDLE;
-        end
-	else if (FIFO_empty!=0) begin
+	//idle_out <= 1;
+      	active_out <= 0;
+	if (FIFO_empty!=0) begin
             idle_out <= 0;
             nxt_state <= ACTIVE;
+	    if (FIFO_empty==0) begin
+            	idle_out <= 1;
+            	nxt_state <= IDLE;
+                if (FIFO_error!=0)begin
+          		nxt_state <= ERROR;
+        	end
+	    end
         end
       end
 
-    ACTIVE: begin
-      idle_out <= 0;
-      active_out <= 1;
-      if (FIFO_error!=0)begin
+      ACTIVE: begin
+      //idle_out <= 0;
+      	active_out <= 1;
+      	if (FIFO_error!=0)begin
 	  active_out <= 0;
           nxt_state <= ERROR;
-      end
-      else if (FIFO_empty==0)begin
-          active_out <= 0;
-	  nxt_state <= IDLE;
-      end
+      	  if (FIFO_empty==0)begin
+          	active_out <= 0;
+	  	nxt_state <= IDLE;
+      	  end
+	end
     end
 
     ERROR: begin
-	if (FIFO_error[4]==1) begin
+	if (FIFO_error!=0) begin//Profe se queda aquí en el estado error? o sale a reset en el proximo estado? nxt_state <= RESET;  
 		nxt_state <= ERROR;
-		error_out[4] <=1;
-	        error_out_w<= {error_out[4],error_out[3],error_out[2],error_out[1],error_out[0]};
-        	error_out<=error_out_w;
-	end
-	else if (FIFO_error[3]==1) begin
-			error_out[3] <=1;
-	end
-	else if (FIFO_error[2]==1) begin
-			error_out[2] <=1;
-	end
-	else if (FIFO_error[1]==1) begin
-			error_out[1] <=1;
-	end
-	else if (FIFO_error[1]==1) begin
-			error_out[1] <=1;
-	end
-	else if (FIFO_error[0]==1) begin
-			error_out[0] <=1;
-       	end
-
-       if (FIFO_error[4]==1) begin
-		error_out_4<=1;
-		error_out <= {error_out_4,error_out_3,error_out_2,error_out_1,error_out_0};
-		nxt_state <= ERROR;
-      end	
-      if (FIFO_error[4]==1) begin
-		error_out_4<=1;
-		error_out <= {error_out_4,error_out_3,error_out_2,error_out_1,error_out_0};
-		nxt_state <= ERROR;
-      end	
-      else if (FIFO_error[3]==1) begin
-		nxt_state <= ERROR;
-		error_out_3<=1;
-		error_out <= {error_out_4,error_out_3,error_out_2,error_out_1,error_out_0};
-      end
-      else if (FIFO_error[2]==1) begin
-		nxt_state <= ERROR;
-		error_out_2<=1;
-		error_out <= {error_out_4,error_out_3,error_out_2,error_out_1,error_out_0};
-      end
-      else if (FIFO_error[1]==1) begin
-		nxt_state <= ERROR;
-		error_out_1<=1;
-		error_out <= {error_out_4,error_out_3,error_out_2,error_out_1,error_out_0};
-      end
-      else if (FIFO_error[0]==1) begin
-		nxt_state <= ERROR;
-		error_out_0<=1;
-		error_out <= {error_out_4,error_out_3,error_out_2,error_out_1,error_out_0};
-      end
-      if (~reset) begin
-        nxt_state <= RESET;
-      end
-      //nxt_umbrales <= {nxt_umbral_MF,nxt_umbral_VC0,nxt_umbral_VC1,nxt_umbral_D0,nxt_umbral_D1};
-      //umbrales_I <= nxt_umbrales;
+        	error_out<=FIFO_error;
+	        if (reset) begin
+        		nxt_state <= RESET;
+			end else begin
+        			nxt_state <= ERROR;
+      			end
+	end  	
     end
+
     default:
       nxt_state <= RESET;
     endcase
