@@ -33,7 +33,7 @@ module probador (	input [13:0] umbrales_I_condu,
 
 	   //Secuencia de pruebas
 	   //Condiciones Iniciales (Prueba1)
-	   #5 reset <=0;
+	   #0 reset <=0;
 	   init<=0;
 	    
 	   umbral_MF<=2'b00; 

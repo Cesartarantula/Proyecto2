@@ -42,6 +42,9 @@ module fsmControl  ( input clk,
     if (~reset) begin
       //Estado Inicial 
       state <= RESET;
+      active_out<=0;
+      idle_out<=0;
+      error_out<=0;
     end
     else if (init) begin
           state <= INIT;
@@ -68,6 +71,9 @@ module fsmControl  ( input clk,
       end
 
       INIT: begin
+	idle_out <= 0;
+      	active_out <= 0;
+	error_out <= 0;
         umbrales_I <= {nxt_umbral_MF,nxt_umbral_VC0,nxt_umbral_VC1,nxt_umbral_D0,nxt_umbral_D1};
         if (FIFO_error!=0)begin
           nxt_state <= ERROR;
@@ -94,7 +100,7 @@ module fsmControl  ( input clk,
       end
 
       ACTIVE: begin
-      //idle_out <= 0;
+      	idle_out <= 0;
       	active_out <= 1;
       	if (FIFO_error!=0)begin
 	  active_out <= 0;
@@ -107,6 +113,8 @@ module fsmControl  ( input clk,
     end
 
     ERROR: begin
+	idle_out <= 0;
+      	active_out <= 0;
 	nxt_umbral_MF<=umbral_MF;
       	nxt_umbral_VC0<=umbral_VC0;
       	nxt_umbral_VC1<=umbral_VC1;
