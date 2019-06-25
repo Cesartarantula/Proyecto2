@@ -34,6 +34,7 @@ module fsmControl  ( input clk,
   reg [3:0] nxt_umbral_VC0, nxt_umbral_VC1;
   reg [4:0] state, nxt_state;
   reg [13:0] nxt_umbrales;
+  reg error_out_0, error_out_1, error_out_2, error_out_3, error_out_4;
   reg [4:0] error_out_w;
 
   //Reset de salidas y demás señales
@@ -66,6 +67,11 @@ module fsmControl  ( input clk,
       	nxt_umbral_VC1<=0;
       	nxt_umbral_D0<=0;
       	nxt_umbral_D1<=0;
+	error_out_0<=0;
+      	error_out_1<=0;
+      	error_out_2<=0;
+      	error_out_3<=0;
+      	error_out_4<=0;
       end
 
       INIT: begin
@@ -107,28 +113,57 @@ module fsmControl  ( input clk,
     end
 
     ERROR: begin
-      //error_out <= 1;
-      //active_out <= 0;
-      //idle_out <= 0;
-      if (FIFO_error[4]==1) begin
+	if (FIFO_error[4]==1) begin
 		nxt_state <= ERROR;
 		error_out[4] <=1;
+	        error_out_w<= {error_out[4],error_out[3],error_out[2],error_out[1],error_out[0]};
+        	error_out<=error_out_w;
+	end
+	else if (FIFO_error[3]==1) begin
+			error_out[3] <=1;
+	end
+	else if (FIFO_error[2]==1) begin
+			error_out[2] <=1;
+	end
+	else if (FIFO_error[1]==1) begin
+			error_out[1] <=1;
+	end
+	else if (FIFO_error[1]==1) begin
+			error_out[1] <=1;
+	end
+	else if (FIFO_error[0]==1) begin
+			error_out[0] <=1;
+       	end
+
+       if (FIFO_error[4]==1) begin
+		error_out_4<=1;
+		error_out <= {error_out_4,error_out_3,error_out_2,error_out_1,error_out_0};
+		nxt_state <= ERROR;
       end	
-      else if (FIFO_error==8) begin
+      if (FIFO_error[4]==1) begin
+		error_out_4<=1;
+		error_out <= {error_out_4,error_out_3,error_out_2,error_out_1,error_out_0};
 		nxt_state <= ERROR;
-		error_out <=8;
+      end	
+      else if (FIFO_error[3]==1) begin
+		nxt_state <= ERROR;
+		error_out_3<=1;
+		error_out <= {error_out_4,error_out_3,error_out_2,error_out_1,error_out_0};
       end
-      else if (FIFO_error==4) begin
+      else if (FIFO_error[2]==1) begin
 		nxt_state <= ERROR;
-		error_out <=4;
+		error_out_2<=1;
+		error_out <= {error_out_4,error_out_3,error_out_2,error_out_1,error_out_0};
       end
-      else if (FIFO_error==2) begin
+      else if (FIFO_error[1]==1) begin
 		nxt_state <= ERROR;
-		error_out <=2;
+		error_out_1<=1;
+		error_out <= {error_out_4,error_out_3,error_out_2,error_out_1,error_out_0};
       end
-      else if (FIFO_error==1) begin
+      else if (FIFO_error[0]==1) begin
 		nxt_state <= ERROR;
-		error_out <=1;
+		error_out_0<=1;
+		error_out <= {error_out_4,error_out_3,error_out_2,error_out_1,error_out_0};
       end
       if (~reset) begin
         nxt_state <= RESET;

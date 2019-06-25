@@ -60,7 +60,7 @@ module probador (	input [13:0] umbrales_I_condu,
 	   //Prueba4 Recibe señal de FIFO_error=1 E Init=0
 	   @(posedge clk);
            init <= 0;
-	   FIFO_error <=15;//Le meto un 15
+	   FIFO_error <=5'b10100;
 	   umbral_MF<=2'b11; //Le meto 3
 	   umbral_VC1<=4'b1100; //Le meto 12
            umbral_D1<=2'b11; //Le meto 3
@@ -75,9 +75,9 @@ module probador (	input [13:0] umbrales_I_condu,
 
 	  //Prueba6 Apaga señal de reset y señal de FIFO_error, espera 4 ciclos de relog y vuelve Reset a 1
 	  @(posedge clk);
-	   reset <= 0;
+	   #6 reset <= 0;
 	   FIFO_error <= 0;
-	   #2 reset <= 1;
+	   #6 reset <= 1;
 
 	   //Prueba7
 	   @(posedge clk);
