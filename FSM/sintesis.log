@@ -69,193 +69,196 @@ Creating decoders for process `\fsmControl.$proc$fsm_Control.v:41$1'.
 
 3.7. Executing PROC_DFF pass (convert process syncs to FFs).
 Creating register for signal `\fsmControl.\umbrales_I' using process `\fsmControl.$proc$fsm_Control.v:41$1'.
-  created $dff cell `$procdff$124' with positive edge clock.
-Creating register for signal `\fsmControl.\active_out' using process `\fsmControl.$proc$fsm_Control.v:41$1'.
-  created $dff cell `$procdff$125' with positive edge clock.
-Creating register for signal `\fsmControl.\idle_out' using process `\fsmControl.$proc$fsm_Control.v:41$1'.
-  created $dff cell `$procdff$126' with positive edge clock.
-Creating register for signal `\fsmControl.\error_out' using process `\fsmControl.$proc$fsm_Control.v:41$1'.
-  created $dff cell `$procdff$127' with positive edge clock.
-Creating register for signal `\fsmControl.\nxt_umbral_MF' using process `\fsmControl.$proc$fsm_Control.v:41$1'.
-  created $dff cell `$procdff$128' with positive edge clock.
-Creating register for signal `\fsmControl.\nxt_umbral_D0' using process `\fsmControl.$proc$fsm_Control.v:41$1'.
-  created $dff cell `$procdff$129' with positive edge clock.
-Creating register for signal `\fsmControl.\nxt_umbral_D1' using process `\fsmControl.$proc$fsm_Control.v:41$1'.
-  created $dff cell `$procdff$130' with positive edge clock.
-Creating register for signal `\fsmControl.\nxt_umbral_VC0' using process `\fsmControl.$proc$fsm_Control.v:41$1'.
   created $dff cell `$procdff$131' with positive edge clock.
-Creating register for signal `\fsmControl.\nxt_umbral_VC1' using process `\fsmControl.$proc$fsm_Control.v:41$1'.
+Creating register for signal `\fsmControl.\active_out' using process `\fsmControl.$proc$fsm_Control.v:41$1'.
   created $dff cell `$procdff$132' with positive edge clock.
-Creating register for signal `\fsmControl.\state' using process `\fsmControl.$proc$fsm_Control.v:41$1'.
+Creating register for signal `\fsmControl.\idle_out' using process `\fsmControl.$proc$fsm_Control.v:41$1'.
   created $dff cell `$procdff$133' with positive edge clock.
-Creating register for signal `\fsmControl.\nxt_state' using process `\fsmControl.$proc$fsm_Control.v:41$1'.
+Creating register for signal `\fsmControl.\error_out' using process `\fsmControl.$proc$fsm_Control.v:41$1'.
   created $dff cell `$procdff$134' with positive edge clock.
-Creating register for signal `\fsmControl.\nxt_umbrales' using process `\fsmControl.$proc$fsm_Control.v:41$1'.
+Creating register for signal `\fsmControl.\nxt_umbral_MF' using process `\fsmControl.$proc$fsm_Control.v:41$1'.
   created $dff cell `$procdff$135' with positive edge clock.
+Creating register for signal `\fsmControl.\nxt_umbral_D0' using process `\fsmControl.$proc$fsm_Control.v:41$1'.
+  created $dff cell `$procdff$136' with positive edge clock.
+Creating register for signal `\fsmControl.\nxt_umbral_D1' using process `\fsmControl.$proc$fsm_Control.v:41$1'.
+  created $dff cell `$procdff$137' with positive edge clock.
+Creating register for signal `\fsmControl.\nxt_umbral_VC0' using process `\fsmControl.$proc$fsm_Control.v:41$1'.
+  created $dff cell `$procdff$138' with positive edge clock.
+Creating register for signal `\fsmControl.\nxt_umbral_VC1' using process `\fsmControl.$proc$fsm_Control.v:41$1'.
+  created $dff cell `$procdff$139' with positive edge clock.
+Creating register for signal `\fsmControl.\state' using process `\fsmControl.$proc$fsm_Control.v:41$1'.
+  created $dff cell `$procdff$140' with positive edge clock.
+Creating register for signal `\fsmControl.\nxt_state' using process `\fsmControl.$proc$fsm_Control.v:41$1'.
+  created $dff cell `$procdff$141' with positive edge clock.
+Creating register for signal `\fsmControl.\nxt_umbrales' using process `\fsmControl.$proc$fsm_Control.v:41$1'.
+  created $dff cell `$procdff$142' with positive edge clock.
 
 3.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
-Found and cleaned up 11 empty switches in `\fsmControl.$proc$fsm_Control.v:41$1'.
+Found and cleaned up 12 empty switches in `\fsmControl.$proc$fsm_Control.v:41$1'.
 Removing empty process `fsmControl.$proc$fsm_Control.v:41$1'.
-Cleaned up 11 empty switches.
+Cleaned up 12 empty switches.
 
 4. Executing OPT pass (performing simple optimizations).
 
 4.1. Executing OPT_EXPR pass (perform const folding).
-Replacing $ne cell `$ne$fsm_Control.v:78$3' in module `fsmControl' with $logic_not.
-Replacing $ne cell `$ne$fsm_Control.v:89$4' in module `fsmControl' with $logic_not.
-Replacing $eq cell `$eq$fsm_Control.v:92$5' in module `fsmControl' with $logic_not.
-Replacing $ne cell `$ne$fsm_Control.v:95$6' in module `fsmControl' with $logic_not.
-Replacing $ne cell `$ne$fsm_Control.v:105$7' in module `fsmControl' with $logic_not.
-Replacing $eq cell `$eq$fsm_Control.v:108$8' in module `fsmControl' with $logic_not.
+Replacing $ne cell `$ne$fsm_Control.v:81$3' in module `fsmControl' with $logic_not.
+Replacing $ne cell `$ne$fsm_Control.v:92$4' in module `fsmControl' with $logic_not.
+Replacing $eq cell `$eq$fsm_Control.v:95$5' in module `fsmControl' with $logic_not.
+Replacing $ne cell `$ne$fsm_Control.v:98$6' in module `fsmControl' with $logic_not.
+Replacing $ne cell `$ne$fsm_Control.v:106$7' in module `fsmControl' with $logic_not.
+Replacing $eq cell `$eq$fsm_Control.v:109$8' in module `fsmControl' with $logic_not.
 Replacing $ne cell `$ne$fsm_Control.v:123$9' in module `fsmControl' with $logic_not.
-Optimizing away select inverter for $mux cell `$procmux$52' in module `fsmControl'.
-Optimizing away select inverter for $mux cell `$procmux$75' in module `fsmControl'.
-Optimizing away select inverter for $mux cell `$procmux$86' in module `fsmControl'.
-Optimizing away select inverter for $mux cell `$procmux$102' in module `fsmControl'.
+Optimizing away select inverter for $mux cell `$procmux$23' in module `fsmControl'.
+Optimizing away select inverter for $mux cell `$procmux$56' in module `fsmControl'.
+Optimizing away select inverter for $mux cell `$procmux$79' in module `fsmControl'.
+Optimizing away select inverter for $mux cell `$procmux$90' in module `fsmControl'.
+Optimizing away select inverter for $mux cell `$procmux$105' in module `fsmControl'.
+Optimizing away select inverter for $mux cell `$procmux$121' in module `fsmControl'.
 
 4.2. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\fsmControl'.
-  Cell `$procmux$115_CMP0' is identical to cell `$procmux$123_CMP0'.
-    Redirecting output \Y: $procmux$115_CMP = $procmux$123_CMP
-    Removing $eq cell `$procmux$115_CMP0' from module `\fsmControl'.
-  Cell `$procmux$114_CMP0' is identical to cell `$procmux$122_CMP0'.
-    Redirecting output \Y: $procmux$114_CMP = $procmux$122_CMP
-    Removing $eq cell `$procmux$114_CMP0' from module `\fsmControl'.
-  Cell `$procmux$106_CMP0' is identical to cell `$procmux$121_CMP0'.
-    Redirecting output \Y: $procmux$106_CMP = $procmux$121_CMP
-    Removing $eq cell `$procmux$106_CMP0' from module `\fsmControl'.
-  Cell `$procmux$100_CMP0' is identical to cell `$procmux$123_CMP0'.
-    Redirecting output \Y: $procmux$100_CMP = $procmux$123_CMP
-    Removing $eq cell `$procmux$100_CMP0' from module `\fsmControl'.
-  Cell `$procmux$99_CMP0' is identical to cell `$procmux$122_CMP0'.
-    Redirecting output \Y: $procmux$99_CMP = $procmux$122_CMP
-    Removing $eq cell `$procmux$99_CMP0' from module `\fsmControl'.
-  Cell `$procmux$98_CMP0' is identical to cell `$procmux$113_CMP0'.
-    Redirecting output \Y: $procmux$98_CMP = $procmux$113_CMP
-    Removing $eq cell `$procmux$98_CMP0' from module `\fsmControl'.
-  Cell `$procmux$91_CMP0' is identical to cell `$procmux$112_CMP0'.
-    Redirecting output \Y: $procmux$91_CMP = $procmux$112_CMP
-    Removing $eq cell `$procmux$91_CMP0' from module `\fsmControl'.
-  Cell `$procmux$90_CMP0' is identical to cell `$procmux$121_CMP0'.
-    Redirecting output \Y: $procmux$90_CMP = $procmux$121_CMP
-    Removing $eq cell `$procmux$90_CMP0' from module `\fsmControl'.
-  Cell `$procmux$84_CMP0' is identical to cell `$procmux$123_CMP0'.
-    Redirecting output \Y: $procmux$84_CMP = $procmux$123_CMP
-    Removing $eq cell `$procmux$84_CMP0' from module `\fsmControl'.
-  Cell `$procmux$83_CMP0' is identical to cell `$procmux$122_CMP0'.
-    Redirecting output \Y: $procmux$83_CMP = $procmux$122_CMP
-    Removing $eq cell `$procmux$83_CMP0' from module `\fsmControl'.
-  Cell `$procmux$82_CMP0' is identical to cell `$procmux$121_CMP0'.
-    Redirecting output \Y: $procmux$82_CMP = $procmux$121_CMP
-    Removing $eq cell `$procmux$82_CMP0' from module `\fsmControl'.
-  Cell `$procmux$73_CMP0' is identical to cell `$procmux$123_CMP0'.
-    Redirecting output \Y: $procmux$73_CMP = $procmux$123_CMP
+  Cell `$procmux$119_CMP0' is identical to cell `$procmux$130_CMP0'.
+    Redirecting output \Y: $procmux$119_CMP = $procmux$130_CMP
+    Removing $eq cell `$procmux$119_CMP0' from module `\fsmControl'.
+  Cell `$procmux$118_CMP0' is identical to cell `$procmux$129_CMP0'.
+    Redirecting output \Y: $procmux$118_CMP = $procmux$129_CMP
+    Removing $eq cell `$procmux$118_CMP0' from module `\fsmControl'.
+  Cell `$procmux$109_CMP0' is identical to cell `$procmux$128_CMP0'.
+    Redirecting output \Y: $procmux$109_CMP = $procmux$128_CMP
+    Removing $eq cell `$procmux$109_CMP0' from module `\fsmControl'.
+  Cell `$procmux$103_CMP0' is identical to cell `$procmux$130_CMP0'.
+    Redirecting output \Y: $procmux$103_CMP = $procmux$130_CMP
+    Removing $eq cell `$procmux$103_CMP0' from module `\fsmControl'.
+  Cell `$procmux$102_CMP0' is identical to cell `$procmux$129_CMP0'.
+    Redirecting output \Y: $procmux$102_CMP = $procmux$129_CMP
+    Removing $eq cell `$procmux$102_CMP0' from module `\fsmControl'.
+  Cell `$procmux$101_CMP0' is identical to cell `$procmux$117_CMP0'.
+    Redirecting output \Y: $procmux$101_CMP = $procmux$117_CMP
+    Removing $eq cell `$procmux$101_CMP0' from module `\fsmControl'.
+  Cell `$procmux$95_CMP0' is identical to cell `$procmux$116_CMP0'.
+    Redirecting output \Y: $procmux$95_CMP = $procmux$116_CMP
+    Removing $eq cell `$procmux$95_CMP0' from module `\fsmControl'.
+  Cell `$procmux$94_CMP0' is identical to cell `$procmux$128_CMP0'.
+    Redirecting output \Y: $procmux$94_CMP = $procmux$128_CMP
+    Removing $eq cell `$procmux$94_CMP0' from module `\fsmControl'.
+  Cell `$procmux$88_CMP0' is identical to cell `$procmux$130_CMP0'.
+    Redirecting output \Y: $procmux$88_CMP = $procmux$130_CMP
+    Removing $eq cell `$procmux$88_CMP0' from module `\fsmControl'.
+  Cell `$procmux$87_CMP0' is identical to cell `$procmux$129_CMP0'.
+    Redirecting output \Y: $procmux$87_CMP = $procmux$129_CMP
+    Removing $eq cell `$procmux$87_CMP0' from module `\fsmControl'.
+  Cell `$procmux$86_CMP0' is identical to cell `$procmux$128_CMP0'.
+    Redirecting output \Y: $procmux$86_CMP = $procmux$128_CMP
+    Removing $eq cell `$procmux$86_CMP0' from module `\fsmControl'.
+  Cell `$procmux$77_CMP0' is identical to cell `$procmux$130_CMP0'.
+    Redirecting output \Y: $procmux$77_CMP = $procmux$130_CMP
+    Removing $eq cell `$procmux$77_CMP0' from module `\fsmControl'.
+  Cell `$procmux$76_CMP0' is identical to cell `$procmux$128_CMP0'.
+    Redirecting output \Y: $procmux$76_CMP = $procmux$128_CMP
+    Removing $eq cell `$procmux$76_CMP0' from module `\fsmControl'.
+  Cell `$procmux$73_CMP0' is identical to cell `$procmux$130_CMP0'.
+    Redirecting output \Y: $procmux$73_CMP = $procmux$130_CMP
     Removing $eq cell `$procmux$73_CMP0' from module `\fsmControl'.
-  Cell `$procmux$72_CMP0' is identical to cell `$procmux$121_CMP0'.
-    Redirecting output \Y: $procmux$72_CMP = $procmux$121_CMP
+  Cell `$procmux$72_CMP0' is identical to cell `$procmux$128_CMP0'.
+    Redirecting output \Y: $procmux$72_CMP = $procmux$128_CMP
     Removing $eq cell `$procmux$72_CMP0' from module `\fsmControl'.
-  Cell `$procmux$69_CMP0' is identical to cell `$procmux$123_CMP0'.
-    Redirecting output \Y: $procmux$69_CMP = $procmux$123_CMP
+  Cell `$procmux$69_CMP0' is identical to cell `$procmux$130_CMP0'.
+    Redirecting output \Y: $procmux$69_CMP = $procmux$130_CMP
     Removing $eq cell `$procmux$69_CMP0' from module `\fsmControl'.
-  Cell `$procmux$68_CMP0' is identical to cell `$procmux$121_CMP0'.
-    Redirecting output \Y: $procmux$68_CMP = $procmux$121_CMP
+  Cell `$procmux$68_CMP0' is identical to cell `$procmux$128_CMP0'.
+    Redirecting output \Y: $procmux$68_CMP = $procmux$128_CMP
     Removing $eq cell `$procmux$68_CMP0' from module `\fsmControl'.
-  Cell `$procmux$65_CMP0' is identical to cell `$procmux$123_CMP0'.
-    Redirecting output \Y: $procmux$65_CMP = $procmux$123_CMP
+  Cell `$procmux$65_CMP0' is identical to cell `$procmux$130_CMP0'.
+    Redirecting output \Y: $procmux$65_CMP = $procmux$130_CMP
     Removing $eq cell `$procmux$65_CMP0' from module `\fsmControl'.
-  Cell `$procmux$64_CMP0' is identical to cell `$procmux$121_CMP0'.
-    Redirecting output \Y: $procmux$64_CMP = $procmux$121_CMP
+  Cell `$procmux$64_CMP0' is identical to cell `$procmux$128_CMP0'.
+    Redirecting output \Y: $procmux$64_CMP = $procmux$128_CMP
     Removing $eq cell `$procmux$64_CMP0' from module `\fsmControl'.
-  Cell `$procmux$61_CMP0' is identical to cell `$procmux$123_CMP0'.
-    Redirecting output \Y: $procmux$61_CMP = $procmux$123_CMP
+  Cell `$procmux$61_CMP0' is identical to cell `$procmux$130_CMP0'.
+    Redirecting output \Y: $procmux$61_CMP = $procmux$130_CMP
     Removing $eq cell `$procmux$61_CMP0' from module `\fsmControl'.
-  Cell `$procmux$60_CMP0' is identical to cell `$procmux$121_CMP0'.
-    Redirecting output \Y: $procmux$60_CMP = $procmux$121_CMP
+  Cell `$procmux$60_CMP0' is identical to cell `$procmux$128_CMP0'.
+    Redirecting output \Y: $procmux$60_CMP = $procmux$128_CMP
     Removing $eq cell `$procmux$60_CMP0' from module `\fsmControl'.
-  Cell `$procmux$57_CMP0' is identical to cell `$procmux$123_CMP0'.
-    Redirecting output \Y: $procmux$57_CMP = $procmux$123_CMP
-    Removing $eq cell `$procmux$57_CMP0' from module `\fsmControl'.
-  Cell `$procmux$56_CMP0' is identical to cell `$procmux$121_CMP0'.
-    Redirecting output \Y: $procmux$56_CMP = $procmux$121_CMP
-    Removing $eq cell `$procmux$56_CMP0' from module `\fsmControl'.
-  Cell `$procmux$47_CMP0' is identical to cell `$procmux$123_CMP0'.
-    Redirecting output \Y: $procmux$47_CMP = $procmux$123_CMP
-    Removing $eq cell `$procmux$47_CMP0' from module `\fsmControl'.
-  Cell `$procmux$46_CMP0' is identical to cell `$procmux$122_CMP0'.
-    Redirecting output \Y: $procmux$46_CMP = $procmux$122_CMP
+  Cell `$procmux$51_CMP0' is identical to cell `$procmux$130_CMP0'.
+    Redirecting output \Y: $procmux$51_CMP = $procmux$130_CMP
+    Removing $eq cell `$procmux$51_CMP0' from module `\fsmControl'.
+  Cell `$procmux$50_CMP0' is identical to cell `$procmux$129_CMP0'.
+    Redirecting output \Y: $procmux$50_CMP = $procmux$129_CMP
+    Removing $eq cell `$procmux$50_CMP0' from module `\fsmControl'.
+  Cell `$procmux$46_CMP0' is identical to cell `$procmux$117_CMP0'.
+    Redirecting output \Y: $procmux$46_CMP = $procmux$117_CMP
     Removing $eq cell `$procmux$46_CMP0' from module `\fsmControl'.
-  Cell `$procmux$42_CMP0' is identical to cell `$procmux$113_CMP0'.
-    Redirecting output \Y: $procmux$42_CMP = $procmux$113_CMP
-    Removing $eq cell `$procmux$42_CMP0' from module `\fsmControl'.
-  Cell `$procmux$32_CMP0' is identical to cell `$procmux$112_CMP0'.
-    Redirecting output \Y: $procmux$32_CMP = $procmux$112_CMP
-    Removing $eq cell `$procmux$32_CMP0' from module `\fsmControl'.
-  Cell `$procmux$25_CMP0' is identical to cell `$procmux$121_CMP0'.
-    Redirecting output \Y: $procmux$25_CMP = $procmux$121_CMP
-    Removing $eq cell `$procmux$25_CMP0' from module `\fsmControl'.
-  Cell `$procmux$16_CMP0' is identical to cell `$procmux$123_CMP0'.
-    Redirecting output \Y: $procmux$16_CMP = $procmux$123_CMP
-    Removing $eq cell `$procmux$16_CMP0' from module `\fsmControl'.
-  Cell `$ne$fsm_Control.v:105$7' is identical to cell `$ne$fsm_Control.v:123$9'.
-    Redirecting output \Y: $ne$fsm_Control.v:105$7_Y = $ne$fsm_Control.v:123$9_Y
-    Removing $reduce_bool cell `$ne$fsm_Control.v:105$7' from module `\fsmControl'.
-  Cell `$ne$fsm_Control.v:95$6' is identical to cell `$ne$fsm_Control.v:123$9'.
-    Redirecting output \Y: $ne$fsm_Control.v:95$6_Y = $ne$fsm_Control.v:123$9_Y
-    Removing $reduce_bool cell `$ne$fsm_Control.v:95$6' from module `\fsmControl'.
-  Cell `$eq$fsm_Control.v:92$5' is identical to cell `$eq$fsm_Control.v:108$8'.
-    Redirecting output \Y: $eq$fsm_Control.v:92$5_Y = $eq$fsm_Control.v:108$8_Y
-    Removing $logic_not cell `$eq$fsm_Control.v:92$5' from module `\fsmControl'.
-  Cell `$ne$fsm_Control.v:78$3' is identical to cell `$ne$fsm_Control.v:123$9'.
-    Redirecting output \Y: $ne$fsm_Control.v:78$3_Y = $ne$fsm_Control.v:123$9_Y
-    Removing $reduce_bool cell `$ne$fsm_Control.v:78$3' from module `\fsmControl'.
-Removed a total of 31 cells.
+  Cell `$procmux$36_CMP0' is identical to cell `$procmux$116_CMP0'.
+    Redirecting output \Y: $procmux$36_CMP = $procmux$116_CMP
+    Removing $eq cell `$procmux$36_CMP0' from module `\fsmControl'.
+  Cell `$procmux$29_CMP0' is identical to cell `$procmux$128_CMP0'.
+    Redirecting output \Y: $procmux$29_CMP = $procmux$128_CMP
+    Removing $eq cell `$procmux$29_CMP0' from module `\fsmControl'.
+  Cell `$procmux$17_CMP0' is identical to cell `$procmux$130_CMP0'.
+    Redirecting output \Y: $procmux$17_CMP = $procmux$130_CMP
+    Removing $eq cell `$procmux$17_CMP0' from module `\fsmControl'.
+  Cell `$ne$fsm_Control.v:106$7' is identical to cell `$ne$fsm_Control.v:123$9'.
+    Redirecting output \Y: $ne$fsm_Control.v:106$7_Y = $ne$fsm_Control.v:123$9_Y
+    Removing $reduce_bool cell `$ne$fsm_Control.v:106$7' from module `\fsmControl'.
+  Cell `$ne$fsm_Control.v:98$6' is identical to cell `$ne$fsm_Control.v:123$9'.
+    Redirecting output \Y: $ne$fsm_Control.v:98$6_Y = $ne$fsm_Control.v:123$9_Y
+    Removing $reduce_bool cell `$ne$fsm_Control.v:98$6' from module `\fsmControl'.
+  Cell `$eq$fsm_Control.v:95$5' is identical to cell `$eq$fsm_Control.v:109$8'.
+    Redirecting output \Y: $eq$fsm_Control.v:95$5_Y = $eq$fsm_Control.v:109$8_Y
+    Removing $logic_not cell `$eq$fsm_Control.v:95$5' from module `\fsmControl'.
+  Cell `$ne$fsm_Control.v:81$3' is identical to cell `$ne$fsm_Control.v:123$9'.
+    Redirecting output \Y: $ne$fsm_Control.v:81$3_Y = $ne$fsm_Control.v:123$9_Y
+    Removing $reduce_bool cell `$ne$fsm_Control.v:81$3' from module `\fsmControl'.
+  Cell `$not$fsm_Control.v:42$2' is identical to cell `$not$fsm_Control.v:127$10'.
+    Redirecting output \Y: $not$fsm_Control.v:42$2_Y = $not$fsm_Control.v:127$10_Y
+    Removing $not cell `$not$fsm_Control.v:42$2' from module `\fsmControl'.
+Removed a total of 32 cells.
 
 4.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
 Running muxtree optimizer on module \fsmControl..
   Creating internal representation of mux trees.
   Evaluating internal representation of mux trees.
-    Root of a mux tree: $procmux$89 (pure)
-    Root of a mux tree: $procmux$81 (pure)
-    Root of a mux tree: $procmux$75
+    Root of a mux tree: $procmux$93 (pure)
+    Root of a mux tree: $procmux$85 (pure)
+    Root of a mux tree: $procmux$79
+    Root of a mux tree: $procmux$75 (pure)
     Root of a mux tree: $procmux$71 (pure)
+    Root of a mux tree: $procmux$127 (pure)
     Root of a mux tree: $procmux$67 (pure)
-    Root of a mux tree: $procmux$120 (pure)
+    Root of a mux tree: $procmux$121
     Root of a mux tree: $procmux$63 (pure)
     Root of a mux tree: $procmux$59 (pure)
-    Root of a mux tree: $procmux$55 (pure)
-    Root of a mux tree: $procmux$52 (pure)
-    Root of a mux tree: $procmux$105 (pure)
-    Root of a mux tree: $procmux$24 (pure)
-    Root of a mux tree: $procmux$15 (pure)
+    Root of a mux tree: $procmux$56 (pure)
+    Root of a mux tree: $procmux$108 (pure)
+    Root of a mux tree: $procmux$28 (pure)
+    Root of a mux tree: $procmux$16 (pure)
   Analyzing evaluation results.
 Removed 0 multiplexer ports.
 
 4.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
   Optimizing cells in module \fsmControl.
-    New ctrl vector for $pmux cell $procmux$89: { $procmux$113_CMP $auto$opt_reduce.cc:132:opt_mux$137 }
-    New ctrl vector for $pmux cell $procmux$81: { $auto$opt_reduce.cc:132:opt_mux$139 $procmux$121_CMP }
-    New ctrl vector for $pmux cell $procmux$105: { $procmux$112_CMP $auto$opt_reduce.cc:132:opt_mux$141 }
-    New input vector for $reduce_or cell $auto$opt_reduce.cc:126:opt_mux$136: { $procmux$112_CMP $procmux$121_CMP $procmux$122_CMP $procmux$123_CMP }
-    New input vector for $reduce_or cell $auto$opt_reduce.cc:126:opt_mux$138: { $procmux$122_CMP $procmux$123_CMP }
-    New input vector for $reduce_or cell $auto$opt_reduce.cc:126:opt_mux$140: { $procmux$113_CMP $procmux$121_CMP $procmux$122_CMP $procmux$123_CMP }
+    New ctrl vector for $pmux cell $procmux$93: { $procmux$117_CMP $auto$opt_reduce.cc:132:opt_mux$144 }
+    New ctrl vector for $pmux cell $procmux$85: { $auto$opt_reduce.cc:132:opt_mux$146 $procmux$128_CMP }
+    New ctrl vector for $pmux cell $procmux$108: { $procmux$116_CMP $auto$opt_reduce.cc:132:opt_mux$148 }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:126:opt_mux$143: { $procmux$116_CMP $procmux$128_CMP $procmux$129_CMP $procmux$130_CMP }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:126:opt_mux$145: { $procmux$129_CMP $procmux$130_CMP }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:126:opt_mux$147: { $procmux$117_CMP $procmux$128_CMP $procmux$129_CMP $procmux$130_CMP }
   Optimizing cells in module \fsmControl.
 Performed a total of 6 changes.
 
 4.5. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\fsmControl'.
-  Cell `$procmux$36' is identical to cell `$procmux$44'.
-    Redirecting output \Y: $procmux$36_Y = $procmux$44_Y
-    Removing $mux cell `$procmux$36' from module `\fsmControl'.
-Removed a total of 1 cells.
+Removed a total of 0 cells.
 
 4.6. Executing OPT_RMDFF pass (remove dff with constant values).
-Removing $procdff$135 ($dff) from module fsmControl.
+Removing $procdff$142 ($dff) from module fsmControl.
 Replaced 1 DFF cells.
 
 4.7. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \fsmControl..
-  removing unused `$not' cell `$not$fsm_Control.v:42$2'.
-  removing unused `$mux' cell `$procmux$15'.
+  removing unused `$not' cell `$not$fsm_Control.v:127$10'.
+  removing unused `$mux' cell `$procmux$16'.
   removing unused non-port wire \nxt_umbrales.
   removed 1 unused temporary wires.
 
@@ -267,29 +270,28 @@ Finding unused cells or wires in module \fsmControl..
 Running muxtree optimizer on module \fsmControl..
   Creating internal representation of mux trees.
   Evaluating internal representation of mux trees.
-    Root of a mux tree: $procmux$105 (pure)
-    Root of a mux tree: $procmux$120 (pure)
-    Root of a mux tree: $procmux$24 (pure)
-    Root of a mux tree: $procmux$44
-    Root of a mux tree: $procmux$52 (pure)
-    Root of a mux tree: $procmux$55 (pure)
+    Root of a mux tree: $procmux$108 (pure)
+    Root of a mux tree: $procmux$121
+    Root of a mux tree: $procmux$127 (pure)
+    Root of a mux tree: $procmux$28 (pure)
+    Root of a mux tree: $procmux$56 (pure)
     Root of a mux tree: $procmux$59 (pure)
     Root of a mux tree: $procmux$63 (pure)
     Root of a mux tree: $procmux$67 (pure)
     Root of a mux tree: $procmux$71 (pure)
-    Root of a mux tree: $procmux$75
-    Root of a mux tree: $procmux$81 (pure)
-    Root of a mux tree: $procmux$89 (pure)
+    Root of a mux tree: $procmux$75 (pure)
+    Root of a mux tree: $procmux$79
+    Root of a mux tree: $procmux$85 (pure)
+    Root of a mux tree: $procmux$93 (pure)
   Analyzing evaluation results.
 Removed 0 multiplexer ports.
 
 4.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
   Optimizing cells in module \fsmControl.
-    New input vector for $reduce_or cell $auto$opt_reduce.cc:126:opt_mux$140: { $procmux$100_CMP $procmux$106_CMP $procmux$113_CMP $procmux$114_CMP }
-    New input vector for $reduce_or cell $auto$opt_reduce.cc:126:opt_mux$138: { $procmux$100_CMP $procmux$114_CMP }
-    New input vector for $reduce_or cell $auto$opt_reduce.cc:126:opt_mux$136: { $procmux$100_CMP $procmux$106_CMP $procmux$112_CMP $procmux$114_CMP }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:126:opt_mux$147: { $procmux$101_CMP $procmux$102_CMP $procmux$103_CMP $procmux$109_CMP }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:126:opt_mux$143: { $procmux$102_CMP $procmux$103_CMP $procmux$109_CMP $procmux$116_CMP }
   Optimizing cells in module \fsmControl.
-Performed a total of 3 changes.
+Performed a total of 2 changes.
 
 4.12. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\fsmControl'.
@@ -308,19 +310,19 @@ Finding unused cells or wires in module \fsmControl..
 Running muxtree optimizer on module \fsmControl..
   Creating internal representation of mux trees.
   Evaluating internal representation of mux trees.
-    Root of a mux tree: $procmux$105 (pure)
-    Root of a mux tree: $procmux$120 (pure)
-    Root of a mux tree: $procmux$24 (pure)
-    Root of a mux tree: $procmux$44
-    Root of a mux tree: $procmux$52 (pure)
-    Root of a mux tree: $procmux$55 (pure)
+    Root of a mux tree: $procmux$108 (pure)
+    Root of a mux tree: $procmux$121
+    Root of a mux tree: $procmux$127 (pure)
+    Root of a mux tree: $procmux$28 (pure)
+    Root of a mux tree: $procmux$56 (pure)
     Root of a mux tree: $procmux$59 (pure)
     Root of a mux tree: $procmux$63 (pure)
     Root of a mux tree: $procmux$67 (pure)
     Root of a mux tree: $procmux$71 (pure)
-    Root of a mux tree: $procmux$75
-    Root of a mux tree: $procmux$81 (pure)
-    Root of a mux tree: $procmux$89 (pure)
+    Root of a mux tree: $procmux$75 (pure)
+    Root of a mux tree: $procmux$79
+    Root of a mux tree: $procmux$85 (pure)
+    Root of a mux tree: $procmux$93 (pure)
   Analyzing evaluation results.
 Removed 0 multiplexer ports.
 
@@ -374,19 +376,19 @@ Removed a total of 0 cells.
 Running muxtree optimizer on module \fsmControl..
   Creating internal representation of mux trees.
   Evaluating internal representation of mux trees.
-    Root of a mux tree: $procmux$105 (pure)
-    Root of a mux tree: $procmux$120 (pure)
-    Root of a mux tree: $procmux$24 (pure)
-    Root of a mux tree: $procmux$44
-    Root of a mux tree: $procmux$52 (pure)
-    Root of a mux tree: $procmux$55 (pure)
+    Root of a mux tree: $procmux$108 (pure)
+    Root of a mux tree: $procmux$121
+    Root of a mux tree: $procmux$127 (pure)
+    Root of a mux tree: $procmux$28 (pure)
+    Root of a mux tree: $procmux$56 (pure)
     Root of a mux tree: $procmux$59 (pure)
     Root of a mux tree: $procmux$63 (pure)
     Root of a mux tree: $procmux$67 (pure)
     Root of a mux tree: $procmux$71 (pure)
-    Root of a mux tree: $procmux$75
-    Root of a mux tree: $procmux$81 (pure)
-    Root of a mux tree: $procmux$89 (pure)
+    Root of a mux tree: $procmux$75 (pure)
+    Root of a mux tree: $procmux$79
+    Root of a mux tree: $procmux$85 (pure)
+    Root of a mux tree: $procmux$93 (pure)
   Analyzing evaluation results.
 Removed 0 multiplexer ports.
 
@@ -435,19 +437,19 @@ Removed a total of 0 cells.
 Running muxtree optimizer on module \fsmControl..
   Creating internal representation of mux trees.
   Evaluating internal representation of mux trees.
-    Root of a mux tree: $procmux$105 (pure)
-    Root of a mux tree: $procmux$120 (pure)
-    Root of a mux tree: $procmux$24 (pure)
-    Root of a mux tree: $procmux$44
-    Root of a mux tree: $procmux$52 (pure)
-    Root of a mux tree: $procmux$55 (pure)
+    Root of a mux tree: $procmux$108 (pure)
+    Root of a mux tree: $procmux$121
+    Root of a mux tree: $procmux$127 (pure)
+    Root of a mux tree: $procmux$28 (pure)
+    Root of a mux tree: $procmux$56 (pure)
     Root of a mux tree: $procmux$59 (pure)
     Root of a mux tree: $procmux$63 (pure)
     Root of a mux tree: $procmux$67 (pure)
     Root of a mux tree: $procmux$71 (pure)
-    Root of a mux tree: $procmux$75
-    Root of a mux tree: $procmux$81 (pure)
-    Root of a mux tree: $procmux$89 (pure)
+    Root of a mux tree: $procmux$75 (pure)
+    Root of a mux tree: $procmux$79
+    Root of a mux tree: $procmux$85 (pure)
+    Root of a mux tree: $procmux$93 (pure)
   Analyzing evaluation results.
 Removed 0 multiplexer ports.
 
@@ -493,13 +495,14 @@ Generating RTLIL representation for module `\_90_pow'.
 Generating RTLIL representation for module `\_90_pmux'.
 Generating RTLIL representation for module `\_90_lut'.
 Successfully finished Verilog frontend.
-Mapping fsmControl.$ne$fsm_Control.v:89$4 ($reduce_bool) with simplemap.
-Mapping fsmControl.$auto$opt_reduce.cc:126:opt_mux$138 ($reduce_or) with simplemap.
-Mapping fsmControl.$auto$opt_reduce.cc:126:opt_mux$140 ($reduce_or) with simplemap.
-Mapping fsmControl.$eq$fsm_Control.v:108$8 ($logic_not) with simplemap.
+Mapping fsmControl.$auto$opt_reduce.cc:126:opt_mux$145 ($reduce_or) with simplemap.
+Mapping fsmControl.$ne$fsm_Control.v:92$4 ($reduce_bool) with simplemap.
+Mapping fsmControl.$auto$opt_reduce.cc:126:opt_mux$147 ($reduce_or) with simplemap.
+Mapping fsmControl.$eq$fsm_Control.v:109$8 ($logic_not) with simplemap.
 Mapping fsmControl.$ne$fsm_Control.v:123$9 ($reduce_bool) with simplemap.
 Mapping fsmControl.$procmux$20 ($mux) with simplemap.
-Mapping fsmControl.$procmux$22 ($mux) with simplemap.
+Mapping fsmControl.$procmux$23 ($mux) with simplemap.
+Mapping fsmControl.$procmux$26 ($mux) with simplemap.
 
 9.2. Executing AST frontend in derive mode using pre-parsed AST for module `\_90_pmux'.
 Parameter \WIDTH = 5
@@ -507,14 +510,15 @@ Parameter \S_WIDTH = 5
 Generating RTLIL representation for module `$paramod\_90_pmux\WIDTH=5\S_WIDTH=5'.
 
 9.3. Continuing TECHMAP pass.
-Mapping fsmControl.$procmux$24 using $paramod\_90_pmux\WIDTH=5\S_WIDTH=5.
-Mapping fsmControl.$procmux$28 ($mux) with simplemap.
-Mapping fsmControl.$procmux$30 ($mux) with simplemap.
+Mapping fsmControl.$procmux$28 using $paramod\_90_pmux\WIDTH=5\S_WIDTH=5.
+Mapping fsmControl.$procmux$31 ($mux) with simplemap.
+Mapping fsmControl.$procmux$34 ($mux) with simplemap.
 Mapping fsmControl.$procmux$38 ($mux) with simplemap.
-Mapping fsmControl.$procmux$40 ($mux) with simplemap.
+Mapping fsmControl.$procmux$41 ($mux) with simplemap.
 Mapping fsmControl.$procmux$44 ($mux) with simplemap.
-Mapping fsmControl.$procmux$49 ($mux) with simplemap.
-Mapping fsmControl.$procmux$52 ($mux) with simplemap.
+Mapping fsmControl.$procmux$48 ($mux) with simplemap.
+Mapping fsmControl.$procmux$53 ($mux) with simplemap.
+Mapping fsmControl.$procmux$56 ($mux) with simplemap.
 
 9.4. Executing AST frontend in derive mode using pre-parsed AST for module `\_90_pmux'.
 Parameter \WIDTH = 4
@@ -522,8 +526,8 @@ Parameter \S_WIDTH = 2
 Generating RTLIL representation for module `$paramod\_90_pmux\WIDTH=4\S_WIDTH=2'.
 
 9.5. Continuing TECHMAP pass.
-Mapping fsmControl.$procmux$55 using $paramod\_90_pmux\WIDTH=4\S_WIDTH=2.
 Mapping fsmControl.$procmux$59 using $paramod\_90_pmux\WIDTH=4\S_WIDTH=2.
+Mapping fsmControl.$procmux$63 using $paramod\_90_pmux\WIDTH=4\S_WIDTH=2.
 
 9.6. Executing AST frontend in derive mode using pre-parsed AST for module `\_90_pmux'.
 Parameter \WIDTH = 2
@@ -531,11 +535,11 @@ Parameter \S_WIDTH = 2
 Generating RTLIL representation for module `$paramod\_90_pmux\WIDTH=2\S_WIDTH=2'.
 
 9.7. Continuing TECHMAP pass.
-Mapping fsmControl.$procmux$63 using $paramod\_90_pmux\WIDTH=2\S_WIDTH=2.
 Mapping fsmControl.$procmux$67 using $paramod\_90_pmux\WIDTH=2\S_WIDTH=2.
 Mapping fsmControl.$procmux$71 using $paramod\_90_pmux\WIDTH=2\S_WIDTH=2.
-Mapping fsmControl.$procmux$75 ($mux) with simplemap.
+Mapping fsmControl.$procmux$75 using $paramod\_90_pmux\WIDTH=2\S_WIDTH=2.
 Mapping fsmControl.$procmux$79 ($mux) with simplemap.
+Mapping fsmControl.$procmux$83 ($mux) with simplemap.
 
 9.8. Executing AST frontend in derive mode using pre-parsed AST for module `\_90_pmux'.
 Parameter \WIDTH = 5
@@ -543,8 +547,8 @@ Parameter \S_WIDTH = 2
 Generating RTLIL representation for module `$paramod\_90_pmux\WIDTH=5\S_WIDTH=2'.
 
 9.9. Continuing TECHMAP pass.
-Mapping fsmControl.$procmux$81 using $paramod\_90_pmux\WIDTH=5\S_WIDTH=2.
-Mapping fsmControl.$procmux$86 ($mux) with simplemap.
+Mapping fsmControl.$procmux$85 using $paramod\_90_pmux\WIDTH=5\S_WIDTH=2.
+Mapping fsmControl.$procmux$90 ($mux) with simplemap.
 
 9.10. Executing AST frontend in derive mode using pre-parsed AST for module `\_90_pmux'.
 Parameter \WIDTH = 1
@@ -552,16 +556,17 @@ Parameter \S_WIDTH = 2
 Generating RTLIL representation for module `$paramod\_90_pmux\WIDTH=1\S_WIDTH=2'.
 
 9.11. Continuing TECHMAP pass.
-Mapping fsmControl.$procmux$89 using $paramod\_90_pmux\WIDTH=1\S_WIDTH=2.
-Mapping fsmControl.$procmux$94 ($mux) with simplemap.
-Mapping fsmControl.$procmux$96 ($mux) with simplemap.
-Mapping fsmControl.$procmux$102 ($mux) with simplemap.
-Mapping fsmControl.$procmux$105 using $paramod\_90_pmux\WIDTH=1\S_WIDTH=2.
-Mapping fsmControl.$procmux$110 ($mux) with simplemap.
-Mapping fsmControl.$procmux$112_CMP0 ($eq) with simplemap.
-Mapping fsmControl.$procmux$113_CMP0 ($eq) with simplemap.
-Mapping fsmControl.$procmux$118 ($mux) with simplemap.
-Mapping fsmControl.$procmux$121_CMP0 ($eq) with simplemap.
+Mapping fsmControl.$procmux$93 using $paramod\_90_pmux\WIDTH=1\S_WIDTH=2.
+Mapping fsmControl.$procmux$99 ($mux) with simplemap.
+Mapping fsmControl.$procmux$105 ($mux) with simplemap.
+Mapping fsmControl.$procmux$108 using $paramod\_90_pmux\WIDTH=1\S_WIDTH=2.
+Mapping fsmControl.$procmux$111 ($mux) with simplemap.
+Mapping fsmControl.$procmux$114 ($mux) with simplemap.
+Mapping fsmControl.$procmux$116_CMP0 ($eq) with simplemap.
+Mapping fsmControl.$procmux$117_CMP0 ($eq) with simplemap.
+Mapping fsmControl.$procmux$121 ($mux) with simplemap.
+Mapping fsmControl.$procmux$125 ($mux) with simplemap.
+Mapping fsmControl.$procmux$128_CMP0 ($eq) with simplemap.
 
 9.12. Executing AST frontend in derive mode using pre-parsed AST for module `\_90_pmux'.
 Parameter \WIDTH = 14
@@ -569,305 +574,300 @@ Parameter \S_WIDTH = 3
 Generating RTLIL representation for module `$paramod\_90_pmux\WIDTH=14\S_WIDTH=3'.
 
 9.13. Continuing TECHMAP pass.
-Mapping fsmControl.$procmux$120 using $paramod\_90_pmux\WIDTH=14\S_WIDTH=3.
-Mapping fsmControl.$procmux$122_CMP0 ($eq) with simplemap.
-Mapping fsmControl.$procmux$123_CMP0 ($eq) with simplemap.
-Mapping fsmControl.$procdff$124 ($dff) with simplemap.
-Mapping fsmControl.$procdff$125 ($dff) with simplemap.
-Mapping fsmControl.$procdff$126 ($dff) with simplemap.
-Mapping fsmControl.$procdff$127 ($dff) with simplemap.
-Mapping fsmControl.$procdff$128 ($dff) with simplemap.
-Mapping fsmControl.$procdff$129 ($dff) with simplemap.
-Mapping fsmControl.$procdff$130 ($dff) with simplemap.
+Mapping fsmControl.$procmux$127 using $paramod\_90_pmux\WIDTH=14\S_WIDTH=3.
+Mapping fsmControl.$procmux$129_CMP0 ($eq) with simplemap.
+Mapping fsmControl.$procmux$130_CMP0 ($eq) with simplemap.
 Mapping fsmControl.$procdff$131 ($dff) with simplemap.
 Mapping fsmControl.$procdff$132 ($dff) with simplemap.
 Mapping fsmControl.$procdff$133 ($dff) with simplemap.
 Mapping fsmControl.$procdff$134 ($dff) with simplemap.
-Mapping fsmControl.$auto$opt_reduce.cc:126:opt_mux$136 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$24.$reduce_or$<techmap.v>:441$235 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$24.$reduce_or$<techmap.v>:441$236 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$24.$reduce_or$<techmap.v>:441$234 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$24.$reduce_or$<techmap.v>:441$233 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$24.$reduce_or$<techmap.v>:441$232 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$24.$and$<techmap.v>:434$231 ($and) with simplemap.
-Mapping fsmControl.$techmap$procmux$24.$and$<techmap.v>:434$230 ($and) with simplemap.
-Mapping fsmControl.$techmap$procmux$24.$and$<techmap.v>:434$229 ($and) with simplemap.
-Mapping fsmControl.$techmap$procmux$24.$and$<techmap.v>:434$228 ($and) with simplemap.
-Mapping fsmControl.$techmap$procmux$24.$and$<techmap.v>:434$227 ($and) with simplemap.
-Mapping fsmControl.$techmap$procmux$24.$ternary$<techmap.v>:445$226 ($mux) with simplemap.
-Mapping fsmControl.$techmap$procmux$24.$reduce_or$<techmap.v>:445$225 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$55.$reduce_or$<techmap.v>:441$278 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$55.$reduce_or$<techmap.v>:441$279 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$55.$reduce_or$<techmap.v>:441$277 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$55.$reduce_or$<techmap.v>:441$276 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$55.$and$<techmap.v>:434$275 ($and) with simplemap.
-Mapping fsmControl.$techmap$procmux$55.$and$<techmap.v>:434$274 ($and) with simplemap.
-Mapping fsmControl.$techmap$procmux$55.$ternary$<techmap.v>:445$273 ($mux) with simplemap.
-Mapping fsmControl.$techmap$procmux$55.$reduce_or$<techmap.v>:445$272 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$59.$reduce_or$<techmap.v>:441$278 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$59.$reduce_or$<techmap.v>:441$279 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$59.$reduce_or$<techmap.v>:441$277 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$59.$reduce_or$<techmap.v>:441$276 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$59.$and$<techmap.v>:434$275 ($and) with simplemap.
-Mapping fsmControl.$techmap$procmux$59.$and$<techmap.v>:434$274 ($and) with simplemap.
-Mapping fsmControl.$techmap$procmux$59.$ternary$<techmap.v>:445$273 ($mux) with simplemap.
-Mapping fsmControl.$techmap$procmux$59.$reduce_or$<techmap.v>:445$272 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$63.$reduce_or$<techmap.v>:441$284 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$63.$reduce_or$<techmap.v>:441$285 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$63.$and$<techmap.v>:434$283 ($and) with simplemap.
-Mapping fsmControl.$techmap$procmux$63.$and$<techmap.v>:434$282 ($and) with simplemap.
-Mapping fsmControl.$techmap$procmux$63.$ternary$<techmap.v>:445$281 ($mux) with simplemap.
-Mapping fsmControl.$techmap$procmux$63.$reduce_or$<techmap.v>:445$280 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$67.$reduce_or$<techmap.v>:441$284 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$67.$reduce_or$<techmap.v>:441$285 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$67.$and$<techmap.v>:434$283 ($and) with simplemap.
-Mapping fsmControl.$techmap$procmux$67.$and$<techmap.v>:434$282 ($and) with simplemap.
-Mapping fsmControl.$techmap$procmux$67.$ternary$<techmap.v>:445$281 ($mux) with simplemap.
-Mapping fsmControl.$techmap$procmux$67.$reduce_or$<techmap.v>:445$280 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$71.$reduce_or$<techmap.v>:441$284 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$71.$reduce_or$<techmap.v>:441$285 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$71.$and$<techmap.v>:434$283 ($and) with simplemap.
-Mapping fsmControl.$techmap$procmux$71.$and$<techmap.v>:434$282 ($and) with simplemap.
-Mapping fsmControl.$techmap$procmux$71.$ternary$<techmap.v>:445$281 ($mux) with simplemap.
-Mapping fsmControl.$techmap$procmux$71.$reduce_or$<techmap.v>:445$280 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$81.$reduce_or$<techmap.v>:441$303 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$81.$reduce_or$<techmap.v>:441$304 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$81.$reduce_or$<techmap.v>:441$302 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$81.$reduce_or$<techmap.v>:441$301 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$81.$reduce_or$<techmap.v>:441$300 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$81.$and$<techmap.v>:434$299 ($and) with simplemap.
-Mapping fsmControl.$techmap$procmux$81.$and$<techmap.v>:434$298 ($and) with simplemap.
-Mapping fsmControl.$techmap$procmux$81.$ternary$<techmap.v>:445$297 ($mux) with simplemap.
-Mapping fsmControl.$techmap$procmux$81.$reduce_or$<techmap.v>:445$296 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$89.$and$<techmap.v>:434$309 ($and) with simplemap.
-Mapping fsmControl.$techmap$procmux$89.$reduce_or$<techmap.v>:441$310 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$89.$and$<techmap.v>:434$308 ($and) with simplemap.
-Mapping fsmControl.$techmap$procmux$89.$ternary$<techmap.v>:445$307 ($mux) with simplemap.
-Mapping fsmControl.$techmap$procmux$89.$reduce_or$<techmap.v>:445$306 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$105.$and$<techmap.v>:434$309 ($and) with simplemap.
-Mapping fsmControl.$techmap$procmux$105.$reduce_or$<techmap.v>:441$310 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$105.$and$<techmap.v>:434$308 ($and) with simplemap.
-Mapping fsmControl.$techmap$procmux$105.$ternary$<techmap.v>:445$307 ($mux) with simplemap.
-Mapping fsmControl.$techmap$procmux$105.$reduce_or$<techmap.v>:445$306 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$120.$reduce_or$<techmap.v>:441$400 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$120.$reduce_or$<techmap.v>:441$401 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$120.$reduce_or$<techmap.v>:441$399 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$120.$reduce_or$<techmap.v>:441$398 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$120.$reduce_or$<techmap.v>:441$397 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$120.$reduce_or$<techmap.v>:441$396 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$120.$reduce_or$<techmap.v>:441$395 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$120.$reduce_or$<techmap.v>:441$394 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$120.$reduce_or$<techmap.v>:441$393 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$120.$reduce_or$<techmap.v>:441$392 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$120.$reduce_or$<techmap.v>:441$391 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$120.$reduce_or$<techmap.v>:441$390 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$120.$reduce_or$<techmap.v>:441$389 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$120.$reduce_or$<techmap.v>:441$388 ($reduce_or) with simplemap.
-Mapping fsmControl.$techmap$procmux$120.$and$<techmap.v>:434$387 ($and) with simplemap.
-Mapping fsmControl.$techmap$procmux$120.$and$<techmap.v>:434$386 ($and) with simplemap.
-Mapping fsmControl.$techmap$procmux$120.$and$<techmap.v>:434$385 ($and) with simplemap.
-Mapping fsmControl.$techmap$procmux$120.$ternary$<techmap.v>:445$384 ($mux) with simplemap.
-Mapping fsmControl.$techmap$procmux$120.$reduce_or$<techmap.v>:445$383 ($reduce_or) with simplemap.
+Mapping fsmControl.$procdff$135 ($dff) with simplemap.
+Mapping fsmControl.$procdff$136 ($dff) with simplemap.
+Mapping fsmControl.$procdff$137 ($dff) with simplemap.
+Mapping fsmControl.$procdff$138 ($dff) with simplemap.
+Mapping fsmControl.$procdff$139 ($dff) with simplemap.
+Mapping fsmControl.$procdff$140 ($dff) with simplemap.
+Mapping fsmControl.$procdff$141 ($dff) with simplemap.
+Mapping fsmControl.$auto$opt_reduce.cc:126:opt_mux$143 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$28.$reduce_or$<techmap.v>:441$247 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$28.$reduce_or$<techmap.v>:441$248 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$28.$reduce_or$<techmap.v>:441$246 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$28.$reduce_or$<techmap.v>:441$245 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$28.$reduce_or$<techmap.v>:441$244 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$28.$and$<techmap.v>:434$243 ($and) with simplemap.
+Mapping fsmControl.$techmap$procmux$28.$and$<techmap.v>:434$242 ($and) with simplemap.
+Mapping fsmControl.$techmap$procmux$28.$and$<techmap.v>:434$241 ($and) with simplemap.
+Mapping fsmControl.$techmap$procmux$28.$and$<techmap.v>:434$240 ($and) with simplemap.
+Mapping fsmControl.$techmap$procmux$28.$and$<techmap.v>:434$239 ($and) with simplemap.
+Mapping fsmControl.$techmap$procmux$28.$ternary$<techmap.v>:445$238 ($mux) with simplemap.
+Mapping fsmControl.$techmap$procmux$28.$reduce_or$<techmap.v>:445$237 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$59.$reduce_or$<techmap.v>:441$295 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$59.$reduce_or$<techmap.v>:441$296 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$59.$reduce_or$<techmap.v>:441$294 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$59.$reduce_or$<techmap.v>:441$293 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$59.$and$<techmap.v>:434$292 ($and) with simplemap.
+Mapping fsmControl.$techmap$procmux$59.$and$<techmap.v>:434$291 ($and) with simplemap.
+Mapping fsmControl.$techmap$procmux$59.$ternary$<techmap.v>:445$290 ($mux) with simplemap.
+Mapping fsmControl.$techmap$procmux$59.$reduce_or$<techmap.v>:445$289 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$63.$reduce_or$<techmap.v>:441$295 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$63.$reduce_or$<techmap.v>:441$296 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$63.$reduce_or$<techmap.v>:441$294 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$63.$reduce_or$<techmap.v>:441$293 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$63.$and$<techmap.v>:434$292 ($and) with simplemap.
+Mapping fsmControl.$techmap$procmux$63.$and$<techmap.v>:434$291 ($and) with simplemap.
+Mapping fsmControl.$techmap$procmux$63.$ternary$<techmap.v>:445$290 ($mux) with simplemap.
+Mapping fsmControl.$techmap$procmux$63.$reduce_or$<techmap.v>:445$289 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$67.$reduce_or$<techmap.v>:441$301 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$67.$reduce_or$<techmap.v>:441$302 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$67.$and$<techmap.v>:434$300 ($and) with simplemap.
+Mapping fsmControl.$techmap$procmux$67.$and$<techmap.v>:434$299 ($and) with simplemap.
+Mapping fsmControl.$techmap$procmux$67.$ternary$<techmap.v>:445$298 ($mux) with simplemap.
+Mapping fsmControl.$techmap$procmux$67.$reduce_or$<techmap.v>:445$297 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$71.$reduce_or$<techmap.v>:441$301 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$71.$reduce_or$<techmap.v>:441$302 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$71.$and$<techmap.v>:434$300 ($and) with simplemap.
+Mapping fsmControl.$techmap$procmux$71.$and$<techmap.v>:434$299 ($and) with simplemap.
+Mapping fsmControl.$techmap$procmux$71.$ternary$<techmap.v>:445$298 ($mux) with simplemap.
+Mapping fsmControl.$techmap$procmux$71.$reduce_or$<techmap.v>:445$297 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$75.$reduce_or$<techmap.v>:441$301 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$75.$reduce_or$<techmap.v>:441$302 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$75.$and$<techmap.v>:434$300 ($and) with simplemap.
+Mapping fsmControl.$techmap$procmux$75.$and$<techmap.v>:434$299 ($and) with simplemap.
+Mapping fsmControl.$techmap$procmux$75.$ternary$<techmap.v>:445$298 ($mux) with simplemap.
+Mapping fsmControl.$techmap$procmux$75.$reduce_or$<techmap.v>:445$297 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$85.$reduce_or$<techmap.v>:441$320 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$85.$reduce_or$<techmap.v>:441$321 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$85.$reduce_or$<techmap.v>:441$319 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$85.$reduce_or$<techmap.v>:441$318 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$85.$reduce_or$<techmap.v>:441$317 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$85.$and$<techmap.v>:434$316 ($and) with simplemap.
+Mapping fsmControl.$techmap$procmux$85.$and$<techmap.v>:434$315 ($and) with simplemap.
+Mapping fsmControl.$techmap$procmux$85.$ternary$<techmap.v>:445$314 ($mux) with simplemap.
+Mapping fsmControl.$techmap$procmux$85.$reduce_or$<techmap.v>:445$313 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$93.$and$<techmap.v>:434$326 ($and) with simplemap.
+Mapping fsmControl.$techmap$procmux$93.$reduce_or$<techmap.v>:441$327 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$93.$and$<techmap.v>:434$325 ($and) with simplemap.
+Mapping fsmControl.$techmap$procmux$93.$ternary$<techmap.v>:445$324 ($mux) with simplemap.
+Mapping fsmControl.$techmap$procmux$93.$reduce_or$<techmap.v>:445$323 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$108.$and$<techmap.v>:434$326 ($and) with simplemap.
+Mapping fsmControl.$techmap$procmux$108.$reduce_or$<techmap.v>:441$327 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$108.$and$<techmap.v>:434$325 ($and) with simplemap.
+Mapping fsmControl.$techmap$procmux$108.$ternary$<techmap.v>:445$324 ($mux) with simplemap.
+Mapping fsmControl.$techmap$procmux$108.$reduce_or$<techmap.v>:445$323 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$127.$reduce_or$<techmap.v>:441$431 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$127.$reduce_or$<techmap.v>:441$432 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$127.$reduce_or$<techmap.v>:441$430 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$127.$reduce_or$<techmap.v>:441$429 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$127.$reduce_or$<techmap.v>:441$428 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$127.$reduce_or$<techmap.v>:441$427 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$127.$reduce_or$<techmap.v>:441$426 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$127.$reduce_or$<techmap.v>:441$425 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$127.$reduce_or$<techmap.v>:441$424 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$127.$reduce_or$<techmap.v>:441$423 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$127.$reduce_or$<techmap.v>:441$422 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$127.$reduce_or$<techmap.v>:441$421 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$127.$reduce_or$<techmap.v>:441$420 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$127.$reduce_or$<techmap.v>:441$419 ($reduce_or) with simplemap.
+Mapping fsmControl.$techmap$procmux$127.$and$<techmap.v>:434$418 ($and) with simplemap.
+Mapping fsmControl.$techmap$procmux$127.$and$<techmap.v>:434$417 ($and) with simplemap.
+Mapping fsmControl.$techmap$procmux$127.$and$<techmap.v>:434$416 ($and) with simplemap.
+Mapping fsmControl.$techmap$procmux$127.$ternary$<techmap.v>:445$415 ($mux) with simplemap.
+Mapping fsmControl.$techmap$procmux$127.$reduce_or$<techmap.v>:445$414 ($reduce_or) with simplemap.
 No more expansions possible.
 
 10. Executing OPT pass (performing simple optimizations).
 
 10.1. Executing OPT_EXPR pass (perform const folding).
-Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$321' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$315 [4] = \state [4]'.
-Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$317' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$315 [0] = \state [0]'.
-Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$318' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$315 [1] = \state [1]'.
-Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$319' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$315 [2] = \state [2]'.
-Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$408' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$402 [4] = \state [4]'.
-Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$404' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$402 [0] = \state [0]'.
-Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$406' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$402 [2] = \state [2]'.
-Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$407' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$402 [3] = \state [3]'.
-Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$426' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$420 [4] = \state [4]'.
-Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$423' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$420 [1] = \state [1]'.
-Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$424' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$420 [2] = \state [2]'.
-Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$425' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$420 [3] = \state [3]'.
-Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$339' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$333 [4] = \state [4]'.
-Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$335' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$333 [0] = \state [0]'.
-Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$336' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$333 [1] = \state [1]'.
-Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$338' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$333 [3] = \state [3]'.
-Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$367' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$365 [0] = \state [0]'.
-Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$368' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$365 [1] = \state [1]'.
-Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$369' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$365 [2] = \state [2]'.
-Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$370' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$365 [3] = \state [3]'.
-Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$216' (00?) in module `\fsmControl' with constant driver `$procmux$20_Y [1] = 1'0'.
-Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$215' (01?) in module `\fsmControl' with constant driver `$procmux$20_Y [0] = \reset'.
-Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$217' (00?) in module `\fsmControl' with constant driver `$procmux$20_Y [2] = 1'0'.
-Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$218' (00?) in module `\fsmControl' with constant driver `$procmux$20_Y [3] = 1'0'.
-Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$238' in module `fsmControl'.
-Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$237' in module `fsmControl'.
-Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$239' in module `fsmControl'.
-Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$240' in module `fsmControl'.
-Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$241' in module `fsmControl'.
-Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$258' (00?) in module `\fsmControl' with constant driver `$procmux$36_Y [1] = 1'0'.
-Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$248' in module `fsmControl'.
-Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$257' (00?) in module `\fsmControl' with constant driver `$procmux$36_Y [0] = 1'0'.
-Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$247' in module `fsmControl'.
-Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$249' in module `fsmControl'.
-Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$260' (00?) in module `\fsmControl' with constant driver `$procmux$36_Y [3] = 1'0'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$338' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$332 [4] = \state [4]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$334' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$332 [0] = \state [0]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$335' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$332 [1] = \state [1]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$336' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$332 [2] = \state [2]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$398' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$396 [0] = \state [0]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$399' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$396 [1] = \state [1]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$400' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$396 [2] = \state [2]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$401' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$396 [3] = \state [3]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$439' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$433 [4] = \state [4]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$435' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$433 [0] = \state [0]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$437' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$433 [2] = \state [2]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$438' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$433 [3] = \state [3]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$457' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$451 [4] = \state [4]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$454' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$451 [1] = \state [1]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$455' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$451 [2] = \state [2]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$456' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$451 [3] = \state [3]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$356' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$350 [4] = \state [4]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$352' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$350 [0] = \state [0]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$353' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$350 [1] = \state [1]'.
+Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$355' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$350 [3] = \state [3]'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$223' (01?) in module `\fsmControl' with constant driver `$procmux$20_Y [1] = \init'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$224' (00?) in module `\fsmControl' with constant driver `$procmux$20_Y [2] = 1'0'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$225' (00?) in module `\fsmControl' with constant driver `$procmux$20_Y [3] = 1'0'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$226' (00?) in module `\fsmControl' with constant driver `$procmux$20_Y [4] = 1'0'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$229' (00?) in module `\fsmControl' with constant driver `$procmux$23_Y [2] = 1'0'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$230' (00?) in module `\fsmControl' with constant driver `$procmux$23_Y [3] = 1'0'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$231' (00?) in module `\fsmControl' with constant driver `$procmux$23_Y [4] = 1'0'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$234' (00?) in module `\fsmControl' with constant driver `$procmux$26_Y [2] = 1'0'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$235' (00?) in module `\fsmControl' with constant driver `$procmux$26_Y [3] = 1'0'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$236' (01?) in module `\fsmControl' with constant driver `$procmux$26_Y [4] = $ne$fsm_Control.v:106$7_Y'.
 Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$250' in module `fsmControl'.
-Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$261' (01?) in module `\fsmControl' with constant driver `$procmux$36_Y [4] = $ne$fsm_Control.v:105$7_Y'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$249' in module `fsmControl'.
 Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$251' in module `fsmControl'.
-Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$311' in module `fsmControl'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$531' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$24.$and$<techmap.v>:434$230_Y [3] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$490' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:127:simplemap_reduce$488 [1] = $techmap$procmux$24.$and$<techmap.v>:434$229_Y [3]'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$526' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$24.$and$<techmap.v>:434$231_Y [3] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$494' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$24.$reduce_or$<techmap.v>:441$235_Y = $auto$simplemap.cc:127:simplemap_reduce$491'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$527' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$24.$and$<techmap.v>:434$231_Y [4] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$501' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$24.$reduce_or$<techmap.v>:441$236_Y = $auto$simplemap.cc:127:simplemap_reduce$498'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$525' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$24.$and$<techmap.v>:434$231_Y [2] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$508' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$24.$reduce_or$<techmap.v>:441$234_Y = $auto$simplemap.cc:127:simplemap_reduce$505'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$529' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$24.$and$<techmap.v>:434$230_Y [1] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$511' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:127:simplemap_reduce$509 [1] = $techmap$procmux$24.$and$<techmap.v>:434$229_Y [1]'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$524' (1?) in module `\fsmControl' with constant driver `$techmap$procmux$24.$and$<techmap.v>:434$231_Y [1] = $procmux$100_CMP'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$528' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$24.$and$<techmap.v>:434$230_Y [0] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$518' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:127:simplemap_reduce$516 [1] = $techmap$procmux$24.$and$<techmap.v>:434$229_Y [0]'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$523' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$24.$and$<techmap.v>:434$231_Y [0] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$522' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$24.$reduce_or$<techmap.v>:441$232_Y = $auto$simplemap.cc:127:simplemap_reduce$519'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$570' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$55.$and$<techmap.v>:434$275_Y [2] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$561' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$55.$reduce_or$<techmap.v>:441$278_Y = $techmap$procmux$55.$and$<techmap.v>:434$274_Y [2]'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$571' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$55.$and$<techmap.v>:434$275_Y [3] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$563' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$55.$reduce_or$<techmap.v>:441$279_Y = $techmap$procmux$55.$and$<techmap.v>:434$274_Y [3]'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$569' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$55.$and$<techmap.v>:434$275_Y [1] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$565' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$55.$reduce_or$<techmap.v>:441$277_Y = $techmap$procmux$55.$and$<techmap.v>:434$274_Y [1]'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$568' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$55.$and$<techmap.v>:434$275_Y [0] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$567' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$55.$reduce_or$<techmap.v>:441$276_Y = $techmap$procmux$55.$and$<techmap.v>:434$274_Y [0]'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$592' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$59.$and$<techmap.v>:434$275_Y [2] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$583' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$59.$reduce_or$<techmap.v>:441$278_Y = $techmap$procmux$59.$and$<techmap.v>:434$274_Y [2]'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$593' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$59.$and$<techmap.v>:434$275_Y [3] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$585' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$59.$reduce_or$<techmap.v>:441$279_Y = $techmap$procmux$59.$and$<techmap.v>:434$274_Y [3]'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$591' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$59.$and$<techmap.v>:434$275_Y [1] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$587' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$59.$reduce_or$<techmap.v>:441$277_Y = $techmap$procmux$59.$and$<techmap.v>:434$274_Y [1]'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$590' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$59.$and$<techmap.v>:434$275_Y [0] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$589' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$59.$reduce_or$<techmap.v>:441$276_Y = $techmap$procmux$59.$and$<techmap.v>:434$274_Y [0]'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$608' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$63.$and$<techmap.v>:434$283_Y [0] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$605' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$63.$reduce_or$<techmap.v>:441$284_Y = $techmap$procmux$63.$and$<techmap.v>:434$282_Y [0]'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$609' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$63.$and$<techmap.v>:434$283_Y [1] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$607' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$63.$reduce_or$<techmap.v>:441$285_Y = $techmap$procmux$63.$and$<techmap.v>:434$282_Y [1]'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$620' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$67.$and$<techmap.v>:434$283_Y [0] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$617' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$67.$reduce_or$<techmap.v>:441$284_Y = $techmap$procmux$67.$and$<techmap.v>:434$282_Y [0]'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$621' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$67.$and$<techmap.v>:434$283_Y [1] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$619' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$67.$reduce_or$<techmap.v>:441$285_Y = $techmap$procmux$67.$and$<techmap.v>:434$282_Y [1]'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$632' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$71.$and$<techmap.v>:434$283_Y [0] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$629' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$71.$reduce_or$<techmap.v>:441$284_Y = $techmap$procmux$71.$and$<techmap.v>:434$282_Y [0]'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$633' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$71.$and$<techmap.v>:434$283_Y [1] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$631' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$71.$reduce_or$<techmap.v>:441$285_Y = $techmap$procmux$71.$and$<techmap.v>:434$282_Y [1]'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$653' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$81.$and$<techmap.v>:434$299_Y [3] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$641' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$81.$reduce_or$<techmap.v>:441$303_Y = $techmap$procmux$81.$and$<techmap.v>:434$298_Y [3]'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$654' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$81.$and$<techmap.v>:434$299_Y [4] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$643' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$81.$reduce_or$<techmap.v>:441$304_Y = $techmap$procmux$81.$and$<techmap.v>:434$298_Y [4]'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$652' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$81.$and$<techmap.v>:434$299_Y [2] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$645' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$81.$reduce_or$<techmap.v>:441$302_Y = $techmap$procmux$81.$and$<techmap.v>:434$298_Y [2]'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$651' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$81.$and$<techmap.v>:434$299_Y [1] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$647' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$81.$reduce_or$<techmap.v>:441$301_Y = $techmap$procmux$81.$and$<techmap.v>:434$298_Y [1]'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$650' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$81.$and$<techmap.v>:434$299_Y [0] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$649' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$81.$reduce_or$<techmap.v>:441$300_Y = $techmap$procmux$81.$and$<techmap.v>:434$298_Y [0]'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$670' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$89.$and$<techmap.v>:434$308_Y = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$669' (0?) in module `\fsmControl' with constant driver `$techmap$procmux$89.$reduce_or$<techmap.v>:441$310_Y = $techmap$procmux$89.$and$<techmap.v>:434$309_Y'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$677' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$105.$and$<techmap.v>:434$308_Y = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$676' (0?) in module `\fsmControl' with constant driver `$techmap$procmux$105.$reduce_or$<techmap.v>:441$310_Y = $techmap$procmux$105.$and$<techmap.v>:434$309_Y'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$749' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$120.$and$<techmap.v>:434$387_Y [12] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$684' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$120.$reduce_or$<techmap.v>:441$400_Y = $auto$simplemap.cc:127:simplemap_reduce$681'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$750' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$120.$and$<techmap.v>:434$387_Y [13] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$688' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$120.$reduce_or$<techmap.v>:441$401_Y = $auto$simplemap.cc:127:simplemap_reduce$685'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$748' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$120.$and$<techmap.v>:434$387_Y [11] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$692' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$120.$reduce_or$<techmap.v>:441$399_Y = $auto$simplemap.cc:127:simplemap_reduce$689'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$747' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$120.$and$<techmap.v>:434$387_Y [10] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$696' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$120.$reduce_or$<techmap.v>:441$398_Y = $auto$simplemap.cc:127:simplemap_reduce$693'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$746' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$120.$and$<techmap.v>:434$387_Y [9] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$700' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$120.$reduce_or$<techmap.v>:441$397_Y = $auto$simplemap.cc:127:simplemap_reduce$697'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$745' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$120.$and$<techmap.v>:434$387_Y [8] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$704' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$120.$reduce_or$<techmap.v>:441$396_Y = $auto$simplemap.cc:127:simplemap_reduce$701'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$744' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$120.$and$<techmap.v>:434$387_Y [7] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$708' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$120.$reduce_or$<techmap.v>:441$395_Y = $auto$simplemap.cc:127:simplemap_reduce$705'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$743' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$120.$and$<techmap.v>:434$387_Y [6] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$712' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$120.$reduce_or$<techmap.v>:441$394_Y = $auto$simplemap.cc:127:simplemap_reduce$709'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$742' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$120.$and$<techmap.v>:434$387_Y [5] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$716' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$120.$reduce_or$<techmap.v>:441$393_Y = $auto$simplemap.cc:127:simplemap_reduce$713'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$741' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$120.$and$<techmap.v>:434$387_Y [4] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$720' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$120.$reduce_or$<techmap.v>:441$392_Y = $auto$simplemap.cc:127:simplemap_reduce$717'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$740' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$120.$and$<techmap.v>:434$387_Y [3] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$724' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$120.$reduce_or$<techmap.v>:441$391_Y = $auto$simplemap.cc:127:simplemap_reduce$721'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$739' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$120.$and$<techmap.v>:434$387_Y [2] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$728' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$120.$reduce_or$<techmap.v>:441$390_Y = $auto$simplemap.cc:127:simplemap_reduce$725'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$738' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$120.$and$<techmap.v>:434$387_Y [1] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$732' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$120.$reduce_or$<techmap.v>:441$389_Y = $auto$simplemap.cc:127:simplemap_reduce$729'.
-Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$737' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$120.$and$<techmap.v>:434$387_Y [0] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$736' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$120.$reduce_or$<techmap.v>:441$388_Y = $auto$simplemap.cc:127:simplemap_reduce$733'.
-Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$238' (00?) in module `\fsmControl' with constant driver `$procmux$28_Y [1] = 1'0'.
-Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$237' (00?) in module `\fsmControl' with constant driver `$procmux$28_Y [0] = 1'0'.
-Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$240' (00?) in module `\fsmControl' with constant driver `$procmux$28_Y [3] = 1'0'.
-Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$241' (01?) in module `\fsmControl' with constant driver `$procmux$28_Y [4] = $auto$simplemap.cc:168:logic_reduce$205'.
-Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$248' (00?) in module `\fsmControl' with constant driver `$procmux$38_Y [1] = 1'0'.
-Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$247' (00?) in module `\fsmControl' with constant driver `$procmux$38_Y [0] = 1'0'.
-Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$250' (01?) in module `\fsmControl' with constant driver `$procmux$38_Y [3] = $auto$simplemap.cc:168:logic_reduce$205'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$252' in module `fsmControl'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$253' in module `fsmControl'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$265' in module `fsmControl'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$264' in module `fsmControl'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$266' in module `fsmControl'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$267' in module `fsmControl'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$268' in module `fsmControl'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$275' (00?) in module `\fsmControl' with constant driver `$procmux$48_Y [1] = 1'0'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$274' (00?) in module `\fsmControl' with constant driver `$procmux$48_Y [0] = 1'0'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$277' (00?) in module `\fsmControl' with constant driver `$procmux$48_Y [3] = 1'0'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$278' (01?) in module `\fsmControl' with constant driver `$procmux$48_Y [4] = $ne$fsm_Control.v:106$7_Y'.
+Optimizing away select inverter for $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$330' in module `fsmControl'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$577' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$28.$and$<techmap.v>:434$239_Y [3] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$520' (0?) in module `\fsmControl' with constant driver `$auto$simplemap.cc:127:simplemap_reduce$519 [0] = $techmap$procmux$28.$and$<techmap.v>:434$240_Y [3]'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$562' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$28.$and$<techmap.v>:434$242_Y [3] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$521' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:127:simplemap_reduce$519 [1] = $techmap$procmux$28.$and$<techmap.v>:434$241_Y [3]'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$557' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$28.$and$<techmap.v>:434$243_Y [3] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$525' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$28.$reduce_or$<techmap.v>:441$247_Y = $auto$simplemap.cc:127:simplemap_reduce$522'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$558' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$28.$and$<techmap.v>:434$243_Y [4] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$532' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$28.$reduce_or$<techmap.v>:441$248_Y = $auto$simplemap.cc:127:simplemap_reduce$529'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$576' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$28.$and$<techmap.v>:434$239_Y [2] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$534' (0?) in module `\fsmControl' with constant driver `$auto$simplemap.cc:127:simplemap_reduce$533 [0] = $techmap$procmux$28.$and$<techmap.v>:434$240_Y [2]'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$556' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$28.$and$<techmap.v>:434$243_Y [2] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$539' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$28.$reduce_or$<techmap.v>:441$246_Y = $auto$simplemap.cc:127:simplemap_reduce$536'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$560' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$28.$and$<techmap.v>:434$242_Y [1] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$542' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:127:simplemap_reduce$540 [1] = $techmap$procmux$28.$and$<techmap.v>:434$241_Y [1]'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$555' (1?) in module `\fsmControl' with constant driver `$techmap$procmux$28.$and$<techmap.v>:434$243_Y [1] = $procmux$103_CMP'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$559' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$28.$and$<techmap.v>:434$242_Y [0] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$549' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:127:simplemap_reduce$547 [1] = $techmap$procmux$28.$and$<techmap.v>:434$241_Y [0]'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$554' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$28.$and$<techmap.v>:434$243_Y [0] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$553' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$28.$reduce_or$<techmap.v>:441$244_Y = $auto$simplemap.cc:127:simplemap_reduce$550'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$601' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$59.$and$<techmap.v>:434$292_Y [2] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$592' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$59.$reduce_or$<techmap.v>:441$295_Y = $techmap$procmux$59.$and$<techmap.v>:434$291_Y [2]'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$602' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$59.$and$<techmap.v>:434$292_Y [3] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$594' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$59.$reduce_or$<techmap.v>:441$296_Y = $techmap$procmux$59.$and$<techmap.v>:434$291_Y [3]'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$600' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$59.$and$<techmap.v>:434$292_Y [1] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$596' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$59.$reduce_or$<techmap.v>:441$294_Y = $techmap$procmux$59.$and$<techmap.v>:434$291_Y [1]'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$599' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$59.$and$<techmap.v>:434$292_Y [0] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$598' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$59.$reduce_or$<techmap.v>:441$293_Y = $techmap$procmux$59.$and$<techmap.v>:434$291_Y [0]'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$623' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$63.$and$<techmap.v>:434$292_Y [2] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$614' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$63.$reduce_or$<techmap.v>:441$295_Y = $techmap$procmux$63.$and$<techmap.v>:434$291_Y [2]'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$624' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$63.$and$<techmap.v>:434$292_Y [3] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$616' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$63.$reduce_or$<techmap.v>:441$296_Y = $techmap$procmux$63.$and$<techmap.v>:434$291_Y [3]'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$622' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$63.$and$<techmap.v>:434$292_Y [1] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$618' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$63.$reduce_or$<techmap.v>:441$294_Y = $techmap$procmux$63.$and$<techmap.v>:434$291_Y [1]'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$621' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$63.$and$<techmap.v>:434$292_Y [0] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$620' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$63.$reduce_or$<techmap.v>:441$293_Y = $techmap$procmux$63.$and$<techmap.v>:434$291_Y [0]'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$639' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$67.$and$<techmap.v>:434$300_Y [0] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$636' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$67.$reduce_or$<techmap.v>:441$301_Y = $techmap$procmux$67.$and$<techmap.v>:434$299_Y [0]'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$640' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$67.$and$<techmap.v>:434$300_Y [1] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$638' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$67.$reduce_or$<techmap.v>:441$302_Y = $techmap$procmux$67.$and$<techmap.v>:434$299_Y [1]'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$651' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$71.$and$<techmap.v>:434$300_Y [0] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$648' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$71.$reduce_or$<techmap.v>:441$301_Y = $techmap$procmux$71.$and$<techmap.v>:434$299_Y [0]'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$652' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$71.$and$<techmap.v>:434$300_Y [1] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$650' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$71.$reduce_or$<techmap.v>:441$302_Y = $techmap$procmux$71.$and$<techmap.v>:434$299_Y [1]'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$663' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$75.$and$<techmap.v>:434$300_Y [0] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$660' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$75.$reduce_or$<techmap.v>:441$301_Y = $techmap$procmux$75.$and$<techmap.v>:434$299_Y [0]'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$664' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$75.$and$<techmap.v>:434$300_Y [1] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$662' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$75.$reduce_or$<techmap.v>:441$302_Y = $techmap$procmux$75.$and$<techmap.v>:434$299_Y [1]'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$684' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$85.$and$<techmap.v>:434$316_Y [3] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$672' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$85.$reduce_or$<techmap.v>:441$320_Y = $techmap$procmux$85.$and$<techmap.v>:434$315_Y [3]'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$685' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$85.$and$<techmap.v>:434$316_Y [4] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$674' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$85.$reduce_or$<techmap.v>:441$321_Y = $techmap$procmux$85.$and$<techmap.v>:434$315_Y [4]'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$683' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$85.$and$<techmap.v>:434$316_Y [2] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$676' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$85.$reduce_or$<techmap.v>:441$319_Y = $techmap$procmux$85.$and$<techmap.v>:434$315_Y [2]'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$682' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$85.$and$<techmap.v>:434$316_Y [1] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$678' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$85.$reduce_or$<techmap.v>:441$318_Y = $techmap$procmux$85.$and$<techmap.v>:434$315_Y [1]'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$681' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$85.$and$<techmap.v>:434$316_Y [0] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$680' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$85.$reduce_or$<techmap.v>:441$317_Y = $techmap$procmux$85.$and$<techmap.v>:434$315_Y [0]'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$701' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$93.$and$<techmap.v>:434$325_Y = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$700' (0?) in module `\fsmControl' with constant driver `$techmap$procmux$93.$reduce_or$<techmap.v>:441$327_Y = $techmap$procmux$93.$and$<techmap.v>:434$326_Y'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$708' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$108.$and$<techmap.v>:434$325_Y = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$707' (0?) in module `\fsmControl' with constant driver `$techmap$procmux$108.$reduce_or$<techmap.v>:441$327_Y = $techmap$procmux$108.$and$<techmap.v>:434$326_Y'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$780' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$127.$and$<techmap.v>:434$418_Y [12] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$715' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$127.$reduce_or$<techmap.v>:441$431_Y = $auto$simplemap.cc:127:simplemap_reduce$712'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$781' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$127.$and$<techmap.v>:434$418_Y [13] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$719' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$127.$reduce_or$<techmap.v>:441$432_Y = $auto$simplemap.cc:127:simplemap_reduce$716'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$779' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$127.$and$<techmap.v>:434$418_Y [11] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$723' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$127.$reduce_or$<techmap.v>:441$430_Y = $auto$simplemap.cc:127:simplemap_reduce$720'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$778' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$127.$and$<techmap.v>:434$418_Y [10] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$727' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$127.$reduce_or$<techmap.v>:441$429_Y = $auto$simplemap.cc:127:simplemap_reduce$724'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$777' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$127.$and$<techmap.v>:434$418_Y [9] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$731' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$127.$reduce_or$<techmap.v>:441$428_Y = $auto$simplemap.cc:127:simplemap_reduce$728'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$776' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$127.$and$<techmap.v>:434$418_Y [8] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$735' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$127.$reduce_or$<techmap.v>:441$427_Y = $auto$simplemap.cc:127:simplemap_reduce$732'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$775' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$127.$and$<techmap.v>:434$418_Y [7] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$739' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$127.$reduce_or$<techmap.v>:441$426_Y = $auto$simplemap.cc:127:simplemap_reduce$736'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$774' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$127.$and$<techmap.v>:434$418_Y [6] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$743' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$127.$reduce_or$<techmap.v>:441$425_Y = $auto$simplemap.cc:127:simplemap_reduce$740'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$773' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$127.$and$<techmap.v>:434$418_Y [5] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$747' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$127.$reduce_or$<techmap.v>:441$424_Y = $auto$simplemap.cc:127:simplemap_reduce$744'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$772' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$127.$and$<techmap.v>:434$418_Y [4] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$751' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$127.$reduce_or$<techmap.v>:441$423_Y = $auto$simplemap.cc:127:simplemap_reduce$748'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$771' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$127.$and$<techmap.v>:434$418_Y [3] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$755' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$127.$reduce_or$<techmap.v>:441$422_Y = $auto$simplemap.cc:127:simplemap_reduce$752'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$770' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$127.$and$<techmap.v>:434$418_Y [2] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$759' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$127.$reduce_or$<techmap.v>:441$421_Y = $auto$simplemap.cc:127:simplemap_reduce$756'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$769' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$127.$and$<techmap.v>:434$418_Y [1] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$763' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$127.$reduce_or$<techmap.v>:441$420_Y = $auto$simplemap.cc:127:simplemap_reduce$760'.
+Replacing $_AND_ cell `$auto$simplemap.cc:85:simplemap_bitop$768' (const_and) in module `\fsmControl' with constant driver `$techmap$procmux$127.$and$<techmap.v>:434$418_Y [0] = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$767' (?0) in module `\fsmControl' with constant driver `$techmap$procmux$127.$reduce_or$<techmap.v>:441$419_Y = $auto$simplemap.cc:127:simplemap_reduce$764'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$330' (01?) in module `\fsmControl' with constant driver `$procmux$111_Y = $auto$simplemap.cc:168:logic_reduce$212'.
 
 10.2. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\fsmControl'.
-  Cell `$auto$simplemap.cc:136:simplemap_reduce$413' is identical to cell `$auto$simplemap.cc:136:simplemap_reduce$431'.
-    Redirecting output \Y: $auto$simplemap.cc:127:simplemap_reduce$411 [1] = $auto$simplemap.cc:127:simplemap_reduce$429 [1]
-    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$413' from module `\fsmControl'.
-  Cell `$auto$simplemap.cc:136:simplemap_reduce$376' is identical to cell `$auto$simplemap.cc:136:simplemap_reduce$431'.
-    Redirecting output \Y: $auto$simplemap.cc:127:simplemap_reduce$374 [1] = $auto$simplemap.cc:127:simplemap_reduce$429 [1]
-    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$376' from module `\fsmControl'.
-  Cell `$auto$simplemap.cc:136:simplemap_reduce$343' is identical to cell `$auto$simplemap.cc:136:simplemap_reduce$375'.
-    Redirecting output \Y: $auto$simplemap.cc:127:simplemap_reduce$342 [0] = $auto$simplemap.cc:127:simplemap_reduce$374 [0]
-    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$343' from module `\fsmControl'.
-  Cell `$auto$simplemap.cc:136:simplemap_reduce$325' is identical to cell `$auto$simplemap.cc:136:simplemap_reduce$375'.
-    Redirecting output \Y: $auto$simplemap.cc:127:simplemap_reduce$324 [0] = $auto$simplemap.cc:127:simplemap_reduce$374 [0]
-    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$325' from module `\fsmControl'.
-  Cell `$auto$simplemap.cc:277:simplemap_mux$223' is identical to cell `$auto$simplemap.cc:277:simplemap_mux$245'.
-    Redirecting output \Y: $procmux$22_Y [3] = $procmux$30_Y [3]
-    Removing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$223' from module `\fsmControl'.
-  Cell `$auto$simplemap.cc:277:simplemap_mux$221' is identical to cell `$auto$simplemap.cc:277:simplemap_mux$243'.
-    Redirecting output \Y: $procmux$22_Y [1] = $procmux$30_Y [1]
-    Removing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$221' from module `\fsmControl'.
-  Cell `$auto$simplemap.cc:136:simplemap_reduce$197' is identical to cell `$auto$simplemap.cc:136:simplemap_reduce$485'.
-    Redirecting output \Y: $auto$simplemap.cc:127:simplemap_reduce$195 [1] = $auto$simplemap.cc:127:simplemap_reduce$483 [1]
+  Cell `$auto$simplemap.cc:136:simplemap_reduce$444' is identical to cell `$auto$simplemap.cc:136:simplemap_reduce$462'.
+    Redirecting output \Y: $auto$simplemap.cc:127:simplemap_reduce$442 [1] = $auto$simplemap.cc:127:simplemap_reduce$460 [1]
+    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$444' from module `\fsmControl'.
+  Cell `$auto$simplemap.cc:136:simplemap_reduce$585' is identical to cell `$auto$simplemap.cc:136:simplemap_reduce$515'.
+    Redirecting output \Y: $auto$simplemap.cc:127:simplemap_reduce$584 [0] = $auto$simplemap.cc:127:simplemap_reduce$514 [0]
+    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$585' from module `\fsmControl'.
+  Cell `$auto$simplemap.cc:136:simplemap_reduce$407' is identical to cell `$auto$simplemap.cc:136:simplemap_reduce$462'.
+    Redirecting output \Y: $auto$simplemap.cc:127:simplemap_reduce$405 [1] = $auto$simplemap.cc:127:simplemap_reduce$460 [1]
+    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$407' from module `\fsmControl'.
+  Cell `$auto$simplemap.cc:136:simplemap_reduce$360' is identical to cell `$auto$simplemap.cc:136:simplemap_reduce$406'.
+    Redirecting output \Y: $auto$simplemap.cc:127:simplemap_reduce$359 [0] = $auto$simplemap.cc:127:simplemap_reduce$405 [0]
+    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$360' from module `\fsmControl'.
+  Cell `$auto$simplemap.cc:136:simplemap_reduce$342' is identical to cell `$auto$simplemap.cc:136:simplemap_reduce$406'.
+    Redirecting output \Y: $auto$simplemap.cc:127:simplemap_reduce$341 [0] = $auto$simplemap.cc:127:simplemap_reduce$405 [0]
+    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$342' from module `\fsmControl'.
+  Cell `$auto$simplemap.cc:136:simplemap_reduce$204' is identical to cell `$auto$simplemap.cc:136:simplemap_reduce$586'.
+    Redirecting output \Y: $auto$simplemap.cc:127:simplemap_reduce$202 [1] = $auto$simplemap.cc:127:simplemap_reduce$584 [1]
+    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$204' from module `\fsmControl'.
+  Cell `$auto$simplemap.cc:136:simplemap_reduce$197' is identical to cell `$auto$simplemap.cc:177:logic_reduce$209'.
+    Redirecting output \Y: $auto$simplemap.cc:127:simplemap_reduce$195 [1] = $auto$simplemap.cc:168:logic_reduce$207 [1]
     Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$197' from module `\fsmControl'.
-  Cell `$auto$simplemap.cc:136:simplemap_reduce$196' is identical to cell `$auto$simplemap.cc:136:simplemap_reduce$555'.
-    Redirecting output \Y: $auto$simplemap.cc:127:simplemap_reduce$195 [0] = $auto$simplemap.cc:127:simplemap_reduce$553 [1]
+  Cell `$auto$simplemap.cc:136:simplemap_reduce$196' is identical to cell `$auto$simplemap.cc:177:logic_reduce$208'.
+    Redirecting output \Y: $auto$simplemap.cc:127:simplemap_reduce$195 [0] = $auto$simplemap.cc:168:logic_reduce$207 [0]
     Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$196' from module `\fsmControl'.
-  Cell `$auto$simplemap.cc:136:simplemap_reduce$188' is identical to cell `$auto$simplemap.cc:177:logic_reduce$202'.
-    Redirecting output \Y: $auto$simplemap.cc:127:simplemap_reduce$186 [1] = $auto$simplemap.cc:168:logic_reduce$200 [1]
-    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$188' from module `\fsmControl'.
-  Cell `$auto$simplemap.cc:136:simplemap_reduce$187' is identical to cell `$auto$simplemap.cc:177:logic_reduce$201'.
-    Redirecting output \Y: $auto$simplemap.cc:127:simplemap_reduce$186 [0] = $auto$simplemap.cc:168:logic_reduce$200 [0]
-    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$187' from module `\fsmControl'.
-  Cell `$auto$simplemap.cc:206:simplemap_lognot$207' is identical to cell `$auto$simplemap.cc:277:simplemap_mux$239'.
-    Redirecting output \Y: $eq$fsm_Control.v:108$8_Y = $procmux$28_Y [2]
-    Removing $_NOT_ cell `$auto$simplemap.cc:206:simplemap_lognot$207' from module `\fsmControl'.
-  Cell `$auto$simplemap.cc:277:simplemap_mux$314' is identical to cell `$auto$simplemap.cc:277:simplemap_mux$259'.
-    Redirecting output \Y: $procmux$110_Y = $procmux$36_Y [2]
-    Removing $_NOT_ cell `$auto$simplemap.cc:277:simplemap_mux$314' from module `\fsmControl'.
-  Cell `$auto$simplemap.cc:136:simplemap_reduce$581' is identical to cell `$auto$simplemap.cc:136:simplemap_reduce$485'.
-    Redirecting output \Y: $techmap$procmux$55.$reduce_or$<techmap.v>:445$272_Y = $auto$simplemap.cc:127:simplemap_reduce$483 [1]
-    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$581' from module `\fsmControl'.
-  Cell `$auto$simplemap.cc:136:simplemap_reduce$603' is identical to cell `$auto$simplemap.cc:136:simplemap_reduce$485'.
-    Redirecting output \Y: $techmap$procmux$59.$reduce_or$<techmap.v>:445$272_Y = $auto$simplemap.cc:127:simplemap_reduce$483 [1]
-    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$603' from module `\fsmControl'.
-  Cell `$auto$simplemap.cc:136:simplemap_reduce$615' is identical to cell `$auto$simplemap.cc:136:simplemap_reduce$485'.
-    Redirecting output \Y: $techmap$procmux$63.$reduce_or$<techmap.v>:445$280_Y = $auto$simplemap.cc:127:simplemap_reduce$483 [1]
-    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$615' from module `\fsmControl'.
-  Cell `$auto$simplemap.cc:136:simplemap_reduce$627' is identical to cell `$auto$simplemap.cc:136:simplemap_reduce$485'.
-    Redirecting output \Y: $techmap$procmux$67.$reduce_or$<techmap.v>:445$280_Y = $auto$simplemap.cc:127:simplemap_reduce$483 [1]
-    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$627' from module `\fsmControl'.
-  Cell `$auto$simplemap.cc:136:simplemap_reduce$639' is identical to cell `$auto$simplemap.cc:136:simplemap_reduce$485'.
-    Redirecting output \Y: $techmap$procmux$71.$reduce_or$<techmap.v>:445$280_Y = $auto$simplemap.cc:127:simplemap_reduce$483 [1]
-    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$639' from module `\fsmControl'.
-  Cell `$auto$simplemap.cc:277:simplemap_mux$311' is identical to cell `$auto$simplemap.cc:277:simplemap_mux$239'.
-    Redirecting output \Y: $procmux$94_Y = $procmux$28_Y [2]
-    Removing $_NOT_ cell `$auto$simplemap.cc:277:simplemap_mux$311' from module `\fsmControl'.
-  Cell `$auto$simplemap.cc:136:simplemap_reduce$190' is identical to cell `$auto$simplemap.cc:177:logic_reduce$204'.
-    Redirecting output \Y: $auto$simplemap.cc:127:simplemap_reduce$189 = $auto$simplemap.cc:168:logic_reduce$203
-    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$190' from module `\fsmControl'.
-  Cell `$auto$simplemap.cc:136:simplemap_reduce$192' is identical to cell `$auto$simplemap.cc:177:logic_reduce$206'.
-    Redirecting output \Y: $ne$fsm_Control.v:89$4_Y = $auto$simplemap.cc:168:logic_reduce$205
-    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$192' from module `\fsmControl'.
-Removed a total of 20 cells.
+  Cell `$auto$simplemap.cc:136:simplemap_reduce$194' is identical to cell `$auto$simplemap.cc:136:simplemap_reduce$516'.
+    Redirecting output \Y: $auto$opt_reduce.cc:132:opt_mux$146 = $auto$simplemap.cc:127:simplemap_reduce$514 [1]
+    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$194' from module `\fsmControl'.
+  Cell `$auto$simplemap.cc:136:simplemap_reduce$612' is identical to cell `$auto$simplemap.cc:136:simplemap_reduce$203'.
+    Redirecting output \Y: $techmap$procmux$59.$reduce_or$<techmap.v>:445$289_Y = $auto$simplemap.cc:127:simplemap_reduce$202 [0]
+    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$612' from module `\fsmControl'.
+  Cell `$auto$simplemap.cc:136:simplemap_reduce$634' is identical to cell `$auto$simplemap.cc:136:simplemap_reduce$203'.
+    Redirecting output \Y: $techmap$procmux$63.$reduce_or$<techmap.v>:445$289_Y = $auto$simplemap.cc:127:simplemap_reduce$202 [0]
+    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$634' from module `\fsmControl'.
+  Cell `$auto$simplemap.cc:136:simplemap_reduce$646' is identical to cell `$auto$simplemap.cc:136:simplemap_reduce$203'.
+    Redirecting output \Y: $techmap$procmux$67.$reduce_or$<techmap.v>:445$297_Y = $auto$simplemap.cc:127:simplemap_reduce$202 [0]
+    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$646' from module `\fsmControl'.
+  Cell `$auto$simplemap.cc:136:simplemap_reduce$658' is identical to cell `$auto$simplemap.cc:136:simplemap_reduce$203'.
+    Redirecting output \Y: $techmap$procmux$71.$reduce_or$<techmap.v>:445$297_Y = $auto$simplemap.cc:127:simplemap_reduce$202 [0]
+    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$658' from module `\fsmControl'.
+  Cell `$auto$simplemap.cc:136:simplemap_reduce$670' is identical to cell `$auto$simplemap.cc:136:simplemap_reduce$203'.
+    Redirecting output \Y: $techmap$procmux$75.$reduce_or$<techmap.v>:445$297_Y = $auto$simplemap.cc:127:simplemap_reduce$202 [0]
+    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$670' from module `\fsmControl'.
+  Cell `$auto$simplemap.cc:136:simplemap_reduce$199' is identical to cell `$auto$simplemap.cc:177:logic_reduce$211'.
+    Redirecting output \Y: $auto$simplemap.cc:127:simplemap_reduce$198 = $auto$simplemap.cc:168:logic_reduce$210
+    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$199' from module `\fsmControl'.
+  Cell `$auto$simplemap.cc:136:simplemap_reduce$201' is identical to cell `$auto$simplemap.cc:177:logic_reduce$213'.
+    Redirecting output \Y: $ne$fsm_Control.v:92$4_Y = $auto$simplemap.cc:168:logic_reduce$212
+    Removing $_OR_ cell `$auto$simplemap.cc:136:simplemap_reduce$201' from module `\fsmControl'.
+  Cell `$auto$simplemap.cc:277:simplemap_mux$328' is identical to cell `$auto$simplemap.cc:206:simplemap_lognot$214'.
+    Redirecting output \Y: $procmux$99_Y = $eq$fsm_Control.v:109$8_Y
+    Removing $_NOT_ cell `$auto$simplemap.cc:277:simplemap_mux$328' from module `\fsmControl'.
+Removed a total of 17 cells.
 
 10.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
 Running muxtree optimizer on module \fsmControl..
@@ -970,7 +970,7 @@ Mapping DFF cells in module `\fsmControl':
 14. Executing ABC pass (technology mapping using ABC).
 
 14.1. Extracting gate netlist of module `\fsmControl' to `<abc-temp-dir>/input.blif'..
-Extracted 236 gates and 309 wires to a netlist network with 71 inputs and 45 outputs.
+Extracted 259 gates and 332 wires to a netlist network with 71 inputs and 45 outputs.
 
 14.1.1. Executing ABC.
 Running ABC command: berkeley-abc -s -f <abc-temp-dir>/abc.script 2>&1
@@ -998,10 +998,10 @@ ABC: + map
 ABC: + write_blif <abc-temp-dir>/output.blif 
 
 14.1.2. Re-integrating ABC results.
-ABC RESULTS:              NAND cells:      150
-ABC RESULTS:               NOR cells:       42
-ABC RESULTS:               NOT cells:       28
-ABC RESULTS:        internal signals:      193
+ABC RESULTS:              NAND cells:      148
+ABC RESULTS:               NOR cells:       50
+ABC RESULTS:               NOT cells:       39
+ABC RESULTS:        internal signals:      216
 ABC RESULTS:           input signals:       71
 ABC RESULTS:          output signals:       45
 Removing temp directory.
@@ -1010,27 +1010,27 @@ Removing temp directory.
 
 === fsmControl ===
 
-   Number of wires:                416
-   Number of wire bits:            684
+   Number of wires:                436
+   Number of wire bits:            732
    Number of public wires:          21
    Number of public wire bits:      72
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                265
+   Number of cells:                282
      DFF                            45
-     NAND                          150
-     NOR                            42
-     NOT                            28
+     NAND                          148
+     NOR                            50
+     NOT                            39
 
-   Chip area for this module: 1662.000000
+   Chip area for this module: 1719.000000
 
-Removed 0 unused cells and 209 unused wires.
+Removed 0 unused cells and 212 unused wires.
 
 16. Executing Verilog backend.
 Dumping module `\fsmControl'.
 
-End of script. Logfile hash: 9cda5c99cb
-CPU: user 0.49s system 0.01s, MEM: 14.61 MB total, 10.02 MB resident
+End of script. Logfile hash: 1a711d7429
+CPU: user 0.52s system 0.01s, MEM: 14.60 MB total, 10.08 MB resident
 Yosys 0.7 (git sha1 61f6811, gcc 6.2.0-11ubuntu1 -O2 -fdebug-prefix-map=/build/yosys-zWLHjG/yosys-0.7=. -fstack-protector-strong -fPIC -Os)
 Time spent: 20% 12x opt_merge (0 sec), 19% 12x opt_expr (0 sec), ...

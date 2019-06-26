@@ -19,7 +19,7 @@
  |                                                                            |
  \----------------------------------------------------------------------------/
 
- Yosys 0.7 (git sha1 61f6811, gcc 6.2.0-11ubuntu1 -O2 -fdebug-prefix-map=/build/yosys-OIL3SR/yosys-0.7=. -fstack-protector-strong -fPIC -Os)
+ Yosys 0.7 (git sha1 61f6811, gcc 6.2.0-11ubuntu1 -O2 -fdebug-prefix-map=/build/yosys-zWLHjG/yosys-0.7=. -fstack-protector-strong -fPIC -Os)
 
 
 -- Executing script file `synthesizer.ys' --
@@ -542,14 +542,22 @@ Running ABC command: berkeley-abc -s -f <abc-temp-dir>/abc.script 2>&1
 ABC: ABC command line: "source <abc-temp-dir>/abc.script".
 ABC: 
 ABC: + read_blif <abc-temp-dir>/input.blif 
+<<<<<<< HEAD
 ABC: + read_lib -w /home/xu/git/proyecto_ii_digitales/Proyecto2/Memoria/cmos_cells.lib 
+=======
+ABC: + read_lib -w /home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/Memoria/cmos_cells.lib 
+>>>>>>> 7ad904b1cca05c800b928044a6ff08f04ba9607e
 ABC: Parsing finished successfully.  Parsing time =     0.00 sec
 ABC: Warning: Templates are not defined.
 ABC: Libery parser cannot read "time_unit".  Assuming   time_unit : "1ns".
 ABC: Libery parser cannot read "capacitive_load_unit". Assuming   capacitive_load_unit(1, pf).
 ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFF".
 ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFSR".
+<<<<<<< HEAD
 ABC: Library "demo" from "/home/xu/git/proyecto_ii_digitales/Proyecto2/Memoria/cmos_cells.lib" has 4 cells (2 skipped: 2 seq; 0 tri-state; 0 no func).  Time =     0.00 sec
+=======
+ABC: Library "demo" from "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/Memoria/cmos_cells.lib" has 4 cells (2 skipped: 2 seq; 0 tri-state; 0 no func).  Time =     0.00 sec
+>>>>>>> 7ad904b1cca05c800b928044a6ff08f04ba9607e
 ABC: Memory =    0.00 MB. Time =     0.00 sec
 ABC: + strash 
 ABC: + dc2 
@@ -595,7 +603,14 @@ Removed 0 unused cells and 108 unused wires.
 18. Executing Verilog backend.
 Dumping module `\dual_port_memory'.
 
+<<<<<<< HEAD
 End of script. Logfile hash: 9a7c5e888f
 CPU: user 0.20s system 0.02s, MEM: 36.49 MB total, 9.48 MB resident
 Yosys 0.7 (git sha1 61f6811, gcc 6.2.0-11ubuntu1 -O2 -fdebug-prefix-map=/build/yosys-OIL3SR/yosys-0.7=. -fstack-protector-strong -fPIC -Os)
 Time spent: 18% 14x opt_expr (0 sec), 17% 14x opt_merge (0 sec), ...
+=======
+End of script. Logfile hash: 416a6f2e6a
+CPU: user 0.29s system 0.01s, MEM: 13.82 MB total, 9.30 MB resident
+Yosys 0.7 (git sha1 61f6811, gcc 6.2.0-11ubuntu1 -O2 -fdebug-prefix-map=/build/yosys-zWLHjG/yosys-0.7=. -fstack-protector-strong -fPIC -Os)
+Time spent: 19% 14x opt_expr (0 sec), 17% 14x opt_merge (0 sec), ...
+>>>>>>> 7ad904b1cca05c800b928044a6ff08f04ba9607e

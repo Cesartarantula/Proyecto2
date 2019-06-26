@@ -42,12 +42,15 @@ module fsmControl  ( input clk,
     if (~reset) begin
       //Estado Inicial 
       state <= RESET;
+      //nxt_state <= INIT;
       active_out<=0;
       idle_out<=0;
       error_out<=0;
+      umbrales_I<=0;
     end
     else if (init) begin
           state <= INIT;
+	  //nxt_state <= IDLE;
     end
     else begin
       state <= nxt_state;
@@ -78,7 +81,7 @@ module fsmControl  ( input clk,
         if (FIFO_error!=0)begin
           nxt_state <= ERROR;
         end
-        else begin
+	else begin
           nxt_state <= IDLE;
         end
       end
@@ -89,14 +92,12 @@ module fsmControl  ( input clk,
 	if (FIFO_empty!=0) begin
             idle_out <= 0;
             nxt_state <= ACTIVE;
-	    if (FIFO_empty==0) begin
+	    end else if (FIFO_empty==0) begin
             	idle_out <= 1;
             	nxt_state <= IDLE;
-                if (FIFO_error!=0)begin
+                end else if (FIFO_error!=0)begin
           		nxt_state <= ERROR;
         	end
-	    end
-        end
       end
 
       ACTIVE: begin
@@ -105,11 +106,10 @@ module fsmControl  ( input clk,
       	if (FIFO_error!=0)begin
 	  active_out <= 0;
           nxt_state <= ERROR;
-      	  if (FIFO_empty==0)begin
+      	  end else if (FIFO_empty==0)begin
           	active_out <= 0;
 	  	nxt_state <= IDLE;
       	  end
-	end
     end
 
     ERROR: begin
@@ -124,12 +124,13 @@ module fsmControl  ( input clk,
 		nxt_state <= ERROR;
         	error_out<=FIFO_error;
 		umbrales_I <= {nxt_umbral_MF,nxt_umbral_VC0,nxt_umbral_VC1,nxt_umbral_D0,nxt_umbral_D1};
-	        if (reset) begin
+	        end else if (~reset) begin
         		nxt_state <= RESET;
-			end else begin
-        			nxt_state <= ERROR;
-      			end
-	end  	
+			end else if (init) begin
+        			nxt_state <= INIT;
+      			end else begin
+				nxt_state <= RESET;
+			end
     end
 
     default:
