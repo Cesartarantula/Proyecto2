@@ -10,7 +10,6 @@ module dual_port_memory # ( parameter DATA_WIDTH= 6, parameter ADDR_WIDTH=8, par
 	output reg [DATA_WIDTH-1:0] 		oDataOut);
 
 reg [DATA_WIDTH-1:0] Ram [MEM_SIZE:0];
-reg oDataOut0;
 
 always @(posedge Clock)
 begin
@@ -23,11 +22,10 @@ end
 always @(*) begin
 	if(iReadEnable) begin
 	oDataOut = Ram[iReadAddress];
-	oDataOut0 = oDataOut;
 	end
 	else begin
 	oDataOut = 0;
-	end 
+	end
 end
 
 endmodule
