@@ -1,33 +1,61 @@
-`ifndef dual_port_memory_V
+/*`ifndef dual_port_memory_V
     `define dual_port_memory_V
     `include "../Memoria/dual_port_memory_V"
 `endif
+*/
+`include "dual_port_memory.v"
 
 //Definicion del fifo de 6 bit
-module fifo # ( parameter N=2 , parameter ADDR_WIDTH=8, parameter MEM_SIZE=7 ) (
+module fifo # ( parameter N=2 , parameter ADDR_WIDTH=8, parameter MEM_SIZE=7 ) 
+(
+    //Entradas
     input       clk,
+    input       reset,
     input [5:0] Fifo_Data_in, //Entrada de datos del FIFO
     input       Fifo_wr,      //Indica si se escribe un dato
     input       Fifo_rd,      //Indica si se lee un dato
-    input [2:0] umbral_vacio, // Umbrales de vacio y lleno
-    input [2:0] umbral_lleno, // son manejados por una tabla externa
-    input       reset,
 
+    //input [2:0] umbral_vacio, // Umbrales de vacio y lleno
+    //input [2:0] umbral_lleno, // son manejados por una tabla externa
+
+    //Salidas
     output     [5:0] Fifo_data_out, 	//Salida de datos
     output reg       Fifo_empty, 	//Indica si el FIFO esta vacio
     output reg       Fifo_full, 	//Indica si el FIFO esta lleno
     output reg [N-1:0] almost_empty,
     output reg [N-1:0] almost_full,
-    output reg       ERROR	//Bit de error, ocurre cuando se 
-                                    //una senal de escritura cuando 
-                                    //el fifo esta lleno
+    output reg       ERROR	//Bit de error, se da cuando se da una senal de escritura con el fifo esta lleno.
 );
 
 //Registros Internos
-reg [3:0] num_mem; //Indica cuantos espacios llenos hay en la memoria
-reg [2:0] wr_ptr, rd_ptr; 
+	reg [3:0] num_mem; //Indica cuantos espacios llenos hay en la memoria
+	reg [ADDR_WIDTH-1:0] wr_ptr, rd_ptr;  // dirección de escribir,  // dirección de lectura
 
-always @(posedge clk)//Aqui se determina si el fifo esta lleno o no
+
+//Cables de Logica Externa
+   wire [ADDR_WIDTH-1:0] iReadAddress; // dirección de leer
+   wire almost_full, almost_empty,iWriteEnable,iReadEnable;ç
+
+   wire [BUS_SIZE-1:0] 			  iDataIn;
+
+
+// Para la lógica de push y pop se debe saber que al realizar un pop se lee el dato de la memoria 
+//y en esa posición se escribe un 0 para indicar que se encuentra libre para ser utilizada cuando 
+//se realice un pop
+
+memoria canal(/*AUTOINST*/
+	       // Outputs
+	       .data_out		(oDataOut),
+	       // Inputs
+	       .clk			(Clock),
+	       .Fifo_rd			(iReadEnable),
+	       .Fifo_wr			(iWriteEnable), 
+	       .data_in			(iDataIn),
+	       .addressR		(iReadAddress),
+	       .addressW		(iWriteAddress));
+
+//Aqui se determina si el fifo esta lleno o no
+always @(posedge clk)
 	if (~reset) begin
       	//Estado Inicial
 		Fifo_empty<=0;
@@ -50,23 +78,25 @@ always @(posedge clk)//Aqui se determina si el fifo esta lleno o no
             Fifo_full  <= 0;
         end
 
-always @(*) //Envia la orden de lectura/escritura a la memoria
+//Envia la orden de escritura/lectura a la memoria
+always @(*) 
         if (Fifo_wr) 
         begin:push
-            write = 1;
-            read  = 0;
+            iWriteEnable = 1;
+            iReadEnable  = 0;
         end 
         else if (Fifo_rd) 
         begin:pop
-            write = 0;
-            read  = 1;
+            iWriteEnable = 0;
+            iReadEnable  = 1;
         end
         else 
         begin:nothing
-            write = 0;
-            read  = 0;
+            iWriteEnable = 0;
+            iReadEnable  = 0;
         end
 
-    always @(posedge CLK) //Determina si ocurrio un error.
+//Determina si ocurrio un error.
+    always @(posedge clk) 
         if (Fifo_full == 1 && Fifo_wr == 1) ERROR <= 1;
         else ERROR <= 0;

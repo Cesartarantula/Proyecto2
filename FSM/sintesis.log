@@ -1031,6 +1031,6 @@ Removed 0 unused cells and 212 unused wires.
 Dumping module `\fsmControl'.
 
 End of script. Logfile hash: 1a711d7429
-CPU: user 0.52s system 0.01s, MEM: 14.60 MB total, 10.08 MB resident
+CPU: user 0.53s system 0.01s, MEM: 14.60 MB total, 10.07 MB resident
 Yosys 0.7 (git sha1 61f6811, gcc 6.2.0-11ubuntu1 -O2 -fdebug-prefix-map=/build/yosys-zWLHjG/yosys-0.7=. -fstack-protector-strong -fPIC -Os)
 Time spent: 20% 12x opt_merge (0 sec), 19% 12x opt_expr (0 sec), ...
