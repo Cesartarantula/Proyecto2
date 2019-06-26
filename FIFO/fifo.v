@@ -36,7 +36,7 @@ module fifo # ( parameter N=2 , parameter ADDR_WIDTH=8, parameter MEM_SIZE=7 )
    wire [ADDR_WIDTH-1:0] iReadAddress; // dirección de leer
    wire almost_full, almost_empty,iWriteEnable,iReadEnable;ç
 
-   wire [BUS_SIZE-1:0] 			  iDataIn;
+   wire [ADDR_WIDTH-1:0] 			  iDataIn;
 
 
 // Para la lógica de push y pop se debe saber que al realizar un pop se lee el dato de la memoria 
