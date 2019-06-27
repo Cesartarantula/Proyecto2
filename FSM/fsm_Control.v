@@ -20,7 +20,7 @@ module fsmControl  ( input clk,
               output reg [13:0] umbrales_I,	//Esta salida es de 14 bits? (MF,VCO,VC1,D0,D1)= bits(2,4,4,2,2)
               output reg active_out,
               output reg idle_out,
-              output reg error_out);// Profe una consulta? error out=error_full? Por donde se saca el id del fifo error?
+              output reg error_out);
 
   //Parámetros del Case
   parameter RESET = 5'b00001;
@@ -49,7 +49,7 @@ module fsmControl  ( input clk,
     end
     else if (init) begin
           state <= INIT;
-	  //nxt_state <= IDLE;
+	  nxt_state <= IDLE;
     end
     else begin
       state <= nxt_state;
