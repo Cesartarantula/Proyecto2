@@ -17,7 +17,7 @@ module testbench;
    wire [4:0] FIFO_empty; 	// From fsm of fsmControl.v
    wire	active__condu;		// From fsm of fsmControl.v
    wire	clk;			// From prob of probador.v
-   wire	[4:0] error_condu;		// From fsm of fsmControl.v
+   wire	error_condu;		// From fsm of fsmControl.v
    wire	idle_condu;		// From fsm of fsmControl.v
    wire	init;			// From prob of probador.v
    wire	reset;			// From prob of probador.v
@@ -30,7 +30,7 @@ module testbench;
    wire [13:0] umbrales_I_estru;// From fsm of fsmControl.v
    wire active_estru;		// From fsm of fsmControl.v
    wire	idle_estru;		// From fsm of fsmControl.v
-   wire	[4:0] error_estru;		// From fsm of fsmControl.v
+   wire	error_estru;		// From fsm of fsmControl.v
    // End of automatics
 
    //Instancia FSM Conductual
