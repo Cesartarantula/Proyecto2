@@ -1,27 +1,19 @@
-module probador
-# ( parameter N=2 , parameter ADDR_WIDTH=8, parameter MEM_SIZE=7 )(
+module probador(
 
- output reg 		   clk,
- output reg 		   reset ,
- output reg 		   push,pop,
- output reg [ADDR_WIDTH-1:0] data_in,
- output reg 		   valid,
- output reg [3:0] 	   umbralA,
- output reg [3:0] 	   umbralB, 
+ output reg 		clk,
+ output reg 		reset_L,
+ output reg 		push,pop,
+ output reg [5:0] 	Fifo_Data_in,
+ output reg 		valid,
+ output reg [3:0] 	almost_empty,
+ output reg [3:0] 	almost_full, 
  
- input [ADDR_WIDTH-1:0] 	   data_out_synth,
- input [ADDR_WIDTH-1:0] 	   data_out_cond,
- input 			   empty,
- input 			   continua,
- input 			   pause,
- input 			   valid_out,
- input 			   fifo_error,
- 
- input 			   empty_syn,
- input 			   continua_syn,
- input 			   pause_syn,
- input 			   valid_out_syn,
- input 			   fifo_error_syn			   
+ input [5:0]		Fifo_data_out,
+ input 			Fifo_empty,
+ input 			CONTINUE,
+ input 			PAUSE,
+ input 			valid_out,
+ input 			fifo_error			   
 
 );
    
@@ -31,48 +23,48 @@ module probador
    $dumpfile("fifo.vcd");
 	$dumpvars();
    @(posedge clk);
-      reset<=0;
+   #2 reset_L<=1;
    //////////////////////////// First full push
    
    @(posedge clk);
-      data_in<='b1;
+      Fifo_Data_in<='b1;
       push <= 1;
       valid <= ~valid; // 1
       
    
    @(posedge clk); 
       push <= 1;	
-      data_in <= $random;
+      Fifo_Data_in <= 6'h16;
       valid <= ~valid; // 2
 
      @(posedge clk); 
       push <= 1;	
-      data_in <= $random;
+      Fifo_Data_in <= 6'h30;
       valid <= ~valid; //3
 
       @(posedge clk); 
       push <= 1;	
-      data_in <= $random;
+      Fifo_Data_in <= 6'h1C;
       valid <= ~valid;//4
        
       @(posedge clk); 
       push <= 1;     // 5 	 
-      data_in <= $random;
+      Fifo_Data_in <= 6'h1D;
       valid <= ~valid;
       
       @(posedge clk); 
       push <= 1;     // 6 	 
-      data_in <= $random;
+      Fifo_Data_in <= $random;
       valid <= ~valid;
 
       @(posedge clk); 
       push <= 1;     // 7 	 
-      data_in <= $random;
+      Fifo_Data_in <= $random;
       valid <= ~valid;
 
       @(posedge clk); 
       push <= 1;     // 8 	 
-      data_in <= $random;
+      Fifo_Data_in <= $random;
       valid <= ~valid;
       
       @(posedge clk);
@@ -80,43 +72,43 @@ module probador
       pop<= 0;
        ///////////////////////////////////  First full pop
       @(posedge clk);
-      data_in<=$random;
+      Fifo_Data_in<=$random;
       valid <= ~valid;
       pop <= 1; // 1
       
        @(posedge clk);
-      data_in<=$random;
+      Fifo_Data_in<=$random;
       valid <= ~valid;
       pop <= 1; // 2
 
        @(posedge clk);
-      data_in<=$random;
+      Fifo_Data_in<=$random;
       valid <= ~valid;
       pop <= 1; // 3
       
     @(posedge clk);
-      data_in<=$random;
+      Fifo_Data_in<=$random;
       valid <= ~valid;
       pop <= 1; // 4
 
        @(posedge clk);
-      data_in<=$random;
+      Fifo_Data_in<=$random;
       valid <= ~valid;
       pop <= 1; // 5
 
       @(posedge clk); 
       pop <= 1;     // 6 	 
-      data_in <= $random;
+      Fifo_Data_in <= $random;
       valid <= ~valid;
 
       @(posedge clk); 
       pop <= 1;     // 7 	 
-      data_in <= $random;
+      Fifo_Data_in <= $random;
       valid <= ~valid;
 
       @(posedge clk); 
       pop <= 1;     // 8 	 
-      data_in <= $random;
+      Fifo_Data_in <= $random;
       valid <= ~valid;
    
    @(posedge clk);
@@ -124,48 +116,48 @@ module probador
 ///////////////////////////////////// Second push, half
 
       @(posedge clk);
-      data_in<='b1;
+      Fifo_Data_in<='b1;
       push <= 1;
       valid <= ~valid; // 1
       
    
    @(posedge clk); 
       push <= 1;	
-      data_in <= $random;
+      Fifo_Data_in <= $random;
       valid <= ~valid; // 2
 
      @(posedge clk); 
       push <= 1;	
-      data_in <= $random;
+      Fifo_Data_in <= $random;
       valid <= ~valid; //3
 
       @(posedge clk); 
       push <= 1;	
-      data_in <= $random;
+      Fifo_Data_in <= $random;
       valid <= ~valid;//4
        
       @(posedge clk); 
       push <= 1;     // 5 	 
-      data_in <= $random;
+      Fifo_Data_in <= $random;
       valid <= ~valid;
 ////////////////////////////////////// pop and push
        @(posedge clk);
-      data_in<=$random;
+      Fifo_Data_in<=$random;
       valid <= ~valid;
       pop <= 1; // 1
       
        @(posedge clk);
-      data_in<=$random;
+      Fifo_Data_in<=$random;
       valid <= ~valid;
       pop <= 1; // 2
 
        @(posedge clk);
-      data_in<=$random;
+      Fifo_Data_in<=$random;
       valid <= ~valid;
       pop <= 1; // 3
       
     @(posedge clk);
-      data_in<=$random;
+      Fifo_Data_in<=$random;
       valid <= ~valid;
       pop <= 1; // 4
       
@@ -173,18 +165,18 @@ module probador
       push <=0;
       pop <=0;
       
-      #1000
+      #100
    $finish;
 end  
    
    initial clk <= 0;
-   initial reset<=1;
+   initial reset_L<=0;
    initial valid<=0;
    //initial data_in<=0;
    initial pop<=0;
    initial push<=0;
-   initial umbralA<=4'h6;
-   initial umbralB<=4'h3;
+   initial almost_empty<=4'h3;
+   initial almost_full<=4'h1;
    
    
    always #1 clk <= ~clk;

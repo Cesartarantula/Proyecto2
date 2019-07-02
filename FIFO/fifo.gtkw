@@ -1,0 +1,45 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Tue Jul  2 22:21:12 2019
+[*]
+[dumpfile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/FIFO/fifo.vcd"
+[dumpfile_mtime] "Tue Jul  2 22:19:45 2019"
+[dumpfile_size] 36872
+[savefile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/FIFO/fifo.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] -88 -92
+*-33.628815 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] testbench.
+[sst_width] 196
+[signals_width] 174
+[sst_expanded] 1
+[sst_vpaned_height] 155
+@28
+testbench.fifo1.clk
+testbench.fifo1.reset_L
+@22
+testbench.fifo1.Fifo_Data_in[5:0]
+testbench.fifo1.Fifo_data_out[5:0]
+@28
+testbench.fifo1.Fifo_empty
+testbench.fifo1.Fifo_full
+testbench.fifo1.PAUSE
+testbench.fifo1.almost_empty[1:0]
+testbench.fifo1.almost_full[1:0]
+testbench.fifo1.error_fifo
+@22
+testbench.fifo1.num_mem[3:0]
+@28
+testbench.fifo1.pop
+@22
+testbench.fifo1.rd_ptr[3:0]
+@28
+testbench.fifo1.push
+@23
+testbench.fifo1.wr_ptr[3:0]
+@28
+testbench.fifo1.valid
+testbench.fifo1.valid_out
+[pattern_trace] 1
+[pattern_trace] 0
