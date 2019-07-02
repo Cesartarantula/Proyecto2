@@ -22,6 +22,7 @@ module fifo # ( parameter N=2 , parameter ADDR_WIDTH=4)
 //Registros Internos
     reg [3:0] num_mem; //Indica cuantos espacios llenos hay en la memoria.
     reg [ADDR_WIDTH-1:0] wr_ptr, rd_ptr;  // dirección de escribir,  // dirección de lectura
+    reg PAUSE, CONTINUE;  // Pausa,  // Continue
 
 //Cables de Logica Externa
    wire [ADDR_WIDTH-1:0] iReadAddress; // dirección de leer
@@ -97,7 +98,7 @@ always @(*)
             iReadEnable  = 1;
 	    num_mem= num_mem-3'b001;
         end
-        if ((Fifo_wr) &&(Fifo_rd)) 
+        if ((Fifo_wr) && (Fifo_rd)) 
         begin:double
             iWriteEnable = 1;
             iReadEnable  = 1;
