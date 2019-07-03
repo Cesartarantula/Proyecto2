@@ -6,7 +6,6 @@ module fifo # ( parameter N=2 , parameter ADDR_WIDTH=4) // ( parameter N=4 , par
     //Entradas
     input wire clk,			//viene del probador
     input wire reset_L,			//viene del probador
-    //input wire valid,      		//Indica si el dato es valido viene del probador
     input wire push,      		//Indica si se escribe un dato 	//push viene del probador
     input wire pop,      		//Indica si se lee un dato  	//pull viene del probador
     input wire [5:0] Fifo_Data_in, 	//Entrada de datos del FIFO viene del probador
@@ -22,11 +21,11 @@ module fifo # ( parameter N=2 , parameter ADDR_WIDTH=4) // ( parameter N=4 , par
     output reg Fifo_Full, 	//Indica si el FIFO esta lleno
     output reg Error_Fifo 	//Bit de error, se da cuando se da una senal de escritura con el fifo esta lleno 
 				//ó cuando se quiere hacer una lectura y el fifo esta empty
-    //output reg valid_out
 );
 
 //Registros Internos
     reg [N-1:0] wr_ptr, rd_ptr;  // dirección de escribir,  // dirección de lectura
+    reg [N-1:0] num_mem;  // contador de control
 
 //Cables de Logica Externa
    /*wire [ADDR_WIDTH-1:0] iReadAddress; // dirección de leer
@@ -51,33 +50,31 @@ dual_port_memory  #(.DATA_WIDTH(6), .ADDR_WIDTH(2), .MEM_SIZE(3)) memoria
 always @(posedge clk) begin
 	if (!reset_L) begin
       		//Estado Inicial
-		//Fifo_data_out<=0;
 		Fifo_Empty<=1;
 		Fifo_Full<=0;
 		Almost_Empty<=0;
 		Almost_Full<=0;
 		Error_Fifo<=0;
 		Pausa <= 0;
-		//wr_ptr<=0;
-		//rd_ptr<=0;
+		num_mem<= 0;
     	end
-        else if (wr_ptr == 0) begin
+        else if (num_mem == 0) begin
 	    Fifo_Empty <= 1;
 	    Pausa <= 0;
             Fifo_Full <= 0;
         end
-	else if (wr_ptr == 1) begin
+	else if (num_mem == 1) begin
             Pausa <= 0;
 	    Fifo_Full <= 0; 
 	    Fifo_Empty <= 0;
         end
-	else if(wr_ptr == 2) begin
+	else if(num_mem == 2) begin
             Pausa <= 1;
             Fifo_Full <= 0; 
 	    Fifo_Empty <= 0;
 	    Almost_Full <= 1; 
         end
-        else if (wr_ptr == 3) begin
+        else if (num_mem == 3) begin
             Fifo_Empty <= 0;
             Fifo_Full  <= 1;
             end
@@ -97,14 +94,17 @@ rd_ptr<=0;
 end
  else       if (push) 
         begin
+	    num_mem<=num_mem+2'b01;
 	    wr_ptr<= wr_ptr+2'b01;
         end 
    else     if (pop) 
         begin
+	    num_mem<=num_mem+2'b01;
 	    rd_ptr<= rd_ptr+2'b01;
         end
         if ((push) && (pop)) 
         begin
+		num_mem=num_mem;
 		wr_ptr<= wr_ptr+2'b01;
 		rd_ptr<= rd_ptr+2'b01;
         end
