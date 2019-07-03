@@ -6,7 +6,8 @@ hierarchy -check -top PCIE_trans
 proc; opt; fsm; opt; memory; opt 	
 
 #Mapeo a biblioteca interna de celdas
-techmap; opt
+techmap; opt; flatten; opt
+opt_clean -purge
 
 #Mapeo logica a cmos_cells.lib
 abc -liberty cmos_cells.lib
