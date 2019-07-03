@@ -6,7 +6,7 @@ module fifo # ( parameter N=2 , parameter ADDR_WIDTH=4) // ( parameter N=4 , par
     //Entradas
     input wire clk,			//viene del probador
     input wire reset_L,			//viene del probador
-    input wire valid,      		//Indica si el dato es valido viene del probador
+    //input wire valid,      		//Indica si el dato es valido viene del probador
     input wire push,      		//Indica si se escribe un dato 	//push viene del probador
     input wire pop,      		//Indica si se lee un dato  	//pull viene del probador
     input wire [5:0] Fifo_Data_in, 	//Entrada de datos del FIFO viene del probador
@@ -20,9 +20,9 @@ module fifo # ( parameter N=2 , parameter ADDR_WIDTH=4) // ( parameter N=4 , par
     output reg Pausa,
     output reg Fifo_Empty, 	//Indica si el FIFO esta vacio
     output reg Fifo_Full, 	//Indica si el FIFO esta lleno
-    output reg Error_Fifo, 	//Bit de error, se da cuando se da una senal de escritura con el fifo esta lleno 
+    output reg Error_Fifo 	//Bit de error, se da cuando se da una senal de escritura con el fifo esta lleno 
 				//ó cuando se quiere hacer una lectura y el fifo esta empty
-    output reg valid_out
+    //output reg valid_out
 );
 
 //Registros Internos
@@ -35,7 +35,7 @@ module fifo # ( parameter N=2 , parameter ADDR_WIDTH=4) // ( parameter N=4 , par
    wire [ADDR_WIDTH-1:0] iDataIn;
 */
 
-dual_port_memory  #(.DATA_WIDTH(6), .ADDR_WIDTH(4), .MEM_SIZE(3)) memoria
+dual_port_memory  #(.DATA_WIDTH(6), .ADDR_WIDTH(2), .MEM_SIZE(3)) memoria
 (/*AUTOINST*/
 	       // Outputs
 	       .oDataOut		(Fifo_Data_out),
@@ -68,10 +68,13 @@ always @(posedge clk) begin
         end
 	else if (wr_ptr == 1) begin
             Pausa <= 0;
-	    Fifo_Full <= 1; 
+	    Fifo_Full <= 0; 
+	    Fifo_Empty <= 0;
         end
 	else if(wr_ptr == 2) begin
             Pausa <= 1;
+            Fifo_Full <= 0; 
+	    Fifo_Empty <= 0;
 	    Almost_Full <= 1; 
         end
         else if (wr_ptr == 3) begin
@@ -102,8 +105,8 @@ end
         end
         if ((push) && (pop)) 
         begin
-		wr_ptr<= wr_ptr;
-		rd_ptr<= rd_ptr;
+		wr_ptr<= wr_ptr+2'b01;
+		rd_ptr<= rd_ptr+2'b01;
         end
 end
 

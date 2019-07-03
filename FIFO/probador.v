@@ -4,14 +4,14 @@ module probador(
  output reg 		reset_L,
  output reg 		push,pop,
  output reg [5:0] 	Fifo_Data_in,
- output reg 		valid,
+ //output reg 		valid,
  //output reg [3:0] 	Almost_Empty,
  //output reg [3:0] 	Almost_Full, 
  
  input [5:0]		Fifo_Data_out,
  input 			Fifo_Empty,
  input 			Pausa,
- input 			valid_out,
+ //input 			valid_out,
  input 			Fifo_Error			   
 
 );
@@ -27,7 +27,6 @@ module probador(
    @(posedge clk);
       Fifo_Data_in<= 6'h11;
       push <= 1;
-      valid <= ~valid; // 1
    
    @(posedge clk); 
       push <= 1;	
@@ -43,19 +42,51 @@ module probador(
 
       @(posedge clk); 
       push <=0;
-      pop <= 1;  
-      valid <= ~valid; // 0
+      pop <= 1; 
 
       @(posedge clk); 
+      push <=0;
       pop <= 1;     
  
-      @(posedge clk); 
+      @(posedge clk);
+      push <=0;
       pop <= 1;     
     
       @(posedge clk);
+      push <=0;
       pop <= 0;
-      valid <= ~valid;// 1
       Fifo_Data_in <= 6'h1D;
+      
+      //second test
+      
+      @(posedge clk);
+      push <= 1;
+      Fifo_Data_in <= 6'h1A;
+      
+      @(posedge clk);
+      push <= 1;
+      pop <= 1;
+      Fifo_Data_in <= 6'h1B;
+      
+      @(posedge clk);
+      push <= 1;
+      pop <= 1;
+      Fifo_Data_in <= 6'h1C;
+      
+      @(posedge clk);
+      push <= 0;
+      pop <= 1;
+      Fifo_Data_in <= 6'h1D;
+      
+      @(posedge clk);
+      push <= 0;
+      pop <= 1;
+      Fifo_Data_in <= 6'h1E;
+      
+      @(posedge clk);
+      push <= 0;
+      pop <= 0;
+      Fifo_Data_in <= 6'h1F;
     
       #10
    $finish;
@@ -63,7 +94,6 @@ end
    
    initial clk <= 0;
    initial reset_L<=0;
-   initial valid<=0;
    initial Fifo_Data_in<=0;
    initial pop<=0;
    initial push<=0;
