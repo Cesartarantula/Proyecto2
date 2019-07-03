@@ -50,7 +50,7 @@ always @(posedge clk) begin
 		Almost_Full<=0;
 		Error_Fifo<=0;
 		Pausa <= 0;
-		num_mem<= 0;
+		
     	end
         else if (num_mem == 0) begin
 	    Fifo_Empty <= 1;
@@ -80,6 +80,13 @@ always @(posedge clk) begin
             Almost_Full <= 0;
             Almost_Empty <= 0;
             end
+        else if (num_mem == 5) begin
+            Fifo_Empty <= 0;
+            Pausa <= 1;
+            Fifo_Full  <= 1;
+            Almost_Full <= 0;
+            Almost_Empty <= 0;
+            end
         else begin
             Fifo_Empty <= 0;
             Fifo_Full  <= 0;
@@ -96,6 +103,7 @@ always @(posedge clk) begin
 if (!reset_L) begin
 wr_ptr<=0;
 rd_ptr<=0;
+num_mem<= 0;
 end
  else       if (push) 
         begin
@@ -104,10 +112,10 @@ end
         end 
    else     if (pop) begin
                 rd_ptr<= rd_ptr+1;
-                if (!(num_mem == 0)) begin
-                    num_mem<=num_mem-1;
-                end else begin
+                if (num_mem == 0) begin
                     num_mem<=num_mem;
+                end else begin
+                    num_mem<=num_mem-1;
                 end
         end
         if ((push) && (pop)) 
