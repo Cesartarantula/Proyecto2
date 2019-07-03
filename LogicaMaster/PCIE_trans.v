@@ -18,13 +18,18 @@ module PCIE_trans ( input clk,
 					input       pop_D0,
 					input       pop_D1,
 					output [5:0] data_out0,
-					output [5:0] data_out1);
+					output [5:0] data_out1,
+					output      active_out,
+					output      idle_out,
+					output      error_out);
    
 wire Almost_Empty_MF, Almost_Full_MF, Pausa_MF, Fifo_Empty_MF, Fifo_Full_MF, Error_Fifo_MF;
 wire push_vc0, push_vc1, pop_vc0,pop_vc1, push_Demux;
 wire [5:0] Fifo_Data_out_MF, data_in_VC0, dataout_VCs, data_in_D0, data_in_D1;
 wire Almost_Empty_D1, Almost_Full_D1, Pausa_D1 , Fifo_Empty_D1, Fifo_Full_D1, Error_Fifo_D1;
 wire Almost_Empty_D0, Almost_Full_D0, Pausa_D0 , Fifo_Empty_D0, Fifo_Full_D0, Error_Fifo_D0;
+wire [13:0] umbrales_I;
+
 
 fifo #(.N(2), .ADDR_WIDTH(4)) MainFifo (.clk(clk),
 										.reset_L.(reset_L),
@@ -118,15 +123,19 @@ fifo #(.N(2), .ADDR_WIDTH(4)) D0Fifo (.clk(clk),
 										.Fifo_Full(Fifo_Full_D1),
 										.Error_Fifo(Error_Fifo_D1));
 
-   always @(posedge clk) begin
-      data_VC0P0 <=data_p0[5] ? 0 : data_p0[4:0] ;       // se asigna a cada canal el dato correspondiente
-      push_VC0P0 <=valid_p0 ? (data_p0[5] ? 0 : 1) : 0 ; // señal de valid se pregunta primero para no enviar datos inválidos a los fifos
-      
-      data_VC1P1<= data_p1[5] ? data_p1[4:0] : 0  ;
-      push_VC1P1 <=valid_p1 ? (data_p1[5] ? 1 : 0) : 0 ;
+fsm_Control fsm_Control1 (.clk(clk),
+                          .reset_L(reset_L),
+                          .init(init),
+             	          .umbral_MF(umbrales_I[13:12]), 	
+	     		          .umbral_VC0(umbrales_I[11:8]),	
+                          .umbral_VC1(umbrales_I[7:4]), 	
+	                      .umbral_D0(umbrales_I[3:2]), 	
+                          .umbral_D0(umbrales_I[1:0]),
+						  .active_out(active_out),
+                          .idle_out(idle_out),
+						  .error_out(error_out));
 
-      valid_VC0P0<=data_p0[5]? 0 : valid_p0;
-      valid_VC1P1<=data_p1[5] ? valid_p1 : 0 ;
+   always @(posedge clk) begin
 
 		if (reset) begin
 		   data_VC0P0 <= 0;
