@@ -1,0 +1,10 @@
+read_verilog mux.v
+hierarchy -check -top  mux
+proc; opt; opt; fsm; opt; memory; opt
+techmap; opt; flatten; opt
+opt_clean -purge
+dfflibmap -liberty cmos_cells.lib
+abc -liberty cmos_cells.lib
+stat -liberty cmos_cells.lib
+clean
+write_verilog -noattr muxEstructural.v

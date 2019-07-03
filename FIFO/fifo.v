@@ -25,7 +25,7 @@ module fifo # ( parameter N=2 , parameter ADDR_WIDTH=4) // ( parameter N=4 , par
 
 //Registros Internos
     reg [N-1:0] wr_ptr, rd_ptr;  // dirección de escribir,  // dirección de lectura
-    reg [N-1:0] num_mem;  // contador de control
+    reg [N:0] num_mem;  // contador de control
 
 dual_port_memory  #(.DATA_WIDTH(6), .ADDR_WIDTH(2), .MEM_SIZE(3)) memoria
 (/*AUTOINST*/
@@ -53,6 +53,8 @@ always @(posedge clk) begin
     	end
         else if (num_mem == 0) begin
 	    Fifo_Empty <= 1;
+	    Almost_Full <= 0; 
+	    Almost_Empty <= 0; 
 	    Pausa <= 0;
             Fifo_Full <= 0;
         end
@@ -65,18 +67,22 @@ always @(posedge clk) begin
         end
 	else if(num_mem == 2) begin
             Pausa <= 1;
-	    Almost_Full <= 1; 
+	    Almost_Full <= 0; 
 	    Almost_Empty <= 0; 
             Fifo_Full <= 0; 
 	    Fifo_Empty <= 0;
         end
         else if (num_mem == 3) begin
             Fifo_Empty <= 0;
-            Fifo_Full  <= 1;
+            Fifo_Full  <= 0;
+            Almost_Full <= 1;
+            Almost_Empty <= 0;
             end
         else begin
-            Fifo_Empty <= 1;
-            Fifo_Full  <= 0;
+            Fifo_Empty <= 0;
+            Fifo_Full  <= 1;
+            Almost_Full <= 0; 
+            Almost_Empty <= 0; 
         end
 end
 //Envia la orden de escritura/lectura a la memoria
@@ -88,12 +94,12 @@ if (!reset_L) begin
 wr_ptr<=0;
 rd_ptr<=0;
 end
- else       if (push) 
+ else       if (push && !Error_Fifo) 
         begin
 	    num_mem<=num_mem+1;
 	    wr_ptr<= wr_ptr+1;
         end 
-   else     if (pop) 
+   else     if (pop && !Error_Fifo) 
         begin
 	    num_mem<=num_mem-1;
 	    rd_ptr<= rd_ptr+1;
