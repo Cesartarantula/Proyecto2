@@ -5,18 +5,16 @@ module probador(
  output reg 		push,pop,
  output reg [5:0] 	Fifo_Data_in,
  output reg 		valid,
- output reg [3:0] 	almost_empty,
- output reg [3:0] 	almost_full, 
+ //output reg [3:0] 	Almost_Empty,
+ //output reg [3:0] 	Almost_Full, 
  
- input [5:0]		Fifo_data_out,
- input 			Fifo_empty,
- input 			CONTINUE,
- input 			PAUSE,
+ input [5:0]		Fifo_Data_out,
+ input 			Fifo_Empty,
+ input 			Pausa,
  input 			valid_out,
- input 			fifo_error			   
+ input 			Fifo_Error			   
 
 );
-   
    
    // Probador
    initial begin
@@ -27,157 +25,50 @@ module probador(
    //////////////////////////// First full push
    
    @(posedge clk);
-      Fifo_Data_in<='b1;
+      Fifo_Data_in<= 6'h11;
       push <= 1;
       valid <= ~valid; // 1
-      
    
    @(posedge clk); 
       push <= 1;	
       Fifo_Data_in <= 6'h16;
-      valid <= ~valid; // 2
 
-     @(posedge clk); 
-      push <= 1;	
-      Fifo_Data_in <= 6'h30;
-      valid <= ~valid; //3
-
-      @(posedge clk); 
-      push <= 1;	
-      Fifo_Data_in <= 6'h1C;
-      valid <= ~valid;//4
-       
-      @(posedge clk); 
-      push <= 1;     // 5 	 
-      Fifo_Data_in <= 6'h1D;
-      valid <= ~valid;
-      
-      @(posedge clk); 
-      push <= 1;     // 6 	 
-      Fifo_Data_in <= $random;
-      valid <= ~valid;
-
-      @(posedge clk); 
-      push <= 1;     // 7 	 
-      Fifo_Data_in <= $random;
-      valid <= ~valid;
-
-      @(posedge clk); 
-      push <= 1;     // 8 	 
-      Fifo_Data_in <= $random;
-      valid <= ~valid;
-      
-      @(posedge clk);
-      push <=0;
-      pop<= 0;
-       ///////////////////////////////////  First full pop
-      @(posedge clk);
-      Fifo_Data_in<=$random;
-      valid <= ~valid;
-      pop <= 1; // 1
-      
-       @(posedge clk);
-      Fifo_Data_in<=$random;
-      valid <= ~valid;
-      pop <= 1; // 2
-
-       @(posedge clk);
-      Fifo_Data_in<=$random;
-      valid <= ~valid;
-      pop <= 1; // 3
-      
-    @(posedge clk);
-      Fifo_Data_in<=$random;
-      valid <= ~valid;
-      pop <= 1; // 4
-
-       @(posedge clk);
-      Fifo_Data_in<=$random;
-      valid <= ~valid;
-      pop <= 1; // 5
-
-      @(posedge clk); 
-      pop <= 1;     // 6 	 
-      Fifo_Data_in <= $random;
-      valid <= ~valid;
-
-      @(posedge clk); 
-      pop <= 1;     // 7 	 
-      Fifo_Data_in <= $random;
-      valid <= ~valid;
-
-      @(posedge clk); 
-      pop <= 1;     // 8 	 
-      Fifo_Data_in <= $random;
-      valid <= ~valid;
-   
-   @(posedge clk);
-      pop<=0;
-///////////////////////////////////// Second push, half
-
-      @(posedge clk);
-      Fifo_Data_in<='b1;
-      push <= 1;
-      valid <= ~valid; // 1
-      
-   
    @(posedge clk); 
       push <= 1;	
-      Fifo_Data_in <= $random;
-      valid <= ~valid; // 2
+      Fifo_Data_in <= 6'h30;
 
-     @(posedge clk); 
+   @(posedge clk); 
       push <= 1;	
-      Fifo_Data_in <= $random;
-      valid <= ~valid; //3
+      Fifo_Data_in <= 6'h1C;
 
       @(posedge clk); 
-      push <= 1;	
-      Fifo_Data_in <= $random;
-      valid <= ~valid;//4
-       
-      @(posedge clk); 
-      push <= 1;     // 5 	 
-      Fifo_Data_in <= $random;
-      valid <= ~valid;
-////////////////////////////////////// pop and push
-       @(posedge clk);
-      Fifo_Data_in<=$random;
-      valid <= ~valid;
-      pop <= 1; // 1
-      
-       @(posedge clk);
-      Fifo_Data_in<=$random;
-      valid <= ~valid;
-      pop <= 1; // 2
-
-       @(posedge clk);
-      Fifo_Data_in<=$random;
-      valid <= ~valid;
-      pop <= 1; // 3
-      
-    @(posedge clk);
-      Fifo_Data_in<=$random;
-      valid <= ~valid;
-      pop <= 1; // 4
-      
-      @(posedge clk);
       push <=0;
-      pop <=0;
-      
-      #100
+      pop <= 1;  
+      valid <= ~valid; // 0
+
+      @(posedge clk); 
+      pop <= 1;     
+ 
+      @(posedge clk); 
+      pop <= 1;     
+    
+      @(posedge clk);
+      pop <= 0;
+      valid <= ~valid;// 1
+      Fifo_Data_in <= 6'h1D;
+    
+      #10
    $finish;
 end  
    
    initial clk <= 0;
    initial reset_L<=0;
    initial valid<=0;
-   //initial data_in<=0;
+   initial Fifo_Data_in<=0;
    initial pop<=0;
    initial push<=0;
-   initial almost_empty<=4'h3;
-   initial almost_full<=4'h1;
-   
+   //initial Almost_Empty<=4'h3;
+   //initial Almost_Full<=4'h1;
    
    always #1 clk <= ~clk;
    
