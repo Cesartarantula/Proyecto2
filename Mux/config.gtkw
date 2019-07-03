@@ -1,0 +1,51 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Wed Jul  3 19:05:25 2019
+[*]
+[dumpfile] "/home/xu/files/i2019/varios/verilog/Proyecto_2_2019/03Julio2019/Mux/mux.vcd"
+[dumpfile_mtime] "Wed Jul  3 18:58:13 2019"
+[dumpfile_size] 8298
+[savefile] "/home/xu/files/i2019/varios/verilog/Proyecto_2_2019/03Julio2019/Mux/config.gtkw"
+[timestart] 0
+[size] 1366 719
+[pos] -1 -1
+*-13.187140 10000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] Test_Bench.
+[sst_width] 196
+[signals_width] 177
+[sst_expanded] 1
+[sst_vpaned_height] 197
+@200
+-Conductual
+@28
+Test_Bench.MUX.clk
+Test_Bench.MUX.reset_L
+@23
+Test_Bench.MUX.data_in_VC0[5:0]
+@22
+Test_Bench.MUX.data_in_VC1[5:0]
+@28
+Test_Bench.MUX.valid_in_VC0
+Test_Bench.MUX.valid_in_VC1
+Test_Bench.MUX.selectorL1
+@22
+Test_Bench.MUX.dataout[5:0]
+@28
+Test_Bench.MUX.valid_out
+@200
+-Estructural
+@28
+Test_Bench.MUX_Estr.clk
+Test_Bench.MUX_Estr.reset_L
+@22
+Test_Bench.MUX_Estr.data_in_VC0[5:0]
+Test_Bench.MUX_Estr.data_in_VC1[5:0]
+@28
+Test_Bench.MUX_Estr.valid_in_VC0
+Test_Bench.MUX_Estr.valid_in_VC1
+@22
+Test_Bench.MUX_Estr.dataout[5:0]
+@28
+Test_Bench.MUX_Estr.valid_out
+[pattern_trace] 1
+[pattern_trace] 0
