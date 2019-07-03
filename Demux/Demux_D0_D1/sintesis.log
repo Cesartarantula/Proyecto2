@@ -1,0 +1,510 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2016  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.7 (git sha1 61f6811, gcc 6.2.0-11ubuntu1 -O2 -fdebug-prefix-map=/build/yosys-OIL3SR/yosys-0.7=. -fstack-protector-strong -fPIC -Os)
+
+
+-- Executing script file `sintesis.ys' --
+
+1. Executing Verilog-2005 frontend.
+Parsing Verilog input from `Demux_D0_D1.v' to AST representation.
+Generating RTLIL representation for module `\Demux_D0_D1'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \Demux_D0_D1
+
+2.2. Analyzing design hierarchy..
+Top module:  \Demux_D0_D1
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_INIT pass (extract init attributes).
+
+3.4. Executing PROC_ARST pass (detect async resets in processes).
+
+3.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\Demux_D0_D1.$proc$Demux_D0_D1.v:24$3'.
+     1/4: $0\valid_1[0:0]
+     2/4: $0\valid_0[0:0]
+     3/4: $0\dataout1[5:0]
+     4/4: $0\dataout0[5:0]
+Creating decoders for process `\Demux_D0_D1.$proc$Demux_D0_D1.v:15$1'.
+     1/1: $0\selectorL1[0:0]
+
+3.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\Demux_D0_D1.\selectorL1' from process `\Demux_D0_D1.$proc$Demux_D0_D1.v:15$1'.
+
+3.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\Demux_D0_D1.\dataout0' using process `\Demux_D0_D1.$proc$Demux_D0_D1.v:24$3'.
+  created $dff cell `$procdff$75' with positive edge clock.
+Creating register for signal `\Demux_D0_D1.\dataout1' using process `\Demux_D0_D1.$proc$Demux_D0_D1.v:24$3'.
+  created $dff cell `$procdff$76' with positive edge clock.
+Creating register for signal `\Demux_D0_D1.\valid_0' using process `\Demux_D0_D1.$proc$Demux_D0_D1.v:24$3'.
+  created $dff cell `$procdff$77' with positive edge clock.
+Creating register for signal `\Demux_D0_D1.\valid_1' using process `\Demux_D0_D1.$proc$Demux_D0_D1.v:24$3'.
+  created $dff cell `$procdff$78' with positive edge clock.
+
+3.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 7 empty switches in `\Demux_D0_D1.$proc$Demux_D0_D1.v:24$3'.
+Removing empty process `Demux_D0_D1.$proc$Demux_D0_D1.v:24$3'.
+Found and cleaned up 1 empty switch in `\Demux_D0_D1.$proc$Demux_D0_D1.v:15$1'.
+Removing empty process `Demux_D0_D1.$proc$Demux_D0_D1.v:15$1'.
+Cleaned up 8 empty switches.
+
+4. Executing OPT pass (performing simple optimizations).
+
+4.1. Executing OPT_EXPR pass (perform const folding).
+Replacing $eq cell `$eq$Demux_D0_D1.v:33$6' in module `Demux_D0_D1' with inverter.
+Replacing $eq cell `$eq$Demux_D0_D1.v:39$7' in module `Demux_D0_D1' with inverter.
+Replacing $eq cell `$eq$Demux_D0_D1.v:42$8' (1) in module `\Demux_D0_D1' with constant driver `$eq$Demux_D0_D1.v:42$8_Y = \valid_1'.
+Optimizing away select inverter for $mux cell `$procmux$73' in module `Demux_D0_D1'.
+Optimizing away select inverter for $mux cell `$procmux$22' in module `Demux_D0_D1'.
+Optimizing away select inverter for $mux cell `$procmux$25' in module `Demux_D0_D1'.
+Optimizing away select inverter for $mux cell `$procmux$37' in module `Demux_D0_D1'.
+Optimizing away select inverter for $mux cell `$procmux$40' in module `Demux_D0_D1'.
+Optimizing away select inverter for $mux cell `$procmux$52' in module `Demux_D0_D1'.
+Optimizing away select inverter for $mux cell `$procmux$55' in module `Demux_D0_D1'.
+Optimizing away select inverter for $mux cell `$procmux$67' in module `Demux_D0_D1'.
+Optimizing away select inverter for $mux cell `$procmux$70' in module `Demux_D0_D1'.
+Optimizing away select inverter for $mux cell `$procmux$20' in module `Demux_D0_D1'.
+Optimizing away select inverter for $mux cell `$procmux$35' in module `Demux_D0_D1'.
+Optimizing away select inverter for $mux cell `$procmux$50' in module `Demux_D0_D1'.
+Optimizing away select inverter for $mux cell `$procmux$65' in module `Demux_D0_D1'.
+
+4.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Demux_D0_D1'.
+  Cell `$logic_not$Demux_D0_D1.v:16$2' is identical to cell `$logic_not$Demux_D0_D1.v:25$4'.
+    Redirecting output \Y: $logic_not$Demux_D0_D1.v:16$2_Y = $logic_not$Demux_D0_D1.v:25$4_Y
+    Removing $logic_not cell `$logic_not$Demux_D0_D1.v:16$2' from module `\Demux_D0_D1'.
+Removed a total of 1 cells.
+
+4.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \Demux_D0_D1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+    Root of a mux tree: $procmux$73 (pure)
+    Root of a mux tree: $procmux$70 (pure)
+    Root of a mux tree: $procmux$55 (pure)
+    Root of a mux tree: $procmux$40 (pure)
+      Replacing known input bits on port A of cell $procmux$35: \valid_0 -> 1'0
+    Root of a mux tree: $procmux$25 (pure)
+      Replacing known input bits on port A of cell $procmux$20: \valid_1 -> 1'0
+      Replacing known input bits on port A of cell $procmux$17: \valid_1 -> 1'0
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$61.
+    dead port 2/2 on $mux $procmux$46.
+    dead port 2/2 on $mux $procmux$31.
+    dead port 2/2 on $mux $procmux$17.
+    dead port 2/2 on $mux $procmux$13.
+Removed 5 multiplexer ports.
+
+4.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \Demux_D0_D1.
+    New ctrl vector for $mux cell $procmux$35: { }
+    New ctrl vector for $mux cell $procmux$20: { }
+  Optimizing cells in module \Demux_D0_D1.
+Performed a total of 2 changes.
+
+4.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Demux_D0_D1'.
+Removed a total of 0 cells.
+
+4.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+4.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Demux_D0_D1..
+  removing unused `$logic_not' cell `$logic_not$Demux_D0_D1.v:25$4'.
+  removing unused `$not' cell `$not$Demux_D0_D1.v:32$5'.
+  removing unused `$not' cell `$eq$Demux_D0_D1.v:33$6'.
+  removing unused `$not' cell `$eq$Demux_D0_D1.v:39$7'.
+
+4.8. Executing OPT_EXPR pass (perform const folding).
+
+4.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \Demux_D0_D1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+    Root of a mux tree: $procmux$25 (pure)
+    Root of a mux tree: $procmux$40 (pure)
+    Root of a mux tree: $procmux$55 (pure)
+    Root of a mux tree: $procmux$70 (pure)
+    Root of a mux tree: $procmux$73 (pure)
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+4.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \Demux_D0_D1.
+Performed a total of 0 changes.
+
+4.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Demux_D0_D1'.
+Removed a total of 0 cells.
+
+4.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+4.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Demux_D0_D1..
+
+4.15. Executing OPT_EXPR pass (perform const folding).
+
+4.16. Finished OPT passes. (There is nothing left to do.)
+
+5. Executing FSM pass (extract and optimize FSM).
+
+5.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+5.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+5.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+5.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Demux_D0_D1..
+
+5.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+5.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+5.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+5.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+6. Executing OPT pass (performing simple optimizations).
+
+6.1. Executing OPT_EXPR pass (perform const folding).
+
+6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Demux_D0_D1'.
+Removed a total of 0 cells.
+
+6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \Demux_D0_D1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+    Root of a mux tree: $procmux$25 (pure)
+    Root of a mux tree: $procmux$40 (pure)
+    Root of a mux tree: $procmux$55 (pure)
+    Root of a mux tree: $procmux$70 (pure)
+    Root of a mux tree: $procmux$73 (pure)
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \Demux_D0_D1.
+Performed a total of 0 changes.
+
+6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Demux_D0_D1'.
+Removed a total of 0 cells.
+
+6.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Demux_D0_D1..
+
+6.8. Executing OPT_EXPR pass (perform const folding).
+
+6.9. Finished OPT passes. (There is nothing left to do.)
+
+7. Executing MEMORY pass.
+
+7.1. Executing MEMORY_DFF pass (merging $dff cells to $memrd and $memwr).
+
+7.2. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Demux_D0_D1..
+
+7.3. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Demux_D0_D1..
+
+7.5. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+7.6. Executing MEMORY_MAP pass (converting $mem cells to logic and flip-flops).
+
+8. Executing OPT pass (performing simple optimizations).
+
+8.1. Executing OPT_EXPR pass (perform const folding).
+
+8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Demux_D0_D1'.
+Removed a total of 0 cells.
+
+8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \Demux_D0_D1..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+    Root of a mux tree: $procmux$25 (pure)
+    Root of a mux tree: $procmux$40 (pure)
+    Root of a mux tree: $procmux$55 (pure)
+    Root of a mux tree: $procmux$70 (pure)
+    Root of a mux tree: $procmux$73 (pure)
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+
+8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \Demux_D0_D1.
+Performed a total of 0 changes.
+
+8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Demux_D0_D1'.
+Removed a total of 0 cells.
+
+8.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Demux_D0_D1..
+
+8.8. Executing OPT_EXPR pass (perform const folding).
+
+8.9. Finished OPT passes. (There is nothing left to do.)
+
+9. Executing TECHMAP pass (map to technology primitives).
+
+9.1. Executing Verilog-2005 frontend.
+Parsing Verilog input from `<techmap.v>' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+Mapping Demux_D0_D1.$procmux$11 ($mux) with simplemap.
+Mapping Demux_D0_D1.$procmux$22 ($mux) with simplemap.
+Mapping Demux_D0_D1.$procmux$25 ($mux) with simplemap.
+Mapping Demux_D0_D1.$procmux$29 ($mux) with simplemap.
+Mapping Demux_D0_D1.$procmux$37 ($mux) with simplemap.
+Mapping Demux_D0_D1.$procmux$40 ($mux) with simplemap.
+Mapping Demux_D0_D1.$procmux$44 ($mux) with simplemap.
+Mapping Demux_D0_D1.$procmux$50 ($mux) with simplemap.
+Mapping Demux_D0_D1.$procmux$52 ($mux) with simplemap.
+Mapping Demux_D0_D1.$procmux$55 ($mux) with simplemap.
+Mapping Demux_D0_D1.$procmux$59 ($mux) with simplemap.
+Mapping Demux_D0_D1.$procmux$65 ($mux) with simplemap.
+Mapping Demux_D0_D1.$procmux$67 ($mux) with simplemap.
+Mapping Demux_D0_D1.$procmux$70 ($mux) with simplemap.
+Mapping Demux_D0_D1.$procmux$73 ($mux) with simplemap.
+Mapping Demux_D0_D1.$procdff$75 ($dff) with simplemap.
+Mapping Demux_D0_D1.$procdff$76 ($dff) with simplemap.
+Mapping Demux_D0_D1.$procdff$77 ($dff) with simplemap.
+Mapping Demux_D0_D1.$procdff$78 ($dff) with simplemap.
+No more expansions possible.
+
+10. Executing OPT pass (performing simple optimizations).
+
+10.1. Executing OPT_EXPR pass (perform const folding).
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$123' (01?) in module `\Demux_D0_D1' with constant driver `$procmux$11_Y = \selectorL1'.
+
+10.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Demux_D0_D1'.
+Removed a total of 0 cells.
+
+10.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \Demux_D0_D1..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+10.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \Demux_D0_D1.
+Performed a total of 0 changes.
+
+10.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Demux_D0_D1'.
+Removed a total of 0 cells.
+
+10.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+10.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Demux_D0_D1..
+
+10.8. Executing OPT_EXPR pass (perform const folding).
+
+10.9. Finished OPT passes. (There is nothing left to do.)
+
+11. Executing FLATTEN pass (flatten design).
+No more expansions possible.
+
+12. Executing OPT pass (performing simple optimizations).
+
+12.1. Executing OPT_EXPR pass (perform const folding).
+
+12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Demux_D0_D1'.
+Removed a total of 0 cells.
+
+12.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \Demux_D0_D1..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+12.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \Demux_D0_D1.
+Performed a total of 0 changes.
+
+12.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Demux_D0_D1'.
+Removed a total of 0 cells.
+
+12.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+12.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Demux_D0_D1..
+
+12.8. Executing OPT_EXPR pass (perform const folding).
+
+12.9. Finished OPT passes. (There is nothing left to do.)
+
+13. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell DFF (noninv, pins=3, area=18.00) is a direct match for cell type $_DFF_P_.
+  cell DFFSR (noninv, pins=5, area=18.00) is a direct match for cell type $_DFFSR_PPP_.
+  create mapping for $_DFFSR_PNP_ from mapping for $_DFFSR_PPP_.
+  create mapping for $_DFFSR_PNN_ from mapping for $_DFFSR_PNP_.
+  create mapping for $_DFFSR_PPN_ from mapping for $_DFFSR_PNN_.
+  create mapping for $_DFF_N_ from mapping for $_DFF_P_.
+  create mapping for $_DFFSR_NNN_ from mapping for $_DFFSR_PNN_.
+  create mapping for $_DFFSR_NPN_ from mapping for $_DFFSR_NNN_.
+  create mapping for $_DFFSR_NNP_ from mapping for $_DFFSR_NNN_.
+  create mapping for $_DFFSR_NPP_ from mapping for $_DFFSR_NNP_.
+  create mapping for $_DFF_NN0_ from mapping for $_DFFSR_NNN_.
+  create mapping for $_DFF_NN1_ from mapping for $_DFFSR_NNN_.
+  create mapping for $_DFF_NP0_ from mapping for $_DFFSR_NPP_.
+  create mapping for $_DFF_NP1_ from mapping for $_DFFSR_NPP_.
+  create mapping for $_DFF_PN0_ from mapping for $_DFFSR_PNN_.
+  create mapping for $_DFF_PN1_ from mapping for $_DFFSR_PNN_.
+  create mapping for $_DFF_PP0_ from mapping for $_DFFSR_PPP_.
+  create mapping for $_DFF_PP1_ from mapping for $_DFFSR_PPP_.
+  final dff cell mappings:
+    DFF _DFF_N_ (.C(~C), .D( D), .Q( Q));
+    DFF _DFF_P_ (.C( C), .D( D), .Q( Q));
+    DFFSR _DFF_NN0_ (.C(~C), .D( D), .Q( Q), .R(~R), .S( 0));
+    DFFSR _DFF_NN1_ (.C(~C), .D( D), .Q( Q), .R( 0), .S(~R));
+    DFFSR _DFF_NP0_ (.C(~C), .D( D), .Q( Q), .R( R), .S( 0));
+    DFFSR _DFF_NP1_ (.C(~C), .D( D), .Q( Q), .R( 0), .S( R));
+    DFFSR _DFF_PN0_ (.C( C), .D( D), .Q( Q), .R(~R), .S( 0));
+    DFFSR _DFF_PN1_ (.C( C), .D( D), .Q( Q), .R( 0), .S(~R));
+    DFFSR _DFF_PP0_ (.C( C), .D( D), .Q( Q), .R( R), .S( 0));
+    DFFSR _DFF_PP1_ (.C( C), .D( D), .Q( Q), .R( 0), .S( R));
+    DFFSR _DFFSR_NNN_ (.C(~C), .D( D), .Q( Q), .R(~R), .S(~S));
+    DFFSR _DFFSR_NNP_ (.C(~C), .D( D), .Q( Q), .R( R), .S(~S));
+    DFFSR _DFFSR_NPN_ (.C(~C), .D( D), .Q( Q), .R(~R), .S( S));
+    DFFSR _DFFSR_NPP_ (.C(~C), .D( D), .Q( Q), .R( R), .S( S));
+    DFFSR _DFFSR_PNN_ (.C( C), .D( D), .Q( Q), .R(~R), .S(~S));
+    DFFSR _DFFSR_PNP_ (.C( C), .D( D), .Q( Q), .R( R), .S(~S));
+    DFFSR _DFFSR_PPN_ (.C( C), .D( D), .Q( Q), .R(~R), .S( S));
+    DFFSR _DFFSR_PPP_ (.C( C), .D( D), .Q( Q), .R( R), .S( S));
+Mapping DFF cells in module `\Demux_D0_D1':
+  mapped 14 $_DFF_P_ cells to \DFF cells.
+
+14. Executing ABC pass (technology mapping using ABC).
+
+14.1. Extracting gate netlist of module `\Demux_D0_D1' to `<abc-temp-dir>/input.blif'..
+Extracted 54 gates and 77 wires to a netlist network with 22 inputs and 14 outputs.
+
+14.1.1. Executing ABC.
+Running ABC command: berkeley-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /home/xu/pCloudDrive/i2019/varios/verilog/Proyecto_2_2019/03Julio2019/Demux/Demux_D0_D1/cmos_cells.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Warning: Templates are not defined.
+ABC: Libery parser cannot read "time_unit".  Assuming   time_unit : "1ns".
+ABC: Libery parser cannot read "capacitive_load_unit". Assuming   capacitive_load_unit(1, pf).
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFF".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFSR".
+ABC: Library "demo" from "/home/xu/pCloudDrive/i2019/varios/verilog/Proyecto_2_2019/03Julio2019/Demux/Demux_D0_D1/cmos_cells.lib" has 4 cells (2 skipped: 2 seq; 0 tri-state; 0 no func).  Time =     0.00 sec
+ABC: Memory =    0.00 MB. Time =     0.00 sec
+ABC: + strash 
+ABC: + dc2 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + ifraig 
+ABC: + retime -o 
+ABC: + strash 
+ABC: + dch -f 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+14.1.2. Re-integrating ABC results.
+ABC RESULTS:              NAND cells:       37
+ABC RESULTS:               NOR cells:       15
+ABC RESULTS:               NOT cells:       12
+ABC RESULTS:        internal signals:       41
+ABC RESULTS:           input signals:       22
+ABC RESULTS:          output signals:       14
+Removing temp directory.
+
+15. Printing statistics.
+
+=== Demux_D0_D1 ===
+
+   Number of wires:                108
+   Number of wire bits:            163
+   Number of public wires:           9
+   Number of public wire bits:      24
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 78
+     DFF                            14
+     NAND                           37
+     NOR                            15
+     NOT                            12
+
+   Chip area for this module: 496.000000
+
+Removed 0 unused cells and 46 unused wires.
+
+16. Executing Verilog backend.
+Dumping module `\Demux_D0_D1'.
+
+End of script. Logfile hash: 6bec20c945
+CPU: user 0.13s system 0.01s, MEM: 36.48 MB total, 9.54 MB resident
+Yosys 0.7 (git sha1 61f6811, gcc 6.2.0-11ubuntu1 -O2 -fdebug-prefix-map=/build/yosys-OIL3SR/yosys-0.7=. -fstack-protector-strong -fPIC -Os)
+Time spent: 19% 11x opt_expr (0 sec), 15% 3x read_verilog (0 sec), ...

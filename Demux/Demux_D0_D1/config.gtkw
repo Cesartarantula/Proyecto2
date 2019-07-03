@@ -1,0 +1,47 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Tue Jul  2 21:17:52 2019
+[*]
+[dumpfile] "/home/xu/files/i2019/varios/verilog/Proyecto_2_2019/02Julio2019/Proyecto2/Demux/demux.vcd"
+[dumpfile_mtime] "Tue Jul  2 21:17:03 2019"
+[dumpfile_size] 9701
+[savefile] "/home/xu/files/i2019/varios/verilog/Proyecto_2_2019/02Julio2019/Proyecto2/Demux/config.gtkw"
+[timestart] 0
+[size] 1280 718
+[pos] -1 -1
+*-13.917405 37600 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] Test_Bench.
+[sst_width] 196
+[signals_width] 158
+[sst_expanded] 1
+[sst_vpaned_height] 208
+@200
+-demuxConductual
+@28
+Test_Bench.DM.clk
+Test_Bench.DM.reset_L
+@22
+Test_Bench.DM.data_in[5:0]
+Test_Bench.DM.dataout0[5:0]
+Test_Bench.DM.dataout1[5:0]
+@28
+Test_Bench.DM.selectorL1
+Test_Bench.DM.valid_in
+Test_Bench.DM.valid_0
+Test_Bench.DM.valid_1
+@200
+-demuxEstructural
+@28
+Test_Bench.DMEstr.clk
+@29
+Test_Bench.DMEstr.reset_L
+@22
+Test_Bench.DMEstr.data_in[5:0]
+Test_Bench.DMEstr.dataout0[5:0]
+Test_Bench.DMEstr.dataout1[5:0]
+@28
+Test_Bench.DMEstr.valid_in
+Test_Bench.DMEstr.valid_0
+Test_Bench.DMEstr.valid_1
+[pattern_trace] 1
+[pattern_trace] 0
