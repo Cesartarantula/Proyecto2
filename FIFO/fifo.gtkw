@@ -1,10 +1,10 @@
 [*]
 [*] GTKWave Analyzer v3.3.98 (w)1999-2019 BSI
-[*] Wed Jul  3 22:13:52 2019
+[*] Wed Jul  3 23:35:42 2019
 [*]
 [dumpfile] "/home/amazrtinezr/Documentos/Digitales/Digitales2/CursoI2019/Proyecto2/Proyecto2/FIFO/fifo.vcd"
-[dumpfile_mtime] "Wed Jul  3 22:11:14 2019"
-[dumpfile_size] 41564
+[dumpfile_mtime] "Wed Jul  3 23:35:31 2019"
+[dumpfile_size] 53262
 [savefile] "/home/amazrtinezr/Documentos/Digitales/Digitales2/CursoI2019/Proyecto2/Proyecto2/FIFO/fifo.gtkw"
 [timestart] 18990000000
 [size] 1366 704
