@@ -1,0 +1,36 @@
+#Lectura del archivo .v
+read_verilog demux.v
+
+#Síntesis high-level
+#Revisión de la jerarquía del diseño
+hierarchy -check -top demux
+
+#Optimizaciones	
+proc; opt;
+
+#Detecta y optimiza FSM encodings
+fsm; opt;
+
+#Implementa memorias (arrays)
+memory; opt;
+
+#Mapeo a biblioteca interna de celdas
+techmap; opt;
+
+#Hace un solo modulo
+flatten; opt;
+
+#Mapea los flip flops de libreria cmos_cells
+dfflibmap -liberty cmos_cells.lib
+
+#Usa librería cmos_cells
+abc -liberty cmos_cells.lib
+
+#Calcula el area
+stat -liberty cmos_cells.lib
+
+#Limpieza
+clean
+
+#Escritura archivo sintetizado, sin atributos
+write_verilog -noattr demuxEstructural.v
