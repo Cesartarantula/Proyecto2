@@ -14,8 +14,8 @@ module fifo # ( parameter N=2 , parameter ADDR_WIDTH=4) // ( parameter N=4 , par
     output [5:0] Fifo_Data_out,		//Salida de datos
 
    //Salidas de Control
-    output reg [N-1:0] Almost_Empty,	//Indica el valor del umbralA
-    output reg [N-1:0] Almost_Full,	//Indica el valor del umbralB
+    output reg Almost_Empty,	//Indica el valor del umbralA
+    output reg Almost_Full,	//Indica el valor del umbralB
     output reg Pausa,
     output reg Fifo_Empty, 	//Indica si el FIFO esta vacio
     output reg Fifo_Full, 	//Indica si el FIFO esta lleno
@@ -26,13 +26,6 @@ module fifo # ( parameter N=2 , parameter ADDR_WIDTH=4) // ( parameter N=4 , par
 //Registros Internos
     reg [N-1:0] wr_ptr, rd_ptr;  // dirección de escribir,  // dirección de lectura
     reg [N-1:0] num_mem;  // contador de control
-
-//Cables de Logica Externa
-   /*wire [ADDR_WIDTH-1:0] iReadAddress; // dirección de leer
-   wire [ADDR_WIDTH-1:0] iWriteAddress; // dirección de escribir
-   //wire iWriteEnable, iReadEnable;
-   wire [ADDR_WIDTH-1:0] iDataIn;
-*/
 
 dual_port_memory  #(.DATA_WIDTH(6), .ADDR_WIDTH(2), .MEM_SIZE(3)) memoria
 (/*AUTOINST*/
@@ -64,15 +57,18 @@ always @(posedge clk) begin
             Fifo_Full <= 0;
         end
 	else if (num_mem == 1) begin
-            Pausa <= 0;
+            Almost_Empty <= 1; 
+	    Pausa <= 0;
 	    Fifo_Full <= 0; 
 	    Fifo_Empty <= 0;
+	    Almost_Full <= 0; 
         end
 	else if(num_mem == 2) begin
             Pausa <= 1;
+	    Almost_Full <= 1; 
+	    Almost_Empty <= 0; 
             Fifo_Full <= 0; 
 	    Fifo_Empty <= 0;
-	    Almost_Full <= 1; 
         end
         else if (num_mem == 3) begin
             Fifo_Empty <= 0;
@@ -94,19 +90,19 @@ rd_ptr<=0;
 end
  else       if (push) 
         begin
-	    num_mem<=num_mem+2'b01;
-	    wr_ptr<= wr_ptr+2'b01;
+	    num_mem<=num_mem+1;
+	    wr_ptr<= wr_ptr+1;
         end 
    else     if (pop) 
         begin
-	    num_mem<=num_mem+2'b01;
-	    rd_ptr<= rd_ptr+2'b01;
+	    num_mem<=num_mem-1;
+	    rd_ptr<= rd_ptr+1;
         end
         if ((push) && (pop)) 
         begin
 		num_mem=num_mem;
-		wr_ptr<= wr_ptr+2'b01;
-		rd_ptr<= rd_ptr+2'b01;
+		wr_ptr<= wr_ptr+1;
+		rd_ptr<= rd_ptr+1;
         end
 end
 

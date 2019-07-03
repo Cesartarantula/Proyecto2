@@ -3,17 +3,13 @@ module probador(
  output reg 		clk,
  output reg 		reset_L,
  output reg 		push,pop,
- output reg [5:0] 	Fifo_Data_in,
- //output reg 		valid,
- //output reg [3:0] 	Almost_Empty,
- //output reg [3:0] 	Almost_Full, 
+ output reg [5:0] 	Fifo_Data_in, 
  
  input [5:0]		Fifo_Data_out,
  input 			Fifo_Empty,
- input 			Pausa,
- //input 			valid_out,
- input 			Fifo_Error			   
-
+ input 			Fifo_Error,	
+ input 			Pausa
+		   
 );
    
    // Probador

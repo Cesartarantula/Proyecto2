@@ -1,15 +1,15 @@
 [*]
 [*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
-[*] Wed Jul  3 16:55:39 2019
+[*] Wed Jul  3 19:48:23 2019
 [*]
 [dumpfile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/FIFO/fifo.vcd"
-[dumpfile_mtime] "Wed Jul  3 16:54:56 2019"
-[dumpfile_size] 38613
+[dumpfile_mtime] "Wed Jul  3 19:47:03 2019"
+[dumpfile_size] 37294
 [savefile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/FIFO/fifo.gtkw"
 [timestart] 0
 [size] 1280 751
 [pos] -1 -1
-*-32.542881 7000000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-33.073395 25000000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] testbench.
 [treeopen] testbench.fifo1.
 [sst_width] 196
@@ -24,22 +24,23 @@ testbench.fifo1.Fifo_Data_in[5:0]
 @28
 testbench.fifo1.pop
 testbench.fifo1.push
-testbench.fifo1.valid
-testbench.fifo1.valid_out
 @200
 -FIFO Cond
 @28
 testbench.fifo1.clk
 testbench.fifo1.reset_L
-testbench.fifo1.valid
 testbench.fifo1.push
 testbench.fifo1.pop
 @22
 testbench.fifo1.Fifo_Data_out[5:0]
 @28
+testbench.fifo1.num_mem[1:0]
 testbench.fifo1.Pausa
 testbench.fifo1.Fifo_Empty
 testbench.fifo1.Fifo_Full
+testbench.fifo1.Pausa
+testbench.fifo1.Almost_Empty
+testbench.fifo1.Almost_Full
 @200
 -Memoria
 @28
@@ -50,11 +51,12 @@ testbench.fifo1.memoria.iDataIn[5:0]
 testbench.fifo1.memoria.iWriteEnable
 testbench.fifo1.wr_ptr[1:0]
 testbench.fifo1.memoria.iReadEnable
-@29
 testbench.fifo1.rd_ptr[1:0]
 @22
-testbench.fifo1.memoria.iReadAddress[3:0]
-testbench.fifo1.memoria.iWriteAddress[3:0]
 testbench.fifo1.memoria.oDataOut[5:0]
+@200
+-Sintetizado
+@22
+testbench.fifo1Synth.Fifo_Data_out[5:0]
 [pattern_trace] 1
 [pattern_trace] 0
