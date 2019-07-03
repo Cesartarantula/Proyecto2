@@ -8,7 +8,7 @@
 // referencia para las funciones del próximo estado.
 
 module fsmControl  ( input clk,
-              input reset,
+              input reset_L,
               input init,
               input [1:0] umbral_MF, 	//(Almost_empty=1) (Almost_full=3) //Viene del Flow Control_MF
 	      input [3:0] umbral_VC0,	//(Almost_empty=4) (Almost_full=12) //Viene del Flow Control_VC0
@@ -38,7 +38,7 @@ module fsmControl  ( input clk,
   //Asignación de estado inicial.
   //Lógica de estados.
   always @ ( posedge clk ) begin
-    if (~reset) begin
+    if (~reset_L) begin
       //Estado Inicial 
       state <= RESET;
       //nxt_state <= INIT;
@@ -111,7 +111,7 @@ module fsmControl  ( input clk,
 	if (FIFO_error!=0) begin
 		nxt_state <= ERROR;
         	error_out<=1;
-	        end else if (~reset) begin
+	        end else if (~reset_L) begin
         		nxt_state <= RESET;
       			end else begin
 				nxt_state <= ERROR;

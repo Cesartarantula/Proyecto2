@@ -20,7 +20,7 @@ module testbench;
    wire	error_condu;		// From fsm of fsmControl.v
    wire	idle_condu;		// From fsm of fsmControl.v
    wire	init;			// From prob of probador.v
-   wire	reset;			// From prob of probador.v
+   wire	reset_L;		// From prob of probador.v
    wire	[1:0] umbral_MF;	// From fsm of fsmControl.v
    wire	[1:0] umbral_D0;	// From fsm of fsmControl.v
    wire	[1:0] umbral_D1;	// From fsm of fsmControl.v
@@ -42,7 +42,7 @@ module testbench;
 		  .error_out	(error_condu),
 		  // Inputs
 		  .clk		(clk),
-		  .reset	(reset),
+		  .reset_L	(reset_L),
 		  .init		(init),
 	          .umbral_MF	(umbral_MF),
 		  .umbral_VC0	(umbral_VC0),
@@ -60,7 +60,7 @@ module testbench;
 		  .error_out	(error_estru),
 		  // Inputs
 		  .clk		(clk),
-		  .reset	(reset),
+		  .reset_L	(reset_L),
 		  .init		(init),
 		  .umbral_MF	(umbral_MF),
 		  .umbral_VC0	(umbral_VC0),
@@ -74,7 +74,7 @@ module testbench;
    probador prob(/*AUTOINST*/
 		 // Outputs
 		 .clk		(clk),
-		 .reset		(reset),
+		 .reset_L		(reset_L),
 		 .init		(init),
 		 .umbral_MF	(umbral_MF),
 		 .umbral_VC0	(umbral_VC0),

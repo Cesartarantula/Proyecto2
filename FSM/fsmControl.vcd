@@ -1,5 +1,5 @@
 $date
-	Tue Jul  2 09:37:58 2019
+	Wed Jul  3 15:03:58 2019
 $end
 $version
 	Icarus Verilog
@@ -15,7 +15,7 @@ $var wire 4 $ umbral_VC0 [3:0] $end
 $var wire 2 % umbral_MF [1:0] $end
 $var wire 2 & umbral_D1 [1:0] $end
 $var wire 2 ' umbral_D0 [1:0] $end
-$var wire 1 ( reset $end
+$var wire 1 ( reset_L $end
 $var wire 1 ) init $end
 $var wire 1 * idle_estru $end
 $var wire 1 + idle_condu $end
@@ -32,7 +32,7 @@ $var wire 4 4 umbral_VC0 [3:0] $end
 $var wire 2 5 umbral_MF [1:0] $end
 $var wire 2 6 umbral_D1 [1:0] $end
 $var wire 2 7 umbral_D0 [1:0] $end
-$var wire 1 ( reset $end
+$var wire 1 ( reset_L $end
 $var wire 1 ) init $end
 $var wire 1 . clk $end
 $var wire 5 8 FIFO_error [4:0] $end
@@ -52,7 +52,7 @@ $var wire 2 @ umbral_MF [1:0] $end
 $var wire 2 A umbral_D1 [1:0] $end
 $var wire 2 B umbral_D0 [1:0] $end
 $var wire 5 C state [4:0] $end
-$var wire 1 ( reset $end
+$var wire 1 ( reset_L $end
 $var wire 5 D nxt_state [4:0] $end
 $var wire 1 ) init $end
 $var wire 1 * idle_out $end
@@ -1235,7 +1235,7 @@ $var reg 5 W$ FIFO_empty [4:0] $end
 $var reg 5 X$ FIFO_error [4:0] $end
 $var reg 1 . clk $end
 $var reg 1 ) init $end
-$var reg 1 ( reset $end
+$var reg 1 ( reset_L $end
 $var reg 2 Y$ umbral_D0 [1:0] $end
 $var reg 2 Z$ umbral_D1 [1:0] $end
 $var reg 2 [$ umbral_MF [1:0] $end

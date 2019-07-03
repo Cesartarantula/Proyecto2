@@ -1,10 +1,10 @@
 [*]
 [*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
-[*] Thu Jun 27 00:02:24 2019
+[*] Wed Jul  3 20:48:28 2019
 [*]
 [dumpfile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/FSM/fsmControl.vcd"
-[dumpfile_mtime] "Wed Jun 26 23:58:39 2019"
-[dumpfile_size] 33226
+[dumpfile_mtime] "Wed Jul  3 20:47:41 2019"
+[dumpfile_size] 34855
 [savefile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/FSM/gtkConfig.gtkw"
 [timestart] 0
 [size] 1280 751
@@ -17,7 +17,7 @@
 [sst_vpaned_height] 187
 @28
 testbench.prob.clk
-testbench.prob.reset
+testbench.prob.reset_L
 testbench.fsmCondu.init
 @24
 testbench.prob.umbral_MF[1:0]
@@ -31,7 +31,7 @@ testbench.prob.FIFO_error[4:0]
 -Conductual
 @28
 testbench.fsmCondu.clk
-testbench.fsmCondu.reset
+testbench.fsmCondu.reset_L
 testbench.fsmCondu.active_out
 testbench.fsmCondu.idle_out
 testbench.fsmCondu.error_out
@@ -51,11 +51,11 @@ testbench.fsmCondu.nxt_state[4:0]
 testbench.fsmCondu.umbrales_I[13:0]
 @200
 -Estructural
+@29
+testbench.fsmEstru.reset_L
 @28
-testbench.fsmEstru.reset
 testbench.prob.active_estru
 testbench.prob.idle_estru
-@29
 testbench.fsmEstru.error_out
 @22
 testbench.fsmEstru.state[4:0]

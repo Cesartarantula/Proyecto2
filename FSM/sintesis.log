@@ -516,7 +516,7 @@ Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$318' (?0) in module
 Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$203' (00?) in module `\fsmControl' with constant driver `$procmux$19_Y [1] = 1'0'.
 Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$204' (00?) in module `\fsmControl' with constant driver `$procmux$19_Y [2] = 1'0'.
 Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$205' (00?) in module `\fsmControl' with constant driver `$procmux$19_Y [3] = 1'0'.
-Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$206' (01?) in module `\fsmControl' with constant driver `$procmux$19_Y [4] = \reset'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$206' (01?) in module `\fsmControl' with constant driver `$procmux$19_Y [4] = \reset_L'.
 Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$208' (00?) in module `\fsmControl' with constant driver `$procmux$22_Y [1] = 1'0'.
 Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$209' (00?) in module `\fsmControl' with constant driver `$procmux$22_Y [2] = 1'0'.
 Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$210' (00?) in module `\fsmControl' with constant driver `$procmux$22_Y [3] = 1'0'.
@@ -831,7 +831,7 @@ Removed 0 unused cells and 157 unused wires.
 16. Executing Verilog backend.
 Dumping module `\fsmControl'.
 
-End of script. Logfile hash: 095003e77c
-CPU: user 0.39s system 0.02s, MEM: 14.21 MB total, 9.64 MB resident
+End of script. Logfile hash: 4060dde1bd
+CPU: user 0.41s system 0.00s, MEM: 14.21 MB total, 9.70 MB resident
 Yosys 0.7 (git sha1 61f6811, gcc 6.2.0-11ubuntu1 -O2 -fdebug-prefix-map=/build/yosys-zWLHjG/yosys-0.7=. -fstack-protector-strong -fPIC -Os)
 Time spent: 20% 12x opt_expr (0 sec), 19% 12x opt_merge (0 sec), ...

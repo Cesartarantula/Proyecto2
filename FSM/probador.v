@@ -12,7 +12,7 @@ module probador (	input [13:0] umbrales_I_condu,
 			input 	   idle_estru,
 			input error_estru, 
 			output reg clk,
-			output reg reset,
+			output reg reset_L,
 			output reg init,
 			output reg [1:0] umbral_MF,
 			output reg [3:0] umbral_VC0,
@@ -33,7 +33,7 @@ module probador (	input [13:0] umbrales_I_condu,
 
 	   //Secuencia de pruebas
 	   //Condiciones Iniciales (Prueba1)
-	   #0 reset <=0;
+	   #0 reset_L <=0;
 	   init<=0;
 	    
 	   umbral_MF<=2'b00; 
@@ -46,7 +46,7 @@ module probador (	input [13:0] umbrales_I_condu,
  
 	   //Prueba2 Estado de Reset
 	   @(posedge clk);
-	   #10 reset <= 1;
+	   #10 reset_L <= 1;
 
 	   //Prueba3 Forzado de estado de Init
 	   @(posedge clk);
@@ -74,11 +74,11 @@ module probador (	input [13:0] umbrales_I_condu,
 	   umbral_VC0<=4'b0000; //Le meto 0
            umbral_D0<=2'b00; //Le meto 0
 
-	  //Prueba6 Apaga señal de reset y señal de FIFO_error, espera 4 ciclos de relog y vuelve Reset a 1
+	  //Prueba6 Apaga señal de reset_L y señal de FIFO_error, espera 4 ciclos de relog y vuelve Reset a 1
 	  @(posedge clk);
-	   #6 reset <= 0;
+	   #6 reset_L <= 0;
 	   FIFO_error <= 0;
-	   #6 reset <= 1;
+	   #6 reset_L <= 1;
 
 	   #15
 	   //Prueba7
