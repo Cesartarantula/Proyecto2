@@ -53,7 +53,7 @@ module probador(
       pop <= 0;
       Fifo_Data_in <= 6'h1D;
       
-      //second test
+      //second test  push and pop at same time
       
       @(posedge clk);
       push <= 1;
@@ -83,6 +83,44 @@ module probador(
       push <= 0;
       pop <= 0;
       Fifo_Data_in <= 6'h1F;
+      
+      //thrid test error more data than space
+      
+      @(posedge clk);
+      Fifo_Data_in<= 6'h11;
+      push <= 1;
+   
+      @(posedge clk); 
+      push <= 1;	
+      Fifo_Data_in <= 6'h16;
+
+      @(posedge clk); 
+      push <= 1;	
+      Fifo_Data_in <= 6'h30;
+
+      @(posedge clk); 
+      push <= 1;	
+      Fifo_Data_in <= 6'h1C;
+      
+      @(posedge clk); 
+      push <= 1;	
+      Fifo_Data_in <= 6'h1E;
+      
+      @(posedge clk); 
+      push <=0;
+      pop <= 1; 
+
+      @(posedge clk); 
+      push <=0;
+      pop <= 1;     
+ 
+      @(posedge clk);
+      push <=0;
+      pop <= 1;    
+      
+      @(posedge clk);
+      push <=0;
+      pop <= 0;  
     
       #10
    $finish;
