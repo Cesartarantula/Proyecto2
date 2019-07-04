@@ -23,10 +23,6 @@ module testbench();
    wire	pop_D0;			// From probador.v
    wire	pop_D1;			// From probador.v
 
-   wire	push;			// From probador.v
-   wire	pop_D0;			// From probador.v
-   wire	pop_D1;			// From probador.v
-
    wire [5:0] data_out0;	// From transac of PCIE_trans.v, ...
    wire [5:0] data_out1;	// From transac of PCIE_trans.v, ....
 
@@ -38,7 +34,7 @@ module testbench();
    probador probador1(/*AUTOINST*/
 		      // Outputs	
 		      .clk			(clk),
-		      .reset			(reset_L),
+		      .reset_L			(reset_L),
 		      .init			(init),
 		      .data_in_principal	(data_in_principal),
 		      .push	(push),
@@ -55,7 +51,7 @@ module testbench();
    PCIE_trans transac1(/*AUTOINST*/
 		      // Outputs	
 		      .clk			(clk),
-		      .reset			(reset_L),
+		      .reset_L			(reset_L),
 		      .init			(init),
 		      .data_in_principal	(data_in_principal),
 		      .push	(push),
@@ -72,7 +68,7 @@ module testbench();
    PCIE_Synth transacSynth(/*AUTOINST*/
 		      // Outputs	
 		      .clk			(clk),
-		      .reset			(reset_L),
+		      .reset_L			(reset_L),
 		      .init			(init),
 		      .data_in_principal	(data_in_principal),
 		      .push	(push),
