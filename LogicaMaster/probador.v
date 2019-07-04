@@ -153,8 +153,6 @@ end
    initial pop_D1<=0;
    initial push<=0;
    initial data_in_principal<=0;
-   //initial umbralA<=4'd6;
-   //initial umbralB<=4'd3;
 
    always #1 clk <= ~clk;
    
