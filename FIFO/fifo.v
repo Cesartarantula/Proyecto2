@@ -16,8 +16,7 @@ module fifo # ( parameter N=2 , parameter ADDR_WIDTH=4) // ( parameter N=4 , par
    //Salidas de Control
     output reg Almost_Empty,	//Indica el valor del umbralA
     output reg Almost_Full,	//Indica el valor del umbralB
-    output reg [N:0] umbralA,     //Aqui se guarda el valor de umbralA
-    output reg [N:0] umbralB,     //Aqui se guarda el valor de umbralB
+    output reg [N:0] umbral,     //Aqui se guarda el valor de umbral
     output reg Pausa,
     output reg Fifo_Empty, 	//Indica si el FIFO esta vacio
     output reg Fifo_Full, 	//Indica si el FIFO esta lleno
@@ -51,11 +50,10 @@ always @(posedge clk) begin
 		Almost_Empty<=0;
 		Almost_Full<=0;
 		Pausa <= 0;
-		umbralA <= 0;
-		umbralB <= 0;
-		
+		umbral <= 0;
     	end
-        else if (num_mem == 0) begin
+    else if (N == 2) begin
+        if (num_mem == 0) begin
 	    Fifo_Empty <= 1;
 	    Almost_Full <= 0; 
 	    Almost_Empty <= 0; 
@@ -64,7 +62,7 @@ always @(posedge clk) begin
         end
 	else if (num_mem == 1) begin
             Almost_Empty <= 1; 
-            umbralA <= num_mem;
+            umbral <= num_mem;
             Pausa <= 0;
             Fifo_Full <= 0; 
             Fifo_Empty <= 0;
@@ -73,7 +71,7 @@ always @(posedge clk) begin
 	else if(num_mem == 3) begin
             Pausa <= 1;
             Almost_Full <= 1; 
-            umbralB <= num_mem;
+            umbral <= num_mem;
             Almost_Empty <= 0; 
             Fifo_Full <= 0; 
             Fifo_Empty <= 0;
@@ -98,6 +96,53 @@ always @(posedge clk) begin
             Almost_Full <= 0; 
             Almost_Empty <= 0;
             Pausa <= 0;
+        end
+    end
+    else if (N == 4) begin
+       		 if (num_mem == 0) begin
+	    		Fifo_Empty <= 1;
+	    		Almost_Full <= 0; 
+                Almost_Empty <= 0; 
+	    		Pausa <= 0;
+                Fifo_Full <= 0;
+        	end
+        	else if (num_mem == 4) begin
+                Almost_Empty <= 1; 
+                umbral <= num_mem;
+                Pausa <= 0;
+                Fifo_Full <= 0; 
+                Fifo_Empty <= 0;
+                Almost_Full <= 0; 
+            end
+            else if(num_mem == 12) begin
+                Pausa <= 1;
+                Almost_Full <= 1; 
+                umbral <= num_mem;
+                Almost_Empty <= 0; 
+                Fifo_Full <= 0; 
+                Fifo_Empty <= 0;
+            end
+            else if (num_mem == 16) begin
+                Fifo_Empty <= 0;
+                Pausa <= 1;
+                Fifo_Full  <= 1;
+                Almost_Full <= 0;
+                Almost_Empty <= 0;
+            end
+            else if (num_mem == 17) begin
+                Fifo_Empty <= 0;
+                Pausa <= 1;
+                Fifo_Full  <= 1;
+                Almost_Full <= 0;
+                Almost_Empty <= 0;
+            end
+            else begin
+                Fifo_Empty <= 0;
+                Fifo_Full  <= 0;
+                Almost_Full <= 0; 
+                Almost_Empty <= 0;
+                Pausa <= 0;
+            end
         end
 end
 //Envia la orden de escritura/lectura a la memoria
@@ -138,15 +183,28 @@ end
 always @(posedge clk) begin
     if (!reset_L) begin
 		Error_Fifo<=0;
-    end else
-    if (num_mem == 5)begin
-        Error_Fifo <= 1; 
-    end else
-	if (Almost_Empty == 1 && pop == 1 && push == 0) begin 
-        Error_Fifo <= 1;
     end
-    else begin
-        Error_Fifo <= 0;
+    else if (N == 2) begin
+        if (num_mem == 5)begin
+            Error_Fifo <= 1; 
+        end else
+        if (Almost_Empty == 1 && pop == 1 && push == 0) begin 
+            Error_Fifo <= 1;
+        end
+        else begin
+            Error_Fifo <= 0;
+        end
+    end
+    else if (N == 4) begin
+        if (num_mem == 17)begin
+            Error_Fifo <= 1; 
+        end else
+        if (Almost_Empty == 1 && pop == 1 && push == 0) begin 
+            Error_Fifo <= 1;
+        end
+        else begin
+            Error_Fifo <= 0;
+        end
     end
 end
 endmodule

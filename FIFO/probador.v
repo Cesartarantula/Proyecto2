@@ -18,7 +18,7 @@ module probador(
 	$dumpvars();
    @(posedge clk);
    #2 reset_L<=1;
-   //////////////////////////// First full push
+   //////////////////////////// First full push N = 2
    
    @(posedge clk);
       Fifo_Data_in<= 6'h11;
@@ -53,7 +53,7 @@ module probador(
       pop <= 0;
       Fifo_Data_in <= 6'h1D;
       
-      //second test  push and pop at same time
+      //second test  push and pop at same time N = 2
       
       @(posedge clk);
       push <= 1;
@@ -84,7 +84,7 @@ module probador(
       pop <= 0;
       Fifo_Data_in <= 6'h1F;
       
-      //thrid test Fifo errors 
+      //thrid test Fifo errors N = 2
       
       @(posedge clk);
       Fifo_Data_in<= 6'h11;

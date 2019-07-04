@@ -1,12 +1,12 @@
 [*]
 [*] GTKWave Analyzer v3.3.98 (w)1999-2019 BSI
-[*] Thu Jul  4 00:36:04 2019
+[*] Thu Jul  4 01:13:43 2019
 [*]
 [dumpfile] "/home/amazrtinezr/Documentos/Digitales/Digitales2/CursoI2019/Proyecto2/Proyecto2/FIFO/fifo.vcd"
-[dumpfile_mtime] "Thu Jul  4 00:35:25 2019"
-[dumpfile_size] 58500
+[dumpfile_mtime] "Thu Jul  4 01:12:47 2019"
+[dumpfile_size] 57243
 [savefile] "/home/amazrtinezr/Documentos/Digitales/Digitales2/CursoI2019/Proyecto2/Proyecto2/FIFO/fifo.gtkw"
-[timestart] 24990000000
+[timestart] 0
 [size] 1366 704
 [pos] -1 -1
 *-33.073395 54000000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
@@ -35,8 +35,7 @@ testbench.fifo1.Almost_Full
 testbench.fifo1.Pausa
 testbench.fifo1.Fifo_Full
 testbench.fifo1.Error_Fifo
-testbench.fifo1.umbralA[2:0]
-testbench.fifo1.umbralB[2:0]
+testbench.fifo1.umbral[2:0]
 @200
 -Memoria
 @28
@@ -68,8 +67,7 @@ testbench.fifo1Synth.Almost_Full
 testbench.fifo1Synth.Pausa
 testbench.fifo1Synth.Fifo_Full
 testbench.fifo1Synth.Error_Fifo
-testbench.fifo1Synth.umbralA[2:0]
 @29
-testbench.fifo1Synth.umbralB[2:0]
+testbench.fifo1Synth.umbral[2:0]
 [pattern_trace] 1
 [pattern_trace] 0
