@@ -23,59 +23,85 @@ module probador (
  input [5:0] data_out1					
 );
    
-   // Probador
-   initial begin
-   $dumpfile("PCIE_trans.vcd");
+   	// Probador
+  	 initial begin
+   	$dumpfile("PCIE_trans.vcd");
 	$dumpvars();
-   @(posedge clk);
-      init <=1;
-      
-   @(posedge clk);
-      reset_L<=0;
+
+	//2 Ciclos para reset de señales
+	//repeat(2)begin
+      	//	@(posedge clk); 
+      	//		reset_L<=1;
+      	//	end
+   	
+	//Probar estado init
+	repeat(1)begin
+   		@(posedge clk);
+      			//init <=1;
+      			reset_L<=0;
+		end
+
+	//Reset en bajo
+   	@(posedge clk);
+      		reset_L<=1;;
+		init <=0;
         
-   
-   @(posedge clk); /// 1
-      data_in_principal<=6'b011011; // 0 1 B
-      push<=1;
+    	/////////////////////////////////////////////////
+     	//3 PUSH a D0 1 POP A D0 Y 3 PUSH a D1
+	@(posedge clk); 	/// 1
+		data_in_principal<=6'b011011; // 0 1 B (VC0,DO,DATA)
+		push<=1;
+	
+	@(posedge clk);  	/// 2
+		data_in_principal<=6'b001101; // 0 0 D
+		push<=1;
       
-      data_in_principal<=6'b001101; // 0 0 D
-      push<=1;
-      
-   @(posedge clk); /// 2
-      data_in_principal<=6'b000011; // 0 0 3
-      push<=1;
-      
-      data_in_principal<=6'b110001;// 1 1 1
-      push<=1;
+   	@(posedge clk); 	/// 3
+		pop_D0<=1;
+      		data_in_principal<=6'b000011; // 0 0 3
+      		push<=1;
 
-     @(posedge clk);/// 3 
-      data_in_principal<=6'b011010; // 0 1 A
-      push<=1;
-      
-      data_in_principal<=6'b001100;// 0 0 C
-      push<=1;
+      	@(posedge clk);		/// 4
+		pop_D0<=1;
+      		data_in_principal<=6'b110001;// 1 1 1
+      		push<=1;
 
-      @(posedge clk); //4 
-      data_in_principal<=6'b001001; // 0 0 9
-      push<=1;
-      
-      data_in_principal<=6'b011001;// 0 1 9
-      push<=1;
-      
-      @(posedge clk); //5
-      data_in_principal<=6'b111011; // 1 1 B
-      push<=1;
-      
-      data_in_principal<=6'b111101; // 1 1 D
-      push<=1;
+     	@(posedge clk);		/// 5
+		pop_D0<=0; 
+		pop_D1<=1;
+      		data_in_principal<=6'b011010; // 0 1 A
+      		push<=1;
 
-      @(posedge clk); // 6
-      data_in_principal<=6'b011111; // 0 1 F
-      push<=1;
+      	@(posedge clk)		/// 6
+		pop_D1<=1; 
+      		data_in_principal<=6'b001100;// 0 0 C
+      		push<=1;
+
+     	@(posedge clk); //4
+		pop_D1<=0; 
+		data_in_principal<=6'b001001; // 0 0 9
+      		push<=1;
+      	@(posedge clk);
+      		data_in_principal<=6'b011001;// 0 1 9
+      		push<=1;
+ 
+      	@(posedge clk); //5
+      		data_in_principal<=6'b111011; // 1 1 B
+      		push<=1;
+      
+	@(posedge clk); //5
+     		data_in_principal<=6'b111101; // 1 1 D
+     	 	push<=1;
+
+      	@(posedge clk); // 6
+      		data_in_principal<=6'b011111; // 0 1 F
+     		 push<=1;
 
       /////////////////////////////////////////////////
-      //4 POP a D0
+      //4 POP a D0 (4 lecturas al DO)
       @(posedge clk); 
+      data_in_principal<=6'b000000; 
+      push<=0;
       pop_D0<=1; 
 
       @(posedge clk); 
@@ -89,6 +115,7 @@ module probador (
 
       //4 POP a D1
       @(posedge clk); 
+      pop_D0<=0;
       pop_D1<=1; 
 
       @(posedge clk); 
@@ -99,7 +126,22 @@ module probador (
 
       @(posedge clk); 
       pop_D0<=1;
+
+      @(posedge clk); 
+
+      pop_D0<=0;
+
+      @(posedge clk); 
+      pop_D1<=1;
       
+
+      @(posedge clk); 
+      pop_D1<=1;
+
+
+      @(posedge clk); 
+      pop_D1<=0;
+      data_in_principal<=6'b000000; 
       /*@(posedge clk);
       data_p0<='b101011; //C1 0B
       valid_p0<=1;
@@ -142,7 +184,7 @@ module probador (
       data_p1<='b100000; // 0
       valid_p1<=1;
 */
-      #100
+      #10
    $finish;
 end  
    

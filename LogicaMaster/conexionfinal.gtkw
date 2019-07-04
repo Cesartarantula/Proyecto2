@@ -1,0 +1,67 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Thu Jul  4 03:11:00 2019
+[*]
+[dumpfile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/LogicaMaster/PCIE_trans.vcd"
+[dumpfile_mtime] "Thu Jul  4 02:54:26 2019"
+[dumpfile_size] 142118
+[savefile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/LogicaMaster/conexionfinal.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] -165 -139
+*-34.468723 20400000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] testbench.
+[treeopen] testbench.transac1.
+[sst_width] 196
+[signals_width] 206
+[sst_expanded] 1
+[sst_vpaned_height] 155
+@200
+-Probador
+@22
+testbench.transac1.data_in_principal[5:0]
+@200
+-MainFifo
+@22
+testbench.transac1.MainFifo.Fifo_Data_in[5:0]
+@28
+testbench.transac1.MainFifo.push
+testbench.transac1.MainFifo.pop
+@22
+testbench.transac1.MainFifo.Fifo_Data_out[5:0]
+@200
+-Memoria
+@22
+testbench.transac1.MainFifo.memoria.iDataIn[5:0]
+@28
+testbench.transac1.MainFifo.memoria.iReadEnable
+testbench.transac1.MainFifo.memoria.iReadAddress[1:0]
+testbench.transac1.MainFifo.memoria.iWriteEnable
+testbench.transac1.MainFifo.memoria.iWriteAddress[1:0]
+@22
+testbench.transac1.MainFifo.memoria.oDataOut[5:0]
+@200
+-Demux1
+@22
+testbench.transac1.demux1.data_in[5:0]
+@28
+testbench.transac1.demux1.valid_in
+testbench.transac1.demux1.selectorL1
+@29
+testbench.transac1.demux1.valid_0
+@22
+testbench.transac1.demux1.dataout0[5:0]
+@28
+testbench.transac1.demux1.valid_1
+@22
+testbench.transac1.demux1.dataout1[5:0]
+@200
+-VC0Fifo
+@22
+testbench.transac1.VC0Fifo.Fifo_Data_in[5:0]
+testbench.transac1.VC0Fifo.memoria.iDataIn[5:0]
+@28
+testbench.transac1.VC0Fifo.pop
+testbench.transac1.VC0Fifo.push
+[pattern_trace] 1
+[pattern_trace] 0
