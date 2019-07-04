@@ -19,8 +19,8 @@ module probador (
  input idle_out, 
  input error_out,
 
- input [3:0] data_out0,
- input [3:0] data_out1					
+ input [5:0] data_out0,
+ input [5:0] data_out1					
 );
    
    // Probador
@@ -38,7 +38,7 @@ module probador (
       data_in_principal<=6'b011011; // 0 1 B
       push<=1;
       
-      data_p1<=6'b001101; // 0 0 D
+      data_in_principal<=6'b001101; // 0 0 D
       push<=1;
       
    @(posedge clk); /// 2
