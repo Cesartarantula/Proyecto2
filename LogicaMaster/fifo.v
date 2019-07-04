@@ -1,7 +1,7 @@
 `include "dual_port_memory.v"
 
 //Definicion del fifo de 6 bit
-module fifo # ( parameter N=2 , parameter F_ADDR_WIDTH=4) // ( parameter N=4 , parameter F_ADDR_WIDTH=16) //
+module fifo # ( parameter N=4 , parameter F_ADDR_WIDTH=16) // ( parameter N=4 , parameter ADDR_WIDTH=16) //
 (
     //Entradas
     input wire clk,			//viene del probador
@@ -122,6 +122,27 @@ always @(posedge clk) begin
                 Fifo_Full <= 0; 
                 Fifo_Empty <= 0;
             end
+            else if(num_mem == 13) begin
+                Pausa <= 1;
+                Almost_Full <= 1; 
+                Almost_Empty <= 0; 
+                Fifo_Full <= 0; 
+                Fifo_Empty <= 0;
+            end
+            else if(num_mem == 14) begin
+                Pausa <= 1;
+                Almost_Full <= 1; 
+                Almost_Empty <= 0; 
+                Fifo_Full <= 0; 
+                Fifo_Empty <= 0;
+            end
+            else if(num_mem == 15) begin
+                Pausa <= 1;
+                Almost_Full <= 1; 
+                Almost_Empty <= 0; 
+                Fifo_Full <= 0; 
+                Fifo_Empty <= 0;
+            end
             else if (num_mem == 16) begin
                 Fifo_Empty <= 0;
                 Pausa <= 1;
@@ -199,7 +220,7 @@ always @(posedge clk) begin
         if (num_mem == 17)begin
             Error_Fifo <= 1; 
         end else
-        if (Almost_Empty == 1 && pop == 1 && push == 0) begin 
+        if (pop == 1 && num_mem == 0) begin 
             Error_Fifo <= 1;
         end
         else begin

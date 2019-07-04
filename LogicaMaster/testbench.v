@@ -74,7 +74,7 @@ module testbench();
 		      .push	(push),
 		      .pop_D0		(pop_D0),
 		      .pop_D1		(pop_D1),
-		      .umbralB		(umbralB),
+		      //.umbral		(umbral),
 		      // Inputs Cond
 		      .active_out	(active_out),
 		      .error_out	(error_out),

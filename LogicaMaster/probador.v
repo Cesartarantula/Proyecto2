@@ -25,7 +25,7 @@ module probador (
    
    // Probador
    initial begin
-   $dumpfile("pcie.vcd");
+   $dumpfile("PCIE_trans.vcd");
 	$dumpvars();
    @(posedge clk);
       init <=1;
