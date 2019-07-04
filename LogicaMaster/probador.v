@@ -3,37 +3,25 @@ module probador (
  output reg clk,
  output reg reset_L,
  output reg init,
- output reg [3:0] data_p0,
 
- output reg [1:0] umbralMF,
- output reg [1:0] umbralD0,
- output reg [1:0] umbralD1,
- output reg [3:0] umbralVC0,
- output reg [3:0] umbralVC1, 
+ //output reg [1:0] umbralMF,
+ //output reg [1:0] umbralD0,
+ //output reg [1:0] umbralD1,
+ //output reg [3:0] umbralVC0,
+ //output reg [3:0] umbralVC1, 
 
- input [3:0] out_p1,
- input [3:0] out_p0, 
- 
- input pause_VC0P0,
- input pause_VC1P1,
-		   
- input [3:0] out_p1E,
- input [3:0] out_p0E, 
- 
- input pause_VC0P0E,
- input pause_VC1P1E,
+ output reg [5:0] data_in_principal,
+ output reg push,
+ output reg pop_D0,
+ output reg pop_D1,
 
  input active_out,
- input idle_out,
+ input idle_out, 
  input error_out,
- input [7:0] umbrales_VCFC,
- 
- input activeE,
- input idleE,
- input errorE,
- input [7:0] umbrales_VCFCE					
+
+ input [3:0] data_out0,
+ input [3:0] data_out1					
 );
-   
    
    // Probador
    initial begin
@@ -43,77 +31,76 @@ module probador (
       init <=1;
       
    @(posedge clk);
-      reset<=0;
+      reset_L<=0;
         
    
    @(posedge clk); /// 1
-      data_p0<=6'b011011; // C0 1B
-      valid_p0<=1;
+      data_in_principal<=6'b011011; // 0 1 B
+      push<=1;
       
-      data_p1<='b001101; // C0 0D
-      valid_p1<=1;
+      data_p1<=6'b001101; // 0 0 D
+      push<=1;
       
-      
-   
    @(posedge clk); /// 2
-      data_p0<='b000011; // C0 03
-      valid_p0<=1;
+      data_in_principal<=6'b000011; // 0 0 3
+      push<=1;
       
-      data_p1<='b010001;// C0 11
-      valid_p1<=1;
-
+      data_in_principal<=6'b010001;// 0 1 1
+      push<=1;
 
      @(posedge clk);/// 3 
-      data_p0<='b011010; // C0 1A
-      valid_p0<=1;
+      data_in_principal<=6'b011010; // 0 1 A
+      push<=1;
       
-      data_p1<='b001100;// C0 0C
-      valid_p1<=1;
+      data_in_principal<=6'b001100;// 0 0 C
+      push<=1;
 
-      
       @(posedge clk); //4 
-      data_p0<='b001001; // C0 09
-      valid_p0<=1;
+      data_in_principal<=6'b001001; // 0 0 9
+      push<=1;
       
-      data_p1<='b011001;// C0 19
-      valid_p1<=1;
+      data_in_principal<=6'b011001;// 0 1 9
+      push<=1;
       
       @(posedge clk); //5
-      data_p0<='b011011; //C0 1B
-      valid_p0<=1;
+      data_in_principal<=6'b111011; // 1 1 B
+      push<=1;
       
-      data_p1<='b001101; // C0 0D
-      valid_p1<=1;
+      data_in_principal<=6'b111101; // 1 1 D
+      push<=1;
 
       @(posedge clk); // 6
-      data_p0<='b011111; //C0 1F
-      valid_p0<=1;
-      
-      data_p1<='b001111; // C0 0F
-      valid_p1<=1;
-
-       @(posedge clk);
-
-     // data_p0<='b010111; //C0 17
-     // valid_p0<=1;
-      
-     // data_p1<='b000111; // C0 07
-     // valid_p1<=1;
+      data_in_principal<=6'b011111; // 0 1 F
+      push<=1;
 
       /////////////////////////////////////////////////
-      
+      //4 POP a D0
       @(posedge clk); 
-      data_p0<='b111001; // C1 19
-      valid_p0<=0;
-      
-      data_p1<='b101101;// C1 0D
-      valid_p1<=1;
+      pop_D0<=1; 
 
-      repeat(7)begin
       @(posedge clk); 
-      end
+      pop_D0<=1;
+
+      @(posedge clk); 
+      pop_D0<=1;
+
+      @(posedge clk); 
+      pop_D0<=1;
+
+      //4 POP a D1
+      @(posedge clk); 
+      pop_D1<=1; 
+
+      @(posedge clk); 
+      pop_D1<=1;
+
+      @(posedge clk); 
+      pop_D1<=1;
+
+      @(posedge clk); 
+      pop_D0<=1;
       
-      @(posedge clk);
+      /*@(posedge clk);
       data_p0<='b101011; //C1 0B
       valid_p0<=1;
       
@@ -154,21 +141,21 @@ module probador (
       
       data_p1<='b100000; // 0
       valid_p1<=1;
-
+*/
       #100
    $finish;
 end  
    
    initial clk <= 0;
-   initial reset<=1;
-   initial valid_p0<=0;
-   initial valid_p1<=0;
-   initial data_p0<=0;
-   initial data_p1<=0;
-   initial umbralA<=4'd6;
-   initial umbralB<=4'd3;
+   initial reset_L<=1;
    initial init <=0 ;
-   
+   initial pop_D0<=0;
+   initial pop_D1<=0;
+   initial push<=0;
+   initial data_in_principal<=0;
+   //initial umbralA<=4'd6;
+   //initial umbralB<=4'd3;
+
    always #1 clk <= ~clk;
    
 
