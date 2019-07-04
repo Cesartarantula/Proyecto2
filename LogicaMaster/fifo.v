@@ -27,6 +27,7 @@ module fifo # ( parameter N=2 , parameter ADDR_WIDTH=4) // ( parameter N=4 , par
     reg [N-1:0] wr_ptr, rd_ptr;  // dirección de escribir,  // dirección de lectura
     reg [N:0] num_mem;  // contador de control
 
+
 dual_port_memory  #(.DATA_WIDTH(6), .ADDR_WIDTH(2), .MEM_SIZE(3)) memoria
 (/*AUTOINST*/
 	       // Outputs
@@ -49,7 +50,7 @@ always @(posedge clk) begin
 		Almost_Full<=0;
 		Error_Fifo<=0;
 		Pausa <= 0;
-		num_mem<= 0;
+		
     	end
         else if (num_mem == 0) begin
 	    Fifo_Empty <= 1;
@@ -65,24 +66,33 @@ always @(posedge clk) begin
 	    Fifo_Empty <= 0;
 	    Almost_Full <= 0; 
         end
-	else if(num_mem == 2) begin
+	else if(num_mem == 3) begin
             Pausa <= 1;
-	    Almost_Full <= 0; 
+	    Almost_Full <= 1; 
 	    Almost_Empty <= 0; 
             Fifo_Full <= 0; 
 	    Fifo_Empty <= 0;
         end
-        else if (num_mem == 3) begin
+        else if (num_mem == 4) begin
             Fifo_Empty <= 0;
-            Fifo_Full  <= 0;
-            Almost_Full <= 1;
+            Pausa <= 1;
+            Fifo_Full  <= 1;
+            Almost_Full <= 0;
+            Almost_Empty <= 0;
+            end
+        else if (num_mem == 5) begin
+            Fifo_Empty <= 0;
+            Pausa <= 1;
+            Fifo_Full  <= 1;
+            Almost_Full <= 0;
             Almost_Empty <= 0;
             end
         else begin
             Fifo_Empty <= 0;
-            Fifo_Full  <= 1;
+            Fifo_Full  <= 0;
             Almost_Full <= 0; 
-            Almost_Empty <= 0; 
+            Almost_Empty <= 0;
+            Pausa <= 0;
         end
 end
 //Envia la orden de escritura/lectura a la memoria
@@ -93,20 +103,24 @@ always @(posedge clk) begin
 if (!reset_L) begin
 wr_ptr<=0;
 rd_ptr<=0;
+num_mem<= 0;
 end
- else       if (push && !Error_Fifo) 
+ else       if (push) 
         begin
 	    num_mem<=num_mem+1;
 	    wr_ptr<= wr_ptr+1;
         end 
-   else     if (pop && !Error_Fifo) 
-        begin
-	    num_mem<=num_mem-1;
-	    rd_ptr<= rd_ptr+1;
+   else     if (pop) begin
+                rd_ptr<= rd_ptr+1;
+                if (num_mem == 0) begin
+                    num_mem<=num_mem;
+                end else begin
+                    num_mem<=num_mem-1;
+                end
         end
         if ((push) && (pop)) 
         begin
-		num_mem=num_mem;
+		num_mem<=num_mem;
 		wr_ptr<= wr_ptr+1;
 		rd_ptr<= rd_ptr+1;
         end
@@ -114,8 +128,14 @@ end
 
 //Determina si ocurrio un error.
 always @(posedge clk) begin
-        if (Fifo_Full == 1 && push == 1) Error_Fifo <= 1;
-	if (Fifo_Empty == 1 && pop == 1) Error_Fifo <= 1;
-        else Error_Fifo <= 0;
+    if (num_mem == 5)begin
+        Error_Fifo <= 1; 
+    end else
+	if (Fifo_Empty == 1 && pop == 1) begin 
+        Error_Fifo <= 1;
+    end
+    else begin
+        Error_Fifo <= 0;
+    end
 end
 endmodule
