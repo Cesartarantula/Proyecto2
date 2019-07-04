@@ -122,6 +122,27 @@ always @(posedge clk) begin
                 Fifo_Full <= 0; 
                 Fifo_Empty <= 0;
             end
+            else if(num_mem == 13) begin
+                Pausa <= 1;
+                Almost_Full <= 1; 
+                Almost_Empty <= 0; 
+                Fifo_Full <= 0; 
+                Fifo_Empty <= 0;
+            end
+            else if(num_mem == 14) begin
+                Pausa <= 1;
+                Almost_Full <= 1; 
+                Almost_Empty <= 0; 
+                Fifo_Full <= 0; 
+                Fifo_Empty <= 0;
+            end
+            else if(num_mem == 15) begin
+                Pausa <= 1;
+                Almost_Full <= 1; 
+                Almost_Empty <= 0; 
+                Fifo_Full <= 0; 
+                Fifo_Empty <= 0;
+            end
             else if (num_mem == 16) begin
                 Fifo_Empty <= 0;
                 Pausa <= 1;
@@ -199,7 +220,7 @@ always @(posedge clk) begin
         if (num_mem == 17)begin
             Error_Fifo <= 1; 
         end else
-        if (Almost_Empty == 1 && pop == 1 && push == 0) begin 
+        if (pop == 1 && num_mem == 0) begin 
             Error_Fifo <= 1;
         end
         else begin

@@ -18,7 +18,7 @@ module probador(
 	$dumpvars();
    @(posedge clk);
    #2 reset_L<=1;
-   //////////////////////////// First full push N = 2
+   //////////////////////////// First full push N = 4
    
    @(posedge clk);
       Fifo_Data_in<= 6'h11;
@@ -35,6 +35,54 @@ module probador(
    @(posedge clk); 
       push <= 1;	
       Fifo_Data_in <= 6'h1C;
+      
+    @(posedge clk); 
+      push <= 1;	
+      Fifo_Data_in <= 6'h1A;
+      
+    @(posedge clk); 
+      push <= 1;	
+      Fifo_Data_in <= 6'h1B;
+    
+    @(posedge clk); 
+      push <= 1;	
+      Fifo_Data_in <= 6'h1D;
+      
+    @(posedge clk); 
+      push <= 1;	
+      Fifo_Data_in <= 6'h1E;
+      
+    @(posedge clk); 
+      push <= 1;	
+      Fifo_Data_in <= 6'h1F;
+      
+    @(posedge clk); 
+      push <= 1;	
+      Fifo_Data_in <= 6'h12;
+      
+    @(posedge clk); 
+      push <= 1;	
+      Fifo_Data_in <= 6'h13;
+      
+    @(posedge clk); 
+      push <= 1;	
+      Fifo_Data_in <= 6'h14;
+      
+    @(posedge clk); 
+      push <= 1;	
+      Fifo_Data_in <= 6'h15;
+      
+    @(posedge clk); 
+      push <= 1;	
+      Fifo_Data_in <= 6'h17;
+      
+    @(posedge clk); 
+      push <= 1;	
+      Fifo_Data_in <= 6'h18;
+      
+    @(posedge clk); 
+      push <= 1;	
+      Fifo_Data_in <= 6'h19;
 
       @(posedge clk); 
       push <=0;
@@ -46,14 +94,62 @@ module probador(
  
       @(posedge clk);
       push <=0;
-      pop <= 1;     
+      pop <= 1;   
+      
+      @(posedge clk);
+      push <=0;
+      pop <= 1;
+      
+      @(posedge clk);
+      push <=0;
+      pop <= 1;
+      
+      @(posedge clk);
+      push <=0;
+      pop <= 1;
+      
+      @(posedge clk);
+      push <=0;
+      pop <= 1;
+      
+      @(posedge clk);
+      push <=0;
+      pop <= 1;
+      
+      @(posedge clk);
+      push <=0;
+      pop <= 1;
+      
+      @(posedge clk);
+      push <=0;
+      pop <= 1;
+      
+      @(posedge clk);
+      push <=0;
+      pop <= 1;
+      
+      @(posedge clk);
+      push <=0;
+      pop <= 1;
+      
+      @(posedge clk);
+      push <=0;
+      pop <= 1;
+      
+      @(posedge clk);
+      push <=0;
+      pop <= 1;
+      
+      @(posedge clk);
+      push <=0;
+      pop <= 1;
     
       @(posedge clk);
       push <=0;
       pop <= 0;
       Fifo_Data_in <= 6'h1D;
       
-      //second test  push and pop at same time N = 2
+      //second test  push and pop at same time N = 4
       
       @(posedge clk);
       push <= 1;
@@ -84,29 +180,77 @@ module probador(
       pop <= 0;
       Fifo_Data_in <= 6'h1F;
       
-      //thrid test Fifo errors N = 2
+      //thrid test Fifo errors N = 4
       
-      @(posedge clk);
+       @(posedge clk);
       Fifo_Data_in<= 6'h11;
       push <= 1;
    
-      @(posedge clk); 
+   @(posedge clk); 
       push <= 1;	
       Fifo_Data_in <= 6'h16;
 
-      @(posedge clk); 
+   @(posedge clk); 
       push <= 1;	
       Fifo_Data_in <= 6'h30;
 
-      @(posedge clk); 
+   @(posedge clk); 
       push <= 1;	
       Fifo_Data_in <= 6'h1C;
       
-      @(posedge clk); 
+    @(posedge clk); 
+      push <= 1;	
+      Fifo_Data_in <= 6'h1A;
+      
+    @(posedge clk); 
+      push <= 1;	
+      Fifo_Data_in <= 6'h1B;
+    
+    @(posedge clk); 
+      push <= 1;	
+      Fifo_Data_in <= 6'h1D;
+      
+    @(posedge clk); 
       push <= 1;	
       Fifo_Data_in <= 6'h1E;
       
-      @(posedge clk); 
+    @(posedge clk); 
+      push <= 1;	
+      Fifo_Data_in <= 6'h1F;
+      
+    @(posedge clk); 
+      push <= 1;	
+      Fifo_Data_in <= 6'h12;
+      
+    @(posedge clk); 
+      push <= 1;	
+      Fifo_Data_in <= 6'h13;
+      
+    @(posedge clk); 
+      push <= 1;	
+      Fifo_Data_in <= 6'h14;
+      
+    @(posedge clk); 
+      push <= 1;	
+      Fifo_Data_in <= 6'h15;
+      
+    @(posedge clk); 
+      push <= 1;	
+      Fifo_Data_in <= 6'h17;
+      
+    @(posedge clk); 
+      push <= 1;	
+      Fifo_Data_in <= 6'h18;
+      
+    @(posedge clk); 
+      push <= 1;	
+      Fifo_Data_in <= 6'h19;
+      
+    @(posedge clk); 
+      push <= 1;	
+      Fifo_Data_in <= 6'h01;
+    
+     @(posedge clk); 
       push <=0;
       pop <= 1; 
 
@@ -120,19 +264,67 @@ module probador(
       
       @(posedge clk);
       push <=0;
-      pop <= 1;  
+      pop <= 1;
       
       @(posedge clk);
       push <=0;
-      pop <= 1; 
+      pop <= 1;
       
       @(posedge clk);
       push <=0;
-      pop <= 1;   
+      pop <= 1;
       
       @(posedge clk);
       push <=0;
-      pop <= 0;  
+      pop <= 1;
+      
+      @(posedge clk);
+      push <=0;
+      pop <= 1;
+      
+      @(posedge clk);
+      push <=0;
+      pop <= 1;
+      
+      @(posedge clk);
+      push <=0;
+      pop <= 1;
+      
+      @(posedge clk);
+      push <=0;
+      pop <= 1;
+      
+      @(posedge clk);
+      push <=0;
+      pop <= 1;
+      
+      @(posedge clk);
+      push <=0;
+      pop <= 1;
+      
+      @(posedge clk);
+      push <=0;
+      pop <= 1;
+      
+      @(posedge clk);
+      push <=0;
+      pop <= 1;
+      
+      @(posedge clk);
+      push <=0;
+      pop <= 1;
+      
+      @(posedge clk);
+      push <=0;
+      pop <= 1;
+      
+      @(posedge clk);
+      push <=0;
+      pop <= 1;
+      
+      @(posedge clk);
+      push <=0;
+      pop <= 0; 
     
       #10
    $finish;
