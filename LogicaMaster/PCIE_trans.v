@@ -1,6 +1,5 @@
 `include"fifo.v"
 `include"fsmControl.v"
-//`include"arbitro.v"
 `include"mux.v"
 `include"Demux_D0_D1.v"
 `include"demux.v"
@@ -29,6 +28,8 @@ wire [5:0] Fifo_Data_out_MF, data_in_VC0, dataout_VCs, data_in_D0, data_in_D1;
 wire Almost_Empty_D1, Almost_Full_D1, Pausa_D1 , Fifo_Empty_D1, Fifo_Full_D1, Error_Fifo_D1;
 wire Almost_Empty_D0, Almost_Full_D0, Pausa_D0 , Fifo_Empty_D0, Fifo_Full_D0, Error_Fifo_D0;
 wire [13:0] umbrales_I;
+
+reg pop;
 
 
 fifo #(.N(2), .ADDR_WIDTH(4)) MainFifo (.clk(clk),
@@ -127,100 +128,28 @@ fsm_Control fsm_Control1 (.clk(clk),
                           .reset_L(reset_L),
                           .init(init),
              	          .umbral_MF(Almost_Empty_MF), 	
-	     		          .umbral_VC0(umbrales_I[11:8]),	
-                          .umbral_VC1(umbrales_I[7:4]), 	
-	                      .umbral_D0(umbrales_I[3:2]), 	
-                          .umbral_D1(umbrales_I[1:0]),
+	     		          .umbral_VC0(umbral_VC0),	
+                          .umbral_VC1(umbral_VC1), 	
+	                      .umbral_D0(umbral_D0), 	
+                          .umbral_D1(umbral_D1),
 						  .FIFO_error(FIFO_error),
 						  .FIFO_empty(FIFO_empty),
+						  .umbrales_I(umbrales_I),
 						  .active_out(active_out),
                           .idle_out(idle_out),
 						  .error_out(error_out));
 
-   always @(posedge clk) begin
-
-		if (reset) begin
-		   data_VC0P0 <= 0;
-		   push_VC0P0 <=0;
-      
-		   data_VC1P1<= 0;
-		   push_VC1P1 <=0;
-
-		   valid_VC0P0<=0;
-		   valid_VC1P1<=0;
-		   
+always@(posedge clk) begin
+	if(!Pausa_VC0 || !Pausa_VC1)begin
+		if(Fifo_Empty_MF) begin
+		pop<=1;
 		end
-   end // always @ (posedge clk)
+		else begin
+		pop<=0;
+		end
+	end
+end
 
-   arbitro arbitro1(/*AUTOINST*/
-		    // Outputs
-		    .popVC0_0		(pop_VC0P0),
-		    .popVC1_1		(pop_VC1P1),
-		    .dataOut_0		(out_p0[4:0]),
-		    .dataOut_1		(out_p1[4:0]),
-		    // Inputs
-		    .clk		(clk),
-		    .reset_L		(reset),
-		    .VC0_p0		(ofifo_VC0P0),
-		    .VC1_p1		(ofifo_VC1P1),
-		    .validBits		({oValid_VC0P0,oValid_VC1P1}),//Definir a dos bits
-		    .emptyVC0_p0	(empty_VC0P0),
-		    .emptyVC1_p1	(empty_VC1P1));
-   
-   // End of automatics
-   FIFO_mod fifo_VC0P0 (
-		    // Outputs
-		    .pause		(pause_VC0P0),
-		    .continua		(continue_VC0P0),
-		    .empty		(empty_VC0P0),
-		    .fifo_error		(fifoerr_VC0P0),
-		    .valid_out		(oValid_VC0P0),
-		    .data_out		(ofifo_VC0P0),
-		    // Inputs
-		    .clk		(clk),
-		    .reset		(reset),
-		    .pop		(pop_VC0P0),
-		    .push		(push_VC0P0),
-		    .valid		(valid_VC0P0),
-		    .data_in		(data_VC0P0),
-		    .umbralA		(umbrales_VCFC[7:4]),
-		    .umbralB		(umbrales_VCFC[3:0]));
-   
-    
-   wire intermediate2 = !empty_VC1P1 && pop_VC1P1;
-   FIFO_mod fifo_VC1P1 (
-		    // Outputs
-		     .pause		(pause_VC1P1),
-		    .continua		(continue_VC1P1),
-		    .empty		(empty_VC1P1),
-		    .fifo_error		(fifoerr_VC1P1),
-		    .valid_out		(oValid_VC1P1),
-		    .data_out		(ofifo_VC1P1),
-		    // Inputs
-		    .clk		(clk),
-		    .reset		(reset),
-		    .pop		(intermediate2),
-		    .push		(push_VC1P1),
-		    .valid		(valid_VC1P1),
-		    .data_in		(data_VC1P1),
-		    .umbralA		(umbrales_VCFC[7:4]),
-		    .umbralB		(umbrales_VCFC[3:0]));
+endmodule
 
-   wire FIFO_error = fifoerr_VC0P0 ||  fifoerr_VC1P1 ;
-   wire FIFO_empty = empty_VC0P0 &&  empty_VC1P1 ;
-   
-   fsmControl fsm(
-		  // Outputs
-		  .umbrales_VCFC	(umbrales_VCFC),
-		  .active		(active),
-		  .idle			(idle),
-		  .error		(error),
-		  // Inputs
-		  .clk			(clk),
-		  .reset_L		(reset),
-		  .init			(init),
-		  .umbral_VCFC		({umbralA,umbralB}),
-		  .FIFO_error		(FIFO_error),
-		  .FIFO_empty		(FIFO_empty));
-   
-   endmodule
+
