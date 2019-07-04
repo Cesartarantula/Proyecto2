@@ -113,7 +113,6 @@ end
  else       if (push) begin
                 if (num_mem == 4) begin
                     num_mem<=num_mem+1;
-                    wr_ptr<= wr_ptr+1;
                 end else begin
                     num_mem<=num_mem+1;
                     wr_ptr<= wr_ptr+1;
@@ -143,7 +142,7 @@ always @(posedge clk) begin
     if (num_mem == 5)begin
         Error_Fifo <= 1; 
     end else
-	if (Almost_Empty == 1 && pop == 1) begin 
+	if (Almost_Empty == 1 && pop == 1 && push == 0) begin 
         Error_Fifo <= 1;
     end
     else begin
