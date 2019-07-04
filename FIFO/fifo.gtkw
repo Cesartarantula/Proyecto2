@@ -1,15 +1,15 @@
 [*]
 [*] GTKWave Analyzer v3.3.98 (w)1999-2019 BSI
-[*] Wed Jul  3 23:35:42 2019
+[*] Thu Jul  4 00:24:20 2019
 [*]
 [dumpfile] "/home/amazrtinezr/Documentos/Digitales/Digitales2/CursoI2019/Proyecto2/Proyecto2/FIFO/fifo.vcd"
-[dumpfile_mtime] "Wed Jul  3 23:35:31 2019"
-[dumpfile_size] 53262
+[dumpfile_mtime] "Thu Jul  4 00:23:04 2019"
+[dumpfile_size] 57361
 [savefile] "/home/amazrtinezr/Documentos/Digitales/Digitales2/CursoI2019/Proyecto2/Proyecto2/FIFO/fifo.gtkw"
-[timestart] 18990000000
+[timestart] 0
 [size] 1366 704
 [pos] -1 -1
-*-33.073395 32860000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-33.073395 44110000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] testbench.
 [treeopen] testbench.fifo1.
 [sst_width] 228
@@ -18,24 +18,25 @@
 [sst_vpaned_height] 208
 @200
 -FIFO Cond
-@28
+@29
 testbench.fifo1.clk
+@28
 testbench.fifo1.reset_L
 testbench.fifo1.push
 testbench.fifo1.pop
 testbench.fifo1.num_mem[2:0]
-@23
-testbench.fifo1.Fifo_Data_in[5:0]
 @22
+testbench.fifo1.Fifo_Data_in[5:0]
 testbench.fifo1.Fifo_Data_out[5:0]
 @28
 testbench.fifo1.Pausa
 testbench.fifo1.Fifo_Empty
-testbench.fifo1.Fifo_Full
-testbench.fifo1.Pausa
 testbench.fifo1.Almost_Empty
 testbench.fifo1.Almost_Full
+testbench.fifo1.Fifo_Full
 testbench.fifo1.Error_Fifo
+testbench.fifo1.umbralA[2:0]
+testbench.fifo1.umbralB[2:0]
 @200
 -Memoria
 @28
@@ -54,13 +55,16 @@ testbench.fifo1.memoria.oDataOut[5:0]
 @22
 testbench.fifo1Synth.Fifo_Data_in[5:0]
 @28
+testbench.fifo1Synth.Pausa
 testbench.fifo1Synth.Fifo_Empty
 testbench.fifo1Synth.Almost_Empty
 testbench.fifo1Synth.Almost_Full
 testbench.fifo1Synth.Fifo_Full
 testbench.fifo1Synth.Error_Fifo
-testbench.fifo1Synth.Pausa
 @22
 testbench.fifo1Synth.Fifo_Data_out[5:0]
+@28
+testbench.fifo1Synth.umbralA[2:0]
+testbench.fifo1Synth.umbralB[2:0]
 [pattern_trace] 1
 [pattern_trace] 0

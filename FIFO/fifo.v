@@ -16,6 +16,8 @@ module fifo # ( parameter N=2 , parameter ADDR_WIDTH=4) // ( parameter N=4 , par
    //Salidas de Control
     output reg Almost_Empty,	//Indica el valor del umbralA
     output reg Almost_Full,	//Indica el valor del umbralB
+    output reg [N:0] umbralA,     //Aqui se guarda el valor de umbralA
+    output reg [N:0] umbralB,     //Aqui se guarda el valor de umbralB
     output reg Pausa,
     output reg Fifo_Empty, 	//Indica si el FIFO esta vacio
     output reg Fifo_Full, 	//Indica si el FIFO esta lleno
@@ -48,8 +50,9 @@ always @(posedge clk) begin
 		Fifo_Full<=0;
 		Almost_Empty<=0;
 		Almost_Full<=0;
-		Error_Fifo<=0;
 		Pausa <= 0;
+		umbralA <= 0;
+		umbralB <= 0;
 		
     	end
         else if (num_mem == 0) begin
@@ -61,17 +64,19 @@ always @(posedge clk) begin
         end
 	else if (num_mem == 1) begin
             Almost_Empty <= 1; 
-	    Pausa <= 0;
-	    Fifo_Full <= 0; 
-	    Fifo_Empty <= 0;
-	    Almost_Full <= 0; 
+            umbralA <= num_mem;
+            Pausa <= 0;
+            Fifo_Full <= 0; 
+            Fifo_Empty <= 0;
+            Almost_Full <= 0; 
         end
 	else if(num_mem == 3) begin
             Pausa <= 1;
-	    Almost_Full <= 1; 
-	    Almost_Empty <= 0; 
+            Almost_Full <= 1; 
+            umbralB <= num_mem;
+            Almost_Empty <= 0; 
             Fifo_Full <= 0; 
-	    Fifo_Empty <= 0;
+            Fifo_Empty <= 0;
         end
         else if (num_mem == 4) begin
             Fifo_Empty <= 0;
@@ -105,17 +110,21 @@ wr_ptr<=0;
 rd_ptr<=0;
 num_mem<= 0;
 end
- else       if (push) 
-        begin
-	    num_mem<=num_mem+1;
-	    wr_ptr<= wr_ptr+1;
+ else       if (push) begin
+                if (num_mem == 4) begin
+                    num_mem<=num_mem+1;
+                    wr_ptr<= wr_ptr+1;
+                end else begin
+                    num_mem<=num_mem+1;
+                    wr_ptr<= wr_ptr+1;
+                end
         end 
    else     if (pop) begin
-                rd_ptr<= rd_ptr+1;
                 if (num_mem == 0) begin
                     num_mem<=num_mem;
                 end else begin
                     num_mem<=num_mem-1;
+                    rd_ptr<= rd_ptr+1;
                 end
         end
         if ((push) && (pop)) 
@@ -128,10 +137,13 @@ end
 
 //Determina si ocurrio un error.
 always @(posedge clk) begin
+    if (!reset_L) begin
+		Error_Fifo<=0;
+    end else
     if (num_mem == 5)begin
         Error_Fifo <= 1; 
     end else
-	if (Fifo_Empty == 1 && pop == 1) begin 
+	if (Almost_Empty == 1 && pop == 1) begin 
         Error_Fifo <= 1;
     end
     else begin

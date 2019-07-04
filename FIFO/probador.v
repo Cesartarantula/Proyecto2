@@ -84,7 +84,7 @@ module probador(
       pop <= 0;
       Fifo_Data_in <= 6'h1F;
       
-      //thrid test error more data than space
+      //thrid test Fifo errors 
       
       @(posedge clk);
       Fifo_Data_in<= 6'h11;
@@ -116,7 +116,19 @@ module probador(
  
       @(posedge clk);
       push <=0;
-      pop <= 1;    
+      pop <= 1;   
+      
+      @(posedge clk);
+      push <=0;
+      pop <= 1;  
+      
+      @(posedge clk);
+      push <=0;
+      pop <= 1; 
+      
+      @(posedge clk);
+      push <=0;
+      pop <= 1;   
       
       @(posedge clk);
       push <=0;
