@@ -165,8 +165,8 @@ always@(posedge clk) begin
 	if(reset_L) begin
 	pop <= 0;
 	end
-	else if( !(Pausa_VC0 || Pausa_VC1) )begin
-		if(Fifo_Empty_MF) begin
+	else if(!Pausa_VC0 || !Pausa_VC0)begin
+		if(!Fifo_Empty_MF) begin
 		pop<=1;
 		end
 		else begin
