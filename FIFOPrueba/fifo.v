@@ -1,7 +1,7 @@
 `include "dual_port_memory.v"
 
 //Definicion del fifo de 6 bit
-module fifo # ( parameter N=4 , parameter ADDR_WIDTH=16) // ( parameter N=4 , parameter ADDR_WIDTH=16) //
+module fifo # ( parameter N=4, parameter M=2, parameter ADDR_WIDTH=16) // ( parameter N=4 , parameter ADDR_WIDTH=16) //
 (
     //Entradas
     input wire clk,			//viene del probador
@@ -26,7 +26,7 @@ module fifo # ( parameter N=4 , parameter ADDR_WIDTH=16) // ( parameter N=4 , pa
 
 //Registros Internos
     reg [N-1:0] wr_ptr, rd_ptr;  // dirección de escribir,  // dirección de lectura
-    reg [N:0] num_mem;  // contador de control
+    reg [M:0] num_mem;  // contador de control
 
 	reg push_int, pop_int;
 	reg [5:0] Fifo_Data_in_int;
@@ -69,7 +69,7 @@ always @(posedge clk) begin
 		Umbral <= 0;
     	end
 	else if (push) begin
-    		if (N == 2) begin
+    		if (M == 2) begin
         		if (num_mem == 0) begin
 	    			Almost_Empty <= 0; 
 	    			Almost_Full <= 0; 
@@ -110,7 +110,7 @@ always @(posedge clk) begin
             			Pausa <= 0;
 				Umbral <= num_mem;
         	end	end
-    	   	else if (N == 4) begin
+    	   	else if (M == 4) begin
        			if (num_mem == 0) begin
 	    			Almost_Empty <= 0; 
 	    			Almost_Full <= 0; 
@@ -178,7 +178,7 @@ always @(posedge clk) begin
         	end
 	end
 	else if (pop) begin
-    		if (N == 2) begin
+    		if (M == 2) begin
         		if (num_mem == 0) begin
 				//Error_Fifo  <= 1;
 	    			Almost_Empty <= 0; 
@@ -220,7 +220,7 @@ always @(posedge clk) begin
             			Pausa <= 0;
 				Umbral <= num_mem;
         	end	end
-    	   	else if (N == 4) begin
+    	   	else if (M == 4) begin
        			if (num_mem == 0) begin
 	    			Almost_Empty <= 0; 
 	    			Almost_Full <= 0; 
@@ -327,7 +327,7 @@ end
 
 //Determina si ocurrio un error.
 always @(posedge clk) begin
-    if (N == 2) begin
+    if (M == 2) begin
         if (num_mem == 5)begin
             Error_Fifo <= 1; 
         end else
@@ -338,7 +338,7 @@ always @(posedge clk) begin
             Error_Fifo <= 0;
         end
     end
-    else if (N == 4) begin
+    else if (M == 4) begin
         if (num_mem == 17)begin
             Error_Fifo <= 1; 
         end else
