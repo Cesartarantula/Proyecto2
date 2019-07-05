@@ -15,6 +15,7 @@ module probador (
  output reg pop_D0,
  output reg pop_D1,
 
+ input Pausa_MF, 
  input active_out,
  input idle_out, 
  input error_out,

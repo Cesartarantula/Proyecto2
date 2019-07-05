@@ -21,7 +21,8 @@ module PCIE_trans ( 	input clk,
 			output [5:0] data_out1,
 			output active_out,
 			output idle_out,
-			output error_out);
+			output error_out,
+			output Pausa_MF);
    
 wire Almost_Empty_MF, Almost_Full_MF, Pausa_MF, Fifo_Empty_MF, Fifo_Full_MF, Error_Fifo_MF;
 
@@ -164,13 +165,16 @@ always@(posedge clk) begin
 	if(reset_L) begin
 	pop <= 0;
 	end
-	if(!Pausa_VC0 || !Pausa_VC1)begin
+	else if( !(Pausa_VC0 || Pausa_VC1) )begin
 		if(Fifo_Empty_MF) begin
 		pop<=1;
 		end
 		else begin
 		pop<=0;
 		end
+	end
+	else begin
+	pop <=0;
 	end
 end
 
@@ -181,9 +185,9 @@ always@(posedge clk) begin
 	pop_vc0 <= 0;
 	end
 	else begin
-	pausaD0D1 <= Pausa_D0 ^ Pausa_D1;
-	pop_vc0 <= ~Fifo_Empty_VC0 & pausaD0D1; 
-	pop_vc1 <= ~Fifo_Empty_VC1 & pausaD0D1 & Fifo_Empty_VC0; 	
+	pausaD0D1 <= Pausa_D0 | Pausa_D1;
+	pop_vc0 <= ~Fifo_Empty_VC0 & ~pausaD0D1; 
+	pop_vc1 <= Fifo_Empty_VC0 & ~pausaD0D1 & ~Fifo_Empty_VC1; 	
 	end		
 end
 
