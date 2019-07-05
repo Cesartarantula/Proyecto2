@@ -28,17 +28,34 @@ module fifo # ( parameter N=4 , parameter ADDR_WIDTH=16) // ( parameter N=4 , pa
     reg [N-1:0] wr_ptr, rd_ptr;  // dirección de escribir,  // dirección de lectura
     reg [N:0] num_mem;  // contador de control
 
+	reg push_int, pop_int;
+	reg [5:0] Fifo_Data_in_int;
+
 dual_port_memory  #(.DATA_WIDTH(6), .ADDR_WIDTH(2), .MEM_SIZE(3)) memoria
 (/*AUTOINST*/
 	       // Outputs
 	       .oDataOut		(Fifo_Data_out),
 	       // Inputs
 	       .Clock			(clk),
-	       .iReadEnable		(pop),
-	       .iWriteEnable		(push), 
-	       .iDataIn			(Fifo_Data_in),
+	       .iReadEnable		(pop_int),
+	       .iWriteEnable		(push_int), 
+	       .iDataIn			(Fifo_Data_in_int),
 	       .iReadAddress		(rd_ptr),
 	       .iWriteAddress		(wr_ptr));
+
+always@(posedge clk) begin
+	if(!reset_L) begin
+	push_int <=0;
+	pop_int <=0;
+	Fifo_Data_in_int <=0;
+	end
+	else begin
+	push_int <=push;
+	pop_int <=pop;
+	Fifo_Data_in_int <=Fifo_Data_in;
+	end
+end
+
 
 //Aqui se determina si el fifo esta lleno o no
 always @(posedge clk) begin
