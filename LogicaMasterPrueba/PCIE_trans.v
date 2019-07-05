@@ -51,7 +51,7 @@ reg pop_vc1;
 fifo #(.N(2), .ADDR_WIDTH(4)) MainFifo (	.clk(clk),
 						.reset_L(reset_L),
 						.push(push),
-						.pop(pop_D0||pop_D1),//Modificacion
+						.pop(pop),//Modificacion
 						.Fifo_Data_in(data_in_principal),
 						.Fifo_Data_out(Fifo_Data_out_MF),
 						.Almost_Empty(Almost_Empty_MF),
@@ -64,7 +64,7 @@ fifo #(.N(2), .ADDR_WIDTH(4)) MainFifo (	.clk(clk),
 
 demux demux1 (		.clk(clk),
 			.reset_L(reset_L),
-			.valid_in(Fifo_Empty_VC0||Fifo_Empty_VC1),
+			.valid_in(pop),
 			.data_in(Fifo_Data_out_MF),
 			.dataout0(data_in_VC0),
 			.dataout1(data_in_VC1),
