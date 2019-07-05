@@ -1,7 +1,7 @@
 `include "dual_port_memory.v"
 
 //Definicion del fifo de 6 bit
-module fifo # ( parameter N=4 , parameter F_ADDR_WIDTH=16) // ( parameter N=4 , parameter ADDR_WIDTH=16) //
+module fifo # ( parameter N=4 , parameter ADDR_WIDTH=16) // ( parameter N=4 , parameter ADDR_WIDTH=16) //
 (
     //Entradas
     input wire clk,			//viene del probador
@@ -14,9 +14,9 @@ module fifo # ( parameter N=4 , parameter F_ADDR_WIDTH=16) // ( parameter N=4 , 
     output [5:0] Fifo_Data_out,		//Salida de datos
 
    //Salidas de Control
-    output reg Almost_Empty,	//Indica el valor del umbralA
-    output reg Almost_Full,	//Indica el valor del umbralB
-    output reg [N:0] umbral,     //Aqui se guarda el valor de umbral
+    output reg Almost_Empty,	//Indica el valor del UmbralA
+    output reg Almost_Full,	//Indica el valor del UmbralB
+    output reg [N:0] Umbral,     //Aqui se guarda el valor de Umbral
     output reg Pausa,
     output reg Fifo_Empty, 	//Indica si el FIFO esta vacio
     output reg Fifo_Full, 	//Indica si el FIFO esta lleno
@@ -50,7 +50,7 @@ always @(posedge clk) begin
 		Almost_Empty<=0;
 		Almost_Full<=0;
 		Pausa <= 0;
-		umbral <= 0;
+		Umbral <= 0;
     	end
     else if (N == 2) begin
         if (num_mem == 0) begin
@@ -62,7 +62,7 @@ always @(posedge clk) begin
         end
 	else if (num_mem == 1) begin
             Almost_Empty <= 1; 
-            umbral <= num_mem;
+            Umbral <= num_mem;
             Pausa <= 0;
             Fifo_Full <= 0; 
             Fifo_Empty <= 0;
@@ -71,7 +71,7 @@ always @(posedge clk) begin
 	else if(num_mem == 3) begin
             Pausa <= 1;
             Almost_Full <= 1; 
-            umbral <= num_mem;
+            Umbral <= num_mem;
             Almost_Empty <= 0; 
             Fifo_Full <= 0; 
             Fifo_Empty <= 0;
@@ -108,7 +108,7 @@ always @(posedge clk) begin
         	end
         	else if (num_mem == 4) begin
                 Almost_Empty <= 1; 
-                umbral <= num_mem;
+                Umbral <= num_mem;
                 Pausa <= 0;
                 Fifo_Full <= 0; 
                 Fifo_Empty <= 0;
@@ -117,7 +117,7 @@ always @(posedge clk) begin
             else if(num_mem == 12) begin
                 Pausa <= 1;
                 Almost_Full <= 1; 
-                umbral <= num_mem;
+                Umbral <= num_mem;
                 Almost_Empty <= 0; 
                 Fifo_Full <= 0; 
                 Fifo_Empty <= 0;
@@ -171,22 +171,24 @@ end
 //y en esa posición se escribe un 0 para indicar que se encuentra libre para ser utilizada cuando 
 //se realice un pop
 always @(posedge clk) begin
-if (!reset_L) begin
-wr_ptr<=0;
-rd_ptr<=0;
-num_mem<= 0;
-end
- else       if (push) begin
+	if (!reset_L) begin
+	wr_ptr<=0;
+	rd_ptr<=0;
+	num_mem<= 0;
+	end
+ 	else if (push) begin
                 if (num_mem == 4) begin
-                    num_mem<=num_mem+1;
+			   Error_Fifo <= 1;
+                    	   num_mem=num_mem;
                 end else begin
                     num_mem<=num_mem+1;
                     wr_ptr<= wr_ptr+1;
                 end
         end 
-   else     if (pop) begin
+   	else if (pop) begin
                 if (num_mem == 0) begin
-                    num_mem<=num_mem;
+			Error_Fifo <= 1;
+                    	num_mem<=num_mem;
                 end else begin
                     num_mem<=num_mem-1;
                     rd_ptr<= rd_ptr+1;

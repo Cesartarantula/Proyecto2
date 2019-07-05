@@ -26,7 +26,7 @@ always @(*) begin
 	selectorL1 <=0;
 	end
 	else begin
-	selectorL1 <= data_in[5];
+	selectorL1 <=data_in [5];
 	end
 end
 

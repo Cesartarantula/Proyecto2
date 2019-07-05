@@ -505,6 +505,6 @@ Removed 0 unused cells and 46 unused wires.
 Dumping module `\demux'.
 
 End of script. Logfile hash: e54c4c9feb
-CPU: user 0.16s system 0.01s, MEM: 13.81 MB total, 9.32 MB resident
+CPU: user 0.16s system 0.00s, MEM: 13.81 MB total, 9.25 MB resident
 Yosys 0.7 (git sha1 61f6811, gcc 6.2.0-11ubuntu1 -O2 -fdebug-prefix-map=/build/yosys-zWLHjG/yosys-0.7=. -fstack-protector-strong -fPIC -Os)
 Time spent: 20% 11x opt_expr (0 sec), 15% 3x read_verilog (0 sec), ...
