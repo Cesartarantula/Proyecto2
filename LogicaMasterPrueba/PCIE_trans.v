@@ -42,11 +42,9 @@ wire [4:0] Umbral_VC1;
 wire [2:0] Umbral_D0;
 wire [2:0] Umbral_D1;
 
-reg pop;
-reg pausaD0D1;
-reg pop_vc0;
-reg pop_vc1;
 
+//registros internos del top
+reg pop, pausaD0D1, pop_vc0, pop_vc1, FIFO_error, FIFO_empty;
 
 fifo #(.N(2), .ADDR_WIDTH(4)) MainFifo (	.clk(clk),
 						.reset_L(reset_L),
@@ -71,7 +69,7 @@ demux demux1 (		.clk(clk),
 			.valid_0(push_vc0),
 			.valid_1(push_vc1));  
 
-fifo #(.N(4), .ADDR_WIDTH(16)) VC0Fifo (	.clk(clk),
+fifo #(.N(4), .M(2), .ADDR_WIDTH(16)) VC0Fifo (	.clk(clk),
 						.reset_L(reset_L),
 						.push(push_vc0),
 						.pop(pop_vc0),
@@ -85,7 +83,7 @@ fifo #(.N(4), .ADDR_WIDTH(16)) VC0Fifo (	.clk(clk),
 						.Fifo_Full(Fifo_Full_VC0),
 						.Error_Fifo(Error_Fifo_VC0)); 
 
-fifo #(.N(4), .ADDR_WIDTH(16)) VC1Fifo (	.clk(clk),
+fifo #(.N(4), .M(2), .ADDR_WIDTH(16)) VC1Fifo (	.clk(clk),
 						.reset_L(reset_L),
 						.push(push_vc1),
 						.pop(pop_vc1),
@@ -117,7 +115,7 @@ Demux_D0_D1 Demux_D0_D1 (	.clk(clk),
 			  	.valid_0(push_D0),
 			  	.valid_1(push_D1));
 
-fifo #(.N(2), .ADDR_WIDTH(4)) D0Fifo (	.clk(clk),
+fifo #(.N(2), .M(4), .ADDR_WIDTH(4)) D0Fifo (	.clk(clk),
 						.reset_L(reset_L),
 						.push(push_D0),
 						.pop(pop_D0),
@@ -131,7 +129,7 @@ fifo #(.N(2), .ADDR_WIDTH(4)) D0Fifo (	.clk(clk),
 						.Fifo_Full(Fifo_Full_D0),
 						.Error_Fifo(Error_Fifo_D0));
 
-fifo #(.N(2), .ADDR_WIDTH(4)) D1Fifo (	.clk(clk),
+fifo #(.N(2), .M(4), .ADDR_WIDTH(4)) D1Fifo (	.clk(clk),
 						.reset_L(reset_L),
 						.push(push_D1),
 						.pop(pop_D1),
@@ -190,6 +188,25 @@ always@(posedge clk) begin
 	pop_vc1 <= Fifo_Empty_VC0 & ~pausaD0D1 & ~Fifo_Empty_VC1; 	
 	end		
 end
+
+//Transfiere FIFO_error's y FIFO_empty's a la maquina de estados, 
+always@(posedge clk) begin
+	if(!reset_L) begin
+	FIFO_error <=0;
+	FIFO_empty <=0; // Error_Fifo_MF
+	end
+	else if(Error_Fifo_MF || Error_Fifo_VC0 || Error_Fifo_VC1 || Error_Fifo_D0 || Error_Fifo_D1 ) begin 
+	FIFO_error <=1;
+	end	
+	else if(Fifo_Empty_MF || Fifo_Empty_VC0 || Fifo_Empty_VC1 || Fifo_Empty_D0 || Fifo_Empty_D1 ) begin 
+	FIFO_empty <=1;
+	end
+	else begin
+	FIFO_error <=0;
+	FIFO_error <=0;
+	end
+end
+
 
 endmodule
 
