@@ -31,7 +31,7 @@ module testbench();
    wire idle_out;		// From transac of PCIE_trans.v, ...
    wire error_out;		// From transac of PCIE_trans.v, ...
    // End of automatics
-  
+
    probador probador1(/*AUTOINST*/
 		      // Outputs	
 		      .clk			(clk),
@@ -45,7 +45,7 @@ module testbench();
 		      .Pausa_MF	(Pausa_MF),
 		      .active_out	(active_out),
 		      .error_out	(error_out),
-		      .idle_out		(idle_out),
+		      .idle_out	(idle_out),
 		      .data_out0	(data_out0),
 		      .data_out1	(data_out1));
    
@@ -63,7 +63,7 @@ module testbench();
 					      .pop (pop),
 		      .active_out	(active_out),
 		      .error_out	(error_out),
-		      .idle_out		(idle_out),
+		      .idle_out	(idle_out),
 		      .data_out0	(data_out0),
 		      .data_out1	(data_out1));
 
@@ -80,7 +80,7 @@ module testbench();
 		      // Inputs Cond
 		      .active_out	(active_out),
 		      .error_out	(error_out),
-		      .idle_out		(idle_out),
+		      .idle_out	(idle_out),
 		      .data_out0	(data_out0),
 		      .data_out1	(data_out1));
    
