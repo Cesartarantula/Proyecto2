@@ -87,12 +87,10 @@ module probador (
 	//2 PUSH a D0  
     	/////////////////////////////////////////////////
      	@(posedge clk);		/// 6
-		push<=1;
-		pop<=0; 
-      		data_in_principal<=6'b111011; // 1 1 B
+		pop<=1; 
 
       	@(posedge clk)		/// 7
-		//push<=1;
+		push<=1;
 		pop<=0; 
 		data_in_principal<=6'b101011; // 1 1 B
 
@@ -108,6 +106,7 @@ module probador (
 
 	@(posedge clk);		/// 5
 		push<=0;
+		data_in_principal<=6'b111011; // 1 1 B
 
 #10
    $finish;

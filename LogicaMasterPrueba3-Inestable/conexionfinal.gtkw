@@ -1,15 +1,15 @@
 [*]
 [*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
-[*] Sat Jul  6 19:06:21 2019
+[*] Sun Jul  7 20:47:19 2019
 [*]
-[dumpfile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/LogicaMasterPrueba/PCIE_trans.vcd"
-[dumpfile_mtime] "Sat Jul  6 19:05:42 2019"
-[dumpfile_size] 117733
-[savefile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/LogicaMasterPrueba/conexionfinal.gtkw"
+[dumpfile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/LogicaMasterPrueba3-Inestable/PCIE_trans.vcd"
+[dumpfile_mtime] "Sun Jul  7 20:46:40 2019"
+[dumpfile_size] 123101
+[savefile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/LogicaMasterPrueba3-Inestable/conexionfinal.gtkw"
 [timestart] 0
 [size] 1280 751
 [pos] -1 -1
-*-33.200058 23000000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-33.200058 15000000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] testbench.
 [treeopen] testbench.transac1.
 [treeopen] testbench.transac1.MainFifo.
@@ -33,18 +33,31 @@ testbench.transac1.data_in_principal[5:0]
 [color] 5
 testbench.probador1.push
 testbench.transac1.pop
+@29
+testbench.probador1.active_out
 @200
 -Salidas
 @22
 testbench.probador1.data_out0[5:0]
 testbench.probador1.data_out1[5:0]
 @200
+-FSM
+@28
+testbench.transac1.fsm_Control1.clk
+testbench.transac1.fsm_Control1.reset_L
+testbench.transac1.fsm_Control1.init
+@22
+testbench.transac1.fsm_Control1.FIFO_empty[4:0]
+testbench.transac1.fsm_Control1.state[4:0]
+@28
+testbench.transac1.fsm_Control1.active_out
+testbench.transac1.fsm_Control1.error_out
+testbench.transac1.fsm_Control1.idle_out
+@200
 -MainFifo
 @28
 testbench.transac1.MainFifo.pop_int
-@29
 testbench.transac1.MainFifo.push_int
-@28
 testbench.transac1.MainFifo.reset_L
 testbench.transac1.MainFifo.pop
 @22
