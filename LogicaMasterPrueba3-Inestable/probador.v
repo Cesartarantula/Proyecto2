@@ -46,7 +46,7 @@ module probador (
 	//El Reset en init
    	@(posedge clk);
 		init <=0;
-        
+        #1
     	/////////////////////////////////////////////////
      	//4 PUSH a D0 
      	//2 POP A D0 

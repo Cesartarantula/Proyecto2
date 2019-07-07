@@ -1,7 +1,7 @@
 `include "dual_port_memory.v"
 
 //Definicion del fifo de 6 bit
-module fifo # ( parameter N=4, parameter M=1, parameter ADDR_WIDTH=16) // ( parameter N=4 , parameter ADDR_WIDTH=16) //
+module fifo # ( parameter N=4, parameter M=2, parameter ADDR_WIDTH=16) // ( parameter N=4 , parameter ADDR_WIDTH=16) //
 (
     //Entradas
     input wire clk,			//viene del probador
@@ -73,7 +73,7 @@ always @(posedge clk) begin
         		if (num_mem == 0) begin //Almost Empty levantada, cuando tiene un dato el dato 0, sin estar en reset.
 	    			Almost_Empty <= 1; 
 	    			Almost_Full <= 0; 
-	    			Fifo_Empty <= 0;//Tengo duda con este estado ya que en realidad tiene un dato el num_mem 0
+	    			Fifo_Empty <= 1;//Tengo duda con este estado ya que en realidad tiene un dato el num_mem 0
             			Fifo_Full <= 0;
 	    			Pausa <= 0;
 				Umbral <= num_mem;

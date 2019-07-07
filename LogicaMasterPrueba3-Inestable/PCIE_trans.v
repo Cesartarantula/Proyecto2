@@ -51,6 +51,8 @@ wire [4:0] Umbral_VC1;
 wire [2:0] Umbral_D0;
 wire [2:0] Umbral_D1;
 
+//wire [2:0] FIFO_empty;
+
 //*******************************************************************************************//
 //registros internos del top
 reg pop1, pausaD0D1, pop_vc0, pop_vc1, FIFO_error, FIFO_empty;
@@ -78,7 +80,7 @@ fifo #(.N(2), .ADDR_WIDTH(4)) MainFifo (	.clk(clk),
 // Modulo Demux de pop válidos según vc_id
 demux demux1 (		.clk(clk),
 			.reset_L(reset_L),
-			.valid_in(pop),
+			.valid_in(!Pausa_MF),//Modificacion
 			.data_in(Fifo_Data_out_MF),
 			.dataout0(data_in_VC0),
 			.dataout1(data_in_VC1),
@@ -242,7 +244,7 @@ always@(posedge clk) begin
 	end
 	else begin
 	FIFO_error <=0;
-	FIFO_error <=0;
+	FIFO_empty <=0;
 	end
 end
 

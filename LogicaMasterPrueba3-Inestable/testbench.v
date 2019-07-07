@@ -27,9 +27,12 @@ module testbench();
 
    wire Pausa_MF;		// From transac of PCIE_trans.v, ...
 
-   //wire active_out;		// From transac of PCIE_trans.v, ...
+   wire active_out;		// From transac of PCIE_trans.v, ...
    wire idle_out;		// From transac of PCIE_trans.v, ...
    wire error_out;		// From transac of PCIE_trans.v, ...
+
+  wire Fifo_empty;
+   wire Fifo_error;
    // End of automatics
 
    probador probador1(/*AUTOINST*/
@@ -38,16 +41,16 @@ module testbench();
 		      .reset_L			(reset_L),
 		      .init			(init),
 		      .data_in_principal	(data_in_principal),
-		      .push	(push),
-		      .pop		(pop),
+		      .push			(push),
+		      .pop			(pop),
 		     // .umbral		(umbral),
 		      // Inputs Cond
-		      .Pausa_MF	(Pausa_MF),
-		      .active_out	(active_out),
-		      .error_out	(error_out),
-		      .idle_out	(idle_out),
-		      .data_out0	(data_out0),
-		      .data_out1	(data_out1));
+		      .Pausa_MF			(Pausa_MF),
+		      .active_out		(active_out),
+		      .error_out		(error_out),
+		      .idle_out			(idle_out),
+		      .data_out0		(data_out0),
+		      .data_out1		(data_out1));
    
    PCIE_trans transac1(/*AUTOINST*/
 		      // Outputs	
@@ -55,17 +58,17 @@ module testbench();
 		      .reset_L			(reset_L),
 		      .init			(init),
 		      .data_in_principal	(data_in_principal),
-		      .push	(push),
+		      .push			(push),
 
-		      .Pausa_MF	(Pausa_MF),
+		      .Pausa_MF	(		Pausa_MF),
 		      //.umbral		(umbral),
 		      // Inputs Cond
-					      .pop (pop),
-		      .active_out	(active_out),
-		      .error_out	(error_out),
-		      .idle_out	(idle_out),
-		      .data_out0	(data_out0),
-		      .data_out1	(data_out1));
+		      .pop 			(pop),
+		      .active_out		(active_out),
+		      .error_out		(error_out),
+		      .idle_out			(idle_out),
+		      .data_out0		(data_out0),
+		      .data_out1		(data_out1));
 
    PCIE_Synth transacSynth(/*AUTOINST*/
 		      // Outputs	
@@ -73,15 +76,15 @@ module testbench();
 		      .reset_L			(reset_L),
 		      .init			(init),
 		      .data_in_principal	(data_in_principal),
-		      .push	(push),
-		      .pop		(pop),
-		      .Pausa_MF	(Pausa_MF),
+		      .push			(push),
+		      .pop			(pop),
+		      .Pausa_MF			(Pausa_MF),
 		      //.umbral		(umbral),
 		      // Inputs Cond
-		      .active_out	(active_out),
-		      .error_out	(error_out),
-		      .idle_out	(idle_out),
-		      .data_out0	(data_out0),
-		      .data_out1	(data_out1));
+		      .active_out		(active_out),
+		      .error_out		(error_out),
+		      .idle_out			(idle_out),
+		      .data_out0		(data_out0),
+		      .data_out1		(data_out1));
    
    endmodule 
