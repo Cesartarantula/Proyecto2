@@ -108,7 +108,7 @@ module probador (
 		push<=0;
 		data_in_principal<=6'b111011; // 1 1 B
 
-#10
+#100
    $finish;
 end  
    

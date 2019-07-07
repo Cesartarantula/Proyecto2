@@ -64,7 +64,7 @@ reg pop1, pausaD0D1, pop_vc0, pop_vc1, FIFO_error, FIFO_empty;
 fifo #(.N(2), .ADDR_WIDTH(4)) MainFifo (	.clk(clk),             
 						.reset_L(reset_L),
 						.push(push),
-						.pop(pop1),
+						.pop(pop),
 						.Fifo_Data_in(data_in_principal),
 						.Fifo_Data_out(Fifo_Data_out_MF),
 						.Almost_Empty(Almost_Empty_MF),
@@ -78,7 +78,7 @@ fifo #(.N(2), .ADDR_WIDTH(4)) MainFifo (	.clk(clk),
 // Modulo Demux de pop válidos según vc_id
 demux demux1 (		.clk(clk),
 			.reset_L(reset_L),
-			.valid_in(pop1),//Modificacion
+			.valid_in(pop),
 			.data_in(Fifo_Data_out_MF),
 			.dataout0(data_in_VC0),
 			.dataout1(data_in_VC1),
@@ -196,22 +196,22 @@ fsmControl fsm_Control1 (	.clk(clk),
 
 //*******************************************************************************************//
 //Hace pop a Fifo Main
-always@(posedge clk) begin
-	if(reset_L) begin
-	pop1 <= 0;
-	end
-	else if(!Pausa_VC0 || !Pausa_VC0)begin
-		if(!Fifo_Empty_MF) begin
-		pop1<=1;
-		end
-		else begin
-		pop1<=0;
-		end
-	end
-	else begin
-	pop1 <=0;
-	end
-end
+//always@(posedge clk) begin
+//	if(reset_L) begin
+//	pop1 <= 0;
+//	end
+//	else if(!Pausa_VC0 || !Pausa_VC0)begin
+//		if(!Fifo_Empty_MF) begin
+//		pop1<=1;
+//		end
+//		else begin
+//		pop1<=0;
+//		end
+//	end
+//	else begin
+//	pop1 <=0;
+//	end
+//end
 
 //*******************************************************************************************//
 //Determina pop VC0 y VC1

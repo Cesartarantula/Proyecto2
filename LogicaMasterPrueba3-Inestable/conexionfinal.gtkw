@@ -1,15 +1,15 @@
 [*]
 [*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
-[*] Sun Jul  7 21:08:45 2019
+[*] Sun Jul  7 21:33:17 2019
 [*]
 [dumpfile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/LogicaMasterPrueba3-Inestable/PCIE_trans.vcd"
-[dumpfile_mtime] "Sun Jul  7 21:07:53 2019"
-[dumpfile_size] 123101
+[dumpfile_mtime] "Sun Jul  7 21:31:25 2019"
+[dumpfile_size] 126651
 [savefile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/LogicaMasterPrueba3-Inestable/conexionfinal.gtkw"
-[timestart] 0
+[timestart] 12320000000
 [size] 1280 751
 [pos] -1 -1
-*-33.200058 17000000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-32.875927 29000000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] testbench.
 [treeopen] testbench.transac1.
 [treeopen] testbench.transac1.MainFifo.
@@ -35,7 +35,7 @@ testbench.probador1.push
 testbench.transac1.pop
 @200
 -Salidas
-@29
+@28
 testbench.transac1.active_out
 @22
 testbench.probador1.data_out0[5:0]
@@ -56,10 +56,17 @@ testbench.transac1.fsm_Control1.idle_out
 @200
 -MainFifo
 @28
-testbench.transac1.MainFifo.pop_int
-testbench.transac1.MainFifo.push_int
 testbench.transac1.MainFifo.reset_L
+@22
+testbench.transac1.MainFifo.Fifo_Data_in[5:0]
+testbench.transac1.MainFifo.Fifo_Data_in_int[5:0]
+@28
+testbench.transac1.MainFifo.push
+testbench.transac1.MainFifo.push_int
+testbench.transac1.MainFifo.wr_ptr[1:0]
+testbench.transac1.MainFifo.rd_ptr[1:0]
 testbench.transac1.MainFifo.pop
+testbench.transac1.MainFifo.pop_int
 @22
 testbench.transac1.MainFifo.Fifo_Data_in[5:0]
 @24
@@ -107,15 +114,14 @@ testbench.transac1.pop_vc0
 testbench.transac1.pop_vc1
 @200
 -VC0Fifo
-@22
+@23
 testbench.transac1.VC0Fifo.Fifo_Data_in[5:0]
 @28
+testbench.transac1.VC0Fifo.push
+testbench.transac1.VC0Fifo.pop
 testbench.transac1.VC0Fifo.Fifo_Empty
 @22
 testbench.transac1.VC0Fifo.Fifo_Data_out[5:0]
-@28
-testbench.transac1.VC0Fifo.pop
-testbench.transac1.VC0Fifo.push
 @200
 -VC1Fifo
 @28
