@@ -27,11 +27,11 @@ module testbench();
 
    wire Pausa_MF;		// From transac of PCIE_trans.v, ...
 
+   wire active_out, idle_out, error_out;
 
-   wire active_out;		// From transac of PCIE_trans.v, ...
    wire active_out_cond, active_out_synth;		// From transac of PCIE_trans.v, ...
-   wire idle_out;		// From transac of PCIE_trans.v, ...
-   wire error_out;		// From transac of PCIE_trans.v, ...
+   wire idle_out_cond, idle_out_synth;		// From transac of PCIE_trans.v, ...
+   wire error_out_cond,	error_out_synth;	// From transac of PCIE_trans.v, ...
 
    // End of automatics
 
@@ -46,9 +46,13 @@ module testbench();
 		     // .umbral		(umbral),
 		      // Inputs Cond
 		      .Pausa_MF			(Pausa_MF),
-		      .active_out		(active_out),
-		      .error_out		(error_out),
-		      .idle_out			(idle_out),
+		      .active_out_synth		(active_out_synth),
+		      .error_out_synth		(error_out_synth),
+		      .idle_out_synth		(idle_out_synth),
+			
+	              .active_out_cond		(active_out_cond),
+		      .error_out_cond		(error_out_cond),
+		      .idle_out_cond		(idle_out_cond),
 		      .data_out0		(data_out0),
 		      .data_out1		(data_out1));
    
@@ -64,10 +68,10 @@ module testbench();
 		      //.umbral		(umbral),
 		      // Inputs Cond
 
-		      .pop 			(pop),
-		      .active_out		(active_out),
-		      .error_out		(error_out),
-		      .idle_out			(idle_out),
+		      .pop 			(pop),		
+	              .active_out		(active_out_cond),
+		      .error_out		(error_out_cond),
+		      .idle_out			(idle_out_cond),
 		      .data_out0		(data_out0),
 		      .data_out1		(data_out1));
 	
@@ -82,9 +86,9 @@ module testbench();
 		      .Pausa_MF			(Pausa_MF),
 		      //.umbral		(umbral),
 		      // Inputs Cond
-		      .active_out		(active_out),
-		      .error_out		(error_out),
-		      .idle_out			(idle_out),
+		      .active_out		(active_out_synth),
+		      .error_out		(error_out_synth),
+		      .idle_out			(idle_out_synth),
 		      .data_out0		(data_out0),
 		      .data_out1		(data_out1));
    

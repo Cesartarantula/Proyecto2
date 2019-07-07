@@ -14,10 +14,15 @@ module probador (
  output reg push,
  output reg pop,
 
- input Pausa_MF, 
- input active_out,
- input idle_out, 
- input error_out,
+ input Pausa_MF,
+ 
+ input active_out_cond,
+ input idle_out_cond, 
+ input error_out_cond,
+
+ input active_out_synth,
+ input idle_out_synth, 
+ input error_out_synth,
 
  input [5:0] data_out0,
  input [5:0] data_out1					

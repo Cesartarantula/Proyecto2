@@ -1,10 +1,10 @@
 [*]
 [*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
-[*] Sun Jul  7 22:32:41 2019
+[*] Sun Jul  7 23:19:15 2019
 [*]
 [dumpfile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/LogicaMasterPrueba3-Inestable/PCIE_trans.vcd"
-[dumpfile_mtime] "Sun Jul  7 22:27:55 2019"
-[dumpfile_size] 153252
+[dumpfile_mtime] "Sun Jul  7 23:18:24 2019"
+[dumpfile_size] 153446
 [savefile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/LogicaMasterPrueba3-Inestable/conexionfinal.gtkw"
 [timestart] 0
 [size] 1280 751
@@ -32,12 +32,13 @@ testbench.transac1.data_in_principal[5:0]
 [color] 5
 testbench.probador1.push
 testbench.transac1.pop
+@29
+testbench.probador1.active_out_cond
+@28
+testbench.probador1.idle_out_cond
+testbench.probador1.error_out_cond
 @200
 -Salidas
-@28
-testbench.error_out
-testbench.idle_out
-testbench.transac1.active_out
 @22
 testbench.probador1.data_out0[5:0]
 testbench.probador1.data_out1[5:0]
@@ -130,7 +131,6 @@ testbench.transac1.VC1Fifo.Fifo_Empty
 testbench.transac1.VC1Fifo.pop
 testbench.transac1.VC1Fifo.pop_int
 testbench.transac1.VC1Fifo.push
-@29
 testbench.transac1.VC1Fifo.push_int
 @22
 testbench.transac1.VC1Fifo.Fifo_Data_in[5:0]
