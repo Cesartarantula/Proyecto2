@@ -28,8 +28,8 @@ module fifo # ( parameter N=4, parameter M=2, parameter ADDR_WIDTH=16) // ( para
     reg [N-1:0] wr_ptr, rd_ptr;  // dirección de escribir,  // dirección de lectura
     reg [M:0] num_mem;  // contador de control
 
-	reg push_int, pop_int;
-	reg [5:0] Fifo_Data_in_int;
+    reg push_int, pop_int;
+    reg [5:0] Fifo_Data_in_int;
 
 dual_port_memory  #(.DATA_WIDTH(6), .ADDR_WIDTH(2), .MEM_SIZE(3)) memoria
 (/*AUTOINST*/
@@ -63,7 +63,7 @@ always @(posedge clk) begin
       		//Estado Inicial
 		Almost_Empty<=0;
 		Almost_Full<=0;
-		Fifo_Empty<=0;
+		Fifo_Empty<=1;
 		Fifo_Full<=0;
 		Pausa <= 0;
 		Umbral <= 0;
