@@ -20,7 +20,7 @@ module testbench();
    wire [5:0]	data_in_principal;	// From probador.v
    
    wire	push;			// From probador.v
-   wire	pop;			// From probador.v
+   //wire	pop;			// From probador.v
 
    wire [5:0] data_out0_cond;	// From transac of PCIE_trans.v, ...
    wire [5:0] data_out1_cond;	// From transac of PCIE_trans.v, ....
@@ -45,7 +45,7 @@ module testbench();
 		      .init			(init),
 		      .data_in_principal	(data_in_principal),
 		      .push			(push),
-		      .pop			(pop),
+		      //.pop			(pop),
 		     // .umbral		(umbral),
 		      // Inputs Cond
 		      .Pausa_MF			(Pausa_MF),
@@ -71,7 +71,7 @@ module testbench();
 		      //.umbral		(umbral),
 		      // Inputs Cond
 
-		      .pop 			(pop),		
+		      //.pop 			(pop),		
 	              .active_out		(active_out_cond),
 		      .error_out		(error_out_cond),
 		      .idle_out			(idle_out_cond),
@@ -85,7 +85,7 @@ module testbench();
 		      .init			(init),
 		      .data_in_principal	(data_in_principal),
 		      .push			(push),
-		      .pop			(pop),
+		      //.pop			(pop),
 		      .Pausa_MF			(Pausa_MF),
 		      //.umbral		(umbral),
 		      // Inputs Cond

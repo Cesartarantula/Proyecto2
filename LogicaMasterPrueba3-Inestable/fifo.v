@@ -79,7 +79,7 @@ always @(posedge clk) begin
         		if (num_mem == 0) begin //Almost Empty levantada, cuando tiene un dato el dato 0, sin estar en reset.
 	    			Almost_Empty <= 1; 
 	    			Almost_Full <= 0; 
-	    			Fifo_Empty <= 1;//Tengo duda con este estado ya que en realidad tiene un dato el num_mem 0
+	    			Fifo_Empty <= 0;//Tengo duda con este estado ya que en realidad tiene un dato el num_mem 0
             			Fifo_Full <= 0;
 	    			Pausa <= 0;
 				Umbral <= num_mem;

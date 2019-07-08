@@ -12,7 +12,7 @@ module probador (
 
  output reg [5:0] data_in_principal,
  output reg push,
- output reg pop,
+ //output reg pop,
 
  input Pausa_MF,
  
@@ -73,19 +73,19 @@ module probador (
 	/////////////////////////////////////////////////D
       
    	@(posedge clk);
-		
+		push<=0;
       		data_in_principal<=6'b000000; // 0
 		//pop<=1;	
 
 	@(posedge clk);
 		push<=0; 		
-		pop<=1;
+		//pop<=1;
 
 	/////////////////////////////////////////////////
 
 	@(posedge clk);		/// 5
 		push<=0;
-		pop<=1; 
+		//pop<=1; 
 
 	/////////////////////////////////////////////////
      	//2 PUSH a D1
@@ -93,16 +93,16 @@ module probador (
 	//2 PUSH a D0  
     	/////////////////////////////////////////////////
      	@(posedge clk);		/// 6
-		pop<=1; 
+		//pop<=1; 
 
       	@(posedge clk)		/// 7
 		push<=1;
-		pop<=0; 
+		//pop<=0; 
 		data_in_principal<=6'b101011; // 1 1 B
 
      	@(posedge clk);		/// 8
       		//push<=1;
-		pop<=0; 
+		//pop<=0; 
       		data_in_principal<=6'b001001;// 0 0 9
 
       	@(posedge clk);		/// 9
@@ -117,10 +117,10 @@ module probador (
 		push<=0;
 	repeat(4)begin
 	@(posedge clk);		/// 11
-		pop<=1;
+		//pop<=1;
 	end
 	@(posedge clk);		/// 11
-		pop<=0;
+		//pop<=0;
 #100
    $finish;
 end  
@@ -128,7 +128,7 @@ end
    initial clk <= 0;
    initial reset_L<=1;
    initial init <=0 ;
-   initial pop<=0;
+   //initial pop<=0;
    initial push<=0;
    initial data_in_principal<=0;
 

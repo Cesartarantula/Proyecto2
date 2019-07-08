@@ -1,18 +1,17 @@
 [*]
 [*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
-[*] Mon Jul  8 21:55:57 2019
+[*] Mon Jul  8 22:44:15 2019
 [*]
 [dumpfile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/LogicaMasterPrueba3-Inestable/PCIE_trans.vcd"
-[dumpfile_mtime] "Mon Jul  8 21:55:12 2019"
-[dumpfile_size] 293604
+[dumpfile_mtime] "Mon Jul  8 22:42:41 2019"
+[dumpfile_size] 258982
 [savefile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/LogicaMasterPrueba3-Inestable/conexionfinal.gtkw"
-[timestart] 0
+[timestart] 76130000000
 [size] 1280 751
 [pos] -1 -1
-*-35.099892 87000000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-34.099892 27000000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] testbench.
 [treeopen] testbench.transac1.
-[treeopen] testbench.transac1.D1Fifo.
 [treeopen] testbench.transac1.VC0Fifo.
 [sst_width] 196
 [signals_width] 206
@@ -33,7 +32,6 @@ testbench.transac1.data_in_principal[5:0]
 @28
 [color] 5
 testbench.probador1.push
-testbench.transac1.pop
 testbench.probador1.active_out_cond
 testbench.probador1.idle_out_cond
 testbench.probador1.error_out_cond
@@ -43,6 +41,7 @@ testbench.probador1.error_out_cond
 testbench.probador1.data_out0[5:0]
 testbench.probador1.data_out1[5:0]
 @200
+-Transac1
 -FSM
 @28
 testbench.transac1.fsm_Control1.clk
@@ -50,9 +49,7 @@ testbench.transac1.fsm_Control1.reset_L
 testbench.transac1.fsm_Control1.init
 @22
 testbench.transac1.fsm_Control1.FIFO_empty[4:0]
-@23
 testbench.transac1.fsm_Control1.FIFO_error[4:0]
-@22
 testbench.transac1.fsm_Control1.state[4:0]
 @28
 testbench.transac1.fsm_Control1.active_out
@@ -67,13 +64,15 @@ testbench.transac1.MainFifo.push
 @22
 testbench.transac1.MainFifo.Fifo_Data_in[5:0]
 @28
-testbench.transac1.MainFifo.pop
 testbench.transac1.MainFifo.push_int
 @22
 testbench.transac1.MainFifo.Fifo_Data_in_int[5:0]
 @28
 testbench.transac1.MainFifo.wr_ptr[1:0]
+testbench.transac1.MainFifo.pop
+@29
 testbench.transac1.MainFifo.pop_int
+@28
 testbench.transac1.MainFifo.rd_ptr[1:0]
 @24
 testbench.transac1.MainFifo.Umbral[2:0]
