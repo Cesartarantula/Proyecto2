@@ -33,19 +33,17 @@ Generating RTLIL representation for module `\mux'.
 Generating RTLIL representation for module `\Demux_D0_D1'.
 Generating RTLIL representation for module `\demux'.
 Generating RTLIL representation for module `\PCIE_trans'.
-Warning: Identifier `\Fifo_Data_out_VC0' is implicitly declared at PCIE_trans.v:98.
 Warning: Identifier `\Almost_Empty_VC0' is implicitly declared at PCIE_trans.v:99.
 Warning: Identifier `\Almost_Full_VC0' is implicitly declared at PCIE_trans.v:100.
 Warning: Identifier `\Fifo_Full_VC0' is implicitly declared at PCIE_trans.v:104.
 Warning: Identifier `\Error_Fifo_VC0' is implicitly declared at PCIE_trans.v:105.
-Warning: Identifier `\Fifo_Data_out_VC1' is implicitly declared at PCIE_trans.v:113.
-Warning: Identifier `\Almost_Empty_VC1' is implicitly declared at PCIE_trans.v:114.
-Warning: Identifier `\Almost_Full_VC1' is implicitly declared at PCIE_trans.v:115.
-Warning: Identifier `\Fifo_Full_VC1' is implicitly declared at PCIE_trans.v:119.
-Warning: Identifier `\Error_Fifo_VC1' is implicitly declared at PCIE_trans.v:120.
-Warning: Identifier `\push_D0' is implicitly declared at PCIE_trans.v:142.
-Warning: Identifier `\push_D1' is implicitly declared at PCIE_trans.v:143.
-Warning: Identifier `\valid_in' is implicitly declared at PCIE_trans.v:149.
+Warning: Identifier `\Almost_Empty_VC1' is implicitly declared at PCIE_trans.v:115.
+Warning: Identifier `\Almost_Full_VC1' is implicitly declared at PCIE_trans.v:116.
+Warning: Identifier `\Fifo_Full_VC1' is implicitly declared at PCIE_trans.v:120.
+Warning: Identifier `\Error_Fifo_VC1' is implicitly declared at PCIE_trans.v:121.
+Warning: Identifier `\push_D0' is implicitly declared at PCIE_trans.v:143.
+Warning: Identifier `\push_D1' is implicitly declared at PCIE_trans.v:144.
+Warning: Identifier `\valid_in' is implicitly declared at PCIE_trans.v:150.
 Successfully finished Verilog frontend.
 
 2. Executing HIERARCHY pass (managing design hierarchy).
@@ -188,10 +186,10 @@ Creating decoders for process `$paramod\dual_port_memory\DATA_WIDTH=6\ADDR_WIDTH
      1/3: $0$memwr$\Ram$dual_port_memory.v:18$85_EN[5:0]$89
      2/3: $0$memwr$\Ram$dual_port_memory.v:18$85_DATA[5:0]$88
      3/3: $0$memwr$\Ram$dual_port_memory.v:18$85_ADDR[1:0]$87
-Creating decoders for process `\PCIE_trans.$proc$PCIE_trans.v:237$75'.
+Creating decoders for process `\PCIE_trans.$proc$PCIE_trans.v:238$75'.
      1/2: $0\FIFO_empty[0:0]
      2/2: $0\FIFO_error[0:0]
-Creating decoders for process `\PCIE_trans.$proc$PCIE_trans.v:222$65'.
+Creating decoders for process `\PCIE_trans.$proc$PCIE_trans.v:223$65'.
      1/3: $0\pop_vc1[0:0]
      2/3: $0\pop_vc0[0:0]
      3/3: $0\pausaD0D1[0:0]
@@ -297,15 +295,15 @@ Creating register for signal `$paramod\dual_port_memory\DATA_WIDTH=6\ADDR_WIDTH=
   created $dff cell `$procdff$1038' with positive edge clock.
 Creating register for signal `$paramod\dual_port_memory\DATA_WIDTH=6\ADDR_WIDTH=2\MEM_SIZE=3.$memwr$\Ram$dual_port_memory.v:18$85_EN' using process `$paramod\dual_port_memory\DATA_WIDTH=6\ADDR_WIDTH=2\MEM_SIZE=3.$proc$dual_port_memory.v:14$86'.
   created $dff cell `$procdff$1039' with positive edge clock.
-Creating register for signal `\PCIE_trans.\FIFO_error' using process `\PCIE_trans.$proc$PCIE_trans.v:237$75'.
+Creating register for signal `\PCIE_trans.\FIFO_error' using process `\PCIE_trans.$proc$PCIE_trans.v:238$75'.
   created $dff cell `$procdff$1040' with positive edge clock.
-Creating register for signal `\PCIE_trans.\FIFO_empty' using process `\PCIE_trans.$proc$PCIE_trans.v:237$75'.
+Creating register for signal `\PCIE_trans.\FIFO_empty' using process `\PCIE_trans.$proc$PCIE_trans.v:238$75'.
   created $dff cell `$procdff$1041' with positive edge clock.
-Creating register for signal `\PCIE_trans.\pausaD0D1' using process `\PCIE_trans.$proc$PCIE_trans.v:222$65'.
+Creating register for signal `\PCIE_trans.\pausaD0D1' using process `\PCIE_trans.$proc$PCIE_trans.v:223$65'.
   created $dff cell `$procdff$1042' with positive edge clock.
-Creating register for signal `\PCIE_trans.\pop_vc0' using process `\PCIE_trans.$proc$PCIE_trans.v:222$65'.
+Creating register for signal `\PCIE_trans.\pop_vc0' using process `\PCIE_trans.$proc$PCIE_trans.v:223$65'.
   created $dff cell `$procdff$1043' with positive edge clock.
-Creating register for signal `\PCIE_trans.\pop_vc1' using process `\PCIE_trans.$proc$PCIE_trans.v:222$65'.
+Creating register for signal `\PCIE_trans.\pop_vc1' using process `\PCIE_trans.$proc$PCIE_trans.v:223$65'.
   created $dff cell `$procdff$1044' with positive edge clock.
 Creating register for signal `\demux.\dataout0' using process `\demux.$proc$demux.v:33$59'.
   created $dff cell `$procdff$1045' with positive edge clock.
@@ -407,10 +405,10 @@ Found and cleaned up 1 empty switch in `$paramod\dual_port_memory\DATA_WIDTH=6\A
 Removing empty process `$paramod\dual_port_memory\DATA_WIDTH=6\ADDR_WIDTH=2\MEM_SIZE=3.$proc$dual_port_memory.v:22$90'.
 Found and cleaned up 1 empty switch in `$paramod\dual_port_memory\DATA_WIDTH=6\ADDR_WIDTH=2\MEM_SIZE=3.$proc$dual_port_memory.v:14$86'.
 Removing empty process `$paramod\dual_port_memory\DATA_WIDTH=6\ADDR_WIDTH=2\MEM_SIZE=3.$proc$dual_port_memory.v:14$86'.
-Found and cleaned up 3 empty switches in `\PCIE_trans.$proc$PCIE_trans.v:237$75'.
-Removing empty process `PCIE_trans.$proc$PCIE_trans.v:237$75'.
-Found and cleaned up 2 empty switches in `\PCIE_trans.$proc$PCIE_trans.v:222$65'.
-Removing empty process `PCIE_trans.$proc$PCIE_trans.v:222$65'.
+Found and cleaned up 3 empty switches in `\PCIE_trans.$proc$PCIE_trans.v:238$75'.
+Removing empty process `PCIE_trans.$proc$PCIE_trans.v:238$75'.
+Found and cleaned up 2 empty switches in `\PCIE_trans.$proc$PCIE_trans.v:223$65'.
+Removing empty process `PCIE_trans.$proc$PCIE_trans.v:223$65'.
 Found and cleaned up 7 empty switches in `\demux.$proc$demux.v:33$59'.
 Removing empty process `demux.$proc$demux.v:33$59'.
 Found and cleaned up 1 empty switch in `\demux.$proc$demux.v:24$57'.
@@ -558,12 +556,12 @@ Finding identical cells in module `$paramod\fifo\N=2\M=4\ADDR_WIDTH=4'.
     Removing $logic_not cell `$logic_not$fifo.v:50$94' from module `$paramod\fifo\N=2\M=4\ADDR_WIDTH=4'.
 Finding identical cells in module `$paramod\dual_port_memory\DATA_WIDTH=6\ADDR_WIDTH=2\MEM_SIZE=3'.
 Finding identical cells in module `\PCIE_trans'.
-  Cell `$not$PCIE_trans.v:230$69' is identical to cell `$not$PCIE_trans.v:231$71'.
-    Redirecting output \Y: $not$PCIE_trans.v:230$69_Y = $not$PCIE_trans.v:231$71_Y
-    Removing $not cell `$not$PCIE_trans.v:230$69' from module `\PCIE_trans'.
-  Cell `$logic_not$PCIE_trans.v:223$66' is identical to cell `$logic_not$PCIE_trans.v:238$76'.
-    Redirecting output \Y: $logic_not$PCIE_trans.v:223$66_Y = $logic_not$PCIE_trans.v:238$76_Y
-    Removing $logic_not cell `$logic_not$PCIE_trans.v:223$66' from module `\PCIE_trans'.
+  Cell `$not$PCIE_trans.v:231$69' is identical to cell `$not$PCIE_trans.v:232$71'.
+    Redirecting output \Y: $not$PCIE_trans.v:231$69_Y = $not$PCIE_trans.v:232$71_Y
+    Removing $not cell `$not$PCIE_trans.v:231$69' from module `\PCIE_trans'.
+  Cell `$logic_not$PCIE_trans.v:224$66' is identical to cell `$logic_not$PCIE_trans.v:239$76'.
+    Redirecting output \Y: $logic_not$PCIE_trans.v:224$66_Y = $logic_not$PCIE_trans.v:239$76_Y
+    Removing $logic_not cell `$logic_not$PCIE_trans.v:224$66' from module `\PCIE_trans'.
 Finding identical cells in module `\demux'.
   Cell `$logic_not$demux.v:25$58' is identical to cell `$logic_not$demux.v:34$60'.
     Redirecting output \Y: $logic_not$demux.v:25$58_Y = $logic_not$demux.v:34$60_Y
@@ -942,7 +940,7 @@ Finding unused cells or wires in module $paramod\fifo\N=2\M=4\ADDR_WIDTH=4..
   removed 1 unused temporary wires.
 Finding unused cells or wires in module $paramod\dual_port_memory\DATA_WIDTH=6\ADDR_WIDTH=2\MEM_SIZE=3..
 Finding unused cells or wires in module \PCIE_trans..
-  removing unused `$logic_not' cell `$logic_not$PCIE_trans.v:238$76'.
+  removing unused `$logic_not' cell `$logic_not$PCIE_trans.v:239$76'.
   removing unused non-port wire \pop1.
   removed 1 unused temporary wires.
 Finding unused cells or wires in module \demux..
@@ -1712,21 +1710,21 @@ Mapping demux.$procdff$1045 ($dff) with simplemap.
 Mapping demux.$procdff$1046 ($dff) with simplemap.
 Mapping demux.$procdff$1047 ($dff) with simplemap.
 Mapping demux.$procdff$1048 ($dff) with simplemap.
-Mapping PCIE_trans.$or$PCIE_trans.v:229$67 ($or) with simplemap.
-Mapping PCIE_trans.$not$PCIE_trans.v:230$68 ($not) with simplemap.
-Mapping PCIE_trans.$and$PCIE_trans.v:230$70 ($and) with simplemap.
-Mapping PCIE_trans.$not$PCIE_trans.v:231$71 ($not) with simplemap.
-Mapping PCIE_trans.$and$PCIE_trans.v:231$72 ($and) with simplemap.
-Mapping PCIE_trans.$not$PCIE_trans.v:231$73 ($not) with simplemap.
-Mapping PCIE_trans.$and$PCIE_trans.v:231$74 ($and) with simplemap.
-Mapping PCIE_trans.$logic_or$PCIE_trans.v:242$77 ($logic_or) with simplemap.
-Mapping PCIE_trans.$logic_or$PCIE_trans.v:242$78 ($logic_or) with simplemap.
-Mapping PCIE_trans.$logic_or$PCIE_trans.v:242$79 ($logic_or) with simplemap.
-Mapping PCIE_trans.$logic_or$PCIE_trans.v:242$80 ($logic_or) with simplemap.
-Mapping PCIE_trans.$logic_or$PCIE_trans.v:245$81 ($logic_or) with simplemap.
-Mapping PCIE_trans.$logic_or$PCIE_trans.v:245$82 ($logic_or) with simplemap.
-Mapping PCIE_trans.$logic_or$PCIE_trans.v:245$83 ($logic_or) with simplemap.
-Mapping PCIE_trans.$logic_or$PCIE_trans.v:245$84 ($logic_or) with simplemap.
+Mapping PCIE_trans.$or$PCIE_trans.v:230$67 ($or) with simplemap.
+Mapping PCIE_trans.$not$PCIE_trans.v:231$68 ($not) with simplemap.
+Mapping PCIE_trans.$and$PCIE_trans.v:231$70 ($and) with simplemap.
+Mapping PCIE_trans.$not$PCIE_trans.v:232$71 ($not) with simplemap.
+Mapping PCIE_trans.$and$PCIE_trans.v:232$72 ($and) with simplemap.
+Mapping PCIE_trans.$not$PCIE_trans.v:232$73 ($not) with simplemap.
+Mapping PCIE_trans.$and$PCIE_trans.v:232$74 ($and) with simplemap.
+Mapping PCIE_trans.$logic_or$PCIE_trans.v:243$77 ($logic_or) with simplemap.
+Mapping PCIE_trans.$logic_or$PCIE_trans.v:243$78 ($logic_or) with simplemap.
+Mapping PCIE_trans.$logic_or$PCIE_trans.v:243$79 ($logic_or) with simplemap.
+Mapping PCIE_trans.$logic_or$PCIE_trans.v:243$80 ($logic_or) with simplemap.
+Mapping PCIE_trans.$logic_or$PCIE_trans.v:246$81 ($logic_or) with simplemap.
+Mapping PCIE_trans.$logic_or$PCIE_trans.v:246$82 ($logic_or) with simplemap.
+Mapping PCIE_trans.$logic_or$PCIE_trans.v:246$83 ($logic_or) with simplemap.
+Mapping PCIE_trans.$logic_or$PCIE_trans.v:246$84 ($logic_or) with simplemap.
 Mapping PCIE_trans.$procmux$231 ($mux) with simplemap.
 Mapping PCIE_trans.$procmux$234 ($mux) with simplemap.
 Mapping PCIE_trans.$procmux$237 ($mux) with simplemap.
@@ -6705,7 +6703,7 @@ Replacing $_OR_ cell `$auto$simplemap.cc:85:simplemap_bitop$4216' (00) in module
 Replacing $_OR_ cell `$auto$simplemap.cc:85:simplemap_bitop$4217' (00) in module `$paramod\fifo\N=4\M=2\ADDR_WIDTH=16' with constant driver `$techmap$add$fifo.v:469$127.$auto$alumacc.cc:484:replace_alu$2875 [31] = 1'0'.
 Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$3547' (00) in module `$paramod\fifo\N=4\M=2\ADDR_WIDTH=16' with constant driver `$techmap$techmap$add$fifo.v:469$127.$auto$alumacc.cc:470:replace_alu$2873.$xor$<techmap.v>:263$3031_Y [32] = 1'0'.
 Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$1656' (01?) in module `\Demux_D0_D1' with constant driver `$procmux$334_Y = \selectorL1'.
-Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$1809' (01?) in module `\PCIE_trans' with constant driver `$procmux$231_Y = $logic_or$PCIE_trans.v:245$84_Y'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$1809' (01?) in module `\PCIE_trans' with constant driver `$procmux$231_Y = $logic_or$PCIE_trans.v:246$84_Y'.
 Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$1725' (01?) in module `\demux' with constant driver `$procmux$268_Y = \selectorL1'.
 Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$1378' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$1376 [0] = \state [0]'.
 Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$1381' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$1376 [3] = \state [3]'.
@@ -7286,32 +7284,17 @@ Deleting now unused module mux.
 
 12.1. Executing OPT_EXPR pass (perform const folding).
 Replacing $_AND_ cell `$techmap\fsm_Control1.$auto$simplemap.cc:85:simplemap_bitop$1594' (const_and) in module `\PCIE_trans' with constant driver `$techmap\fsm_Control1.$procmux$512.B_AND_S [2] = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:85:simplemap_bitop$1794' (00) in module `\PCIE_trans' with constant driver `$or$PCIE_trans.v:229$67_Y = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:235:simplemap_logbin$1801' (00) in module `\PCIE_trans' with constant driver `$logic_or$PCIE_trans.v:242$77_Y = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:235:simplemap_logbin$1802' (00) in module `\PCIE_trans' with constant driver `$logic_or$PCIE_trans.v:242$78_Y = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:235:simplemap_logbin$1803' (00) in module `\PCIE_trans' with constant driver `$logic_or$PCIE_trans.v:242$79_Y = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:235:simplemap_logbin$1804' (00) in module `\PCIE_trans' with constant driver `$logic_or$PCIE_trans.v:242$80_Y = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:235:simplemap_logbin$1807' (const_or) in module `\PCIE_trans' with constant driver `$logic_or$PCIE_trans.v:245$83_Y = 1'1'.
-Replacing $_OR_ cell `$auto$simplemap.cc:235:simplemap_logbin$1808' (const_or) in module `\PCIE_trans' with constant driver `$logic_or$PCIE_trans.v:245$84_Y = 1'1'.
+Replacing $_OR_ cell `$auto$simplemap.cc:85:simplemap_bitop$1794' (00) in module `\PCIE_trans' with constant driver `$or$PCIE_trans.v:230$67_Y = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:235:simplemap_logbin$1801' (00) in module `\PCIE_trans' with constant driver `$logic_or$PCIE_trans.v:243$77_Y = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:235:simplemap_logbin$1802' (00) in module `\PCIE_trans' with constant driver `$logic_or$PCIE_trans.v:243$78_Y = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:235:simplemap_logbin$1803' (00) in module `\PCIE_trans' with constant driver `$logic_or$PCIE_trans.v:243$79_Y = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:235:simplemap_logbin$1804' (00) in module `\PCIE_trans' with constant driver `$logic_or$PCIE_trans.v:243$80_Y = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:235:simplemap_logbin$1807' (const_or) in module `\PCIE_trans' with constant driver `$logic_or$PCIE_trans.v:246$83_Y = 1'1'.
+Replacing $_OR_ cell `$auto$simplemap.cc:235:simplemap_logbin$1808' (const_or) in module `\PCIE_trans' with constant driver `$logic_or$PCIE_trans.v:246$84_Y = 1'1'.
 Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$1810' (1?0) in module `\PCIE_trans' with constant driver `$procmux$234_Y = 1'1'.
 Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$1811' (01?) in module `\PCIE_trans' with constant driver `$0\FIFO_empty[0:0] = \reset_L'.
 Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$1812' (0?1) in module `\PCIE_trans' with constant driver `$procmux$240_Y = \FIFO_error'.
 Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$1813' (?10) in module `\PCIE_trans' with constant driver `$procmux$243_Y = \FIFO_error'.
-Replacing $_MUX_ cell `$techmap\mux1.$auto$simplemap.cc:277:simplemap_mux$1632' (00?) in module `\PCIE_trans' with constant driver `$techmap\mux1.$procmux$399_Y [5] = 1'0'.
-Replacing $_MUX_ cell `$techmap\mux1.$auto$simplemap.cc:277:simplemap_mux$1638' (00?) in module `\PCIE_trans' with constant driver `$techmap\mux1.$procmux$402_Y [5] = 1'0'.
-Replacing $_MUX_ cell `$techmap\mux1.$auto$simplemap.cc:277:simplemap_mux$1644' (00?) in module `\PCIE_trans' with constant driver `$techmap\mux1.$0\dataout[5:0] [5] = 1'0'.
-Replacing $_MUX_ cell `$techmap\mux1.$auto$simplemap.cc:277:simplemap_mux$1631' (00?) in module `\PCIE_trans' with constant driver `$techmap\mux1.$procmux$399_Y [4] = 1'0'.
-Replacing $_MUX_ cell `$techmap\mux1.$auto$simplemap.cc:277:simplemap_mux$1637' (00?) in module `\PCIE_trans' with constant driver `$techmap\mux1.$procmux$402_Y [4] = 1'0'.
-Replacing $_MUX_ cell `$techmap\mux1.$auto$simplemap.cc:277:simplemap_mux$1643' (00?) in module `\PCIE_trans' with constant driver `$techmap\mux1.$0\dataout[5:0] [4] = 1'0'.
-Replacing $_MUX_ cell `$techmap\mux1.$auto$simplemap.cc:277:simplemap_mux$1630' (00?) in module `\PCIE_trans' with constant driver `$techmap\mux1.$procmux$399_Y [3] = 1'0'.
-Replacing $_MUX_ cell `$techmap\mux1.$auto$simplemap.cc:277:simplemap_mux$1636' (00?) in module `\PCIE_trans' with constant driver `$techmap\mux1.$procmux$402_Y [3] = 1'0'.
-Replacing $_MUX_ cell `$techmap\mux1.$auto$simplemap.cc:277:simplemap_mux$1642' (00?) in module `\PCIE_trans' with constant driver `$techmap\mux1.$0\dataout[5:0] [3] = 1'0'.
-Replacing $_MUX_ cell `$techmap\mux1.$auto$simplemap.cc:277:simplemap_mux$1629' (00?) in module `\PCIE_trans' with constant driver `$techmap\mux1.$procmux$399_Y [2] = 1'0'.
-Replacing $_MUX_ cell `$techmap\mux1.$auto$simplemap.cc:277:simplemap_mux$1635' (00?) in module `\PCIE_trans' with constant driver `$techmap\mux1.$procmux$402_Y [2] = 1'0'.
-Replacing $_MUX_ cell `$techmap\mux1.$auto$simplemap.cc:277:simplemap_mux$1641' (00?) in module `\PCIE_trans' with constant driver `$techmap\mux1.$0\dataout[5:0] [2] = 1'0'.
-Replacing $_MUX_ cell `$techmap\mux1.$auto$simplemap.cc:277:simplemap_mux$1628' (00?) in module `\PCIE_trans' with constant driver `$techmap\mux1.$procmux$399_Y [1] = 1'0'.
-Replacing $_MUX_ cell `$techmap\mux1.$auto$simplemap.cc:277:simplemap_mux$1634' (00?) in module `\PCIE_trans' with constant driver `$techmap\mux1.$procmux$402_Y [1] = 1'0'.
-Replacing $_MUX_ cell `$techmap\mux1.$auto$simplemap.cc:277:simplemap_mux$1640' (00?) in module `\PCIE_trans' with constant driver `$techmap\mux1.$0\dataout[5:0] [1] = 1'0'.
 Replacing $_AND_ cell `$techmap\fsm_Control1.$auto$simplemap.cc:85:simplemap_bitop$1605' (const_and) in module `\PCIE_trans' with constant driver `$techmap\fsm_Control1.$procmux$512.B_AND_S [13] = 1'0'.
 Replacing $_AND_ cell `$techmap\fsm_Control1.$auto$simplemap.cc:85:simplemap_bitop$1595' (const_and) in module `\PCIE_trans' with constant driver `$techmap\fsm_Control1.$procmux$512.B_AND_S [3] = 1'0'.
 Replacing $_AND_ cell `$techmap\fsm_Control1.$auto$simplemap.cc:85:simplemap_bitop$1593' (const_and) in module `\PCIE_trans' with constant driver `$techmap\fsm_Control1.$procmux$512.B_AND_S [1] = 1'0'.
@@ -7330,22 +7313,10 @@ Finding identical cells in module `\PCIE_trans'.
   Cell `$techmap\D0Fifo.$auto$simplemap.cc:277:simplemap_mux$1944' is identical to cell `$techmap\D1Fifo.$auto$simplemap.cc:277:simplemap_mux$1944'.
     Redirecting output \Y: $techmap\D0Fifo.$0\pop_int[0:0] = $techmap\D1Fifo.$0\pop_int[0:0]
     Removing $_MUX_ cell `$techmap\D0Fifo.$auto$simplemap.cc:277:simplemap_mux$1944' from module `\PCIE_trans'.
-  Cell `$techmap\mux1.$auto$simplemap.cc:420:simplemap_dff$1653' is identical to cell `$techmap\mux1.$auto$simplemap.cc:420:simplemap_dff$1654'.
-    Redirecting output \Q: \mux1.dataout [3] = \mux1.dataout [4]
-    Removing $_DFF_P_ cell `$techmap\mux1.$auto$simplemap.cc:420:simplemap_dff$1653' from module `\PCIE_trans'.
-  Cell `$techmap\mux1.$auto$simplemap.cc:420:simplemap_dff$1652' is identical to cell `$techmap\mux1.$auto$simplemap.cc:420:simplemap_dff$1654'.
-    Redirecting output \Q: \mux1.dataout [2] = \mux1.dataout [4]
-    Removing $_DFF_P_ cell `$techmap\mux1.$auto$simplemap.cc:420:simplemap_dff$1652' from module `\PCIE_trans'.
-  Cell `$techmap\mux1.$auto$simplemap.cc:420:simplemap_dff$1651' is identical to cell `$techmap\mux1.$auto$simplemap.cc:420:simplemap_dff$1654'.
-    Redirecting output \Q: \mux1.dataout [1] = \mux1.dataout [4]
-    Removing $_DFF_P_ cell `$techmap\mux1.$auto$simplemap.cc:420:simplemap_dff$1651' from module `\PCIE_trans'.
-  Cell `$techmap\mux1.$auto$simplemap.cc:420:simplemap_dff$1655' is identical to cell `$techmap\mux1.$auto$simplemap.cc:420:simplemap_dff$1654'.
-    Redirecting output \Q: \mux1.dataout [5] = \mux1.dataout [4]
-    Removing $_DFF_P_ cell `$techmap\mux1.$auto$simplemap.cc:420:simplemap_dff$1655' from module `\PCIE_trans'.
   Cell `$techmap\D0Fifo.$auto$simplemap.cc:420:simplemap_dff$1950' is identical to cell `$techmap\D1Fifo.$auto$simplemap.cc:420:simplemap_dff$1950'.
     Redirecting output \Q: \D0Fifo.pop_int = \D1Fifo.pop_int
     Removing $_DFF_P_ cell `$techmap\D0Fifo.$auto$simplemap.cc:420:simplemap_dff$1950' from module `\PCIE_trans'.
-Removed a total of 6 cells.
+Removed a total of 2 cells.
 
 12.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
 Running muxtree optimizer on module \PCIE_trans..
@@ -7362,93 +7333,23 @@ Finding identical cells in module `\PCIE_trans'.
 Removed a total of 0 cells.
 
 12.6. Executing OPT_RMDFF pass (remove dff with constant values).
-Removing $techmap\mux1.$auto$simplemap.cc:420:simplemap_dff$1654 ($_DFF_P_) from module PCIE_trans.
-Replaced 1 DFF cells.
 
 12.7. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \PCIE_trans..
-  removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1835'.
-  removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1830'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2937'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2938'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2939'.
-  removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1836'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2940'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1866'.
-  removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1834'.
-  removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1831'.
-  removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1833'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1901'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1853'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2941'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2942'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1868'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2943'.
-  removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1827'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2944'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2945'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1867'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1865'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1904'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1903'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1902'.
-  removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1829'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1900'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1896'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1895'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1892'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1888'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1886'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1894'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1893'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1887'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1864'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1858'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1862'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1861'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1854'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1860'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1859'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2946'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2947'.
-  removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1828'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2948'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2949'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2950'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1884'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1885'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1879'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1870'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1866'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1858'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1854'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1852'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1850'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1851'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1847'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1845'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1846'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1877'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1874'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1864'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1880'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1871'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1867'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1861'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1873'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1872'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1878'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1876'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1868'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1860'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1865'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1862'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1843'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1844'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1853'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1859'.
-  removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1906'.
-  removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1837'.
   removing unused `$_OR_' cell `$auto$simplemap.cc:235:simplemap_logbin$1805'.
   removing unused `$_OR_' cell `$auto$simplemap.cc:235:simplemap_logbin$1806'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2951'.
@@ -7456,10 +7357,6 @@ Finding unused cells or wires in module \PCIE_trans..
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2953'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2954'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2955'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2987'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2988'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2989'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2990'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2956'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2957'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2958'.
@@ -7487,13 +7384,8 @@ Finding unused cells or wires in module \PCIE_trans..
   removing unused `$_DFF_P_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:420:simplemap_dff$3013'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2968'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2969'.
-  removing unused `$_DFF_P_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:420:simplemap_dff$3017'.
-  removing unused `$_DFF_P_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:420:simplemap_dff$3018'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2970'.
-  removing unused `$_DFF_P_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:420:simplemap_dff$3019'.
-  removing unused `$_DFF_P_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:420:simplemap_dff$3020'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2971'.
-  removing unused `$_DFF_P_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:420:simplemap_dff$3021'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2972'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2973'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2974'.
@@ -7515,7 +7407,6 @@ Finding unused cells or wires in module \PCIE_trans..
   removing unused `$_AND_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:85:simplemap_bitop$4171'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2983'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2984'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2986'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2926'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2925'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2924'.
@@ -7542,12 +7433,6 @@ Finding unused cells or wires in module \PCIE_trans..
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2891'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2888'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.$auto$simplemap.cc:277:simplemap_mux$2887'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1877'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1878'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1880'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1885'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1886'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1887'.
   removing unused `$_AND_' cell `$techmap\VC0Fifo.$auto$simplemap.cc:85:simplemap_bitop$4171'.
   removing unused `$_AND_' cell `$techmap\VC0Fifo.$auto$simplemap.cc:85:simplemap_bitop$4103'.
   removing unused `$_AND_' cell `$techmap\VC0Fifo.$auto$simplemap.cc:85:simplemap_bitop$4029'.
@@ -7557,13 +7442,8 @@ Finding unused cells or wires in module \PCIE_trans..
   removing unused `$_XOR_' cell `$techmap\VC0Fifo.$auto$simplemap.cc:85:simplemap_bitop$3357'.
   removing unused `$_XOR_' cell `$techmap\VC0Fifo.$auto$simplemap.cc:85:simplemap_bitop$3356'.
   removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.$auto$simplemap.cc:420:simplemap_dff$3013'.
-  removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.$auto$simplemap.cc:420:simplemap_dff$3021'.
-  removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.$auto$simplemap.cc:420:simplemap_dff$3020'.
-  removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.$auto$simplemap.cc:420:simplemap_dff$3019'.
   removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.$auto$simplemap.cc:420:simplemap_dff$3011'.
-  removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.$auto$simplemap.cc:420:simplemap_dff$3018'.
   removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.$auto$simplemap.cc:420:simplemap_dff$3010'.
-  removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.$auto$simplemap.cc:420:simplemap_dff$3017'.
   removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.$auto$simplemap.cc:420:simplemap_dff$3009'.
   removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.$auto$simplemap.cc:420:simplemap_dff$3008'.
   removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.$auto$simplemap.cc:420:simplemap_dff$3007'.
@@ -7572,14 +7452,8 @@ Finding unused cells or wires in module \PCIE_trans..
   removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.$auto$simplemap.cc:420:simplemap_dff$3004'.
   removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.$auto$simplemap.cc:420:simplemap_dff$3000'.
   removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.$auto$simplemap.cc:420:simplemap_dff$2999'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1888'.
   removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.$auto$simplemap.cc:420:simplemap_dff$2996'.
   removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.$auto$simplemap.cc:420:simplemap_dff$2995'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.$auto$simplemap.cc:277:simplemap_mux$2990'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.$auto$simplemap.cc:277:simplemap_mux$2989'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.$auto$simplemap.cc:277:simplemap_mux$2988'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.$auto$simplemap.cc:277:simplemap_mux$2987'.
-  removing unused `$_MUX_' cell `$techmap\VC0Fifo.$auto$simplemap.cc:277:simplemap_mux$2986'.
   removing unused `$_MUX_' cell `$techmap\VC0Fifo.$auto$simplemap.cc:277:simplemap_mux$2984'.
   removing unused `$_MUX_' cell `$techmap\VC0Fifo.$auto$simplemap.cc:277:simplemap_mux$2983'.
   removing unused `$_MUX_' cell `$techmap\VC0Fifo.$auto$simplemap.cc:277:simplemap_mux$2982'.
@@ -7654,99 +7528,6 @@ Finding unused cells or wires in module \PCIE_trans..
   removing unused `$_MUX_' cell `$techmap\VC0Fifo.$auto$simplemap.cc:277:simplemap_mux$2891'.
   removing unused `$_MUX_' cell `$techmap\VC0Fifo.$auto$simplemap.cc:277:simplemap_mux$2888'.
   removing unused `$_MUX_' cell `$techmap\VC0Fifo.$auto$simplemap.cc:277:simplemap_mux$2887'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1902'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1871'.
-  removing unused `$_DFF_P_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1830'.
-  removing unused `$_DFF_P_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1829'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1896'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1903'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1884'.
-  removing unused `$_DFF_P_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1828'.
-  removing unused `$_DFF_P_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1827'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1894'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1872'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1876'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1895'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1900'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1901'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1904'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1893'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1879'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1874'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1873'.
-  removing unused `$_DFF_P_' cell `$techmap\demux1.$auto$simplemap.cc:420:simplemap_dff$1791'.
-  removing unused `$_DFF_P_' cell `$techmap\demux1.$auto$simplemap.cc:420:simplemap_dff$1790'.
-  removing unused `$_DFF_P_' cell `$techmap\demux1.$auto$simplemap.cc:420:simplemap_dff$1789'.
-  removing unused `$_DFF_P_' cell `$techmap\demux1.$auto$simplemap.cc:420:simplemap_dff$1788'.
-  removing unused `$_DFF_P_' cell `$techmap\demux1.$auto$simplemap.cc:420:simplemap_dff$1787'.
-  removing unused `$_DFF_P_' cell `$techmap\demux1.$auto$simplemap.cc:420:simplemap_dff$1785'.
-  removing unused `$_DFF_P_' cell `$techmap\demux1.$auto$simplemap.cc:420:simplemap_dff$1784'.
-  removing unused `$_DFF_P_' cell `$techmap\demux1.$auto$simplemap.cc:420:simplemap_dff$1783'.
-  removing unused `$_DFF_P_' cell `$techmap\demux1.$auto$simplemap.cc:420:simplemap_dff$1782'.
-  removing unused `$_DFF_P_' cell `$techmap\demux1.$auto$simplemap.cc:420:simplemap_dff$1781'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1778'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1777'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1776'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1775'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1774'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1772'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1771'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1770'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1769'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1768'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1766'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1765'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1764'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1763'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1762'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1760'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1759'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1758'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1757'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1756'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1754'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1753'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1752'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1751'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1750'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1748'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1747'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1746'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1745'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1744'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1742'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1741'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1740'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1739'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1738'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1736'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1735'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1734'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1733'.
-  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1732'.
-  removing unused `$_DFF_P_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1830'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1901'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1892'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1872'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1865'.
-  removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1907'.
-  removing unused `$_DFF_P_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1914'.
-  removing unused `$_DFF_P_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1834'.
-  removing unused `$_DFF_P_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1827'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1887'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1852'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1844'.
-  removing unused `$_DFF_P_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1909'.
-  removing unused `$_DFF_P_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1833'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1895'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1878'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1859'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1851'.
-  removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1914'.
-  removing unused `$_DFF_P_' cell `$techmap\MainFifo.$auto$simplemap.cc:420:simplemap_dff$4418'.
-  removing unused `$_DFF_P_' cell `$techmap\MainFifo.$auto$simplemap.cc:420:simplemap_dff$4417'.
-  removing unused `$_DFF_P_' cell `$techmap\MainFifo.$auto$simplemap.cc:420:simplemap_dff$4416'.
-  removing unused `$_DFF_P_' cell `$techmap\MainFifo.$auto$simplemap.cc:420:simplemap_dff$4415'.
   removing unused `$_DFF_P_' cell `$techmap\MainFifo.$auto$simplemap.cc:420:simplemap_dff$4411'.
   removing unused `$_DFF_P_' cell `$techmap\MainFifo.$auto$simplemap.cc:420:simplemap_dff$4410'.
   removing unused `$_DFF_P_' cell `$techmap\MainFifo.$auto$simplemap.cc:420:simplemap_dff$4408'.
@@ -7754,10 +7535,6 @@ Finding unused cells or wires in module \PCIE_trans..
   removing unused `$_DFF_P_' cell `$techmap\MainFifo.$auto$simplemap.cc:420:simplemap_dff$4406'.
   removing unused `$_DFF_P_' cell `$techmap\MainFifo.$auto$simplemap.cc:420:simplemap_dff$4405'.
   removing unused `$_DFF_P_' cell `$techmap\MainFifo.$auto$simplemap.cc:420:simplemap_dff$4404'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.$auto$simplemap.cc:277:simplemap_mux$4393'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.$auto$simplemap.cc:277:simplemap_mux$4392'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.$auto$simplemap.cc:277:simplemap_mux$4391'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.$auto$simplemap.cc:277:simplemap_mux$4390'.
   removing unused `$_MUX_' cell `$techmap\MainFifo.$auto$simplemap.cc:277:simplemap_mux$4388'.
   removing unused `$_MUX_' cell `$techmap\MainFifo.$auto$simplemap.cc:277:simplemap_mux$4387'.
   removing unused `$_MUX_' cell `$techmap\MainFifo.$auto$simplemap.cc:277:simplemap_mux$4386'.
@@ -7808,57 +7585,6 @@ Finding unused cells or wires in module \PCIE_trans..
   removing unused `$_MUX_' cell `$techmap\MainFifo.$auto$simplemap.cc:277:simplemap_mux$4329'.
   removing unused `$_MUX_' cell `$techmap\MainFifo.$auto$simplemap.cc:277:simplemap_mux$4328'.
   removing unused `$_MUX_' cell `$techmap\MainFifo.$auto$simplemap.cc:277:simplemap_mux$4327'.
-  removing unused `$_DFF_P_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1915'.
-  removing unused `$_DFF_P_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1835'.
-  removing unused `$_DFF_P_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1828'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1870'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1853'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1845'.
-  removing unused `$_DFF_P_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1836'.
-  removing unused `$_DFF_P_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1829'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1900'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1871'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1864'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1846'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1892'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1870'.
-  removing unused `$_DFF_P_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1908'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1877'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1858'.
-  removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1913'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1879'.
-  removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1915'.
-  removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1916'.
-  removing unused `$_DFF_P_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1913'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1886'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1861'.
-  removing unused `$_DFF_P_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1912'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1885'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1843'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1884'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1860'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1894'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1867'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1850'.
-  removing unused `$_DFF_P_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1907'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1903'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1876'.
-  removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1912'.
-  removing unused `$_DFF_P_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1906'.
-  removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1910'.
-  removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1909'.
-  removing unused `$_DFF_P_' cell `$techmap\VC0Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1908'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1873'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1902'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1893'.
-  removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1866'.
-  removing unused `$_DFF_P_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1906'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1852'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1851'.
-  removing unused `$_DFF_P_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1908'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1850'.
-  removing unused `$_DFF_P_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1912'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1847'.
   removing unused `$_AND_' cell `$techmap\fsm_Control1.$auto$simplemap.cc:85:simplemap_bitop$1604'.
   removing unused `$_AND_' cell `$techmap\fsm_Control1.$auto$simplemap.cc:85:simplemap_bitop$1600'.
   removing unused `$_AND_' cell `$techmap\fsm_Control1.$auto$simplemap.cc:85:simplemap_bitop$1603'.
@@ -7910,23 +7636,6 @@ Finding unused cells or wires in module \PCIE_trans..
   removing unused `$_MUX_' cell `$techmap\fsm_Control1.$auto$simplemap.cc:277:simplemap_mux$1364'.
   removing unused `$_MUX_' cell `$techmap\fsm_Control1.$auto$simplemap.cc:277:simplemap_mux$1363'.
   removing unused `$_MUX_' cell `$techmap\fsm_Control1.$auto$simplemap.cc:277:simplemap_mux$1362'.
-  removing unused `$_DFF_P_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1833'.
-  removing unused `$_DFF_P_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1831'.
-  removing unused `$_DFF_P_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1913'.
-  removing unused `$_DFF_P_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1834'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1846'.
-  removing unused `$_DFF_P_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1907'.
-  removing unused `$_DFF_P_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1915'.
-  removing unused `$_DFF_P_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1916'.
-  removing unused `$_DFF_P_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1836'.
-  removing unused `$_DFF_P_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1835'.
-  removing unused `$_DFF_P_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1914'.
-  removing unused `$_DFF_P_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1910'.
-  removing unused `$_DFF_P_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1837'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1845'.
-  removing unused `$_DFF_P_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1909'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1844'.
-  removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1843'.
   removing unused non-port wire \fsm_Control1.Umbrales_I.
   removing unused non-port wire \fsm_Control1.Umbral_VC1.
   removing unused non-port wire \fsm_Control1.Umbral_VC0.
@@ -8001,23 +7710,6 @@ Finding unused cells or wires in module \PCIE_trans..
   removed 71 unused temporary wires.
 
 12.8. Executing OPT_EXPR pass (perform const folding).
-Replacing $_MUX_ cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1710' (00?) in module `\PCIE_trans' with constant driver `\Demux_D0_D1.selectorL1 = 1'0'.
-Replacing $_MUX_ cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1691' (0?0) in module `\PCIE_trans' with constant driver `$techmap\Demux_D0_D1.$procmux$382_Y [5] = 1'0'.
-Replacing $_MUX_ cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1690' (0?0) in module `\PCIE_trans' with constant driver `$techmap\Demux_D0_D1.$procmux$382_Y [4] = 1'0'.
-Replacing $_MUX_ cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1689' (0?0) in module `\PCIE_trans' with constant driver `$techmap\Demux_D0_D1.$procmux$382_Y [3] = 1'0'.
-Replacing $_MUX_ cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1688' (0?0) in module `\PCIE_trans' with constant driver `$techmap\Demux_D0_D1.$procmux$382_Y [2] = 1'0'.
-Replacing $_MUX_ cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1687' (0?0) in module `\PCIE_trans' with constant driver `$techmap\Demux_D0_D1.$procmux$382_Y [1] = 1'0'.
-Replacing $_MUX_ cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1686' (??0) in module `\PCIE_trans' with constant driver `$techmap\Demux_D0_D1.$procmux$382_Y [0] = \mux1.dataout [0]'.
-Replacing $_MUX_ cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1667' (?00) in module `\PCIE_trans' with constant driver `$techmap\Demux_D0_D1.$procmux$367_Y [5] = \Demux_D0_D1.dataout1 [5]'.
-Replacing $_MUX_ cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1666' (?00) in module `\PCIE_trans' with constant driver `$techmap\Demux_D0_D1.$procmux$367_Y [4] = \Demux_D0_D1.dataout1 [4]'.
-Replacing $_MUX_ cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1665' (?00) in module `\PCIE_trans' with constant driver `$techmap\Demux_D0_D1.$procmux$367_Y [3] = \Demux_D0_D1.dataout1 [3]'.
-Replacing $_MUX_ cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1664' (?00) in module `\PCIE_trans' with constant driver `$techmap\Demux_D0_D1.$procmux$367_Y [2] = \Demux_D0_D1.dataout1 [2]'.
-Replacing $_MUX_ cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1663' (?00) in module `\PCIE_trans' with constant driver `$techmap\Demux_D0_D1.$procmux$367_Y [1] = \Demux_D0_D1.dataout1 [1]'.
-Replacing $_MUX_ cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1662' (??0) in module `\PCIE_trans' with constant driver `$techmap\Demux_D0_D1.$procmux$367_Y [0] = \Demux_D0_D1.dataout1 [0]'.
-Replacing $_NOT_ cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1659' (0) in module `\PCIE_trans' with constant driver `$techmap\Demux_D0_D1.$procmux$352_Y = 1'1'.
-Replacing $_MUX_ cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1660' (01?) in module `\PCIE_trans' with constant driver `$techmap\Demux_D0_D1.$procmux$360_Y = \mux1.valid_out'.
-Replacing $_MUX_ cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1657' (00?) in module `\PCIE_trans' with constant driver `$techmap\Demux_D0_D1.$procmux$345_Y = 1'0'.
-Replacing $_MUX_ cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1658' (00?) in module `\PCIE_trans' with constant driver `$techmap\Demux_D0_D1.$0\valid_1[0:0] = 1'0'.
 
 12.9. Rerunning OPT passes. (Maybe there is more to do..)
 
@@ -8036,223 +7728,13 @@ Finding identical cells in module `\PCIE_trans'.
 Removed a total of 0 cells.
 
 12.13. Executing OPT_RMDFF pass (remove dff with constant values).
-Removing $techmap\Demux_D0_D1.$auto$simplemap.cc:420:simplemap_dff$1724 ($_DFF_P_) from module PCIE_trans.
-Replaced 1 DFF cells.
 
 12.14. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \PCIE_trans..
-  removing unused non-port wire \D1Fifo.push.
-  removing unused non-port wire \Demux_D0_D1.selectorL1.
-  removing unused non-port wire \Demux_D0_D1.valid_1.
-  removing unused non-port wire \push_D1.
-  removed 4 unused temporary wires.
 
 12.15. Executing OPT_EXPR pass (perform const folding).
-Replacing $_MUX_ cell `$techmap\D1Fifo.$auto$simplemap.cc:277:simplemap_mux$1943' (00?) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.$0\push_int[0:0] = 1'0'.
-Replacing $_AND_ cell `$techmap\D1Fifo.$auto$simplemap.cc:235:simplemap_logbin$1933' (const_and) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.$logic_and$fifo.v:466$103_Y = 1'0'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.$auto$simplemap.cc:277:simplemap_mux$1924' (??0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.$procmux$174_Y [1] = \D1Fifo.wr_ptr [1]'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.$auto$simplemap.cc:277:simplemap_mux$1922' (???) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.$procmux$177_Y [1] = \D1Fifo.wr_ptr [1]'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.$auto$simplemap.cc:277:simplemap_mux$1920' (??0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.$procmux$180_Y [1] = \D1Fifo.wr_ptr [1]'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.$auto$simplemap.cc:277:simplemap_mux$1923' (??0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.$procmux$174_Y [0] = \D1Fifo.wr_ptr [0]'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.$auto$simplemap.cc:277:simplemap_mux$1921' (???) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.$procmux$177_Y [0] = \D1Fifo.wr_ptr [0]'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.$auto$simplemap.cc:277:simplemap_mux$1919' (??0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.$procmux$180_Y [0] = \D1Fifo.wr_ptr [0]'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.$auto$simplemap.cc:277:simplemap_mux$1918' (??0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.$procmux$162_Y [1] = \D1Fifo.rd_ptr [1]'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.$auto$simplemap.cc:277:simplemap_mux$1917' (??0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.$procmux$162_Y [0] = \D1Fifo.rd_ptr [0]'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.$auto$simplemap.cc:277:simplemap_mux$1928' (??0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.$procmux$168_Y [1] = $techmap\D1Fifo.$procmux$165_Y [1]'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.$auto$simplemap.cc:277:simplemap_mux$1927' (??0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.$procmux$168_Y [0] = $techmap\D1Fifo.$procmux$165_Y [0]'.
-Replacing $_MUX_ cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1673' (0?0) in module `\PCIE_trans' with constant driver `$techmap\Demux_D0_D1.$procmux$373_Y [5] = 1'0'.
-Replacing $_MUX_ cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1672' (0?0) in module `\PCIE_trans' with constant driver `$techmap\Demux_D0_D1.$procmux$373_Y [4] = 1'0'.
-Replacing $_MUX_ cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1671' (0?0) in module `\PCIE_trans' with constant driver `$techmap\Demux_D0_D1.$procmux$373_Y [3] = 1'0'.
-Replacing $_MUX_ cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1670' (0?0) in module `\PCIE_trans' with constant driver `$techmap\Demux_D0_D1.$procmux$373_Y [2] = 1'0'.
-Replacing $_MUX_ cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1669' (0?0) in module `\PCIE_trans' with constant driver `$techmap\Demux_D0_D1.$procmux$373_Y [1] = 1'0'.
-Replacing $_MUX_ cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1668' (0?0) in module `\PCIE_trans' with constant driver `$techmap\Demux_D0_D1.$procmux$373_Y [0] = 1'0'.
 
-12.16. Rerunning OPT passes. (Maybe there is more to do..)
-
-12.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
-Running muxtree optimizer on module \PCIE_trans..
-  Creating internal representation of mux trees.
-  No muxes found in this module.
-Removed 0 multiplexer ports.
-
-12.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
-  Optimizing cells in module \PCIE_trans.
-Performed a total of 0 changes.
-
-12.19. Executing OPT_MERGE pass (detect identical cells).
-Finding identical cells in module `\PCIE_trans'.
-Removed a total of 0 cells.
-
-12.20. Executing OPT_RMDFF pass (remove dff with constant values).
-Removing $techmap\D1Fifo.$auto$simplemap.cc:420:simplemap_dff$1949 ($_DFF_P_) from module PCIE_trans.
-Replaced 1 DFF cells.
-
-12.21. Executing OPT_CLEAN pass (remove unused cells and wires).
-Finding unused cells or wires in module \PCIE_trans..
-  removing unused `$_XOR_' cell `$techmap\D1Fifo.$auto$simplemap.cc:85:simplemap_bitop$1995'.
-  removing unused `$_XOR_' cell `$techmap\D1Fifo.$auto$simplemap.cc:85:simplemap_bitop$1962'.
-  removing unused non-port wire \D1Fifo.memoria.iWriteEnable.
-  removing unused non-port wire \D1Fifo.push_int.
-  removed 2 unused temporary wires.
-
-12.22. Executing OPT_EXPR pass (perform const folding).
-Replacing $_MUX_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1856' (x?0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$0$memwr$\Ram$dual_port_memory.v:18$85_ADDR[1:0]$87 [1] = 1'x'.
-Replacing $_NOT_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:37:simplemap_not$1840' (x) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$auto$rtlil.cc:1641:Eq$1116 = 1'x'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1855' (x?0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$0$memwr$\Ram$dual_port_memory.v:18$85_ADDR[1:0]$87 [0] = 1'x'.
-Replacing $_NOT_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:37:simplemap_not$1841' (x) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$auto$rtlil.cc:1641:Eq$1114 = 1'x'.
-Replacing $_AND_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:85:simplemap_bitop$1839' (xx) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$auto$rtlil.cc:1629:And$1118 = 1'x'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1851' (x?0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$0$memwr$\Ram$dual_port_memory.v:18$85_DATA[5:0]$88 [2] = 1'x'.
-Replacing $_AND_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:85:simplemap_bitop$1898' (xx) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$auto$rtlil.cc:1629:And$1126 = 1'x'.
-Replacing $_AND_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:85:simplemap_bitop$1897' (const_and) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$memory\Ram$wren[1][0][0]$y$1128 = 1'0'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1893' (?x0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$memory\Ram$wrmux[1][0][0]$y$1130 [2] = \D1Fifo.memoria.Ram[1] [2]'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1850' (x?0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$0$memwr$\Ram$dual_port_memory.v:18$85_DATA[5:0]$88 [1] = 1'x'.
-Replacing $_AND_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:85:simplemap_bitop$1890' (xx) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$auto$rtlil.cc:1629:And$1134 = 1'x'.
-Replacing $_AND_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:85:simplemap_bitop$1889' (const_and) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$memory\Ram$wren[2][0][0]$y$1136 = 1'0'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1884' (?x0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$memory\Ram$wrmux[2][0][0]$y$1138 [1] = \D1Fifo.memoria.Ram[2] [1]'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1852' (x?0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$0$memwr$\Ram$dual_port_memory.v:18$85_DATA[5:0]$88 [3] = 1'x'.
-Replacing $_AND_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:85:simplemap_bitop$1838' (const_and) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$memory\Ram$wren[0][0][0]$y$1120 = 1'0'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1902' (?x0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$memory\Ram$wrmux[0][0][0]$y$1122 [3] = \D1Fifo.memoria.Ram[0] [3]'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1854' (x?0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$0$memwr$\Ram$dual_port_memory.v:18$85_DATA[5:0]$88 [5] = 1'x'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1888' (?x0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$memory\Ram$wrmux[2][0][0]$y$1138 [5] = \D1Fifo.memoria.Ram[2] [5]'.
-Replacing $_AND_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:85:simplemap_bitop$1882' (xx) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$auto$rtlil.cc:1629:And$1140 = 1'x'.
-Replacing $_AND_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:85:simplemap_bitop$1881' (const_and) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$memory\Ram$wren[3][0][0]$y$1142 = 1'0'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1853' (x?0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$0$memwr$\Ram$dual_port_memory.v:18$85_DATA[5:0]$88 [4] = 1'x'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1879' (?x0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$memory\Ram$wrmux[3][0][0]$y$1144 [4] = \D1Fifo.memoria.Ram[3] [4]'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1849' (x?0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$0$memwr$\Ram$dual_port_memory.v:18$85_DATA[5:0]$88 [0] = 1'x'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1899' (?x0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$memory\Ram$wrmux[0][0][0]$y$1122 [0] = \D1Fifo.memoria.Ram[0] [0]'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1887' (?x0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$memory\Ram$wrmux[2][0][0]$y$1138 [4] = \D1Fifo.memoria.Ram[2] [4]'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1903' (?x0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$memory\Ram$wrmux[0][0][0]$y$1122 [4] = \D1Fifo.memoria.Ram[0] [4]'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1891' (?x0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$memory\Ram$wrmux[1][0][0]$y$1130 [0] = \D1Fifo.memoria.Ram[1] [0]'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1880' (?x0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$memory\Ram$wrmux[3][0][0]$y$1144 [5] = \D1Fifo.memoria.Ram[3] [5]'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1904' (?x0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$memory\Ram$wrmux[0][0][0]$y$1122 [5] = \D1Fifo.memoria.Ram[0] [5]'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1892' (?x0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$memory\Ram$wrmux[1][0][0]$y$1130 [1] = \D1Fifo.memoria.Ram[1] [1]'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1883' (?x0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$memory\Ram$wrmux[2][0][0]$y$1138 [0] = \D1Fifo.memoria.Ram[2] [0]'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1896' (?x0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$memory\Ram$wrmux[1][0][0]$y$1130 [5] = \D1Fifo.memoria.Ram[1] [5]'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1875' (?x0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$memory\Ram$wrmux[3][0][0]$y$1144 [0] = \D1Fifo.memoria.Ram[3] [0]'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1901' (?x0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$memory\Ram$wrmux[0][0][0]$y$1122 [2] = \D1Fifo.memoria.Ram[0] [2]'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1878' (?x0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$memory\Ram$wrmux[3][0][0]$y$1144 [3] = \D1Fifo.memoria.Ram[3] [3]'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1877' (?x0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$memory\Ram$wrmux[3][0][0]$y$1144 [2] = \D1Fifo.memoria.Ram[3] [2]'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1876' (?x0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$memory\Ram$wrmux[3][0][0]$y$1144 [1] = \D1Fifo.memoria.Ram[3] [1]'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1900' (?x0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$memory\Ram$wrmux[0][0][0]$y$1122 [1] = \D1Fifo.memoria.Ram[0] [1]'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1886' (?x0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$memory\Ram$wrmux[2][0][0]$y$1138 [3] = \D1Fifo.memoria.Ram[2] [3]'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1895' (?x0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$memory\Ram$wrmux[1][0][0]$y$1130 [4] = \D1Fifo.memoria.Ram[1] [4]'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1894' (?x0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$memory\Ram$wrmux[1][0][0]$y$1130 [3] = \D1Fifo.memoria.Ram[1] [3]'.
-Replacing $_MUX_ cell `$techmap\D1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1885' (?x0) in module `\PCIE_trans' with constant driver `$techmap\D1Fifo.memoria.$memory\Ram$wrmux[2][0][0]$y$1138 [2] = \D1Fifo.memoria.Ram[2] [2]'.
-
-12.23. Rerunning OPT passes. (Maybe there is more to do..)
-
-12.24. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
-Running muxtree optimizer on module \PCIE_trans..
-  Creating internal representation of mux trees.
-  No muxes found in this module.
-Removed 0 multiplexer ports.
-
-12.25. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
-  Optimizing cells in module \PCIE_trans.
-Performed a total of 0 changes.
-
-12.26. Executing OPT_MERGE pass (detect identical cells).
-Finding identical cells in module `\PCIE_trans'.
-Removed a total of 0 cells.
-
-12.27. Executing OPT_RMDFF pass (remove dff with constant values).
-Removing $techmap\D1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1826 ($_DFF_P_) from module PCIE_trans.
-Removing $techmap\D1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1827 ($_DFF_P_) from module PCIE_trans.
-Removing $techmap\D1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1828 ($_DFF_P_) from module PCIE_trans.
-Removing $techmap\D1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1829 ($_DFF_P_) from module PCIE_trans.
-Removing $techmap\D1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1830 ($_DFF_P_) from module PCIE_trans.
-Removing $techmap\D1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1831 ($_DFF_P_) from module PCIE_trans.
-Removing $techmap\D1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1832 ($_DFF_P_) from module PCIE_trans.
-Removing $techmap\D1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1833 ($_DFF_P_) from module PCIE_trans.
-Removing $techmap\D1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1834 ($_DFF_P_) from module PCIE_trans.
-Removing $techmap\D1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1835 ($_DFF_P_) from module PCIE_trans.
-Removing $techmap\D1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1836 ($_DFF_P_) from module PCIE_trans.
-Removing $techmap\D1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1837 ($_DFF_P_) from module PCIE_trans.
-Removing $techmap\D1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1905 ($_DFF_P_) from module PCIE_trans.
-Removing $techmap\D1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1906 ($_DFF_P_) from module PCIE_trans.
-Removing $techmap\D1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1907 ($_DFF_P_) from module PCIE_trans.
-Removing $techmap\D1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1908 ($_DFF_P_) from module PCIE_trans.
-Removing $techmap\D1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1909 ($_DFF_P_) from module PCIE_trans.
-Removing $techmap\D1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1910 ($_DFF_P_) from module PCIE_trans.
-Removing $techmap\D1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1911 ($_DFF_P_) from module PCIE_trans.
-Removing $techmap\D1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1912 ($_DFF_P_) from module PCIE_trans.
-Removing $techmap\D1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1913 ($_DFF_P_) from module PCIE_trans.
-Removing $techmap\D1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1914 ($_DFF_P_) from module PCIE_trans.
-Removing $techmap\D1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1915 ($_DFF_P_) from module PCIE_trans.
-Removing $techmap\D1Fifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1916 ($_DFF_P_) from module PCIE_trans.
-Replaced 24 DFF cells.
-
-12.28. Executing OPT_CLEAN pass (remove unused cells and wires).
-Finding unused cells or wires in module \PCIE_trans..
-  removing unused `$_DFF_P_' cell `$techmap\D1Fifo.$auto$simplemap.cc:420:simplemap_dff$1955'.
-  removing unused `$_DFF_P_' cell `$techmap\D1Fifo.$auto$simplemap.cc:420:simplemap_dff$1956'.
-  removing unused `$_DFF_P_' cell `$techmap\D1Fifo.$auto$simplemap.cc:420:simplemap_dff$1954'.
-  removing unused `$_DFF_P_' cell `$techmap\D1Fifo.$auto$simplemap.cc:420:simplemap_dff$1953'.
-  removing unused `$_DFF_P_' cell `$techmap\D1Fifo.$auto$simplemap.cc:420:simplemap_dff$1952'.
-  removing unused `$_DFF_P_' cell `$techmap\D1Fifo.$auto$simplemap.cc:420:simplemap_dff$1951'.
-  removing unused `$_DFF_P_' cell `$techmap\D1Fifo.$auto$simplemap.cc:420:simplemap_dff$1948'.
-  removing unused `$_DFF_P_' cell `$techmap\D1Fifo.$auto$simplemap.cc:420:simplemap_dff$1947'.
-  removing unused `$_MUX_' cell `$techmap\D1Fifo.$auto$simplemap.cc:277:simplemap_mux$1942'.
-  removing unused `$_MUX_' cell `$techmap\D1Fifo.$auto$simplemap.cc:277:simplemap_mux$1941'.
-  removing unused `$_MUX_' cell `$techmap\D1Fifo.$auto$simplemap.cc:277:simplemap_mux$1940'.
-  removing unused `$_MUX_' cell `$techmap\D1Fifo.$auto$simplemap.cc:277:simplemap_mux$1939'.
-  removing unused `$_MUX_' cell `$techmap\D1Fifo.$auto$simplemap.cc:277:simplemap_mux$1938'.
-  removing unused `$_MUX_' cell `$techmap\D1Fifo.$auto$simplemap.cc:277:simplemap_mux$1937'.
-  removing unused `$_MUX_' cell `$techmap\D1Fifo.$auto$simplemap.cc:277:simplemap_mux$1932'.
-  removing unused `$_MUX_' cell `$techmap\D1Fifo.$auto$simplemap.cc:277:simplemap_mux$1931'.
-  removing unused `$_DFF_P_' cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:420:simplemap_dff$1722'.
-  removing unused `$_DFF_P_' cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:420:simplemap_dff$1721'.
-  removing unused `$_DFF_P_' cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:420:simplemap_dff$1720'.
-  removing unused `$_DFF_P_' cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:420:simplemap_dff$1719'.
-  removing unused `$_DFF_P_' cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:420:simplemap_dff$1718'.
-  removing unused `$_DFF_P_' cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:420:simplemap_dff$1717'.
-  removing unused `$_MUX_' cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1685'.
-  removing unused `$_MUX_' cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1684'.
-  removing unused `$_MUX_' cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1683'.
-  removing unused `$_MUX_' cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1682'.
-  removing unused `$_MUX_' cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1681'.
-  removing unused `$_MUX_' cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1680'.
-  removing unused `$_MUX_' cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1679'.
-  removing unused `$_MUX_' cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1678'.
-  removing unused `$_MUX_' cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1677'.
-  removing unused `$_MUX_' cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1676'.
-  removing unused `$_MUX_' cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1675'.
-  removing unused `$_MUX_' cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1674'.
-  removing unused non-port wire \D1Fifo.Fifo_Data_in.
-  removing unused non-port wire \D1Fifo.Fifo_Data_in_int.
-  removing unused non-port wire \D1Fifo.memoria.iDataIn.
-  removing unused non-port wire \D1Fifo.memoria.iWriteAddress.
-  removing unused non-port wire \D1Fifo.wr_ptr.
-  removing unused non-port wire \Demux_D0_D1.dataout1.
-  removing unused non-port wire \data_in_D1.
-  removed 7 unused temporary wires.
-
-12.29. Executing OPT_EXPR pass (perform const folding).
-
-12.30. Rerunning OPT passes. (Maybe there is more to do..)
-
-12.31. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
-Running muxtree optimizer on module \PCIE_trans..
-  Creating internal representation of mux trees.
-  No muxes found in this module.
-Removed 0 multiplexer ports.
-
-12.32. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
-  Optimizing cells in module \PCIE_trans.
-Performed a total of 0 changes.
-
-12.33. Executing OPT_MERGE pass (detect identical cells).
-Finding identical cells in module `\PCIE_trans'.
-Removed a total of 0 cells.
-
-12.34. Executing OPT_RMDFF pass (remove dff with constant values).
-
-12.35. Executing OPT_CLEAN pass (remove unused cells and wires).
-Finding unused cells or wires in module \PCIE_trans..
-
-12.36. Executing OPT_EXPR pass (perform const folding).
-
-12.37. Finished OPT passes. (There is nothing left to do.)
+12.16. Finished OPT passes. (There is nothing left to do.)
 
 13. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \PCIE_trans..
@@ -8270,17 +7752,22 @@ Finding unused cells or wires in module \PCIE_trans..
   removing unused non-port wire \D1Fifo.Fifo_Data_out.
   removing unused non-port wire \D1Fifo.clk.
   removing unused non-port wire \D1Fifo.memoria.Clock.
+  removing unused non-port wire \D1Fifo.memoria.iDataIn.
   removing unused non-port wire \D1Fifo.memoria.iReadEnable.
   removing unused non-port wire \D1Fifo.memoria.oDataOut.
   removing unused non-port wire \D1Fifo.pop.
   removing unused non-port wire \D1Fifo.pop_int.
+  removing unused non-port wire \D1Fifo.push_int.
   removing unused non-port wire \D1Fifo.rd_ptr.
   removing unused non-port wire \D1Fifo.reset_L.
   removing unused non-port wire \D1Fifo.valid_out.
+  removing unused non-port wire \D1Fifo.wr_ptr.
   removing unused non-port wire \Demux_D0_D1.clk.
   removing unused non-port wire \Demux_D0_D1.dataout0.
+  removing unused non-port wire \Demux_D0_D1.dataout1.
   removing unused non-port wire \Demux_D0_D1.reset_L.
   removing unused non-port wire \Demux_D0_D1.valid_0.
+  removing unused non-port wire \Demux_D0_D1.valid_1.
   removing unused non-port wire \MainFifo.Fifo_Data_in.
   removing unused non-port wire \MainFifo.Fifo_Data_out.
   removing unused non-port wire \MainFifo.Pausa.
@@ -8321,6 +7808,7 @@ Finding unused cells or wires in module \PCIE_trans..
   removing unused non-port wire \VC1Fifo.valid_out.
   removing unused non-port wire \VC1Fifo.wr_ptr.
   removing unused non-port wire \data_in_D0.
+  removing unused non-port wire \data_in_D1.
   removing unused non-port wire \data_in_VC0.
   removing unused non-port wire \data_in_VC1.
   removing unused non-port wire \dataout_VCs.
@@ -8351,33 +7839,35 @@ Finding unused cells or wires in module \PCIE_trans..
   removing unused non-port wire \pop_vc0.
   removing unused non-port wire \pop_vc1.
   removing unused non-port wire \push_D0.
+  removing unused non-port wire \push_D1.
   removing unused non-port wire \push_Demux.
   removing unused non-port wire \push_vc0.
   removing unused non-port wire \push_vc1.
   removing unused non-port wire \valid_in.
-  removing unused non-port wire \valid_out.
-  removed 100 unused temporary wires.
+  removing unused non-port wire \valid_out_MF.
+  removing unused non-port wire \valid_out_VC0.
+  removed 108 unused temporary wires.
 
 14. Executing ABC pass (technology mapping using ABC).
 
 14.1. Extracting gate netlist of module `\PCIE_trans' to `<abc-temp-dir>/input.blif'..
-Extracted 567 gates and 720 wires to a netlist network with 125 inputs and 130 outputs.
+Extracted 861 gates and 1119 wires to a netlist network with 254 inputs and 255 outputs.
 
 14.1.1. Executing ABC.
 Running ABC command: berkeley-abc -s -f <abc-temp-dir>/abc.script 2>&1
 ABC: ABC command line: "source <abc-temp-dir>/abc.script".
 ABC: 
 ABC: + read_blif <abc-temp-dir>/input.blif 
-ABC: Warning: Constant-0 drivers added to 25 non-driven nets in network "netlist":
-ABC: n23, n183, n184, n186 ...
-ABC: + read_lib -w /home/cesar/Desktop/Proyecto2/LogicaMasterPrueba3-Inestable/cmos_cells.lib 
+ABC: Warning: Constant-0 drivers added to 1 non-driven nets in network "netlist":
+ABC: n23
+ABC: + read_lib -w /home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/LogicaMasterPrueba3-Inestable/cmos_cells.lib 
 ABC: Parsing finished successfully.  Parsing time =     0.00 sec
 ABC: Warning: Templates are not defined.
 ABC: Libery parser cannot read "time_unit".  Assuming   time_unit : "1ns".
 ABC: Libery parser cannot read "capacitive_load_unit". Assuming   capacitive_load_unit(1, pf).
 ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFF".
 ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFSR".
-ABC: Library "demo" from "/home/cesar/Desktop/Proyecto2/LogicaMasterPrueba3-Inestable/cmos_cells.lib" has 4 cells (2 skipped: 2 seq; 0 tri-state; 0 no func).  Time =     0.00 sec
+ABC: Library "demo" from "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/LogicaMasterPrueba3-Inestable/cmos_cells.lib" has 4 cells (2 skipped: 2 seq; 0 tri-state; 0 no func).  Time =     0.00 sec
 ABC: Memory =    0.00 MB. Time =     0.00 sec
 ABC: + strash 
 ABC: + dc2 
@@ -8391,13 +7881,13 @@ ABC: + map
 ABC: + write_blif <abc-temp-dir>/output.blif 
 
 14.1.2. Re-integrating ABC results.
-ABC RESULTS:              NAND cells:      292
-ABC RESULTS:               NOR cells:      248
-ABC RESULTS:               NOT cells:      144
-ABC RESULTS:          _const0_ cells:        7
-ABC RESULTS:        internal signals:      465
-ABC RESULTS:           input signals:      125
-ABC RESULTS:          output signals:      130
+ABC RESULTS:              NAND cells:      679
+ABC RESULTS:               NOR cells:      422
+ABC RESULTS:               NOT cells:      219
+ABC RESULTS:          _const0_ cells:        1
+ABC RESULTS:        internal signals:      610
+ABC RESULTS:           input signals:      254
+ABC RESULTS:          output signals:      255
 Removing temp directory.
 
 15. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
@@ -8439,13 +7929,13 @@ Removing temp directory.
     DFFSR _DFFSR_PPN_ (.C( C), .D( D), .Q( Q), .R(~R), .S( S));
     DFFSR _DFFSR_PPP_ (.C( C), .D( D), .Q( Q), .R( R), .S( S));
 Mapping DFF cells in module `\PCIE_trans':
-  mapped 119 $_DFF_P_ cells to \DFF cells.
-Removed 0 unused cells and 487 unused wires.
+  mapped 244 $_DFF_P_ cells to \DFF cells.
+Removed 0 unused cells and 648 unused wires.
 
 16. Executing Verilog backend.
 Dumping module `\PCIE_trans'.
 
-End of script. Logfile hash: cc9071b235
-CPU: user 3.72s system 0.03s, MEM: 21.59 MB total, 16.57 MB resident
+End of script. Logfile hash: a041201a1e
+CPU: user 3.39s system 0.02s, MEM: 21.59 MB total, 16.57 MB resident
 Yosys 0.7 (git sha1 61f6811, gcc 6.2.0-11ubuntu1 -O2 -fdebug-prefix-map=/build/yosys-zWLHjG/yosys-0.7=. -fstack-protector-strong -fPIC -Os)
-Time spent: 22% 17x opt_merge (0 sec), 22% 17x opt_expr (0 sec), ...
+Time spent: 21% 14x opt_merge (0 sec), 20% 14x opt_expr (0 sec), ...
