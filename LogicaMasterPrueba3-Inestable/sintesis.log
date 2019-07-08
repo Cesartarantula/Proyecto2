@@ -33,19 +33,20 @@ Generating RTLIL representation for module `\mux'.
 Generating RTLIL representation for module `\Demux_D0_D1'.
 Generating RTLIL representation for module `\demux'.
 Generating RTLIL representation for module `\PCIE_trans'.
-Warning: Identifier `\Fifo_Data_out_VC0' is implicitly declared at PCIE_trans.v:99.
-Warning: Identifier `\Almost_Empty_VC0' is implicitly declared at PCIE_trans.v:100.
-Warning: Identifier `\Almost_Full_VC0' is implicitly declared at PCIE_trans.v:101.
-Warning: Identifier `\Fifo_Full_VC0' is implicitly declared at PCIE_trans.v:105.
-Warning: Identifier `\Error_Fifo_VC0' is implicitly declared at PCIE_trans.v:106.
-Warning: Identifier `\Fifo_Data_out_VC1' is implicitly declared at PCIE_trans.v:114.
-Warning: Identifier `\Almost_Empty_VC1' is implicitly declared at PCIE_trans.v:115.
-Warning: Identifier `\Almost_Full_VC1' is implicitly declared at PCIE_trans.v:116.
-Warning: Identifier `\Fifo_Full_VC1' is implicitly declared at PCIE_trans.v:120.
-Warning: Identifier `\Error_Fifo_VC1' is implicitly declared at PCIE_trans.v:121.
-Warning: Identifier `\push_D0' is implicitly declared at PCIE_trans.v:143.
-Warning: Identifier `\push_D1' is implicitly declared at PCIE_trans.v:144.
-Warning: Identifier `\valid_in' is implicitly declared at PCIE_trans.v:150.
+Warning: Identifier `\pop_D0' is implicitly declared at PCIE_trans.v:96.
+Warning: Identifier `\Fifo_Data_out_VC0' is implicitly declared at PCIE_trans.v:98.
+Warning: Identifier `\Almost_Empty_VC0' is implicitly declared at PCIE_trans.v:99.
+Warning: Identifier `\Almost_Full_VC0' is implicitly declared at PCIE_trans.v:100.
+Warning: Identifier `\Fifo_Full_VC0' is implicitly declared at PCIE_trans.v:104.
+Warning: Identifier `\Error_Fifo_VC0' is implicitly declared at PCIE_trans.v:105.
+Warning: Identifier `\Fifo_Data_out_VC1' is implicitly declared at PCIE_trans.v:113.
+Warning: Identifier `\Almost_Empty_VC1' is implicitly declared at PCIE_trans.v:114.
+Warning: Identifier `\Almost_Full_VC1' is implicitly declared at PCIE_trans.v:115.
+Warning: Identifier `\Fifo_Full_VC1' is implicitly declared at PCIE_trans.v:119.
+Warning: Identifier `\Error_Fifo_VC1' is implicitly declared at PCIE_trans.v:120.
+Warning: Identifier `\push_D0' is implicitly declared at PCIE_trans.v:142.
+Warning: Identifier `\push_D1' is implicitly declared at PCIE_trans.v:143.
+Warning: Identifier `\valid_in' is implicitly declared at PCIE_trans.v:149.
 Successfully finished Verilog frontend.
 
 2. Executing HIERARCHY pass (managing design hierarchy).
@@ -187,10 +188,10 @@ Creating decoders for process `$paramod\dual_port_memory\DATA_WIDTH=6\ADDR_WIDTH
      1/3: $0$memwr$\Ram$dual_port_memory.v:18$86_EN[5:0]$90
      2/3: $0$memwr$\Ram$dual_port_memory.v:18$86_DATA[5:0]$89
      3/3: $0$memwr$\Ram$dual_port_memory.v:18$86_ADDR[1:0]$88
-Creating decoders for process `\PCIE_trans.$proc$PCIE_trans.v:238$76'.
+Creating decoders for process `\PCIE_trans.$proc$PCIE_trans.v:237$76'.
      1/2: $0\FIFO_empty[0:0]
      2/2: $0\FIFO_error[0:0]
-Creating decoders for process `\PCIE_trans.$proc$PCIE_trans.v:223$66'.
+Creating decoders for process `\PCIE_trans.$proc$PCIE_trans.v:222$66'.
      1/3: $0\pop_vc1[0:0]
      2/3: $0\pop_vc0[0:0]
      3/3: $0\pausaD0D1[0:0]
@@ -292,15 +293,15 @@ Creating register for signal `$paramod\dual_port_memory\DATA_WIDTH=6\ADDR_WIDTH=
   created $dff cell `$procdff$1029' with positive edge clock.
 Creating register for signal `$paramod\dual_port_memory\DATA_WIDTH=6\ADDR_WIDTH=2\MEM_SIZE=3.$memwr$\Ram$dual_port_memory.v:18$86_EN' using process `$paramod\dual_port_memory\DATA_WIDTH=6\ADDR_WIDTH=2\MEM_SIZE=3.$proc$dual_port_memory.v:14$87'.
   created $dff cell `$procdff$1030' with positive edge clock.
-Creating register for signal `\PCIE_trans.\FIFO_error' using process `\PCIE_trans.$proc$PCIE_trans.v:238$76'.
+Creating register for signal `\PCIE_trans.\FIFO_error' using process `\PCIE_trans.$proc$PCIE_trans.v:237$76'.
   created $dff cell `$procdff$1031' with positive edge clock.
-Creating register for signal `\PCIE_trans.\FIFO_empty' using process `\PCIE_trans.$proc$PCIE_trans.v:238$76'.
+Creating register for signal `\PCIE_trans.\FIFO_empty' using process `\PCIE_trans.$proc$PCIE_trans.v:237$76'.
   created $dff cell `$procdff$1032' with positive edge clock.
-Creating register for signal `\PCIE_trans.\pausaD0D1' using process `\PCIE_trans.$proc$PCIE_trans.v:223$66'.
+Creating register for signal `\PCIE_trans.\pausaD0D1' using process `\PCIE_trans.$proc$PCIE_trans.v:222$66'.
   created $dff cell `$procdff$1033' with positive edge clock.
-Creating register for signal `\PCIE_trans.\pop_vc0' using process `\PCIE_trans.$proc$PCIE_trans.v:223$66'.
+Creating register for signal `\PCIE_trans.\pop_vc0' using process `\PCIE_trans.$proc$PCIE_trans.v:222$66'.
   created $dff cell `$procdff$1034' with positive edge clock.
-Creating register for signal `\PCIE_trans.\pop_vc1' using process `\PCIE_trans.$proc$PCIE_trans.v:223$66'.
+Creating register for signal `\PCIE_trans.\pop_vc1' using process `\PCIE_trans.$proc$PCIE_trans.v:222$66'.
   created $dff cell `$procdff$1035' with positive edge clock.
 Creating register for signal `\demux.\dataout0' using process `\demux.$proc$demux.v:33$59'.
   created $dff cell `$procdff$1036' with positive edge clock.
@@ -398,10 +399,10 @@ Found and cleaned up 1 empty switch in `$paramod\dual_port_memory\DATA_WIDTH=6\A
 Removing empty process `$paramod\dual_port_memory\DATA_WIDTH=6\ADDR_WIDTH=2\MEM_SIZE=3.$proc$dual_port_memory.v:22$91'.
 Found and cleaned up 1 empty switch in `$paramod\dual_port_memory\DATA_WIDTH=6\ADDR_WIDTH=2\MEM_SIZE=3.$proc$dual_port_memory.v:14$87'.
 Removing empty process `$paramod\dual_port_memory\DATA_WIDTH=6\ADDR_WIDTH=2\MEM_SIZE=3.$proc$dual_port_memory.v:14$87'.
-Found and cleaned up 3 empty switches in `\PCIE_trans.$proc$PCIE_trans.v:238$76'.
-Removing empty process `PCIE_trans.$proc$PCIE_trans.v:238$76'.
-Found and cleaned up 2 empty switches in `\PCIE_trans.$proc$PCIE_trans.v:223$66'.
-Removing empty process `PCIE_trans.$proc$PCIE_trans.v:223$66'.
+Found and cleaned up 3 empty switches in `\PCIE_trans.$proc$PCIE_trans.v:237$76'.
+Removing empty process `PCIE_trans.$proc$PCIE_trans.v:237$76'.
+Found and cleaned up 2 empty switches in `\PCIE_trans.$proc$PCIE_trans.v:222$66'.
+Removing empty process `PCIE_trans.$proc$PCIE_trans.v:222$66'.
 Found and cleaned up 7 empty switches in `\demux.$proc$demux.v:33$59'.
 Removing empty process `demux.$proc$demux.v:33$59'.
 Found and cleaned up 1 empty switch in `\demux.$proc$demux.v:24$57'.
@@ -546,12 +547,12 @@ Finding identical cells in module `$paramod\fifo\N=2\M=4\ADDR_WIDTH=4'.
     Removing $logic_not cell `$logic_not$fifo.v:47$95' from module `$paramod\fifo\N=2\M=4\ADDR_WIDTH=4'.
 Finding identical cells in module `$paramod\dual_port_memory\DATA_WIDTH=6\ADDR_WIDTH=2\MEM_SIZE=3'.
 Finding identical cells in module `\PCIE_trans'.
-  Cell `$not$PCIE_trans.v:231$70' is identical to cell `$not$PCIE_trans.v:232$72'.
-    Redirecting output \Y: $not$PCIE_trans.v:231$70_Y = $not$PCIE_trans.v:232$72_Y
-    Removing $not cell `$not$PCIE_trans.v:231$70' from module `\PCIE_trans'.
-  Cell `$logic_not$PCIE_trans.v:224$67' is identical to cell `$logic_not$PCIE_trans.v:239$77'.
-    Redirecting output \Y: $logic_not$PCIE_trans.v:224$67_Y = $logic_not$PCIE_trans.v:239$77_Y
-    Removing $logic_not cell `$logic_not$PCIE_trans.v:224$67' from module `\PCIE_trans'.
+  Cell `$not$PCIE_trans.v:230$70' is identical to cell `$not$PCIE_trans.v:231$72'.
+    Redirecting output \Y: $not$PCIE_trans.v:230$70_Y = $not$PCIE_trans.v:231$72_Y
+    Removing $not cell `$not$PCIE_trans.v:230$70' from module `\PCIE_trans'.
+  Cell `$logic_not$PCIE_trans.v:223$67' is identical to cell `$logic_not$PCIE_trans.v:238$77'.
+    Redirecting output \Y: $logic_not$PCIE_trans.v:223$67_Y = $logic_not$PCIE_trans.v:238$77_Y
+    Removing $logic_not cell `$logic_not$PCIE_trans.v:223$67' from module `\PCIE_trans'.
 Finding identical cells in module `\demux'.
   Cell `$logic_not$demux.v:25$58' is identical to cell `$logic_not$demux.v:34$60'.
     Redirecting output \Y: $logic_not$demux.v:25$58_Y = $logic_not$demux.v:34$60_Y
@@ -909,12 +910,10 @@ Finding unused cells or wires in module $paramod\fifo\N=2\M=4\ADDR_WIDTH=4..
   removed 1 unused temporary wires.
 Finding unused cells or wires in module $paramod\dual_port_memory\DATA_WIDTH=6\ADDR_WIDTH=2\MEM_SIZE=3..
 Finding unused cells or wires in module \PCIE_trans..
-  removing unused `$logic_not' cell `$logic_not$PCIE_trans.v:239$77'.
+  removing unused `$logic_not' cell `$logic_not$PCIE_trans.v:238$77'.
   removing unused non-port wire \pop1.
-  removing unused non-port wire \valid_1.
-  removing unused non-port wire \valid_0.
   removing unused non-port wire \pop_init.
-  removed 4 unused temporary wires.
+  removed 2 unused temporary wires.
 Finding unused cells or wires in module \demux..
   removing unused `$logic_not' cell `$logic_not$demux.v:34$60'.
   removing unused `$not' cell `$not$demux.v:41$61'.
@@ -1682,22 +1681,22 @@ Mapping demux.$procdff$1036 ($dff) with simplemap.
 Mapping demux.$procdff$1037 ($dff) with simplemap.
 Mapping demux.$procdff$1038 ($dff) with simplemap.
 Mapping demux.$procdff$1039 ($dff) with simplemap.
-Mapping PCIE_trans.$logic_not$PCIE_trans.v:85$65 ($logic_not) with simplemap.
-Mapping PCIE_trans.$or$PCIE_trans.v:230$68 ($or) with simplemap.
-Mapping PCIE_trans.$not$PCIE_trans.v:231$69 ($not) with simplemap.
-Mapping PCIE_trans.$and$PCIE_trans.v:231$71 ($and) with simplemap.
-Mapping PCIE_trans.$not$PCIE_trans.v:232$72 ($not) with simplemap.
-Mapping PCIE_trans.$and$PCIE_trans.v:232$73 ($and) with simplemap.
-Mapping PCIE_trans.$not$PCIE_trans.v:232$74 ($not) with simplemap.
-Mapping PCIE_trans.$and$PCIE_trans.v:232$75 ($and) with simplemap.
-Mapping PCIE_trans.$logic_or$PCIE_trans.v:243$78 ($logic_or) with simplemap.
-Mapping PCIE_trans.$logic_or$PCIE_trans.v:243$79 ($logic_or) with simplemap.
-Mapping PCIE_trans.$logic_or$PCIE_trans.v:243$80 ($logic_or) with simplemap.
-Mapping PCIE_trans.$logic_or$PCIE_trans.v:243$81 ($logic_or) with simplemap.
-Mapping PCIE_trans.$logic_or$PCIE_trans.v:246$82 ($logic_or) with simplemap.
-Mapping PCIE_trans.$logic_or$PCIE_trans.v:246$83 ($logic_or) with simplemap.
-Mapping PCIE_trans.$logic_or$PCIE_trans.v:246$84 ($logic_or) with simplemap.
-Mapping PCIE_trans.$logic_or$PCIE_trans.v:246$85 ($logic_or) with simplemap.
+Mapping PCIE_trans.$logic_not$PCIE_trans.v:84$65 ($logic_not) with simplemap.
+Mapping PCIE_trans.$or$PCIE_trans.v:229$68 ($or) with simplemap.
+Mapping PCIE_trans.$not$PCIE_trans.v:230$69 ($not) with simplemap.
+Mapping PCIE_trans.$and$PCIE_trans.v:230$71 ($and) with simplemap.
+Mapping PCIE_trans.$not$PCIE_trans.v:231$72 ($not) with simplemap.
+Mapping PCIE_trans.$and$PCIE_trans.v:231$73 ($and) with simplemap.
+Mapping PCIE_trans.$not$PCIE_trans.v:231$74 ($not) with simplemap.
+Mapping PCIE_trans.$and$PCIE_trans.v:231$75 ($and) with simplemap.
+Mapping PCIE_trans.$logic_or$PCIE_trans.v:242$78 ($logic_or) with simplemap.
+Mapping PCIE_trans.$logic_or$PCIE_trans.v:242$79 ($logic_or) with simplemap.
+Mapping PCIE_trans.$logic_or$PCIE_trans.v:242$80 ($logic_or) with simplemap.
+Mapping PCIE_trans.$logic_or$PCIE_trans.v:242$81 ($logic_or) with simplemap.
+Mapping PCIE_trans.$logic_or$PCIE_trans.v:245$82 ($logic_or) with simplemap.
+Mapping PCIE_trans.$logic_or$PCIE_trans.v:245$83 ($logic_or) with simplemap.
+Mapping PCIE_trans.$logic_or$PCIE_trans.v:245$84 ($logic_or) with simplemap.
+Mapping PCIE_trans.$logic_or$PCIE_trans.v:245$85 ($logic_or) with simplemap.
 Mapping PCIE_trans.$procmux$229 ($mux) with simplemap.
 Mapping PCIE_trans.$procmux$232 ($mux) with simplemap.
 Mapping PCIE_trans.$procmux$235 ($mux) with simplemap.
@@ -6676,7 +6675,7 @@ Replacing $_OR_ cell `$auto$simplemap.cc:85:simplemap_bitop$4206' (00) in module
 Replacing $_OR_ cell `$auto$simplemap.cc:85:simplemap_bitop$4207' (00) in module `$paramod\fifo\N=4\M=2\ADDR_WIDTH=16' with constant driver `$techmap$add$fifo.v:464$128.$auto$alumacc.cc:484:replace_alu$2865 [31] = 1'0'.
 Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$3537' (00) in module `$paramod\fifo\N=4\M=2\ADDR_WIDTH=16' with constant driver `$techmap$techmap$add$fifo.v:464$128.$auto$alumacc.cc:470:replace_alu$2863.$xor$<techmap.v>:263$3021_Y [32] = 1'0'.
 Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$1645' (01?) in module `\Demux_D0_D1' with constant driver `$procmux$332_Y = \selectorL1'.
-Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$1799' (01?) in module `\PCIE_trans' with constant driver `$procmux$229_Y = $logic_or$PCIE_trans.v:246$85_Y'.
+Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$1799' (01?) in module `\PCIE_trans' with constant driver `$procmux$229_Y = $logic_or$PCIE_trans.v:245$85_Y'.
 Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$1714' (01?) in module `\demux' with constant driver `$procmux$266_Y = \selectorL1'.
 Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$1370' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$1365 [3] = \state [3]'.
 Replacing $_XOR_ cell `$auto$simplemap.cc:85:simplemap_bitop$1369' (?0) in module `\fsmControl' with constant driver `$auto$simplemap.cc:250:simplemap_eqne$1365 [2] = \state [2]'.
@@ -7256,14 +7255,14 @@ Deleting now unused module mux.
 12. Executing OPT pass (performing simple optimizations).
 
 12.1. Executing OPT_EXPR pass (perform const folding).
-Replacing $_NOT_ cell `$auto$simplemap.cc:206:simplemap_lognot$1783' (0) in module `\PCIE_trans' with constant driver `$logic_not$PCIE_trans.v:85$65_Y = 1'1'.
-Replacing $_OR_ cell `$auto$simplemap.cc:85:simplemap_bitop$1784' (00) in module `\PCIE_trans' with constant driver `$or$PCIE_trans.v:230$68_Y = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:235:simplemap_logbin$1791' (00) in module `\PCIE_trans' with constant driver `$logic_or$PCIE_trans.v:243$78_Y = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:235:simplemap_logbin$1792' (00) in module `\PCIE_trans' with constant driver `$logic_or$PCIE_trans.v:243$79_Y = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:235:simplemap_logbin$1793' (00) in module `\PCIE_trans' with constant driver `$logic_or$PCIE_trans.v:243$80_Y = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:235:simplemap_logbin$1794' (00) in module `\PCIE_trans' with constant driver `$logic_or$PCIE_trans.v:243$81_Y = 1'0'.
-Replacing $_OR_ cell `$auto$simplemap.cc:235:simplemap_logbin$1797' (const_or) in module `\PCIE_trans' with constant driver `$logic_or$PCIE_trans.v:246$84_Y = 1'1'.
-Replacing $_OR_ cell `$auto$simplemap.cc:235:simplemap_logbin$1798' (const_or) in module `\PCIE_trans' with constant driver `$logic_or$PCIE_trans.v:246$85_Y = 1'1'.
+Replacing $_NOT_ cell `$auto$simplemap.cc:206:simplemap_lognot$1783' (0) in module `\PCIE_trans' with constant driver `$logic_not$PCIE_trans.v:84$65_Y = 1'1'.
+Replacing $_OR_ cell `$auto$simplemap.cc:85:simplemap_bitop$1784' (00) in module `\PCIE_trans' with constant driver `$or$PCIE_trans.v:229$68_Y = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:235:simplemap_logbin$1791' (00) in module `\PCIE_trans' with constant driver `$logic_or$PCIE_trans.v:242$78_Y = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:235:simplemap_logbin$1792' (00) in module `\PCIE_trans' with constant driver `$logic_or$PCIE_trans.v:242$79_Y = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:235:simplemap_logbin$1793' (00) in module `\PCIE_trans' with constant driver `$logic_or$PCIE_trans.v:242$80_Y = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:235:simplemap_logbin$1794' (00) in module `\PCIE_trans' with constant driver `$logic_or$PCIE_trans.v:242$81_Y = 1'0'.
+Replacing $_OR_ cell `$auto$simplemap.cc:235:simplemap_logbin$1797' (const_or) in module `\PCIE_trans' with constant driver `$logic_or$PCIE_trans.v:245$84_Y = 1'1'.
+Replacing $_OR_ cell `$auto$simplemap.cc:235:simplemap_logbin$1798' (const_or) in module `\PCIE_trans' with constant driver `$logic_or$PCIE_trans.v:245$85_Y = 1'1'.
 Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$1800' (1?0) in module `\PCIE_trans' with constant driver `$procmux$232_Y = 1'1'.
 Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$1801' (01?) in module `\PCIE_trans' with constant driver `$0\FIFO_empty[0:0] = \reset_L'.
 Replacing $_MUX_ cell `$auto$simplemap.cc:277:simplemap_mux$1802' (0?1) in module `\PCIE_trans' with constant driver `$procmux$238_Y = \FIFO_error'.
@@ -7670,6 +7669,7 @@ Finding unused cells or wires in module \PCIE_trans..
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1869'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1868'.
   removing unused `$_MUX_' cell `$techmap\VC1Fifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1867'.
+  removing unused `$_DFF_P_' cell `$techmap\demux1.$auto$simplemap.cc:420:simplemap_dff$1781'.
   removing unused `$_DFF_P_' cell `$techmap\demux1.$auto$simplemap.cc:420:simplemap_dff$1780'.
   removing unused `$_DFF_P_' cell `$techmap\demux1.$auto$simplemap.cc:420:simplemap_dff$1779'.
   removing unused `$_DFF_P_' cell `$techmap\demux1.$auto$simplemap.cc:420:simplemap_dff$1778'.
@@ -7712,6 +7712,8 @@ Finding unused cells or wires in module \PCIE_trans..
   removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1723'.
   removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1722'.
   removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1721'.
+  removing unused `$_MUX_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1719'.
+  removing unused `$_NOT_' cell `$techmap\demux1.$auto$simplemap.cc:277:simplemap_mux$1717'.
   removing unused `$_DFF_P_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1899'.
   removing unused `$_DFF_P_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:420:simplemap_dff$1831'.
   removing unused `$_MUX_' cell `$techmap\MainFifo.memoria.$auto$simplemap.cc:277:simplemap_mux$1866'.
@@ -7938,6 +7940,7 @@ Finding unused cells or wires in module \PCIE_trans..
   removing unused non-port wire \VC0Fifo.Almost_Full.
   removing unused non-port wire \VC0Fifo.Almost_Empty.
   removing unused non-port wire \demux1.valid_in.
+  removing unused non-port wire \demux1.valid_0.
   removing unused non-port wire \MainFifo.Umbral.
   removing unused non-port wire \MainFifo.Fifo_Full.
   removing unused non-port wire \MainFifo.Fifo_Empty.
@@ -7977,7 +7980,8 @@ Finding unused cells or wires in module \PCIE_trans..
   removing unused non-port wire \Umbral_VC0.
   removing unused non-port wire \Umbral_VC1.
   removing unused non-port wire \Umbrales_I.
-  removed 72 unused temporary wires.
+  removing unused non-port wire \push_vc0.
+  removed 74 unused temporary wires.
 
 12.8. Executing OPT_EXPR pass (perform const folding).
 Replacing $_MUX_ cell `$techmap\Demux_D0_D1.$auto$simplemap.cc:277:simplemap_mux$1699' (00?) in module `\PCIE_trans' with constant driver `\Demux_D0_D1.selectorL1 = 1'0'.
@@ -8303,7 +8307,6 @@ Finding unused cells or wires in module \PCIE_trans..
   removing unused non-port wire \demux1.dataout0.
   removing unused non-port wire \demux1.dataout1.
   removing unused non-port wire \demux1.reset_L.
-  removing unused non-port wire \demux1.valid_0.
   removing unused non-port wire \demux1.valid_1.
   removing unused non-port wire \fsm_Control1.FIFO_empty.
   removing unused non-port wire \fsm_Control1.FIFO_error.
@@ -8321,26 +8324,26 @@ Finding unused cells or wires in module \PCIE_trans..
   removing unused non-port wire \mux1.valid_in_VC0.
   removing unused non-port wire \mux1.valid_in_VC1.
   removing unused non-port wire \mux1.valid_out.
+  removing unused non-port wire \pop_D0.
   removing unused non-port wire \pop_vc0.
   removing unused non-port wire \pop_vc1.
   removing unused non-port wire \push_D0.
   removing unused non-port wire \push_Demux.
-  removing unused non-port wire \push_vc0.
   removing unused non-port wire \push_vc1.
   removing unused non-port wire \valid_in.
-  removed 93 unused temporary wires.
+  removed 92 unused temporary wires.
 
 14. Executing ABC pass (technology mapping using ABC).
 
 14.1. Extracting gate netlist of module `\PCIE_trans' to `<abc-temp-dir>/input.blif'..
-Extracted 561 gates and 714 wires to a netlist network with 125 inputs and 130 outputs.
+Extracted 559 gates and 712 wires to a netlist network with 124 inputs and 129 outputs.
 
 14.1.1. Executing ABC.
 Running ABC command: berkeley-abc -s -f <abc-temp-dir>/abc.script 2>&1
 ABC: ABC command line: "source <abc-temp-dir>/abc.script".
 ABC: 
 ABC: + read_blif <abc-temp-dir>/input.blif 
-ABC: Warning: Constant-0 drivers added to 25 non-driven nets in network "netlist":
+ABC: Warning: Constant-0 drivers added to 26 non-driven nets in network "netlist":
 ABC: n23, n171, n172, n174 ...
 ABC: + read_lib -w /home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/LogicaMasterPrueba3-Inestable/cmos_cells.lib 
 ABC: Parsing finished successfully.  Parsing time =     0.00 sec
@@ -8363,13 +8366,13 @@ ABC: + map
 ABC: + write_blif <abc-temp-dir>/output.blif 
 
 14.1.2. Re-integrating ABC results.
-ABC RESULTS:              NAND cells:      297
-ABC RESULTS:               NOR cells:      249
-ABC RESULTS:               NOT cells:      135
-ABC RESULTS:          _const0_ cells:        7
+ABC RESULTS:              NAND cells:      287
+ABC RESULTS:               NOR cells:      235
+ABC RESULTS:               NOT cells:      123
+ABC RESULTS:          _const0_ cells:        8
 ABC RESULTS:        internal signals:      459
-ABC RESULTS:           input signals:      125
-ABC RESULTS:          output signals:      130
+ABC RESULTS:           input signals:      124
+ABC RESULTS:          output signals:      129
 Removing temp directory.
 
 15. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
@@ -8411,13 +8414,13 @@ Removing temp directory.
     DFFSR _DFFSR_PPN_ (.C( C), .D( D), .Q( Q), .R(~R), .S( S));
     DFFSR _DFFSR_PPP_ (.C( C), .D( D), .Q( Q), .R( R), .S( S));
 Mapping DFF cells in module `\PCIE_trans':
-  mapped 119 $_DFF_P_ cells to \DFF cells.
-Removed 0 unused cells and 481 unused wires.
+  mapped 118 $_DFF_P_ cells to \DFF cells.
+Removed 0 unused cells and 480 unused wires.
 
 16. Executing Verilog backend.
 Dumping module `\PCIE_trans'.
 
-End of script. Logfile hash: f6b584954c
-CPU: user 3.63s system 0.02s, MEM: 21.39 MB total, 16.46 MB resident
+End of script. Logfile hash: c70471df2b
+CPU: user 3.67s system 0.04s, MEM: 21.58 MB total, 16.62 MB resident
 Yosys 0.7 (git sha1 61f6811, gcc 6.2.0-11ubuntu1 -O2 -fdebug-prefix-map=/build/yosys-zWLHjG/yosys-0.7=. -fstack-protector-strong -fPIC -Os)
-Time spent: 23% 17x opt_expr (0 sec), 21% 17x opt_merge (0 sec), ...
+Time spent: 22% 17x opt_expr (0 sec), 21% 17x opt_merge (0 sec), ...

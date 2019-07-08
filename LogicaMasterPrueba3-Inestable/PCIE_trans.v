@@ -44,7 +44,6 @@ wire Almost_Empty_D1, Almost_Full_D1, Pausa_D1 , Fifo_Empty_D1, Fifo_Full_D1, Er
 wire Almost_Empty_D0, Almost_Full_D0, Pausa_D0 , Fifo_Empty_D0, Fifo_Full_D0, Error_Fifo_D0;
 
 wire pop_init;
-wire valid_0, valid_1;
 
 wire [13:0] Umbrales_I;
 wire [2:0] Umbral_MF;
@@ -93,8 +92,8 @@ demux demux1 (		.clk(clk),
 fifo #(.N(4), .M(2), .ADDR_WIDTH(16)) VC0Fifo (.clk(clk),
 						                       .reset_L(reset_L),
 						                       //.push(push_vc0),
-								       .push(push_vc0),
-						                       .pop(pop_vc0),
+								       .push(pop_vc0),
+						                       .pop(pop_D0),
 						                       .Fifo_Data_in(data_in_VC0),
 						                       .Fifo_Data_out(Fifo_Data_out_VC0),
 						                       .Almost_Empty(Almost_Empty_VC0),
