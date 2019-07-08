@@ -1,13 +1,4 @@
-//IE-0523 Circuitos Digitales II
-//Proyecto2. demux.
-//Elaborado por: César Valverde Zuñiga	A86605
-//I Ciclo 2019
-
-// Este módulo genera las salidas dataout0 y dataout1, recibiendo como entrada datain a una frecuencia de f.
-
-//`timescale 1ns/100ps
-
-module demux(
+module Demux_D0_D1(
 							input clk,
 							input reset_L,
 							input valid_in,
@@ -26,7 +17,7 @@ always @(*) begin
 	selectorL1 <=0;
 	end
 	else begin
-	selectorL1 <= data_in[5];
+	selectorL1 <=data_in [4];
 	end
 end
 

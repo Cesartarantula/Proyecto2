@@ -1,63 +1,32 @@
 [*]
 [*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
-[*] Fri Jul  5 00:38:34 2019
+[*] Thu Jul  4 03:11:00 2019
 [*]
-[dumpfile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/LogicaMasterPrueba/PCIE_trans.vcd"
-[dumpfile_mtime] "Fri Jul  5 00:36:57 2019"
-[dumpfile_size] 146500
-[savefile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/LogicaMasterPrueba/conexionfinal.gtkw"
+[dumpfile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/LogicaMaster/PCIE_trans.vcd"
+[dumpfile_mtime] "Thu Jul  4 02:54:26 2019"
+[dumpfile_size] 142118
+[savefile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/LogicaMaster/conexionfinal.gtkw"
 [timestart] 0
-[size] 1280 751
-[pos] -1 -1
-*-33.200058 3000000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[size] 1000 600
+[pos] -165 -139
+*-34.468723 20400000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] testbench.
 [treeopen] testbench.transac1.
 [sst_width] 196
 [signals_width] 206
 [sst_expanded] 1
-[sst_vpaned_height] 208
+[sst_vpaned_height] 155
 @200
 -Probador
-@28
-[color] 5
-testbench.probador1.clk
-[color] 5
-testbench.probador1.reset_L
-[color] 5
-testbench.probador1.init
 @22
-[color] 5
 testbench.transac1.data_in_principal[5:0]
-@28
-[color] 5
-testbench.probador1.push
-[color] 5
-testbench.probador1.pop_D0
-[color] 5
-testbench.probador1.pop_D1
-@200
--Salidas
-@22
-testbench.probador1.data_out0[5:0]
-testbench.probador1.data_out1[5:0]
 @200
 -MainFifo
-@28
-testbench.transac1.MainFifo.reset_L
-testbench.transac1.MainFifo.push
-testbench.transac1.MainFifo.pop
 @22
 testbench.transac1.MainFifo.Fifo_Data_in[5:0]
-@24
-testbench.transac1.MainFifo.num_mem[2:0]
-testbench.transac1.MainFifo.Umbral[2:0]
 @28
-testbench.transac1.MainFifo.Fifo_Empty
-testbench.transac1.MainFifo.Almost_Empty
-testbench.transac1.MainFifo.Pausa
-testbench.transac1.MainFifo.Almost_Full
-testbench.transac1.MainFifo.Fifo_Full
-testbench.transac1.MainFifo.Error_Fifo
+testbench.transac1.MainFifo.push
+testbench.transac1.MainFifo.pop
 @22
 testbench.transac1.MainFifo.Fifo_Data_out[5:0]
 @200
@@ -78,6 +47,7 @@ testbench.transac1.demux1.data_in[5:0]
 @28
 testbench.transac1.demux1.valid_in
 testbench.transac1.demux1.selectorL1
+@29
 testbench.transac1.demux1.valid_0
 @22
 testbench.transac1.demux1.dataout0[5:0]
@@ -87,30 +57,11 @@ testbench.transac1.demux1.valid_1
 testbench.transac1.demux1.dataout1[5:0]
 @200
 -VC0Fifo
-@28
-testbench.transac1.VC0Fifo.Fifo_Empty
 @22
 testbench.transac1.VC0Fifo.Fifo_Data_in[5:0]
 testbench.transac1.VC0Fifo.memoria.iDataIn[5:0]
 @28
 testbench.transac1.VC0Fifo.pop
 testbench.transac1.VC0Fifo.push
-@200
--Mux1
-@28
-testbench.transac1.mux1.selectorL1
-@22
-testbench.transac1.mux1.data_in_VC0[5:0]
-testbench.transac1.mux1.data_in_VC1[5:0]
-testbench.transac1.mux1.dataout[5:0]
-testbench.transac1.Demux_D0_D1.data_in[5:0]
-@200
--Demux_DO_D1
-@28
-testbench.transac1.Demux_D0_D1.selectorL1
-@22
-testbench.transac1.Demux_D0_D1.data_in[5:0]
-testbench.transac1.Demux_D0_D1.dataout0[5:0]
-testbench.transac1.Demux_D0_D1.dataout1[5:0]
 [pattern_trace] 1
 [pattern_trace] 0

@@ -10,14 +10,14 @@
 module fsmControl  ( input clk,
               input reset_L,
               input init,
-              input [1:0] umbral_MF, 	//(Almost_empty=1) (Almost_full=3) //Viene del Flow Control_MF
-	      input [3:0] umbral_VC0,	//(Almost_empty=4) (Almost_full=12) //Viene del Flow Control_VC0
-              input [3:0] umbral_VC1, 	
-	      input [1:0] umbral_D0, 	//Viene del Flow Control_D0
-              input [1:0] umbral_D1, 	
+              input [1:0] Umbral_MF, 	//(Almost_empty=1) (Almost_full=3) //Viene del Flow Control_MF
+	      input [3:0] Umbral_VC0,	//(Almost_empty=4) (Almost_full=12) //Viene del Flow Control_VC0
+              input [3:0] Umbral_VC1, 	
+	      input [1:0] Umbral_D0, 	//Viene del Flow Control_D0
+              input [1:0] Umbral_D1, 	
               input [4:0] FIFO_error, 	//FIFO Full (MF,VCO,VC1,D0,D1) Orden de los bits //Flow Control escribe en estos registros
               input [4:0] FIFO_empty, 	//FIFO Empty //Flow Control escribe en estos registros
-              output reg [13:0] umbrales_I,	//Esta salida es de 14 bits? (MF,VCO,VC1,D0,D1)= bits(2,4,4,2,2)
+              output reg [13:0] Umbrales_I,	//Esta salida es de 14 bits? (MF,VCO,VC1,D0,D1)= bits(2,4,4,2,2)
               output reg active_out,
               output reg idle_out,
               output reg error_out);
@@ -45,7 +45,7 @@ module fsmControl  ( input clk,
       active_out<=0;
       idle_out<=0;
       error_out<=0;
-      umbrales_I<=0;
+      Umbrales_I<=0;
     end
     else if (init) begin
           state <= INIT;
@@ -59,7 +59,7 @@ module fsmControl  ( input clk,
       RESET: begin
 	nxt_state <=INIT;
         //Salidas
-      	umbrales_I <= 0;
+      	Umbrales_I <= 0;
       	active_out <= 0;
       	idle_out <= 0;
       	error_out <= 0;
@@ -69,7 +69,7 @@ module fsmControl  ( input clk,
 	idle_out <= 0;
       	active_out <= 0;
 	error_out <= 0;
-        umbrales_I <= {umbral_MF,umbral_VC0,umbral_VC1,umbral_D0,umbral_D1};
+        Umbrales_I <= {Umbral_MF,Umbral_VC0,Umbral_VC1,Umbral_D0,Umbral_D1};
         if (FIFO_error!=0)begin
           nxt_state <= ERROR;
         end
