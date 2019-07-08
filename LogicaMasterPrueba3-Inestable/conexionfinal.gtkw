@@ -1,17 +1,18 @@
 [*]
 [*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
-[*] Mon Jul  8 05:24:55 2019
+[*] Mon Jul  8 21:55:57 2019
 [*]
 [dumpfile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/LogicaMasterPrueba3-Inestable/PCIE_trans.vcd"
-[dumpfile_mtime] "Mon Jul  8 05:24:40 2019"
-[dumpfile_size] 294052
+[dumpfile_mtime] "Mon Jul  8 21:55:12 2019"
+[dumpfile_size] 293604
 [savefile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/LogicaMasterPrueba3-Inestable/conexionfinal.gtkw"
 [timestart] 0
 [size] 1280 751
 [pos] -1 -1
-*-34.002377 51880000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-35.099892 87000000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] testbench.
 [treeopen] testbench.transac1.
+[treeopen] testbench.transac1.D1Fifo.
 [treeopen] testbench.transac1.VC0Fifo.
 [sst_width] 196
 [signals_width] 206
@@ -49,6 +50,9 @@ testbench.transac1.fsm_Control1.reset_L
 testbench.transac1.fsm_Control1.init
 @22
 testbench.transac1.fsm_Control1.FIFO_empty[4:0]
+@23
+testbench.transac1.fsm_Control1.FIFO_error[4:0]
+@22
 testbench.transac1.fsm_Control1.state[4:0]
 @28
 testbench.transac1.fsm_Control1.active_out
@@ -149,7 +153,7 @@ testbench.transac1.mux1.selectorL1
 testbench.transac1.mux1.valid_in_VC0
 @22
 testbench.transac1.mux1.data_in_VC0[5:0]
-@29
+@28
 testbench.transac1.mux1.valid_in_VC1
 @22
 testbench.transac1.mux1.data_in_VC1[5:0]
@@ -162,5 +166,24 @@ testbench.transac1.Demux_D0_D1.selectorL1
 testbench.transac1.Demux_D0_D1.data_in[5:0]
 testbench.transac1.Demux_D0_D1.dataout0[5:0]
 testbench.transac1.Demux_D0_D1.dataout1[5:0]
+@200
+-D1Fifo
+@28
+testbench.transac1.D1Fifo.push
+testbench.transac1.D1Fifo.Fifo_Empty
+testbench.transac1.D1Fifo.pop
+@22
+testbench.transac1.D1Fifo.Fifo_Data_in[5:0]
+@28
+testbench.transac1.D1Fifo.push_int
+testbench.transac1.D1Fifo.pop_int
+@22
+testbench.transac1.D1Fifo.Fifo_Data_in_int[5:0]
+@28
+testbench.transac1.D1Fifo.wr_ptr[1:0]
+testbench.transac1.D1Fifo.rd_ptr[1:0]
+testbench.transac1.D1Fifo.wr_ptr[1:0]
+@22
+testbench.transac1.D1Fifo.Fifo_Data_out[5:0]
 [pattern_trace] 1
 [pattern_trace] 0

@@ -113,6 +113,7 @@ always @(posedge clk) begin
             			Fifo_Empty <= 0;
             			Pausa <= 1;
             			Fifo_Full  <= 1;
+				Error_Fifo  <= 1;
              			Umbral <= num_mem;
             		end
 			else begin//Estoy agregando esta condición

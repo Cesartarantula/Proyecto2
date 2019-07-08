@@ -73,11 +73,12 @@ module probador (
 	/////////////////////////////////////////////////D
       
    	@(posedge clk);
-		push<=0; 
+		
       		data_in_principal<=6'b000000; // 0
-		pop<=1;	
+		//pop<=1;	
 
-	@(posedge clk);		
+	@(posedge clk);
+		push<=0; 		
 		pop<=1;
 
 	/////////////////////////////////////////////////
