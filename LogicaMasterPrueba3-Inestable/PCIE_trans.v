@@ -118,7 +118,8 @@ fifo #(.N(4), .M(2), .ADDR_WIDTH(16)) VC1Fifo (		.clk(clk),
 						        .Pausa(Pausa_VC1),
 						        .Fifo_Empty(Fifo_Empty_VC1),
 						        .Fifo_Full(Fifo_Full_VC1),
-						        .Error_Fifo(Error_Fifo_VC1)); 
+						        .Error_Fifo(Error_Fifo_VC1),
+							.valid_out(valid_out_VC1));
 
 // Multiplexor posterior a VC0 y VC1
 //Tiene una funcion similar a un Round Robin, prioritiza la transferencia
@@ -126,7 +127,7 @@ fifo #(.N(4), .M(2), .ADDR_WIDTH(16)) VC1Fifo (		.clk(clk),
 mux mux1 (	.clk(clk),
 		.reset_L(reset_L),
 		.valid_in_VC0(valid_out_VC0),
-		.valid_in_VC1(pop_vc0),// (pop_vc1) 
+		.valid_in_VC1(valid_out_VC1),// (pop_vc1) 
 		.data_in_VC0(Fifo_Data_out_VC0),
 		.data_in_VC1(Fifo_Data_out_VC1),
 		.dataout(dataout_VCs),
