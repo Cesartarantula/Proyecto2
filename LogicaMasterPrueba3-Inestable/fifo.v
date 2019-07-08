@@ -17,11 +17,14 @@ module fifo # ( parameter N=4, parameter M=2, parameter ADDR_WIDTH=16) // ( para
     output reg Almost_Empty,	//Indica el valor del UmbralA
     output reg Almost_Full,	//Indica el valor del UmbralB
     output reg [N:0] Umbral,     //Aqui se guarda el valor de Umbral
+
     output reg Pausa,
     output reg Fifo_Empty, 	//Indica si el FIFO esta vacio
     output reg Fifo_Full, 	//Indica si el FIFO esta lleno
-    output reg Error_Fifo 	//Bit de error, se da cuando se da una senal de escritura con el fifo esta lleno 
+    output reg Error_Fifo, 	//Bit de error, se da cuando se da una senal de escritura con el fifo esta lleno 
 				//ó cuando se quiere hacer una lectura y el fifo esta empty
+
+    output reg valid_out
 );
 
 //Registros Internos
@@ -48,10 +51,12 @@ always@(posedge clk) begin
 	push_int <=0;
 	pop_int <=0;
 	Fifo_Data_in_int <=0;
+	valid_out <=0;
 	end
 	else begin
 	push_int <=push;
 	pop_int <=pop;
+	valid_out<=pop;//Le meti ese parametro
 	Fifo_Data_in_int <=Fifo_Data_in;
 	end
 end
