@@ -80,7 +80,7 @@ fifo #(.N(2), .ADDR_WIDTH(4)) MainFifo (	.clk(clk),
 // Modulo Demux de pop válidos según vc_id
 demux demux1 (		.clk(clk),
 			.reset_L(reset_L),
-			.valid_in(!Pausa_MF),//Modificacion
+			.valid_in(push),//Modificacion
 			.data_in(Fifo_Data_out_MF),
 			.dataout0(data_in_VC0),
 			.dataout1(data_in_VC1),

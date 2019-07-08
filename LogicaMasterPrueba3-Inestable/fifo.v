@@ -67,6 +67,7 @@ always @(posedge clk) begin
 		Fifo_Full<=0;
 		Pausa <= 0;
 		Umbral <= 0;
+		Error_Fifo<=0;
     	end
 	else if (M == 2) begin
     		if (push) begin

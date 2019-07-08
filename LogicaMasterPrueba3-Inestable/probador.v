@@ -51,7 +51,7 @@ module probador (
 	//El Reset en init
    	@(posedge clk);
 		init <=0;
-        #1
+        #14
     	/////////////////////////////////////////////////
      	//4 PUSH a D0 
      	//2 POP A D0 
@@ -109,10 +109,17 @@ module probador (
       		data_in_principal<=6'b001010;// 0 0 10
 	/////////////////////////////////////////////////
 
-	@(posedge clk);		/// 5
-		push<=0;
+	@(posedge clk);		/// 10
+		//push<=0;
 		data_in_principal<=6'b111011; // 1 1 B
-
+	@(posedge clk);		/// 11
+		push<=0;
+	repeat(3)begin
+	@(posedge clk);		/// 11
+		pop<=1;
+	end
+	@(posedge clk);		/// 11
+		pop<=0;
 #100
    $finish;
 end  

@@ -22,12 +22,15 @@ module testbench();
    wire	push;			// From probador.v
    wire	pop;			// From probador.v
 
-   wire [5:0] data_out0;	// From transac of PCIE_trans.v, ...
-   wire [5:0] data_out1;	// From transac of PCIE_trans.v, ....
+   wire [5:0] data_out0_cond;	// From transac of PCIE_trans.v, ...
+   wire [5:0] data_out1_cond;	// From transac of PCIE_trans.v, ....
+   wire [5:0] data_out0_synth;	// From transac of PCIE_trans.v, ...
+   wire [5:0] data_out1_synth;	// From transac of PCIE_trans.v, ....
 
    wire Pausa_MF;		// From transac of PCIE_trans.v, ...
 
-   wire active_out, idle_out, error_out;
+   wire [5:0] data_out0,data_out1;
+   //wire active_out, idle_out, error_out;
 
    wire active_out_cond, active_out_synth;		// From transac of PCIE_trans.v, ...
    wire idle_out_cond, idle_out_synth;		// From transac of PCIE_trans.v, ...
@@ -72,8 +75,8 @@ module testbench();
 	              .active_out		(active_out_cond),
 		      .error_out		(error_out_cond),
 		      .idle_out			(idle_out_cond),
-		      .data_out0		(data_out0),
-		      .data_out1		(data_out1));
+		      .data_out0		(data_out0_cond),
+		      .data_out1		(data_out1_cond));
 	
    PCIE_Synth transacSynth(/*AUTOINST*/
 		      // Outputs	
