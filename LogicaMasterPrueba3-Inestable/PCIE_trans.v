@@ -43,6 +43,8 @@ wire Almost_Empty_D1, Almost_Full_D1, Pausa_D1 , Fifo_Empty_D1, Fifo_Full_D1, Er
 
 wire Almost_Empty_D0, Almost_Full_D0, Pausa_D0 , Fifo_Empty_D0, Fifo_Full_D0, Error_Fifo_D0;
 
+wire pop_init;
+wire valid_0, valid_1;
 
 wire [13:0] Umbrales_I;
 wire [2:0] Umbral_MF;
@@ -80,7 +82,7 @@ fifo #(.N(2), .ADDR_WIDTH(4)) MainFifo (	.clk(clk),
 // Modulo Demux de pop válidos según vc_id
 demux demux1 (		.clk(clk),
 			.reset_L(reset_L),
-			.valid_in(push),//Modificacion
+			.valid_in(!Error_Fifo_MF),//Modificacion
 			.data_in(Fifo_Data_out_MF),
 			.dataout0(data_in_VC0),
 			.dataout1(data_in_VC1),
@@ -90,7 +92,8 @@ demux demux1 (		.clk(clk),
 //VC0: FIFO (6bitsx16)
 fifo #(.N(4), .M(2), .ADDR_WIDTH(16)) VC0Fifo (.clk(clk),
 						                       .reset_L(reset_L),
-						                       .push(push_vc0),
+						                       //.push(push_vc0),
+								       .push(push_vc0),
 						                       .pop(pop_vc0),
 						                       .Fifo_Data_in(data_in_VC0),
 						                       .Fifo_Data_out(Fifo_Data_out_VC0),
@@ -103,57 +106,57 @@ fifo #(.N(4), .M(2), .ADDR_WIDTH(16)) VC0Fifo (.clk(clk),
 						                       .Error_Fifo(Error_Fifo_VC0)); 
 
 //VC1: FIFO (6bitsx16)
-fifo #(.N(4), .M(2), .ADDR_WIDTH(16)) VC1Fifo (.clk(clk),
-											   .reset_L(reset_L),
-											   .push(push_vc1),
-											   .pop(pop_vc1),
-											   .Fifo_Data_in(data_in_VC1),
-											   .Fifo_Data_out(Fifo_Data_out_VC1),
-									     	   .Almost_Empty(Almost_Empty_VC1),
-						                       .Almost_Full(Almost_Full_VC1),
-						                       .Umbral(Umbral_VC1),
-						                       .Pausa(Pausa_VC1),
-						                       .Fifo_Empty(Fifo_Empty_VC1),
-						                       .Fifo_Full(Fifo_Full_VC1),
-						                       .Error_Fifo(Error_Fifo_VC1)); 
+fifo #(.N(4), .M(2), .ADDR_WIDTH(16)) VC1Fifo (		.clk(clk),
+							.reset_L(reset_L),
+							.push(push_vc1),
+							.pop(pop_vc1),
+							.Fifo_Data_in(data_in_VC1),
+							.Fifo_Data_out(Fifo_Data_out_VC1),
+							.Almost_Empty(Almost_Empty_VC1),
+						        .Almost_Full(Almost_Full_VC1),
+						        .Umbral(Umbral_VC1),
+						        .Pausa(Pausa_VC1),
+						        .Fifo_Empty(Fifo_Empty_VC1),
+						        .Fifo_Full(Fifo_Full_VC1),
+						        .Error_Fifo(Error_Fifo_VC1)); 
 
 // Multiplexor posterior a VC0 y VC1
 //Tiene una funcion similar a un Round Robin, prioritiza la transferencia
 //de datos de VC0.
-mux mux1 (.clk(clk),
-		  .reset_L(reset_L),
-		  .valid_in_VC0(pop_vc0),
-		  .valid_in_VC1(pop_vc1),
-		  .data_in_VC0(Fifo_Data_out_VC0),
-		  .data_in_VC1(Fifo_Data_out_VC1),
-		  .dataout(dataout_VCs),
-		  .valid_out(push_Demux));
+mux mux1 (	.clk(clk),
+		.reset_L(reset_L),
+		.valid_in_VC0(pop_vc0),
+		.valid_in_VC1(pop_vc1),
+		.data_in_VC0(Fifo_Data_out_VC0),
+		.data_in_VC1(Fifo_Data_out_VC1),
+		.dataout(dataout_VCs),
+		.valid_out(push_Demux));
 
 //Demultiplexor posterior a mux1, de acuerdo al valor del bit 4 transfiere
 //los datos por destino 0 o destino 1.
-Demux_D0_D1 Demux_D0_D1 (.clk(clk),
-			             .reset_L(reset_L),
-			 	         .valid_in(push_Demux),
-						 .data_in(dataout_VCs),
-			  	         .dataout0(data_in_D0),
-			  			 .dataout1(data_in_D1),
-			  			 .valid_0(push_D0),
-			  	         .valid_1(push_D1));
+Demux_D0_D1 Demux_D0_D1 (	.clk(clk),
+			        .reset_L(reset_L),
+			 	.valid_in(push_Demux),
+				.data_in(dataout_VCs),
+			  	.dataout0(data_in_D0),
+			  	.dataout1(data_in_D1),
+			  	.valid_0(push_D0),
+			  	.valid_1(push_D1));
 
 //Fifo destino D0
-fifo #(.N(2), .M(4), .ADDR_WIDTH(4)) D0Fifo (.clk(clk),
-						                     .reset_L(reset_L),
-											 .push(push_D0),
-											 .pop(valid_in),
-											 .Fifo_Data_in(data_in_D0),
-										     .Fifo_Data_out(data_out0),
-											 .Almost_Empty(Almost_Empty_D0),
-									     	 .Almost_Full(Almost_Full_D0),
-											 .Umbral(Umbral_D0),
-											 .Pausa(Pausa_D0),
-											 .Fifo_Empty(Fifo_Empty_D0),
-											 .Fifo_Full(Fifo_Full_D0),
-											 .Error_Fifo(Error_Fifo_D0));
+fifo #(.N(2), .M(4), .ADDR_WIDTH(4)) D0Fifo (		.clk(clk),
+						        .reset_L(reset_L),
+							.push(push_D0),
+							.pop(valid_in),
+							.Fifo_Data_in(data_in_D0),
+							.Fifo_Data_out(data_out0),
+							.Almost_Empty(Almost_Empty_D0),
+							.Almost_Full(Almost_Full_D0),
+							.Umbral(Umbral_D0),
+							.Pausa(Pausa_D0),
+							.Fifo_Empty(Fifo_Empty_D0),
+							.Fifo_Full(Fifo_Full_D0),
+							.Error_Fifo(Error_Fifo_D0));
 
 //Fifo destino D1
 fifo #(.N(2), .M(4), .ADDR_WIDTH(4)) D1Fifo (	.clk(clk),
@@ -221,8 +224,9 @@ always@(posedge clk) begin
 	if(!reset_L) begin
 	pausaD0D1 <= 0;
 	pop_vc0 <= 0;
+	pop_vc1 <= 0;
 	end
-	else begin
+	else if (pop) begin //else begin // else if (pop)
 	pausaD0D1 <= Pausa_D0 | Pausa_D1;
 	pop_vc0 <= ~Fifo_Empty_VC0 & ~pausaD0D1; 
 	pop_vc1 <= Fifo_Empty_VC0 & ~pausaD0D1 & ~Fifo_Empty_VC1; 	
