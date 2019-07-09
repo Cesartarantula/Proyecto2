@@ -1003,379 +1003,7 @@ module PCIE_Synth(clk, reset_L, init, data_in_principal, push, data_out0, data_o
   wire _0999_;
   wire _1000_;
   wire _1001_;
-  wire _1002_;
-  wire _1003_;
-  wire _1004_;
-  wire _1005_;
-  wire _1006_;
-  wire _1007_;
-  wire _1008_;
-  wire _1009_;
-  wire _1010_;
-  wire _1011_;
-  wire _1012_;
-  wire _1013_;
-  wire _1014_;
-  wire _1015_;
-  wire _1016_;
-  wire _1017_;
-  wire _1018_;
-  wire _1019_;
-  wire _1020_;
-  wire _1021_;
-  wire _1022_;
-  wire _1023_;
-  wire _1024_;
-  wire _1025_;
-  wire _1026_;
-  wire _1027_;
-  wire _1028_;
-  wire _1029_;
-  wire _1030_;
-  wire _1031_;
-  wire _1032_;
-  wire _1033_;
-  wire _1034_;
-  wire _1035_;
-  wire _1036_;
-  wire _1037_;
-  wire _1038_;
-  wire _1039_;
-  wire _1040_;
-  wire _1041_;
-  wire _1042_;
-  wire _1043_;
-  wire _1044_;
-  wire _1045_;
-  wire _1046_;
-  wire _1047_;
-  wire _1048_;
-  wire _1049_;
-  wire _1050_;
-  wire _1051_;
-  wire _1052_;
-  wire _1053_;
-  wire _1054_;
-  wire _1055_;
-  wire _1056_;
-  wire _1057_;
-  wire _1058_;
-  wire _1059_;
-  wire _1060_;
-  wire _1061_;
-  wire _1062_;
-  wire _1063_;
-  wire _1064_;
-  wire _1065_;
-  wire _1066_;
-  wire _1067_;
-  wire _1068_;
-  wire _1069_;
-  wire _1070_;
-  wire _1071_;
-  wire _1072_;
-  wire _1073_;
-  wire _1074_;
-  wire _1075_;
-  wire _1076_;
-  wire _1077_;
-  wire _1078_;
-  wire _1079_;
-  wire _1080_;
-  wire _1081_;
-  wire _1082_;
-  wire _1083_;
-  wire _1084_;
-  wire _1085_;
-  wire _1086_;
-  wire _1087_;
-  wire _1088_;
-  wire _1089_;
-  wire _1090_;
-  wire _1091_;
-  wire _1092_;
-  wire _1093_;
-  wire _1094_;
-  wire _1095_;
-  wire _1096_;
-  wire _1097_;
-  wire _1098_;
-  wire _1099_;
-  wire _1100_;
-  wire _1101_;
-  wire _1102_;
-  wire _1103_;
-  wire _1104_;
-  wire _1105_;
-  wire _1106_;
-  wire _1107_;
-  wire _1108_;
-  wire _1109_;
-  wire _1110_;
-  wire _1111_;
-  wire _1112_;
-  wire _1113_;
-  wire _1114_;
-  wire _1115_;
-  wire _1116_;
-  wire _1117_;
-  wire _1118_;
-  wire _1119_;
-  wire _1120_;
-  wire _1121_;
-  wire _1122_;
-  wire _1123_;
-  wire _1124_;
-  wire _1125_;
-  wire _1126_;
-  wire _1127_;
-  wire _1128_;
-  wire _1129_;
-  wire _1130_;
-  wire _1131_;
-  wire _1132_;
-  wire _1133_;
-  wire _1134_;
-  wire _1135_;
-  wire _1136_;
-  wire _1137_;
-  wire _1138_;
-  wire _1139_;
-  wire _1140_;
-  wire _1141_;
-  wire _1142_;
-  wire _1143_;
-  wire _1144_;
-  wire _1145_;
-  wire _1146_;
-  wire _1147_;
-  wire _1148_;
-  wire _1149_;
-  wire _1150_;
-  wire _1151_;
-  wire _1152_;
-  wire _1153_;
-  wire _1154_;
-  wire _1155_;
-  wire _1156_;
-  wire _1157_;
-  wire _1158_;
-  wire _1159_;
-  wire _1160_;
-  wire _1161_;
-  wire _1162_;
-  wire _1163_;
-  wire _1164_;
-  wire _1165_;
-  wire _1166_;
-  wire _1167_;
-  wire _1168_;
-  wire _1169_;
-  wire _1170_;
-  wire _1171_;
-  wire _1172_;
-  wire _1173_;
-  wire _1174_;
-  wire _1175_;
-  wire _1176_;
-  wire _1177_;
-  wire _1178_;
-  wire _1179_;
-  wire _1180_;
-  wire _1181_;
-  wire _1182_;
-  wire _1183_;
-  wire _1184_;
-  wire _1185_;
-  wire _1186_;
-  wire _1187_;
-  wire _1188_;
-  wire _1189_;
-  wire _1190_;
-  wire _1191_;
-  wire _1192_;
-  wire _1193_;
-  wire _1194_;
-  wire _1195_;
-  wire _1196_;
-  wire _1197_;
-  wire _1198_;
-  wire _1199_;
-  wire _1200_;
-  wire _1201_;
-  wire _1202_;
-  wire _1203_;
-  wire _1204_;
-  wire _1205_;
-  wire _1206_;
-  wire _1207_;
-  wire _1208_;
-  wire _1209_;
-  wire _1210_;
-  wire _1211_;
-  wire _1212_;
-  wire _1213_;
-  wire _1214_;
-  wire _1215_;
-  wire _1216_;
-  wire _1217_;
-  wire _1218_;
-  wire _1219_;
-  wire _1220_;
-  wire _1221_;
-  wire _1222_;
-  wire _1223_;
-  wire _1224_;
-  wire _1225_;
-  wire _1226_;
-  wire _1227_;
-  wire _1228_;
-  wire _1229_;
-  wire _1230_;
-  wire _1231_;
-  wire _1232_;
-  wire _1233_;
-  wire _1234_;
-  wire _1235_;
-  wire _1236_;
-  wire _1237_;
-  wire _1238_;
-  wire _1239_;
-  wire _1240_;
-  wire _1241_;
-  wire _1242_;
-  wire _1243_;
-  wire _1244_;
-  wire _1245_;
-  wire _1246_;
-  wire _1247_;
-  wire _1248_;
-  wire _1249_;
-  wire _1250_;
-  wire _1251_;
-  wire _1252_;
-  wire _1253_;
-  wire _1254_;
-  wire _1255_;
-  wire _1256_;
-  wire _1257_;
-  wire _1258_;
-  wire _1259_;
-  wire _1260_;
-  wire _1261_;
-  wire _1262_;
-  wire _1263_;
-  wire _1264_;
-  wire _1265_;
-  wire _1266_;
-  wire _1267_;
-  wire _1268_;
-  wire _1269_;
-  wire _1270_;
-  wire _1271_;
-  wire _1272_;
-  wire _1273_;
-  wire _1274_;
-  wire _1275_;
-  wire _1276_;
-  wire _1277_;
-  wire _1278_;
-  wire _1279_;
-  wire _1280_;
-  wire _1281_;
-  wire _1282_;
-  wire _1283_;
-  wire _1284_;
-  wire _1285_;
-  wire _1286_;
-  wire _1287_;
-  wire _1288_;
-  wire _1289_;
-  wire _1290_;
-  wire _1291_;
-  wire _1292_;
-  wire _1293_;
-  wire _1294_;
-  wire _1295_;
-  wire _1296_;
-  wire _1297_;
-  wire _1298_;
-  wire _1299_;
-  wire _1300_;
-  wire _1301_;
-  wire _1302_;
-  wire _1303_;
-  wire _1304_;
-  wire _1305_;
-  wire _1306_;
-  wire _1307_;
-  wire _1308_;
-  wire _1309_;
-  wire _1310_;
-  wire _1311_;
-  wire _1312_;
-  wire _1313_;
-  wire _1314_;
-  wire _1315_;
-  wire _1316_;
-  wire _1317_;
-  wire _1318_;
-  wire _1319_;
-  wire _1320_;
-  wire _1321_;
-  wire _1322_;
-  wire _1323_;
-  wire _1324_;
-  wire _1325_;
-  wire _1326_;
-  wire _1327_;
-  wire _1328_;
-  wire _1329_;
-  wire _1330_;
-  wire _1331_;
-  wire _1332_;
-  wire _1333_;
-  wire _1334_;
-  wire _1335_;
-  wire _1336_;
-  wire _1337_;
-  wire _1338_;
-  wire _1339_;
-  wire _1340_;
-  wire _1341_;
-  wire _1342_;
-  wire _1343_;
-  wire _1344_;
-  wire _1345_;
-  wire _1346_;
-  wire _1347_;
-  wire _1348_;
-  wire _1349_;
-  wire _1350_;
-  wire _1351_;
-  wire _1352_;
-  wire _1353_;
-  wire _1354_;
-  wire _1355_;
-  wire _1356_;
-  wire _1357_;
-  wire _1358_;
-  wire _1359_;
-  wire _1360_;
-  wire _1361_;
-  wire _1362_;
-  wire _1363_;
-  wire _1364_;
-  wire _1365_;
-  wire _1366_;
-  wire _1367_;
-  wire _1368_;
-  wire _1369_;
-  wire _1370_;
-  wire _1371_;
-  wire _1372_;
   wire [5:0] \D0Fifo.Fifo_Data_in ;
-  wire [5:0] \D0Fifo.Fifo_Data_in_int ;
   wire [5:0] \D0Fifo.memoria.Ram[0] ;
   wire [5:0] \D0Fifo.memoria.Ram[1] ;
   wire [5:0] \D0Fifo.memoria.Ram[2] ;
@@ -1383,9 +1011,7 @@ module PCIE_Synth(clk, reset_L, init, data_in_principal, push, data_out0, data_o
   wire [1:0] \D0Fifo.memoria.iReadAddress ;
   wire \D0Fifo.memoria.iReadEnable ;
   wire [1:0] \D0Fifo.memoria.iWriteAddress ;
-  wire \D0Fifo.pop ;
   wire [5:0] \D1Fifo.Fifo_Data_in ;
-  wire [5:0] \D1Fifo.Fifo_Data_in_int ;
   wire [5:0] \D1Fifo.memoria.Ram[0] ;
   wire [5:0] \D1Fifo.memoria.Ram[1] ;
   wire [5:0] \D1Fifo.memoria.Ram[2] ;
@@ -1393,7 +1019,6 @@ module PCIE_Synth(clk, reset_L, init, data_in_principal, push, data_out0, data_o
   wire [1:0] \D1Fifo.memoria.iReadAddress ;
   wire \D1Fifo.memoria.iReadEnable ;
   wire [1:0] \D1Fifo.memoria.iWriteAddress ;
-  wire \D1Fifo.pop ;
   wire [5:0] \Demux_D0_D1.data_in ;
   wire \Demux_D0_D1.valid_in ;
   wire Error_Fifo_MF;
@@ -1402,21 +1027,17 @@ module PCIE_Synth(clk, reset_L, init, data_in_principal, push, data_out0, data_o
   wire Fifo_Empty_MF;
   wire Fifo_Empty_VC0;
   wire Fifo_Empty_VC1;
-  wire [5:0] \MainFifo.Fifo_Data_in_int ;
   wire [5:0] \MainFifo.memoria.Ram[0] ;
   wire [5:0] \MainFifo.memoria.Ram[1] ;
   wire [5:0] \MainFifo.memoria.Ram[2] ;
   wire [5:0] \MainFifo.memoria.Ram[3] ;
   wire [1:0] \MainFifo.memoria.iReadAddress ;
-  wire \MainFifo.memoria.iReadEnable ;
   wire [1:0] \MainFifo.memoria.iWriteAddress ;
-  wire \MainFifo.memoria.iWriteEnable ;
   wire [2:0] \MainFifo.num_mem ;
   output Pausa_MF;
   wire Pausa_VC0;
   wire Pausa_VC1;
   wire [5:0] \VC0Fifo.Fifo_Data_in ;
-  wire [5:0] \VC0Fifo.Fifo_Data_in_int ;
   wire [5:0] \VC0Fifo.memoria.Ram[0] ;
   wire [5:0] \VC0Fifo.memoria.Ram[1] ;
   wire [5:0] \VC0Fifo.memoria.Ram[2] ;
@@ -1426,10 +1047,7 @@ module PCIE_Synth(clk, reset_L, init, data_in_principal, push, data_out0, data_o
   wire [1:0] \VC0Fifo.memoria.iWriteAddress ;
   wire \VC0Fifo.memoria.iWriteEnable ;
   wire [2:0] \VC0Fifo.num_mem ;
-  wire \VC0Fifo.pop ;
-  wire \VC0Fifo.push ;
   wire [5:0] \VC1Fifo.Fifo_Data_in ;
-  wire [5:0] \VC1Fifo.Fifo_Data_in_int ;
   wire [5:0] \VC1Fifo.memoria.Ram[0] ;
   wire [5:0] \VC1Fifo.memoria.Ram[1] ;
   wire [5:0] \VC1Fifo.memoria.Ram[2] ;
@@ -1439,8 +1057,6 @@ module PCIE_Synth(clk, reset_L, init, data_in_principal, push, data_out0, data_o
   wire [1:0] \VC1Fifo.memoria.iWriteAddress ;
   wire \VC1Fifo.memoria.iWriteEnable ;
   wire [2:0] \VC1Fifo.num_mem ;
-  wire \VC1Fifo.pop ;
-  wire \VC1Fifo.push ;
   output active_out;
   input clk;
   input [5:0] data_in_principal;
@@ -1453,7917 +1069,5947 @@ module PCIE_Synth(clk, reset_L, init, data_in_principal, push, data_out0, data_o
   input init;
   input push;
   input reset_L;
-  NOT _1373_ (
+  NOT _1002_ (
     .A(Fifo_Empty_VC0),
-    .Y(_0874_)
+    .Y(_0448_)
   );
-  NOT _1374_ (
+  NOT _1003_ (
     .A(Fifo_Empty_VC1),
-    .Y(_0875_)
+    .Y(_0449_)
   );
-  NAND _1375_ (
-    .A(_0875_),
+  NAND _1004_ (
+    .A(_0449_),
     .B(reset_L),
-    .Y(_0876_)
+    .Y(_0450_)
   );
-  NOR _1376_ (
-    .A(_0876_),
-    .B(_0874_),
+  NOR _1005_ (
+    .A(_0450_),
+    .B(_0448_),
     .Y(_0001_)
   );
-  NOT _1377_ (
+  NOT _1006_ (
     .A(reset_L),
-    .Y(_0878_)
+    .Y(_0451_)
   );
-  NOR _1378_ (
+  NOR _1007_ (
     .A(Fifo_Empty_VC0),
-    .B(_0878_),
+    .B(_0451_),
     .Y(_0000_)
   );
-  NOT _1379_ (
+  NOT _1008_ (
     .A(\D0Fifo.memoria.iReadAddress [0]),
-    .Y(_0881_)
+    .Y(_0452_)
   );
-  NOR _1380_ (
-    .A(_0881_),
-    .B(_0878_),
-    .Y(_0846_)
+  NOR _1009_ (
+    .A(_0452_),
+    .B(_0451_),
+    .Y(_0434_)
   );
-  NOT _1381_ (
+  NOT _1010_ (
     .A(\D0Fifo.memoria.iReadAddress [1]),
-    .Y(_0884_)
+    .Y(_0453_)
   );
-  NOR _1382_ (
-    .A(_0884_),
-    .B(_0878_),
-    .Y(_0848_)
+  NOR _1011_ (
+    .A(_0453_),
+    .B(_0451_),
+    .Y(_0440_)
   );
-  NOR _1383_ (
+  NAND _1012_ (
     .A(\D0Fifo.memoria.iWriteAddress [0]),
-    .B(\D0Fifo.pop ),
-    .Y(_0886_)
+    .B(\D0Fifo.memoria.iReadEnable ),
+    .Y(_0454_)
   );
-  NAND _1384_ (
-    .A(\D0Fifo.memoria.iWriteAddress [0]),
-    .B(\D0Fifo.pop ),
-    .Y(_0888_)
+  NOT _1013_ (
+    .A(_0454_),
+    .Y(_0455_)
   );
-  NAND _1385_ (
-    .A(_0888_),
-    .B(reset_L),
-    .Y(_0890_)
-  );
-  NOR _1386_ (
-    .A(_0890_),
-    .B(_0886_),
-    .Y(_0854_)
-  );
-  NOT _1387_ (
-    .A(\D0Fifo.memoria.iWriteAddress [1]),
-    .Y(_0893_)
-  );
-  NOR _1388_ (
-    .A(_0888_),
-    .B(_0893_),
-    .Y(_0895_)
-  );
-  NAND _1389_ (
-    .A(_0888_),
-    .B(_0893_),
-    .Y(_0898_)
-  );
-  NAND _1390_ (
-    .A(_0898_),
-    .B(reset_L),
-    .Y(_0899_)
-  );
-  NOR _1391_ (
-    .A(_0899_),
-    .B(_0895_),
-    .Y(_0857_)
-  );
-  NOT _1392_ (
-    .A(\D0Fifo.Fifo_Data_in [0]),
-    .Y(_0902_)
-  );
-  NOR _1393_ (
-    .A(_0902_),
-    .B(_0878_),
-    .Y(_0860_)
-  );
-  NOT _1394_ (
-    .A(\D0Fifo.Fifo_Data_in [1]),
-    .Y(_0905_)
-  );
-  NOR _1395_ (
-    .A(_0905_),
-    .B(_0878_),
-    .Y(_0870_)
-  );
-  NOT _1396_ (
-    .A(\D0Fifo.Fifo_Data_in [2]),
-    .Y(_0908_)
-  );
-  NOR _1397_ (
-    .A(_0908_),
-    .B(_0878_),
-    .Y(_0871_)
-  );
-  NOT _1398_ (
-    .A(\D0Fifo.Fifo_Data_in [3]),
-    .Y(_0910_)
-  );
-  NOR _1399_ (
-    .A(_0910_),
-    .B(_0878_),
-    .Y(_0872_)
-  );
-  NAND _1400_ (
-    .A(\D0Fifo.Fifo_Data_in [4]),
-    .B(reset_L),
-    .Y(_0914_)
-  );
-  NOT _1401_ (
-    .A(_0914_),
-    .Y(_0873_)
-  );
-  NOT _1402_ (
-    .A(\D0Fifo.Fifo_Data_in [5]),
-    .Y(_0917_)
-  );
-  NOR _1403_ (
-    .A(_0917_),
-    .B(_0878_),
-    .Y(_0896_)
-  );
-  NOT _1404_ (
-    .A(\D0Fifo.pop ),
-    .Y(_0919_)
-  );
-  NOR _1405_ (
-    .A(_0919_),
-    .B(_0878_),
-    .Y(_0911_)
-  );
-  NOT _1406_ (
+  NOT _1014_ (
     .A(\D0Fifo.memoria.iReadEnable ),
-    .Y(_0920_)
+    .Y(_0456_)
   );
-  NOR _1407_ (
+  NOT _1015_ (
+    .A(\D0Fifo.memoria.iWriteAddress [0]),
+    .Y(_0457_)
+  );
+  NAND _1016_ (
+    .A(_0457_),
+    .B(_0456_),
+    .Y(_0458_)
+  );
+  NAND _1017_ (
+    .A(_0458_),
+    .B(reset_L),
+    .Y(_0459_)
+  );
+  NOR _1018_ (
+    .A(_0459_),
+    .B(_0455_),
+    .Y(_0445_)
+  );
+  NOT _1019_ (
+    .A(\D0Fifo.memoria.iWriteAddress [1]),
+    .Y(_0460_)
+  );
+  NOR _1020_ (
+    .A(_0454_),
+    .B(_0460_),
+    .Y(_0461_)
+  );
+  NAND _1021_ (
+    .A(_0454_),
+    .B(_0460_),
+    .Y(_0462_)
+  );
+  NAND _1022_ (
+    .A(_0462_),
+    .B(reset_L),
+    .Y(_0463_)
+  );
+  NOR _1023_ (
+    .A(_0463_),
+    .B(_0461_),
+    .Y(_0447_)
+  );
+  NOR _1024_ (
     .A(\D0Fifo.memoria.Ram[2] [0]),
     .B(\D0Fifo.memoria.iReadAddress [0]),
-    .Y(_0921_)
+    .Y(_0464_)
   );
-  NOT _1408_ (
+  NOT _1025_ (
     .A(\D0Fifo.memoria.Ram[3] [0]),
-    .Y(_0922_)
+    .Y(_0465_)
   );
-  NAND _1409_ (
-    .A(_0922_),
+  NAND _1026_ (
+    .A(_0465_),
     .B(\D0Fifo.memoria.iReadAddress [0]),
-    .Y(_0923_)
+    .Y(_0466_)
   );
-  NAND _1410_ (
-    .A(_0923_),
+  NAND _1027_ (
+    .A(_0466_),
     .B(\D0Fifo.memoria.iReadAddress [1]),
-    .Y(_0924_)
+    .Y(_0467_)
   );
-  NOR _1411_ (
-    .A(_0924_),
-    .B(_0921_),
-    .Y(_0925_)
+  NOR _1028_ (
+    .A(_0467_),
+    .B(_0464_),
+    .Y(_0468_)
   );
-  NOT _1412_ (
+  NOT _1029_ (
     .A(\D0Fifo.memoria.Ram[1] [0]),
-    .Y(_0926_)
+    .Y(_0469_)
   );
-  NOR _1413_ (
-    .A(_0926_),
-    .B(_0881_),
-    .Y(_0927_)
+  NOR _1030_ (
+    .A(_0469_),
+    .B(_0452_),
+    .Y(_0470_)
   );
-  NOT _1414_ (
+  NOT _1031_ (
     .A(\D0Fifo.memoria.Ram[0] [0]),
-    .Y(_0928_)
+    .Y(_0471_)
   );
-  NOR _1415_ (
-    .A(_0928_),
+  NOR _1032_ (
+    .A(_0471_),
     .B(\D0Fifo.memoria.iReadAddress [0]),
-    .Y(_0929_)
+    .Y(_0472_)
   );
-  NOR _1416_ (
-    .A(_0929_),
-    .B(_0927_),
-    .Y(_0930_)
+  NOR _1033_ (
+    .A(_0472_),
+    .B(_0470_),
+    .Y(_0473_)
   );
-  NOR _1417_ (
-    .A(_0930_),
+  NOR _1034_ (
+    .A(_0473_),
     .B(\D0Fifo.memoria.iReadAddress [1]),
-    .Y(_0931_)
+    .Y(_0474_)
   );
-  NOR _1418_ (
-    .A(_0931_),
-    .B(_0925_),
-    .Y(_0932_)
+  NOR _1035_ (
+    .A(_0474_),
+    .B(_0468_),
+    .Y(_0475_)
   );
-  NOR _1419_ (
-    .A(_0932_),
-    .B(_0920_),
+  NOR _1036_ (
+    .A(_0475_),
+    .B(_0456_),
     .Y(data_out0[0])
   );
-  NOR _1420_ (
+  NOR _1037_ (
     .A(\D0Fifo.memoria.Ram[2] [1]),
     .B(\D0Fifo.memoria.iReadAddress [0]),
+    .Y(_0476_)
+  );
+  NOT _1038_ (
+    .A(\D0Fifo.memoria.Ram[3] [1]),
+    .Y(_0478_)
+  );
+  NAND _1039_ (
+    .A(_0478_),
+    .B(\D0Fifo.memoria.iReadAddress [0]),
+    .Y(_0480_)
+  );
+  NAND _1040_ (
+    .A(_0480_),
+    .B(\D0Fifo.memoria.iReadAddress [1]),
+    .Y(_0482_)
+  );
+  NOR _1041_ (
+    .A(_0482_),
+    .B(_0476_),
+    .Y(_0484_)
+  );
+  NOT _1042_ (
+    .A(\D0Fifo.memoria.Ram[1] [1]),
+    .Y(_0486_)
+  );
+  NOR _1043_ (
+    .A(_0486_),
+    .B(_0452_),
+    .Y(_0488_)
+  );
+  NOT _1044_ (
+    .A(\D0Fifo.memoria.Ram[0] [1]),
+    .Y(_0489_)
+  );
+  NOR _1045_ (
+    .A(_0489_),
+    .B(\D0Fifo.memoria.iReadAddress [0]),
+    .Y(_0491_)
+  );
+  NOR _1046_ (
+    .A(_0491_),
+    .B(_0488_),
+    .Y(_0493_)
+  );
+  NOR _1047_ (
+    .A(_0493_),
+    .B(\D0Fifo.memoria.iReadAddress [1]),
+    .Y(_0495_)
+  );
+  NOR _1048_ (
+    .A(_0495_),
+    .B(_0484_),
+    .Y(_0497_)
+  );
+  NOR _1049_ (
+    .A(_0497_),
+    .B(_0456_),
+    .Y(data_out0[1])
+  );
+  NOR _1050_ (
+    .A(\D0Fifo.memoria.Ram[2] [2]),
+    .B(\D0Fifo.memoria.iReadAddress [0]),
+    .Y(_0500_)
+  );
+  NOT _1051_ (
+    .A(\D0Fifo.memoria.Ram[3] [2]),
+    .Y(_0501_)
+  );
+  NAND _1052_ (
+    .A(_0501_),
+    .B(\D0Fifo.memoria.iReadAddress [0]),
+    .Y(_0503_)
+  );
+  NAND _1053_ (
+    .A(_0503_),
+    .B(\D0Fifo.memoria.iReadAddress [1]),
+    .Y(_0505_)
+  );
+  NOR _1054_ (
+    .A(_0505_),
+    .B(_0500_),
+    .Y(_0507_)
+  );
+  NOT _1055_ (
+    .A(\D0Fifo.memoria.Ram[1] [2]),
+    .Y(_0509_)
+  );
+  NOR _1056_ (
+    .A(_0509_),
+    .B(_0452_),
+    .Y(_0511_)
+  );
+  NOT _1057_ (
+    .A(\D0Fifo.memoria.Ram[0] [2]),
+    .Y(_0513_)
+  );
+  NOR _1058_ (
+    .A(_0513_),
+    .B(\D0Fifo.memoria.iReadAddress [0]),
+    .Y(_0514_)
+  );
+  NOR _1059_ (
+    .A(_0514_),
+    .B(_0511_),
+    .Y(_0516_)
+  );
+  NOR _1060_ (
+    .A(_0516_),
+    .B(\D0Fifo.memoria.iReadAddress [1]),
+    .Y(_0518_)
+  );
+  NOR _1061_ (
+    .A(_0518_),
+    .B(_0507_),
+    .Y(_0520_)
+  );
+  NOR _1062_ (
+    .A(_0520_),
+    .B(_0456_),
+    .Y(data_out0[2])
+  );
+  NOR _1063_ (
+    .A(\D0Fifo.memoria.Ram[2] [3]),
+    .B(\D0Fifo.memoria.iReadAddress [0]),
+    .Y(_0523_)
+  );
+  NOT _1064_ (
+    .A(\D0Fifo.memoria.Ram[3] [3]),
+    .Y(_0525_)
+  );
+  NAND _1065_ (
+    .A(_0525_),
+    .B(\D0Fifo.memoria.iReadAddress [0]),
+    .Y(_0526_)
+  );
+  NAND _1066_ (
+    .A(_0526_),
+    .B(\D0Fifo.memoria.iReadAddress [1]),
+    .Y(_0527_)
+  );
+  NOR _1067_ (
+    .A(_0527_),
+    .B(_0523_),
+    .Y(_0528_)
+  );
+  NOT _1068_ (
+    .A(\D0Fifo.memoria.Ram[1] [3]),
+    .Y(_0529_)
+  );
+  NOR _1069_ (
+    .A(_0529_),
+    .B(_0452_),
+    .Y(_0530_)
+  );
+  NOT _1070_ (
+    .A(\D0Fifo.memoria.Ram[0] [3]),
+    .Y(_0531_)
+  );
+  NOR _1071_ (
+    .A(_0531_),
+    .B(\D0Fifo.memoria.iReadAddress [0]),
+    .Y(_0532_)
+  );
+  NOR _1072_ (
+    .A(_0532_),
+    .B(_0530_),
+    .Y(_0533_)
+  );
+  NOR _1073_ (
+    .A(_0533_),
+    .B(\D0Fifo.memoria.iReadAddress [1]),
+    .Y(_0534_)
+  );
+  NOR _1074_ (
+    .A(_0534_),
+    .B(_0528_),
+    .Y(_0535_)
+  );
+  NOR _1075_ (
+    .A(_0535_),
+    .B(_0456_),
+    .Y(data_out0[3])
+  );
+  NOR _1076_ (
+    .A(\D0Fifo.memoria.Ram[2] [4]),
+    .B(\D0Fifo.memoria.iReadAddress [0]),
+    .Y(_0536_)
+  );
+  NOT _1077_ (
+    .A(\D0Fifo.memoria.Ram[3] [4]),
+    .Y(_0537_)
+  );
+  NAND _1078_ (
+    .A(_0537_),
+    .B(\D0Fifo.memoria.iReadAddress [0]),
+    .Y(_0538_)
+  );
+  NAND _1079_ (
+    .A(_0538_),
+    .B(\D0Fifo.memoria.iReadAddress [1]),
+    .Y(_0539_)
+  );
+  NOR _1080_ (
+    .A(_0539_),
+    .B(_0536_),
+    .Y(_0540_)
+  );
+  NOT _1081_ (
+    .A(\D0Fifo.memoria.Ram[1] [4]),
+    .Y(_0541_)
+  );
+  NOR _1082_ (
+    .A(_0541_),
+    .B(_0452_),
+    .Y(_0542_)
+  );
+  NOT _1083_ (
+    .A(\D0Fifo.memoria.Ram[0] [4]),
+    .Y(_0543_)
+  );
+  NOR _1084_ (
+    .A(_0543_),
+    .B(\D0Fifo.memoria.iReadAddress [0]),
+    .Y(_0544_)
+  );
+  NOR _1085_ (
+    .A(_0544_),
+    .B(_0542_),
+    .Y(_0545_)
+  );
+  NOR _1086_ (
+    .A(_0545_),
+    .B(\D0Fifo.memoria.iReadAddress [1]),
+    .Y(_0546_)
+  );
+  NOR _1087_ (
+    .A(_0546_),
+    .B(_0540_),
+    .Y(_0547_)
+  );
+  NOR _1088_ (
+    .A(_0547_),
+    .B(_0456_),
+    .Y(data_out0[4])
+  );
+  NOR _1089_ (
+    .A(\D0Fifo.memoria.Ram[2] [5]),
+    .B(\D0Fifo.memoria.iReadAddress [0]),
+    .Y(_0548_)
+  );
+  NOT _1090_ (
+    .A(\D0Fifo.memoria.Ram[3] [5]),
+    .Y(_0549_)
+  );
+  NAND _1091_ (
+    .A(_0549_),
+    .B(\D0Fifo.memoria.iReadAddress [0]),
+    .Y(_0550_)
+  );
+  NAND _1092_ (
+    .A(_0550_),
+    .B(\D0Fifo.memoria.iReadAddress [1]),
+    .Y(_0551_)
+  );
+  NOR _1093_ (
+    .A(_0551_),
+    .B(_0548_),
+    .Y(_0552_)
+  );
+  NOT _1094_ (
+    .A(\D0Fifo.memoria.Ram[1] [5]),
+    .Y(_0553_)
+  );
+  NOR _1095_ (
+    .A(_0553_),
+    .B(_0452_),
+    .Y(_0554_)
+  );
+  NOT _1096_ (
+    .A(\D0Fifo.memoria.Ram[0] [5]),
+    .Y(_0555_)
+  );
+  NOR _1097_ (
+    .A(_0555_),
+    .B(\D0Fifo.memoria.iReadAddress [0]),
+    .Y(_0556_)
+  );
+  NOR _1098_ (
+    .A(_0556_),
+    .B(_0554_),
+    .Y(_0557_)
+  );
+  NOR _1099_ (
+    .A(_0557_),
+    .B(\D0Fifo.memoria.iReadAddress [1]),
+    .Y(_0559_)
+  );
+  NOR _1100_ (
+    .A(_0559_),
+    .B(_0552_),
+    .Y(_0561_)
+  );
+  NOR _1101_ (
+    .A(_0561_),
+    .B(_0456_),
+    .Y(data_out0[5])
+  );
+  NAND _1102_ (
+    .A(_0461_),
+    .B(\D0Fifo.Fifo_Data_in [0]),
+    .Y(_0563_)
+  );
+  NOT _1103_ (
+    .A(_0461_),
+    .Y(_0564_)
+  );
+  NAND _1104_ (
+    .A(_0564_),
+    .B(\D0Fifo.memoria.Ram[3] [0]),
+    .Y(_0565_)
+  );
+  NAND _1105_ (
+    .A(_0565_),
+    .B(_0563_),
+    .Y(_0072_)
+  );
+  NAND _1106_ (
+    .A(_0461_),
+    .B(\D0Fifo.Fifo_Data_in [1]),
+    .Y(_0566_)
+  );
+  NAND _1107_ (
+    .A(_0564_),
+    .B(\D0Fifo.memoria.Ram[3] [1]),
+    .Y(_0567_)
+  );
+  NAND _1108_ (
+    .A(_0567_),
+    .B(_0566_),
+    .Y(_0082_)
+  );
+  NAND _1109_ (
+    .A(_0461_),
+    .B(\D0Fifo.Fifo_Data_in [2]),
+    .Y(_0568_)
+  );
+  NAND _1110_ (
+    .A(_0564_),
+    .B(\D0Fifo.memoria.Ram[3] [2]),
+    .Y(_0569_)
+  );
+  NAND _1111_ (
+    .A(_0569_),
+    .B(_0568_),
+    .Y(_0092_)
+  );
+  NAND _1112_ (
+    .A(_0461_),
+    .B(\D0Fifo.Fifo_Data_in [3]),
+    .Y(_0571_)
+  );
+  NAND _1113_ (
+    .A(_0564_),
+    .B(\D0Fifo.memoria.Ram[3] [3]),
+    .Y(_0573_)
+  );
+  NAND _1114_ (
+    .A(_0573_),
+    .B(_0571_),
+    .Y(_0102_)
+  );
+  NAND _1115_ (
+    .A(_0461_),
+    .B(\D0Fifo.Fifo_Data_in [4]),
+    .Y(_0574_)
+  );
+  NAND _1116_ (
+    .A(_0564_),
+    .B(\D0Fifo.memoria.Ram[3] [4]),
+    .Y(_0575_)
+  );
+  NAND _1117_ (
+    .A(_0575_),
+    .B(_0574_),
+    .Y(_0110_)
+  );
+  NAND _1118_ (
+    .A(_0461_),
+    .B(\D0Fifo.Fifo_Data_in [5]),
+    .Y(_0576_)
+  );
+  NAND _1119_ (
+    .A(_0564_),
+    .B(\D0Fifo.memoria.Ram[3] [5]),
+    .Y(_0577_)
+  );
+  NAND _1120_ (
+    .A(_0577_),
+    .B(_0576_),
+    .Y(_0118_)
+  );
+  NOR _1121_ (
+    .A(\D0Fifo.memoria.iWriteAddress [0]),
+    .B(_0456_),
+    .Y(_0578_)
+  );
+  NOT _1122_ (
+    .A(_0578_),
+    .Y(_0579_)
+  );
+  NOR _1123_ (
+    .A(_0579_),
+    .B(_0460_),
+    .Y(_0580_)
+  );
+  NAND _1124_ (
+    .A(_0580_),
+    .B(\D0Fifo.Fifo_Data_in [0]),
+    .Y(_0582_)
+  );
+  NOT _1125_ (
+    .A(_0580_),
+    .Y(_0584_)
+  );
+  NAND _1126_ (
+    .A(_0584_),
+    .B(\D0Fifo.memoria.Ram[2] [0]),
+    .Y(_0585_)
+  );
+  NAND _1127_ (
+    .A(_0585_),
+    .B(_0582_),
+    .Y(_0133_)
+  );
+  NAND _1128_ (
+    .A(_0580_),
+    .B(\D0Fifo.Fifo_Data_in [1]),
+    .Y(_0586_)
+  );
+  NAND _1129_ (
+    .A(_0584_),
+    .B(\D0Fifo.memoria.Ram[2] [1]),
+    .Y(_0587_)
+  );
+  NAND _1130_ (
+    .A(_0587_),
+    .B(_0586_),
+    .Y(_0141_)
+  );
+  NAND _1131_ (
+    .A(_0580_),
+    .B(\D0Fifo.Fifo_Data_in [2]),
+    .Y(_0588_)
+  );
+  NAND _1132_ (
+    .A(_0584_),
+    .B(\D0Fifo.memoria.Ram[2] [2]),
+    .Y(_0589_)
+  );
+  NAND _1133_ (
+    .A(_0589_),
+    .B(_0588_),
+    .Y(_0149_)
+  );
+  NAND _1134_ (
+    .A(_0580_),
+    .B(\D0Fifo.Fifo_Data_in [3]),
+    .Y(_0591_)
+  );
+  NAND _1135_ (
+    .A(_0584_),
+    .B(\D0Fifo.memoria.Ram[2] [3]),
+    .Y(_0592_)
+  );
+  NAND _1136_ (
+    .A(_0592_),
+    .B(_0591_),
+    .Y(_0157_)
+  );
+  NAND _1137_ (
+    .A(_0580_),
+    .B(\D0Fifo.Fifo_Data_in [4]),
+    .Y(_0593_)
+  );
+  NAND _1138_ (
+    .A(_0584_),
+    .B(\D0Fifo.memoria.Ram[2] [4]),
+    .Y(_0594_)
+  );
+  NAND _1139_ (
+    .A(_0594_),
+    .B(_0593_),
+    .Y(_0165_)
+  );
+  NAND _1140_ (
+    .A(_0580_),
+    .B(\D0Fifo.Fifo_Data_in [5]),
+    .Y(_0595_)
+  );
+  NAND _1141_ (
+    .A(_0584_),
+    .B(\D0Fifo.memoria.Ram[2] [5]),
+    .Y(_0596_)
+  );
+  NAND _1142_ (
+    .A(_0596_),
+    .B(_0595_),
+    .Y(_0175_)
+  );
+  NOR _1143_ (
+    .A(_0454_),
+    .B(\D0Fifo.memoria.iWriteAddress [1]),
+    .Y(_0598_)
+  );
+  NAND _1144_ (
+    .A(_0598_),
+    .B(\D0Fifo.Fifo_Data_in [0]),
+    .Y(_0599_)
+  );
+  NOT _1145_ (
+    .A(_0598_),
+    .Y(_0600_)
+  );
+  NAND _1146_ (
+    .A(_0600_),
+    .B(\D0Fifo.memoria.Ram[1] [0]),
+    .Y(_0601_)
+  );
+  NAND _1147_ (
+    .A(_0601_),
+    .B(_0599_),
+    .Y(_0194_)
+  );
+  NAND _1148_ (
+    .A(_0598_),
+    .B(\D0Fifo.Fifo_Data_in [1]),
+    .Y(_0602_)
+  );
+  NAND _1149_ (
+    .A(_0600_),
+    .B(\D0Fifo.memoria.Ram[1] [1]),
+    .Y(_0603_)
+  );
+  NAND _1150_ (
+    .A(_0603_),
+    .B(_0602_),
+    .Y(_0203_)
+  );
+  NAND _1151_ (
+    .A(_0598_),
+    .B(\D0Fifo.Fifo_Data_in [2]),
+    .Y(_0604_)
+  );
+  NAND _1152_ (
+    .A(_0600_),
+    .B(\D0Fifo.memoria.Ram[1] [2]),
+    .Y(_0605_)
+  );
+  NAND _1153_ (
+    .A(_0605_),
+    .B(_0604_),
+    .Y(_0212_)
+  );
+  NAND _1154_ (
+    .A(_0598_),
+    .B(\D0Fifo.Fifo_Data_in [3]),
+    .Y(_0606_)
+  );
+  NAND _1155_ (
+    .A(_0600_),
+    .B(\D0Fifo.memoria.Ram[1] [3]),
+    .Y(_0608_)
+  );
+  NAND _1156_ (
+    .A(_0608_),
+    .B(_0606_),
+    .Y(_0222_)
+  );
+  NAND _1157_ (
+    .A(_0598_),
+    .B(\D0Fifo.Fifo_Data_in [4]),
+    .Y(_0609_)
+  );
+  NAND _1158_ (
+    .A(_0600_),
+    .B(\D0Fifo.memoria.Ram[1] [4]),
+    .Y(_0610_)
+  );
+  NAND _1159_ (
+    .A(_0610_),
+    .B(_0609_),
+    .Y(_0232_)
+  );
+  NAND _1160_ (
+    .A(_0598_),
+    .B(\D0Fifo.Fifo_Data_in [5]),
+    .Y(_0611_)
+  );
+  NAND _1161_ (
+    .A(_0600_),
+    .B(\D0Fifo.memoria.Ram[1] [5]),
+    .Y(_0612_)
+  );
+  NAND _1162_ (
+    .A(_0612_),
+    .B(_0611_),
+    .Y(_0242_)
+  );
+  NOR _1163_ (
+    .A(_0579_),
+    .B(\D0Fifo.memoria.iWriteAddress [1]),
+    .Y(_0613_)
+  );
+  NOR _1164_ (
+    .A(_0613_),
+    .B(\D0Fifo.memoria.Ram[0] [0]),
+    .Y(_0614_)
+  );
+  NOT _1165_ (
+    .A(_0613_),
+    .Y(_0615_)
+  );
+  NOR _1166_ (
+    .A(_0615_),
+    .B(\D0Fifo.Fifo_Data_in [0]),
+    .Y(_0616_)
+  );
+  NOR _1167_ (
+    .A(_0616_),
+    .B(_0614_),
+    .Y(_0257_)
+  );
+  NOR _1168_ (
+    .A(_0613_),
+    .B(\D0Fifo.memoria.Ram[0] [1]),
+    .Y(_0617_)
+  );
+  NOR _1169_ (
+    .A(_0615_),
+    .B(\D0Fifo.Fifo_Data_in [1]),
+    .Y(_0618_)
+  );
+  NOR _1170_ (
+    .A(_0618_),
+    .B(_0617_),
+    .Y(_0265_)
+  );
+  NOR _1171_ (
+    .A(_0613_),
+    .B(\D0Fifo.memoria.Ram[0] [2]),
+    .Y(_0619_)
+  );
+  NOR _1172_ (
+    .A(_0615_),
+    .B(\D0Fifo.Fifo_Data_in [2]),
+    .Y(_0620_)
+  );
+  NOR _1173_ (
+    .A(_0620_),
+    .B(_0619_),
+    .Y(_0273_)
+  );
+  NOR _1174_ (
+    .A(_0613_),
+    .B(\D0Fifo.memoria.Ram[0] [3]),
+    .Y(_0621_)
+  );
+  NOR _1175_ (
+    .A(_0615_),
+    .B(\D0Fifo.Fifo_Data_in [3]),
+    .Y(_0622_)
+  );
+  NOR _1176_ (
+    .A(_0622_),
+    .B(_0621_),
+    .Y(_0281_)
+  );
+  NOR _1177_ (
+    .A(_0613_),
+    .B(\D0Fifo.memoria.Ram[0] [4]),
+    .Y(_0623_)
+  );
+  NOR _1178_ (
+    .A(_0615_),
+    .B(\D0Fifo.Fifo_Data_in [4]),
+    .Y(_0624_)
+  );
+  NOR _1179_ (
+    .A(_0624_),
+    .B(_0623_),
+    .Y(_0289_)
+  );
+  NOR _1180_ (
+    .A(_0613_),
+    .B(\D0Fifo.memoria.Ram[0] [5]),
+    .Y(_0625_)
+  );
+  NOR _1181_ (
+    .A(_0615_),
+    .B(\D0Fifo.Fifo_Data_in [5]),
+    .Y(_0626_)
+  );
+  NOR _1182_ (
+    .A(_0626_),
+    .B(_0625_),
+    .Y(_0297_)
+  );
+  NOT _1183_ (
+    .A(\D1Fifo.memoria.iReadAddress [0]),
+    .Y(_0627_)
+  );
+  NOR _1184_ (
+    .A(_0627_),
+    .B(_0451_),
+    .Y(_0392_)
+  );
+  NOT _1185_ (
+    .A(\D1Fifo.memoria.iReadAddress [1]),
+    .Y(_0628_)
+  );
+  NOR _1186_ (
+    .A(_0628_),
+    .B(_0451_),
+    .Y(_0393_)
+  );
+  NAND _1187_ (
+    .A(\D1Fifo.memoria.iWriteAddress [0]),
+    .B(\D1Fifo.memoria.iReadEnable ),
+    .Y(_0629_)
+  );
+  NOT _1188_ (
+    .A(_0629_),
+    .Y(_0630_)
+  );
+  NOT _1189_ (
+    .A(\D1Fifo.memoria.iReadEnable ),
+    .Y(_0631_)
+  );
+  NOT _1190_ (
+    .A(\D1Fifo.memoria.iWriteAddress [0]),
+    .Y(_0632_)
+  );
+  NAND _1191_ (
+    .A(_0632_),
+    .B(_0631_),
+    .Y(_0633_)
+  );
+  NAND _1192_ (
+    .A(_0633_),
+    .B(reset_L),
+    .Y(_0634_)
+  );
+  NOR _1193_ (
+    .A(_0634_),
+    .B(_0630_),
+    .Y(_0394_)
+  );
+  NOT _1194_ (
+    .A(\D1Fifo.memoria.iWriteAddress [1]),
+    .Y(_0635_)
+  );
+  NOR _1195_ (
+    .A(_0629_),
+    .B(_0635_),
+    .Y(_0636_)
+  );
+  NAND _1196_ (
+    .A(_0629_),
+    .B(_0635_),
+    .Y(_0637_)
+  );
+  NAND _1197_ (
+    .A(_0637_),
+    .B(reset_L),
+    .Y(_0638_)
+  );
+  NOR _1198_ (
+    .A(_0638_),
+    .B(_0636_),
+    .Y(_0395_)
+  );
+  NOR _1199_ (
+    .A(\D1Fifo.memoria.Ram[2] [0]),
+    .B(\D1Fifo.memoria.iReadAddress [0]),
+    .Y(_0639_)
+  );
+  NOT _1200_ (
+    .A(\D1Fifo.memoria.Ram[3] [0]),
+    .Y(_0640_)
+  );
+  NAND _1201_ (
+    .A(_0640_),
+    .B(\D1Fifo.memoria.iReadAddress [0]),
+    .Y(_0641_)
+  );
+  NAND _1202_ (
+    .A(_0641_),
+    .B(\D1Fifo.memoria.iReadAddress [1]),
+    .Y(_0642_)
+  );
+  NOR _1203_ (
+    .A(_0642_),
+    .B(_0639_),
+    .Y(_0643_)
+  );
+  NOT _1204_ (
+    .A(\D1Fifo.memoria.Ram[1] [0]),
+    .Y(_0644_)
+  );
+  NOR _1205_ (
+    .A(_0644_),
+    .B(_0627_),
+    .Y(_0645_)
+  );
+  NOT _1206_ (
+    .A(\D1Fifo.memoria.Ram[0] [0]),
+    .Y(_0646_)
+  );
+  NOR _1207_ (
+    .A(_0646_),
+    .B(\D1Fifo.memoria.iReadAddress [0]),
+    .Y(_0647_)
+  );
+  NOR _1208_ (
+    .A(_0647_),
+    .B(_0645_),
+    .Y(_0648_)
+  );
+  NOR _1209_ (
+    .A(_0648_),
+    .B(\D1Fifo.memoria.iReadAddress [1]),
+    .Y(_0649_)
+  );
+  NOR _1210_ (
+    .A(_0649_),
+    .B(_0643_),
+    .Y(_0650_)
+  );
+  NOR _1211_ (
+    .A(_0650_),
+    .B(_0631_),
+    .Y(data_out1[0])
+  );
+  NOR _1212_ (
+    .A(\D1Fifo.memoria.Ram[2] [1]),
+    .B(\D1Fifo.memoria.iReadAddress [0]),
+    .Y(_0651_)
+  );
+  NOT _1213_ (
+    .A(\D1Fifo.memoria.Ram[3] [1]),
+    .Y(_0652_)
+  );
+  NAND _1214_ (
+    .A(_0652_),
+    .B(\D1Fifo.memoria.iReadAddress [0]),
+    .Y(_0653_)
+  );
+  NAND _1215_ (
+    .A(_0653_),
+    .B(\D1Fifo.memoria.iReadAddress [1]),
+    .Y(_0654_)
+  );
+  NOR _1216_ (
+    .A(_0654_),
+    .B(_0651_),
+    .Y(_0655_)
+  );
+  NOT _1217_ (
+    .A(\D1Fifo.memoria.Ram[1] [1]),
+    .Y(_0656_)
+  );
+  NOR _1218_ (
+    .A(_0656_),
+    .B(_0627_),
+    .Y(_0657_)
+  );
+  NOT _1219_ (
+    .A(\D1Fifo.memoria.Ram[0] [1]),
+    .Y(_0658_)
+  );
+  NOR _1220_ (
+    .A(_0658_),
+    .B(\D1Fifo.memoria.iReadAddress [0]),
+    .Y(_0659_)
+  );
+  NOR _1221_ (
+    .A(_0659_),
+    .B(_0657_),
+    .Y(_0660_)
+  );
+  NOR _1222_ (
+    .A(_0660_),
+    .B(\D1Fifo.memoria.iReadAddress [1]),
+    .Y(_0662_)
+  );
+  NOR _1223_ (
+    .A(_0662_),
+    .B(_0655_),
+    .Y(_0664_)
+  );
+  NOR _1224_ (
+    .A(_0664_),
+    .B(_0631_),
+    .Y(data_out1[1])
+  );
+  NOR _1225_ (
+    .A(\D1Fifo.memoria.Ram[2] [2]),
+    .B(\D1Fifo.memoria.iReadAddress [0]),
+    .Y(_0667_)
+  );
+  NOT _1226_ (
+    .A(\D1Fifo.memoria.Ram[3] [2]),
+    .Y(_0669_)
+  );
+  NAND _1227_ (
+    .A(_0669_),
+    .B(\D1Fifo.memoria.iReadAddress [0]),
+    .Y(_0671_)
+  );
+  NAND _1228_ (
+    .A(_0671_),
+    .B(\D1Fifo.memoria.iReadAddress [1]),
+    .Y(_0672_)
+  );
+  NOR _1229_ (
+    .A(_0672_),
+    .B(_0667_),
+    .Y(_0674_)
+  );
+  NOT _1230_ (
+    .A(\D1Fifo.memoria.Ram[1] [2]),
+    .Y(_0676_)
+  );
+  NOR _1231_ (
+    .A(_0676_),
+    .B(_0627_),
+    .Y(_0678_)
+  );
+  NOT _1232_ (
+    .A(\D1Fifo.memoria.Ram[0] [2]),
+    .Y(_0680_)
+  );
+  NOR _1233_ (
+    .A(_0680_),
+    .B(\D1Fifo.memoria.iReadAddress [0]),
+    .Y(_0682_)
+  );
+  NOR _1234_ (
+    .A(_0682_),
+    .B(_0678_),
+    .Y(_0684_)
+  );
+  NOR _1235_ (
+    .A(_0684_),
+    .B(\D1Fifo.memoria.iReadAddress [1]),
+    .Y(_0685_)
+  );
+  NOR _1236_ (
+    .A(_0685_),
+    .B(_0674_),
+    .Y(_0687_)
+  );
+  NOR _1237_ (
+    .A(_0687_),
+    .B(_0631_),
+    .Y(data_out1[2])
+  );
+  NOR _1238_ (
+    .A(\D1Fifo.memoria.Ram[2] [3]),
+    .B(\D1Fifo.memoria.iReadAddress [0]),
+    .Y(_0690_)
+  );
+  NOT _1239_ (
+    .A(\D1Fifo.memoria.Ram[3] [3]),
+    .Y(_0692_)
+  );
+  NAND _1240_ (
+    .A(_0692_),
+    .B(\D1Fifo.memoria.iReadAddress [0]),
+    .Y(_0694_)
+  );
+  NAND _1241_ (
+    .A(_0694_),
+    .B(\D1Fifo.memoria.iReadAddress [1]),
+    .Y(_0696_)
+  );
+  NOR _1242_ (
+    .A(_0696_),
+    .B(_0690_),
+    .Y(_0697_)
+  );
+  NOT _1243_ (
+    .A(\D1Fifo.memoria.Ram[1] [3]),
+    .Y(_0699_)
+  );
+  NOR _1244_ (
+    .A(_0699_),
+    .B(_0627_),
+    .Y(_0701_)
+  );
+  NOT _1245_ (
+    .A(\D1Fifo.memoria.Ram[0] [3]),
+    .Y(_0703_)
+  );
+  NOR _1246_ (
+    .A(_0703_),
+    .B(\D1Fifo.memoria.iReadAddress [0]),
+    .Y(_0705_)
+  );
+  NOR _1247_ (
+    .A(_0705_),
+    .B(_0701_),
+    .Y(_0707_)
+  );
+  NOR _1248_ (
+    .A(_0707_),
+    .B(\D1Fifo.memoria.iReadAddress [1]),
+    .Y(_0709_)
+  );
+  NOR _1249_ (
+    .A(_0709_),
+    .B(_0697_),
+    .Y(_0710_)
+  );
+  NOR _1250_ (
+    .A(_0710_),
+    .B(_0631_),
+    .Y(data_out1[3])
+  );
+  NOR _1251_ (
+    .A(\D1Fifo.memoria.Ram[2] [4]),
+    .B(\D1Fifo.memoria.iReadAddress [0]),
+    .Y(_0711_)
+  );
+  NOT _1252_ (
+    .A(\D1Fifo.memoria.Ram[3] [4]),
+    .Y(_0712_)
+  );
+  NAND _1253_ (
+    .A(_0712_),
+    .B(\D1Fifo.memoria.iReadAddress [0]),
+    .Y(_0713_)
+  );
+  NAND _1254_ (
+    .A(_0713_),
+    .B(\D1Fifo.memoria.iReadAddress [1]),
+    .Y(_0714_)
+  );
+  NOR _1255_ (
+    .A(_0714_),
+    .B(_0711_),
+    .Y(_0715_)
+  );
+  NOT _1256_ (
+    .A(\D1Fifo.memoria.Ram[1] [4]),
+    .Y(_0716_)
+  );
+  NOR _1257_ (
+    .A(_0716_),
+    .B(_0627_),
+    .Y(_0717_)
+  );
+  NOT _1258_ (
+    .A(\D1Fifo.memoria.Ram[0] [4]),
+    .Y(_0718_)
+  );
+  NOR _1259_ (
+    .A(_0718_),
+    .B(\D1Fifo.memoria.iReadAddress [0]),
+    .Y(_0719_)
+  );
+  NOR _1260_ (
+    .A(_0719_),
+    .B(_0717_),
+    .Y(_0720_)
+  );
+  NOR _1261_ (
+    .A(_0720_),
+    .B(\D1Fifo.memoria.iReadAddress [1]),
+    .Y(_0721_)
+  );
+  NOR _1262_ (
+    .A(_0721_),
+    .B(_0715_),
+    .Y(_0722_)
+  );
+  NOR _1263_ (
+    .A(_0722_),
+    .B(_0631_),
+    .Y(data_out1[4])
+  );
+  NOR _1264_ (
+    .A(\D1Fifo.memoria.Ram[2] [5]),
+    .B(\D1Fifo.memoria.iReadAddress [0]),
+    .Y(_0723_)
+  );
+  NOT _1265_ (
+    .A(\D1Fifo.memoria.Ram[3] [5]),
+    .Y(_0724_)
+  );
+  NAND _1266_ (
+    .A(_0724_),
+    .B(\D1Fifo.memoria.iReadAddress [0]),
+    .Y(_0725_)
+  );
+  NAND _1267_ (
+    .A(_0725_),
+    .B(\D1Fifo.memoria.iReadAddress [1]),
+    .Y(_0726_)
+  );
+  NOR _1268_ (
+    .A(_0726_),
+    .B(_0723_),
+    .Y(_0727_)
+  );
+  NOT _1269_ (
+    .A(\D1Fifo.memoria.Ram[1] [5]),
+    .Y(_0728_)
+  );
+  NOR _1270_ (
+    .A(_0728_),
+    .B(_0627_),
+    .Y(_0729_)
+  );
+  NOT _1271_ (
+    .A(\D1Fifo.memoria.Ram[0] [5]),
+    .Y(_0730_)
+  );
+  NOR _1272_ (
+    .A(_0730_),
+    .B(\D1Fifo.memoria.iReadAddress [0]),
+    .Y(_0731_)
+  );
+  NOR _1273_ (
+    .A(_0731_),
+    .B(_0729_),
+    .Y(_0732_)
+  );
+  NOR _1274_ (
+    .A(_0732_),
+    .B(\D1Fifo.memoria.iReadAddress [1]),
+    .Y(_0733_)
+  );
+  NOR _1275_ (
+    .A(_0733_),
+    .B(_0727_),
+    .Y(_0734_)
+  );
+  NOR _1276_ (
+    .A(_0734_),
+    .B(_0631_),
+    .Y(data_out1[5])
+  );
+  NAND _1277_ (
+    .A(_0636_),
+    .B(\D1Fifo.Fifo_Data_in [0]),
+    .Y(_0735_)
+  );
+  NOT _1278_ (
+    .A(_0636_),
+    .Y(_0736_)
+  );
+  NAND _1279_ (
+    .A(_0736_),
+    .B(\D1Fifo.memoria.Ram[3] [0]),
+    .Y(_0737_)
+  );
+  NAND _1280_ (
+    .A(_0737_),
+    .B(_0735_),
+    .Y(_0396_)
+  );
+  NAND _1281_ (
+    .A(_0636_),
+    .B(\D1Fifo.Fifo_Data_in [1]),
+    .Y(_0738_)
+  );
+  NAND _1282_ (
+    .A(_0736_),
+    .B(\D1Fifo.memoria.Ram[3] [1]),
+    .Y(_0739_)
+  );
+  NAND _1283_ (
+    .A(_0739_),
+    .B(_0738_),
+    .Y(_0397_)
+  );
+  NAND _1284_ (
+    .A(_0636_),
+    .B(\D1Fifo.Fifo_Data_in [2]),
+    .Y(_0742_)
+  );
+  NAND _1285_ (
+    .A(_0736_),
+    .B(\D1Fifo.memoria.Ram[3] [2]),
+    .Y(_0744_)
+  );
+  NAND _1286_ (
+    .A(_0744_),
+    .B(_0742_),
+    .Y(_0398_)
+  );
+  NAND _1287_ (
+    .A(_0636_),
+    .B(\D1Fifo.Fifo_Data_in [3]),
+    .Y(_0745_)
+  );
+  NAND _1288_ (
+    .A(_0736_),
+    .B(\D1Fifo.memoria.Ram[3] [3]),
+    .Y(_0746_)
+  );
+  NAND _1289_ (
+    .A(_0746_),
+    .B(_0745_),
+    .Y(_0399_)
+  );
+  NAND _1290_ (
+    .A(_0636_),
+    .B(\D1Fifo.Fifo_Data_in [4]),
+    .Y(_0747_)
+  );
+  NAND _1291_ (
+    .A(_0736_),
+    .B(\D1Fifo.memoria.Ram[3] [4]),
+    .Y(_0748_)
+  );
+  NAND _1292_ (
+    .A(_0748_),
+    .B(_0747_),
+    .Y(_0400_)
+  );
+  NAND _1293_ (
+    .A(_0636_),
+    .B(\D1Fifo.Fifo_Data_in [5]),
+    .Y(_0749_)
+  );
+  NAND _1294_ (
+    .A(_0736_),
+    .B(\D1Fifo.memoria.Ram[3] [5]),
+    .Y(_0750_)
+  );
+  NAND _1295_ (
+    .A(_0750_),
+    .B(_0749_),
+    .Y(_0401_)
+  );
+  NOR _1296_ (
+    .A(\D1Fifo.memoria.iWriteAddress [0]),
+    .B(_0631_),
+    .Y(_0752_)
+  );
+  NOT _1297_ (
+    .A(_0752_),
+    .Y(_0754_)
+  );
+  NOR _1298_ (
+    .A(_0754_),
+    .B(_0635_),
+    .Y(_0755_)
+  );
+  NAND _1299_ (
+    .A(_0755_),
+    .B(\D1Fifo.Fifo_Data_in [0]),
+    .Y(_0756_)
+  );
+  NOT _1300_ (
+    .A(_0755_),
+    .Y(_0757_)
+  );
+  NAND _1301_ (
+    .A(_0757_),
+    .B(\D1Fifo.memoria.Ram[2] [0]),
+    .Y(_0758_)
+  );
+  NAND _1302_ (
+    .A(_0758_),
+    .B(_0756_),
+    .Y(_0402_)
+  );
+  NAND _1303_ (
+    .A(_0755_),
+    .B(\D1Fifo.Fifo_Data_in [1]),
+    .Y(_0759_)
+  );
+  NAND _1304_ (
+    .A(_0757_),
+    .B(\D1Fifo.memoria.Ram[2] [1]),
+    .Y(_0760_)
+  );
+  NAND _1305_ (
+    .A(_0760_),
+    .B(_0759_),
+    .Y(_0403_)
+  );
+  NAND _1306_ (
+    .A(_0755_),
+    .B(\D1Fifo.Fifo_Data_in [2]),
+    .Y(_0761_)
+  );
+  NAND _1307_ (
+    .A(_0757_),
+    .B(\D1Fifo.memoria.Ram[2] [2]),
+    .Y(_0762_)
+  );
+  NAND _1308_ (
+    .A(_0762_),
+    .B(_0761_),
+    .Y(_0404_)
+  );
+  NAND _1309_ (
+    .A(_0755_),
+    .B(\D1Fifo.Fifo_Data_in [3]),
+    .Y(_0765_)
+  );
+  NAND _1310_ (
+    .A(_0757_),
+    .B(\D1Fifo.memoria.Ram[2] [3]),
+    .Y(_0766_)
+  );
+  NAND _1311_ (
+    .A(_0766_),
+    .B(_0765_),
+    .Y(_0405_)
+  );
+  NAND _1312_ (
+    .A(_0755_),
+    .B(\D1Fifo.Fifo_Data_in [4]),
+    .Y(_0767_)
+  );
+  NAND _1313_ (
+    .A(_0757_),
+    .B(\D1Fifo.memoria.Ram[2] [4]),
+    .Y(_0768_)
+  );
+  NAND _1314_ (
+    .A(_0768_),
+    .B(_0767_),
+    .Y(_0406_)
+  );
+  NAND _1315_ (
+    .A(_0755_),
+    .B(\D1Fifo.Fifo_Data_in [5]),
+    .Y(_0769_)
+  );
+  NAND _1316_ (
+    .A(_0757_),
+    .B(\D1Fifo.memoria.Ram[2] [5]),
+    .Y(_0770_)
+  );
+  NAND _1317_ (
+    .A(_0770_),
+    .B(_0769_),
+    .Y(_0407_)
+  );
+  NOR _1318_ (
+    .A(_0629_),
+    .B(\D1Fifo.memoria.iWriteAddress [1]),
+    .Y(_0772_)
+  );
+  NAND _1319_ (
+    .A(_0772_),
+    .B(\D1Fifo.Fifo_Data_in [0]),
+    .Y(_0773_)
+  );
+  NOT _1320_ (
+    .A(_0772_),
+    .Y(_0774_)
+  );
+  NAND _1321_ (
+    .A(_0774_),
+    .B(\D1Fifo.memoria.Ram[1] [0]),
+    .Y(_0775_)
+  );
+  NAND _1322_ (
+    .A(_0775_),
+    .B(_0773_),
+    .Y(_0408_)
+  );
+  NAND _1323_ (
+    .A(_0772_),
+    .B(\D1Fifo.Fifo_Data_in [1]),
+    .Y(_0776_)
+  );
+  NAND _1324_ (
+    .A(_0774_),
+    .B(\D1Fifo.memoria.Ram[1] [1]),
+    .Y(_0777_)
+  );
+  NAND _1325_ (
+    .A(_0777_),
+    .B(_0776_),
+    .Y(_0409_)
+  );
+  NAND _1326_ (
+    .A(_0772_),
+    .B(\D1Fifo.Fifo_Data_in [2]),
+    .Y(_0778_)
+  );
+  NAND _1327_ (
+    .A(_0774_),
+    .B(\D1Fifo.memoria.Ram[1] [2]),
+    .Y(_0780_)
+  );
+  NAND _1328_ (
+    .A(_0780_),
+    .B(_0778_),
+    .Y(_0410_)
+  );
+  NAND _1329_ (
+    .A(_0772_),
+    .B(\D1Fifo.Fifo_Data_in [3]),
+    .Y(_0781_)
+  );
+  NAND _1330_ (
+    .A(_0774_),
+    .B(\D1Fifo.memoria.Ram[1] [3]),
+    .Y(_0782_)
+  );
+  NAND _1331_ (
+    .A(_0782_),
+    .B(_0781_),
+    .Y(_0411_)
+  );
+  NAND _1332_ (
+    .A(_0772_),
+    .B(\D1Fifo.Fifo_Data_in [4]),
+    .Y(_0783_)
+  );
+  NAND _1333_ (
+    .A(_0774_),
+    .B(\D1Fifo.memoria.Ram[1] [4]),
+    .Y(_0784_)
+  );
+  NAND _1334_ (
+    .A(_0784_),
+    .B(_0783_),
+    .Y(_0412_)
+  );
+  NAND _1335_ (
+    .A(_0772_),
+    .B(\D1Fifo.Fifo_Data_in [5]),
+    .Y(_0785_)
+  );
+  NAND _1336_ (
+    .A(_0774_),
+    .B(\D1Fifo.memoria.Ram[1] [5]),
+    .Y(_0786_)
+  );
+  NAND _1337_ (
+    .A(_0786_),
+    .B(_0785_),
+    .Y(_0413_)
+  );
+  NOR _1338_ (
+    .A(_0754_),
+    .B(\D1Fifo.memoria.iWriteAddress [1]),
+    .Y(_0787_)
+  );
+  NOR _1339_ (
+    .A(_0787_),
+    .B(\D1Fifo.memoria.Ram[0] [0]),
+    .Y(_0789_)
+  );
+  NOT _1340_ (
+    .A(_0787_),
+    .Y(_0790_)
+  );
+  NOR _1341_ (
+    .A(_0790_),
+    .B(\D1Fifo.Fifo_Data_in [0]),
+    .Y(_0791_)
+  );
+  NOR _1342_ (
+    .A(_0791_),
+    .B(_0789_),
+    .Y(_0414_)
+  );
+  NOR _1343_ (
+    .A(_0787_),
+    .B(\D1Fifo.memoria.Ram[0] [1]),
+    .Y(_0792_)
+  );
+  NOR _1344_ (
+    .A(_0790_),
+    .B(\D1Fifo.Fifo_Data_in [1]),
+    .Y(_0793_)
+  );
+  NOR _1345_ (
+    .A(_0793_),
+    .B(_0792_),
+    .Y(_0415_)
+  );
+  NOR _1346_ (
+    .A(_0787_),
+    .B(\D1Fifo.memoria.Ram[0] [2]),
+    .Y(_0794_)
+  );
+  NOR _1347_ (
+    .A(_0790_),
+    .B(\D1Fifo.Fifo_Data_in [2]),
+    .Y(_0795_)
+  );
+  NOR _1348_ (
+    .A(_0795_),
+    .B(_0794_),
+    .Y(_0416_)
+  );
+  NOR _1349_ (
+    .A(_0787_),
+    .B(\D1Fifo.memoria.Ram[0] [3]),
+    .Y(_0796_)
+  );
+  NOR _1350_ (
+    .A(_0790_),
+    .B(\D1Fifo.Fifo_Data_in [3]),
+    .Y(_0797_)
+  );
+  NOR _1351_ (
+    .A(_0797_),
+    .B(_0796_),
+    .Y(_0417_)
+  );
+  NOR _1352_ (
+    .A(_0787_),
+    .B(\D1Fifo.memoria.Ram[0] [4]),
+    .Y(_0798_)
+  );
+  NOR _1353_ (
+    .A(_0790_),
+    .B(\D1Fifo.Fifo_Data_in [4]),
+    .Y(_0799_)
+  );
+  NOR _1354_ (
+    .A(_0799_),
+    .B(_0798_),
+    .Y(_0418_)
+  );
+  NOR _1355_ (
+    .A(_0787_),
+    .B(\D1Fifo.memoria.Ram[0] [5]),
+    .Y(_0800_)
+  );
+  NOR _1356_ (
+    .A(_0790_),
+    .B(\D1Fifo.Fifo_Data_in [5]),
+    .Y(_0801_)
+  );
+  NOR _1357_ (
+    .A(_0801_),
+    .B(_0800_),
+    .Y(_0419_)
+  );
+  NAND _1358_ (
+    .A(\Demux_D0_D1.data_in [4]),
+    .B(\Demux_D0_D1.valid_in ),
+    .Y(_0802_)
+  );
+  NOR _1359_ (
+    .A(_0802_),
+    .B(_0451_),
+    .Y(_0420_)
+  );
+  NAND _1360_ (
+    .A(\Demux_D0_D1.valid_in ),
+    .B(reset_L),
+    .Y(_0803_)
+  );
+  NOR _1361_ (
+    .A(_0803_),
+    .B(\Demux_D0_D1.data_in [4]),
+    .Y(_0421_)
+  );
+  NOT _1362_ (
+    .A(_0802_),
+    .Y(_0804_)
+  );
+  NOR _1363_ (
+    .A(_0804_),
+    .B(\D1Fifo.Fifo_Data_in [0]),
+    .Y(_0805_)
+  );
+  NOT _1364_ (
+    .A(\Demux_D0_D1.data_in [0]),
+    .Y(_0806_)
+  );
+  NAND _1365_ (
+    .A(_0804_),
+    .B(_0806_),
+    .Y(_0807_)
+  );
+  NOR _1366_ (
+    .A(\Demux_D0_D1.valid_in ),
+    .B(\D1Fifo.memoria.iReadEnable ),
+    .Y(_0808_)
+  );
+  NOR _1367_ (
+    .A(_0808_),
+    .B(_0451_),
+    .Y(_0809_)
+  );
+  NAND _1368_ (
+    .A(_0809_),
+    .B(_0807_),
+    .Y(_0810_)
+  );
+  NOR _1369_ (
+    .A(_0810_),
+    .B(_0805_),
+    .Y(_0422_)
+  );
+  NOT _1370_ (
+    .A(_0809_),
+    .Y(_0811_)
+  );
+  NOT _1371_ (
+    .A(\Demux_D0_D1.data_in [1]),
+    .Y(_0812_)
+  );
+  NAND _1372_ (
+    .A(_0804_),
+    .B(_0812_),
+    .Y(_0813_)
+  );
+  NOT _1373_ (
+    .A(\D1Fifo.Fifo_Data_in [1]),
+    .Y(_0814_)
+  );
+  NAND _1374_ (
+    .A(_0802_),
+    .B(_0814_),
+    .Y(_0815_)
+  );
+  NAND _1375_ (
+    .A(_0815_),
+    .B(_0813_),
+    .Y(_0816_)
+  );
+  NOR _1376_ (
+    .A(_0816_),
+    .B(_0811_),
+    .Y(_0423_)
+  );
+  NOT _1377_ (
+    .A(\Demux_D0_D1.data_in [2]),
+    .Y(_0817_)
+  );
+  NAND _1378_ (
+    .A(_0804_),
+    .B(_0817_),
+    .Y(_0818_)
+  );
+  NOT _1379_ (
+    .A(\D1Fifo.Fifo_Data_in [2]),
+    .Y(_0819_)
+  );
+  NAND _1380_ (
+    .A(_0802_),
+    .B(_0819_),
+    .Y(_0820_)
+  );
+  NAND _1381_ (
+    .A(_0820_),
+    .B(_0818_),
+    .Y(_0821_)
+  );
+  NOR _1382_ (
+    .A(_0821_),
+    .B(_0811_),
+    .Y(_0424_)
+  );
+  NOT _1383_ (
+    .A(\Demux_D0_D1.data_in [3]),
+    .Y(_0822_)
+  );
+  NAND _1384_ (
+    .A(_0804_),
+    .B(_0822_),
+    .Y(_0823_)
+  );
+  NOT _1385_ (
+    .A(\D1Fifo.Fifo_Data_in [3]),
+    .Y(_0824_)
+  );
+  NAND _1386_ (
+    .A(_0802_),
+    .B(_0824_),
+    .Y(_0825_)
+  );
+  NAND _1387_ (
+    .A(_0825_),
+    .B(_0823_),
+    .Y(_0826_)
+  );
+  NOR _1388_ (
+    .A(_0826_),
+    .B(_0811_),
+    .Y(_0425_)
+  );
+  NOR _1389_ (
+    .A(_0804_),
+    .B(\D1Fifo.Fifo_Data_in [4]),
+    .Y(_0827_)
+  );
+  NOR _1390_ (
+    .A(_0827_),
+    .B(_0811_),
+    .Y(_0426_)
+  );
+  NOT _1391_ (
+    .A(\Demux_D0_D1.data_in [5]),
+    .Y(_0828_)
+  );
+  NAND _1392_ (
+    .A(_0804_),
+    .B(_0828_),
+    .Y(_0829_)
+  );
+  NOT _1393_ (
+    .A(\D1Fifo.Fifo_Data_in [5]),
+    .Y(_0830_)
+  );
+  NAND _1394_ (
+    .A(_0802_),
+    .B(_0830_),
+    .Y(_0831_)
+  );
+  NAND _1395_ (
+    .A(_0831_),
+    .B(_0829_),
+    .Y(_0832_)
+  );
+  NOR _1396_ (
+    .A(_0832_),
+    .B(_0811_),
+    .Y(_0427_)
+  );
+  NAND _1397_ (
+    .A(_0421_),
+    .B(\Demux_D0_D1.data_in [0]),
+    .Y(_0833_)
+  );
+  NOR _1398_ (
+    .A(\Demux_D0_D1.valid_in ),
+    .B(_0456_),
+    .Y(_0834_)
+  );
+  NOR _1399_ (
+    .A(_0834_),
+    .B(_0804_),
+    .Y(_0835_)
+  );
+  NOR _1400_ (
+    .A(_0835_),
+    .B(_0451_),
+    .Y(_0836_)
+  );
+  NAND _1401_ (
+    .A(_0836_),
+    .B(\D0Fifo.Fifo_Data_in [0]),
+    .Y(_0837_)
+  );
+  NAND _1402_ (
+    .A(_0837_),
+    .B(_0833_),
+    .Y(_0428_)
+  );
+  NAND _1403_ (
+    .A(_0421_),
+    .B(\Demux_D0_D1.data_in [1]),
+    .Y(_0838_)
+  );
+  NAND _1404_ (
+    .A(_0836_),
+    .B(\D0Fifo.Fifo_Data_in [1]),
+    .Y(_0839_)
+  );
+  NAND _1405_ (
+    .A(_0839_),
+    .B(_0838_),
+    .Y(_0429_)
+  );
+  NAND _1406_ (
+    .A(_0421_),
+    .B(\Demux_D0_D1.data_in [2]),
+    .Y(_0841_)
+  );
+  NAND _1407_ (
+    .A(_0836_),
+    .B(\D0Fifo.Fifo_Data_in [2]),
+    .Y(_0843_)
+  );
+  NAND _1408_ (
+    .A(_0843_),
+    .B(_0841_),
+    .Y(_0430_)
+  );
+  NAND _1409_ (
+    .A(_0421_),
+    .B(\Demux_D0_D1.data_in [3]),
+    .Y(_0846_)
+  );
+  NAND _1410_ (
+    .A(_0836_),
+    .B(\D0Fifo.Fifo_Data_in [3]),
+    .Y(_0848_)
+  );
+  NAND _1411_ (
+    .A(_0848_),
+    .B(_0846_),
+    .Y(_0431_)
+  );
+  NAND _1412_ (
+    .A(\D0Fifo.Fifo_Data_in [4]),
+    .B(reset_L),
+    .Y(_0850_)
+  );
+  NOR _1413_ (
+    .A(_0850_),
+    .B(_0835_),
+    .Y(_0432_)
+  );
+  NAND _1414_ (
+    .A(_0421_),
+    .B(\Demux_D0_D1.data_in [5]),
+    .Y(_0853_)
+  );
+  NAND _1415_ (
+    .A(_0836_),
+    .B(\D0Fifo.Fifo_Data_in [5]),
+    .Y(_0855_)
+  );
+  NAND _1416_ (
+    .A(_0855_),
+    .B(_0853_),
+    .Y(_0433_)
+  );
+  NOT _1417_ (
+    .A(Fifo_Empty_MF),
+    .Y(_0858_)
+  );
+  NOT _1418_ (
+    .A(Pausa_VC1),
+    .Y(_0860_)
+  );
+  NAND _1419_ (
+    .A(_0860_),
+    .B(_0858_),
+    .Y(_0861_)
+  );
+  NOR _1420_ (
+    .A(_0861_),
+    .B(Pausa_VC0),
+    .Y(_0863_)
+  );
+  NOR _1421_ (
+    .A(_0863_),
+    .B(push),
+    .Y(_0865_)
+  );
+  NOT _1422_ (
+    .A(_0865_),
+    .Y(_0867_)
+  );
+  NOR _1423_ (
+    .A(_0867_),
+    .B(\MainFifo.num_mem [0]),
+    .Y(_0869_)
+  );
+  NAND _1424_ (
+    .A(_0867_),
+    .B(\MainFifo.num_mem [0]),
+    .Y(_0871_)
+  );
+  NAND _1425_ (
+    .A(_0871_),
+    .B(reset_L),
+    .Y(_0873_)
+  );
+  NOR _1426_ (
+    .A(_0873_),
+    .B(_0869_),
+    .Y(_0435_)
+  );
+  NOT _1427_ (
+    .A(\MainFifo.num_mem [1]),
+    .Y(_0875_)
+  );
+  NOR _1428_ (
+    .A(Pausa_VC0),
+    .B(Fifo_Empty_MF),
+    .Y(_0877_)
+  );
+  NAND _1429_ (
+    .A(_0877_),
+    .B(_0860_),
+    .Y(_0879_)
+  );
+  NOR _1430_ (
+    .A(_0879_),
+    .B(push),
+    .Y(_0881_)
+  );
+  NOR _1431_ (
+    .A(_0881_),
+    .B(\MainFifo.num_mem [0]),
+    .Y(_0883_)
+  );
+  NOT _1432_ (
+    .A(\MainFifo.num_mem [0]),
+    .Y(_0885_)
+  );
+  NOR _1433_ (
+    .A(push),
+    .B(_0885_),
+    .Y(_0886_)
+  );
+  NOR _1434_ (
+    .A(_0886_),
+    .B(_0883_),
+    .Y(_0887_)
+  );
+  NOR _1435_ (
+    .A(_0887_),
+    .B(_0875_),
+    .Y(_0888_)
+  );
+  NOT _1436_ (
+    .A(push),
+    .Y(_0889_)
+  );
+  NAND _1437_ (
+    .A(_0863_),
+    .B(_0889_),
+    .Y(_0890_)
+  );
+  NAND _1438_ (
+    .A(_0890_),
+    .B(_0885_),
+    .Y(_0891_)
+  );
+  NOT _1439_ (
+    .A(_0886_),
+    .Y(_0892_)
+  );
+  NAND _1440_ (
+    .A(_0892_),
+    .B(_0891_),
+    .Y(_0893_)
+  );
+  NOR _1441_ (
+    .A(_0893_),
+    .B(\MainFifo.num_mem [1]),
+    .Y(_0894_)
+  );
+  NOR _1442_ (
+    .A(_0894_),
+    .B(_0888_),
+    .Y(_0895_)
+  );
+  NOR _1443_ (
+    .A(_0895_),
+    .B(_0451_),
+    .Y(_0436_)
+  );
+  NOT _1444_ (
+    .A(\MainFifo.num_mem [2]),
+    .Y(_0896_)
+  );
+  NAND _1445_ (
+    .A(\MainFifo.num_mem [1]),
+    .B(\MainFifo.num_mem [0]),
+    .Y(_0897_)
+  );
+  NOR _1446_ (
+    .A(\MainFifo.num_mem [1]),
+    .B(\MainFifo.num_mem [0]),
+    .Y(_0898_)
+  );
+  NOT _1447_ (
+    .A(_0898_),
+    .Y(_0899_)
+  );
+  NAND _1448_ (
+    .A(_0899_),
+    .B(_0897_),
+    .Y(_0900_)
+  );
+  NAND _1449_ (
+    .A(_0900_),
+    .B(_0887_),
+    .Y(_0901_)
+  );
+  NOR _1450_ (
+    .A(_0901_),
+    .B(_0896_),
+    .Y(_0902_)
+  );
+  NAND _1451_ (
+    .A(_0901_),
+    .B(_0896_),
+    .Y(_0903_)
+  );
+  NAND _1452_ (
+    .A(_0903_),
+    .B(reset_L),
+    .Y(_0904_)
+  );
+  NOR _1453_ (
+    .A(_0904_),
+    .B(_0902_),
+    .Y(_0437_)
+  );
+  NAND _1454_ (
+    .A(_0881_),
+    .B(\MainFifo.memoria.iReadAddress [0]),
+    .Y(_0905_)
+  );
+  NOT _1455_ (
+    .A(_0905_),
+    .Y(_0906_)
+  );
+  NOT _1456_ (
+    .A(\MainFifo.memoria.iReadAddress [0]),
+    .Y(_0907_)
+  );
+  NAND _1457_ (
+    .A(_0890_),
+    .B(_0907_),
+    .Y(_0908_)
+  );
+  NAND _1458_ (
+    .A(_0908_),
+    .B(reset_L),
+    .Y(_0909_)
+  );
+  NOR _1459_ (
+    .A(_0909_),
+    .B(_0906_),
+    .Y(_0438_)
+  );
+  NOT _1460_ (
+    .A(\MainFifo.memoria.iReadAddress [1]),
+    .Y(_0910_)
+  );
+  NOR _1461_ (
+    .A(_0905_),
+    .B(_0910_),
+    .Y(_0911_)
+  );
+  NAND _1462_ (
+    .A(_0905_),
+    .B(_0910_),
+    .Y(_0912_)
+  );
+  NAND _1463_ (
+    .A(_0912_),
+    .B(reset_L),
+    .Y(_0913_)
+  );
+  NOR _1464_ (
+    .A(_0913_),
+    .B(_0911_),
+    .Y(_0439_)
+  );
+  NAND _1465_ (
+    .A(\MainFifo.memoria.iWriteAddress [0]),
+    .B(push),
+    .Y(_0916_)
+  );
+  NOT _1466_ (
+    .A(_0916_),
+    .Y(_0918_)
+  );
+  NOT _1467_ (
+    .A(\MainFifo.memoria.iWriteAddress [0]),
+    .Y(_0920_)
+  );
+  NAND _1468_ (
+    .A(_0920_),
+    .B(_0889_),
+    .Y(_0922_)
+  );
+  NAND _1469_ (
+    .A(_0922_),
+    .B(reset_L),
+    .Y(_0924_)
+  );
+  NOR _1470_ (
+    .A(_0924_),
+    .B(_0918_),
+    .Y(_0441_)
+  );
+  NOT _1471_ (
+    .A(\MainFifo.memoria.iWriteAddress [1]),
+    .Y(_0925_)
+  );
+  NOR _1472_ (
+    .A(_0916_),
+    .B(_0925_),
+    .Y(_0926_)
+  );
+  NAND _1473_ (
+    .A(_0916_),
+    .B(_0925_),
+    .Y(_0927_)
+  );
+  NAND _1474_ (
+    .A(_0927_),
+    .B(reset_L),
+    .Y(_0928_)
+  );
+  NOR _1475_ (
+    .A(_0928_),
+    .B(_0926_),
+    .Y(_0442_)
+  );
+  NAND _1476_ (
+    .A(_0898_),
+    .B(\MainFifo.num_mem [2]),
+    .Y(_0929_)
+  );
+  NOR _1477_ (
+    .A(_0929_),
+    .B(_0889_),
+    .Y(_0930_)
+  );
+  NOR _1478_ (
+    .A(_0930_),
+    .B(Error_Fifo_MF),
+    .Y(_0931_)
+  );
+  NOR _1479_ (
+    .A(_0931_),
+    .B(_0451_),
+    .Y(_0443_)
+  );
+  NAND _1480_ (
+    .A(_0899_),
+    .B(\MainFifo.num_mem [2]),
+    .Y(_0932_)
+  );
+  NAND _1481_ (
+    .A(_0932_),
+    .B(push),
     .Y(_0933_)
   );
-  NOT _1421_ (
-    .A(\D0Fifo.memoria.Ram[3] [1]),
+  NOR _1482_ (
+    .A(_0899_),
+    .B(\MainFifo.num_mem [2]),
     .Y(_0934_)
   );
-  NAND _1422_ (
+  NAND _1483_ (
     .A(_0934_),
-    .B(\D0Fifo.memoria.iReadAddress [0]),
+    .B(_0863_),
     .Y(_0935_)
   );
-  NAND _1423_ (
+  NAND _1484_ (
     .A(_0935_),
-    .B(\D0Fifo.memoria.iReadAddress [1]),
+    .B(_0858_),
     .Y(_0936_)
   );
-  NOR _1424_ (
+  NAND _1485_ (
     .A(_0936_),
     .B(_0933_),
     .Y(_0937_)
   );
-  NOT _1425_ (
-    .A(\D0Fifo.memoria.Ram[1] [1]),
-    .Y(_0938_)
-  );
-  NOR _1426_ (
-    .A(_0938_),
-    .B(_0881_),
-    .Y(_0939_)
-  );
-  NOT _1427_ (
-    .A(\D0Fifo.memoria.Ram[0] [1]),
-    .Y(_0940_)
-  );
-  NOR _1428_ (
-    .A(_0940_),
-    .B(\D0Fifo.memoria.iReadAddress [0]),
-    .Y(_0941_)
-  );
-  NOR _1429_ (
-    .A(_0941_),
-    .B(_0939_),
-    .Y(_0942_)
-  );
-  NOR _1430_ (
-    .A(_0942_),
-    .B(\D0Fifo.memoria.iReadAddress [1]),
-    .Y(_0943_)
-  );
-  NOR _1431_ (
-    .A(_0943_),
-    .B(_0937_),
-    .Y(_0944_)
-  );
-  NOR _1432_ (
-    .A(_0944_),
-    .B(_0920_),
-    .Y(data_out0[1])
-  );
-  NOR _1433_ (
-    .A(\D0Fifo.memoria.Ram[2] [2]),
-    .B(\D0Fifo.memoria.iReadAddress [0]),
-    .Y(_0945_)
-  );
-  NOT _1434_ (
-    .A(\D0Fifo.memoria.Ram[3] [2]),
-    .Y(_0946_)
-  );
-  NAND _1435_ (
-    .A(_0946_),
-    .B(\D0Fifo.memoria.iReadAddress [0]),
-    .Y(_0947_)
-  );
-  NAND _1436_ (
-    .A(_0947_),
-    .B(\D0Fifo.memoria.iReadAddress [1]),
-    .Y(_0948_)
-  );
-  NOR _1437_ (
-    .A(_0948_),
-    .B(_0945_),
-    .Y(_0949_)
-  );
-  NOT _1438_ (
-    .A(\D0Fifo.memoria.Ram[1] [2]),
-    .Y(_0951_)
-  );
-  NOR _1439_ (
-    .A(_0951_),
-    .B(_0881_),
-    .Y(_0953_)
-  );
-  NOT _1440_ (
-    .A(\D0Fifo.memoria.Ram[0] [2]),
-    .Y(_0955_)
-  );
-  NOR _1441_ (
-    .A(_0955_),
-    .B(\D0Fifo.memoria.iReadAddress [0]),
-    .Y(_0956_)
-  );
-  NOR _1442_ (
-    .A(_0956_),
-    .B(_0953_),
-    .Y(_0957_)
-  );
-  NOR _1443_ (
-    .A(_0957_),
-    .B(\D0Fifo.memoria.iReadAddress [1]),
-    .Y(_0958_)
-  );
-  NOR _1444_ (
-    .A(_0958_),
-    .B(_0949_),
-    .Y(_0959_)
-  );
-  NOR _1445_ (
-    .A(_0959_),
-    .B(_0920_),
-    .Y(data_out0[2])
-  );
-  NOR _1446_ (
-    .A(\D0Fifo.memoria.Ram[2] [3]),
-    .B(\D0Fifo.memoria.iReadAddress [0]),
-    .Y(_0960_)
-  );
-  NOT _1447_ (
-    .A(\D0Fifo.memoria.Ram[3] [3]),
-    .Y(_0961_)
-  );
-  NAND _1448_ (
-    .A(_0961_),
-    .B(\D0Fifo.memoria.iReadAddress [0]),
-    .Y(_0962_)
-  );
-  NAND _1449_ (
-    .A(_0962_),
-    .B(\D0Fifo.memoria.iReadAddress [1]),
-    .Y(_0963_)
-  );
-  NOR _1450_ (
-    .A(_0963_),
-    .B(_0960_),
-    .Y(_0964_)
-  );
-  NOT _1451_ (
-    .A(\D0Fifo.memoria.Ram[1] [3]),
-    .Y(_0966_)
-  );
-  NOR _1452_ (
-    .A(_0966_),
-    .B(_0881_),
-    .Y(_0968_)
-  );
-  NOT _1453_ (
-    .A(\D0Fifo.memoria.Ram[0] [3]),
-    .Y(_0969_)
-  );
-  NOR _1454_ (
-    .A(_0969_),
-    .B(\D0Fifo.memoria.iReadAddress [0]),
-    .Y(_0970_)
-  );
-  NOR _1455_ (
-    .A(_0970_),
-    .B(_0968_),
-    .Y(_0971_)
-  );
-  NOR _1456_ (
-    .A(_0971_),
-    .B(\D0Fifo.memoria.iReadAddress [1]),
-    .Y(_0972_)
-  );
-  NOR _1457_ (
-    .A(_0972_),
-    .B(_0964_),
-    .Y(_0973_)
-  );
-  NOR _1458_ (
-    .A(_0973_),
-    .B(_0920_),
-    .Y(data_out0[3])
-  );
-  NOR _1459_ (
-    .A(\D0Fifo.memoria.Ram[2] [4]),
-    .B(\D0Fifo.memoria.iReadAddress [0]),
-    .Y(_0974_)
-  );
-  NOT _1460_ (
-    .A(\D0Fifo.memoria.Ram[3] [4]),
-    .Y(_0975_)
-  );
-  NAND _1461_ (
-    .A(_0975_),
-    .B(\D0Fifo.memoria.iReadAddress [0]),
-    .Y(_0976_)
-  );
-  NAND _1462_ (
-    .A(_0976_),
-    .B(\D0Fifo.memoria.iReadAddress [1]),
-    .Y(_0977_)
-  );
-  NOR _1463_ (
-    .A(_0977_),
-    .B(_0974_),
-    .Y(_0979_)
-  );
-  NOT _1464_ (
-    .A(\D0Fifo.memoria.Ram[1] [4]),
-    .Y(_0981_)
-  );
-  NOR _1465_ (
-    .A(_0981_),
-    .B(_0881_),
-    .Y(_0982_)
-  );
-  NOT _1466_ (
-    .A(\D0Fifo.memoria.Ram[0] [4]),
-    .Y(_0983_)
-  );
-  NOR _1467_ (
-    .A(_0983_),
-    .B(\D0Fifo.memoria.iReadAddress [0]),
-    .Y(_0984_)
-  );
-  NOR _1468_ (
-    .A(_0984_),
-    .B(_0982_),
-    .Y(_0985_)
-  );
-  NOR _1469_ (
-    .A(_0985_),
-    .B(\D0Fifo.memoria.iReadAddress [1]),
-    .Y(_0986_)
-  );
-  NOR _1470_ (
-    .A(_0986_),
-    .B(_0979_),
-    .Y(_0987_)
-  );
-  NOR _1471_ (
-    .A(_0987_),
-    .B(_0920_),
-    .Y(data_out0[4])
-  );
-  NOR _1472_ (
-    .A(\D0Fifo.memoria.Ram[2] [5]),
-    .B(\D0Fifo.memoria.iReadAddress [0]),
-    .Y(_0989_)
-  );
-  NOT _1473_ (
-    .A(\D0Fifo.memoria.Ram[3] [5]),
-    .Y(_0990_)
-  );
-  NAND _1474_ (
-    .A(_0990_),
-    .B(\D0Fifo.memoria.iReadAddress [0]),
-    .Y(_0991_)
-  );
-  NAND _1475_ (
-    .A(_0991_),
-    .B(\D0Fifo.memoria.iReadAddress [1]),
-    .Y(_0992_)
-  );
-  NOR _1476_ (
-    .A(_0992_),
-    .B(_0989_),
-    .Y(_0993_)
-  );
-  NOT _1477_ (
-    .A(\D0Fifo.memoria.Ram[1] [5]),
-    .Y(_0994_)
-  );
-  NOR _1478_ (
-    .A(_0994_),
-    .B(_0881_),
-    .Y(_0995_)
-  );
-  NOT _1479_ (
-    .A(\D0Fifo.memoria.Ram[0] [5]),
-    .Y(_0996_)
-  );
-  NOR _1480_ (
-    .A(_0996_),
-    .B(\D0Fifo.memoria.iReadAddress [0]),
-    .Y(_0997_)
-  );
-  NOR _1481_ (
-    .A(_0997_),
-    .B(_0995_),
-    .Y(_0998_)
-  );
-  NOR _1482_ (
-    .A(_0998_),
-    .B(\D0Fifo.memoria.iReadAddress [1]),
-    .Y(_1000_)
-  );
-  NOR _1483_ (
-    .A(_1000_),
-    .B(_0993_),
-    .Y(_1001_)
-  );
-  NOR _1484_ (
-    .A(_1001_),
-    .B(_0920_),
-    .Y(data_out0[5])
-  );
-  NOR _1485_ (
-    .A(_0920_),
-    .B(_0893_),
-    .Y(_1002_)
-  );
   NAND _1486_ (
-    .A(_1002_),
-    .B(\D0Fifo.memoria.iWriteAddress [0]),
-    .Y(_1003_)
-  );
-  NOT _1487_ (
-    .A(_1003_),
-    .Y(_1004_)
-  );
-  NAND _1488_ (
-    .A(_1004_),
-    .B(\D0Fifo.Fifo_Data_in_int [0]),
-    .Y(_1005_)
-  );
-  NAND _1489_ (
-    .A(_1003_),
-    .B(\D0Fifo.memoria.Ram[3] [0]),
-    .Y(_1006_)
-  );
-  NAND _1490_ (
-    .A(_1006_),
-    .B(_1005_),
-    .Y(_0190_)
-  );
-  NAND _1491_ (
-    .A(_1004_),
-    .B(\D0Fifo.Fifo_Data_in_int [1]),
-    .Y(_1007_)
-  );
-  NAND _1492_ (
-    .A(_1003_),
-    .B(\D0Fifo.memoria.Ram[3] [1]),
-    .Y(_1008_)
-  );
-  NAND _1493_ (
-    .A(_1008_),
-    .B(_1007_),
-    .Y(_0196_)
-  );
-  NAND _1494_ (
-    .A(_1004_),
-    .B(\D0Fifo.Fifo_Data_in_int [2]),
-    .Y(_1010_)
-  );
-  NAND _1495_ (
-    .A(_1003_),
-    .B(\D0Fifo.memoria.Ram[3] [2]),
-    .Y(_1011_)
-  );
-  NAND _1496_ (
-    .A(_1011_),
-    .B(_1010_),
-    .Y(_0204_)
-  );
-  NAND _1497_ (
-    .A(_1004_),
-    .B(\D0Fifo.Fifo_Data_in_int [3]),
-    .Y(_1013_)
-  );
-  NAND _1498_ (
-    .A(_1003_),
-    .B(\D0Fifo.memoria.Ram[3] [3]),
-    .Y(_1015_)
-  );
-  NAND _1499_ (
-    .A(_1015_),
-    .B(_1013_),
-    .Y(_0212_)
-  );
-  NAND _1500_ (
-    .A(_1004_),
-    .B(\D0Fifo.Fifo_Data_in_int [4]),
-    .Y(_1017_)
-  );
-  NAND _1501_ (
-    .A(_1003_),
-    .B(\D0Fifo.memoria.Ram[3] [4]),
-    .Y(_1018_)
-  );
-  NAND _1502_ (
-    .A(_1018_),
-    .B(_1017_),
-    .Y(_0221_)
-  );
-  NAND _1503_ (
-    .A(_1004_),
-    .B(\D0Fifo.Fifo_Data_in_int [5]),
-    .Y(_1020_)
-  );
-  NAND _1504_ (
-    .A(_1003_),
-    .B(\D0Fifo.memoria.Ram[3] [5]),
-    .Y(_1022_)
-  );
-  NAND _1505_ (
-    .A(_1022_),
-    .B(_1020_),
-    .Y(_0228_)
-  );
-  NOR _1506_ (
-    .A(_0920_),
-    .B(\D0Fifo.memoria.iWriteAddress [0]),
-    .Y(_1024_)
-  );
-  NAND _1507_ (
-    .A(_1024_),
-    .B(\D0Fifo.memoria.iWriteAddress [1]),
-    .Y(_1026_)
-  );
-  NOT _1508_ (
-    .A(_1026_),
-    .Y(_1028_)
-  );
-  NAND _1509_ (
-    .A(_1028_),
-    .B(\D0Fifo.Fifo_Data_in_int [0]),
-    .Y(_1029_)
-  );
-  NAND _1510_ (
-    .A(_1026_),
-    .B(\D0Fifo.memoria.Ram[2] [0]),
-    .Y(_1030_)
-  );
-  NAND _1511_ (
-    .A(_1030_),
-    .B(_1029_),
-    .Y(_0244_)
-  );
-  NAND _1512_ (
-    .A(_1028_),
-    .B(\D0Fifo.Fifo_Data_in_int [1]),
-    .Y(_1031_)
-  );
-  NAND _1513_ (
-    .A(_1026_),
-    .B(\D0Fifo.memoria.Ram[2] [1]),
-    .Y(_1032_)
-  );
-  NAND _1514_ (
-    .A(_1032_),
-    .B(_1031_),
-    .Y(_0252_)
-  );
-  NAND _1515_ (
-    .A(_1028_),
-    .B(\D0Fifo.Fifo_Data_in_int [2]),
-    .Y(_1033_)
-  );
-  NAND _1516_ (
-    .A(_1026_),
-    .B(\D0Fifo.memoria.Ram[2] [2]),
-    .Y(_1034_)
-  );
-  NAND _1517_ (
-    .A(_1034_),
-    .B(_1033_),
-    .Y(_0260_)
-  );
-  NAND _1518_ (
-    .A(_1028_),
-    .B(\D0Fifo.Fifo_Data_in_int [3]),
-    .Y(_1035_)
-  );
-  NAND _1519_ (
-    .A(_1026_),
-    .B(\D0Fifo.memoria.Ram[2] [3]),
-    .Y(_1036_)
-  );
-  NAND _1520_ (
-    .A(_1036_),
-    .B(_1035_),
-    .Y(_0269_)
-  );
-  NAND _1521_ (
-    .A(_1028_),
-    .B(\D0Fifo.Fifo_Data_in_int [4]),
-    .Y(_1037_)
-  );
-  NAND _1522_ (
-    .A(_1026_),
-    .B(\D0Fifo.memoria.Ram[2] [4]),
-    .Y(_1038_)
-  );
-  NAND _1523_ (
-    .A(_1038_),
-    .B(_1037_),
-    .Y(_0279_)
-  );
-  NAND _1524_ (
-    .A(_1028_),
-    .B(\D0Fifo.Fifo_Data_in_int [5]),
-    .Y(_1039_)
-  );
-  NAND _1525_ (
-    .A(_1026_),
-    .B(\D0Fifo.memoria.Ram[2] [5]),
-    .Y(_1040_)
-  );
-  NAND _1526_ (
-    .A(_1040_),
-    .B(_1039_),
-    .Y(_0289_)
-  );
-  NAND _1527_ (
-    .A(\D0Fifo.memoria.iReadEnable ),
-    .B(\D0Fifo.memoria.iWriteAddress [0]),
-    .Y(_1041_)
-  );
-  NOR _1528_ (
-    .A(_1041_),
-    .B(\D0Fifo.memoria.iWriteAddress [1]),
-    .Y(_1042_)
-  );
-  NAND _1529_ (
-    .A(_1042_),
-    .B(\D0Fifo.Fifo_Data_in_int [0]),
-    .Y(_1043_)
-  );
-  NOT _1530_ (
-    .A(_1042_),
-    .Y(_1044_)
-  );
-  NAND _1531_ (
-    .A(_1044_),
-    .B(\D0Fifo.memoria.Ram[1] [0]),
-    .Y(_1045_)
-  );
-  NAND _1532_ (
-    .A(_1045_),
-    .B(_1043_),
-    .Y(_0307_)
-  );
-  NAND _1533_ (
-    .A(_1042_),
-    .B(\D0Fifo.Fifo_Data_in_int [1]),
-    .Y(_1046_)
-  );
-  NAND _1534_ (
-    .A(_1044_),
-    .B(\D0Fifo.memoria.Ram[1] [1]),
-    .Y(_1047_)
-  );
-  NAND _1535_ (
-    .A(_1047_),
-    .B(_1046_),
-    .Y(_0316_)
-  );
-  NAND _1536_ (
-    .A(_1042_),
-    .B(\D0Fifo.Fifo_Data_in_int [2]),
-    .Y(_1048_)
-  );
-  NAND _1537_ (
-    .A(_1044_),
-    .B(\D0Fifo.memoria.Ram[1] [2]),
-    .Y(_1049_)
-  );
-  NAND _1538_ (
-    .A(_1049_),
-    .B(_1048_),
-    .Y(_0326_)
-  );
-  NAND _1539_ (
-    .A(_1042_),
-    .B(\D0Fifo.Fifo_Data_in_int [3]),
-    .Y(_1050_)
-  );
-  NAND _1540_ (
-    .A(_1044_),
-    .B(\D0Fifo.memoria.Ram[1] [3]),
-    .Y(_1051_)
-  );
-  NAND _1541_ (
-    .A(_1051_),
-    .B(_1050_),
-    .Y(_0336_)
-  );
-  NAND _1542_ (
-    .A(_1042_),
-    .B(\D0Fifo.Fifo_Data_in_int [4]),
-    .Y(_1052_)
-  );
-  NAND _1543_ (
-    .A(_1044_),
-    .B(\D0Fifo.memoria.Ram[1] [4]),
-    .Y(_1053_)
-  );
-  NAND _1544_ (
-    .A(_1053_),
-    .B(_1052_),
-    .Y(_0342_)
-  );
-  NAND _1545_ (
-    .A(_1042_),
-    .B(\D0Fifo.Fifo_Data_in_int [5]),
-    .Y(_1054_)
-  );
-  NAND _1546_ (
-    .A(_1044_),
-    .B(\D0Fifo.memoria.Ram[1] [5]),
-    .Y(_1055_)
-  );
-  NAND _1547_ (
-    .A(_1055_),
-    .B(_1054_),
-    .Y(_0350_)
-  );
-  NAND _1548_ (
-    .A(_1024_),
-    .B(_0893_),
-    .Y(_1056_)
-  );
-  NOT _1549_ (
-    .A(_1056_),
-    .Y(_1057_)
-  );
-  NAND _1550_ (
-    .A(_1057_),
-    .B(\D0Fifo.Fifo_Data_in_int [0]),
-    .Y(_1058_)
-  );
-  NAND _1551_ (
-    .A(_1056_),
-    .B(\D0Fifo.memoria.Ram[0] [0]),
-    .Y(_1059_)
-  );
-  NAND _1552_ (
-    .A(_1059_),
-    .B(_1058_),
-    .Y(_0365_)
-  );
-  NAND _1553_ (
-    .A(_1057_),
-    .B(\D0Fifo.Fifo_Data_in_int [1]),
-    .Y(_1060_)
-  );
-  NAND _1554_ (
-    .A(_1056_),
-    .B(\D0Fifo.memoria.Ram[0] [1]),
-    .Y(_1061_)
-  );
-  NAND _1555_ (
-    .A(_1061_),
-    .B(_1060_),
-    .Y(_0373_)
-  );
-  NAND _1556_ (
-    .A(_1057_),
-    .B(\D0Fifo.Fifo_Data_in_int [2]),
-    .Y(_1062_)
-  );
-  NAND _1557_ (
-    .A(_1056_),
-    .B(\D0Fifo.memoria.Ram[0] [2]),
-    .Y(_1063_)
-  );
-  NAND _1558_ (
-    .A(_1063_),
-    .B(_1062_),
-    .Y(_0381_)
-  );
-  NAND _1559_ (
-    .A(_1057_),
-    .B(\D0Fifo.Fifo_Data_in_int [3]),
-    .Y(_1064_)
-  );
-  NAND _1560_ (
-    .A(_1056_),
-    .B(\D0Fifo.memoria.Ram[0] [3]),
-    .Y(_1065_)
-  );
-  NAND _1561_ (
-    .A(_1065_),
-    .B(_1064_),
-    .Y(_0389_)
-  );
-  NAND _1562_ (
-    .A(_1057_),
-    .B(\D0Fifo.Fifo_Data_in_int [4]),
-    .Y(_1066_)
-  );
-  NAND _1563_ (
-    .A(_1056_),
-    .B(\D0Fifo.memoria.Ram[0] [4]),
-    .Y(_1067_)
-  );
-  NAND _1564_ (
-    .A(_1067_),
-    .B(_1066_),
-    .Y(_0397_)
-  );
-  NAND _1565_ (
-    .A(_1057_),
-    .B(\D0Fifo.Fifo_Data_in_int [5]),
-    .Y(_1068_)
-  );
-  NAND _1566_ (
-    .A(_1056_),
-    .B(\D0Fifo.memoria.Ram[0] [5]),
-    .Y(_1069_)
-  );
-  NAND _1567_ (
-    .A(_1069_),
-    .B(_1068_),
-    .Y(_0405_)
-  );
-  NOT _1568_ (
-    .A(\D1Fifo.memoria.iReadAddress [0]),
-    .Y(_1070_)
-  );
-  NOR _1569_ (
-    .A(_1070_),
-    .B(_0878_),
-    .Y(_0636_)
-  );
-  NOT _1570_ (
-    .A(\D1Fifo.memoria.iReadAddress [1]),
-    .Y(_1071_)
-  );
-  NOR _1571_ (
-    .A(_1071_),
-    .B(_0878_),
-    .Y(_0657_)
-  );
-  NOT _1572_ (
-    .A(\D1Fifo.pop ),
-    .Y(_1072_)
-  );
-  NOT _1573_ (
-    .A(\D1Fifo.memoria.iWriteAddress [0]),
-    .Y(_1073_)
-  );
-  NOR _1574_ (
-    .A(_1073_),
-    .B(_1072_),
-    .Y(_1074_)
-  );
-  NAND _1575_ (
-    .A(_1073_),
-    .B(_1072_),
-    .Y(_1075_)
-  );
-  NAND _1576_ (
-    .A(_1075_),
+    .A(_0937_),
     .B(reset_L),
-    .Y(_1076_)
-  );
-  NOR _1577_ (
-    .A(_1076_),
-    .B(_1074_),
-    .Y(_0687_)
-  );
-  NOT _1578_ (
-    .A(\D1Fifo.memoria.iWriteAddress [1]),
-    .Y(_1079_)
-  );
-  NOT _1579_ (
-    .A(_1074_),
-    .Y(_1081_)
-  );
-  NOR _1580_ (
-    .A(_1081_),
-    .B(_1079_),
-    .Y(_1083_)
-  );
-  NAND _1581_ (
-    .A(_1081_),
-    .B(_1079_),
-    .Y(_1085_)
-  );
-  NAND _1582_ (
-    .A(_1085_),
-    .B(reset_L),
-    .Y(_1087_)
-  );
-  NOR _1583_ (
-    .A(_1087_),
-    .B(_1083_),
-    .Y(_0697_)
-  );
-  NOT _1584_ (
-    .A(\D1Fifo.Fifo_Data_in [0]),
-    .Y(_1089_)
-  );
-  NOR _1585_ (
-    .A(_1089_),
-    .B(_0878_),
-    .Y(_0718_)
-  );
-  NOT _1586_ (
-    .A(\D1Fifo.Fifo_Data_in [1]),
-    .Y(_1092_)
-  );
-  NOR _1587_ (
-    .A(_1092_),
-    .B(_0878_),
-    .Y(_0738_)
-  );
-  NOT _1588_ (
-    .A(\D1Fifo.Fifo_Data_in [2]),
-    .Y(_1095_)
-  );
-  NOR _1589_ (
-    .A(_1095_),
-    .B(_0878_),
-    .Y(_0758_)
-  );
-  NOT _1590_ (
-    .A(\D1Fifo.Fifo_Data_in [3]),
-    .Y(_1097_)
-  );
-  NOR _1591_ (
-    .A(_1097_),
-    .B(_0878_),
-    .Y(_0778_)
-  );
-  NOT _1592_ (
-    .A(\D1Fifo.Fifo_Data_in [4]),
-    .Y(_1100_)
-  );
-  NOR _1593_ (
-    .A(_1100_),
-    .B(_0878_),
-    .Y(_0799_)
-  );
-  NOT _1594_ (
-    .A(\D1Fifo.Fifo_Data_in [5]),
-    .Y(_1103_)
-  );
-  NOR _1595_ (
-    .A(_1103_),
-    .B(_0878_),
-    .Y(_0807_)
-  );
-  NOR _1596_ (
-    .A(_1072_),
-    .B(_0878_),
-    .Y(_0808_)
-  );
-  NOT _1597_ (
-    .A(\D1Fifo.memoria.iReadEnable ),
-    .Y(_1106_)
-  );
-  NOR _1598_ (
-    .A(\D1Fifo.memoria.Ram[2] [0]),
-    .B(\D1Fifo.memoria.iReadAddress [0]),
-    .Y(_1108_)
-  );
-  NOT _1599_ (
-    .A(\D1Fifo.memoria.Ram[3] [0]),
-    .Y(_1110_)
-  );
-  NAND _1600_ (
-    .A(_1110_),
-    .B(\D1Fifo.memoria.iReadAddress [0]),
-    .Y(_1112_)
-  );
-  NAND _1601_ (
-    .A(_1112_),
-    .B(\D1Fifo.memoria.iReadAddress [1]),
-    .Y(_1114_)
-  );
-  NOR _1602_ (
-    .A(_1114_),
-    .B(_1108_),
-    .Y(_1116_)
-  );
-  NOT _1603_ (
-    .A(\D1Fifo.memoria.Ram[1] [0]),
-    .Y(_1118_)
-  );
-  NOR _1604_ (
-    .A(_1118_),
-    .B(_1070_),
-    .Y(_1119_)
-  );
-  NOT _1605_ (
-    .A(\D1Fifo.memoria.Ram[0] [0]),
-    .Y(_1120_)
-  );
-  NOR _1606_ (
-    .A(_1120_),
-    .B(\D1Fifo.memoria.iReadAddress [0]),
-    .Y(_1121_)
-  );
-  NOR _1607_ (
-    .A(_1121_),
-    .B(_1119_),
-    .Y(_1122_)
-  );
-  NOR _1608_ (
-    .A(_1122_),
-    .B(\D1Fifo.memoria.iReadAddress [1]),
-    .Y(_1123_)
-  );
-  NOR _1609_ (
-    .A(_1123_),
-    .B(_1116_),
-    .Y(_1124_)
-  );
-  NOR _1610_ (
-    .A(_1124_),
-    .B(_1106_),
-    .Y(data_out1[0])
-  );
-  NOR _1611_ (
-    .A(\D1Fifo.memoria.Ram[2] [1]),
-    .B(\D1Fifo.memoria.iReadAddress [0]),
-    .Y(_1125_)
-  );
-  NOT _1612_ (
-    .A(\D1Fifo.memoria.Ram[3] [1]),
-    .Y(_1126_)
-  );
-  NAND _1613_ (
-    .A(_1126_),
-    .B(\D1Fifo.memoria.iReadAddress [0]),
-    .Y(_1127_)
-  );
-  NAND _1614_ (
-    .A(_1127_),
-    .B(\D1Fifo.memoria.iReadAddress [1]),
-    .Y(_1128_)
-  );
-  NOR _1615_ (
-    .A(_1128_),
-    .B(_1125_),
-    .Y(_1129_)
-  );
-  NOT _1616_ (
-    .A(\D1Fifo.memoria.Ram[1] [1]),
-    .Y(_1130_)
-  );
-  NOR _1617_ (
-    .A(_1130_),
-    .B(_1070_),
-    .Y(_1131_)
-  );
-  NOT _1618_ (
-    .A(\D1Fifo.memoria.Ram[0] [1]),
-    .Y(_1132_)
-  );
-  NOR _1619_ (
-    .A(_1132_),
-    .B(\D1Fifo.memoria.iReadAddress [0]),
-    .Y(_1133_)
-  );
-  NOR _1620_ (
-    .A(_1133_),
-    .B(_1131_),
-    .Y(_1134_)
-  );
-  NOR _1621_ (
-    .A(_1134_),
-    .B(\D1Fifo.memoria.iReadAddress [1]),
-    .Y(_1135_)
-  );
-  NOR _1622_ (
-    .A(_1135_),
-    .B(_1129_),
-    .Y(_1136_)
-  );
-  NOR _1623_ (
-    .A(_1136_),
-    .B(_1106_),
-    .Y(data_out1[1])
-  );
-  NOR _1624_ (
-    .A(\D1Fifo.memoria.Ram[2] [2]),
-    .B(\D1Fifo.memoria.iReadAddress [0]),
-    .Y(_1137_)
-  );
-  NOT _1625_ (
-    .A(\D1Fifo.memoria.Ram[3] [2]),
-    .Y(_1138_)
-  );
-  NAND _1626_ (
-    .A(_1138_),
-    .B(\D1Fifo.memoria.iReadAddress [0]),
-    .Y(_1139_)
-  );
-  NAND _1627_ (
-    .A(_1139_),
-    .B(\D1Fifo.memoria.iReadAddress [1]),
-    .Y(_1140_)
-  );
-  NOR _1628_ (
-    .A(_1140_),
-    .B(_1137_),
-    .Y(_1141_)
-  );
-  NOT _1629_ (
-    .A(\D1Fifo.memoria.Ram[1] [2]),
-    .Y(_1142_)
-  );
-  NOR _1630_ (
-    .A(_1142_),
-    .B(_1070_),
-    .Y(_1143_)
-  );
-  NOT _1631_ (
-    .A(\D1Fifo.memoria.Ram[0] [2]),
-    .Y(_1144_)
-  );
-  NOR _1632_ (
-    .A(_1144_),
-    .B(\D1Fifo.memoria.iReadAddress [0]),
-    .Y(_1145_)
-  );
-  NOR _1633_ (
-    .A(_1145_),
-    .B(_1143_),
-    .Y(_1146_)
-  );
-  NOR _1634_ (
-    .A(_1146_),
-    .B(\D1Fifo.memoria.iReadAddress [1]),
-    .Y(_1147_)
-  );
-  NOR _1635_ (
-    .A(_1147_),
-    .B(_1141_),
-    .Y(_1148_)
-  );
-  NOR _1636_ (
-    .A(_1148_),
-    .B(_1106_),
-    .Y(data_out1[2])
-  );
-  NOR _1637_ (
-    .A(\D1Fifo.memoria.Ram[2] [3]),
-    .B(\D1Fifo.memoria.iReadAddress [0]),
-    .Y(_1149_)
-  );
-  NOT _1638_ (
-    .A(\D1Fifo.memoria.Ram[3] [3]),
-    .Y(_1151_)
-  );
-  NAND _1639_ (
-    .A(_1151_),
-    .B(\D1Fifo.memoria.iReadAddress [0]),
-    .Y(_1153_)
-  );
-  NAND _1640_ (
-    .A(_1153_),
-    .B(\D1Fifo.memoria.iReadAddress [1]),
-    .Y(_1155_)
-  );
-  NOR _1641_ (
-    .A(_1155_),
-    .B(_1149_),
-    .Y(_1156_)
-  );
-  NOT _1642_ (
-    .A(\D1Fifo.memoria.Ram[1] [3]),
-    .Y(_1157_)
-  );
-  NOR _1643_ (
-    .A(_1157_),
-    .B(_1070_),
-    .Y(_1158_)
-  );
-  NOT _1644_ (
-    .A(\D1Fifo.memoria.Ram[0] [3]),
-    .Y(_1159_)
-  );
-  NOR _1645_ (
-    .A(_1159_),
-    .B(\D1Fifo.memoria.iReadAddress [0]),
-    .Y(_1160_)
-  );
-  NOR _1646_ (
-    .A(_1160_),
-    .B(_1158_),
-    .Y(_1161_)
-  );
-  NOR _1647_ (
-    .A(_1161_),
-    .B(\D1Fifo.memoria.iReadAddress [1]),
-    .Y(_1162_)
-  );
-  NOR _1648_ (
-    .A(_1162_),
-    .B(_1156_),
-    .Y(_1163_)
-  );
-  NOR _1649_ (
-    .A(_1163_),
-    .B(_1106_),
-    .Y(data_out1[3])
-  );
-  NOR _1650_ (
-    .A(\D1Fifo.memoria.Ram[2] [4]),
-    .B(\D1Fifo.memoria.iReadAddress [0]),
-    .Y(_1164_)
-  );
-  NOT _1651_ (
-    .A(\D1Fifo.memoria.Ram[3] [4]),
-    .Y(_1166_)
-  );
-  NAND _1652_ (
-    .A(_1166_),
-    .B(\D1Fifo.memoria.iReadAddress [0]),
-    .Y(_1168_)
-  );
-  NAND _1653_ (
-    .A(_1168_),
-    .B(\D1Fifo.memoria.iReadAddress [1]),
-    .Y(_1169_)
-  );
-  NOR _1654_ (
-    .A(_1169_),
-    .B(_1164_),
-    .Y(_1170_)
-  );
-  NOT _1655_ (
-    .A(\D1Fifo.memoria.Ram[1] [4]),
-    .Y(_1171_)
-  );
-  NOR _1656_ (
-    .A(_1171_),
-    .B(_1070_),
-    .Y(_1172_)
-  );
-  NOT _1657_ (
-    .A(\D1Fifo.memoria.Ram[0] [4]),
-    .Y(_1173_)
-  );
-  NOR _1658_ (
-    .A(_1173_),
-    .B(\D1Fifo.memoria.iReadAddress [0]),
-    .Y(_1174_)
-  );
-  NOR _1659_ (
-    .A(_1174_),
-    .B(_1172_),
-    .Y(_1175_)
-  );
-  NOR _1660_ (
-    .A(_1175_),
-    .B(\D1Fifo.memoria.iReadAddress [1]),
-    .Y(_1176_)
-  );
-  NOR _1661_ (
-    .A(_1176_),
-    .B(_1170_),
-    .Y(_1177_)
-  );
-  NOR _1662_ (
-    .A(_1177_),
-    .B(_1106_),
-    .Y(data_out1[4])
-  );
-  NOR _1663_ (
-    .A(\D1Fifo.memoria.Ram[2] [5]),
-    .B(\D1Fifo.memoria.iReadAddress [0]),
-    .Y(_1179_)
-  );
-  NOT _1664_ (
-    .A(\D1Fifo.memoria.Ram[3] [5]),
-    .Y(_1181_)
-  );
-  NAND _1665_ (
-    .A(_1181_),
-    .B(\D1Fifo.memoria.iReadAddress [0]),
-    .Y(_1182_)
-  );
-  NAND _1666_ (
-    .A(_1182_),
-    .B(\D1Fifo.memoria.iReadAddress [1]),
-    .Y(_1183_)
-  );
-  NOR _1667_ (
-    .A(_1183_),
-    .B(_1179_),
-    .Y(_1184_)
-  );
-  NOT _1668_ (
-    .A(\D1Fifo.memoria.Ram[1] [5]),
-    .Y(_1185_)
-  );
-  NOR _1669_ (
-    .A(_1185_),
-    .B(_1070_),
-    .Y(_1186_)
-  );
-  NOT _1670_ (
-    .A(\D1Fifo.memoria.Ram[0] [5]),
-    .Y(_1187_)
-  );
-  NOR _1671_ (
-    .A(_1187_),
-    .B(\D1Fifo.memoria.iReadAddress [0]),
-    .Y(_1188_)
-  );
-  NOR _1672_ (
-    .A(_1188_),
-    .B(_1186_),
-    .Y(_1190_)
-  );
-  NOR _1673_ (
-    .A(_1190_),
-    .B(\D1Fifo.memoria.iReadAddress [1]),
-    .Y(_1191_)
-  );
-  NOR _1674_ (
-    .A(_1191_),
-    .B(_1184_),
-    .Y(_1192_)
-  );
-  NOR _1675_ (
-    .A(_1192_),
-    .B(_1106_),
-    .Y(data_out1[5])
-  );
-  NOR _1676_ (
-    .A(_1106_),
-    .B(_1079_),
-    .Y(_1193_)
-  );
-  NAND _1677_ (
-    .A(_1193_),
-    .B(\D1Fifo.memoria.iWriteAddress [0]),
-    .Y(_1194_)
-  );
-  NOT _1678_ (
-    .A(_1194_),
-    .Y(_1195_)
-  );
-  NAND _1679_ (
-    .A(_1195_),
-    .B(\D1Fifo.Fifo_Data_in_int [0]),
-    .Y(_1196_)
-  );
-  NAND _1680_ (
-    .A(_1194_),
-    .B(\D1Fifo.memoria.Ram[3] [0]),
-    .Y(_1197_)
-  );
-  NAND _1681_ (
-    .A(_1197_),
-    .B(_1196_),
-    .Y(_0809_)
-  );
-  NAND _1682_ (
-    .A(_1195_),
-    .B(\D1Fifo.Fifo_Data_in_int [1]),
-    .Y(_1199_)
-  );
-  NAND _1683_ (
-    .A(_1194_),
-    .B(\D1Fifo.memoria.Ram[3] [1]),
-    .Y(_1200_)
-  );
-  NAND _1684_ (
-    .A(_1200_),
-    .B(_1199_),
-    .Y(_0810_)
-  );
-  NAND _1685_ (
-    .A(_1195_),
-    .B(\D1Fifo.Fifo_Data_in_int [2]),
-    .Y(_1201_)
-  );
-  NAND _1686_ (
-    .A(_1194_),
-    .B(\D1Fifo.memoria.Ram[3] [2]),
-    .Y(_1202_)
-  );
-  NAND _1687_ (
-    .A(_1202_),
-    .B(_1201_),
-    .Y(_0811_)
-  );
-  NAND _1688_ (
-    .A(_1195_),
-    .B(\D1Fifo.Fifo_Data_in_int [3]),
-    .Y(_1203_)
-  );
-  NAND _1689_ (
-    .A(_1194_),
-    .B(\D1Fifo.memoria.Ram[3] [3]),
-    .Y(_1204_)
-  );
-  NAND _1690_ (
-    .A(_1204_),
-    .B(_1203_),
-    .Y(_0812_)
-  );
-  NAND _1691_ (
-    .A(_1195_),
-    .B(\D1Fifo.Fifo_Data_in_int [4]),
-    .Y(_1205_)
-  );
-  NAND _1692_ (
-    .A(_1194_),
-    .B(\D1Fifo.memoria.Ram[3] [4]),
-    .Y(_1206_)
-  );
-  NAND _1693_ (
-    .A(_1206_),
-    .B(_1205_),
-    .Y(_0813_)
-  );
-  NAND _1694_ (
-    .A(_1195_),
-    .B(\D1Fifo.Fifo_Data_in_int [5]),
-    .Y(_1208_)
-  );
-  NAND _1695_ (
-    .A(_1194_),
-    .B(\D1Fifo.memoria.Ram[3] [5]),
-    .Y(_1209_)
-  );
-  NAND _1696_ (
-    .A(_1209_),
-    .B(_1208_),
-    .Y(_0814_)
-  );
-  NOR _1697_ (
-    .A(_1106_),
-    .B(\D1Fifo.memoria.iWriteAddress [0]),
-    .Y(_1211_)
-  );
-  NAND _1698_ (
-    .A(_1211_),
-    .B(\D1Fifo.memoria.iWriteAddress [1]),
-    .Y(_1213_)
-  );
-  NOT _1699_ (
-    .A(_1213_),
-    .Y(_1214_)
-  );
-  NAND _1700_ (
-    .A(_1214_),
-    .B(\D1Fifo.Fifo_Data_in_int [0]),
-    .Y(_1216_)
-  );
-  NAND _1701_ (
-    .A(_1213_),
-    .B(\D1Fifo.memoria.Ram[2] [0]),
-    .Y(_1217_)
-  );
-  NAND _1702_ (
-    .A(_1217_),
-    .B(_1216_),
-    .Y(_0815_)
-  );
-  NAND _1703_ (
-    .A(_1214_),
-    .B(\D1Fifo.Fifo_Data_in_int [1]),
-    .Y(_1219_)
-  );
-  NAND _1704_ (
-    .A(_1213_),
-    .B(\D1Fifo.memoria.Ram[2] [1]),
-    .Y(_1221_)
-  );
-  NAND _1705_ (
-    .A(_1221_),
-    .B(_1219_),
-    .Y(_0816_)
-  );
-  NAND _1706_ (
-    .A(_1214_),
-    .B(\D1Fifo.Fifo_Data_in_int [2]),
-    .Y(_1223_)
-  );
-  NAND _1707_ (
-    .A(_1213_),
-    .B(\D1Fifo.memoria.Ram[2] [2]),
-    .Y(_1225_)
-  );
-  NAND _1708_ (
-    .A(_1225_),
-    .B(_1223_),
-    .Y(_0817_)
-  );
-  NAND _1709_ (
-    .A(_1214_),
-    .B(\D1Fifo.Fifo_Data_in_int [3]),
-    .Y(_1227_)
-  );
-  NAND _1710_ (
-    .A(_1213_),
-    .B(\D1Fifo.memoria.Ram[2] [3]),
-    .Y(_1228_)
-  );
-  NAND _1711_ (
-    .A(_1228_),
-    .B(_1227_),
-    .Y(_0818_)
-  );
-  NAND _1712_ (
-    .A(_1214_),
-    .B(\D1Fifo.Fifo_Data_in_int [4]),
-    .Y(_1229_)
-  );
-  NAND _1713_ (
-    .A(_1213_),
-    .B(\D1Fifo.memoria.Ram[2] [4]),
-    .Y(_1230_)
-  );
-  NAND _1714_ (
-    .A(_1230_),
-    .B(_1229_),
-    .Y(_0819_)
-  );
-  NAND _1715_ (
-    .A(_1214_),
-    .B(\D1Fifo.Fifo_Data_in_int [5]),
-    .Y(_1231_)
-  );
-  NAND _1716_ (
-    .A(_1213_),
-    .B(\D1Fifo.memoria.Ram[2] [5]),
-    .Y(_1232_)
-  );
-  NAND _1717_ (
-    .A(_1232_),
-    .B(_1231_),
-    .Y(_0820_)
-  );
-  NOR _1718_ (
-    .A(_1106_),
-    .B(_1073_),
-    .Y(_1233_)
-  );
-  NAND _1719_ (
-    .A(_1233_),
-    .B(_1079_),
-    .Y(_1234_)
-  );
-  NOT _1720_ (
-    .A(_1234_),
-    .Y(_1235_)
-  );
-  NAND _1721_ (
-    .A(_1235_),
-    .B(\D1Fifo.Fifo_Data_in_int [0]),
-    .Y(_1236_)
-  );
-  NAND _1722_ (
-    .A(_1234_),
-    .B(\D1Fifo.memoria.Ram[1] [0]),
-    .Y(_1237_)
-  );
-  NAND _1723_ (
-    .A(_1237_),
-    .B(_1236_),
-    .Y(_0821_)
-  );
-  NAND _1724_ (
-    .A(_1235_),
-    .B(\D1Fifo.Fifo_Data_in_int [1]),
-    .Y(_1238_)
-  );
-  NAND _1725_ (
-    .A(_1234_),
-    .B(\D1Fifo.memoria.Ram[1] [1]),
-    .Y(_1239_)
-  );
-  NAND _1726_ (
-    .A(_1239_),
-    .B(_1238_),
-    .Y(_0822_)
-  );
-  NAND _1727_ (
-    .A(_1235_),
-    .B(\D1Fifo.Fifo_Data_in_int [2]),
-    .Y(_1240_)
-  );
-  NAND _1728_ (
-    .A(_1234_),
-    .B(\D1Fifo.memoria.Ram[1] [2]),
-    .Y(_1241_)
-  );
-  NAND _1729_ (
-    .A(_1241_),
-    .B(_1240_),
-    .Y(_0823_)
-  );
-  NAND _1730_ (
-    .A(_1235_),
-    .B(\D1Fifo.Fifo_Data_in_int [3]),
-    .Y(_1242_)
-  );
-  NAND _1731_ (
-    .A(_1234_),
-    .B(\D1Fifo.memoria.Ram[1] [3]),
-    .Y(_1243_)
-  );
-  NAND _1732_ (
-    .A(_1243_),
-    .B(_1242_),
-    .Y(_0824_)
-  );
-  NAND _1733_ (
-    .A(_1235_),
-    .B(\D1Fifo.Fifo_Data_in_int [4]),
-    .Y(_1244_)
-  );
-  NAND _1734_ (
-    .A(_1234_),
-    .B(\D1Fifo.memoria.Ram[1] [4]),
-    .Y(_1245_)
-  );
-  NAND _1735_ (
-    .A(_1245_),
-    .B(_1244_),
-    .Y(_0825_)
-  );
-  NAND _1736_ (
-    .A(_1235_),
-    .B(\D1Fifo.Fifo_Data_in_int [5]),
-    .Y(_1246_)
-  );
-  NAND _1737_ (
-    .A(_1234_),
-    .B(\D1Fifo.memoria.Ram[1] [5]),
-    .Y(_1247_)
-  );
-  NAND _1738_ (
-    .A(_1247_),
-    .B(_1246_),
-    .Y(_0826_)
-  );
-  NAND _1739_ (
-    .A(_1211_),
-    .B(_1079_),
-    .Y(_1248_)
-  );
-  NOT _1740_ (
-    .A(_1248_),
-    .Y(_1249_)
-  );
-  NAND _1741_ (
-    .A(_1249_),
-    .B(\D1Fifo.Fifo_Data_in_int [0]),
-    .Y(_1250_)
-  );
-  NAND _1742_ (
-    .A(_1248_),
-    .B(\D1Fifo.memoria.Ram[0] [0]),
-    .Y(_1251_)
-  );
-  NAND _1743_ (
-    .A(_1251_),
-    .B(_1250_),
-    .Y(_0827_)
-  );
-  NAND _1744_ (
-    .A(_1249_),
-    .B(\D1Fifo.Fifo_Data_in_int [1]),
-    .Y(_1252_)
-  );
-  NAND _1745_ (
-    .A(_1248_),
-    .B(\D1Fifo.memoria.Ram[0] [1]),
-    .Y(_1253_)
-  );
-  NAND _1746_ (
-    .A(_1253_),
-    .B(_1252_),
-    .Y(_0828_)
-  );
-  NAND _1747_ (
-    .A(_1249_),
-    .B(\D1Fifo.Fifo_Data_in_int [2]),
-    .Y(_1254_)
-  );
-  NAND _1748_ (
-    .A(_1248_),
-    .B(\D1Fifo.memoria.Ram[0] [2]),
-    .Y(_1255_)
-  );
-  NAND _1749_ (
-    .A(_1255_),
-    .B(_1254_),
-    .Y(_0829_)
-  );
-  NAND _1750_ (
-    .A(_1249_),
-    .B(\D1Fifo.Fifo_Data_in_int [3]),
-    .Y(_1256_)
-  );
-  NAND _1751_ (
-    .A(_1248_),
-    .B(\D1Fifo.memoria.Ram[0] [3]),
-    .Y(_1257_)
-  );
-  NAND _1752_ (
-    .A(_1257_),
-    .B(_1256_),
-    .Y(_0830_)
-  );
-  NAND _1753_ (
-    .A(_1249_),
-    .B(\D1Fifo.Fifo_Data_in_int [4]),
-    .Y(_1258_)
-  );
-  NAND _1754_ (
-    .A(_1248_),
-    .B(\D1Fifo.memoria.Ram[0] [4]),
-    .Y(_1259_)
-  );
-  NAND _1755_ (
-    .A(_1259_),
-    .B(_1258_),
-    .Y(_0831_)
-  );
-  NAND _1756_ (
-    .A(_1249_),
-    .B(\D1Fifo.Fifo_Data_in_int [5]),
-    .Y(_1260_)
-  );
-  NAND _1757_ (
-    .A(_1248_),
-    .B(\D1Fifo.memoria.Ram[0] [5]),
-    .Y(_1261_)
-  );
-  NAND _1758_ (
-    .A(_1261_),
-    .B(_1260_),
-    .Y(_0832_)
-  );
-  NAND _1759_ (
-    .A(\Demux_D0_D1.data_in [4]),
-    .B(\Demux_D0_D1.valid_in ),
-    .Y(_1262_)
-  );
-  NOR _1760_ (
-    .A(_1262_),
-    .B(_0878_),
-    .Y(_0833_)
-  );
-  NAND _1761_ (
-    .A(\Demux_D0_D1.valid_in ),
-    .B(reset_L),
-    .Y(_1263_)
-  );
-  NOR _1762_ (
-    .A(_1263_),
-    .B(\Demux_D0_D1.data_in [4]),
-    .Y(_0834_)
-  );
-  NAND _1763_ (
-    .A(_0833_),
-    .B(\Demux_D0_D1.data_in [0]),
-    .Y(_1264_)
-  );
-  NOR _1764_ (
-    .A(\Demux_D0_D1.valid_in ),
-    .B(\D1Fifo.pop ),
-    .Y(_1265_)
-  );
-  NOR _1765_ (
-    .A(_1265_),
-    .B(_0833_),
-    .Y(_1266_)
-  );
-  NAND _1766_ (
-    .A(_1266_),
-    .B(_0718_),
-    .Y(_1267_)
-  );
-  NAND _1767_ (
-    .A(_1267_),
-    .B(_1264_),
-    .Y(_0835_)
-  );
-  NAND _1768_ (
-    .A(_1266_),
-    .B(_0738_),
-    .Y(_1268_)
-  );
-  NAND _1769_ (
-    .A(_0833_),
-    .B(\Demux_D0_D1.data_in [1]),
-    .Y(_1269_)
-  );
-  NAND _1770_ (
-    .A(_1269_),
-    .B(_1268_),
-    .Y(_0836_)
-  );
-  NAND _1771_ (
-    .A(_1266_),
-    .B(_0758_),
-    .Y(_1270_)
-  );
-  NAND _1772_ (
-    .A(_0833_),
-    .B(\Demux_D0_D1.data_in [2]),
-    .Y(_1271_)
-  );
-  NAND _1773_ (
-    .A(_1271_),
-    .B(_1270_),
-    .Y(_0837_)
-  );
-  NAND _1774_ (
-    .A(_1266_),
-    .B(_0778_),
-    .Y(_1272_)
-  );
-  NAND _1775_ (
-    .A(_0833_),
-    .B(\Demux_D0_D1.data_in [3]),
-    .Y(_1273_)
-  );
-  NAND _1776_ (
-    .A(_1273_),
-    .B(_1272_),
-    .Y(_0838_)
-  );
-  NOR _1777_ (
-    .A(_0833_),
-    .B(_0799_),
-    .Y(_1275_)
-  );
-  NOR _1778_ (
-    .A(_1275_),
-    .B(_1265_),
-    .Y(_0839_)
-  );
-  NAND _1779_ (
-    .A(_0833_),
-    .B(\Demux_D0_D1.data_in [5]),
-    .Y(_1278_)
-  );
-  NAND _1780_ (
-    .A(_1266_),
-    .B(_0807_),
-    .Y(_1280_)
-  );
-  NAND _1781_ (
-    .A(_1280_),
-    .B(_1278_),
-    .Y(_0840_)
-  );
-  NOT _1782_ (
-    .A(_1262_),
-    .Y(_1283_)
-  );
-  NOR _1783_ (
-    .A(\Demux_D0_D1.valid_in ),
-    .B(_0919_),
-    .Y(_1284_)
-  );
-  NOR _1784_ (
-    .A(_1284_),
-    .B(_1283_),
-    .Y(_1286_)
-  );
-  NOT _1785_ (
-    .A(_1286_),
-    .Y(_1288_)
-  );
-  NAND _1786_ (
-    .A(_1288_),
-    .B(_0860_),
-    .Y(_1290_)
-  );
-  NAND _1787_ (
-    .A(_0834_),
-    .B(\Demux_D0_D1.data_in [0]),
-    .Y(_1292_)
-  );
-  NAND _1788_ (
-    .A(_1292_),
-    .B(_1290_),
-    .Y(_0841_)
-  );
-  NAND _1789_ (
-    .A(_1288_),
-    .B(_0870_),
-    .Y(_1295_)
-  );
-  NAND _1790_ (
-    .A(_0834_),
-    .B(\Demux_D0_D1.data_in [1]),
-    .Y(_1296_)
-  );
-  NAND _1791_ (
-    .A(_1296_),
-    .B(_1295_),
-    .Y(_0842_)
-  );
-  NAND _1792_ (
-    .A(_1288_),
-    .B(_0871_),
-    .Y(_1299_)
-  );
-  NAND _1793_ (
-    .A(_0834_),
-    .B(\Demux_D0_D1.data_in [2]),
-    .Y(_1301_)
-  );
-  NAND _1794_ (
-    .A(_1301_),
-    .B(_1299_),
-    .Y(_0843_)
-  );
-  NAND _1795_ (
-    .A(_1288_),
-    .B(_0872_),
-    .Y(_1304_)
-  );
-  NAND _1796_ (
-    .A(_0834_),
-    .B(\Demux_D0_D1.data_in [3]),
-    .Y(_1306_)
-  );
-  NAND _1797_ (
-    .A(_1306_),
-    .B(_1304_),
-    .Y(_0844_)
-  );
-  NOR _1798_ (
-    .A(_1286_),
-    .B(_0914_),
-    .Y(_0845_)
-  );
-  NAND _1799_ (
-    .A(_1288_),
-    .B(_0896_),
-    .Y(_1309_)
-  );
-  NAND _1800_ (
-    .A(_0834_),
-    .B(\Demux_D0_D1.data_in [5]),
-    .Y(_1311_)
-  );
-  NAND _1801_ (
-    .A(_1311_),
-    .B(_1309_),
-    .Y(_0847_)
-  );
-  NOT _1802_ (
-    .A(push),
-    .Y(_1314_)
-  );
-  NOT _1803_ (
-    .A(Pausa_VC1),
-    .Y(_1316_)
-  );
-  NOR _1804_ (
-    .A(Pausa_VC0),
-    .B(Fifo_Empty_MF),
-    .Y(_1317_)
-  );
-  NAND _1805_ (
-    .A(_1317_),
-    .B(_1316_),
-    .Y(_1318_)
-  );
-  NAND _1806_ (
-    .A(_1318_),
-    .B(_1314_),
-    .Y(_1319_)
-  );
-  NOR _1807_ (
-    .A(_1319_),
-    .B(\MainFifo.num_mem [0]),
-    .Y(_1320_)
-  );
-  NAND _1808_ (
-    .A(_1319_),
-    .B(\MainFifo.num_mem [0]),
-    .Y(_1321_)
-  );
-  NAND _1809_ (
-    .A(_1321_),
-    .B(reset_L),
-    .Y(_1322_)
-  );
-  NOR _1810_ (
-    .A(_1322_),
-    .B(_1320_),
-    .Y(_0849_)
-  );
-  NOT _1811_ (
-    .A(\MainFifo.num_mem [1]),
-    .Y(_1323_)
-  );
-  NOR _1812_ (
-    .A(_1318_),
-    .B(push),
-    .Y(_1325_)
-  );
-  NOR _1813_ (
-    .A(_1325_),
-    .B(\MainFifo.num_mem [0]),
-    .Y(_1326_)
-  );
-  NOT _1814_ (
-    .A(\MainFifo.num_mem [0]),
-    .Y(_1327_)
-  );
-  NOR _1815_ (
-    .A(push),
-    .B(_1327_),
-    .Y(_1329_)
-  );
-  NOR _1816_ (
-    .A(_1329_),
-    .B(_1326_),
-    .Y(_1330_)
-  );
-  NOR _1817_ (
-    .A(_1330_),
-    .B(_1323_),
-    .Y(_1331_)
-  );
-  NOT _1818_ (
-    .A(_1330_),
-    .Y(_1332_)
-  );
-  NOR _1819_ (
-    .A(_1332_),
-    .B(\MainFifo.num_mem [1]),
-    .Y(_1333_)
-  );
-  NOR _1820_ (
-    .A(_1333_),
-    .B(_1331_),
-    .Y(_1334_)
-  );
-  NOR _1821_ (
-    .A(_1334_),
-    .B(_0878_),
-    .Y(_0850_)
-  );
-  NOT _1822_ (
-    .A(\MainFifo.num_mem [2]),
-    .Y(_1335_)
-  );
-  NAND _1823_ (
-    .A(\MainFifo.num_mem [1]),
-    .B(\MainFifo.num_mem [0]),
-    .Y(_1336_)
-  );
-  NOR _1824_ (
-    .A(\MainFifo.num_mem [1]),
-    .B(\MainFifo.num_mem [0]),
-    .Y(_1337_)
-  );
-  NOT _1825_ (
-    .A(_1337_),
-    .Y(_1338_)
-  );
-  NAND _1826_ (
-    .A(_1338_),
-    .B(_1336_),
-    .Y(_1339_)
-  );
-  NAND _1827_ (
-    .A(_1339_),
-    .B(_1330_),
-    .Y(_1340_)
-  );
-  NOR _1828_ (
-    .A(_1340_),
-    .B(_1335_),
-    .Y(_1341_)
-  );
-  NAND _1829_ (
-    .A(_1340_),
-    .B(_1335_),
-    .Y(_1342_)
-  );
-  NAND _1830_ (
-    .A(_1342_),
-    .B(reset_L),
-    .Y(_1343_)
-  );
-  NOR _1831_ (
-    .A(_1343_),
-    .B(_1341_),
-    .Y(_0851_)
-  );
-  NAND _1832_ (
-    .A(_1325_),
-    .B(\MainFifo.memoria.iReadAddress [0]),
-    .Y(_1344_)
-  );
-  NOT _1833_ (
-    .A(_1344_),
-    .Y(_1345_)
-  );
-  NOT _1834_ (
-    .A(\MainFifo.memoria.iReadAddress [0]),
-    .Y(_1347_)
-  );
-  NOT _1835_ (
-    .A(_1325_),
-    .Y(_1349_)
-  );
-  NAND _1836_ (
-    .A(_1349_),
-    .B(_1347_),
-    .Y(_1351_)
-  );
-  NAND _1837_ (
-    .A(_1351_),
-    .B(reset_L),
-    .Y(_1353_)
-  );
-  NOR _1838_ (
-    .A(_1353_),
-    .B(_1345_),
-    .Y(_0852_)
-  );
-  NOT _1839_ (
-    .A(\MainFifo.memoria.iReadAddress [1]),
-    .Y(_1356_)
-  );
-  NOR _1840_ (
-    .A(_1344_),
-    .B(_1356_),
-    .Y(_1357_)
-  );
-  NAND _1841_ (
-    .A(_1344_),
-    .B(_1356_),
-    .Y(_1358_)
-  );
-  NAND _1842_ (
-    .A(_1358_),
-    .B(reset_L),
-    .Y(_1359_)
-  );
-  NOR _1843_ (
-    .A(_1359_),
-    .B(_1357_),
-    .Y(_0853_)
-  );
-  NOT _1844_ (
-    .A(\MainFifo.memoria.iWriteAddress [0]),
-    .Y(_1360_)
-  );
-  NOR _1845_ (
-    .A(_1360_),
-    .B(_1314_),
-    .Y(_1361_)
-  );
-  NAND _1846_ (
-    .A(_1360_),
-    .B(_1314_),
-    .Y(_1362_)
-  );
-  NAND _1847_ (
-    .A(_1362_),
-    .B(reset_L),
-    .Y(_1363_)
-  );
-  NOR _1848_ (
-    .A(_1363_),
-    .B(_1361_),
-    .Y(_0855_)
-  );
-  NOT _1849_ (
-    .A(\MainFifo.memoria.iWriteAddress [1]),
-    .Y(_1364_)
-  );
-  NOT _1850_ (
-    .A(_1361_),
-    .Y(_1365_)
-  );
-  NOR _1851_ (
-    .A(_1365_),
-    .B(_1364_),
-    .Y(_1366_)
-  );
-  NAND _1852_ (
-    .A(_1365_),
-    .B(_1364_),
-    .Y(_1367_)
-  );
-  NAND _1853_ (
-    .A(_1367_),
-    .B(reset_L),
-    .Y(_1368_)
-  );
-  NOR _1854_ (
-    .A(_1368_),
-    .B(_1366_),
-    .Y(_0856_)
-  );
-  NAND _1855_ (
-    .A(_1337_),
-    .B(\MainFifo.num_mem [2]),
-    .Y(_1369_)
-  );
-  NOR _1856_ (
-    .A(_1369_),
-    .B(_1314_),
-    .Y(_1370_)
-  );
-  NOR _1857_ (
-    .A(_1370_),
-    .B(Error_Fifo_MF),
-    .Y(_1371_)
-  );
-  NOR _1858_ (
-    .A(_1371_),
-    .B(_0878_),
-    .Y(_0858_)
-  );
-  NOR _1859_ (
-    .A(_1314_),
-    .B(_0878_),
-    .Y(_0868_)
-  );
-  NOT _1860_ (
-    .A(_0868_),
-    .Y(_0004_)
-  );
-  NOR _1861_ (
-    .A(_1337_),
-    .B(_1335_),
-    .Y(_0006_)
-  );
-  NOR _1862_ (
-    .A(_0006_),
-    .B(_0004_),
-    .Y(_0008_)
-  );
-  NAND _1863_ (
-    .A(_1337_),
-    .B(_1335_),
-    .Y(_0010_)
-  );
-  NOR _1864_ (
-    .A(_0010_),
-    .B(_1318_),
-    .Y(_0011_)
-  );
-  NOT _1865_ (
-    .A(Fifo_Empty_MF),
-    .Y(_0012_)
-  );
-  NAND _1866_ (
-    .A(_0012_),
-    .B(reset_L),
-    .Y(_0013_)
-  );
-  NOR _1867_ (
-    .A(_0013_),
-    .B(_0011_),
-    .Y(_0014_)
-  );
-  NOR _1868_ (
-    .A(_0014_),
-    .B(_0008_),
-    .Y(_0859_)
-  );
-  NOR _1869_ (
-    .A(_1336_),
-    .B(\MainFifo.num_mem [2]),
-    .Y(_0015_)
-  );
-  NAND _1870_ (
-    .A(Pausa_MF),
-    .B(\MainFifo.num_mem [2]),
-    .Y(_0016_)
-  );
-  NAND _1871_ (
-    .A(_0016_),
-    .B(_1369_),
-    .Y(_0017_)
-  );
-  NOR _1872_ (
-    .A(_0017_),
-    .B(_0015_),
-    .Y(_0018_)
-  );
-  NOR _1873_ (
-    .A(_0018_),
-    .B(_1314_),
-    .Y(_0019_)
-  );
-  NOR _1874_ (
-    .A(_0015_),
-    .B(Pausa_MF),
-    .Y(_0020_)
-  );
-  NOT _1875_ (
-    .A(Pausa_MF),
-    .Y(_0021_)
-  );
-  NOR _1876_ (
-    .A(_1319_),
-    .B(_0021_),
-    .Y(_0022_)
-  );
-  NAND _1877_ (
-    .A(_1323_),
-    .B(_1335_),
-    .Y(_0023_)
-  );
-  NAND _1878_ (
-    .A(_0023_),
-    .B(_1338_),
-    .Y(_0024_)
-  );
-  NOR _1879_ (
-    .A(_0024_),
-    .B(_1349_),
-    .Y(_0025_)
-  );
-  NOR _1880_ (
-    .A(_0025_),
-    .B(_0022_),
-    .Y(_0026_)
-  );
-  NOR _1881_ (
-    .A(_0026_),
-    .B(_0020_),
-    .Y(_0027_)
-  );
-  NOR _1882_ (
-    .A(_0027_),
-    .B(_0019_),
-    .Y(_0028_)
-  );
-  NOR _1883_ (
-    .A(_0028_),
-    .B(_0878_),
-    .Y(_0861_)
-  );
-  NOT _1884_ (
-    .A(data_in_principal[0]),
-    .Y(_0029_)
-  );
-  NOR _1885_ (
-    .A(_0029_),
-    .B(_0878_),
-    .Y(_0862_)
-  );
-  NOT _1886_ (
-    .A(data_in_principal[1]),
-    .Y(_0030_)
-  );
-  NOR _1887_ (
-    .A(_0030_),
-    .B(_0878_),
-    .Y(_0863_)
-  );
-  NOT _1888_ (
-    .A(data_in_principal[2]),
-    .Y(_0031_)
-  );
-  NOR _1889_ (
-    .A(_0031_),
-    .B(_0878_),
-    .Y(_0864_)
-  );
-  NOT _1890_ (
-    .A(data_in_principal[3]),
-    .Y(_0032_)
-  );
-  NOR _1891_ (
-    .A(_0032_),
-    .B(_0878_),
-    .Y(_0865_)
-  );
-  NOT _1892_ (
-    .A(data_in_principal[4]),
-    .Y(_0033_)
-  );
-  NOR _1893_ (
-    .A(_0033_),
-    .B(_0878_),
-    .Y(_0866_)
-  );
-  NOT _1894_ (
-    .A(data_in_principal[5]),
-    .Y(_0034_)
-  );
-  NOR _1895_ (
-    .A(_0034_),
-    .B(_0878_),
-    .Y(_0867_)
-  );
-  NOR _1896_ (
-    .A(_1318_),
-    .B(_0878_),
-    .Y(_0869_)
-  );
-  NOT _1897_ (
-    .A(\MainFifo.memoria.iWriteEnable ),
-    .Y(_0035_)
-  );
-  NOR _1898_ (
-    .A(_0035_),
-    .B(_1364_),
-    .Y(_0036_)
-  );
-  NAND _1899_ (
-    .A(_0036_),
-    .B(\MainFifo.memoria.iWriteAddress [0]),
-    .Y(_0037_)
-  );
-  NOT _1900_ (
-    .A(_0037_),
-    .Y(_0038_)
-  );
-  NAND _1901_ (
-    .A(_0038_),
-    .B(\MainFifo.Fifo_Data_in_int [0]),
-    .Y(_0039_)
-  );
-  NAND _1902_ (
-    .A(_0037_),
-    .B(\MainFifo.memoria.Ram[3] [0]),
-    .Y(_0040_)
-  );
-  NAND _1903_ (
-    .A(_0040_),
-    .B(_0039_),
-    .Y(_0877_)
-  );
-  NAND _1904_ (
-    .A(_0038_),
-    .B(\MainFifo.Fifo_Data_in_int [1]),
-    .Y(_0041_)
-  );
-  NAND _1905_ (
-    .A(_0037_),
-    .B(\MainFifo.memoria.Ram[3] [1]),
-    .Y(_0042_)
-  );
-  NAND _1906_ (
-    .A(_0042_),
-    .B(_0041_),
-    .Y(_0879_)
-  );
-  NAND _1907_ (
-    .A(_0038_),
-    .B(\MainFifo.Fifo_Data_in_int [2]),
-    .Y(_0043_)
-  );
-  NAND _1908_ (
-    .A(_0037_),
-    .B(\MainFifo.memoria.Ram[3] [2]),
-    .Y(_0044_)
-  );
-  NAND _1909_ (
-    .A(_0044_),
-    .B(_0043_),
-    .Y(_0880_)
-  );
-  NAND _1910_ (
-    .A(_0038_),
-    .B(\MainFifo.Fifo_Data_in_int [3]),
-    .Y(_0045_)
-  );
-  NAND _1911_ (
-    .A(_0037_),
-    .B(\MainFifo.memoria.Ram[3] [3]),
-    .Y(_0046_)
-  );
-  NAND _1912_ (
-    .A(_0046_),
-    .B(_0045_),
-    .Y(_0882_)
-  );
-  NAND _1913_ (
-    .A(_0038_),
-    .B(\MainFifo.Fifo_Data_in_int [4]),
-    .Y(_0047_)
-  );
-  NAND _1914_ (
-    .A(_0037_),
-    .B(\MainFifo.memoria.Ram[3] [4]),
-    .Y(_0048_)
-  );
-  NAND _1915_ (
-    .A(_0048_),
-    .B(_0047_),
-    .Y(_0883_)
-  );
-  NAND _1916_ (
-    .A(_0038_),
-    .B(\MainFifo.Fifo_Data_in_int [5]),
-    .Y(_0049_)
-  );
-  NAND _1917_ (
-    .A(_0037_),
-    .B(\MainFifo.memoria.Ram[3] [5]),
-    .Y(_0050_)
-  );
-  NAND _1918_ (
-    .A(_0050_),
-    .B(_0049_),
-    .Y(_0885_)
-  );
-  NOR _1919_ (
-    .A(_0035_),
-    .B(\MainFifo.memoria.iWriteAddress [0]),
-    .Y(_0051_)
-  );
-  NAND _1920_ (
-    .A(_0051_),
-    .B(\MainFifo.memoria.iWriteAddress [1]),
-    .Y(_0052_)
-  );
-  NOT _1921_ (
-    .A(_0052_),
-    .Y(_0053_)
-  );
-  NAND _1922_ (
-    .A(_0053_),
-    .B(\MainFifo.Fifo_Data_in_int [0]),
-    .Y(_0054_)
-  );
-  NAND _1923_ (
-    .A(_0052_),
-    .B(\MainFifo.memoria.Ram[2] [0]),
-    .Y(_0055_)
-  );
-  NAND _1924_ (
-    .A(_0055_),
-    .B(_0054_),
-    .Y(_0887_)
-  );
-  NAND _1925_ (
-    .A(_0053_),
-    .B(\MainFifo.Fifo_Data_in_int [1]),
-    .Y(_0056_)
-  );
-  NAND _1926_ (
-    .A(_0052_),
-    .B(\MainFifo.memoria.Ram[2] [1]),
-    .Y(_0057_)
-  );
-  NAND _1927_ (
-    .A(_0057_),
-    .B(_0056_),
-    .Y(_0889_)
-  );
-  NAND _1928_ (
-    .A(_0053_),
-    .B(\MainFifo.Fifo_Data_in_int [2]),
-    .Y(_0058_)
-  );
-  NAND _1929_ (
-    .A(_0052_),
-    .B(\MainFifo.memoria.Ram[2] [2]),
-    .Y(_0059_)
-  );
-  NAND _1930_ (
-    .A(_0059_),
-    .B(_0058_),
-    .Y(_0891_)
-  );
-  NAND _1931_ (
-    .A(_0053_),
-    .B(\MainFifo.Fifo_Data_in_int [3]),
-    .Y(_0060_)
-  );
-  NAND _1932_ (
-    .A(_0052_),
-    .B(\MainFifo.memoria.Ram[2] [3]),
-    .Y(_0061_)
-  );
-  NAND _1933_ (
-    .A(_0061_),
-    .B(_0060_),
-    .Y(_0892_)
-  );
-  NAND _1934_ (
-    .A(_0053_),
-    .B(\MainFifo.Fifo_Data_in_int [4]),
-    .Y(_0062_)
-  );
-  NAND _1935_ (
-    .A(_0052_),
-    .B(\MainFifo.memoria.Ram[2] [4]),
-    .Y(_0063_)
-  );
-  NAND _1936_ (
-    .A(_0063_),
-    .B(_0062_),
-    .Y(_0894_)
-  );
-  NAND _1937_ (
-    .A(_0053_),
-    .B(\MainFifo.Fifo_Data_in_int [5]),
-    .Y(_0064_)
-  );
-  NAND _1938_ (
-    .A(_0052_),
-    .B(\MainFifo.memoria.Ram[2] [5]),
-    .Y(_0065_)
-  );
-  NAND _1939_ (
-    .A(_0065_),
-    .B(_0064_),
-    .Y(_0897_)
-  );
-  NOR _1940_ (
-    .A(_0035_),
-    .B(_1360_),
-    .Y(_0066_)
-  );
-  NAND _1941_ (
-    .A(_0066_),
-    .B(_1364_),
-    .Y(_0067_)
-  );
-  NOT _1942_ (
-    .A(_0067_),
-    .Y(_0068_)
-  );
-  NAND _1943_ (
-    .A(_0068_),
-    .B(\MainFifo.Fifo_Data_in_int [0]),
-    .Y(_0069_)
-  );
-  NAND _1944_ (
-    .A(_0067_),
-    .B(\MainFifo.memoria.Ram[1] [0]),
-    .Y(_0070_)
-  );
-  NAND _1945_ (
-    .A(_0070_),
-    .B(_0069_),
-    .Y(_0900_)
-  );
-  NAND _1946_ (
-    .A(_0068_),
-    .B(\MainFifo.Fifo_Data_in_int [1]),
-    .Y(_0071_)
-  );
-  NAND _1947_ (
-    .A(_0067_),
-    .B(\MainFifo.memoria.Ram[1] [1]),
-    .Y(_0072_)
-  );
-  NAND _1948_ (
-    .A(_0072_),
-    .B(_0071_),
-    .Y(_0901_)
-  );
-  NAND _1949_ (
-    .A(_0068_),
-    .B(\MainFifo.Fifo_Data_in_int [2]),
-    .Y(_0073_)
-  );
-  NAND _1950_ (
-    .A(_0067_),
-    .B(\MainFifo.memoria.Ram[1] [2]),
-    .Y(_0074_)
-  );
-  NAND _1951_ (
-    .A(_0074_),
-    .B(_0073_),
-    .Y(_0903_)
-  );
-  NAND _1952_ (
-    .A(_0068_),
-    .B(\MainFifo.Fifo_Data_in_int [3]),
-    .Y(_0076_)
-  );
-  NAND _1953_ (
-    .A(_0067_),
-    .B(\MainFifo.memoria.Ram[1] [3]),
-    .Y(_0078_)
-  );
-  NAND _1954_ (
-    .A(_0078_),
-    .B(_0076_),
-    .Y(_0904_)
-  );
-  NAND _1955_ (
-    .A(_0068_),
-    .B(\MainFifo.Fifo_Data_in_int [4]),
-    .Y(_0081_)
-  );
-  NAND _1956_ (
-    .A(_0067_),
-    .B(\MainFifo.memoria.Ram[1] [4]),
-    .Y(_0083_)
-  );
-  NAND _1957_ (
-    .A(_0083_),
-    .B(_0081_),
-    .Y(_0906_)
-  );
-  NAND _1958_ (
-    .A(_0068_),
-    .B(\MainFifo.Fifo_Data_in_int [5]),
-    .Y(_0084_)
-  );
-  NAND _1959_ (
-    .A(_0067_),
-    .B(\MainFifo.memoria.Ram[1] [5]),
-    .Y(_0085_)
-  );
-  NAND _1960_ (
-    .A(_0085_),
-    .B(_0084_),
-    .Y(_0907_)
-  );
-  NAND _1961_ (
-    .A(_0051_),
-    .B(_1364_),
-    .Y(_0086_)
-  );
-  NOT _1962_ (
-    .A(_0086_),
-    .Y(_0087_)
-  );
-  NAND _1963_ (
-    .A(_0087_),
-    .B(\MainFifo.Fifo_Data_in_int [0]),
-    .Y(_0088_)
-  );
-  NAND _1964_ (
-    .A(_0086_),
-    .B(\MainFifo.memoria.Ram[0] [0]),
-    .Y(_0089_)
-  );
-  NAND _1965_ (
-    .A(_0089_),
-    .B(_0088_),
-    .Y(_0909_)
-  );
-  NAND _1966_ (
-    .A(_0087_),
-    .B(\MainFifo.Fifo_Data_in_int [1]),
-    .Y(_0090_)
-  );
-  NAND _1967_ (
-    .A(_0086_),
-    .B(\MainFifo.memoria.Ram[0] [1]),
-    .Y(_0092_)
-  );
-  NAND _1968_ (
-    .A(_0092_),
-    .B(_0090_),
-    .Y(_0912_)
-  );
-  NAND _1969_ (
-    .A(_0087_),
-    .B(\MainFifo.Fifo_Data_in_int [2]),
-    .Y(_0094_)
-  );
-  NAND _1970_ (
-    .A(_0086_),
-    .B(\MainFifo.memoria.Ram[0] [2]),
-    .Y(_0095_)
-  );
-  NAND _1971_ (
-    .A(_0095_),
-    .B(_0094_),
-    .Y(_0913_)
-  );
-  NAND _1972_ (
-    .A(_0087_),
-    .B(\MainFifo.Fifo_Data_in_int [3]),
-    .Y(_0098_)
-  );
-  NAND _1973_ (
-    .A(_0086_),
-    .B(\MainFifo.memoria.Ram[0] [3]),
-    .Y(_0100_)
-  );
-  NAND _1974_ (
-    .A(_0100_),
-    .B(_0098_),
-    .Y(_0915_)
-  );
-  NAND _1975_ (
-    .A(_0087_),
-    .B(\MainFifo.Fifo_Data_in_int [4]),
-    .Y(_0103_)
-  );
-  NAND _1976_ (
-    .A(_0086_),
-    .B(\MainFifo.memoria.Ram[0] [4]),
-    .Y(_0105_)
-  );
-  NAND _1977_ (
-    .A(_0105_),
-    .B(_0103_),
-    .Y(_0916_)
-  );
-  NAND _1978_ (
-    .A(_0087_),
-    .B(\MainFifo.Fifo_Data_in_int [5]),
-    .Y(_0106_)
-  );
-  NAND _1979_ (
-    .A(_0086_),
-    .B(\MainFifo.memoria.Ram[0] [5]),
-    .Y(_0107_)
-  );
-  NAND _1980_ (
-    .A(_0107_),
-    .B(_0106_),
-    .Y(_0918_)
-  );
-  NOR _1981_ (
-    .A(\VC0Fifo.pop ),
-    .B(\VC0Fifo.push ),
-    .Y(_0108_)
-  );
-  NOR _1982_ (
-    .A(_0108_),
-    .B(\VC0Fifo.num_mem [0]),
-    .Y(_0109_)
-  );
-  NOT _1983_ (
-    .A(\VC0Fifo.num_mem [0]),
-    .Y(_0110_)
-  );
-  NOT _1984_ (
-    .A(_0108_),
-    .Y(_0111_)
-  );
-  NOR _1985_ (
-    .A(_0111_),
-    .B(_0110_),
-    .Y(_0112_)
-  );
-  NOR _1986_ (
-    .A(_0112_),
-    .B(_0109_),
-    .Y(_0113_)
-  );
-  NOR _1987_ (
-    .A(_0113_),
-    .B(_0878_),
-    .Y(_0950_)
-  );
-  NAND _1988_ (
-    .A(\VC0Fifo.push ),
-    .B(\VC0Fifo.num_mem [0]),
-    .Y(_0114_)
-  );
-  NOT _1989_ (
-    .A(\VC0Fifo.pop ),
-    .Y(_0115_)
-  );
-  NOR _1990_ (
-    .A(_0115_),
-    .B(\VC0Fifo.push ),
-    .Y(_0116_)
-  );
-  NAND _1991_ (
-    .A(_0116_),
-    .B(_0110_),
-    .Y(_0117_)
-  );
-  NAND _1992_ (
-    .A(_0117_),
-    .B(_0114_),
-    .Y(_0118_)
-  );
-  NOR _1993_ (
-    .A(_0118_),
-    .B(\VC0Fifo.num_mem [1]),
-    .Y(_0119_)
-  );
-  NAND _1994_ (
-    .A(_0118_),
-    .B(\VC0Fifo.num_mem [1]),
-    .Y(_0121_)
-  );
-  NAND _1995_ (
-    .A(_0121_),
-    .B(reset_L),
-    .Y(_0123_)
-  );
-  NOR _1996_ (
-    .A(_0123_),
-    .B(_0119_),
-    .Y(_0952_)
-  );
-  NOT _1997_ (
-    .A(\VC0Fifo.num_mem [2]),
-    .Y(_0126_)
-  );
-  NOT _1998_ (
-    .A(\VC0Fifo.num_mem [1]),
-    .Y(_0128_)
-  );
-  NOR _1999_ (
-    .A(_0114_),
-    .B(_0128_),
-    .Y(_0130_)
-  );
-  NOT _2000_ (
-    .A(_0116_),
-    .Y(_0131_)
-  );
-  NOR _2001_ (
-    .A(\VC0Fifo.num_mem [1]),
-    .B(\VC0Fifo.num_mem [0]),
-    .Y(_0133_)
-  );
-  NOT _2002_ (
-    .A(_0133_),
-    .Y(_0134_)
-  );
-  NOR _2003_ (
-    .A(_0134_),
-    .B(_0131_),
-    .Y(_0135_)
-  );
-  NOR _2004_ (
-    .A(_0135_),
-    .B(_0130_),
-    .Y(_0136_)
-  );
-  NOR _2005_ (
-    .A(_0136_),
-    .B(_0126_),
-    .Y(_0137_)
-  );
-  NAND _2006_ (
-    .A(_0136_),
-    .B(_0126_),
-    .Y(_0138_)
-  );
-  NAND _2007_ (
-    .A(_0138_),
-    .B(reset_L),
-    .Y(_0139_)
-  );
-  NOR _2008_ (
-    .A(_0139_),
-    .B(_0137_),
-    .Y(_0954_)
-  );
-  NOT _2009_ (
-    .A(\VC0Fifo.memoria.iReadAddress [0]),
-    .Y(_0140_)
-  );
-  NOR _2010_ (
-    .A(_0131_),
-    .B(_0140_),
-    .Y(_0141_)
-  );
-  NAND _2011_ (
-    .A(_0131_),
-    .B(_0140_),
-    .Y(_0142_)
-  );
-  NAND _2012_ (
-    .A(_0142_),
-    .B(reset_L),
-    .Y(_0143_)
-  );
-  NOR _2013_ (
-    .A(_0143_),
-    .B(_0141_),
-    .Y(_0965_)
-  );
-  NAND _2014_ (
-    .A(_0141_),
-    .B(\VC0Fifo.memoria.iReadAddress [1]),
-    .Y(_0144_)
-  );
-  NOT _2015_ (
-    .A(\VC0Fifo.memoria.iReadAddress [1]),
-    .Y(_0145_)
-  );
-  NOT _2016_ (
-    .A(_0141_),
-    .Y(_0146_)
-  );
-  NAND _2017_ (
-    .A(_0146_),
-    .B(_0145_),
-    .Y(_0147_)
-  );
-  NAND _2018_ (
-    .A(_0147_),
-    .B(_0144_),
-    .Y(_0148_)
-  );
-  NOR _2019_ (
-    .A(_0148_),
-    .B(_0878_),
-    .Y(_0967_)
-  );
-  NOT _2020_ (
-    .A(\VC0Fifo.push ),
-    .Y(_0149_)
-  );
-  NOT _2021_ (
-    .A(\VC0Fifo.memoria.iWriteAddress [0]),
-    .Y(_0150_)
-  );
-  NOR _2022_ (
-    .A(_0150_),
-    .B(_0149_),
-    .Y(_0151_)
-  );
-  NAND _2023_ (
-    .A(_0150_),
-    .B(_0149_),
-    .Y(_0152_)
-  );
-  NAND _2024_ (
-    .A(_0152_),
-    .B(reset_L),
-    .Y(_0153_)
-  );
-  NOR _2025_ (
-    .A(_0153_),
-    .B(_0151_),
-    .Y(_0978_)
-  );
-  NOT _2026_ (
-    .A(\VC0Fifo.memoria.iWriteAddress [1]),
-    .Y(_0154_)
-  );
-  NOT _2027_ (
-    .A(_0151_),
-    .Y(_0155_)
-  );
-  NOR _2028_ (
-    .A(_0155_),
-    .B(_0154_),
-    .Y(_0156_)
-  );
-  NAND _2029_ (
-    .A(_0155_),
-    .B(_0154_),
-    .Y(_0157_)
-  );
-  NAND _2030_ (
-    .A(_0157_),
-    .B(reset_L),
-    .Y(_0158_)
-  );
-  NOR _2031_ (
-    .A(_0158_),
-    .B(_0156_),
-    .Y(_0980_)
-  );
-  NAND _2032_ (
-    .A(_0133_),
-    .B(\VC0Fifo.num_mem [2]),
-    .Y(_0159_)
-  );
-  NOR _2033_ (
-    .A(_0159_),
-    .B(_0149_),
-    .Y(_0160_)
-  );
-  NOR _2034_ (
-    .A(_0160_),
-    .B(Error_Fifo_VC0),
-    .Y(_0161_)
-  );
-  NOR _2035_ (
-    .A(_0161_),
-    .B(_0878_),
-    .Y(_0988_)
-  );
-  NAND _2036_ (
-    .A(_0159_),
-    .B(_0116_),
-    .Y(_0162_)
-  );
-  NOT _2037_ (
-    .A(_0162_),
-    .Y(_0163_)
-  );
-  NOR _2038_ (
-    .A(\VC0Fifo.num_mem [2]),
-    .B(_0110_),
-    .Y(_0164_)
-  );
-  NOR _2039_ (
-    .A(_0133_),
-    .B(Fifo_Empty_VC0),
-    .Y(_0165_)
-  );
-  NOR _2040_ (
-    .A(_0165_),
-    .B(_0164_),
-    .Y(_0166_)
-  );
-  NAND _2041_ (
-    .A(_0166_),
-    .B(_0163_),
-    .Y(_0167_)
-  );
-  NOT _2042_ (
-    .A(_0000_),
-    .Y(_0168_)
-  );
-  NOR _2043_ (
-    .A(_0149_),
-    .B(_0126_),
-    .Y(_0169_)
-  );
-  NAND _2044_ (
-    .A(_0169_),
-    .B(_0134_),
-    .Y(_0170_)
-  );
-  NOR _2045_ (
-    .A(_0108_),
-    .B(_0878_),
-    .Y(_0171_)
-  );
-  NAND _2046_ (
-    .A(_0171_),
-    .B(_0170_),
-    .Y(_0172_)
-  );
-  NAND _2047_ (
-    .A(_0172_),
-    .B(_0168_),
-    .Y(_0173_)
-  );
-  NAND _2048_ (
-    .A(_0173_),
-    .B(_0167_),
-    .Y(_0999_)
-  );
-  NOT _2049_ (
-    .A(Pausa_VC0),
-    .Y(_0174_)
-  );
-  NAND _2050_ (
-    .A(_0164_),
-    .B(\VC0Fifo.num_mem [1]),
-    .Y(_0175_)
-  );
-  NAND _2051_ (
-    .A(_0175_),
-    .B(_0174_),
-    .Y(_0176_)
-  );
-  NOR _2052_ (
-    .A(_0176_),
-    .B(_0133_),
-    .Y(_0177_)
-  );
-  NOR _2053_ (
-    .A(_0169_),
-    .B(_0130_),
-    .Y(_0178_)
-  );
-  NOR _2054_ (
-    .A(_0178_),
-    .B(_0177_),
-    .Y(_0179_)
-  );
-  NOR _2055_ (
-    .A(\VC0Fifo.num_mem [1]),
-    .B(\VC0Fifo.num_mem [2]),
-    .Y(_0180_)
-  );
-  NOR _2056_ (
-    .A(_0180_),
-    .B(_0162_),
-    .Y(_0181_)
-  );
-  NAND _2057_ (
-    .A(_0181_),
-    .B(_0176_),
-    .Y(_0182_)
-  );
-  NAND _2058_ (
-    .A(_0108_),
-    .B(Pausa_VC0),
-    .Y(_0183_)
-  );
-  NAND _2059_ (
-    .A(_0183_),
-    .B(_0182_),
-    .Y(_0184_)
-  );
-  NOR _2060_ (
-    .A(_0184_),
-    .B(_0179_),
-    .Y(_0185_)
-  );
-  NOR _2061_ (
-    .A(_0185_),
-    .B(_0878_),
-    .Y(_1009_)
-  );
-  NOT _2062_ (
-    .A(\VC0Fifo.Fifo_Data_in [0]),
-    .Y(_0186_)
-  );
-  NOR _2063_ (
-    .A(_0186_),
-    .B(_0878_),
-    .Y(_1012_)
-  );
-  NOT _2064_ (
-    .A(\VC0Fifo.Fifo_Data_in [1]),
-    .Y(_0187_)
-  );
-  NOR _2065_ (
-    .A(_0187_),
-    .B(_0878_),
-    .Y(_1014_)
-  );
-  NOT _2066_ (
-    .A(\VC0Fifo.Fifo_Data_in [2]),
-    .Y(_0188_)
-  );
-  NOR _2067_ (
-    .A(_0188_),
-    .B(_0878_),
-    .Y(_1016_)
-  );
-  NOT _2068_ (
-    .A(\VC0Fifo.Fifo_Data_in [3]),
-    .Y(_0189_)
-  );
-  NOR _2069_ (
-    .A(_0189_),
-    .B(_0878_),
-    .Y(_1019_)
-  );
-  NOT _2070_ (
-    .A(\VC0Fifo.Fifo_Data_in [4]),
-    .Y(_0191_)
-  );
-  NOR _2071_ (
-    .A(_0191_),
-    .B(_0878_),
-    .Y(_1021_)
-  );
-  NAND _2072_ (
-    .A(\VC0Fifo.Fifo_Data_in [5]),
-    .B(reset_L),
-    .Y(_0192_)
-  );
-  NOT _2073_ (
-    .A(_0192_),
-    .Y(_1023_)
-  );
-  NOR _2074_ (
-    .A(_0149_),
-    .B(_0878_),
-    .Y(_1025_)
-  );
-  NOR _2075_ (
-    .A(_0115_),
-    .B(_0878_),
-    .Y(_1027_)
-  );
-  NOT _2076_ (
-    .A(\VC0Fifo.memoria.iWriteEnable ),
-    .Y(_0193_)
-  );
-  NOR _2077_ (
-    .A(_0193_),
-    .B(_0154_),
-    .Y(_0194_)
-  );
-  NAND _2078_ (
-    .A(_0194_),
-    .B(\VC0Fifo.memoria.iWriteAddress [0]),
-    .Y(_0195_)
-  );
-  NOT _2079_ (
-    .A(_0195_),
-    .Y(_0197_)
-  );
-  NAND _2080_ (
-    .A(_0197_),
-    .B(\VC0Fifo.Fifo_Data_in_int [0]),
-    .Y(_0198_)
-  );
-  NAND _2081_ (
-    .A(_0195_),
-    .B(\VC0Fifo.memoria.Ram[3] [0]),
-    .Y(_0199_)
-  );
-  NAND _2082_ (
-    .A(_0199_),
-    .B(_0198_),
-    .Y(_1077_)
-  );
-  NAND _2083_ (
-    .A(_0197_),
-    .B(\VC0Fifo.Fifo_Data_in_int [1]),
-    .Y(_0200_)
-  );
-  NAND _2084_ (
-    .A(_0195_),
-    .B(\VC0Fifo.memoria.Ram[3] [1]),
-    .Y(_0201_)
-  );
-  NAND _2085_ (
-    .A(_0201_),
-    .B(_0200_),
-    .Y(_1078_)
-  );
-  NAND _2086_ (
-    .A(_0197_),
-    .B(\VC0Fifo.Fifo_Data_in_int [2]),
-    .Y(_0202_)
-  );
-  NAND _2087_ (
-    .A(_0195_),
-    .B(\VC0Fifo.memoria.Ram[3] [2]),
-    .Y(_0203_)
-  );
-  NAND _2088_ (
-    .A(_0203_),
-    .B(_0202_),
-    .Y(_1080_)
-  );
-  NAND _2089_ (
-    .A(_0197_),
-    .B(\VC0Fifo.Fifo_Data_in_int [3]),
-    .Y(_0205_)
-  );
-  NAND _2090_ (
-    .A(_0195_),
-    .B(\VC0Fifo.memoria.Ram[3] [3]),
-    .Y(_0206_)
-  );
-  NAND _2091_ (
-    .A(_0206_),
-    .B(_0205_),
-    .Y(_1082_)
-  );
-  NAND _2092_ (
-    .A(_0197_),
-    .B(\VC0Fifo.Fifo_Data_in_int [4]),
-    .Y(_0207_)
-  );
-  NAND _2093_ (
-    .A(_0195_),
-    .B(\VC0Fifo.memoria.Ram[3] [4]),
-    .Y(_0208_)
-  );
-  NAND _2094_ (
-    .A(_0208_),
-    .B(_0207_),
-    .Y(_1084_)
-  );
-  NAND _2095_ (
-    .A(_0197_),
-    .B(\VC0Fifo.Fifo_Data_in_int [5]),
-    .Y(_0209_)
-  );
-  NAND _2096_ (
-    .A(_0195_),
-    .B(\VC0Fifo.memoria.Ram[3] [5]),
-    .Y(_0210_)
-  );
-  NAND _2097_ (
-    .A(_0210_),
-    .B(_0209_),
-    .Y(_1086_)
-  );
-  NOR _2098_ (
-    .A(_0193_),
-    .B(\VC0Fifo.memoria.iWriteAddress [0]),
-    .Y(_0211_)
-  );
-  NAND _2099_ (
-    .A(_0211_),
-    .B(\VC0Fifo.memoria.iWriteAddress [1]),
-    .Y(_0213_)
-  );
-  NOT _2100_ (
-    .A(_0213_),
-    .Y(_0214_)
-  );
-  NAND _2101_ (
-    .A(_0214_),
-    .B(\VC0Fifo.Fifo_Data_in_int [0]),
-    .Y(_0215_)
-  );
-  NAND _2102_ (
-    .A(_0213_),
-    .B(\VC0Fifo.memoria.Ram[2] [0]),
-    .Y(_0216_)
-  );
-  NAND _2103_ (
-    .A(_0216_),
-    .B(_0215_),
-    .Y(_1088_)
-  );
-  NAND _2104_ (
-    .A(_0214_),
-    .B(\VC0Fifo.Fifo_Data_in_int [1]),
-    .Y(_0217_)
-  );
-  NAND _2105_ (
-    .A(_0213_),
-    .B(\VC0Fifo.memoria.Ram[2] [1]),
-    .Y(_0218_)
-  );
-  NAND _2106_ (
-    .A(_0218_),
-    .B(_0217_),
-    .Y(_1090_)
-  );
-  NAND _2107_ (
-    .A(_0214_),
-    .B(\VC0Fifo.Fifo_Data_in_int [2]),
-    .Y(_0219_)
-  );
-  NAND _2108_ (
-    .A(_0213_),
-    .B(\VC0Fifo.memoria.Ram[2] [2]),
-    .Y(_0220_)
-  );
-  NAND _2109_ (
-    .A(_0220_),
-    .B(_0219_),
-    .Y(_1091_)
-  );
-  NAND _2110_ (
-    .A(_0214_),
-    .B(\VC0Fifo.Fifo_Data_in_int [3]),
-    .Y(_0222_)
-  );
-  NAND _2111_ (
-    .A(_0213_),
-    .B(\VC0Fifo.memoria.Ram[2] [3]),
-    .Y(_0223_)
-  );
-  NAND _2112_ (
-    .A(_0223_),
-    .B(_0222_),
-    .Y(_1093_)
-  );
-  NAND _2113_ (
-    .A(_0214_),
-    .B(\VC0Fifo.Fifo_Data_in_int [4]),
-    .Y(_0224_)
-  );
-  NAND _2114_ (
-    .A(_0213_),
-    .B(\VC0Fifo.memoria.Ram[2] [4]),
-    .Y(_0225_)
-  );
-  NAND _2115_ (
-    .A(_0225_),
-    .B(_0224_),
-    .Y(_1094_)
-  );
-  NAND _2116_ (
-    .A(_0214_),
-    .B(\VC0Fifo.Fifo_Data_in_int [5]),
-    .Y(_0226_)
-  );
-  NAND _2117_ (
-    .A(_0213_),
-    .B(\VC0Fifo.memoria.Ram[2] [5]),
-    .Y(_0227_)
-  );
-  NAND _2118_ (
-    .A(_0227_),
-    .B(_0226_),
-    .Y(_1096_)
-  );
-  NOR _2119_ (
-    .A(_0193_),
-    .B(_0150_),
-    .Y(_0229_)
-  );
-  NAND _2120_ (
-    .A(_0229_),
-    .B(_0154_),
-    .Y(_0230_)
-  );
-  NOT _2121_ (
-    .A(_0230_),
-    .Y(_0231_)
-  );
-  NAND _2122_ (
-    .A(_0231_),
-    .B(\VC0Fifo.Fifo_Data_in_int [0]),
-    .Y(_0232_)
-  );
-  NAND _2123_ (
-    .A(_0230_),
-    .B(\VC0Fifo.memoria.Ram[1] [0]),
-    .Y(_0233_)
-  );
-  NAND _2124_ (
-    .A(_0233_),
-    .B(_0232_),
-    .Y(_1098_)
-  );
-  NAND _2125_ (
-    .A(_0231_),
-    .B(\VC0Fifo.Fifo_Data_in_int [1]),
-    .Y(_0234_)
-  );
-  NAND _2126_ (
-    .A(_0230_),
-    .B(\VC0Fifo.memoria.Ram[1] [1]),
-    .Y(_0235_)
-  );
-  NAND _2127_ (
-    .A(_0235_),
-    .B(_0234_),
-    .Y(_1099_)
-  );
-  NAND _2128_ (
-    .A(_0231_),
-    .B(\VC0Fifo.Fifo_Data_in_int [2]),
-    .Y(_0236_)
-  );
-  NAND _2129_ (
-    .A(_0230_),
-    .B(\VC0Fifo.memoria.Ram[1] [2]),
-    .Y(_0237_)
-  );
-  NAND _2130_ (
-    .A(_0237_),
-    .B(_0236_),
-    .Y(_1101_)
-  );
-  NAND _2131_ (
-    .A(_0231_),
-    .B(\VC0Fifo.Fifo_Data_in_int [3]),
-    .Y(_0238_)
-  );
-  NAND _2132_ (
-    .A(_0230_),
-    .B(\VC0Fifo.memoria.Ram[1] [3]),
-    .Y(_0239_)
-  );
-  NAND _2133_ (
-    .A(_0239_),
-    .B(_0238_),
-    .Y(_1102_)
-  );
-  NAND _2134_ (
-    .A(_0231_),
-    .B(\VC0Fifo.Fifo_Data_in_int [4]),
-    .Y(_0240_)
-  );
-  NAND _2135_ (
-    .A(_0230_),
-    .B(\VC0Fifo.memoria.Ram[1] [4]),
-    .Y(_0241_)
-  );
-  NAND _2136_ (
-    .A(_0241_),
-    .B(_0240_),
-    .Y(_1104_)
-  );
-  NAND _2137_ (
-    .A(_0231_),
-    .B(\VC0Fifo.Fifo_Data_in_int [5]),
-    .Y(_0242_)
-  );
-  NAND _2138_ (
-    .A(_0230_),
-    .B(\VC0Fifo.memoria.Ram[1] [5]),
-    .Y(_0243_)
-  );
-  NAND _2139_ (
-    .A(_0243_),
-    .B(_0242_),
-    .Y(_1105_)
-  );
-  NAND _2140_ (
-    .A(_0211_),
-    .B(_0154_),
-    .Y(_0245_)
-  );
-  NOT _2141_ (
-    .A(_0245_),
-    .Y(_0246_)
-  );
-  NAND _2142_ (
-    .A(_0246_),
-    .B(\VC0Fifo.Fifo_Data_in_int [0]),
-    .Y(_0247_)
-  );
-  NAND _2143_ (
-    .A(_0245_),
-    .B(\VC0Fifo.memoria.Ram[0] [0]),
-    .Y(_0248_)
-  );
-  NAND _2144_ (
-    .A(_0248_),
-    .B(_0247_),
-    .Y(_1107_)
-  );
-  NAND _2145_ (
-    .A(_0246_),
-    .B(\VC0Fifo.Fifo_Data_in_int [1]),
-    .Y(_0249_)
-  );
-  NAND _2146_ (
-    .A(_0245_),
-    .B(\VC0Fifo.memoria.Ram[0] [1]),
-    .Y(_0250_)
-  );
-  NAND _2147_ (
-    .A(_0250_),
-    .B(_0249_),
-    .Y(_1109_)
-  );
-  NAND _2148_ (
-    .A(_0246_),
-    .B(\VC0Fifo.Fifo_Data_in_int [2]),
-    .Y(_0251_)
-  );
-  NAND _2149_ (
-    .A(_0245_),
-    .B(\VC0Fifo.memoria.Ram[0] [2]),
-    .Y(_0253_)
-  );
-  NAND _2150_ (
-    .A(_0253_),
-    .B(_0251_),
-    .Y(_1111_)
-  );
-  NAND _2151_ (
-    .A(_0246_),
-    .B(\VC0Fifo.Fifo_Data_in_int [3]),
-    .Y(_0254_)
-  );
-  NAND _2152_ (
-    .A(_0245_),
-    .B(\VC0Fifo.memoria.Ram[0] [3]),
-    .Y(_0255_)
-  );
-  NAND _2153_ (
-    .A(_0255_),
-    .B(_0254_),
-    .Y(_1113_)
-  );
-  NAND _2154_ (
-    .A(_0246_),
-    .B(\VC0Fifo.Fifo_Data_in_int [4]),
-    .Y(_0256_)
-  );
-  NAND _2155_ (
-    .A(_0245_),
-    .B(\VC0Fifo.memoria.Ram[0] [4]),
-    .Y(_0257_)
-  );
-  NAND _2156_ (
-    .A(_0257_),
-    .B(_0256_),
-    .Y(_1115_)
-  );
-  NAND _2157_ (
-    .A(_0246_),
-    .B(\VC0Fifo.Fifo_Data_in_int [5]),
-    .Y(_0258_)
-  );
-  NAND _2158_ (
-    .A(_0245_),
-    .B(\VC0Fifo.memoria.Ram[0] [5]),
-    .Y(_0259_)
-  );
-  NAND _2159_ (
-    .A(_0259_),
-    .B(_0258_),
-    .Y(_1117_)
-  );
-  NOR _2160_ (
-    .A(\VC1Fifo.pop ),
-    .B(\VC1Fifo.push ),
-    .Y(_0261_)
-  );
-  NOR _2161_ (
-    .A(_0261_),
-    .B(\VC1Fifo.num_mem [0]),
-    .Y(_0262_)
-  );
-  NOT _2162_ (
-    .A(\VC1Fifo.num_mem [0]),
-    .Y(_0263_)
-  );
-  NOT _2163_ (
-    .A(_0261_),
-    .Y(_0264_)
-  );
-  NOR _2164_ (
-    .A(_0264_),
-    .B(_0263_),
-    .Y(_0265_)
-  );
-  NOR _2165_ (
-    .A(_0265_),
-    .B(_0262_),
-    .Y(_0266_)
-  );
-  NOR _2166_ (
-    .A(_0266_),
-    .B(_0878_),
-    .Y(_1150_)
-  );
-  NAND _2167_ (
-    .A(\VC1Fifo.push ),
-    .B(\VC1Fifo.num_mem [0]),
-    .Y(_0267_)
-  );
-  NOT _2168_ (
-    .A(\VC1Fifo.pop ),
-    .Y(_0268_)
-  );
-  NOR _2169_ (
-    .A(_0268_),
-    .B(\VC1Fifo.push ),
-    .Y(_0270_)
-  );
-  NAND _2170_ (
-    .A(_0270_),
-    .B(_0263_),
-    .Y(_0271_)
-  );
-  NAND _2171_ (
-    .A(_0271_),
-    .B(_0267_),
-    .Y(_0272_)
-  );
-  NOR _2172_ (
-    .A(_0272_),
-    .B(\VC1Fifo.num_mem [1]),
-    .Y(_0273_)
-  );
-  NAND _2173_ (
-    .A(_0272_),
-    .B(\VC1Fifo.num_mem [1]),
-    .Y(_0274_)
-  );
-  NAND _2174_ (
-    .A(_0274_),
-    .B(reset_L),
-    .Y(_0275_)
-  );
-  NOR _2175_ (
-    .A(_0275_),
-    .B(_0273_),
-    .Y(_1152_)
-  );
-  NOT _2176_ (
-    .A(\VC1Fifo.num_mem [2]),
-    .Y(_0276_)
-  );
-  NOT _2177_ (
-    .A(\VC1Fifo.num_mem [1]),
-    .Y(_0277_)
-  );
-  NOR _2178_ (
-    .A(_0267_),
-    .B(_0277_),
-    .Y(_0278_)
-  );
-  NOT _2179_ (
-    .A(_0270_),
-    .Y(_0280_)
-  );
-  NOR _2180_ (
-    .A(\VC1Fifo.num_mem [1]),
-    .B(\VC1Fifo.num_mem [0]),
-    .Y(_0281_)
-  );
-  NOT _2181_ (
-    .A(_0281_),
-    .Y(_0282_)
-  );
-  NOR _2182_ (
-    .A(_0282_),
-    .B(_0280_),
-    .Y(_0283_)
-  );
-  NOR _2183_ (
-    .A(_0283_),
-    .B(_0278_),
-    .Y(_0284_)
-  );
-  NOR _2184_ (
-    .A(_0284_),
-    .B(_0276_),
-    .Y(_0285_)
-  );
-  NAND _2185_ (
-    .A(_0284_),
-    .B(_0276_),
-    .Y(_0286_)
-  );
-  NAND _2186_ (
-    .A(_0286_),
-    .B(reset_L),
-    .Y(_0287_)
-  );
-  NOR _2187_ (
-    .A(_0287_),
-    .B(_0285_),
-    .Y(_1154_)
-  );
-  NOT _2188_ (
-    .A(\VC1Fifo.memoria.iReadAddress [0]),
-    .Y(_0288_)
-  );
-  NOR _2189_ (
-    .A(_0280_),
-    .B(_0288_),
-    .Y(_0290_)
-  );
-  NAND _2190_ (
-    .A(_0280_),
-    .B(_0288_),
-    .Y(_0291_)
-  );
-  NAND _2191_ (
-    .A(_0291_),
-    .B(reset_L),
-    .Y(_0292_)
-  );
-  NOR _2192_ (
-    .A(_0292_),
-    .B(_0290_),
-    .Y(_1165_)
-  );
-  NAND _2193_ (
-    .A(_0290_),
-    .B(\VC1Fifo.memoria.iReadAddress [1]),
-    .Y(_0293_)
-  );
-  NOT _2194_ (
-    .A(\VC1Fifo.memoria.iReadAddress [1]),
-    .Y(_0294_)
-  );
-  NOT _2195_ (
-    .A(_0290_),
-    .Y(_0295_)
-  );
-  NAND _2196_ (
-    .A(_0295_),
-    .B(_0294_),
-    .Y(_0296_)
-  );
-  NAND _2197_ (
-    .A(_0296_),
-    .B(_0293_),
-    .Y(_0297_)
-  );
-  NOR _2198_ (
-    .A(_0297_),
-    .B(_0878_),
-    .Y(_1167_)
-  );
-  NOT _2199_ (
-    .A(\VC1Fifo.push ),
-    .Y(_0298_)
-  );
-  NOT _2200_ (
-    .A(\VC1Fifo.memoria.iWriteAddress [0]),
-    .Y(_0299_)
-  );
-  NOR _2201_ (
-    .A(_0299_),
-    .B(_0298_),
-    .Y(_0300_)
-  );
-  NAND _2202_ (
-    .A(_0299_),
-    .B(_0298_),
-    .Y(_0301_)
-  );
-  NAND _2203_ (
-    .A(_0301_),
-    .B(reset_L),
-    .Y(_0302_)
-  );
-  NOR _2204_ (
-    .A(_0302_),
-    .B(_0300_),
-    .Y(_1178_)
-  );
-  NOT _2205_ (
-    .A(\VC1Fifo.memoria.iWriteAddress [1]),
-    .Y(_0303_)
-  );
-  NOT _2206_ (
-    .A(_0300_),
-    .Y(_0304_)
-  );
-  NOR _2207_ (
-    .A(_0304_),
-    .B(_0303_),
-    .Y(_0305_)
-  );
-  NAND _2208_ (
-    .A(_0304_),
-    .B(_0303_),
-    .Y(_0306_)
-  );
-  NAND _2209_ (
-    .A(_0306_),
-    .B(reset_L),
-    .Y(_0308_)
-  );
-  NOR _2210_ (
-    .A(_0308_),
-    .B(_0305_),
-    .Y(_1180_)
-  );
-  NAND _2211_ (
-    .A(_0281_),
-    .B(\VC1Fifo.num_mem [2]),
-    .Y(_0309_)
-  );
-  NOR _2212_ (
-    .A(_0309_),
-    .B(_0298_),
-    .Y(_0310_)
-  );
-  NOR _2213_ (
-    .A(_0310_),
-    .B(Error_Fifo_VC1),
-    .Y(_0311_)
-  );
-  NOR _2214_ (
-    .A(_0311_),
-    .B(_0878_),
-    .Y(_1189_)
-  );
-  NAND _2215_ (
-    .A(_0309_),
-    .B(_0270_),
-    .Y(_0312_)
-  );
-  NOT _2216_ (
-    .A(_0312_),
-    .Y(_0313_)
-  );
-  NOR _2217_ (
-    .A(\VC1Fifo.num_mem [2]),
-    .B(_0263_),
-    .Y(_0314_)
-  );
-  NOR _2218_ (
-    .A(_0281_),
-    .B(Fifo_Empty_VC1),
-    .Y(_0315_)
-  );
-  NOR _2219_ (
-    .A(_0315_),
-    .B(_0314_),
-    .Y(_0317_)
-  );
-  NAND _2220_ (
-    .A(_0317_),
-    .B(_0313_),
-    .Y(_0318_)
-  );
-  NOR _2221_ (
-    .A(_0298_),
-    .B(_0276_),
-    .Y(_0319_)
-  );
-  NAND _2222_ (
-    .A(_0319_),
-    .B(_0282_),
-    .Y(_0320_)
-  );
-  NOR _2223_ (
-    .A(_0261_),
-    .B(_0878_),
-    .Y(_0321_)
-  );
-  NAND _2224_ (
-    .A(_0321_),
-    .B(_0320_),
-    .Y(_0322_)
-  );
-  NAND _2225_ (
-    .A(_0322_),
-    .B(_0876_),
-    .Y(_0323_)
-  );
-  NAND _2226_ (
-    .A(_0323_),
-    .B(_0318_),
-    .Y(_1198_)
-  );
-  NAND _2227_ (
-    .A(_0314_),
-    .B(\VC1Fifo.num_mem [1]),
-    .Y(_0324_)
-  );
-  NAND _2228_ (
-    .A(_0324_),
-    .B(_1316_),
-    .Y(_0325_)
-  );
-  NOR _2229_ (
-    .A(_0325_),
-    .B(_0281_),
-    .Y(_0327_)
-  );
-  NOR _2230_ (
-    .A(_0319_),
-    .B(_0278_),
-    .Y(_0328_)
-  );
-  NOR _2231_ (
-    .A(_0328_),
-    .B(_0327_),
-    .Y(_0329_)
-  );
-  NOR _2232_ (
-    .A(\VC1Fifo.num_mem [1]),
-    .B(\VC1Fifo.num_mem [2]),
-    .Y(_0330_)
-  );
-  NOR _2233_ (
-    .A(_0330_),
-    .B(_0312_),
-    .Y(_0331_)
-  );
-  NAND _2234_ (
-    .A(_0331_),
-    .B(_0325_),
-    .Y(_0332_)
-  );
-  NAND _2235_ (
-    .A(_0261_),
-    .B(Pausa_VC1),
-    .Y(_0333_)
-  );
-  NAND _2236_ (
-    .A(_0333_),
-    .B(_0332_),
-    .Y(_0334_)
-  );
-  NOR _2237_ (
-    .A(_0334_),
-    .B(_0329_),
-    .Y(_0335_)
-  );
-  NOR _2238_ (
-    .A(_0335_),
-    .B(_0878_),
-    .Y(_1207_)
-  );
-  NAND _2239_ (
-    .A(\VC1Fifo.Fifo_Data_in [0]),
-    .B(reset_L),
-    .Y(_0337_)
-  );
-  NOT _2240_ (
-    .A(_0337_),
-    .Y(_1210_)
-  );
-  NOT _2241_ (
-    .A(\VC1Fifo.Fifo_Data_in [1]),
-    .Y(_0338_)
-  );
-  NOR _2242_ (
-    .A(_0338_),
-    .B(_0878_),
-    .Y(_1212_)
-  );
-  NOT _2243_ (
-    .A(\VC1Fifo.Fifo_Data_in [2]),
-    .Y(_0339_)
-  );
-  NOR _2244_ (
-    .A(_0339_),
-    .B(_0878_),
-    .Y(_1215_)
-  );
-  NOT _2245_ (
-    .A(\VC1Fifo.Fifo_Data_in [3]),
-    .Y(_0340_)
-  );
-  NOR _2246_ (
-    .A(_0340_),
-    .B(_0878_),
-    .Y(_1218_)
-  );
-  NAND _2247_ (
-    .A(\VC1Fifo.Fifo_Data_in [4]),
-    .B(reset_L),
-    .Y(_0341_)
-  );
-  NOT _2248_ (
-    .A(_0341_),
-    .Y(_1220_)
-  );
-  NOT _2249_ (
-    .A(\VC1Fifo.Fifo_Data_in [5]),
-    .Y(_0343_)
-  );
-  NOR _2250_ (
-    .A(_0343_),
-    .B(_0878_),
-    .Y(_1222_)
-  );
-  NOR _2251_ (
-    .A(_0298_),
-    .B(_0878_),
-    .Y(_1224_)
-  );
-  NOR _2252_ (
-    .A(_0268_),
-    .B(_0878_),
-    .Y(_1226_)
-  );
-  NOT _2253_ (
-    .A(\VC1Fifo.memoria.iWriteEnable ),
-    .Y(_0344_)
-  );
-  NOR _2254_ (
-    .A(_0344_),
-    .B(_0303_),
-    .Y(_0345_)
-  );
-  NAND _2255_ (
-    .A(_0345_),
-    .B(\VC1Fifo.memoria.iWriteAddress [0]),
-    .Y(_0346_)
-  );
-  NOT _2256_ (
-    .A(_0346_),
-    .Y(_0347_)
-  );
-  NAND _2257_ (
-    .A(_0347_),
-    .B(\VC1Fifo.Fifo_Data_in_int [0]),
-    .Y(_0348_)
-  );
-  NAND _2258_ (
-    .A(_0346_),
-    .B(\VC1Fifo.memoria.Ram[3] [0]),
-    .Y(_0349_)
-  );
-  NAND _2259_ (
-    .A(_0349_),
-    .B(_0348_),
-    .Y(_1274_)
-  );
-  NAND _2260_ (
-    .A(_0347_),
-    .B(\VC1Fifo.Fifo_Data_in_int [1]),
-    .Y(_0351_)
-  );
-  NAND _2261_ (
-    .A(_0346_),
-    .B(\VC1Fifo.memoria.Ram[3] [1]),
-    .Y(_0352_)
-  );
-  NAND _2262_ (
-    .A(_0352_),
-    .B(_0351_),
-    .Y(_1276_)
-  );
-  NAND _2263_ (
-    .A(_0347_),
-    .B(\VC1Fifo.Fifo_Data_in_int [2]),
-    .Y(_0353_)
-  );
-  NAND _2264_ (
-    .A(_0346_),
-    .B(\VC1Fifo.memoria.Ram[3] [2]),
-    .Y(_0354_)
-  );
-  NAND _2265_ (
-    .A(_0354_),
-    .B(_0353_),
-    .Y(_1277_)
-  );
-  NAND _2266_ (
-    .A(_0347_),
-    .B(\VC1Fifo.Fifo_Data_in_int [3]),
-    .Y(_0355_)
-  );
-  NAND _2267_ (
-    .A(_0346_),
-    .B(\VC1Fifo.memoria.Ram[3] [3]),
-    .Y(_0356_)
-  );
-  NAND _2268_ (
-    .A(_0356_),
-    .B(_0355_),
-    .Y(_1279_)
-  );
-  NAND _2269_ (
-    .A(_0347_),
-    .B(\VC1Fifo.Fifo_Data_in_int [4]),
-    .Y(_0357_)
-  );
-  NAND _2270_ (
-    .A(_0346_),
-    .B(\VC1Fifo.memoria.Ram[3] [4]),
-    .Y(_0358_)
-  );
-  NAND _2271_ (
-    .A(_0358_),
-    .B(_0357_),
-    .Y(_1281_)
-  );
-  NAND _2272_ (
-    .A(_0347_),
-    .B(\VC1Fifo.Fifo_Data_in_int [5]),
-    .Y(_0359_)
-  );
-  NAND _2273_ (
-    .A(_0346_),
-    .B(\VC1Fifo.memoria.Ram[3] [5]),
-    .Y(_0360_)
-  );
-  NAND _2274_ (
-    .A(_0360_),
-    .B(_0359_),
-    .Y(_1282_)
-  );
-  NOR _2275_ (
-    .A(_0344_),
-    .B(\VC1Fifo.memoria.iWriteAddress [0]),
-    .Y(_0361_)
-  );
-  NAND _2276_ (
-    .A(_0361_),
-    .B(\VC1Fifo.memoria.iWriteAddress [1]),
-    .Y(_0362_)
-  );
-  NOT _2277_ (
-    .A(_0362_),
-    .Y(_0363_)
-  );
-  NAND _2278_ (
-    .A(_0363_),
-    .B(\VC1Fifo.Fifo_Data_in_int [0]),
-    .Y(_0364_)
-  );
-  NAND _2279_ (
-    .A(_0362_),
-    .B(\VC1Fifo.memoria.Ram[2] [0]),
-    .Y(_0366_)
-  );
-  NAND _2280_ (
-    .A(_0366_),
-    .B(_0364_),
-    .Y(_1285_)
-  );
-  NAND _2281_ (
-    .A(_0363_),
-    .B(\VC1Fifo.Fifo_Data_in_int [1]),
-    .Y(_0367_)
-  );
-  NAND _2282_ (
-    .A(_0362_),
-    .B(\VC1Fifo.memoria.Ram[2] [1]),
-    .Y(_0368_)
-  );
-  NAND _2283_ (
-    .A(_0368_),
-    .B(_0367_),
-    .Y(_1287_)
-  );
-  NAND _2284_ (
-    .A(_0363_),
-    .B(\VC1Fifo.Fifo_Data_in_int [2]),
-    .Y(_0369_)
-  );
-  NAND _2285_ (
-    .A(_0362_),
-    .B(\VC1Fifo.memoria.Ram[2] [2]),
-    .Y(_0370_)
-  );
-  NAND _2286_ (
-    .A(_0370_),
-    .B(_0369_),
-    .Y(_1289_)
-  );
-  NAND _2287_ (
-    .A(_0363_),
-    .B(\VC1Fifo.Fifo_Data_in_int [3]),
-    .Y(_0371_)
-  );
-  NAND _2288_ (
-    .A(_0362_),
-    .B(\VC1Fifo.memoria.Ram[2] [3]),
-    .Y(_0372_)
-  );
-  NAND _2289_ (
-    .A(_0372_),
-    .B(_0371_),
-    .Y(_1291_)
-  );
-  NAND _2290_ (
-    .A(_0363_),
-    .B(\VC1Fifo.Fifo_Data_in_int [4]),
-    .Y(_0374_)
-  );
-  NAND _2291_ (
-    .A(_0362_),
-    .B(\VC1Fifo.memoria.Ram[2] [4]),
-    .Y(_0375_)
-  );
-  NAND _2292_ (
-    .A(_0375_),
-    .B(_0374_),
-    .Y(_1293_)
-  );
-  NAND _2293_ (
-    .A(_0363_),
-    .B(\VC1Fifo.Fifo_Data_in_int [5]),
-    .Y(_0376_)
-  );
-  NAND _2294_ (
-    .A(_0362_),
-    .B(\VC1Fifo.memoria.Ram[2] [5]),
-    .Y(_0377_)
-  );
-  NAND _2295_ (
-    .A(_0377_),
-    .B(_0376_),
-    .Y(_1294_)
-  );
-  NOR _2296_ (
-    .A(_0344_),
-    .B(_0299_),
-    .Y(_0378_)
-  );
-  NAND _2297_ (
-    .A(_0378_),
-    .B(_0303_),
-    .Y(_0379_)
-  );
-  NOT _2298_ (
-    .A(_0379_),
-    .Y(_0380_)
-  );
-  NAND _2299_ (
-    .A(_0380_),
-    .B(\VC1Fifo.Fifo_Data_in_int [0]),
-    .Y(_0382_)
-  );
-  NAND _2300_ (
-    .A(_0379_),
-    .B(\VC1Fifo.memoria.Ram[1] [0]),
-    .Y(_0383_)
-  );
-  NAND _2301_ (
-    .A(_0383_),
-    .B(_0382_),
-    .Y(_1297_)
-  );
-  NAND _2302_ (
-    .A(_0380_),
-    .B(\VC1Fifo.Fifo_Data_in_int [1]),
-    .Y(_0384_)
-  );
-  NAND _2303_ (
-    .A(_0379_),
-    .B(\VC1Fifo.memoria.Ram[1] [1]),
-    .Y(_0385_)
-  );
-  NAND _2304_ (
-    .A(_0385_),
-    .B(_0384_),
-    .Y(_1298_)
-  );
-  NAND _2305_ (
-    .A(_0380_),
-    .B(\VC1Fifo.Fifo_Data_in_int [2]),
-    .Y(_0386_)
-  );
-  NAND _2306_ (
-    .A(_0379_),
-    .B(\VC1Fifo.memoria.Ram[1] [2]),
-    .Y(_0387_)
-  );
-  NAND _2307_ (
-    .A(_0387_),
-    .B(_0386_),
-    .Y(_1300_)
-  );
-  NAND _2308_ (
-    .A(_0380_),
-    .B(\VC1Fifo.Fifo_Data_in_int [3]),
-    .Y(_0388_)
-  );
-  NAND _2309_ (
-    .A(_0379_),
-    .B(\VC1Fifo.memoria.Ram[1] [3]),
-    .Y(_0390_)
-  );
-  NAND _2310_ (
-    .A(_0390_),
-    .B(_0388_),
-    .Y(_1302_)
-  );
-  NAND _2311_ (
-    .A(_0380_),
-    .B(\VC1Fifo.Fifo_Data_in_int [4]),
-    .Y(_0391_)
-  );
-  NAND _2312_ (
-    .A(_0379_),
-    .B(\VC1Fifo.memoria.Ram[1] [4]),
-    .Y(_0392_)
-  );
-  NAND _2313_ (
-    .A(_0392_),
-    .B(_0391_),
-    .Y(_1303_)
-  );
-  NAND _2314_ (
-    .A(_0380_),
-    .B(\VC1Fifo.Fifo_Data_in_int [5]),
-    .Y(_0393_)
-  );
-  NAND _2315_ (
-    .A(_0379_),
-    .B(\VC1Fifo.memoria.Ram[1] [5]),
-    .Y(_0394_)
-  );
-  NAND _2316_ (
-    .A(_0394_),
-    .B(_0393_),
-    .Y(_1305_)
-  );
-  NAND _2317_ (
-    .A(_0361_),
-    .B(_0303_),
-    .Y(_0395_)
-  );
-  NOT _2318_ (
-    .A(_0395_),
-    .Y(_0396_)
-  );
-  NAND _2319_ (
-    .A(_0396_),
-    .B(\VC1Fifo.Fifo_Data_in_int [0]),
-    .Y(_0398_)
-  );
-  NAND _2320_ (
-    .A(_0395_),
-    .B(\VC1Fifo.memoria.Ram[0] [0]),
-    .Y(_0399_)
-  );
-  NAND _2321_ (
-    .A(_0399_),
-    .B(_0398_),
-    .Y(_1307_)
-  );
-  NAND _2322_ (
-    .A(_0396_),
-    .B(\VC1Fifo.Fifo_Data_in_int [1]),
-    .Y(_0400_)
-  );
-  NAND _2323_ (
-    .A(_0395_),
-    .B(\VC1Fifo.memoria.Ram[0] [1]),
-    .Y(_0401_)
-  );
-  NAND _2324_ (
-    .A(_0401_),
-    .B(_0400_),
-    .Y(_1308_)
-  );
-  NAND _2325_ (
-    .A(_0396_),
-    .B(\VC1Fifo.Fifo_Data_in_int [2]),
-    .Y(_0402_)
-  );
-  NAND _2326_ (
-    .A(_0395_),
-    .B(\VC1Fifo.memoria.Ram[0] [2]),
-    .Y(_0403_)
-  );
-  NAND _2327_ (
-    .A(_0403_),
-    .B(_0402_),
-    .Y(_1310_)
-  );
-  NAND _2328_ (
-    .A(_0396_),
-    .B(\VC1Fifo.Fifo_Data_in_int [3]),
-    .Y(_0404_)
-  );
-  NAND _2329_ (
-    .A(_0395_),
-    .B(\VC1Fifo.memoria.Ram[0] [3]),
-    .Y(_0406_)
-  );
-  NAND _2330_ (
-    .A(_0406_),
-    .B(_0404_),
-    .Y(_1312_)
-  );
-  NAND _2331_ (
-    .A(_0396_),
-    .B(\VC1Fifo.Fifo_Data_in_int [4]),
-    .Y(_0407_)
-  );
-  NAND _2332_ (
-    .A(_0395_),
-    .B(\VC1Fifo.memoria.Ram[0] [4]),
-    .Y(_0408_)
-  );
-  NAND _2333_ (
-    .A(_0408_),
-    .B(_0407_),
-    .Y(_1313_)
-  );
-  NAND _2334_ (
-    .A(_0396_),
-    .B(\VC1Fifo.Fifo_Data_in_int [5]),
-    .Y(_0409_)
-  );
-  NAND _2335_ (
-    .A(_0395_),
-    .B(\VC1Fifo.memoria.Ram[0] [5]),
-    .Y(_0410_)
-  );
-  NAND _2336_ (
-    .A(_0410_),
-    .B(_0409_),
-    .Y(_1315_)
-  );
-  NOT _2337_ (
-    .A(\MainFifo.memoria.Ram[3] [5]),
-    .Y(_0411_)
-  );
-  NOR _2338_ (
-    .A(_0411_),
-    .B(_1347_),
-    .Y(_0412_)
-  );
-  NOT _2339_ (
-    .A(\MainFifo.memoria.Ram[2] [5]),
-    .Y(_0413_)
-  );
-  NOR _2340_ (
-    .A(_0413_),
-    .B(\MainFifo.memoria.iReadAddress [0]),
-    .Y(_0414_)
-  );
-  NOR _2341_ (
-    .A(_0414_),
-    .B(_0412_),
-    .Y(_0415_)
-  );
-  NOR _2342_ (
-    .A(_0415_),
-    .B(_1356_),
-    .Y(_0416_)
-  );
-  NOT _2343_ (
-    .A(\MainFifo.memoria.Ram[1] [5]),
-    .Y(_0417_)
-  );
-  NOR _2344_ (
-    .A(_0417_),
-    .B(_1347_),
-    .Y(_0418_)
-  );
-  NOT _2345_ (
-    .A(\MainFifo.memoria.Ram[0] [5]),
-    .Y(_0419_)
-  );
-  NOR _2346_ (
-    .A(_0419_),
-    .B(\MainFifo.memoria.iReadAddress [0]),
-    .Y(_0420_)
-  );
-  NOR _2347_ (
-    .A(_0420_),
-    .B(_0418_),
-    .Y(_0421_)
-  );
-  NOR _2348_ (
-    .A(_0421_),
-    .B(\MainFifo.memoria.iReadAddress [1]),
-    .Y(_0422_)
-  );
-  NOR _2349_ (
-    .A(_0422_),
-    .B(_0416_),
-    .Y(_0423_)
-  );
-  NOT _2350_ (
-    .A(\MainFifo.memoria.iReadEnable ),
-    .Y(_0424_)
-  );
-  NOR _2351_ (
-    .A(_0424_),
-    .B(_0878_),
-    .Y(_0425_)
-  );
-  NOT _2352_ (
-    .A(_0425_),
-    .Y(_0426_)
-  );
-  NOR _2353_ (
-    .A(_0426_),
-    .B(_0423_),
-    .Y(_1324_)
-  );
-  NAND _2354_ (
-    .A(_0425_),
-    .B(_0423_),
-    .Y(_0427_)
-  );
-  NOT _2355_ (
-    .A(_0427_),
-    .Y(_1328_)
-  );
-  NAND _2356_ (
-    .A(_1328_),
-    .B(\VC1Fifo.Fifo_Data_in [0]),
-    .Y(_0428_)
-  );
-  NAND _2357_ (
-    .A(\MainFifo.memoria.Ram[2] [5]),
-    .B(_1347_),
-    .Y(_0429_)
-  );
-  NAND _2358_ (
-    .A(_0429_),
-    .B(\MainFifo.memoria.iReadAddress [1]),
-    .Y(_0430_)
-  );
-  NOR _2359_ (
-    .A(_0430_),
-    .B(_0412_),
-    .Y(_0431_)
-  );
-  NAND _2360_ (
-    .A(\MainFifo.memoria.Ram[1] [5]),
-    .B(\MainFifo.memoria.iReadAddress [0]),
-    .Y(_0432_)
-  );
-  NAND _2361_ (
-    .A(\MainFifo.memoria.Ram[0] [5]),
-    .B(_1347_),
-    .Y(_0433_)
-  );
-  NAND _2362_ (
-    .A(_0433_),
-    .B(_0432_),
-    .Y(_0434_)
-  );
-  NOR _2363_ (
-    .A(_0434_),
-    .B(\MainFifo.memoria.iReadAddress [1]),
-    .Y(_0435_)
-  );
-  NOR _2364_ (
-    .A(_0435_),
-    .B(_0431_),
-    .Y(_0436_)
-  );
-  NAND _2365_ (
-    .A(_0425_),
-    .B(_0436_),
-    .Y(_0437_)
-  );
-  NAND _2366_ (
-    .A(\MainFifo.memoria.Ram[3] [0]),
-    .B(\MainFifo.memoria.iReadAddress [0]),
-    .Y(_0438_)
-  );
-  NOT _2367_ (
-    .A(\MainFifo.memoria.Ram[2] [0]),
-    .Y(_0439_)
-  );
-  NOR _2368_ (
-    .A(_0439_),
-    .B(\MainFifo.memoria.iReadAddress [0]),
-    .Y(_0440_)
-  );
-  NOR _2369_ (
-    .A(_0440_),
-    .B(_1356_),
-    .Y(_0441_)
-  );
-  NAND _2370_ (
-    .A(_0441_),
-    .B(_0438_),
-    .Y(_0442_)
-  );
-  NOT _2371_ (
-    .A(\MainFifo.memoria.Ram[1] [0]),
-    .Y(_0443_)
-  );
-  NOR _2372_ (
-    .A(_0443_),
-    .B(_1347_),
     .Y(_0444_)
   );
-  NOT _2373_ (
-    .A(\MainFifo.memoria.Ram[0] [0]),
-    .Y(_0445_)
+  NOR _1487_ (
+    .A(_0897_),
+    .B(\MainFifo.num_mem [2]),
+    .Y(_0938_)
   );
-  NOR _2374_ (
-    .A(_0445_),
-    .B(\MainFifo.memoria.iReadAddress [0]),
+  NOR _1488_ (
+    .A(_0898_),
+    .B(Pausa_MF),
+    .Y(_0940_)
+  );
+  NOR _1489_ (
+    .A(_0940_),
+    .B(_0896_),
+    .Y(_0942_)
+  );
+  NOR _1490_ (
+    .A(_0942_),
+    .B(_0938_),
+    .Y(_0944_)
+  );
+  NOR _1491_ (
+    .A(_0944_),
+    .B(_0889_),
+    .Y(_0946_)
+  );
+  NOR _1492_ (
+    .A(\MainFifo.num_mem [1]),
+    .B(\MainFifo.num_mem [2]),
+    .Y(_0948_)
+  );
+  NOR _1493_ (
+    .A(_0948_),
+    .B(_0898_),
+    .Y(_0950_)
+  );
+  NOR _1494_ (
+    .A(_0938_),
+    .B(Pausa_MF),
+    .Y(_0951_)
+  );
+  NOR _1495_ (
+    .A(_0951_),
+    .B(_0890_),
+    .Y(_0952_)
+  );
+  NAND _1496_ (
+    .A(_0952_),
+    .B(_0950_),
+    .Y(_0953_)
+  );
+  NAND _1497_ (
+    .A(_0865_),
+    .B(Pausa_MF),
+    .Y(_0954_)
+  );
+  NAND _1498_ (
+    .A(_0954_),
+    .B(_0953_),
+    .Y(_0955_)
+  );
+  NOR _1499_ (
+    .A(_0955_),
+    .B(_0946_),
+    .Y(_0956_)
+  );
+  NOR _1500_ (
+    .A(_0956_),
+    .B(_0451_),
     .Y(_0446_)
   );
-  NOR _2375_ (
-    .A(_0446_),
-    .B(_0444_),
-    .Y(_0447_)
+  NAND _1501_ (
+    .A(_0926_),
+    .B(data_in_principal[0]),
+    .Y(_0957_)
   );
-  NAND _2376_ (
-    .A(_0447_),
-    .B(_1356_),
-    .Y(_0448_)
+  NOT _1502_ (
+    .A(_0926_),
+    .Y(_0958_)
   );
-  NAND _2377_ (
-    .A(_0448_),
-    .B(_0442_),
-    .Y(_0449_)
+  NAND _1503_ (
+    .A(_0958_),
+    .B(\MainFifo.memoria.Ram[3] [0]),
+    .Y(_0959_)
   );
-  NOR _2378_ (
-    .A(_0449_),
-    .B(_0437_),
-    .Y(_0450_)
-  );
-  NOR _2379_ (
-    .A(_0298_),
-    .B(\MainFifo.memoria.iReadEnable ),
-    .Y(_0451_)
-  );
-  NOT _2380_ (
-    .A(_0451_),
-    .Y(_0452_)
-  );
-  NOR _2381_ (
-    .A(_0452_),
-    .B(_0337_),
-    .Y(_0453_)
-  );
-  NOR _2382_ (
-    .A(_0453_),
-    .B(_0450_),
-    .Y(_0454_)
-  );
-  NAND _2383_ (
-    .A(_0454_),
-    .B(_0428_),
-    .Y(_1346_)
-  );
-  NOT _2384_ (
-    .A(\MainFifo.memoria.Ram[3] [1]),
-    .Y(_0455_)
-  );
-  NOR _2385_ (
-    .A(_0455_),
-    .B(_1347_),
-    .Y(_0456_)
-  );
-  NAND _2386_ (
-    .A(\MainFifo.memoria.Ram[2] [1]),
-    .B(_1347_),
-    .Y(_0457_)
-  );
-  NAND _2387_ (
-    .A(_0457_),
-    .B(\MainFifo.memoria.iReadAddress [1]),
-    .Y(_0458_)
-  );
-  NOR _2388_ (
-    .A(_0458_),
-    .B(_0456_),
-    .Y(_0459_)
-  );
-  NAND _2389_ (
-    .A(\MainFifo.memoria.Ram[1] [1]),
-    .B(\MainFifo.memoria.iReadAddress [0]),
-    .Y(_0460_)
-  );
-  NAND _2390_ (
-    .A(\MainFifo.memoria.Ram[0] [1]),
-    .B(_1347_),
-    .Y(_0461_)
-  );
-  NAND _2391_ (
-    .A(_0461_),
-    .B(_0460_),
-    .Y(_0462_)
-  );
-  NOR _2392_ (
-    .A(_0462_),
-    .B(\MainFifo.memoria.iReadAddress [1]),
-    .Y(_0463_)
-  );
-  NOR _2393_ (
-    .A(_0463_),
-    .B(_0459_),
-    .Y(_0464_)
-  );
-  NAND _2394_ (
-    .A(_0464_),
-    .B(_1324_),
-    .Y(_0465_)
-  );
-  NOT _2395_ (
-    .A(_1212_),
-    .Y(_0466_)
-  );
-  NOR _2396_ (
-    .A(_0452_),
-    .B(_0466_),
-    .Y(_0467_)
-  );
-  NOR _2397_ (
-    .A(_0427_),
-    .B(_0338_),
-    .Y(_0468_)
-  );
-  NOR _2398_ (
-    .A(_0468_),
-    .B(_0467_),
-    .Y(_0469_)
-  );
-  NAND _2399_ (
-    .A(_0469_),
-    .B(_0465_),
-    .Y(_1348_)
-  );
-  NAND _2400_ (
-    .A(_0451_),
-    .B(_1215_),
-    .Y(_0470_)
-  );
-  NAND _2401_ (
-    .A(\MainFifo.memoria.Ram[3] [2]),
-    .B(\MainFifo.memoria.iReadAddress [0]),
-    .Y(_0471_)
-  );
-  NOT _2402_ (
-    .A(\MainFifo.memoria.Ram[2] [2]),
-    .Y(_0472_)
-  );
-  NOR _2403_ (
-    .A(_0472_),
-    .B(\MainFifo.memoria.iReadAddress [0]),
-    .Y(_0473_)
-  );
-  NOR _2404_ (
-    .A(_0473_),
-    .B(_1356_),
-    .Y(_0474_)
-  );
-  NAND _2405_ (
-    .A(_0474_),
-    .B(_0471_),
-    .Y(_0475_)
-  );
-  NOT _2406_ (
-    .A(\MainFifo.memoria.Ram[1] [2]),
-    .Y(_0476_)
-  );
-  NOR _2407_ (
-    .A(_0476_),
-    .B(_1347_),
+  NAND _1504_ (
+    .A(_0959_),
+    .B(_0957_),
     .Y(_0477_)
   );
-  NOT _2408_ (
-    .A(\MainFifo.memoria.Ram[0] [2]),
-    .Y(_0478_)
+  NAND _1505_ (
+    .A(_0926_),
+    .B(data_in_principal[1]),
+    .Y(_0960_)
   );
-  NOR _2409_ (
-    .A(_0478_),
-    .B(\MainFifo.memoria.iReadAddress [0]),
+  NAND _1506_ (
+    .A(_0958_),
+    .B(\MainFifo.memoria.Ram[3] [1]),
+    .Y(_0961_)
+  );
+  NAND _1507_ (
+    .A(_0961_),
+    .B(_0960_),
     .Y(_0479_)
   );
-  NOR _2410_ (
-    .A(_0479_),
-    .B(_0477_),
-    .Y(_0480_)
+  NAND _1508_ (
+    .A(_0926_),
+    .B(data_in_principal[2]),
+    .Y(_0962_)
   );
-  NAND _2411_ (
-    .A(_0480_),
-    .B(_1356_),
+  NAND _1509_ (
+    .A(_0958_),
+    .B(\MainFifo.memoria.Ram[3] [2]),
+    .Y(_0963_)
+  );
+  NAND _1510_ (
+    .A(_0963_),
+    .B(_0962_),
     .Y(_0481_)
   );
-  NAND _2412_ (
-    .A(_0481_),
-    .B(_0475_),
-    .Y(_0482_)
+  NAND _1511_ (
+    .A(_0926_),
+    .B(data_in_principal[3]),
+    .Y(_0964_)
   );
-  NAND _2413_ (
-    .A(_0482_),
-    .B(_1324_),
+  NAND _1512_ (
+    .A(_0958_),
+    .B(\MainFifo.memoria.Ram[3] [3]),
+    .Y(_0965_)
+  );
+  NAND _1513_ (
+    .A(_0965_),
+    .B(_0964_),
     .Y(_0483_)
   );
-  NOR _2414_ (
-    .A(_0436_),
-    .B(\VC1Fifo.Fifo_Data_in [2]),
-    .Y(_0484_)
+  NAND _1514_ (
+    .A(_0926_),
+    .B(data_in_principal[4]),
+    .Y(_0966_)
   );
-  NOR _2415_ (
-    .A(_0484_),
-    .B(_0426_),
+  NAND _1515_ (
+    .A(_0958_),
+    .B(\MainFifo.memoria.Ram[3] [4]),
+    .Y(_0967_)
+  );
+  NAND _1516_ (
+    .A(_0967_),
+    .B(_0966_),
     .Y(_0485_)
   );
-  NAND _2416_ (
-    .A(_0485_),
-    .B(_0483_),
-    .Y(_0486_)
+  NAND _1517_ (
+    .A(_0926_),
+    .B(data_in_principal[5]),
+    .Y(_0968_)
   );
-  NAND _2417_ (
-    .A(_0486_),
-    .B(_0470_),
-    .Y(_1350_)
+  NAND _1518_ (
+    .A(_0958_),
+    .B(\MainFifo.memoria.Ram[3] [5]),
+    .Y(_0969_)
   );
-  NAND _2418_ (
-    .A(_0451_),
-    .B(_1218_),
+  NAND _1519_ (
+    .A(_0969_),
+    .B(_0968_),
     .Y(_0487_)
   );
-  NAND _2419_ (
-    .A(\MainFifo.memoria.Ram[3] [3]),
-    .B(\MainFifo.memoria.iReadAddress [0]),
-    .Y(_0488_)
+  NOR _1520_ (
+    .A(\MainFifo.memoria.iWriteAddress [0]),
+    .B(_0889_),
+    .Y(_0970_)
   );
-  NOT _2420_ (
-    .A(\MainFifo.memoria.Ram[2] [3]),
-    .Y(_0489_)
+  NOT _1521_ (
+    .A(_0970_),
+    .Y(_0971_)
   );
-  NOR _2421_ (
-    .A(_0489_),
-    .B(\MainFifo.memoria.iReadAddress [0]),
+  NOR _1522_ (
+    .A(_0971_),
+    .B(_0925_),
+    .Y(_0972_)
+  );
+  NAND _1523_ (
+    .A(_0972_),
+    .B(data_in_principal[0]),
+    .Y(_0973_)
+  );
+  NOT _1524_ (
+    .A(_0972_),
+    .Y(_0974_)
+  );
+  NAND _1525_ (
+    .A(_0974_),
+    .B(\MainFifo.memoria.Ram[2] [0]),
+    .Y(_0975_)
+  );
+  NAND _1526_ (
+    .A(_0975_),
+    .B(_0973_),
     .Y(_0490_)
   );
-  NOR _2422_ (
-    .A(_0490_),
-    .B(_1356_),
-    .Y(_0491_)
+  NAND _1527_ (
+    .A(_0972_),
+    .B(data_in_principal[1]),
+    .Y(_0976_)
   );
-  NAND _2423_ (
-    .A(_0491_),
-    .B(_0488_),
+  NAND _1528_ (
+    .A(_0974_),
+    .B(\MainFifo.memoria.Ram[2] [1]),
+    .Y(_0977_)
+  );
+  NAND _1529_ (
+    .A(_0977_),
+    .B(_0976_),
     .Y(_0492_)
   );
-  NOT _2424_ (
-    .A(\MainFifo.memoria.Ram[1] [3]),
-    .Y(_0493_)
+  NAND _1530_ (
+    .A(_0972_),
+    .B(data_in_principal[2]),
+    .Y(_0978_)
   );
-  NOR _2425_ (
-    .A(_0493_),
-    .B(_1347_),
+  NAND _1531_ (
+    .A(_0974_),
+    .B(\MainFifo.memoria.Ram[2] [2]),
+    .Y(_0979_)
+  );
+  NAND _1532_ (
+    .A(_0979_),
+    .B(_0978_),
     .Y(_0494_)
   );
-  NOT _2426_ (
-    .A(\MainFifo.memoria.Ram[0] [3]),
-    .Y(_0495_)
+  NAND _1533_ (
+    .A(_0972_),
+    .B(data_in_principal[3]),
+    .Y(_0980_)
   );
-  NOR _2427_ (
-    .A(_0495_),
-    .B(\MainFifo.memoria.iReadAddress [0]),
+  NAND _1534_ (
+    .A(_0974_),
+    .B(\MainFifo.memoria.Ram[2] [3]),
+    .Y(_0981_)
+  );
+  NAND _1535_ (
+    .A(_0981_),
+    .B(_0980_),
     .Y(_0496_)
   );
-  NOR _2428_ (
-    .A(_0496_),
-    .B(_0494_),
-    .Y(_0497_)
+  NAND _1536_ (
+    .A(_0972_),
+    .B(data_in_principal[4]),
+    .Y(_0982_)
   );
-  NAND _2429_ (
-    .A(_0497_),
-    .B(_1356_),
+  NAND _1537_ (
+    .A(_0974_),
+    .B(\MainFifo.memoria.Ram[2] [4]),
+    .Y(_0983_)
+  );
+  NAND _1538_ (
+    .A(_0983_),
+    .B(_0982_),
     .Y(_0498_)
   );
-  NAND _2430_ (
-    .A(_0498_),
-    .B(_0492_),
+  NAND _1539_ (
+    .A(_0972_),
+    .B(data_in_principal[5]),
+    .Y(_0984_)
+  );
+  NAND _1540_ (
+    .A(_0974_),
+    .B(\MainFifo.memoria.Ram[2] [5]),
+    .Y(_0985_)
+  );
+  NAND _1541_ (
+    .A(_0985_),
+    .B(_0984_),
     .Y(_0499_)
   );
-  NAND _2431_ (
-    .A(_0499_),
-    .B(_1324_),
-    .Y(_0500_)
+  NOR _1542_ (
+    .A(_0916_),
+    .B(\MainFifo.memoria.iWriteAddress [1]),
+    .Y(_0986_)
   );
-  NOR _2432_ (
-    .A(_0436_),
-    .B(\VC1Fifo.Fifo_Data_in [3]),
-    .Y(_0501_)
+  NAND _1543_ (
+    .A(_0986_),
+    .B(data_in_principal[0]),
+    .Y(_0987_)
   );
-  NOR _2433_ (
-    .A(_0501_),
-    .B(_0426_),
+  NOT _1544_ (
+    .A(_0986_),
+    .Y(_0988_)
+  );
+  NAND _1545_ (
+    .A(_0988_),
+    .B(\MainFifo.memoria.Ram[1] [0]),
+    .Y(_0989_)
+  );
+  NAND _1546_ (
+    .A(_0989_),
+    .B(_0987_),
     .Y(_0502_)
   );
-  NAND _2434_ (
-    .A(_0502_),
-    .B(_0500_),
-    .Y(_0503_)
+  NAND _1547_ (
+    .A(_0986_),
+    .B(data_in_principal[1]),
+    .Y(_0990_)
   );
-  NAND _2435_ (
-    .A(_0503_),
-    .B(_0487_),
-    .Y(_1352_)
+  NAND _1548_ (
+    .A(_0988_),
+    .B(\MainFifo.memoria.Ram[1] [1]),
+    .Y(_0991_)
   );
-  NAND _2436_ (
-    .A(_1328_),
-    .B(\VC1Fifo.Fifo_Data_in [4]),
+  NAND _1549_ (
+    .A(_0991_),
+    .B(_0990_),
     .Y(_0504_)
   );
-  NAND _2437_ (
-    .A(\MainFifo.memoria.Ram[3] [4]),
-    .B(\MainFifo.memoria.iReadAddress [0]),
-    .Y(_0505_)
+  NAND _1550_ (
+    .A(_0986_),
+    .B(data_in_principal[2]),
+    .Y(_0992_)
   );
-  NOT _2438_ (
-    .A(\MainFifo.memoria.Ram[2] [4]),
+  NAND _1551_ (
+    .A(_0988_),
+    .B(\MainFifo.memoria.Ram[1] [2]),
+    .Y(_0993_)
+  );
+  NAND _1552_ (
+    .A(_0993_),
+    .B(_0992_),
     .Y(_0506_)
   );
-  NOR _2439_ (
-    .A(_0506_),
-    .B(\MainFifo.memoria.iReadAddress [0]),
-    .Y(_0507_)
+  NAND _1553_ (
+    .A(_0986_),
+    .B(data_in_principal[3]),
+    .Y(_0994_)
   );
-  NOR _2440_ (
-    .A(_0507_),
-    .B(_1356_),
+  NAND _1554_ (
+    .A(_0988_),
+    .B(\MainFifo.memoria.Ram[1] [3]),
+    .Y(_0995_)
+  );
+  NAND _1555_ (
+    .A(_0995_),
+    .B(_0994_),
     .Y(_0508_)
   );
-  NAND _2441_ (
-    .A(_0508_),
-    .B(_0505_),
-    .Y(_0509_)
+  NAND _1556_ (
+    .A(_0986_),
+    .B(data_in_principal[4]),
+    .Y(_0996_)
   );
-  NOT _2442_ (
-    .A(\MainFifo.memoria.Ram[1] [4]),
+  NAND _1557_ (
+    .A(_0988_),
+    .B(\MainFifo.memoria.Ram[1] [4]),
+    .Y(_0997_)
+  );
+  NAND _1558_ (
+    .A(_0997_),
+    .B(_0996_),
     .Y(_0510_)
   );
-  NOR _2443_ (
-    .A(_0510_),
-    .B(_1347_),
-    .Y(_0511_)
+  NAND _1559_ (
+    .A(_0986_),
+    .B(data_in_principal[5]),
+    .Y(_0998_)
   );
-  NOT _2444_ (
-    .A(\MainFifo.memoria.Ram[0] [4]),
+  NAND _1560_ (
+    .A(_0988_),
+    .B(\MainFifo.memoria.Ram[1] [5]),
+    .Y(_0999_)
+  );
+  NAND _1561_ (
+    .A(_0999_),
+    .B(_0998_),
     .Y(_0512_)
   );
-  NOR _2445_ (
-    .A(_0512_),
-    .B(\MainFifo.memoria.iReadAddress [0]),
-    .Y(_0513_)
+  NOR _1562_ (
+    .A(_0971_),
+    .B(\MainFifo.memoria.iWriteAddress [1]),
+    .Y(_1000_)
   );
-  NOR _2446_ (
-    .A(_0513_),
-    .B(_0511_),
-    .Y(_0514_)
+  NAND _1563_ (
+    .A(_1000_),
+    .B(data_in_principal[0]),
+    .Y(_1001_)
   );
-  NAND _2447_ (
-    .A(_0514_),
-    .B(_1356_),
-    .Y(_0515_)
-  );
-  NAND _2448_ (
-    .A(_0515_),
-    .B(_0509_),
-    .Y(_0516_)
-  );
-  NOR _2449_ (
-    .A(_0516_),
-    .B(_0437_),
-    .Y(_0517_)
-  );
-  NOR _2450_ (
-    .A(_0452_),
-    .B(_0341_),
-    .Y(_0518_)
-  );
-  NOR _2451_ (
-    .A(_0518_),
-    .B(_0517_),
-    .Y(_0519_)
-  );
-  NAND _2452_ (
-    .A(_0519_),
-    .B(_0504_),
-    .Y(_1354_)
-  );
-  NOR _2453_ (
-    .A(_0423_),
-    .B(_0424_),
-    .Y(_0520_)
-  );
-  NOR _2454_ (
-    .A(_0520_),
-    .B(\VC1Fifo.Fifo_Data_in [5]),
-    .Y(_0521_)
-  );
-  NOR _2455_ (
-    .A(_0425_),
-    .B(_1224_),
-    .Y(_0522_)
-  );
-  NOR _2456_ (
-    .A(_0522_),
-    .B(_0521_),
-    .Y(_1355_)
-  );
-  NOT _2457_ (
-    .A(_1025_),
-    .Y(_0523_)
-  );
-  NOR _2458_ (
-    .A(_0523_),
-    .B(_0186_),
-    .Y(_0524_)
-  );
-  NOR _2459_ (
-    .A(_0524_),
-    .B(_0425_),
-    .Y(_0525_)
-  );
-  NOR _2460_ (
-    .A(_0449_),
-    .B(_1324_),
-    .Y(_0526_)
-  );
-  NOT _2461_ (
-    .A(_1012_),
-    .Y(_0527_)
-  );
-  NOR _2462_ (
-    .A(_0149_),
-    .B(\MainFifo.memoria.iReadEnable ),
-    .Y(_0528_)
-  );
-  NOR _2463_ (
-    .A(_0528_),
-    .B(_0520_),
-    .Y(_0529_)
-  );
-  NOR _2464_ (
-    .A(_0529_),
-    .B(_0527_),
-    .Y(_0530_)
-  );
-  NOR _2465_ (
-    .A(_0530_),
-    .B(_0526_),
-    .Y(_0531_)
-  );
-  NOR _2466_ (
-    .A(_0531_),
-    .B(_0525_),
-    .Y(_1372_)
-  );
-  NOR _2467_ (
-    .A(_0523_),
-    .B(_0187_),
-    .Y(_0532_)
-  );
-  NOR _2468_ (
-    .A(_0532_),
-    .B(_0425_),
-    .Y(_0533_)
-  );
-  NOT _2469_ (
-    .A(_0464_),
-    .Y(_0534_)
-  );
-  NOR _2470_ (
-    .A(_0534_),
-    .B(_1324_),
-    .Y(_0535_)
-  );
-  NOT _2471_ (
-    .A(_1014_),
-    .Y(_0536_)
-  );
-  NOR _2472_ (
-    .A(_0529_),
-    .B(_0536_),
-    .Y(_0537_)
-  );
-  NOR _2473_ (
-    .A(_0537_),
-    .B(_0535_),
-    .Y(_0538_)
-  );
-  NOR _2474_ (
-    .A(_0538_),
-    .B(_0533_),
+  NOT _1564_ (
+    .A(_1000_),
     .Y(_0002_)
   );
-  NOR _2475_ (
-    .A(_0523_),
-    .B(_0188_),
-    .Y(_0539_)
-  );
-  NOR _2476_ (
-    .A(_0539_),
-    .B(_0425_),
-    .Y(_0540_)
-  );
-  NOR _2477_ (
-    .A(_0482_),
-    .B(_1324_),
-    .Y(_0541_)
-  );
-  NOT _2478_ (
-    .A(_1016_),
-    .Y(_0542_)
-  );
-  NOR _2479_ (
-    .A(_0529_),
-    .B(_0542_),
-    .Y(_0543_)
-  );
-  NOR _2480_ (
-    .A(_0543_),
-    .B(_0541_),
-    .Y(_0544_)
-  );
-  NOR _2481_ (
-    .A(_0544_),
-    .B(_0540_),
+  NAND _1565_ (
+    .A(_0002_),
+    .B(\MainFifo.memoria.Ram[0] [0]),
     .Y(_0003_)
   );
-  NOR _2482_ (
-    .A(_0523_),
-    .B(_0189_),
-    .Y(_0545_)
+  NAND _1566_ (
+    .A(_0003_),
+    .B(_1001_),
+    .Y(_0515_)
   );
-  NOR _2483_ (
-    .A(_0545_),
-    .B(_0425_),
-    .Y(_0546_)
+  NAND _1567_ (
+    .A(_1000_),
+    .B(data_in_principal[1]),
+    .Y(_0004_)
   );
-  NOR _2484_ (
-    .A(_0499_),
-    .B(_1324_),
-    .Y(_0547_)
-  );
-  NOT _2485_ (
-    .A(_1019_),
-    .Y(_0548_)
-  );
-  NOR _2486_ (
-    .A(_0529_),
-    .B(_0548_),
-    .Y(_0549_)
-  );
-  NOR _2487_ (
-    .A(_0549_),
-    .B(_0547_),
-    .Y(_0550_)
-  );
-  NOR _2488_ (
-    .A(_0550_),
-    .B(_0546_),
+  NAND _1568_ (
+    .A(_0002_),
+    .B(\MainFifo.memoria.Ram[0] [1]),
     .Y(_0005_)
   );
-  NOR _2489_ (
-    .A(_0523_),
-    .B(_0191_),
-    .Y(_0551_)
+  NAND _1569_ (
+    .A(_0005_),
+    .B(_0004_),
+    .Y(_0517_)
   );
-  NOR _2490_ (
-    .A(_0551_),
-    .B(_0425_),
-    .Y(_0552_)
+  NAND _1570_ (
+    .A(_1000_),
+    .B(data_in_principal[2]),
+    .Y(_0006_)
   );
-  NOR _2491_ (
-    .A(_0516_),
-    .B(_1324_),
-    .Y(_0553_)
-  );
-  NOT _2492_ (
-    .A(_1021_),
-    .Y(_0554_)
-  );
-  NOR _2493_ (
-    .A(_0529_),
-    .B(_0554_),
-    .Y(_0555_)
-  );
-  NOR _2494_ (
-    .A(_0555_),
-    .B(_0553_),
-    .Y(_0556_)
-  );
-  NOR _2495_ (
-    .A(_0556_),
-    .B(_0552_),
+  NAND _1571_ (
+    .A(_0002_),
+    .B(\MainFifo.memoria.Ram[0] [2]),
     .Y(_0007_)
   );
-  NOR _2496_ (
-    .A(_0529_),
-    .B(_0192_),
+  NAND _1572_ (
+    .A(_0007_),
+    .B(_0006_),
+    .Y(_0519_)
+  );
+  NAND _1573_ (
+    .A(_1000_),
+    .B(data_in_principal[3]),
+    .Y(_0008_)
+  );
+  NAND _1574_ (
+    .A(_0002_),
+    .B(\MainFifo.memoria.Ram[0] [3]),
     .Y(_0009_)
   );
-  NOT _2497_ (
-    .A(init),
-    .Y(_0557_)
+  NAND _1575_ (
+    .A(_0009_),
+    .B(_0008_),
+    .Y(_0521_)
   );
-  NAND _2498_ (
-    .A(\fsm_Control1.nxt_state [0]),
-    .B(_0557_),
+  NAND _1576_ (
+    .A(_1000_),
+    .B(data_in_principal[4]),
+    .Y(_0010_)
+  );
+  NAND _1577_ (
+    .A(_0002_),
+    .B(\MainFifo.memoria.Ram[0] [4]),
+    .Y(_0011_)
+  );
+  NAND _1578_ (
+    .A(_0011_),
+    .B(_0010_),
+    .Y(_0522_)
+  );
+  NAND _1579_ (
+    .A(_1000_),
+    .B(data_in_principal[5]),
+    .Y(_0012_)
+  );
+  NAND _1580_ (
+    .A(_0002_),
+    .B(\MainFifo.memoria.Ram[0] [5]),
+    .Y(_0013_)
+  );
+  NAND _1581_ (
+    .A(_0013_),
+    .B(_0012_),
+    .Y(_0524_)
+  );
+  NOR _1582_ (
+    .A(\VC0Fifo.memoria.iReadEnable ),
+    .B(\VC0Fifo.memoria.iWriteEnable ),
+    .Y(_0015_)
+  );
+  NOR _1583_ (
+    .A(_0015_),
+    .B(\VC0Fifo.num_mem [0]),
+    .Y(_0017_)
+  );
+  NOT _1584_ (
+    .A(\VC0Fifo.num_mem [0]),
+    .Y(_0019_)
+  );
+  NOT _1585_ (
+    .A(_0015_),
+    .Y(_0021_)
+  );
+  NOR _1586_ (
+    .A(_0021_),
+    .B(_0019_),
+    .Y(_0023_)
+  );
+  NOR _1587_ (
+    .A(_0023_),
+    .B(_0017_),
+    .Y(_0024_)
+  );
+  NOR _1588_ (
+    .A(_0024_),
+    .B(_0451_),
     .Y(_0558_)
   );
-  NAND _2499_ (
-    .A(_0558_),
+  NOT _1589_ (
+    .A(\VC0Fifo.num_mem [1]),
+    .Y(_0025_)
+  );
+  NOT _1590_ (
+    .A(\VC0Fifo.memoria.iWriteEnable ),
+    .Y(_0026_)
+  );
+  NOR _1591_ (
+    .A(_0026_),
+    .B(_0019_),
+    .Y(_0027_)
+  );
+  NAND _1592_ (
+    .A(\VC0Fifo.memoria.iReadEnable ),
+    .B(_0026_),
+    .Y(_0028_)
+  );
+  NOR _1593_ (
+    .A(_0028_),
+    .B(\VC0Fifo.num_mem [0]),
+    .Y(_0029_)
+  );
+  NOR _1594_ (
+    .A(_0029_),
+    .B(_0027_),
+    .Y(_0030_)
+  );
+  NOR _1595_ (
+    .A(_0030_),
+    .B(_0025_),
+    .Y(_0031_)
+  );
+  NAND _1596_ (
+    .A(_0030_),
+    .B(_0025_),
+    .Y(_0032_)
+  );
+  NAND _1597_ (
+    .A(_0032_),
     .B(reset_L),
-    .Y(_0075_)
+    .Y(_0034_)
   );
-  NOR _2500_ (
-    .A(init),
-    .B(\fsm_Control1.nxt_state [1]),
-    .Y(_0559_)
-  );
-  NOR _2501_ (
-    .A(_0559_),
-    .B(_0878_),
-    .Y(_0077_)
-  );
-  NOT _2502_ (
-    .A(\fsm_Control1.nxt_state [2]),
+  NOR _1598_ (
+    .A(_0034_),
+    .B(_0031_),
     .Y(_0560_)
   );
-  NAND _2503_ (
-    .A(_0557_),
+  NAND _1599_ (
+    .A(_0027_),
+    .B(\VC0Fifo.num_mem [1]),
+    .Y(_0036_)
+  );
+  NOT _1600_ (
+    .A(_0028_),
+    .Y(_0037_)
+  );
+  NOR _1601_ (
+    .A(\VC0Fifo.num_mem [1]),
+    .B(\VC0Fifo.num_mem [0]),
+    .Y(_0039_)
+  );
+  NAND _1602_ (
+    .A(_0039_),
+    .B(_0037_),
+    .Y(_0041_)
+  );
+  NAND _1603_ (
+    .A(_0041_),
+    .B(_0036_),
+    .Y(_0043_)
+  );
+  NOR _1604_ (
+    .A(_0043_),
+    .B(\VC0Fifo.num_mem [2]),
+    .Y(_0045_)
+  );
+  NAND _1605_ (
+    .A(_0043_),
+    .B(\VC0Fifo.num_mem [2]),
+    .Y(_0047_)
+  );
+  NAND _1606_ (
+    .A(_0047_),
     .B(reset_L),
-    .Y(_0561_)
+    .Y(_0049_)
   );
-  NOR _2504_ (
-    .A(_0561_),
-    .B(_0560_),
-    .Y(_0079_)
-  );
-  NOT _2505_ (
-    .A(\fsm_Control1.nxt_state [3]),
+  NOR _1607_ (
+    .A(_0049_),
+    .B(_0045_),
     .Y(_0562_)
   );
-  NOR _2506_ (
-    .A(_0561_),
-    .B(_0562_),
-    .Y(_0080_)
+  NOT _1608_ (
+    .A(\VC0Fifo.memoria.iReadAddress [0]),
+    .Y(_0050_)
   );
-  NOT _2507_ (
-    .A(\fsm_Control1.nxt_state [4]),
-    .Y(_0563_)
+  NOR _1609_ (
+    .A(_0028_),
+    .B(_0050_),
+    .Y(_0051_)
   );
-  NOR _2508_ (
-    .A(_0561_),
-    .B(_0563_),
-    .Y(_0082_)
+  NAND _1610_ (
+    .A(_0028_),
+    .B(_0050_),
+    .Y(_0052_)
   );
-  NOT _2509_ (
-    .A(\fsm_Control1.state [4]),
-    .Y(_0564_)
+  NAND _1611_ (
+    .A(_0052_),
+    .B(reset_L),
+    .Y(_0053_)
   );
-  NOR _2510_ (
-    .A(\fsm_Control1.state [3]),
-    .B(\fsm_Control1.state [2]),
-    .Y(_0565_)
-  );
-  NAND _2511_ (
-    .A(_0565_),
-    .B(_0564_),
-    .Y(_0566_)
-  );
-  NOT _2512_ (
-    .A(\fsm_Control1.state [0]),
-    .Y(_0567_)
-  );
-  NOR _2513_ (
-    .A(\fsm_Control1.state [1]),
-    .B(_0567_),
-    .Y(_0568_)
-  );
-  NOT _2514_ (
-    .A(_0568_),
-    .Y(_0569_)
-  );
-  NOR _2515_ (
-    .A(_0569_),
-    .B(_0566_),
+  NOR _1612_ (
+    .A(_0053_),
+    .B(_0051_),
     .Y(_0570_)
   );
-  NOT _2516_ (
-    .A(_0570_),
-    .Y(_0571_)
+  NAND _1613_ (
+    .A(_0051_),
+    .B(\VC0Fifo.memoria.iReadAddress [1]),
+    .Y(_0054_)
   );
-  NOT _2517_ (
-    .A(\fsm_Control1.state [1]),
+  NOT _1614_ (
+    .A(\VC0Fifo.memoria.iReadAddress [1]),
+    .Y(_0055_)
+  );
+  NOT _1615_ (
+    .A(_0051_),
+    .Y(_0056_)
+  );
+  NAND _1616_ (
+    .A(_0056_),
+    .B(_0055_),
+    .Y(_0057_)
+  );
+  NAND _1617_ (
+    .A(_0057_),
+    .B(_0054_),
+    .Y(_0058_)
+  );
+  NOR _1618_ (
+    .A(_0058_),
+    .B(_0451_),
     .Y(_0572_)
   );
-  NOR _2518_ (
-    .A(_0572_),
-    .B(\fsm_Control1.state [0]),
-    .Y(_0573_)
+  NAND _1619_ (
+    .A(\VC0Fifo.memoria.iWriteAddress [0]),
+    .B(\VC0Fifo.memoria.iWriteEnable ),
+    .Y(_0059_)
   );
-  NOT _2519_ (
-    .A(_0573_),
-    .Y(_0574_)
+  NOT _1620_ (
+    .A(_0059_),
+    .Y(_0060_)
   );
-  NOR _2520_ (
-    .A(_0574_),
-    .B(_0566_),
-    .Y(_0575_)
+  NOT _1621_ (
+    .A(\VC0Fifo.memoria.iWriteAddress [0]),
+    .Y(_0061_)
   );
-  NOT _2521_ (
-    .A(_0575_),
-    .Y(_0576_)
+  NAND _1622_ (
+    .A(_0061_),
+    .B(_0026_),
+    .Y(_0062_)
   );
-  NAND _2522_ (
-    .A(_0576_),
-    .B(_0571_),
-    .Y(_0577_)
+  NAND _1623_ (
+    .A(_0062_),
+    .B(reset_L),
+    .Y(_0063_)
   );
-  NOT _2523_ (
-    .A(error_out),
-    .Y(_0578_)
-  );
-  NOR _2524_ (
-    .A(_0578_),
-    .B(_0878_),
-    .Y(_0579_)
-  );
-  NAND _2525_ (
-    .A(_0572_),
-    .B(_0567_),
-    .Y(_0580_)
-  );
-  NOR _2526_ (
-    .A(_0580_),
-    .B(_0564_),
+  NOR _1624_ (
+    .A(_0063_),
+    .B(_0060_),
     .Y(_0581_)
   );
-  NAND _2527_ (
-    .A(_0581_),
-    .B(_0565_),
-    .Y(_0582_)
+  NOT _1625_ (
+    .A(\VC0Fifo.memoria.iWriteAddress [1]),
+    .Y(_0064_)
   );
-  NOT _2528_ (
-    .A(Error_Fifo_VC0),
+  NOR _1626_ (
+    .A(_0059_),
+    .B(_0064_),
+    .Y(_0065_)
+  );
+  NAND _1627_ (
+    .A(_0059_),
+    .B(_0064_),
+    .Y(_0066_)
+  );
+  NAND _1628_ (
+    .A(_0066_),
+    .B(reset_L),
+    .Y(_0067_)
+  );
+  NOR _1629_ (
+    .A(_0067_),
+    .B(_0065_),
     .Y(_0583_)
   );
-  NOR _2529_ (
-    .A(Error_Fifo_VC1),
-    .B(Error_Fifo_MF),
-    .Y(_0584_)
+  NOT _1630_ (
+    .A(\VC0Fifo.num_mem [2]),
+    .Y(_0068_)
   );
-  NAND _2530_ (
-    .A(_0584_),
-    .B(_0583_),
-    .Y(_0585_)
+  NOT _1631_ (
+    .A(_0039_),
+    .Y(_0069_)
   );
-  NOT _2531_ (
-    .A(_0585_),
-    .Y(_0586_)
+  NOR _1632_ (
+    .A(_0069_),
+    .B(_0068_),
+    .Y(_0070_)
   );
-  NOR _2532_ (
-    .A(_0586_),
-    .B(_0582_),
-    .Y(_0587_)
+  NOT _1633_ (
+    .A(_0070_),
+    .Y(_0071_)
   );
-  NOR _2533_ (
-    .A(_0587_),
-    .B(_0579_),
-    .Y(_0588_)
+  NOR _1634_ (
+    .A(_0071_),
+    .B(_0026_),
+    .Y(_0073_)
   );
-  NOR _2534_ (
-    .A(_0588_),
-    .B(_0577_),
-    .Y(_0091_)
+  NOR _1635_ (
+    .A(_0073_),
+    .B(Error_Fifo_VC0),
+    .Y(_0074_)
   );
-  NOR _2535_ (
-    .A(_0580_),
-    .B(\fsm_Control1.state [4]),
-    .Y(_0589_)
-  );
-  NOT _2536_ (
-    .A(\fsm_Control1.state [3]),
+  NOR _1636_ (
+    .A(_0074_),
+    .B(_0451_),
     .Y(_0590_)
   );
-  NOR _2537_ (
-    .A(_0590_),
-    .B(\fsm_Control1.state [2]),
-    .Y(_0591_)
+  NAND _1637_ (
+    .A(_0068_),
+    .B(\VC0Fifo.num_mem [0]),
+    .Y(_0075_)
   );
-  NAND _2538_ (
-    .A(_0591_),
-    .B(_0589_),
-    .Y(_0592_)
+  NOR _1638_ (
+    .A(_0070_),
+    .B(_0028_),
+    .Y(_0076_)
   );
-  NOR _2539_ (
-    .A(_0592_),
-    .B(_0585_),
-    .Y(_0593_)
+  NOT _1639_ (
+    .A(_0076_),
+    .Y(_0077_)
   );
-  NOT _2540_ (
-    .A(_0593_),
-    .Y(_0594_)
+  NOR _1640_ (
+    .A(_0039_),
+    .B(Fifo_Empty_VC0),
+    .Y(_0078_)
   );
-  NAND _2541_ (
-    .A(_0592_),
-    .B(_0571_),
-    .Y(_0595_)
+  NOR _1641_ (
+    .A(_0078_),
+    .B(_0077_),
+    .Y(_0079_)
   );
-  NAND _2542_ (
-    .A(_0589_),
-    .B(\fsm_Control1.state [2]),
-    .Y(_0596_)
+  NAND _1642_ (
+    .A(_0079_),
+    .B(_0075_),
+    .Y(_0080_)
   );
-  NOR _2543_ (
-    .A(_0596_),
-    .B(\fsm_Control1.state [3]),
+  NOT _1643_ (
+    .A(_0000_),
+    .Y(_0081_)
+  );
+  NAND _1644_ (
+    .A(\VC0Fifo.memoria.iWriteEnable ),
+    .B(\VC0Fifo.num_mem [2]),
+    .Y(_0083_)
+  );
+  NOR _1645_ (
+    .A(_0083_),
+    .B(_0039_),
+    .Y(_0084_)
+  );
+  NOR _1646_ (
+    .A(_0084_),
+    .B(_0451_),
+    .Y(_0085_)
+  );
+  NAND _1647_ (
+    .A(_0085_),
+    .B(_0021_),
+    .Y(_0086_)
+  );
+  NAND _1648_ (
+    .A(_0086_),
+    .B(_0081_),
+    .Y(_0087_)
+  );
+  NAND _1649_ (
+    .A(_0087_),
+    .B(_0080_),
     .Y(_0597_)
   );
-  NOR _2544_ (
-    .A(_0597_),
-    .B(_0575_),
-    .Y(_0598_)
+  NOR _1650_ (
+    .A(_0075_),
+    .B(_0025_),
+    .Y(_0088_)
   );
-  NAND _2545_ (
-    .A(_0598_),
-    .B(_0582_),
-    .Y(_0599_)
+  NOR _1651_ (
+    .A(_0088_),
+    .B(Pausa_VC0),
+    .Y(_0089_)
   );
-  NOR _2546_ (
-    .A(_0599_),
-    .B(_0595_),
-    .Y(_0600_)
+  NAND _1652_ (
+    .A(_0025_),
+    .B(_0068_),
+    .Y(_0090_)
   );
-  NOT _2547_ (
-    .A(active_out),
-    .Y(_0601_)
+  NAND _1653_ (
+    .A(_0090_),
+    .B(_0076_),
+    .Y(_0091_)
   );
-  NOR _2548_ (
-    .A(_0601_),
-    .B(_0878_),
-    .Y(_0602_)
-  );
-  NAND _2549_ (
-    .A(_0602_),
-    .B(_0600_),
-    .Y(_0603_)
-  );
-  NAND _2550_ (
-    .A(_0603_),
-    .B(_0594_),
+  NOR _1654_ (
+    .A(_0091_),
+    .B(_0089_),
     .Y(_0093_)
   );
-  NOT _2551_ (
-    .A(idle_out),
-    .Y(_0604_)
+  NAND _1655_ (
+    .A(_0015_),
+    .B(Pausa_VC0),
+    .Y(_0094_)
   );
-  NAND _2552_ (
-    .A(_0592_),
-    .B(_0582_),
-    .Y(_0605_)
+  NAND _1656_ (
+    .A(_0089_),
+    .B(_0069_),
+    .Y(_0095_)
   );
-  NOR _2553_ (
-    .A(_0605_),
-    .B(_0570_),
-    .Y(_0606_)
-  );
-  NAND _2554_ (
-    .A(_0606_),
-    .B(_0598_),
-    .Y(_0607_)
-  );
-  NAND _2555_ (
-    .A(_0597_),
-    .B(_0586_),
-    .Y(_0608_)
-  );
-  NAND _2556_ (
-    .A(_0608_),
-    .B(_0607_),
-    .Y(_0609_)
-  );
-  NAND _2557_ (
-    .A(_0609_),
-    .B(reset_L),
-    .Y(_0610_)
-  );
-  NOR _2558_ (
-    .A(_0610_),
-    .B(_0604_),
+  NAND _1657_ (
+    .A(_0083_),
+    .B(_0036_),
     .Y(_0096_)
   );
-  NAND _2559_ (
-    .A(_0586_),
-    .B(_0878_),
-    .Y(_0611_)
-  );
-  NOR _2560_ (
-    .A(_0611_),
-    .B(_0582_),
-    .Y(_0612_)
-  );
-  NOR _2561_ (
-    .A(_0557_),
-    .B(_0878_),
-    .Y(_0613_)
-  );
-  NOT _2562_ (
-    .A(_0613_),
-    .Y(_0614_)
-  );
-  NAND _2563_ (
-    .A(_0614_),
-    .B(\fsm_Control1.nxt_state [0]),
-    .Y(_0615_)
-  );
-  NOR _2564_ (
-    .A(_0615_),
-    .B(_0594_),
-    .Y(_0616_)
-  );
-  NOR _2565_ (
-    .A(_0616_),
-    .B(_0612_),
-    .Y(_0617_)
-  );
-  NAND _2566_ (
-    .A(_0617_),
-    .B(_0607_),
+  NAND _1658_ (
+    .A(_0096_),
+    .B(_0095_),
     .Y(_0097_)
   );
-  NOT _2567_ (
-    .A(\fsm_Control1.nxt_state [1]),
-    .Y(_0618_)
+  NAND _1659_ (
+    .A(_0097_),
+    .B(_0094_),
+    .Y(_0098_)
   );
-  NOR _2568_ (
-    .A(_0613_),
-    .B(_0618_),
-    .Y(_0619_)
-  );
-  NAND _2569_ (
-    .A(_0619_),
-    .B(_0593_),
-    .Y(_0620_)
-  );
-  NAND _2570_ (
-    .A(_0620_),
-    .B(_0571_),
+  NOR _1660_ (
+    .A(_0098_),
+    .B(_0093_),
     .Y(_0099_)
   );
-  NAND _2571_ (
-    .A(_0586_),
-    .B(_0575_),
-    .Y(_0621_)
+  NOR _1661_ (
+    .A(_0099_),
+    .B(_0451_),
+    .Y(_0607_)
   );
-  NAND _2572_ (
-    .A(_0614_),
-    .B(_0560_),
-    .Y(_0622_)
+  NAND _1662_ (
+    .A(_0065_),
+    .B(\VC0Fifo.Fifo_Data_in [0]),
+    .Y(_0100_)
   );
-  NAND _2573_ (
-    .A(_0622_),
-    .B(_0593_),
-    .Y(_0623_)
-  );
-  NAND _2574_ (
-    .A(_0623_),
-    .B(_0621_),
+  NOT _1663_ (
+    .A(_0065_),
     .Y(_0101_)
   );
-  NOR _2575_ (
-    .A(_0613_),
-    .B(_0562_),
-    .Y(_0624_)
+  NAND _1664_ (
+    .A(_0101_),
+    .B(\VC0Fifo.memoria.Ram[3] [0]),
+    .Y(_0103_)
   );
-  NAND _2576_ (
-    .A(_0624_),
-    .B(_0593_),
-    .Y(_0625_)
-  );
-  NAND _2577_ (
-    .A(_0625_),
-    .B(_0608_),
-    .Y(_0102_)
-  );
-  NOT _2578_ (
-    .A(_0582_),
-    .Y(_0626_)
-  );
-  NAND _2579_ (
-    .A(_0611_),
-    .B(_0626_),
-    .Y(_0627_)
-  );
-  NOR _2580_ (
-    .A(_0598_),
-    .B(_0586_),
-    .Y(_0628_)
-  );
-  NOR _2581_ (
-    .A(_0613_),
-    .B(_0563_),
-    .Y(_0629_)
-  );
-  NOR _2582_ (
-    .A(_0629_),
-    .B(_0585_),
-    .Y(_0630_)
-  );
-  NOR _2583_ (
-    .A(_0630_),
-    .B(_0592_),
-    .Y(_0631_)
-  );
-  NOR _2584_ (
-    .A(_0631_),
-    .B(_0628_),
-    .Y(_0632_)
-  );
-  NAND _2585_ (
-    .A(_0632_),
-    .B(_0627_),
-    .Y(_0104_)
-  );
-  NOT _2586_ (
-    .A(\VC0Fifo.memoria.iReadEnable ),
-    .Y(_0633_)
-  );
-  NAND _2587_ (
-    .A(\VC1Fifo.memoria.iReadEnable ),
-    .B(_0633_),
-    .Y(_0634_)
-  );
-  NOR _2588_ (
-    .A(\VC1Fifo.memoria.Ram[2] [0]),
-    .B(\VC1Fifo.memoria.iReadAddress [0]),
-    .Y(_0635_)
-  );
-  NOT _2589_ (
-    .A(\VC1Fifo.memoria.Ram[3] [0]),
-    .Y(_0637_)
-  );
-  NAND _2590_ (
-    .A(_0637_),
-    .B(\VC1Fifo.memoria.iReadAddress [0]),
-    .Y(_0638_)
-  );
-  NAND _2591_ (
-    .A(_0638_),
-    .B(\VC1Fifo.memoria.iReadAddress [1]),
-    .Y(_0639_)
-  );
-  NOR _2592_ (
-    .A(_0639_),
-    .B(_0635_),
-    .Y(_0640_)
-  );
-  NOT _2593_ (
-    .A(\VC1Fifo.memoria.Ram[1] [0]),
-    .Y(_0641_)
-  );
-  NOR _2594_ (
-    .A(_0641_),
-    .B(_0288_),
-    .Y(_0642_)
-  );
-  NOT _2595_ (
-    .A(\VC1Fifo.memoria.Ram[0] [0]),
-    .Y(_0643_)
-  );
-  NOR _2596_ (
-    .A(_0643_),
-    .B(\VC1Fifo.memoria.iReadAddress [0]),
-    .Y(_0644_)
-  );
-  NOR _2597_ (
-    .A(_0644_),
-    .B(_0642_),
-    .Y(_0645_)
-  );
-  NOR _2598_ (
-    .A(_0645_),
-    .B(\VC1Fifo.memoria.iReadAddress [1]),
-    .Y(_0646_)
-  );
-  NOR _2599_ (
-    .A(_0646_),
-    .B(_0640_),
-    .Y(_0647_)
-  );
-  NOR _2600_ (
-    .A(_0647_),
-    .B(_0634_),
-    .Y(_0648_)
-  );
-  NOR _2601_ (
-    .A(\VC0Fifo.memoria.Ram[2] [0]),
-    .B(\VC0Fifo.memoria.iReadAddress [0]),
-    .Y(_0649_)
-  );
-  NOT _2602_ (
-    .A(\VC0Fifo.memoria.Ram[3] [0]),
-    .Y(_0650_)
-  );
-  NAND _2603_ (
-    .A(_0650_),
-    .B(\VC0Fifo.memoria.iReadAddress [0]),
-    .Y(_0651_)
-  );
-  NAND _2604_ (
-    .A(_0651_),
-    .B(\VC0Fifo.memoria.iReadAddress [1]),
-    .Y(_0652_)
-  );
-  NOR _2605_ (
-    .A(_0652_),
-    .B(_0649_),
-    .Y(_0653_)
-  );
-  NOT _2606_ (
-    .A(\VC0Fifo.memoria.Ram[1] [0]),
-    .Y(_0654_)
-  );
-  NOR _2607_ (
-    .A(_0654_),
-    .B(_0140_),
-    .Y(_0655_)
-  );
-  NOT _2608_ (
-    .A(\VC0Fifo.memoria.Ram[0] [0]),
-    .Y(_0656_)
-  );
-  NOR _2609_ (
-    .A(_0656_),
-    .B(\VC0Fifo.memoria.iReadAddress [0]),
-    .Y(_0658_)
-  );
-  NOR _2610_ (
-    .A(_0658_),
-    .B(_0655_),
-    .Y(_0659_)
-  );
-  NOR _2611_ (
-    .A(_0659_),
-    .B(\VC0Fifo.memoria.iReadAddress [1]),
-    .Y(_0660_)
-  );
-  NOR _2612_ (
-    .A(_0660_),
-    .B(_0653_),
+  NAND _1665_ (
+    .A(_0103_),
+    .B(_0100_),
     .Y(_0661_)
   );
-  NOR _2613_ (
-    .A(_0661_),
-    .B(_0633_),
-    .Y(_0662_)
+  NAND _1666_ (
+    .A(_0065_),
+    .B(\VC0Fifo.Fifo_Data_in [1]),
+    .Y(_0104_)
   );
-  NOR _2614_ (
-    .A(_0662_),
-    .B(_0648_),
+  NAND _1667_ (
+    .A(_0101_),
+    .B(\VC0Fifo.memoria.Ram[3] [1]),
+    .Y(_0105_)
+  );
+  NAND _1668_ (
+    .A(_0105_),
+    .B(_0104_),
     .Y(_0663_)
   );
-  NOR _2615_ (
-    .A(_0663_),
-    .B(_0878_),
-    .Y(_0120_)
+  NAND _1669_ (
+    .A(_0065_),
+    .B(\VC0Fifo.Fifo_Data_in [2]),
+    .Y(_0106_)
   );
-  NOR _2616_ (
-    .A(\VC1Fifo.memoria.Ram[2] [1]),
-    .B(\VC1Fifo.memoria.iReadAddress [0]),
-    .Y(_0664_)
+  NAND _1670_ (
+    .A(_0101_),
+    .B(\VC0Fifo.memoria.Ram[3] [2]),
+    .Y(_0107_)
   );
-  NOT _2617_ (
-    .A(\VC1Fifo.memoria.Ram[3] [1]),
+  NAND _1671_ (
+    .A(_0107_),
+    .B(_0106_),
     .Y(_0665_)
   );
-  NAND _2618_ (
-    .A(_0665_),
-    .B(\VC1Fifo.memoria.iReadAddress [0]),
+  NAND _1672_ (
+    .A(_0065_),
+    .B(\VC0Fifo.Fifo_Data_in [3]),
+    .Y(_0108_)
+  );
+  NAND _1673_ (
+    .A(_0101_),
+    .B(\VC0Fifo.memoria.Ram[3] [3]),
+    .Y(_0109_)
+  );
+  NAND _1674_ (
+    .A(_0109_),
+    .B(_0108_),
     .Y(_0666_)
   );
-  NAND _2619_ (
-    .A(_0666_),
-    .B(\VC1Fifo.memoria.iReadAddress [1]),
-    .Y(_0667_)
+  NAND _1675_ (
+    .A(_0065_),
+    .B(\VC0Fifo.Fifo_Data_in [4]),
+    .Y(_0111_)
   );
-  NOR _2620_ (
-    .A(_0667_),
-    .B(_0664_),
+  NAND _1676_ (
+    .A(_0101_),
+    .B(\VC0Fifo.memoria.Ram[3] [4]),
+    .Y(_0112_)
+  );
+  NAND _1677_ (
+    .A(_0112_),
+    .B(_0111_),
     .Y(_0668_)
   );
-  NOT _2621_ (
-    .A(\VC1Fifo.memoria.Ram[1] [1]),
-    .Y(_0669_)
+  NAND _1678_ (
+    .A(_0065_),
+    .B(\VC0Fifo.Fifo_Data_in [5]),
+    .Y(_0113_)
   );
-  NOR _2622_ (
-    .A(_0669_),
-    .B(_0288_),
+  NAND _1679_ (
+    .A(_0101_),
+    .B(\VC0Fifo.memoria.Ram[3] [5]),
+    .Y(_0114_)
+  );
+  NAND _1680_ (
+    .A(_0114_),
+    .B(_0113_),
     .Y(_0670_)
   );
-  NOT _2623_ (
-    .A(\VC1Fifo.memoria.Ram[0] [1]),
-    .Y(_0671_)
+  NOR _1681_ (
+    .A(\VC0Fifo.memoria.iWriteAddress [0]),
+    .B(_0026_),
+    .Y(_0115_)
   );
-  NOR _2624_ (
-    .A(_0671_),
-    .B(\VC1Fifo.memoria.iReadAddress [0]),
-    .Y(_0672_)
+  NOT _1682_ (
+    .A(_0115_),
+    .Y(_0116_)
   );
-  NOR _2625_ (
-    .A(_0672_),
-    .B(_0670_),
+  NOR _1683_ (
+    .A(_0116_),
+    .B(_0064_),
+    .Y(_0117_)
+  );
+  NAND _1684_ (
+    .A(_0117_),
+    .B(\VC0Fifo.Fifo_Data_in [0]),
+    .Y(_0119_)
+  );
+  NOT _1685_ (
+    .A(_0117_),
+    .Y(_0120_)
+  );
+  NAND _1686_ (
+    .A(_0120_),
+    .B(\VC0Fifo.memoria.Ram[2] [0]),
+    .Y(_0121_)
+  );
+  NAND _1687_ (
+    .A(_0121_),
+    .B(_0119_),
     .Y(_0673_)
   );
-  NOR _2626_ (
-    .A(_0673_),
-    .B(\VC1Fifo.memoria.iReadAddress [1]),
-    .Y(_0674_)
-  );
-  NOR _2627_ (
-    .A(_0674_),
-    .B(_0668_),
-    .Y(_0675_)
-  );
-  NOR _2628_ (
-    .A(_0675_),
-    .B(_0634_),
-    .Y(_0676_)
-  );
-  NOR _2629_ (
-    .A(\VC0Fifo.memoria.Ram[2] [1]),
-    .B(\VC0Fifo.memoria.iReadAddress [0]),
-    .Y(_0677_)
-  );
-  NOT _2630_ (
-    .A(\VC0Fifo.memoria.Ram[3] [1]),
-    .Y(_0678_)
-  );
-  NAND _2631_ (
-    .A(_0678_),
-    .B(\VC0Fifo.memoria.iReadAddress [0]),
-    .Y(_0679_)
-  );
-  NAND _2632_ (
-    .A(_0679_),
-    .B(\VC0Fifo.memoria.iReadAddress [1]),
-    .Y(_0680_)
-  );
-  NOR _2633_ (
-    .A(_0680_),
-    .B(_0677_),
-    .Y(_0681_)
-  );
-  NOT _2634_ (
-    .A(\VC0Fifo.memoria.Ram[1] [1]),
-    .Y(_0682_)
-  );
-  NOR _2635_ (
-    .A(_0682_),
-    .B(_0140_),
-    .Y(_0683_)
-  );
-  NOT _2636_ (
-    .A(\VC0Fifo.memoria.Ram[0] [1]),
-    .Y(_0684_)
-  );
-  NOR _2637_ (
-    .A(_0684_),
-    .B(\VC0Fifo.memoria.iReadAddress [0]),
-    .Y(_0685_)
-  );
-  NOR _2638_ (
-    .A(_0685_),
-    .B(_0683_),
-    .Y(_0686_)
-  );
-  NOR _2639_ (
-    .A(_0686_),
-    .B(\VC0Fifo.memoria.iReadAddress [1]),
-    .Y(_0688_)
-  );
-  NOR _2640_ (
-    .A(_0688_),
-    .B(_0681_),
-    .Y(_0689_)
-  );
-  NOR _2641_ (
-    .A(_0689_),
-    .B(_0633_),
-    .Y(_0690_)
-  );
-  NOR _2642_ (
-    .A(_0690_),
-    .B(_0676_),
-    .Y(_0691_)
-  );
-  NOR _2643_ (
-    .A(_0691_),
-    .B(_0878_),
+  NAND _1688_ (
+    .A(_0117_),
+    .B(\VC0Fifo.Fifo_Data_in [1]),
     .Y(_0122_)
   );
-  NOR _2644_ (
-    .A(\VC1Fifo.memoria.Ram[2] [2]),
-    .B(\VC1Fifo.memoria.iReadAddress [0]),
-    .Y(_0692_)
+  NAND _1689_ (
+    .A(_0120_),
+    .B(\VC0Fifo.memoria.Ram[2] [1]),
+    .Y(_0123_)
   );
-  NOT _2645_ (
-    .A(\VC1Fifo.memoria.Ram[3] [2]),
-    .Y(_0693_)
+  NAND _1690_ (
+    .A(_0123_),
+    .B(_0122_),
+    .Y(_0675_)
   );
-  NAND _2646_ (
-    .A(_0693_),
-    .B(\VC1Fifo.memoria.iReadAddress [0]),
-    .Y(_0694_)
-  );
-  NAND _2647_ (
-    .A(_0694_),
-    .B(\VC1Fifo.memoria.iReadAddress [1]),
-    .Y(_0695_)
-  );
-  NOR _2648_ (
-    .A(_0695_),
-    .B(_0692_),
-    .Y(_0696_)
-  );
-  NOT _2649_ (
-    .A(\VC1Fifo.memoria.Ram[1] [2]),
-    .Y(_0698_)
-  );
-  NOR _2650_ (
-    .A(_0698_),
-    .B(_0288_),
-    .Y(_0699_)
-  );
-  NOT _2651_ (
-    .A(\VC1Fifo.memoria.Ram[0] [2]),
-    .Y(_0700_)
-  );
-  NOR _2652_ (
-    .A(_0700_),
-    .B(\VC1Fifo.memoria.iReadAddress [0]),
-    .Y(_0701_)
-  );
-  NOR _2653_ (
-    .A(_0701_),
-    .B(_0699_),
-    .Y(_0702_)
-  );
-  NOR _2654_ (
-    .A(_0702_),
-    .B(\VC1Fifo.memoria.iReadAddress [1]),
-    .Y(_0703_)
-  );
-  NOR _2655_ (
-    .A(_0703_),
-    .B(_0696_),
-    .Y(_0704_)
-  );
-  NOR _2656_ (
-    .A(_0704_),
-    .B(_0634_),
-    .Y(_0705_)
-  );
-  NOR _2657_ (
-    .A(\VC0Fifo.memoria.Ram[2] [2]),
-    .B(\VC0Fifo.memoria.iReadAddress [0]),
-    .Y(_0706_)
-  );
-  NOT _2658_ (
-    .A(\VC0Fifo.memoria.Ram[3] [2]),
-    .Y(_0707_)
-  );
-  NAND _2659_ (
-    .A(_0707_),
-    .B(\VC0Fifo.memoria.iReadAddress [0]),
-    .Y(_0708_)
-  );
-  NAND _2660_ (
-    .A(_0708_),
-    .B(\VC0Fifo.memoria.iReadAddress [1]),
-    .Y(_0709_)
-  );
-  NOR _2661_ (
-    .A(_0709_),
-    .B(_0706_),
-    .Y(_0710_)
-  );
-  NOT _2662_ (
-    .A(\VC0Fifo.memoria.Ram[1] [2]),
-    .Y(_0711_)
-  );
-  NOR _2663_ (
-    .A(_0711_),
-    .B(_0140_),
-    .Y(_0712_)
-  );
-  NOT _2664_ (
-    .A(\VC0Fifo.memoria.Ram[0] [2]),
-    .Y(_0713_)
-  );
-  NOR _2665_ (
-    .A(_0713_),
-    .B(\VC0Fifo.memoria.iReadAddress [0]),
-    .Y(_0714_)
-  );
-  NOR _2666_ (
-    .A(_0714_),
-    .B(_0712_),
-    .Y(_0715_)
-  );
-  NOR _2667_ (
-    .A(_0715_),
-    .B(\VC0Fifo.memoria.iReadAddress [1]),
-    .Y(_0716_)
-  );
-  NOR _2668_ (
-    .A(_0716_),
-    .B(_0710_),
-    .Y(_0717_)
-  );
-  NOR _2669_ (
-    .A(_0717_),
-    .B(_0633_),
-    .Y(_0719_)
-  );
-  NOR _2670_ (
-    .A(_0719_),
-    .B(_0705_),
-    .Y(_0720_)
-  );
-  NOR _2671_ (
-    .A(_0720_),
-    .B(_0878_),
+  NAND _1691_ (
+    .A(_0117_),
+    .B(\VC0Fifo.Fifo_Data_in [2]),
     .Y(_0124_)
   );
-  NOR _2672_ (
-    .A(\VC1Fifo.memoria.Ram[2] [3]),
-    .B(\VC1Fifo.memoria.iReadAddress [0]),
-    .Y(_0721_)
-  );
-  NOT _2673_ (
-    .A(\VC1Fifo.memoria.Ram[3] [3]),
-    .Y(_0722_)
-  );
-  NAND _2674_ (
-    .A(_0722_),
-    .B(\VC1Fifo.memoria.iReadAddress [0]),
-    .Y(_0723_)
-  );
-  NAND _2675_ (
-    .A(_0723_),
-    .B(\VC1Fifo.memoria.iReadAddress [1]),
-    .Y(_0724_)
-  );
-  NOR _2676_ (
-    .A(_0724_),
-    .B(_0721_),
-    .Y(_0725_)
-  );
-  NOT _2677_ (
-    .A(\VC1Fifo.memoria.Ram[1] [3]),
-    .Y(_0726_)
-  );
-  NOR _2678_ (
-    .A(_0726_),
-    .B(_0288_),
-    .Y(_0727_)
-  );
-  NOT _2679_ (
-    .A(\VC1Fifo.memoria.Ram[0] [3]),
-    .Y(_0728_)
-  );
-  NOR _2680_ (
-    .A(_0728_),
-    .B(\VC1Fifo.memoria.iReadAddress [0]),
-    .Y(_0729_)
-  );
-  NOR _2681_ (
-    .A(_0729_),
-    .B(_0727_),
-    .Y(_0730_)
-  );
-  NOR _2682_ (
-    .A(_0730_),
-    .B(\VC1Fifo.memoria.iReadAddress [1]),
-    .Y(_0731_)
-  );
-  NOR _2683_ (
-    .A(_0731_),
-    .B(_0725_),
-    .Y(_0732_)
-  );
-  NOR _2684_ (
-    .A(_0732_),
-    .B(_0634_),
-    .Y(_0733_)
-  );
-  NOR _2685_ (
-    .A(\VC0Fifo.memoria.Ram[2] [3]),
-    .B(\VC0Fifo.memoria.iReadAddress [0]),
-    .Y(_0734_)
-  );
-  NOT _2686_ (
-    .A(\VC0Fifo.memoria.Ram[3] [3]),
-    .Y(_0735_)
-  );
-  NAND _2687_ (
-    .A(_0735_),
-    .B(\VC0Fifo.memoria.iReadAddress [0]),
-    .Y(_0736_)
-  );
-  NAND _2688_ (
-    .A(_0736_),
-    .B(\VC0Fifo.memoria.iReadAddress [1]),
-    .Y(_0737_)
-  );
-  NOR _2689_ (
-    .A(_0737_),
-    .B(_0734_),
-    .Y(_0739_)
-  );
-  NOT _2690_ (
-    .A(\VC0Fifo.memoria.Ram[1] [3]),
-    .Y(_0740_)
-  );
-  NOR _2691_ (
-    .A(_0740_),
-    .B(_0140_),
-    .Y(_0741_)
-  );
-  NOT _2692_ (
-    .A(\VC0Fifo.memoria.Ram[0] [3]),
-    .Y(_0742_)
-  );
-  NOR _2693_ (
-    .A(_0742_),
-    .B(\VC0Fifo.memoria.iReadAddress [0]),
-    .Y(_0743_)
-  );
-  NOR _2694_ (
-    .A(_0743_),
-    .B(_0741_),
-    .Y(_0744_)
-  );
-  NOR _2695_ (
-    .A(_0744_),
-    .B(\VC0Fifo.memoria.iReadAddress [1]),
-    .Y(_0745_)
-  );
-  NOR _2696_ (
-    .A(_0745_),
-    .B(_0739_),
-    .Y(_0746_)
-  );
-  NOR _2697_ (
-    .A(_0746_),
-    .B(_0633_),
-    .Y(_0747_)
-  );
-  NOR _2698_ (
-    .A(_0747_),
-    .B(_0733_),
-    .Y(_0748_)
-  );
-  NOR _2699_ (
-    .A(_0748_),
-    .B(_0878_),
+  NAND _1692_ (
+    .A(_0120_),
+    .B(\VC0Fifo.memoria.Ram[2] [2]),
     .Y(_0125_)
   );
-  NOR _2700_ (
-    .A(\VC1Fifo.memoria.Ram[2] [4]),
-    .B(\VC1Fifo.memoria.iReadAddress [0]),
-    .Y(_0749_)
+  NAND _1693_ (
+    .A(_0125_),
+    .B(_0124_),
+    .Y(_0677_)
   );
-  NOT _2701_ (
-    .A(\VC1Fifo.memoria.Ram[3] [4]),
-    .Y(_0750_)
+  NAND _1694_ (
+    .A(_0117_),
+    .B(\VC0Fifo.Fifo_Data_in [3]),
+    .Y(_0126_)
   );
-  NAND _2702_ (
-    .A(_0750_),
-    .B(\VC1Fifo.memoria.iReadAddress [0]),
-    .Y(_0751_)
-  );
-  NAND _2703_ (
-    .A(_0751_),
-    .B(\VC1Fifo.memoria.iReadAddress [1]),
-    .Y(_0752_)
-  );
-  NOR _2704_ (
-    .A(_0752_),
-    .B(_0749_),
-    .Y(_0753_)
-  );
-  NOT _2705_ (
-    .A(\VC1Fifo.memoria.Ram[1] [4]),
-    .Y(_0754_)
-  );
-  NOR _2706_ (
-    .A(_0754_),
-    .B(_0288_),
-    .Y(_0755_)
-  );
-  NOT _2707_ (
-    .A(\VC1Fifo.memoria.Ram[0] [4]),
-    .Y(_0756_)
-  );
-  NOR _2708_ (
-    .A(_0756_),
-    .B(\VC1Fifo.memoria.iReadAddress [0]),
-    .Y(_0757_)
-  );
-  NOR _2709_ (
-    .A(_0757_),
-    .B(_0755_),
-    .Y(_0759_)
-  );
-  NOR _2710_ (
-    .A(_0759_),
-    .B(\VC1Fifo.memoria.iReadAddress [1]),
-    .Y(_0760_)
-  );
-  NOR _2711_ (
-    .A(_0760_),
-    .B(_0753_),
-    .Y(_0761_)
-  );
-  NOR _2712_ (
-    .A(_0761_),
-    .B(_0634_),
-    .Y(_0762_)
-  );
-  NOR _2713_ (
-    .A(\VC0Fifo.memoria.Ram[2] [4]),
-    .B(\VC0Fifo.memoria.iReadAddress [0]),
-    .Y(_0763_)
-  );
-  NOT _2714_ (
-    .A(\VC0Fifo.memoria.Ram[3] [4]),
-    .Y(_0764_)
-  );
-  NAND _2715_ (
-    .A(_0764_),
-    .B(\VC0Fifo.memoria.iReadAddress [0]),
-    .Y(_0765_)
-  );
-  NAND _2716_ (
-    .A(_0765_),
-    .B(\VC0Fifo.memoria.iReadAddress [1]),
-    .Y(_0766_)
-  );
-  NOR _2717_ (
-    .A(_0766_),
-    .B(_0763_),
-    .Y(_0767_)
-  );
-  NOT _2718_ (
-    .A(\VC0Fifo.memoria.Ram[1] [4]),
-    .Y(_0768_)
-  );
-  NOR _2719_ (
-    .A(_0768_),
-    .B(_0140_),
-    .Y(_0769_)
-  );
-  NOT _2720_ (
-    .A(\VC0Fifo.memoria.Ram[0] [4]),
-    .Y(_0770_)
-  );
-  NOR _2721_ (
-    .A(_0770_),
-    .B(\VC0Fifo.memoria.iReadAddress [0]),
-    .Y(_0771_)
-  );
-  NOR _2722_ (
-    .A(_0771_),
-    .B(_0769_),
-    .Y(_0772_)
-  );
-  NOR _2723_ (
-    .A(_0772_),
-    .B(\VC0Fifo.memoria.iReadAddress [1]),
-    .Y(_0773_)
-  );
-  NOR _2724_ (
-    .A(_0773_),
-    .B(_0767_),
-    .Y(_0774_)
-  );
-  NOR _2725_ (
-    .A(_0774_),
-    .B(_0633_),
-    .Y(_0775_)
-  );
-  NOR _2726_ (
-    .A(_0775_),
-    .B(_0762_),
-    .Y(_0776_)
-  );
-  NOR _2727_ (
-    .A(_0776_),
-    .B(_0878_),
+  NAND _1695_ (
+    .A(_0120_),
+    .B(\VC0Fifo.memoria.Ram[2] [3]),
     .Y(_0127_)
   );
-  NOR _2728_ (
-    .A(\VC1Fifo.memoria.Ram[2] [5]),
-    .B(\VC1Fifo.memoria.iReadAddress [0]),
-    .Y(_0777_)
+  NAND _1696_ (
+    .A(_0127_),
+    .B(_0126_),
+    .Y(_0679_)
   );
-  NOT _2729_ (
-    .A(\VC1Fifo.memoria.Ram[3] [5]),
-    .Y(_0779_)
+  NAND _1697_ (
+    .A(_0117_),
+    .B(\VC0Fifo.Fifo_Data_in [4]),
+    .Y(_0128_)
   );
-  NAND _2730_ (
-    .A(_0779_),
-    .B(\VC1Fifo.memoria.iReadAddress [0]),
-    .Y(_0780_)
-  );
-  NAND _2731_ (
-    .A(_0780_),
-    .B(\VC1Fifo.memoria.iReadAddress [1]),
-    .Y(_0781_)
-  );
-  NOR _2732_ (
-    .A(_0781_),
-    .B(_0777_),
-    .Y(_0782_)
-  );
-  NOT _2733_ (
-    .A(\VC1Fifo.memoria.Ram[1] [5]),
-    .Y(_0783_)
-  );
-  NOR _2734_ (
-    .A(_0783_),
-    .B(_0288_),
-    .Y(_0784_)
-  );
-  NOT _2735_ (
-    .A(\VC1Fifo.memoria.Ram[0] [5]),
-    .Y(_0785_)
-  );
-  NOR _2736_ (
-    .A(_0785_),
-    .B(\VC1Fifo.memoria.iReadAddress [0]),
-    .Y(_0786_)
-  );
-  NOR _2737_ (
-    .A(_0786_),
-    .B(_0784_),
-    .Y(_0787_)
-  );
-  NOR _2738_ (
-    .A(_0787_),
-    .B(\VC1Fifo.memoria.iReadAddress [1]),
-    .Y(_0788_)
-  );
-  NOR _2739_ (
-    .A(_0788_),
-    .B(_0782_),
-    .Y(_0789_)
-  );
-  NOR _2740_ (
-    .A(_0789_),
-    .B(_0634_),
-    .Y(_0790_)
-  );
-  NOR _2741_ (
-    .A(\VC0Fifo.memoria.Ram[2] [5]),
-    .B(\VC0Fifo.memoria.iReadAddress [0]),
-    .Y(_0791_)
-  );
-  NOT _2742_ (
-    .A(\VC0Fifo.memoria.Ram[3] [5]),
-    .Y(_0792_)
-  );
-  NAND _2743_ (
-    .A(_0792_),
-    .B(\VC0Fifo.memoria.iReadAddress [0]),
-    .Y(_0793_)
-  );
-  NAND _2744_ (
-    .A(_0793_),
-    .B(\VC0Fifo.memoria.iReadAddress [1]),
-    .Y(_0794_)
-  );
-  NOR _2745_ (
-    .A(_0794_),
-    .B(_0791_),
-    .Y(_0795_)
-  );
-  NOT _2746_ (
-    .A(\VC0Fifo.memoria.Ram[1] [5]),
-    .Y(_0796_)
-  );
-  NOR _2747_ (
-    .A(_0796_),
-    .B(_0140_),
-    .Y(_0797_)
-  );
-  NOT _2748_ (
-    .A(\VC0Fifo.memoria.Ram[0] [5]),
-    .Y(_0798_)
-  );
-  NOR _2749_ (
-    .A(_0798_),
-    .B(\VC0Fifo.memoria.iReadAddress [0]),
-    .Y(_0800_)
-  );
-  NOR _2750_ (
-    .A(_0800_),
-    .B(_0797_),
-    .Y(_0801_)
-  );
-  NOR _2751_ (
-    .A(_0801_),
-    .B(\VC0Fifo.memoria.iReadAddress [1]),
-    .Y(_0802_)
-  );
-  NOR _2752_ (
-    .A(_0802_),
-    .B(_0795_),
-    .Y(_0803_)
-  );
-  NOR _2753_ (
-    .A(_0803_),
-    .B(_0633_),
-    .Y(_0804_)
-  );
-  NOR _2754_ (
-    .A(_0804_),
-    .B(_0790_),
-    .Y(_0805_)
-  );
-  NOR _2755_ (
-    .A(_0805_),
-    .B(_0878_),
+  NAND _1698_ (
+    .A(_0120_),
+    .B(\VC0Fifo.memoria.Ram[2] [4]),
     .Y(_0129_)
   );
-  NOR _2756_ (
-    .A(\VC1Fifo.memoria.iReadEnable ),
-    .B(\VC0Fifo.memoria.iReadEnable ),
-    .Y(_0806_)
+  NAND _1699_ (
+    .A(_0129_),
+    .B(_0128_),
+    .Y(_0681_)
   );
-  NOR _2757_ (
-    .A(_0806_),
-    .B(_0878_),
+  NAND _1700_ (
+    .A(_0117_),
+    .B(\VC0Fifo.Fifo_Data_in [5]),
+    .Y(_0130_)
+  );
+  NAND _1701_ (
+    .A(_0120_),
+    .B(\VC0Fifo.memoria.Ram[2] [5]),
+    .Y(_0131_)
+  );
+  NAND _1702_ (
+    .A(_0131_),
+    .B(_0130_),
+    .Y(_0683_)
+  );
+  NOR _1703_ (
+    .A(_0059_),
+    .B(\VC0Fifo.memoria.iWriteAddress [1]),
     .Y(_0132_)
   );
-  DFF _2758_ (
+  NAND _1704_ (
+    .A(_0132_),
+    .B(\VC0Fifo.Fifo_Data_in [0]),
+    .Y(_0134_)
+  );
+  NOT _1705_ (
+    .A(_0132_),
+    .Y(_0135_)
+  );
+  NAND _1706_ (
+    .A(_0135_),
+    .B(\VC0Fifo.memoria.Ram[1] [0]),
+    .Y(_0136_)
+  );
+  NAND _1707_ (
+    .A(_0136_),
+    .B(_0134_),
+    .Y(_0686_)
+  );
+  NAND _1708_ (
+    .A(_0132_),
+    .B(\VC0Fifo.Fifo_Data_in [1]),
+    .Y(_0137_)
+  );
+  NAND _1709_ (
+    .A(_0135_),
+    .B(\VC0Fifo.memoria.Ram[1] [1]),
+    .Y(_0138_)
+  );
+  NAND _1710_ (
+    .A(_0138_),
+    .B(_0137_),
+    .Y(_0688_)
+  );
+  NAND _1711_ (
+    .A(_0132_),
+    .B(\VC0Fifo.Fifo_Data_in [2]),
+    .Y(_0139_)
+  );
+  NAND _1712_ (
+    .A(_0135_),
+    .B(\VC0Fifo.memoria.Ram[1] [2]),
+    .Y(_0140_)
+  );
+  NAND _1713_ (
+    .A(_0140_),
+    .B(_0139_),
+    .Y(_0689_)
+  );
+  NAND _1714_ (
+    .A(_0132_),
+    .B(\VC0Fifo.Fifo_Data_in [3]),
+    .Y(_0142_)
+  );
+  NAND _1715_ (
+    .A(_0135_),
+    .B(\VC0Fifo.memoria.Ram[1] [3]),
+    .Y(_0143_)
+  );
+  NAND _1716_ (
+    .A(_0143_),
+    .B(_0142_),
+    .Y(_0691_)
+  );
+  NAND _1717_ (
+    .A(_0132_),
+    .B(\VC0Fifo.Fifo_Data_in [4]),
+    .Y(_0144_)
+  );
+  NAND _1718_ (
+    .A(_0135_),
+    .B(\VC0Fifo.memoria.Ram[1] [4]),
+    .Y(_0145_)
+  );
+  NAND _1719_ (
+    .A(_0145_),
+    .B(_0144_),
+    .Y(_0693_)
+  );
+  NAND _1720_ (
+    .A(_0132_),
+    .B(\VC0Fifo.Fifo_Data_in [5]),
+    .Y(_0146_)
+  );
+  NAND _1721_ (
+    .A(_0135_),
+    .B(\VC0Fifo.memoria.Ram[1] [5]),
+    .Y(_0147_)
+  );
+  NAND _1722_ (
+    .A(_0147_),
+    .B(_0146_),
+    .Y(_0695_)
+  );
+  NOR _1723_ (
+    .A(_0116_),
+    .B(\VC0Fifo.memoria.iWriteAddress [1]),
+    .Y(_0148_)
+  );
+  NOR _1724_ (
+    .A(_0148_),
+    .B(\VC0Fifo.memoria.Ram[0] [0]),
+    .Y(_0150_)
+  );
+  NOT _1725_ (
+    .A(_0148_),
+    .Y(_0151_)
+  );
+  NOR _1726_ (
+    .A(_0151_),
+    .B(\VC0Fifo.Fifo_Data_in [0]),
+    .Y(_0152_)
+  );
+  NOR _1727_ (
+    .A(_0152_),
+    .B(_0150_),
+    .Y(_0698_)
+  );
+  NOR _1728_ (
+    .A(_0148_),
+    .B(\VC0Fifo.memoria.Ram[0] [1]),
+    .Y(_0153_)
+  );
+  NOR _1729_ (
+    .A(_0151_),
+    .B(\VC0Fifo.Fifo_Data_in [1]),
+    .Y(_0154_)
+  );
+  NOR _1730_ (
+    .A(_0154_),
+    .B(_0153_),
+    .Y(_0700_)
+  );
+  NOR _1731_ (
+    .A(_0148_),
+    .B(\VC0Fifo.memoria.Ram[0] [2]),
+    .Y(_0155_)
+  );
+  NOR _1732_ (
+    .A(_0151_),
+    .B(\VC0Fifo.Fifo_Data_in [2]),
+    .Y(_0156_)
+  );
+  NOR _1733_ (
+    .A(_0156_),
+    .B(_0155_),
+    .Y(_0702_)
+  );
+  NOR _1734_ (
+    .A(_0148_),
+    .B(\VC0Fifo.memoria.Ram[0] [3]),
+    .Y(_0158_)
+  );
+  NOR _1735_ (
+    .A(_0151_),
+    .B(\VC0Fifo.Fifo_Data_in [3]),
+    .Y(_0159_)
+  );
+  NOR _1736_ (
+    .A(_0159_),
+    .B(_0158_),
+    .Y(_0704_)
+  );
+  NOR _1737_ (
+    .A(_0148_),
+    .B(\VC0Fifo.memoria.Ram[0] [4]),
+    .Y(_0160_)
+  );
+  NOR _1738_ (
+    .A(_0151_),
+    .B(\VC0Fifo.Fifo_Data_in [4]),
+    .Y(_0161_)
+  );
+  NOR _1739_ (
+    .A(_0161_),
+    .B(_0160_),
+    .Y(_0706_)
+  );
+  NOR _1740_ (
+    .A(_0148_),
+    .B(\VC0Fifo.memoria.Ram[0] [5]),
+    .Y(_0162_)
+  );
+  NOR _1741_ (
+    .A(_0151_),
+    .B(\VC0Fifo.Fifo_Data_in [5]),
+    .Y(_0163_)
+  );
+  NOR _1742_ (
+    .A(_0163_),
+    .B(_0162_),
+    .Y(_0708_)
+  );
+  NOR _1743_ (
+    .A(\VC1Fifo.memoria.iReadEnable ),
+    .B(\VC1Fifo.memoria.iWriteEnable ),
+    .Y(_0164_)
+  );
+  NOR _1744_ (
+    .A(_0164_),
+    .B(\VC1Fifo.num_mem [0]),
+    .Y(_0166_)
+  );
+  NOT _1745_ (
+    .A(\VC1Fifo.num_mem [0]),
+    .Y(_0167_)
+  );
+  NOT _1746_ (
+    .A(_0164_),
+    .Y(_0168_)
+  );
+  NOR _1747_ (
+    .A(_0168_),
+    .B(_0167_),
+    .Y(_0169_)
+  );
+  NOR _1748_ (
+    .A(_0169_),
+    .B(_0166_),
+    .Y(_0170_)
+  );
+  NOR _1749_ (
+    .A(_0170_),
+    .B(_0451_),
+    .Y(_0740_)
+  );
+  NAND _1750_ (
+    .A(\VC1Fifo.memoria.iWriteEnable ),
+    .B(\VC1Fifo.num_mem [0]),
+    .Y(_0171_)
+  );
+  NOT _1751_ (
+    .A(\VC1Fifo.memoria.iReadEnable ),
+    .Y(_0172_)
+  );
+  NOR _1752_ (
+    .A(_0172_),
+    .B(\VC1Fifo.memoria.iWriteEnable ),
+    .Y(_0173_)
+  );
+  NAND _1753_ (
+    .A(_0173_),
+    .B(_0167_),
+    .Y(_0174_)
+  );
+  NAND _1754_ (
+    .A(_0174_),
+    .B(_0171_),
+    .Y(_0176_)
+  );
+  NOR _1755_ (
+    .A(_0176_),
+    .B(\VC1Fifo.num_mem [1]),
+    .Y(_0177_)
+  );
+  NAND _1756_ (
+    .A(_0176_),
+    .B(\VC1Fifo.num_mem [1]),
+    .Y(_0178_)
+  );
+  NAND _1757_ (
+    .A(_0178_),
+    .B(reset_L),
+    .Y(_0179_)
+  );
+  NOR _1758_ (
+    .A(_0179_),
+    .B(_0177_),
+    .Y(_0741_)
+  );
+  NOT _1759_ (
+    .A(\VC1Fifo.num_mem [2]),
+    .Y(_0180_)
+  );
+  NOT _1760_ (
+    .A(\VC1Fifo.num_mem [1]),
+    .Y(_0181_)
+  );
+  NOR _1761_ (
+    .A(_0171_),
+    .B(_0181_),
+    .Y(_0182_)
+  );
+  NOT _1762_ (
+    .A(_0173_),
+    .Y(_0183_)
+  );
+  NOR _1763_ (
+    .A(\VC1Fifo.num_mem [1]),
+    .B(\VC1Fifo.num_mem [0]),
+    .Y(_0184_)
+  );
+  NOT _1764_ (
+    .A(_0184_),
+    .Y(_0185_)
+  );
+  NOR _1765_ (
+    .A(_0185_),
+    .B(_0183_),
+    .Y(_0186_)
+  );
+  NOR _1766_ (
+    .A(_0186_),
+    .B(_0182_),
+    .Y(_0187_)
+  );
+  NOR _1767_ (
+    .A(_0187_),
+    .B(_0180_),
+    .Y(_0188_)
+  );
+  NAND _1768_ (
+    .A(_0187_),
+    .B(_0180_),
+    .Y(_0189_)
+  );
+  NAND _1769_ (
+    .A(_0189_),
+    .B(reset_L),
+    .Y(_0190_)
+  );
+  NOR _1770_ (
+    .A(_0190_),
+    .B(_0188_),
+    .Y(_0743_)
+  );
+  NOT _1771_ (
+    .A(\VC1Fifo.memoria.iReadAddress [0]),
+    .Y(_0191_)
+  );
+  NOR _1772_ (
+    .A(_0183_),
+    .B(_0191_),
+    .Y(_0192_)
+  );
+  NAND _1773_ (
+    .A(_0183_),
+    .B(_0191_),
+    .Y(_0193_)
+  );
+  NAND _1774_ (
+    .A(_0193_),
+    .B(reset_L),
+    .Y(_0195_)
+  );
+  NOR _1775_ (
+    .A(_0195_),
+    .B(_0192_),
+    .Y(_0751_)
+  );
+  NAND _1776_ (
+    .A(_0192_),
+    .B(\VC1Fifo.memoria.iReadAddress [1]),
+    .Y(_0196_)
+  );
+  NOT _1777_ (
+    .A(\VC1Fifo.memoria.iReadAddress [1]),
+    .Y(_0197_)
+  );
+  NOT _1778_ (
+    .A(_0192_),
+    .Y(_0198_)
+  );
+  NAND _1779_ (
+    .A(_0198_),
+    .B(_0197_),
+    .Y(_0199_)
+  );
+  NAND _1780_ (
+    .A(_0199_),
+    .B(_0196_),
+    .Y(_0200_)
+  );
+  NOR _1781_ (
+    .A(_0200_),
+    .B(_0451_),
+    .Y(_0753_)
+  );
+  NAND _1782_ (
+    .A(\VC1Fifo.memoria.iWriteAddress [0]),
+    .B(\VC1Fifo.memoria.iWriteEnable ),
+    .Y(_0201_)
+  );
+  NOT _1783_ (
+    .A(_0201_),
+    .Y(_0202_)
+  );
+  NOT _1784_ (
+    .A(\VC1Fifo.memoria.iWriteEnable ),
+    .Y(_0204_)
+  );
+  NOT _1785_ (
+    .A(\VC1Fifo.memoria.iWriteAddress [0]),
+    .Y(_0205_)
+  );
+  NAND _1786_ (
+    .A(_0205_),
+    .B(_0204_),
+    .Y(_0206_)
+  );
+  NAND _1787_ (
+    .A(_0206_),
+    .B(reset_L),
+    .Y(_0207_)
+  );
+  NOR _1788_ (
+    .A(_0207_),
+    .B(_0202_),
+    .Y(_0763_)
+  );
+  NOT _1789_ (
+    .A(\VC1Fifo.memoria.iWriteAddress [1]),
+    .Y(_0208_)
+  );
+  NOR _1790_ (
+    .A(_0201_),
+    .B(_0208_),
+    .Y(_0209_)
+  );
+  NAND _1791_ (
+    .A(_0201_),
+    .B(_0208_),
+    .Y(_0210_)
+  );
+  NAND _1792_ (
+    .A(_0210_),
+    .B(reset_L),
+    .Y(_0211_)
+  );
+  NOR _1793_ (
+    .A(_0211_),
+    .B(_0209_),
+    .Y(_0764_)
+  );
+  NAND _1794_ (
+    .A(_0184_),
+    .B(\VC1Fifo.num_mem [2]),
+    .Y(_0213_)
+  );
+  NOR _1795_ (
+    .A(_0213_),
+    .B(_0204_),
+    .Y(_0214_)
+  );
+  NOR _1796_ (
+    .A(_0214_),
+    .B(Error_Fifo_VC1),
+    .Y(_0215_)
+  );
+  NOR _1797_ (
+    .A(_0215_),
+    .B(_0451_),
+    .Y(_0771_)
+  );
+  NOR _1798_ (
+    .A(\VC1Fifo.num_mem [2]),
+    .B(_0167_),
+    .Y(_0216_)
+  );
+  NOT _1799_ (
+    .A(_0216_),
+    .Y(_0217_)
+  );
+  NAND _1800_ (
+    .A(_0213_),
+    .B(_0173_),
+    .Y(_0218_)
+  );
+  NOR _1801_ (
+    .A(_0184_),
+    .B(Fifo_Empty_VC1),
+    .Y(_0219_)
+  );
+  NOR _1802_ (
+    .A(_0219_),
+    .B(_0218_),
+    .Y(_0220_)
+  );
+  NAND _1803_ (
+    .A(_0220_),
+    .B(_0217_),
+    .Y(_0221_)
+  );
+  NOR _1804_ (
+    .A(_0204_),
+    .B(_0180_),
+    .Y(_0223_)
+  );
+  NAND _1805_ (
+    .A(_0223_),
+    .B(_0185_),
+    .Y(_0224_)
+  );
+  NOR _1806_ (
+    .A(_0164_),
+    .B(_0451_),
+    .Y(_0225_)
+  );
+  NAND _1807_ (
+    .A(_0225_),
+    .B(_0224_),
+    .Y(_0226_)
+  );
+  NAND _1808_ (
+    .A(_0226_),
+    .B(_0450_),
+    .Y(_0227_)
+  );
+  NAND _1809_ (
+    .A(_0227_),
+    .B(_0221_),
+    .Y(_0779_)
+  );
+  NAND _1810_ (
+    .A(_0216_),
+    .B(\VC1Fifo.num_mem [1]),
+    .Y(_0228_)
+  );
+  NAND _1811_ (
+    .A(_0228_),
+    .B(_0860_),
+    .Y(_0229_)
+  );
+  NOR _1812_ (
+    .A(_0229_),
+    .B(_0184_),
+    .Y(_0230_)
+  );
+  NOR _1813_ (
+    .A(_0223_),
+    .B(_0182_),
+    .Y(_0231_)
+  );
+  NOR _1814_ (
+    .A(_0231_),
+    .B(_0230_),
+    .Y(_0233_)
+  );
+  NAND _1815_ (
+    .A(_0164_),
+    .B(Pausa_VC1),
+    .Y(_0234_)
+  );
+  NOR _1816_ (
+    .A(\VC1Fifo.num_mem [1]),
+    .B(\VC1Fifo.num_mem [2]),
+    .Y(_0235_)
+  );
+  NOR _1817_ (
+    .A(_0235_),
+    .B(_0218_),
+    .Y(_0236_)
+  );
+  NAND _1818_ (
+    .A(_0236_),
+    .B(_0229_),
+    .Y(_0237_)
+  );
+  NAND _1819_ (
+    .A(_0237_),
+    .B(_0234_),
+    .Y(_0238_)
+  );
+  NOR _1820_ (
+    .A(_0238_),
+    .B(_0233_),
+    .Y(_0239_)
+  );
+  NOR _1821_ (
+    .A(_0239_),
+    .B(_0451_),
+    .Y(_0788_)
+  );
+  NAND _1822_ (
+    .A(_0209_),
+    .B(\VC1Fifo.Fifo_Data_in [0]),
+    .Y(_0240_)
+  );
+  NOT _1823_ (
+    .A(_0209_),
+    .Y(_0241_)
+  );
+  NAND _1824_ (
+    .A(_0241_),
+    .B(\VC1Fifo.memoria.Ram[3] [0]),
+    .Y(_0243_)
+  );
+  NAND _1825_ (
+    .A(_0243_),
+    .B(_0240_),
+    .Y(_0840_)
+  );
+  NAND _1826_ (
+    .A(_0209_),
+    .B(\VC1Fifo.Fifo_Data_in [1]),
+    .Y(_0244_)
+  );
+  NAND _1827_ (
+    .A(_0241_),
+    .B(\VC1Fifo.memoria.Ram[3] [1]),
+    .Y(_0245_)
+  );
+  NAND _1828_ (
+    .A(_0245_),
+    .B(_0244_),
+    .Y(_0842_)
+  );
+  NAND _1829_ (
+    .A(_0209_),
+    .B(\VC1Fifo.Fifo_Data_in [2]),
+    .Y(_0246_)
+  );
+  NAND _1830_ (
+    .A(_0241_),
+    .B(\VC1Fifo.memoria.Ram[3] [2]),
+    .Y(_0247_)
+  );
+  NAND _1831_ (
+    .A(_0247_),
+    .B(_0246_),
+    .Y(_0844_)
+  );
+  NAND _1832_ (
+    .A(_0209_),
+    .B(\VC1Fifo.Fifo_Data_in [3]),
+    .Y(_0248_)
+  );
+  NAND _1833_ (
+    .A(_0241_),
+    .B(\VC1Fifo.memoria.Ram[3] [3]),
+    .Y(_0249_)
+  );
+  NAND _1834_ (
+    .A(_0249_),
+    .B(_0248_),
+    .Y(_0845_)
+  );
+  NAND _1835_ (
+    .A(_0209_),
+    .B(\VC1Fifo.Fifo_Data_in [4]),
+    .Y(_0250_)
+  );
+  NAND _1836_ (
+    .A(_0241_),
+    .B(\VC1Fifo.memoria.Ram[3] [4]),
+    .Y(_0251_)
+  );
+  NAND _1837_ (
+    .A(_0251_),
+    .B(_0250_),
+    .Y(_0847_)
+  );
+  NAND _1838_ (
+    .A(_0209_),
+    .B(\VC1Fifo.Fifo_Data_in [5]),
+    .Y(_0252_)
+  );
+  NAND _1839_ (
+    .A(_0241_),
+    .B(\VC1Fifo.memoria.Ram[3] [5]),
+    .Y(_0253_)
+  );
+  NAND _1840_ (
+    .A(_0253_),
+    .B(_0252_),
+    .Y(_0849_)
+  );
+  NOR _1841_ (
+    .A(\VC1Fifo.memoria.iWriteAddress [0]),
+    .B(_0204_),
+    .Y(_0254_)
+  );
+  NOT _1842_ (
+    .A(_0254_),
+    .Y(_0255_)
+  );
+  NOR _1843_ (
+    .A(_0255_),
+    .B(_0208_),
+    .Y(_0256_)
+  );
+  NAND _1844_ (
+    .A(_0256_),
+    .B(\VC1Fifo.Fifo_Data_in [0]),
+    .Y(_0258_)
+  );
+  NOT _1845_ (
+    .A(_0256_),
+    .Y(_0259_)
+  );
+  NAND _1846_ (
+    .A(_0259_),
+    .B(\VC1Fifo.memoria.Ram[2] [0]),
+    .Y(_0260_)
+  );
+  NAND _1847_ (
+    .A(_0260_),
+    .B(_0258_),
+    .Y(_0851_)
+  );
+  NAND _1848_ (
+    .A(_0256_),
+    .B(\VC1Fifo.Fifo_Data_in [1]),
+    .Y(_0261_)
+  );
+  NAND _1849_ (
+    .A(_0259_),
+    .B(\VC1Fifo.memoria.Ram[2] [1]),
+    .Y(_0262_)
+  );
+  NAND _1850_ (
+    .A(_0262_),
+    .B(_0261_),
+    .Y(_0852_)
+  );
+  NAND _1851_ (
+    .A(_0256_),
+    .B(\VC1Fifo.Fifo_Data_in [2]),
+    .Y(_0263_)
+  );
+  NAND _1852_ (
+    .A(_0259_),
+    .B(\VC1Fifo.memoria.Ram[2] [2]),
+    .Y(_0264_)
+  );
+  NAND _1853_ (
+    .A(_0264_),
+    .B(_0263_),
+    .Y(_0854_)
+  );
+  NAND _1854_ (
+    .A(_0256_),
+    .B(\VC1Fifo.Fifo_Data_in [3]),
+    .Y(_0266_)
+  );
+  NAND _1855_ (
+    .A(_0259_),
+    .B(\VC1Fifo.memoria.Ram[2] [3]),
+    .Y(_0267_)
+  );
+  NAND _1856_ (
+    .A(_0267_),
+    .B(_0266_),
+    .Y(_0856_)
+  );
+  NAND _1857_ (
+    .A(_0256_),
+    .B(\VC1Fifo.Fifo_Data_in [4]),
+    .Y(_0268_)
+  );
+  NAND _1858_ (
+    .A(_0259_),
+    .B(\VC1Fifo.memoria.Ram[2] [4]),
+    .Y(_0269_)
+  );
+  NAND _1859_ (
+    .A(_0269_),
+    .B(_0268_),
+    .Y(_0857_)
+  );
+  NAND _1860_ (
+    .A(_0256_),
+    .B(\VC1Fifo.Fifo_Data_in [5]),
+    .Y(_0270_)
+  );
+  NAND _1861_ (
+    .A(_0259_),
+    .B(\VC1Fifo.memoria.Ram[2] [5]),
+    .Y(_0271_)
+  );
+  NAND _1862_ (
+    .A(_0271_),
+    .B(_0270_),
+    .Y(_0859_)
+  );
+  NOR _1863_ (
+    .A(_0201_),
+    .B(\VC1Fifo.memoria.iWriteAddress [1]),
+    .Y(_0272_)
+  );
+  NAND _1864_ (
+    .A(_0272_),
+    .B(\VC1Fifo.Fifo_Data_in [0]),
+    .Y(_0274_)
+  );
+  NOT _1865_ (
+    .A(_0272_),
+    .Y(_0275_)
+  );
+  NAND _1866_ (
+    .A(_0275_),
+    .B(\VC1Fifo.memoria.Ram[1] [0]),
+    .Y(_0276_)
+  );
+  NAND _1867_ (
+    .A(_0276_),
+    .B(_0274_),
+    .Y(_0862_)
+  );
+  NAND _1868_ (
+    .A(_0272_),
+    .B(\VC1Fifo.Fifo_Data_in [1]),
+    .Y(_0277_)
+  );
+  NAND _1869_ (
+    .A(_0275_),
+    .B(\VC1Fifo.memoria.Ram[1] [1]),
+    .Y(_0278_)
+  );
+  NAND _1870_ (
+    .A(_0278_),
+    .B(_0277_),
+    .Y(_0864_)
+  );
+  NAND _1871_ (
+    .A(_0272_),
+    .B(\VC1Fifo.Fifo_Data_in [2]),
+    .Y(_0279_)
+  );
+  NAND _1872_ (
+    .A(_0275_),
+    .B(\VC1Fifo.memoria.Ram[1] [2]),
+    .Y(_0280_)
+  );
+  NAND _1873_ (
+    .A(_0280_),
+    .B(_0279_),
+    .Y(_0866_)
+  );
+  NAND _1874_ (
+    .A(_0272_),
+    .B(\VC1Fifo.Fifo_Data_in [3]),
+    .Y(_0282_)
+  );
+  NAND _1875_ (
+    .A(_0275_),
+    .B(\VC1Fifo.memoria.Ram[1] [3]),
+    .Y(_0283_)
+  );
+  NAND _1876_ (
+    .A(_0283_),
+    .B(_0282_),
+    .Y(_0868_)
+  );
+  NAND _1877_ (
+    .A(_0272_),
+    .B(\VC1Fifo.Fifo_Data_in [4]),
+    .Y(_0284_)
+  );
+  NAND _1878_ (
+    .A(_0275_),
+    .B(\VC1Fifo.memoria.Ram[1] [4]),
+    .Y(_0285_)
+  );
+  NAND _1879_ (
+    .A(_0285_),
+    .B(_0284_),
+    .Y(_0870_)
+  );
+  NAND _1880_ (
+    .A(_0272_),
+    .B(\VC1Fifo.Fifo_Data_in [5]),
+    .Y(_0286_)
+  );
+  NAND _1881_ (
+    .A(_0275_),
+    .B(\VC1Fifo.memoria.Ram[1] [5]),
+    .Y(_0287_)
+  );
+  NAND _1882_ (
+    .A(_0287_),
+    .B(_0286_),
+    .Y(_0872_)
+  );
+  NOR _1883_ (
+    .A(_0255_),
+    .B(\VC1Fifo.memoria.iWriteAddress [1]),
+    .Y(_0288_)
+  );
+  NOR _1884_ (
+    .A(_0288_),
+    .B(\VC1Fifo.memoria.Ram[0] [0]),
+    .Y(_0290_)
+  );
+  NOT _1885_ (
+    .A(_0288_),
+    .Y(_0291_)
+  );
+  NOR _1886_ (
+    .A(_0291_),
+    .B(\VC1Fifo.Fifo_Data_in [0]),
+    .Y(_0292_)
+  );
+  NOR _1887_ (
+    .A(_0292_),
+    .B(_0290_),
+    .Y(_0874_)
+  );
+  NOR _1888_ (
+    .A(_0288_),
+    .B(\VC1Fifo.memoria.Ram[0] [1]),
+    .Y(_0293_)
+  );
+  NOR _1889_ (
+    .A(_0291_),
+    .B(\VC1Fifo.Fifo_Data_in [1]),
+    .Y(_0294_)
+  );
+  NOR _1890_ (
+    .A(_0294_),
+    .B(_0293_),
+    .Y(_0876_)
+  );
+  NOR _1891_ (
+    .A(_0288_),
+    .B(\VC1Fifo.memoria.Ram[0] [2]),
+    .Y(_0295_)
+  );
+  NOR _1892_ (
+    .A(_0291_),
+    .B(\VC1Fifo.Fifo_Data_in [2]),
+    .Y(_0296_)
+  );
+  NOR _1893_ (
+    .A(_0296_),
+    .B(_0295_),
+    .Y(_0878_)
+  );
+  NOR _1894_ (
+    .A(_0288_),
+    .B(\VC1Fifo.memoria.Ram[0] [3]),
+    .Y(_0298_)
+  );
+  NOR _1895_ (
+    .A(_0291_),
+    .B(\VC1Fifo.Fifo_Data_in [3]),
+    .Y(_0299_)
+  );
+  NOR _1896_ (
+    .A(_0299_),
+    .B(_0298_),
+    .Y(_0880_)
+  );
+  NOR _1897_ (
+    .A(_0288_),
+    .B(\VC1Fifo.memoria.Ram[0] [4]),
+    .Y(_0300_)
+  );
+  NOR _1898_ (
+    .A(_0291_),
+    .B(\VC1Fifo.Fifo_Data_in [4]),
+    .Y(_0301_)
+  );
+  NOR _1899_ (
+    .A(_0301_),
+    .B(_0300_),
+    .Y(_0882_)
+  );
+  NOR _1900_ (
+    .A(_0288_),
+    .B(\VC1Fifo.memoria.Ram[0] [5]),
+    .Y(_0302_)
+  );
+  NOR _1901_ (
+    .A(_0291_),
+    .B(\VC1Fifo.Fifo_Data_in [5]),
+    .Y(_0303_)
+  );
+  NOR _1902_ (
+    .A(_0303_),
+    .B(_0302_),
+    .Y(_0884_)
+  );
+  NOT _1903_ (
+    .A(\VC1Fifo.Fifo_Data_in [0]),
+    .Y(_0304_)
+  );
+  NAND _1904_ (
+    .A(\VC1Fifo.memoria.iWriteEnable ),
+    .B(reset_L),
+    .Y(_0305_)
+  );
+  NOR _1905_ (
+    .A(_0305_),
+    .B(_0304_),
+    .Y(_0914_)
+  );
+  NOT _1906_ (
+    .A(\VC1Fifo.Fifo_Data_in [1]),
+    .Y(_0306_)
+  );
+  NOR _1907_ (
+    .A(_0305_),
+    .B(_0306_),
+    .Y(_0915_)
+  );
+  NOT _1908_ (
+    .A(\VC1Fifo.Fifo_Data_in [2]),
+    .Y(_0307_)
+  );
+  NOR _1909_ (
+    .A(_0305_),
+    .B(_0307_),
+    .Y(_0917_)
+  );
+  NOT _1910_ (
+    .A(\VC1Fifo.Fifo_Data_in [3]),
+    .Y(_0308_)
+  );
+  NOR _1911_ (
+    .A(_0305_),
+    .B(_0308_),
+    .Y(_0919_)
+  );
+  NOT _1912_ (
+    .A(\VC1Fifo.Fifo_Data_in [4]),
+    .Y(_0309_)
+  );
+  NOR _1913_ (
+    .A(_0305_),
+    .B(_0309_),
+    .Y(_0921_)
+  );
+  NOT _1914_ (
+    .A(\VC1Fifo.Fifo_Data_in [5]),
+    .Y(_0310_)
+  );
+  NOR _1915_ (
+    .A(_0305_),
+    .B(_0310_),
+    .Y(_0923_)
+  );
+  NOT _1916_ (
+    .A(\VC0Fifo.Fifo_Data_in [0]),
+    .Y(_0311_)
+  );
+  NAND _1917_ (
+    .A(\VC0Fifo.memoria.iWriteEnable ),
+    .B(reset_L),
+    .Y(_0312_)
+  );
+  NOR _1918_ (
+    .A(_0312_),
+    .B(_0311_),
+    .Y(_0939_)
+  );
+  NOT _1919_ (
+    .A(\VC0Fifo.Fifo_Data_in [1]),
+    .Y(_0313_)
+  );
+  NOR _1920_ (
+    .A(_0312_),
+    .B(_0313_),
+    .Y(_0941_)
+  );
+  NOT _1921_ (
+    .A(\VC0Fifo.Fifo_Data_in [2]),
+    .Y(_0314_)
+  );
+  NOR _1922_ (
+    .A(_0312_),
+    .B(_0314_),
+    .Y(_0943_)
+  );
+  NOT _1923_ (
+    .A(\VC0Fifo.Fifo_Data_in [3]),
+    .Y(_0315_)
+  );
+  NOR _1924_ (
+    .A(_0312_),
+    .B(_0315_),
+    .Y(_0945_)
+  );
+  NOT _1925_ (
+    .A(\VC0Fifo.Fifo_Data_in [4]),
+    .Y(_0316_)
+  );
+  NOR _1926_ (
+    .A(_0312_),
+    .B(_0316_),
+    .Y(_0947_)
+  );
+  NOT _1927_ (
+    .A(\VC0Fifo.Fifo_Data_in [5]),
+    .Y(_0317_)
+  );
+  NOR _1928_ (
+    .A(_0312_),
+    .B(_0317_),
+    .Y(_0949_)
+  );
+  NOT _1929_ (
+    .A(init),
+    .Y(_0318_)
+  );
+  NAND _1930_ (
+    .A(\fsm_Control1.nxt_state [0]),
+    .B(_0318_),
+    .Y(_0319_)
+  );
+  NAND _1931_ (
+    .A(_0319_),
+    .B(reset_L),
+    .Y(_0014_)
+  );
+  NOR _1932_ (
+    .A(init),
+    .B(\fsm_Control1.nxt_state [1]),
+    .Y(_0320_)
+  );
+  NOR _1933_ (
+    .A(_0320_),
+    .B(_0451_),
+    .Y(_0016_)
+  );
+  NOT _1934_ (
+    .A(\fsm_Control1.nxt_state [2]),
+    .Y(_0321_)
+  );
+  NAND _1935_ (
+    .A(_0318_),
+    .B(reset_L),
+    .Y(_0322_)
+  );
+  NOR _1936_ (
+    .A(_0322_),
+    .B(_0321_),
+    .Y(_0018_)
+  );
+  NOT _1937_ (
+    .A(\fsm_Control1.nxt_state [3]),
+    .Y(_0323_)
+  );
+  NOR _1938_ (
+    .A(_0322_),
+    .B(_0323_),
+    .Y(_0020_)
+  );
+  NOT _1939_ (
+    .A(\fsm_Control1.nxt_state [4]),
+    .Y(_0324_)
+  );
+  NOR _1940_ (
+    .A(_0322_),
+    .B(_0324_),
+    .Y(_0022_)
+  );
+  NOT _1941_ (
+    .A(\fsm_Control1.state [4]),
+    .Y(_0325_)
+  );
+  NOR _1942_ (
+    .A(\fsm_Control1.state [1]),
+    .B(\fsm_Control1.state [0]),
+    .Y(_0326_)
+  );
+  NAND _1943_ (
+    .A(_0326_),
+    .B(_0325_),
+    .Y(_0327_)
+  );
+  NOT _1944_ (
+    .A(\fsm_Control1.state [2]),
+    .Y(_0328_)
+  );
+  NAND _1945_ (
+    .A(\fsm_Control1.state [3]),
+    .B(_0328_),
+    .Y(_0329_)
+  );
+  NOR _1946_ (
+    .A(_0329_),
+    .B(_0327_),
+    .Y(_0330_)
+  );
+  NOT _1947_ (
+    .A(Error_Fifo_VC0),
+    .Y(_0331_)
+  );
+  NOR _1948_ (
+    .A(Error_Fifo_VC1),
+    .B(Error_Fifo_MF),
+    .Y(_0332_)
+  );
+  NAND _1949_ (
+    .A(_0332_),
+    .B(_0331_),
+    .Y(_0333_)
+  );
+  NOT _1950_ (
+    .A(_0333_),
+    .Y(_0334_)
+  );
+  NAND _1951_ (
+    .A(_0334_),
+    .B(_0330_),
+    .Y(_0335_)
+  );
+  NOR _1952_ (
+    .A(\fsm_Control1.state [3]),
+    .B(\fsm_Control1.state [2]),
+    .Y(_0336_)
+  );
+  NOT _1953_ (
+    .A(_0336_),
+    .Y(_0337_)
+  );
+  NOR _1954_ (
+    .A(_0337_),
+    .B(\fsm_Control1.state [4]),
+    .Y(_0338_)
+  );
+  NOT _1955_ (
+    .A(\fsm_Control1.state [0]),
+    .Y(_0339_)
+  );
+  NOR _1956_ (
+    .A(\fsm_Control1.state [1]),
+    .B(_0339_),
+    .Y(_0340_)
+  );
+  NAND _1957_ (
+    .A(_0340_),
+    .B(_0338_),
+    .Y(_0341_)
+  );
+  NAND _1958_ (
+    .A(\fsm_Control1.state [1]),
+    .B(_0339_),
+    .Y(_0342_)
+  );
+  NOT _1959_ (
+    .A(_0342_),
+    .Y(_0343_)
+  );
+  NAND _1960_ (
+    .A(_0343_),
+    .B(_0338_),
+    .Y(_0344_)
+  );
+  NAND _1961_ (
+    .A(_0344_),
+    .B(_0341_),
+    .Y(_0345_)
+  );
+  NAND _1962_ (
+    .A(_0326_),
+    .B(\fsm_Control1.state [4]),
+    .Y(_0346_)
+  );
+  NOR _1963_ (
+    .A(_0346_),
+    .B(_0337_),
+    .Y(_0347_)
+  );
+  NOT _1964_ (
+    .A(_0347_),
+    .Y(_0348_)
+  );
+  NOT _1965_ (
+    .A(\fsm_Control1.state [3]),
+    .Y(_0349_)
+  );
+  NAND _1966_ (
+    .A(_0349_),
+    .B(\fsm_Control1.state [2]),
+    .Y(_0350_)
+  );
+  NOR _1967_ (
+    .A(_0350_),
+    .B(_0327_),
+    .Y(_0351_)
+  );
+  NOR _1968_ (
+    .A(_0351_),
+    .B(_0330_),
+    .Y(_0352_)
+  );
+  NAND _1969_ (
+    .A(_0352_),
+    .B(_0348_),
+    .Y(_0353_)
+  );
+  NOR _1970_ (
+    .A(_0353_),
+    .B(_0345_),
+    .Y(_0354_)
+  );
+  NOT _1971_ (
+    .A(active_out),
+    .Y(_0355_)
+  );
+  NOR _1972_ (
+    .A(_0355_),
+    .B(_0451_),
+    .Y(_0356_)
+  );
+  NAND _1973_ (
+    .A(_0356_),
+    .B(_0354_),
+    .Y(_0357_)
+  );
+  NAND _1974_ (
+    .A(_0357_),
+    .B(_0335_),
+    .Y(_0033_)
+  );
+  NOT _1975_ (
+    .A(_0351_),
+    .Y(_0358_)
+  );
+  NOR _1976_ (
+    .A(_0358_),
+    .B(_0333_),
+    .Y(_0359_)
+  );
+  NOR _1977_ (
+    .A(_0359_),
+    .B(_0354_),
+    .Y(_0360_)
+  );
+  NAND _1978_ (
+    .A(idle_out),
+    .B(reset_L),
+    .Y(_0361_)
+  );
+  NOR _1979_ (
+    .A(_0361_),
+    .B(_0360_),
+    .Y(_0035_)
+  );
+  NOT _1980_ (
+    .A(error_out),
+    .Y(_0362_)
+  );
+  NOR _1981_ (
+    .A(_0362_),
+    .B(_0451_),
+    .Y(_0363_)
+  );
+  NOR _1982_ (
+    .A(_0348_),
+    .B(_0334_),
+    .Y(_0364_)
+  );
+  NOR _1983_ (
+    .A(_0364_),
+    .B(_0363_),
+    .Y(_0365_)
+  );
+  NOR _1984_ (
+    .A(_0365_),
+    .B(_0345_),
+    .Y(_0038_)
+  );
+  NOR _1985_ (
+    .A(_0333_),
+    .B(reset_L),
+    .Y(_0366_)
+  );
+  NAND _1986_ (
+    .A(_0366_),
+    .B(_0347_),
+    .Y(_0367_)
+  );
+  NOR _1987_ (
+    .A(_0318_),
+    .B(_0451_),
+    .Y(_0368_)
+  );
+  NOT _1988_ (
+    .A(_0368_),
+    .Y(_0369_)
+  );
+  NAND _1989_ (
+    .A(_0369_),
+    .B(\fsm_Control1.nxt_state [0]),
+    .Y(_0370_)
+  );
+  NOR _1990_ (
+    .A(_0370_),
+    .B(_0335_),
+    .Y(_0371_)
+  );
+  NOR _1991_ (
+    .A(_0371_),
+    .B(_0354_),
+    .Y(_0372_)
+  );
+  NAND _1992_ (
+    .A(_0372_),
+    .B(_0367_),
+    .Y(_0040_)
+  );
+  NOT _1993_ (
+    .A(_0335_),
+    .Y(_0373_)
+  );
+  NOT _1994_ (
+    .A(\fsm_Control1.nxt_state [1]),
+    .Y(_0374_)
+  );
+  NOR _1995_ (
+    .A(_0368_),
+    .B(_0374_),
+    .Y(_0375_)
+  );
+  NAND _1996_ (
+    .A(_0375_),
+    .B(_0373_),
+    .Y(_0376_)
+  );
+  NAND _1997_ (
+    .A(_0376_),
+    .B(_0341_),
+    .Y(_0042_)
+  );
+  NOT _1998_ (
+    .A(_0344_),
+    .Y(_0377_)
+  );
+  NAND _1999_ (
+    .A(_0377_),
+    .B(_0334_),
+    .Y(_0378_)
+  );
+  NAND _2000_ (
+    .A(_0369_),
+    .B(_0321_),
+    .Y(_0379_)
+  );
+  NAND _2001_ (
+    .A(_0379_),
+    .B(_0373_),
+    .Y(_0380_)
+  );
+  NAND _2002_ (
+    .A(_0380_),
+    .B(_0378_),
+    .Y(_0044_)
+  );
+  NOT _2003_ (
+    .A(_0359_),
+    .Y(_0381_)
+  );
+  NOR _2004_ (
+    .A(_0368_),
+    .B(_0323_),
+    .Y(_0382_)
+  );
+  NAND _2005_ (
+    .A(_0382_),
+    .B(_0373_),
+    .Y(_0383_)
+  );
+  NAND _2006_ (
+    .A(_0383_),
+    .B(_0381_),
+    .Y(_0046_)
+  );
+  NAND _2007_ (
+    .A(_0358_),
+    .B(_0344_),
+    .Y(_0384_)
+  );
+  NAND _2008_ (
+    .A(_0384_),
+    .B(_0333_),
+    .Y(_0385_)
+  );
+  NOR _2009_ (
+    .A(_0366_),
+    .B(_0348_),
+    .Y(_0386_)
+  );
+  NOT _2010_ (
+    .A(_0330_),
+    .Y(_0387_)
+  );
+  NOR _2011_ (
+    .A(_0368_),
+    .B(_0324_),
+    .Y(_0388_)
+  );
+  NOR _2012_ (
+    .A(_0388_),
+    .B(_0333_),
+    .Y(_0389_)
+  );
+  NOR _2013_ (
+    .A(_0389_),
+    .B(_0387_),
+    .Y(_0390_)
+  );
+  NOR _2014_ (
+    .A(_0390_),
+    .B(_0386_),
+    .Y(_0391_)
+  );
+  NAND _2015_ (
+    .A(_0391_),
+    .B(_0385_),
+    .Y(_0048_)
+  );
+  DFF _2016_ (
     .C(clk),
     .D(_0000_),
-    .Q(\VC0Fifo.pop )
-  );
-  DFF _2759_ (
-    .C(clk),
-    .D(_0001_),
-    .Q(\VC1Fifo.pop )
-  );
-  DFF _2760_ (
-    .C(clk),
-    .D(_0846_),
-    .Q(\D0Fifo.memoria.iReadAddress [0])
-  );
-  DFF _2761_ (
-    .C(clk),
-    .D(_0848_),
-    .Q(\D0Fifo.memoria.iReadAddress [1])
-  );
-  DFF _2762_ (
-    .C(clk),
-    .D(_0854_),
-    .Q(\D0Fifo.memoria.iWriteAddress [0])
-  );
-  DFF _2763_ (
-    .C(clk),
-    .D(_0857_),
-    .Q(\D0Fifo.memoria.iWriteAddress [1])
-  );
-  DFF _2764_ (
-    .C(clk),
-    .D(_0911_),
-    .Q(\D0Fifo.memoria.iReadEnable )
-  );
-  DFF _2765_ (
-    .C(clk),
-    .D(_0860_),
-    .Q(\D0Fifo.Fifo_Data_in_int [0])
-  );
-  DFF _2766_ (
-    .C(clk),
-    .D(_0870_),
-    .Q(\D0Fifo.Fifo_Data_in_int [1])
-  );
-  DFF _2767_ (
-    .C(clk),
-    .D(_0871_),
-    .Q(\D0Fifo.Fifo_Data_in_int [2])
-  );
-  DFF _2768_ (
-    .C(clk),
-    .D(_0872_),
-    .Q(\D0Fifo.Fifo_Data_in_int [3])
-  );
-  DFF _2769_ (
-    .C(clk),
-    .D(_0873_),
-    .Q(\D0Fifo.Fifo_Data_in_int [4])
-  );
-  DFF _2770_ (
-    .C(clk),
-    .D(_0896_),
-    .Q(\D0Fifo.Fifo_Data_in_int [5])
-  );
-  DFF _2771_ (
-    .C(clk),
-    .D(_0365_),
-    .Q(\D0Fifo.memoria.Ram[0] [0])
-  );
-  DFF _2772_ (
-    .C(clk),
-    .D(_0373_),
-    .Q(\D0Fifo.memoria.Ram[0] [1])
-  );
-  DFF _2773_ (
-    .C(clk),
-    .D(_0381_),
-    .Q(\D0Fifo.memoria.Ram[0] [2])
-  );
-  DFF _2774_ (
-    .C(clk),
-    .D(_0389_),
-    .Q(\D0Fifo.memoria.Ram[0] [3])
-  );
-  DFF _2775_ (
-    .C(clk),
-    .D(_0397_),
-    .Q(\D0Fifo.memoria.Ram[0] [4])
-  );
-  DFF _2776_ (
-    .C(clk),
-    .D(_0405_),
-    .Q(\D0Fifo.memoria.Ram[0] [5])
-  );
-  DFF _2777_ (
-    .C(clk),
-    .D(_0307_),
-    .Q(\D0Fifo.memoria.Ram[1] [0])
-  );
-  DFF _2778_ (
-    .C(clk),
-    .D(_0316_),
-    .Q(\D0Fifo.memoria.Ram[1] [1])
-  );
-  DFF _2779_ (
-    .C(clk),
-    .D(_0326_),
-    .Q(\D0Fifo.memoria.Ram[1] [2])
-  );
-  DFF _2780_ (
-    .C(clk),
-    .D(_0336_),
-    .Q(\D0Fifo.memoria.Ram[1] [3])
-  );
-  DFF _2781_ (
-    .C(clk),
-    .D(_0342_),
-    .Q(\D0Fifo.memoria.Ram[1] [4])
-  );
-  DFF _2782_ (
-    .C(clk),
-    .D(_0350_),
-    .Q(\D0Fifo.memoria.Ram[1] [5])
-  );
-  DFF _2783_ (
-    .C(clk),
-    .D(_0190_),
-    .Q(\D0Fifo.memoria.Ram[3] [0])
-  );
-  DFF _2784_ (
-    .C(clk),
-    .D(_0196_),
-    .Q(\D0Fifo.memoria.Ram[3] [1])
-  );
-  DFF _2785_ (
-    .C(clk),
-    .D(_0204_),
-    .Q(\D0Fifo.memoria.Ram[3] [2])
-  );
-  DFF _2786_ (
-    .C(clk),
-    .D(_0212_),
-    .Q(\D0Fifo.memoria.Ram[3] [3])
-  );
-  DFF _2787_ (
-    .C(clk),
-    .D(_0221_),
-    .Q(\D0Fifo.memoria.Ram[3] [4])
-  );
-  DFF _2788_ (
-    .C(clk),
-    .D(_0228_),
-    .Q(\D0Fifo.memoria.Ram[3] [5])
-  );
-  DFF _2789_ (
-    .C(clk),
-    .D(_0244_),
-    .Q(\D0Fifo.memoria.Ram[2] [0])
-  );
-  DFF _2790_ (
-    .C(clk),
-    .D(_0252_),
-    .Q(\D0Fifo.memoria.Ram[2] [1])
-  );
-  DFF _2791_ (
-    .C(clk),
-    .D(_0260_),
-    .Q(\D0Fifo.memoria.Ram[2] [2])
-  );
-  DFF _2792_ (
-    .C(clk),
-    .D(_0269_),
-    .Q(\D0Fifo.memoria.Ram[2] [3])
-  );
-  DFF _2793_ (
-    .C(clk),
-    .D(_0279_),
-    .Q(\D0Fifo.memoria.Ram[2] [4])
-  );
-  DFF _2794_ (
-    .C(clk),
-    .D(_0289_),
-    .Q(\D0Fifo.memoria.Ram[2] [5])
-  );
-  DFF _2795_ (
-    .C(clk),
-    .D(_0636_),
-    .Q(\D1Fifo.memoria.iReadAddress [0])
-  );
-  DFF _2796_ (
-    .C(clk),
-    .D(_0657_),
-    .Q(\D1Fifo.memoria.iReadAddress [1])
-  );
-  DFF _2797_ (
-    .C(clk),
-    .D(_0687_),
-    .Q(\D1Fifo.memoria.iWriteAddress [0])
-  );
-  DFF _2798_ (
-    .C(clk),
-    .D(_0697_),
-    .Q(\D1Fifo.memoria.iWriteAddress [1])
-  );
-  DFF _2799_ (
-    .C(clk),
-    .D(_0808_),
-    .Q(\D1Fifo.memoria.iReadEnable )
-  );
-  DFF _2800_ (
-    .C(clk),
-    .D(_0718_),
-    .Q(\D1Fifo.Fifo_Data_in_int [0])
-  );
-  DFF _2801_ (
-    .C(clk),
-    .D(_0738_),
-    .Q(\D1Fifo.Fifo_Data_in_int [1])
-  );
-  DFF _2802_ (
-    .C(clk),
-    .D(_0758_),
-    .Q(\D1Fifo.Fifo_Data_in_int [2])
-  );
-  DFF _2803_ (
-    .C(clk),
-    .D(_0778_),
-    .Q(\D1Fifo.Fifo_Data_in_int [3])
-  );
-  DFF _2804_ (
-    .C(clk),
-    .D(_0799_),
-    .Q(\D1Fifo.Fifo_Data_in_int [4])
-  );
-  DFF _2805_ (
-    .C(clk),
-    .D(_0807_),
-    .Q(\D1Fifo.Fifo_Data_in_int [5])
-  );
-  DFF _2806_ (
-    .C(clk),
-    .D(_0827_),
-    .Q(\D1Fifo.memoria.Ram[0] [0])
-  );
-  DFF _2807_ (
-    .C(clk),
-    .D(_0828_),
-    .Q(\D1Fifo.memoria.Ram[0] [1])
-  );
-  DFF _2808_ (
-    .C(clk),
-    .D(_0829_),
-    .Q(\D1Fifo.memoria.Ram[0] [2])
-  );
-  DFF _2809_ (
-    .C(clk),
-    .D(_0830_),
-    .Q(\D1Fifo.memoria.Ram[0] [3])
-  );
-  DFF _2810_ (
-    .C(clk),
-    .D(_0831_),
-    .Q(\D1Fifo.memoria.Ram[0] [4])
-  );
-  DFF _2811_ (
-    .C(clk),
-    .D(_0832_),
-    .Q(\D1Fifo.memoria.Ram[0] [5])
-  );
-  DFF _2812_ (
-    .C(clk),
-    .D(_0821_),
-    .Q(\D1Fifo.memoria.Ram[1] [0])
-  );
-  DFF _2813_ (
-    .C(clk),
-    .D(_0822_),
-    .Q(\D1Fifo.memoria.Ram[1] [1])
-  );
-  DFF _2814_ (
-    .C(clk),
-    .D(_0823_),
-    .Q(\D1Fifo.memoria.Ram[1] [2])
-  );
-  DFF _2815_ (
-    .C(clk),
-    .D(_0824_),
-    .Q(\D1Fifo.memoria.Ram[1] [3])
-  );
-  DFF _2816_ (
-    .C(clk),
-    .D(_0825_),
-    .Q(\D1Fifo.memoria.Ram[1] [4])
-  );
-  DFF _2817_ (
-    .C(clk),
-    .D(_0826_),
-    .Q(\D1Fifo.memoria.Ram[1] [5])
-  );
-  DFF _2818_ (
-    .C(clk),
-    .D(_0809_),
-    .Q(\D1Fifo.memoria.Ram[3] [0])
-  );
-  DFF _2819_ (
-    .C(clk),
-    .D(_0810_),
-    .Q(\D1Fifo.memoria.Ram[3] [1])
-  );
-  DFF _2820_ (
-    .C(clk),
-    .D(_0811_),
-    .Q(\D1Fifo.memoria.Ram[3] [2])
-  );
-  DFF _2821_ (
-    .C(clk),
-    .D(_0812_),
-    .Q(\D1Fifo.memoria.Ram[3] [3])
-  );
-  DFF _2822_ (
-    .C(clk),
-    .D(_0813_),
-    .Q(\D1Fifo.memoria.Ram[3] [4])
-  );
-  DFF _2823_ (
-    .C(clk),
-    .D(_0814_),
-    .Q(\D1Fifo.memoria.Ram[3] [5])
-  );
-  DFF _2824_ (
-    .C(clk),
-    .D(_0815_),
-    .Q(\D1Fifo.memoria.Ram[2] [0])
-  );
-  DFF _2825_ (
-    .C(clk),
-    .D(_0816_),
-    .Q(\D1Fifo.memoria.Ram[2] [1])
-  );
-  DFF _2826_ (
-    .C(clk),
-    .D(_0817_),
-    .Q(\D1Fifo.memoria.Ram[2] [2])
-  );
-  DFF _2827_ (
-    .C(clk),
-    .D(_0818_),
-    .Q(\D1Fifo.memoria.Ram[2] [3])
-  );
-  DFF _2828_ (
-    .C(clk),
-    .D(_0819_),
-    .Q(\D1Fifo.memoria.Ram[2] [4])
-  );
-  DFF _2829_ (
-    .C(clk),
-    .D(_0820_),
-    .Q(\D1Fifo.memoria.Ram[2] [5])
-  );
-  DFF _2830_ (
-    .C(clk),
-    .D(_0841_),
-    .Q(\D0Fifo.Fifo_Data_in [0])
-  );
-  DFF _2831_ (
-    .C(clk),
-    .D(_0842_),
-    .Q(\D0Fifo.Fifo_Data_in [1])
-  );
-  DFF _2832_ (
-    .C(clk),
-    .D(_0843_),
-    .Q(\D0Fifo.Fifo_Data_in [2])
-  );
-  DFF _2833_ (
-    .C(clk),
-    .D(_0844_),
-    .Q(\D0Fifo.Fifo_Data_in [3])
-  );
-  DFF _2834_ (
-    .C(clk),
-    .D(_0845_),
-    .Q(\D0Fifo.Fifo_Data_in [4])
-  );
-  DFF _2835_ (
-    .C(clk),
-    .D(_0847_),
-    .Q(\D0Fifo.Fifo_Data_in [5])
-  );
-  DFF _2836_ (
-    .C(clk),
-    .D(_0835_),
-    .Q(\D1Fifo.Fifo_Data_in [0])
-  );
-  DFF _2837_ (
-    .C(clk),
-    .D(_0836_),
-    .Q(\D1Fifo.Fifo_Data_in [1])
-  );
-  DFF _2838_ (
-    .C(clk),
-    .D(_0837_),
-    .Q(\D1Fifo.Fifo_Data_in [2])
-  );
-  DFF _2839_ (
-    .C(clk),
-    .D(_0838_),
-    .Q(\D1Fifo.Fifo_Data_in [3])
-  );
-  DFF _2840_ (
-    .C(clk),
-    .D(_0839_),
-    .Q(\D1Fifo.Fifo_Data_in [4])
-  );
-  DFF _2841_ (
-    .C(clk),
-    .D(_0840_),
-    .Q(\D1Fifo.Fifo_Data_in [5])
-  );
-  DFF _2842_ (
-    .C(clk),
-    .D(_0834_),
-    .Q(\D0Fifo.pop )
-  );
-  DFF _2843_ (
-    .C(clk),
-    .D(_0833_),
-    .Q(\D1Fifo.pop )
-  );
-  DFF _2844_ (
-    .C(clk),
-    .D(_0855_),
-    .Q(\MainFifo.memoria.iWriteAddress [0])
-  );
-  DFF _2845_ (
-    .C(clk),
-    .D(_0856_),
-    .Q(\MainFifo.memoria.iWriteAddress [1])
-  );
-  DFF _2846_ (
-    .C(clk),
-    .D(_0852_),
-    .Q(\MainFifo.memoria.iReadAddress [0])
-  );
-  DFF _2847_ (
-    .C(clk),
-    .D(_0853_),
-    .Q(\MainFifo.memoria.iReadAddress [1])
-  );
-  DFF _2848_ (
-    .C(clk),
-    .D(_0849_),
-    .Q(\MainFifo.num_mem [0])
-  );
-  DFF _2849_ (
-    .C(clk),
-    .D(_0850_),
-    .Q(\MainFifo.num_mem [1])
-  );
-  DFF _2850_ (
-    .C(clk),
-    .D(_0851_),
-    .Q(\MainFifo.num_mem [2])
-  );
-  DFF _2851_ (
-    .C(clk),
-    .D(_0861_),
-    .Q(Pausa_MF)
-  );
-  DFF _2852_ (
-    .C(clk),
-    .D(_0859_),
-    .Q(Fifo_Empty_MF)
-  );
-  DFF _2853_ (
-    .C(clk),
-    .D(_0858_),
-    .Q(Error_Fifo_MF)
-  );
-  DFF _2854_ (
-    .C(clk),
-    .D(_0868_),
-    .Q(\MainFifo.memoria.iWriteEnable )
-  );
-  DFF _2855_ (
-    .C(clk),
-    .D(_0869_),
-    .Q(\MainFifo.memoria.iReadEnable )
-  );
-  DFF _2856_ (
-    .C(clk),
-    .D(_0862_),
-    .Q(\MainFifo.Fifo_Data_in_int [0])
-  );
-  DFF _2857_ (
-    .C(clk),
-    .D(_0863_),
-    .Q(\MainFifo.Fifo_Data_in_int [1])
-  );
-  DFF _2858_ (
-    .C(clk),
-    .D(_0864_),
-    .Q(\MainFifo.Fifo_Data_in_int [2])
-  );
-  DFF _2859_ (
-    .C(clk),
-    .D(_0865_),
-    .Q(\MainFifo.Fifo_Data_in_int [3])
-  );
-  DFF _2860_ (
-    .C(clk),
-    .D(_0866_),
-    .Q(\MainFifo.Fifo_Data_in_int [4])
-  );
-  DFF _2861_ (
-    .C(clk),
-    .D(_0867_),
-    .Q(\MainFifo.Fifo_Data_in_int [5])
-  );
-  DFF _2862_ (
-    .C(clk),
-    .D(_0909_),
-    .Q(\MainFifo.memoria.Ram[0] [0])
-  );
-  DFF _2863_ (
-    .C(clk),
-    .D(_0912_),
-    .Q(\MainFifo.memoria.Ram[0] [1])
-  );
-  DFF _2864_ (
-    .C(clk),
-    .D(_0913_),
-    .Q(\MainFifo.memoria.Ram[0] [2])
-  );
-  DFF _2865_ (
-    .C(clk),
-    .D(_0915_),
-    .Q(\MainFifo.memoria.Ram[0] [3])
-  );
-  DFF _2866_ (
-    .C(clk),
-    .D(_0916_),
-    .Q(\MainFifo.memoria.Ram[0] [4])
-  );
-  DFF _2867_ (
-    .C(clk),
-    .D(_0918_),
-    .Q(\MainFifo.memoria.Ram[0] [5])
-  );
-  DFF _2868_ (
-    .C(clk),
-    .D(_0900_),
-    .Q(\MainFifo.memoria.Ram[1] [0])
-  );
-  DFF _2869_ (
-    .C(clk),
-    .D(_0901_),
-    .Q(\MainFifo.memoria.Ram[1] [1])
-  );
-  DFF _2870_ (
-    .C(clk),
-    .D(_0903_),
-    .Q(\MainFifo.memoria.Ram[1] [2])
-  );
-  DFF _2871_ (
-    .C(clk),
-    .D(_0904_),
-    .Q(\MainFifo.memoria.Ram[1] [3])
-  );
-  DFF _2872_ (
-    .C(clk),
-    .D(_0906_),
-    .Q(\MainFifo.memoria.Ram[1] [4])
-  );
-  DFF _2873_ (
-    .C(clk),
-    .D(_0907_),
-    .Q(\MainFifo.memoria.Ram[1] [5])
-  );
-  DFF _2874_ (
-    .C(clk),
-    .D(_0877_),
-    .Q(\MainFifo.memoria.Ram[3] [0])
-  );
-  DFF _2875_ (
-    .C(clk),
-    .D(_0879_),
-    .Q(\MainFifo.memoria.Ram[3] [1])
-  );
-  DFF _2876_ (
-    .C(clk),
-    .D(_0880_),
-    .Q(\MainFifo.memoria.Ram[3] [2])
-  );
-  DFF _2877_ (
-    .C(clk),
-    .D(_0882_),
-    .Q(\MainFifo.memoria.Ram[3] [3])
-  );
-  DFF _2878_ (
-    .C(clk),
-    .D(_0883_),
-    .Q(\MainFifo.memoria.Ram[3] [4])
-  );
-  DFF _2879_ (
-    .C(clk),
-    .D(_0885_),
-    .Q(\MainFifo.memoria.Ram[3] [5])
-  );
-  DFF _2880_ (
-    .C(clk),
-    .D(_0887_),
-    .Q(\MainFifo.memoria.Ram[2] [0])
-  );
-  DFF _2881_ (
-    .C(clk),
-    .D(_0889_),
-    .Q(\MainFifo.memoria.Ram[2] [1])
-  );
-  DFF _2882_ (
-    .C(clk),
-    .D(_0891_),
-    .Q(\MainFifo.memoria.Ram[2] [2])
-  );
-  DFF _2883_ (
-    .C(clk),
-    .D(_0892_),
-    .Q(\MainFifo.memoria.Ram[2] [3])
-  );
-  DFF _2884_ (
-    .C(clk),
-    .D(_0894_),
-    .Q(\MainFifo.memoria.Ram[2] [4])
-  );
-  DFF _2885_ (
-    .C(clk),
-    .D(_0897_),
-    .Q(\MainFifo.memoria.Ram[2] [5])
-  );
-  DFF _2886_ (
-    .C(clk),
-    .D(_0978_),
-    .Q(\VC0Fifo.memoria.iWriteAddress [0])
-  );
-  DFF _2887_ (
-    .C(clk),
-    .D(_0980_),
-    .Q(\VC0Fifo.memoria.iWriteAddress [1])
-  );
-  DFF _2888_ (
-    .C(clk),
-    .D(_0965_),
-    .Q(\VC0Fifo.memoria.iReadAddress [0])
-  );
-  DFF _2889_ (
-    .C(clk),
-    .D(_0967_),
-    .Q(\VC0Fifo.memoria.iReadAddress [1])
-  );
-  DFF _2890_ (
-    .C(clk),
-    .D(_0950_),
-    .Q(\VC0Fifo.num_mem [0])
-  );
-  DFF _2891_ (
-    .C(clk),
-    .D(_0952_),
-    .Q(\VC0Fifo.num_mem [1])
-  );
-  DFF _2892_ (
-    .C(clk),
-    .D(_0954_),
-    .Q(\VC0Fifo.num_mem [2])
-  );
-  DFF _2893_ (
-    .C(clk),
-    .D(_1009_),
-    .Q(Pausa_VC0)
-  );
-  DFF _2894_ (
-    .C(clk),
-    .D(_0999_),
-    .Q(Fifo_Empty_VC0)
-  );
-  DFF _2895_ (
-    .C(clk),
-    .D(_0988_),
-    .Q(Error_Fifo_VC0)
-  );
-  DFF _2896_ (
-    .C(clk),
-    .D(_1025_),
-    .Q(\VC0Fifo.memoria.iWriteEnable )
-  );
-  DFF _2897_ (
-    .C(clk),
-    .D(_1027_),
     .Q(\VC0Fifo.memoria.iReadEnable )
   );
-  DFF _2898_ (
+  DFF _2017_ (
     .C(clk),
-    .D(_1012_),
-    .Q(\VC0Fifo.Fifo_Data_in_int [0])
-  );
-  DFF _2899_ (
-    .C(clk),
-    .D(_1014_),
-    .Q(\VC0Fifo.Fifo_Data_in_int [1])
-  );
-  DFF _2900_ (
-    .C(clk),
-    .D(_1016_),
-    .Q(\VC0Fifo.Fifo_Data_in_int [2])
-  );
-  DFF _2901_ (
-    .C(clk),
-    .D(_1019_),
-    .Q(\VC0Fifo.Fifo_Data_in_int [3])
-  );
-  DFF _2902_ (
-    .C(clk),
-    .D(_1021_),
-    .Q(\VC0Fifo.Fifo_Data_in_int [4])
-  );
-  DFF _2903_ (
-    .C(clk),
-    .D(_1023_),
-    .Q(\VC0Fifo.Fifo_Data_in_int [5])
-  );
-  DFF _2904_ (
-    .C(clk),
-    .D(_1107_),
-    .Q(\VC0Fifo.memoria.Ram[0] [0])
-  );
-  DFF _2905_ (
-    .C(clk),
-    .D(_1109_),
-    .Q(\VC0Fifo.memoria.Ram[0] [1])
-  );
-  DFF _2906_ (
-    .C(clk),
-    .D(_1111_),
-    .Q(\VC0Fifo.memoria.Ram[0] [2])
-  );
-  DFF _2907_ (
-    .C(clk),
-    .D(_1113_),
-    .Q(\VC0Fifo.memoria.Ram[0] [3])
-  );
-  DFF _2908_ (
-    .C(clk),
-    .D(_1115_),
-    .Q(\VC0Fifo.memoria.Ram[0] [4])
-  );
-  DFF _2909_ (
-    .C(clk),
-    .D(_1117_),
-    .Q(\VC0Fifo.memoria.Ram[0] [5])
-  );
-  DFF _2910_ (
-    .C(clk),
-    .D(_1098_),
-    .Q(\VC0Fifo.memoria.Ram[1] [0])
-  );
-  DFF _2911_ (
-    .C(clk),
-    .D(_1099_),
-    .Q(\VC0Fifo.memoria.Ram[1] [1])
-  );
-  DFF _2912_ (
-    .C(clk),
-    .D(_1101_),
-    .Q(\VC0Fifo.memoria.Ram[1] [2])
-  );
-  DFF _2913_ (
-    .C(clk),
-    .D(_1102_),
-    .Q(\VC0Fifo.memoria.Ram[1] [3])
-  );
-  DFF _2914_ (
-    .C(clk),
-    .D(_1104_),
-    .Q(\VC0Fifo.memoria.Ram[1] [4])
-  );
-  DFF _2915_ (
-    .C(clk),
-    .D(_1105_),
-    .Q(\VC0Fifo.memoria.Ram[1] [5])
-  );
-  DFF _2916_ (
-    .C(clk),
-    .D(_1077_),
-    .Q(\VC0Fifo.memoria.Ram[3] [0])
-  );
-  DFF _2917_ (
-    .C(clk),
-    .D(_1078_),
-    .Q(\VC0Fifo.memoria.Ram[3] [1])
-  );
-  DFF _2918_ (
-    .C(clk),
-    .D(_1080_),
-    .Q(\VC0Fifo.memoria.Ram[3] [2])
-  );
-  DFF _2919_ (
-    .C(clk),
-    .D(_1082_),
-    .Q(\VC0Fifo.memoria.Ram[3] [3])
-  );
-  DFF _2920_ (
-    .C(clk),
-    .D(_1084_),
-    .Q(\VC0Fifo.memoria.Ram[3] [4])
-  );
-  DFF _2921_ (
-    .C(clk),
-    .D(_1086_),
-    .Q(\VC0Fifo.memoria.Ram[3] [5])
-  );
-  DFF _2922_ (
-    .C(clk),
-    .D(_1088_),
-    .Q(\VC0Fifo.memoria.Ram[2] [0])
-  );
-  DFF _2923_ (
-    .C(clk),
-    .D(_1090_),
-    .Q(\VC0Fifo.memoria.Ram[2] [1])
-  );
-  DFF _2924_ (
-    .C(clk),
-    .D(_1091_),
-    .Q(\VC0Fifo.memoria.Ram[2] [2])
-  );
-  DFF _2925_ (
-    .C(clk),
-    .D(_1093_),
-    .Q(\VC0Fifo.memoria.Ram[2] [3])
-  );
-  DFF _2926_ (
-    .C(clk),
-    .D(_1094_),
-    .Q(\VC0Fifo.memoria.Ram[2] [4])
-  );
-  DFF _2927_ (
-    .C(clk),
-    .D(_1096_),
-    .Q(\VC0Fifo.memoria.Ram[2] [5])
-  );
-  DFF _2928_ (
-    .C(clk),
-    .D(_1178_),
-    .Q(\VC1Fifo.memoria.iWriteAddress [0])
-  );
-  DFF _2929_ (
-    .C(clk),
-    .D(_1180_),
-    .Q(\VC1Fifo.memoria.iWriteAddress [1])
-  );
-  DFF _2930_ (
-    .C(clk),
-    .D(_1165_),
-    .Q(\VC1Fifo.memoria.iReadAddress [0])
-  );
-  DFF _2931_ (
-    .C(clk),
-    .D(_1167_),
-    .Q(\VC1Fifo.memoria.iReadAddress [1])
-  );
-  DFF _2932_ (
-    .C(clk),
-    .D(_1150_),
-    .Q(\VC1Fifo.num_mem [0])
-  );
-  DFF _2933_ (
-    .C(clk),
-    .D(_1152_),
-    .Q(\VC1Fifo.num_mem [1])
-  );
-  DFF _2934_ (
-    .C(clk),
-    .D(_1154_),
-    .Q(\VC1Fifo.num_mem [2])
-  );
-  DFF _2935_ (
-    .C(clk),
-    .D(_1207_),
-    .Q(Pausa_VC1)
-  );
-  DFF _2936_ (
-    .C(clk),
-    .D(_1198_),
-    .Q(Fifo_Empty_VC1)
-  );
-  DFF _2937_ (
-    .C(clk),
-    .D(_1189_),
-    .Q(Error_Fifo_VC1)
-  );
-  DFF _2938_ (
-    .C(clk),
-    .D(_1224_),
-    .Q(\VC1Fifo.memoria.iWriteEnable )
-  );
-  DFF _2939_ (
-    .C(clk),
-    .D(_1226_),
+    .D(_0001_),
     .Q(\VC1Fifo.memoria.iReadEnable )
   );
-  DFF _2940_ (
+  DFF _2018_ (
     .C(clk),
-    .D(_1210_),
-    .Q(\VC1Fifo.Fifo_Data_in_int [0])
+    .D(_0434_),
+    .Q(\D0Fifo.memoria.iReadAddress [0])
   );
-  DFF _2941_ (
+  DFF _2019_ (
     .C(clk),
-    .D(_1212_),
-    .Q(\VC1Fifo.Fifo_Data_in_int [1])
+    .D(_0440_),
+    .Q(\D0Fifo.memoria.iReadAddress [1])
   );
-  DFF _2942_ (
+  DFF _2020_ (
     .C(clk),
-    .D(_1215_),
-    .Q(\VC1Fifo.Fifo_Data_in_int [2])
+    .D(_0445_),
+    .Q(\D0Fifo.memoria.iWriteAddress [0])
   );
-  DFF _2943_ (
+  DFF _2021_ (
     .C(clk),
-    .D(_1218_),
-    .Q(\VC1Fifo.Fifo_Data_in_int [3])
+    .D(_0447_),
+    .Q(\D0Fifo.memoria.iWriteAddress [1])
   );
-  DFF _2944_ (
+  DFF _2022_ (
     .C(clk),
-    .D(_1220_),
-    .Q(\VC1Fifo.Fifo_Data_in_int [4])
+    .D(_0257_),
+    .Q(\D0Fifo.memoria.Ram[0] [0])
   );
-  DFF _2945_ (
+  DFF _2023_ (
     .C(clk),
-    .D(_1222_),
-    .Q(\VC1Fifo.Fifo_Data_in_int [5])
+    .D(_0265_),
+    .Q(\D0Fifo.memoria.Ram[0] [1])
   );
-  DFF _2946_ (
+  DFF _2024_ (
     .C(clk),
-    .D(_1307_),
-    .Q(\VC1Fifo.memoria.Ram[0] [0])
+    .D(_0273_),
+    .Q(\D0Fifo.memoria.Ram[0] [2])
   );
-  DFF _2947_ (
+  DFF _2025_ (
     .C(clk),
-    .D(_1308_),
-    .Q(\VC1Fifo.memoria.Ram[0] [1])
+    .D(_0281_),
+    .Q(\D0Fifo.memoria.Ram[0] [3])
   );
-  DFF _2948_ (
+  DFF _2026_ (
     .C(clk),
-    .D(_1310_),
-    .Q(\VC1Fifo.memoria.Ram[0] [2])
+    .D(_0289_),
+    .Q(\D0Fifo.memoria.Ram[0] [4])
   );
-  DFF _2949_ (
+  DFF _2027_ (
     .C(clk),
-    .D(_1312_),
-    .Q(\VC1Fifo.memoria.Ram[0] [3])
+    .D(_0297_),
+    .Q(\D0Fifo.memoria.Ram[0] [5])
   );
-  DFF _2950_ (
+  DFF _2028_ (
     .C(clk),
-    .D(_1313_),
-    .Q(\VC1Fifo.memoria.Ram[0] [4])
+    .D(_0194_),
+    .Q(\D0Fifo.memoria.Ram[1] [0])
   );
-  DFF _2951_ (
+  DFF _2029_ (
     .C(clk),
-    .D(_1315_),
-    .Q(\VC1Fifo.memoria.Ram[0] [5])
+    .D(_0203_),
+    .Q(\D0Fifo.memoria.Ram[1] [1])
   );
-  DFF _2952_ (
+  DFF _2030_ (
     .C(clk),
-    .D(_1297_),
-    .Q(\VC1Fifo.memoria.Ram[1] [0])
+    .D(_0212_),
+    .Q(\D0Fifo.memoria.Ram[1] [2])
   );
-  DFF _2953_ (
+  DFF _2031_ (
     .C(clk),
-    .D(_1298_),
-    .Q(\VC1Fifo.memoria.Ram[1] [1])
+    .D(_0222_),
+    .Q(\D0Fifo.memoria.Ram[1] [3])
   );
-  DFF _2954_ (
+  DFF _2032_ (
     .C(clk),
-    .D(_1300_),
-    .Q(\VC1Fifo.memoria.Ram[1] [2])
+    .D(_0232_),
+    .Q(\D0Fifo.memoria.Ram[1] [4])
   );
-  DFF _2955_ (
+  DFF _2033_ (
     .C(clk),
-    .D(_1302_),
-    .Q(\VC1Fifo.memoria.Ram[1] [3])
+    .D(_0242_),
+    .Q(\D0Fifo.memoria.Ram[1] [5])
   );
-  DFF _2956_ (
+  DFF _2034_ (
     .C(clk),
-    .D(_1303_),
-    .Q(\VC1Fifo.memoria.Ram[1] [4])
+    .D(_0072_),
+    .Q(\D0Fifo.memoria.Ram[3] [0])
   );
-  DFF _2957_ (
-    .C(clk),
-    .D(_1305_),
-    .Q(\VC1Fifo.memoria.Ram[1] [5])
-  );
-  DFF _2958_ (
-    .C(clk),
-    .D(_1274_),
-    .Q(\VC1Fifo.memoria.Ram[3] [0])
-  );
-  DFF _2959_ (
-    .C(clk),
-    .D(_1276_),
-    .Q(\VC1Fifo.memoria.Ram[3] [1])
-  );
-  DFF _2960_ (
-    .C(clk),
-    .D(_1277_),
-    .Q(\VC1Fifo.memoria.Ram[3] [2])
-  );
-  DFF _2961_ (
-    .C(clk),
-    .D(_1279_),
-    .Q(\VC1Fifo.memoria.Ram[3] [3])
-  );
-  DFF _2962_ (
-    .C(clk),
-    .D(_1281_),
-    .Q(\VC1Fifo.memoria.Ram[3] [4])
-  );
-  DFF _2963_ (
-    .C(clk),
-    .D(_1282_),
-    .Q(\VC1Fifo.memoria.Ram[3] [5])
-  );
-  DFF _2964_ (
-    .C(clk),
-    .D(_1285_),
-    .Q(\VC1Fifo.memoria.Ram[2] [0])
-  );
-  DFF _2965_ (
-    .C(clk),
-    .D(_1287_),
-    .Q(\VC1Fifo.memoria.Ram[2] [1])
-  );
-  DFF _2966_ (
-    .C(clk),
-    .D(_1289_),
-    .Q(\VC1Fifo.memoria.Ram[2] [2])
-  );
-  DFF _2967_ (
-    .C(clk),
-    .D(_1291_),
-    .Q(\VC1Fifo.memoria.Ram[2] [3])
-  );
-  DFF _2968_ (
-    .C(clk),
-    .D(_1293_),
-    .Q(\VC1Fifo.memoria.Ram[2] [4])
-  );
-  DFF _2969_ (
-    .C(clk),
-    .D(_1294_),
-    .Q(\VC1Fifo.memoria.Ram[2] [5])
-  );
-  DFF _2970_ (
-    .C(clk),
-    .D(_1372_),
-    .Q(\VC0Fifo.Fifo_Data_in [0])
-  );
-  DFF _2971_ (
-    .C(clk),
-    .D(_0002_),
-    .Q(\VC0Fifo.Fifo_Data_in [1])
-  );
-  DFF _2972_ (
-    .C(clk),
-    .D(_0003_),
-    .Q(\VC0Fifo.Fifo_Data_in [2])
-  );
-  DFF _2973_ (
-    .C(clk),
-    .D(_0005_),
-    .Q(\VC0Fifo.Fifo_Data_in [3])
-  );
-  DFF _2974_ (
-    .C(clk),
-    .D(_0007_),
-    .Q(\VC0Fifo.Fifo_Data_in [4])
-  );
-  DFF _2975_ (
-    .C(clk),
-    .D(_0009_),
-    .Q(\VC0Fifo.Fifo_Data_in [5])
-  );
-  DFF _2976_ (
-    .C(clk),
-    .D(_1346_),
-    .Q(\VC1Fifo.Fifo_Data_in [0])
-  );
-  DFF _2977_ (
-    .C(clk),
-    .D(_1348_),
-    .Q(\VC1Fifo.Fifo_Data_in [1])
-  );
-  DFF _2978_ (
-    .C(clk),
-    .D(_1350_),
-    .Q(\VC1Fifo.Fifo_Data_in [2])
-  );
-  DFF _2979_ (
-    .C(clk),
-    .D(_1352_),
-    .Q(\VC1Fifo.Fifo_Data_in [3])
-  );
-  DFF _2980_ (
-    .C(clk),
-    .D(_1354_),
-    .Q(\VC1Fifo.Fifo_Data_in [4])
-  );
-  DFF _2981_ (
-    .C(clk),
-    .D(_1355_),
-    .Q(\VC1Fifo.Fifo_Data_in [5])
-  );
-  DFF _2982_ (
-    .C(clk),
-    .D(_1328_),
-    .Q(\VC0Fifo.push )
-  );
-  DFF _2983_ (
-    .C(clk),
-    .D(_1324_),
-    .Q(\VC1Fifo.push )
-  );
-  DFF _2984_ (
-    .C(clk),
-    .D(_0093_),
-    .Q(active_out)
-  );
-  DFF _2985_ (
-    .C(clk),
-    .D(_0096_),
-    .Q(idle_out)
-  );
-  DFF _2986_ (
-    .C(clk),
-    .D(_0091_),
-    .Q(error_out)
-  );
-  DFF _2987_ (
-    .C(clk),
-    .D(_0075_),
-    .Q(\fsm_Control1.state [0])
-  );
-  DFF _2988_ (
-    .C(clk),
-    .D(_0077_),
-    .Q(\fsm_Control1.state [1])
-  );
-  DFF _2989_ (
-    .C(clk),
-    .D(_0079_),
-    .Q(\fsm_Control1.state [2])
-  );
-  DFF _2990_ (
-    .C(clk),
-    .D(_0080_),
-    .Q(\fsm_Control1.state [3])
-  );
-  DFF _2991_ (
+  DFF _2035_ (
     .C(clk),
     .D(_0082_),
-    .Q(\fsm_Control1.state [4])
+    .Q(\D0Fifo.memoria.Ram[3] [1])
   );
-  DFF _2992_ (
+  DFF _2036_ (
     .C(clk),
-    .D(_0097_),
-    .Q(\fsm_Control1.nxt_state [0])
+    .D(_0092_),
+    .Q(\D0Fifo.memoria.Ram[3] [2])
   );
-  DFF _2993_ (
-    .C(clk),
-    .D(_0099_),
-    .Q(\fsm_Control1.nxt_state [1])
-  );
-  DFF _2994_ (
-    .C(clk),
-    .D(_0101_),
-    .Q(\fsm_Control1.nxt_state [2])
-  );
-  DFF _2995_ (
+  DFF _2037_ (
     .C(clk),
     .D(_0102_),
+    .Q(\D0Fifo.memoria.Ram[3] [3])
+  );
+  DFF _2038_ (
+    .C(clk),
+    .D(_0110_),
+    .Q(\D0Fifo.memoria.Ram[3] [4])
+  );
+  DFF _2039_ (
+    .C(clk),
+    .D(_0118_),
+    .Q(\D0Fifo.memoria.Ram[3] [5])
+  );
+  DFF _2040_ (
+    .C(clk),
+    .D(_0133_),
+    .Q(\D0Fifo.memoria.Ram[2] [0])
+  );
+  DFF _2041_ (
+    .C(clk),
+    .D(_0141_),
+    .Q(\D0Fifo.memoria.Ram[2] [1])
+  );
+  DFF _2042_ (
+    .C(clk),
+    .D(_0149_),
+    .Q(\D0Fifo.memoria.Ram[2] [2])
+  );
+  DFF _2043_ (
+    .C(clk),
+    .D(_0157_),
+    .Q(\D0Fifo.memoria.Ram[2] [3])
+  );
+  DFF _2044_ (
+    .C(clk),
+    .D(_0165_),
+    .Q(\D0Fifo.memoria.Ram[2] [4])
+  );
+  DFF _2045_ (
+    .C(clk),
+    .D(_0175_),
+    .Q(\D0Fifo.memoria.Ram[2] [5])
+  );
+  DFF _2046_ (
+    .C(clk),
+    .D(_0392_),
+    .Q(\D1Fifo.memoria.iReadAddress [0])
+  );
+  DFF _2047_ (
+    .C(clk),
+    .D(_0393_),
+    .Q(\D1Fifo.memoria.iReadAddress [1])
+  );
+  DFF _2048_ (
+    .C(clk),
+    .D(_0394_),
+    .Q(\D1Fifo.memoria.iWriteAddress [0])
+  );
+  DFF _2049_ (
+    .C(clk),
+    .D(_0395_),
+    .Q(\D1Fifo.memoria.iWriteAddress [1])
+  );
+  DFF _2050_ (
+    .C(clk),
+    .D(_0414_),
+    .Q(\D1Fifo.memoria.Ram[0] [0])
+  );
+  DFF _2051_ (
+    .C(clk),
+    .D(_0415_),
+    .Q(\D1Fifo.memoria.Ram[0] [1])
+  );
+  DFF _2052_ (
+    .C(clk),
+    .D(_0416_),
+    .Q(\D1Fifo.memoria.Ram[0] [2])
+  );
+  DFF _2053_ (
+    .C(clk),
+    .D(_0417_),
+    .Q(\D1Fifo.memoria.Ram[0] [3])
+  );
+  DFF _2054_ (
+    .C(clk),
+    .D(_0418_),
+    .Q(\D1Fifo.memoria.Ram[0] [4])
+  );
+  DFF _2055_ (
+    .C(clk),
+    .D(_0419_),
+    .Q(\D1Fifo.memoria.Ram[0] [5])
+  );
+  DFF _2056_ (
+    .C(clk),
+    .D(_0408_),
+    .Q(\D1Fifo.memoria.Ram[1] [0])
+  );
+  DFF _2057_ (
+    .C(clk),
+    .D(_0409_),
+    .Q(\D1Fifo.memoria.Ram[1] [1])
+  );
+  DFF _2058_ (
+    .C(clk),
+    .D(_0410_),
+    .Q(\D1Fifo.memoria.Ram[1] [2])
+  );
+  DFF _2059_ (
+    .C(clk),
+    .D(_0411_),
+    .Q(\D1Fifo.memoria.Ram[1] [3])
+  );
+  DFF _2060_ (
+    .C(clk),
+    .D(_0412_),
+    .Q(\D1Fifo.memoria.Ram[1] [4])
+  );
+  DFF _2061_ (
+    .C(clk),
+    .D(_0413_),
+    .Q(\D1Fifo.memoria.Ram[1] [5])
+  );
+  DFF _2062_ (
+    .C(clk),
+    .D(_0396_),
+    .Q(\D1Fifo.memoria.Ram[3] [0])
+  );
+  DFF _2063_ (
+    .C(clk),
+    .D(_0397_),
+    .Q(\D1Fifo.memoria.Ram[3] [1])
+  );
+  DFF _2064_ (
+    .C(clk),
+    .D(_0398_),
+    .Q(\D1Fifo.memoria.Ram[3] [2])
+  );
+  DFF _2065_ (
+    .C(clk),
+    .D(_0399_),
+    .Q(\D1Fifo.memoria.Ram[3] [3])
+  );
+  DFF _2066_ (
+    .C(clk),
+    .D(_0400_),
+    .Q(\D1Fifo.memoria.Ram[3] [4])
+  );
+  DFF _2067_ (
+    .C(clk),
+    .D(_0401_),
+    .Q(\D1Fifo.memoria.Ram[3] [5])
+  );
+  DFF _2068_ (
+    .C(clk),
+    .D(_0402_),
+    .Q(\D1Fifo.memoria.Ram[2] [0])
+  );
+  DFF _2069_ (
+    .C(clk),
+    .D(_0403_),
+    .Q(\D1Fifo.memoria.Ram[2] [1])
+  );
+  DFF _2070_ (
+    .C(clk),
+    .D(_0404_),
+    .Q(\D1Fifo.memoria.Ram[2] [2])
+  );
+  DFF _2071_ (
+    .C(clk),
+    .D(_0405_),
+    .Q(\D1Fifo.memoria.Ram[2] [3])
+  );
+  DFF _2072_ (
+    .C(clk),
+    .D(_0406_),
+    .Q(\D1Fifo.memoria.Ram[2] [4])
+  );
+  DFF _2073_ (
+    .C(clk),
+    .D(_0407_),
+    .Q(\D1Fifo.memoria.Ram[2] [5])
+  );
+  DFF _2074_ (
+    .C(clk),
+    .D(_0428_),
+    .Q(\D0Fifo.Fifo_Data_in [0])
+  );
+  DFF _2075_ (
+    .C(clk),
+    .D(_0429_),
+    .Q(\D0Fifo.Fifo_Data_in [1])
+  );
+  DFF _2076_ (
+    .C(clk),
+    .D(_0430_),
+    .Q(\D0Fifo.Fifo_Data_in [2])
+  );
+  DFF _2077_ (
+    .C(clk),
+    .D(_0431_),
+    .Q(\D0Fifo.Fifo_Data_in [3])
+  );
+  DFF _2078_ (
+    .C(clk),
+    .D(_0432_),
+    .Q(\D0Fifo.Fifo_Data_in [4])
+  );
+  DFF _2079_ (
+    .C(clk),
+    .D(_0433_),
+    .Q(\D0Fifo.Fifo_Data_in [5])
+  );
+  DFF _2080_ (
+    .C(clk),
+    .D(_0422_),
+    .Q(\D1Fifo.Fifo_Data_in [0])
+  );
+  DFF _2081_ (
+    .C(clk),
+    .D(_0423_),
+    .Q(\D1Fifo.Fifo_Data_in [1])
+  );
+  DFF _2082_ (
+    .C(clk),
+    .D(_0424_),
+    .Q(\D1Fifo.Fifo_Data_in [2])
+  );
+  DFF _2083_ (
+    .C(clk),
+    .D(_0425_),
+    .Q(\D1Fifo.Fifo_Data_in [3])
+  );
+  DFF _2084_ (
+    .C(clk),
+    .D(_0426_),
+    .Q(\D1Fifo.Fifo_Data_in [4])
+  );
+  DFF _2085_ (
+    .C(clk),
+    .D(_0427_),
+    .Q(\D1Fifo.Fifo_Data_in [5])
+  );
+  DFF _2086_ (
+    .C(clk),
+    .D(_0421_),
+    .Q(\D0Fifo.memoria.iReadEnable )
+  );
+  DFF _2087_ (
+    .C(clk),
+    .D(_0420_),
+    .Q(\D1Fifo.memoria.iReadEnable )
+  );
+  DFF _2088_ (
+    .C(clk),
+    .D(_0441_),
+    .Q(\MainFifo.memoria.iWriteAddress [0])
+  );
+  DFF _2089_ (
+    .C(clk),
+    .D(_0442_),
+    .Q(\MainFifo.memoria.iWriteAddress [1])
+  );
+  DFF _2090_ (
+    .C(clk),
+    .D(_0438_),
+    .Q(\MainFifo.memoria.iReadAddress [0])
+  );
+  DFF _2091_ (
+    .C(clk),
+    .D(_0439_),
+    .Q(\MainFifo.memoria.iReadAddress [1])
+  );
+  DFF _2092_ (
+    .C(clk),
+    .D(_0435_),
+    .Q(\MainFifo.num_mem [0])
+  );
+  DFF _2093_ (
+    .C(clk),
+    .D(_0436_),
+    .Q(\MainFifo.num_mem [1])
+  );
+  DFF _2094_ (
+    .C(clk),
+    .D(_0437_),
+    .Q(\MainFifo.num_mem [2])
+  );
+  DFF _2095_ (
+    .C(clk),
+    .D(_0446_),
+    .Q(Pausa_MF)
+  );
+  DFF _2096_ (
+    .C(clk),
+    .D(_0444_),
+    .Q(Fifo_Empty_MF)
+  );
+  DFF _2097_ (
+    .C(clk),
+    .D(_0443_),
+    .Q(Error_Fifo_MF)
+  );
+  DFF _2098_ (
+    .C(clk),
+    .D(_0515_),
+    .Q(\MainFifo.memoria.Ram[0] [0])
+  );
+  DFF _2099_ (
+    .C(clk),
+    .D(_0517_),
+    .Q(\MainFifo.memoria.Ram[0] [1])
+  );
+  DFF _2100_ (
+    .C(clk),
+    .D(_0519_),
+    .Q(\MainFifo.memoria.Ram[0] [2])
+  );
+  DFF _2101_ (
+    .C(clk),
+    .D(_0521_),
+    .Q(\MainFifo.memoria.Ram[0] [3])
+  );
+  DFF _2102_ (
+    .C(clk),
+    .D(_0522_),
+    .Q(\MainFifo.memoria.Ram[0] [4])
+  );
+  DFF _2103_ (
+    .C(clk),
+    .D(_0524_),
+    .Q(\MainFifo.memoria.Ram[0] [5])
+  );
+  DFF _2104_ (
+    .C(clk),
+    .D(_0502_),
+    .Q(\MainFifo.memoria.Ram[1] [0])
+  );
+  DFF _2105_ (
+    .C(clk),
+    .D(_0504_),
+    .Q(\MainFifo.memoria.Ram[1] [1])
+  );
+  DFF _2106_ (
+    .C(clk),
+    .D(_0506_),
+    .Q(\MainFifo.memoria.Ram[1] [2])
+  );
+  DFF _2107_ (
+    .C(clk),
+    .D(_0508_),
+    .Q(\MainFifo.memoria.Ram[1] [3])
+  );
+  DFF _2108_ (
+    .C(clk),
+    .D(_0510_),
+    .Q(\MainFifo.memoria.Ram[1] [4])
+  );
+  DFF _2109_ (
+    .C(clk),
+    .D(_0512_),
+    .Q(\MainFifo.memoria.Ram[1] [5])
+  );
+  DFF _2110_ (
+    .C(clk),
+    .D(_0477_),
+    .Q(\MainFifo.memoria.Ram[3] [0])
+  );
+  DFF _2111_ (
+    .C(clk),
+    .D(_0479_),
+    .Q(\MainFifo.memoria.Ram[3] [1])
+  );
+  DFF _2112_ (
+    .C(clk),
+    .D(_0481_),
+    .Q(\MainFifo.memoria.Ram[3] [2])
+  );
+  DFF _2113_ (
+    .C(clk),
+    .D(_0483_),
+    .Q(\MainFifo.memoria.Ram[3] [3])
+  );
+  DFF _2114_ (
+    .C(clk),
+    .D(_0485_),
+    .Q(\MainFifo.memoria.Ram[3] [4])
+  );
+  DFF _2115_ (
+    .C(clk),
+    .D(_0487_),
+    .Q(\MainFifo.memoria.Ram[3] [5])
+  );
+  DFF _2116_ (
+    .C(clk),
+    .D(_0490_),
+    .Q(\MainFifo.memoria.Ram[2] [0])
+  );
+  DFF _2117_ (
+    .C(clk),
+    .D(_0492_),
+    .Q(\MainFifo.memoria.Ram[2] [1])
+  );
+  DFF _2118_ (
+    .C(clk),
+    .D(_0494_),
+    .Q(\MainFifo.memoria.Ram[2] [2])
+  );
+  DFF _2119_ (
+    .C(clk),
+    .D(_0496_),
+    .Q(\MainFifo.memoria.Ram[2] [3])
+  );
+  DFF _2120_ (
+    .C(clk),
+    .D(_0498_),
+    .Q(\MainFifo.memoria.Ram[2] [4])
+  );
+  DFF _2121_ (
+    .C(clk),
+    .D(_0499_),
+    .Q(\MainFifo.memoria.Ram[2] [5])
+  );
+  DFF _2122_ (
+    .C(clk),
+    .D(_0581_),
+    .Q(\VC0Fifo.memoria.iWriteAddress [0])
+  );
+  DFF _2123_ (
+    .C(clk),
+    .D(_0583_),
+    .Q(\VC0Fifo.memoria.iWriteAddress [1])
+  );
+  DFF _2124_ (
+    .C(clk),
+    .D(_0570_),
+    .Q(\VC0Fifo.memoria.iReadAddress [0])
+  );
+  DFF _2125_ (
+    .C(clk),
+    .D(_0572_),
+    .Q(\VC0Fifo.memoria.iReadAddress [1])
+  );
+  DFF _2126_ (
+    .C(clk),
+    .D(_0558_),
+    .Q(\VC0Fifo.num_mem [0])
+  );
+  DFF _2127_ (
+    .C(clk),
+    .D(_0560_),
+    .Q(\VC0Fifo.num_mem [1])
+  );
+  DFF _2128_ (
+    .C(clk),
+    .D(_0562_),
+    .Q(\VC0Fifo.num_mem [2])
+  );
+  DFF _2129_ (
+    .C(clk),
+    .D(_0607_),
+    .Q(Pausa_VC0)
+  );
+  DFF _2130_ (
+    .C(clk),
+    .D(_0597_),
+    .Q(Fifo_Empty_VC0)
+  );
+  DFF _2131_ (
+    .C(clk),
+    .D(_0590_),
+    .Q(Error_Fifo_VC0)
+  );
+  DFF _2132_ (
+    .C(clk),
+    .D(_0698_),
+    .Q(\VC0Fifo.memoria.Ram[0] [0])
+  );
+  DFF _2133_ (
+    .C(clk),
+    .D(_0700_),
+    .Q(\VC0Fifo.memoria.Ram[0] [1])
+  );
+  DFF _2134_ (
+    .C(clk),
+    .D(_0702_),
+    .Q(\VC0Fifo.memoria.Ram[0] [2])
+  );
+  DFF _2135_ (
+    .C(clk),
+    .D(_0704_),
+    .Q(\VC0Fifo.memoria.Ram[0] [3])
+  );
+  DFF _2136_ (
+    .C(clk),
+    .D(_0706_),
+    .Q(\VC0Fifo.memoria.Ram[0] [4])
+  );
+  DFF _2137_ (
+    .C(clk),
+    .D(_0708_),
+    .Q(\VC0Fifo.memoria.Ram[0] [5])
+  );
+  DFF _2138_ (
+    .C(clk),
+    .D(_0686_),
+    .Q(\VC0Fifo.memoria.Ram[1] [0])
+  );
+  DFF _2139_ (
+    .C(clk),
+    .D(_0688_),
+    .Q(\VC0Fifo.memoria.Ram[1] [1])
+  );
+  DFF _2140_ (
+    .C(clk),
+    .D(_0689_),
+    .Q(\VC0Fifo.memoria.Ram[1] [2])
+  );
+  DFF _2141_ (
+    .C(clk),
+    .D(_0691_),
+    .Q(\VC0Fifo.memoria.Ram[1] [3])
+  );
+  DFF _2142_ (
+    .C(clk),
+    .D(_0693_),
+    .Q(\VC0Fifo.memoria.Ram[1] [4])
+  );
+  DFF _2143_ (
+    .C(clk),
+    .D(_0695_),
+    .Q(\VC0Fifo.memoria.Ram[1] [5])
+  );
+  DFF _2144_ (
+    .C(clk),
+    .D(_0661_),
+    .Q(\VC0Fifo.memoria.Ram[3] [0])
+  );
+  DFF _2145_ (
+    .C(clk),
+    .D(_0663_),
+    .Q(\VC0Fifo.memoria.Ram[3] [1])
+  );
+  DFF _2146_ (
+    .C(clk),
+    .D(_0665_),
+    .Q(\VC0Fifo.memoria.Ram[3] [2])
+  );
+  DFF _2147_ (
+    .C(clk),
+    .D(_0666_),
+    .Q(\VC0Fifo.memoria.Ram[3] [3])
+  );
+  DFF _2148_ (
+    .C(clk),
+    .D(_0668_),
+    .Q(\VC0Fifo.memoria.Ram[3] [4])
+  );
+  DFF _2149_ (
+    .C(clk),
+    .D(_0670_),
+    .Q(\VC0Fifo.memoria.Ram[3] [5])
+  );
+  DFF _2150_ (
+    .C(clk),
+    .D(_0673_),
+    .Q(\VC0Fifo.memoria.Ram[2] [0])
+  );
+  DFF _2151_ (
+    .C(clk),
+    .D(_0675_),
+    .Q(\VC0Fifo.memoria.Ram[2] [1])
+  );
+  DFF _2152_ (
+    .C(clk),
+    .D(_0677_),
+    .Q(\VC0Fifo.memoria.Ram[2] [2])
+  );
+  DFF _2153_ (
+    .C(clk),
+    .D(_0679_),
+    .Q(\VC0Fifo.memoria.Ram[2] [3])
+  );
+  DFF _2154_ (
+    .C(clk),
+    .D(_0681_),
+    .Q(\VC0Fifo.memoria.Ram[2] [4])
+  );
+  DFF _2155_ (
+    .C(clk),
+    .D(_0683_),
+    .Q(\VC0Fifo.memoria.Ram[2] [5])
+  );
+  DFF _2156_ (
+    .C(clk),
+    .D(_0763_),
+    .Q(\VC1Fifo.memoria.iWriteAddress [0])
+  );
+  DFF _2157_ (
+    .C(clk),
+    .D(_0764_),
+    .Q(\VC1Fifo.memoria.iWriteAddress [1])
+  );
+  DFF _2158_ (
+    .C(clk),
+    .D(_0751_),
+    .Q(\VC1Fifo.memoria.iReadAddress [0])
+  );
+  DFF _2159_ (
+    .C(clk),
+    .D(_0753_),
+    .Q(\VC1Fifo.memoria.iReadAddress [1])
+  );
+  DFF _2160_ (
+    .C(clk),
+    .D(_0740_),
+    .Q(\VC1Fifo.num_mem [0])
+  );
+  DFF _2161_ (
+    .C(clk),
+    .D(_0741_),
+    .Q(\VC1Fifo.num_mem [1])
+  );
+  DFF _2162_ (
+    .C(clk),
+    .D(_0743_),
+    .Q(\VC1Fifo.num_mem [2])
+  );
+  DFF _2163_ (
+    .C(clk),
+    .D(_0788_),
+    .Q(Pausa_VC1)
+  );
+  DFF _2164_ (
+    .C(clk),
+    .D(_0779_),
+    .Q(Fifo_Empty_VC1)
+  );
+  DFF _2165_ (
+    .C(clk),
+    .D(_0771_),
+    .Q(Error_Fifo_VC1)
+  );
+  DFF _2166_ (
+    .C(clk),
+    .D(_0874_),
+    .Q(\VC1Fifo.memoria.Ram[0] [0])
+  );
+  DFF _2167_ (
+    .C(clk),
+    .D(_0876_),
+    .Q(\VC1Fifo.memoria.Ram[0] [1])
+  );
+  DFF _2168_ (
+    .C(clk),
+    .D(_0878_),
+    .Q(\VC1Fifo.memoria.Ram[0] [2])
+  );
+  DFF _2169_ (
+    .C(clk),
+    .D(_0880_),
+    .Q(\VC1Fifo.memoria.Ram[0] [3])
+  );
+  DFF _2170_ (
+    .C(clk),
+    .D(_0882_),
+    .Q(\VC1Fifo.memoria.Ram[0] [4])
+  );
+  DFF _2171_ (
+    .C(clk),
+    .D(_0884_),
+    .Q(\VC1Fifo.memoria.Ram[0] [5])
+  );
+  DFF _2172_ (
+    .C(clk),
+    .D(_0862_),
+    .Q(\VC1Fifo.memoria.Ram[1] [0])
+  );
+  DFF _2173_ (
+    .C(clk),
+    .D(_0864_),
+    .Q(\VC1Fifo.memoria.Ram[1] [1])
+  );
+  DFF _2174_ (
+    .C(clk),
+    .D(_0866_),
+    .Q(\VC1Fifo.memoria.Ram[1] [2])
+  );
+  DFF _2175_ (
+    .C(clk),
+    .D(_0868_),
+    .Q(\VC1Fifo.memoria.Ram[1] [3])
+  );
+  DFF _2176_ (
+    .C(clk),
+    .D(_0870_),
+    .Q(\VC1Fifo.memoria.Ram[1] [4])
+  );
+  DFF _2177_ (
+    .C(clk),
+    .D(_0872_),
+    .Q(\VC1Fifo.memoria.Ram[1] [5])
+  );
+  DFF _2178_ (
+    .C(clk),
+    .D(_0840_),
+    .Q(\VC1Fifo.memoria.Ram[3] [0])
+  );
+  DFF _2179_ (
+    .C(clk),
+    .D(_0842_),
+    .Q(\VC1Fifo.memoria.Ram[3] [1])
+  );
+  DFF _2180_ (
+    .C(clk),
+    .D(_0844_),
+    .Q(\VC1Fifo.memoria.Ram[3] [2])
+  );
+  DFF _2181_ (
+    .C(clk),
+    .D(_0845_),
+    .Q(\VC1Fifo.memoria.Ram[3] [3])
+  );
+  DFF _2182_ (
+    .C(clk),
+    .D(_0847_),
+    .Q(\VC1Fifo.memoria.Ram[3] [4])
+  );
+  DFF _2183_ (
+    .C(clk),
+    .D(_0849_),
+    .Q(\VC1Fifo.memoria.Ram[3] [5])
+  );
+  DFF _2184_ (
+    .C(clk),
+    .D(_0851_),
+    .Q(\VC1Fifo.memoria.Ram[2] [0])
+  );
+  DFF _2185_ (
+    .C(clk),
+    .D(_0852_),
+    .Q(\VC1Fifo.memoria.Ram[2] [1])
+  );
+  DFF _2186_ (
+    .C(clk),
+    .D(_0854_),
+    .Q(\VC1Fifo.memoria.Ram[2] [2])
+  );
+  DFF _2187_ (
+    .C(clk),
+    .D(_0856_),
+    .Q(\VC1Fifo.memoria.Ram[2] [3])
+  );
+  DFF _2188_ (
+    .C(clk),
+    .D(_0857_),
+    .Q(\VC1Fifo.memoria.Ram[2] [4])
+  );
+  DFF _2189_ (
+    .C(clk),
+    .D(_0859_),
+    .Q(\VC1Fifo.memoria.Ram[2] [5])
+  );
+  DFF _2190_ (
+    .C(clk),
+    .D(_0939_),
+    .Q(\VC0Fifo.Fifo_Data_in [0])
+  );
+  DFF _2191_ (
+    .C(clk),
+    .D(_0941_),
+    .Q(\VC0Fifo.Fifo_Data_in [1])
+  );
+  DFF _2192_ (
+    .C(clk),
+    .D(_0943_),
+    .Q(\VC0Fifo.Fifo_Data_in [2])
+  );
+  DFF _2193_ (
+    .C(clk),
+    .D(_0945_),
+    .Q(\VC0Fifo.Fifo_Data_in [3])
+  );
+  DFF _2194_ (
+    .C(clk),
+    .D(_0947_),
+    .Q(\VC0Fifo.Fifo_Data_in [4])
+  );
+  DFF _2195_ (
+    .C(clk),
+    .D(_0949_),
+    .Q(\VC0Fifo.Fifo_Data_in [5])
+  );
+  DFF _2196_ (
+    .C(clk),
+    .D(_0914_),
+    .Q(\VC1Fifo.Fifo_Data_in [0])
+  );
+  DFF _2197_ (
+    .C(clk),
+    .D(_0915_),
+    .Q(\VC1Fifo.Fifo_Data_in [1])
+  );
+  DFF _2198_ (
+    .C(clk),
+    .D(_0917_),
+    .Q(\VC1Fifo.Fifo_Data_in [2])
+  );
+  DFF _2199_ (
+    .C(clk),
+    .D(_0919_),
+    .Q(\VC1Fifo.Fifo_Data_in [3])
+  );
+  DFF _2200_ (
+    .C(clk),
+    .D(_0921_),
+    .Q(\VC1Fifo.Fifo_Data_in [4])
+  );
+  DFF _2201_ (
+    .C(clk),
+    .D(_0923_),
+    .Q(\VC1Fifo.Fifo_Data_in [5])
+  );
+  DFF _2202_ (
+    .C(clk),
+    .D(1'b0),
+    .Q(\VC0Fifo.memoria.iWriteEnable )
+  );
+  DFF _2203_ (
+    .C(clk),
+    .D(1'b0),
+    .Q(\VC1Fifo.memoria.iWriteEnable )
+  );
+  DFF _2204_ (
+    .C(clk),
+    .D(_0033_),
+    .Q(active_out)
+  );
+  DFF _2205_ (
+    .C(clk),
+    .D(_0035_),
+    .Q(idle_out)
+  );
+  DFF _2206_ (
+    .C(clk),
+    .D(_0038_),
+    .Q(error_out)
+  );
+  DFF _2207_ (
+    .C(clk),
+    .D(_0014_),
+    .Q(\fsm_Control1.state [0])
+  );
+  DFF _2208_ (
+    .C(clk),
+    .D(_0016_),
+    .Q(\fsm_Control1.state [1])
+  );
+  DFF _2209_ (
+    .C(clk),
+    .D(_0018_),
+    .Q(\fsm_Control1.state [2])
+  );
+  DFF _2210_ (
+    .C(clk),
+    .D(_0020_),
+    .Q(\fsm_Control1.state [3])
+  );
+  DFF _2211_ (
+    .C(clk),
+    .D(_0022_),
+    .Q(\fsm_Control1.state [4])
+  );
+  DFF _2212_ (
+    .C(clk),
+    .D(_0040_),
+    .Q(\fsm_Control1.nxt_state [0])
+  );
+  DFF _2213_ (
+    .C(clk),
+    .D(_0042_),
+    .Q(\fsm_Control1.nxt_state [1])
+  );
+  DFF _2214_ (
+    .C(clk),
+    .D(_0044_),
+    .Q(\fsm_Control1.nxt_state [2])
+  );
+  DFF _2215_ (
+    .C(clk),
+    .D(_0046_),
     .Q(\fsm_Control1.nxt_state [3])
   );
-  DFF _2996_ (
+  DFF _2216_ (
     .C(clk),
-    .D(_0104_),
+    .D(_0048_),
     .Q(\fsm_Control1.nxt_state [4])
   );
-  DFF _2997_ (
+  DFF _2217_ (
     .C(clk),
-    .D(_0132_),
+    .D(1'b0),
     .Q(\Demux_D0_D1.valid_in )
   );
-  DFF _2998_ (
+  DFF _2218_ (
     .C(clk),
-    .D(_0120_),
+    .D(1'b0),
     .Q(\Demux_D0_D1.data_in [0])
   );
-  DFF _2999_ (
+  DFF _2219_ (
     .C(clk),
-    .D(_0122_),
+    .D(1'b0),
     .Q(\Demux_D0_D1.data_in [1])
   );
-  DFF _3000_ (
+  DFF _2220_ (
     .C(clk),
-    .D(_0124_),
+    .D(1'b0),
     .Q(\Demux_D0_D1.data_in [2])
   );
-  DFF _3001_ (
+  DFF _2221_ (
     .C(clk),
-    .D(_0125_),
+    .D(1'b0),
     .Q(\Demux_D0_D1.data_in [3])
   );
-  DFF _3002_ (
+  DFF _2222_ (
     .C(clk),
-    .D(_0127_),
+    .D(1'b0),
     .Q(\Demux_D0_D1.data_in [4])
   );
-  DFF _3003_ (
+  DFF _2223_ (
     .C(clk),
-    .D(_0129_),
+    .D(1'b0),
     .Q(\Demux_D0_D1.data_in [5])
   );
 endmodule

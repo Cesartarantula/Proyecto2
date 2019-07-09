@@ -40,13 +40,13 @@ dual_port_memory  #(.DATA_WIDTH(6), .ADDR_WIDTH(2), .MEM_SIZE(3)) memoria
 	       .oDataOut		(Fifo_Data_out),
 	       // Inputs
 	       .Clock			(clk),
-	       .iReadEnable		(pop_int),
-	       .iWriteEnable		(push_int), 
-	       .iDataIn			(Fifo_Data_in_int),
+	       .iReadEnable		(pop),
+	       .iWriteEnable		(push), 
+	       .iDataIn			(Fifo_Data_in),
 	       .iReadAddress		(rd_ptr),
 	       .iWriteAddress		(wr_ptr));
 
-always@(posedge clk) begin
+/*always@(posedge clk) begin
 	if(!reset_L) begin
 	push_int <=0;
 	pop_int <=0;
@@ -60,7 +60,7 @@ always@(posedge clk) begin
 	Fifo_Data_in_int <=Fifo_Data_in;
 	end
 end
-
+*/
 
 //Aqui se determina si el fifo esta lleno o no
 always @(posedge clk) begin

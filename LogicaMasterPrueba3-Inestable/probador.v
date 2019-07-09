@@ -53,7 +53,7 @@ initial begin
     init<=0;
 
 
-    #9; // 1
+    #11; // 1
     push<=1;
     data_in_principal<=6'h1B; // 0 1 B (VC0,D0,DATA)
 
@@ -61,7 +61,7 @@ initial begin
     data_in_principal<=6'h2D; // 1 0 D
       
     #2; // 3;
-    data_in_principal<=6'h1B; // 0 0 3
+    data_in_principal<=6'h1C; // 0 0 3
 
    #2;// 4
     data_in_principal<=6'h1A; // 0 1 A

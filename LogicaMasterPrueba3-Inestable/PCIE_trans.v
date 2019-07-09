@@ -210,7 +210,7 @@ fsmControl fsm_Control1 (	.clk(clk),
 
 //*******************************************************************************************//
 //Hace pop a DO o D1 apenas le llega algun dato
-always@(negedge clk) begin
+always@(posedge clk) begin
 	if(reset_L) begin
 	pop2<= 0;
 	end
@@ -230,7 +230,7 @@ end
 
 //*******************************************************************************************//
 //Hace pop a Fifo Main
-always@(*) begin
+always@(*) begin//(posedge clk)
     Pausa_VC_id = ~(Pausa_VC0 | Pausa_VC1) ? 1:0;
     pop_MF = Pausa_VC_id & (~Fifo_Empty_MF) ? 1:0;
 end 
