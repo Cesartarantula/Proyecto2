@@ -456,6 +456,11 @@ always @(posedge clk) begin
 		rd_ptr<=0;
 		num_mem<=0;
 	end
+	else if ((push) && (pop)) begin
+		num_mem<=num_mem;
+		wr_ptr<= wr_ptr+1;
+		rd_ptr<= rd_ptr+1;
+        end
  	else if (push) begin
                     num_mem<=num_mem+1;
                     wr_ptr<=wr_ptr+1;
@@ -463,13 +468,19 @@ always @(posedge clk) begin
    	else if (pop) begin
                     num_mem<=num_mem-1;
                     rd_ptr<= rd_ptr+1;
-        end
-        else if ((push) && (pop)) begin
-		num_mem<=num_mem;
-		wr_ptr<= wr_ptr+1;
-		rd_ptr<= rd_ptr+1;
-        end
+        end      
 end
+
+//Determina FIFO_empty
+always @(*) begin
+        if (num_mem == 0)begin
+            Fifo_Empty = 1;
+        end
+	else begin
+	Fifo_Empty = 0;
+end
+end
+
 /*
 //Determina si ocurrio un error.
 always @(posedge clk) begin

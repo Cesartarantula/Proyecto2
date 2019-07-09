@@ -1,15 +1,15 @@
 [*]
 [*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
-[*] Tue Jul  9 16:26:48 2019
+[*] Tue Jul  9 16:55:36 2019
 [*]
 [dumpfile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/LogicaMasterPrueba3-Inestable/PCIE_trans.vcd"
-[dumpfile_mtime] "Tue Jul  9 16:26:01 2019"
-[dumpfile_size] 182265
+[dumpfile_mtime] "Tue Jul  9 16:54:10 2019"
+[dumpfile_size] 184369
 [savefile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/LogicaMasterPrueba3-Inestable/conexionfinal.gtkw"
 [timestart] 0
 [size] 1280 751
 [pos] -1 -1
-*-34.099892 23650000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-34.099892 18000000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] testbench.
 [treeopen] testbench.transac1.
 [treeopen] testbench.transac1.MainFifo.

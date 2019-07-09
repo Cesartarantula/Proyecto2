@@ -83,13 +83,13 @@ fifo #(.N(2), .ADDR_WIDTH(4)) MainFifo (	.clk(clk),
 						.Pausa(Pausa_MF),
 						.Fifo_Empty(Fifo_Empty_MF),
 						.Fifo_Full(Fifo_Full_MF),
-						.Error_Fifo(Error_Fifo_MF),
-						.valid_out(valid_out_MF)); 
+						.Error_Fifo(Error_Fifo_MF));
+						//.valid_out(valid_out_MF)); 
 
 // Modulo Demux de pop válidos según vc_id
 demux demux1 (		.clk(clk),
 			.reset_L(reset_L),
-			.valid_in(valid_out_MF),//Modificacion
+			.valid_in(pop_MF),//Modificacion
 			.data_in(Fifo_Data_out_MF),
 			.dataout0(data_in_VC0),
 			.dataout1(data_in_VC1),
