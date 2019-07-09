@@ -62,8 +62,8 @@ wire [2:0] Umbral_D1;
 reg Pausa_VC_id,pop_MF;
 
 
-reg pop1, pausaD0D1, pop_vc0, pop_vc1, FIFO_error, FIFO_empty;
-reg pop2;
+reg pop_D0, pop_D1, pausaD0D1, pop_vc0, pop_vc1, FIFO_error, FIFO_empty;
+
 
 
 //*******************************************************************************************//
@@ -134,8 +134,8 @@ fifo #(.N(4), .M(2), .ADDR_WIDTH(16)) VC1Fifo (		.clk(clk),
 //de datos de VC0.
 mux mux1 (	.clk(clk),
 		.reset_L(reset_L),
-		.valid_in_VC0(valid_out_VC0),
-		.valid_in_VC1(valid_out_VC1),// (pop_vc1) 
+		.valid_in_VC0(pop_vc0),
+		.valid_in_VC1(pop_vc1),// (pop_vc1) 
 		.data_in_VC0(Fifo_Data_out_VC0),
 		.data_in_VC1(Fifo_Data_out_VC1),
 		.dataout(dataout_VCs),
@@ -156,7 +156,7 @@ Demux_D0_D1 Demux_D0_D1 (	.clk(clk),
 fifo #(.N(2), .M(4), .ADDR_WIDTH(4)) D0Fifo (		.clk(clk),
 						        .reset_L(reset_L),
 							.push(push_D0),
-							.pop(push_D0),
+							.pop(pop_D0),
 							.Fifo_Data_in(data_in_D0),
 							.Fifo_Data_out(data_out0),
 							.Almost_Empty(Almost_Empty_D0),
@@ -171,7 +171,7 @@ fifo #(.N(2), .M(4), .ADDR_WIDTH(4)) D0Fifo (		.clk(clk),
 fifo #(.N(2), .M(4), .ADDR_WIDTH(4)) D1Fifo (	.clk(clk),
 						.reset_L(reset_L),
 						.push(push_D1),
-						.pop(push_D1),//Saca el dato apenas llega
+						.pop(pop_D0),//Saca el dato apenas llega
 						.Fifo_Data_in(data_in_D1),
 						.Fifo_Data_out(data_out1),
 						.Almost_Empty(Almost_Empty_D1),
@@ -207,26 +207,6 @@ fsmControl fsm_Control1 (	.clk(clk),
 			        .active_out(active_out),
                          	.idle_out(idle_out),
 			  	.error_out(error_out));
-
-//*******************************************************************************************//
-//Hace pop a DO o D1 apenas le llega algun dato
-always@(posedge clk) begin
-	if(reset_L) begin
-	pop2<= 0;
-	end
-	else if(push_D1)begin
-		pop2<=1;
-		if(!Fifo_Empty_MF) begin
-		pop2<=1;
-		end
-		else begin
-		pop2<=0;
-		end
-	end
-	else begin
-	pop2 <=0;
-	end
-end
 
 //*******************************************************************************************//
 //Hace pop a Fifo Main
@@ -266,6 +246,29 @@ always@(*) begin
 	pop_vc0 = ~Fifo_Empty_VC0 & ~pausaD0D1; 
 	pop_vc1 = Fifo_Empty_VC0 & ~pausaD0D1 & ~Fifo_Empty_VC1; 	
 	end		
+end
+
+//*******************************************************************************************//
+//Hace pop a DO o D1 apenas le llega algun dato
+/*always@(posedge clk) begin
+	if(reset_L) begin
+	pop_D0<= 0;
+	pop_D1<=0;
+	end
+	if(push_D0)begin
+        pop_D0<=1;
+        end 
+    if(push_D1) begin
+        pop_D1<=1;
+        end
+    else begin
+        pop_D0<= 0;
+        pop_D1<=0;
+    end
+end*/
+always@(*) begin
+    pop_D0 = ~Fifo_Empty_D0; 
+	pop_D1 = ~Fifo_Empty_D1;
 end
 
 //*******************************************************************************************//
