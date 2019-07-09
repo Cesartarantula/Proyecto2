@@ -1,91 +1,89 @@
-module probador (
+module probador (//Entradas
+				   output reg clk,      
+                   output reg reset_L, 
+                   output reg init,    
+			       output reg [5:0]  data_in_principal,  
+			       output reg push,                    
+			       output reg pop_D0,  
+			       output reg pop_D1,  
 
- output reg clk,
- output reg reset_L,
- output reg init,
-
- //output reg [1:0] umbralMF,
- //output reg [1:0] umbralD0,
- //output reg [1:0] umbralD1,
- //output reg [3:0] umbralVC0,
- //output reg [3:0] umbralVC1, 
-
- output reg [5:0] data_in_principal,
- output reg push,
- //output reg pop,
-
- input Pausa_MF,
- 
- input active_out_cond,
- input idle_out_cond, 
- input error_out_cond,
-
- input active_out_synth,
- input idle_out_synth, 
- input error_out_synth,
-
- input [5:0] data_out0,
- input [5:0] data_out1					
-);
+			// output reg [1:0] umbral_MF, 	
+	     		// output reg [3:0] umbral_VC0,	
+                   	// output reg [3:0] umbral_VC1, 	
+	               	// output reg [1:0] umbral_D0, 	
+                   	// output reg [1:0] umbral_D1,
+                
+				   //salidas
+              input active_out_synth,
+		      input error_out_synth,
+		      input idle_out_synth,
+		      input data_out0_synth,
+		      input data_out1_synth,
+			
+              input active_out_cond,
+		      input error_out_cond,
+		      input idle_out_cond,
+		      input data_out0_cond,
+		      input data_out1_cond);
    
-   	// Probador
-  	 initial begin
-   	$dumpfile("PCIE_trans.vcd");
-	$dumpvars();
+   
+// Probador
+ initial #0 clk <= 1; // inicia el reloj en 0.
+    always
+    #1 clk <= ~clk; // el reloj cambia cada ciclo
 
-	//1 Ciclo para reset de señales
-	repeat(1)begin
-   		@(posedge clk);
-      			reset_L<=0;
-		end
-	//El Reset en bajo
-	@(posedge clk);
-		reset_L<=1;;
+initial begin
+  $dumpfile("PCIE_trans.vcd");
+  $dumpvars;
 
-	//Probar estado init
-	repeat(1)begin
-   		@(posedge clk);
-      			init<=1;
-		end
+   init <=0 ;
+   pop_D0<=0;
+   pop_D1<=0;
+   push<=0;
+   data_in_principal<=0;
+   reset_L<=0;
 
-	//El Reset en init
-   	@(posedge clk);
-		init <=0;
-        #12
-    	/////////////////////////////////////////////////
-     	//4 PUSH a D0 
-     	//2 POP A D0 
-     	//2 POP A D1
-    	/////////////////////////////////////////////////
-	@(posedge clk); 	/// 1
-		push<=1;
-		data_in_principal<=6'b011011; // 0 1 B (VC0,D0,DATA)
+    #2;
+    reset_L<=1;
 
-	@(posedge clk);  	/// 2
-		data_in_principal<=6'b101101; // 1 0 D
+    #1;
+    init<=1;
+    
+    #2;
+    init<=0;
+
+
+    #7; // 1
+    push<=1;
+    data_in_principal<=6'h1B; // 0 1 B (VC0,D0,DATA)
+
+    #2;  // 2
+    data_in_principal<=6'h2D; // 1 0 D
       
-   	@(posedge clk); 	/// 3;
-      		data_in_principal<=6'b000011; // 0 0 3
+    #2; // 3;
+    data_in_principal<=6'h1B; // 0 0 3
 
-      	@(posedge clk);		/// 4
-      		data_in_principal<=6'b011010; // 0 1 A
+   #2;// 4
+    data_in_principal<=6'h1A; // 0 1 A
 
-	/////////////////////////////////////////////////D
+    /////////////////////////////////////////////////D
       
-   	@(posedge clk);
-		push<=0;
-      		data_in_principal<=6'b000000; // 0
-		//pop<=1;	
+   //#2; 
+    //  		data_in_principal<=6'b000000; // 0
+    
+    #2;
+		push<=0;	
+	//	pop_D0<=1;
 
-	@(posedge clk);
-		push<=0; 		
-		//pop<=1;
+	
+	//	pop_D0<=1;
 
 	/////////////////////////////////////////////////
-
+/*
 	@(posedge clk);		/// 5
 		push<=0;
-		//pop<=1; 
+		pop_D0<=0; 
+		pop_D1<=1;
 
 	/////////////////////////////////////////////////
      	//2 PUSH a D1
@@ -93,16 +91,19 @@ module probador (
 	//2 PUSH a D0  
     	/////////////////////////////////////////////////
      	@(posedge clk);		/// 6
-		//pop<=1; 
+		push<=1;
+		pop_D0<=0; 
+		pop_D1<=1;
+      		data_in_principal<=6'b111011; // 1 1 B
 
       	@(posedge clk)		/// 7
-		push<=1;
-		//pop<=0; 
+		//push<=1;
+		pop_D1<=0; 
 		data_in_principal<=6'b101011; // 1 1 B
 
      	@(posedge clk);		/// 8
       		//push<=1;
-		//pop<=0; 
+		pop_D1<=0; 
       		data_in_principal<=6'b001001;// 0 0 9
 
       	@(posedge clk);		/// 9
@@ -110,29 +111,13 @@ module probador (
       		data_in_principal<=6'b001010;// 0 0 10
 	/////////////////////////////////////////////////
 
-	@(posedge clk);		/// 10
-		//push<=0;
-		data_in_principal<=6'b111011; // 1 1 B
-	@(posedge clk);		/// 11
-		push<=0;
-	repeat(4)begin
-	@(posedge clk);		/// 11
-		//pop<=1;
-	end
-	@(posedge clk);		/// 11
-		//pop<=0;
-#100
+	@(posedge clk);		/// 5
+		push<=0;    */
+
+#60
    $finish;
 end  
-   
-   initial clk <= 0;
-   initial reset_L<=1;
-   initial init <=0 ;
-   //initial pop<=0;
-   initial push<=0;
-   initial data_in_principal<=0;
 
-   always #1 clk <= ~clk;
    
 
 endmodule 
