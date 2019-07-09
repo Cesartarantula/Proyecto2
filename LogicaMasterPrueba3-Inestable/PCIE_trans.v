@@ -255,16 +255,16 @@ end
 
 //*******************************************************************************************//
 //Determina pop VC0 y VC1
-always@(posedge clk) begin
+always@(*) begin
 	if(!reset_L) begin
-	pausaD0D1 <= 0;
-	pop_vc0 <= 0;
-	pop_vc1 <= 0;
+	pausaD0D1 = 0;
+	pop_vc0 = 0;
+	pop_vc1 = 0;
 	end
 	else begin //else begin // else if (pop)
-	pausaD0D1 <= Pausa_D0 | Pausa_D1;
-	pop_vc0 <= ~Fifo_Empty_VC0 & ~pausaD0D1; 
-	pop_vc1 <= Fifo_Empty_VC0 & ~pausaD0D1 & ~Fifo_Empty_VC1; 	
+	pausaD0D1 = Pausa_D0 | Pausa_D1;
+	pop_vc0 = ~Fifo_Empty_VC0 & ~pausaD0D1; 
+	pop_vc1 = Fifo_Empty_VC0 & ~pausaD0D1 & ~Fifo_Empty_VC1; 	
 	end		
 end
 
