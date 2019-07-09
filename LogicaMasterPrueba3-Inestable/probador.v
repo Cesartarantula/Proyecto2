@@ -17,14 +17,14 @@ module probador (//Entradas
               input active_out_synth,
 		      input error_out_synth,
 		      input idle_out_synth,
-		      input data_out0_synth,
-		      input data_out1_synth,
+		      input [5:0] data_out0_synth,
+		      input [5:0] data_out1_synth,
 			
               input active_out_cond,
 		      input error_out_cond,
 		      input idle_out_cond,
-		      input data_out0_cond,
-		      input data_out1_cond);
+		      input [5:0] data_out0_cond,
+		      input [5:0] data_out1_cond);
    
    
 // Probador

@@ -168,10 +168,10 @@ fifo #(.N(2), .M(4), .ADDR_WIDTH(4)) D0Fifo (		.clk(clk),
 							.Error_Fifo(Error_Fifo_D0));
 
 //Fifo destino D1
-fifo #(.N(2), .M(4), .ADDR_WIDTH(4)) D1Fifo (	.clk(clk),
+fifo #(.N(2), .M(2), .ADDR_WIDTH(4)) D1Fifo (	.clk(clk),
 						.reset_L(reset_L),
 						.push(push_D1),
-						.pop(pop_D0),//Saca el dato apenas llega
+						.pop(pop_D1),//Saca el dato apenas llega
 						.Fifo_Data_in(data_in_D1),
 						.Fifo_Data_out(data_out1),
 						.Almost_Empty(Almost_Empty_D1),
