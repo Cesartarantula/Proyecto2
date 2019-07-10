@@ -1,4 +1,13 @@
-module mux(input clk, 
+
+/*///////////////////////////////////////////////////////////////////////
+Mux funciona como round robin, le da prioridad de paso a los datos 
+validos provenientes de VC0.
+
+Los datos de salida no se encuntran atrasados respecto a los datos de 
+entrada
+///////////////////////////////////////////////////////////////////////*/
+
+module mux(  input clk, 
 			 input reset_L,
 			 input valid_in_VC0, //Señal de pop proveniente del fifo
 			 input valid_in_VC1,	
@@ -8,8 +17,11 @@ module mux(input clk,
 			 output reg valid_out); // Le indica al demux anterior a
 									// D0 y D1 que transfiere datos
 
-    //Registros Internos
-	reg selectorL1;
+//Registros Internos
+reg selectorL1;
+
+///////////////////////////////////////////////////////////////////////*/
+// Logica selector datos de salida
 
 always @(*) begin
 	if(!valid_in_VC0 && valid_in_VC1)
@@ -19,6 +31,9 @@ always @(*) begin
 	end 
 	
 end
+
+///////////////////////////////////////////////////////////////////////*/
+// Logica valores validos de salida del mux
 
 	always @(posedge clk) begin
 		if((!reset_L))begin
@@ -40,3 +55,8 @@ end
 	end
 
 endmodule
+
+// Fin module mux
+///////////////////////////////////////////////////////////////////////*/
+
+
