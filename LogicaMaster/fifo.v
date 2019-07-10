@@ -48,8 +48,8 @@ always@(posedge clk) begin
 	push_int <=0;
 	pop_int <=0;
 	Fifo_Data_in_int <=0;
-	//rd_ptr<=0;
-	//wr_ptr<=0;
+	rd_ptr_int<=0;
+	wr_ptr_int<=0;
 	end
 	else begin
 	push_int <=push;
