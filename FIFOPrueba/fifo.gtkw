@@ -1,15 +1,15 @@
 [*]
 [*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
-[*] Wed Jul 10 15:09:21 2019
+[*] Wed Jul 10 16:26:57 2019
 [*]
 [dumpfile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/FIFOPrueba/fifo.vcd"
-[dumpfile_mtime] "Wed Jul 10 15:03:40 2019"
-[dumpfile_size] 67204
+[dumpfile_mtime] "Wed Jul 10 16:25:11 2019"
+[dumpfile_size] 78797
 [savefile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/FIFOPrueba/fifo.gtkw"
 [timestart] 0
 [size] 1278 719
 [pos] -1 -1
-*-33.954338 13000000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-33.954338 19000000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] testbench.
 [treeopen] testbench.fifo1.
 [treeopen] testbench.fifo1Synth.

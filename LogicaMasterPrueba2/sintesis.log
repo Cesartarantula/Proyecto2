@@ -7688,6 +7688,6 @@ Removed 0 unused cells and 537 unused wires.
 Dumping module `\PCIE_trans'.
 
 End of script. Logfile hash: b15b35707f
-CPU: user 3.67s system 0.02s, MEM: 20.51 MB total, 15.96 MB resident
+CPU: user 3.52s system 0.04s, MEM: 20.51 MB total, 15.95 MB resident
 Yosys 0.7 (git sha1 61f6811, gcc 6.2.0-11ubuntu1 -O2 -fdebug-prefix-map=/build/yosys-zWLHjG/yosys-0.7=. -fstack-protector-strong -fPIC -Os)
-Time spent: 23% 16x opt_merge (0 sec), 22% 16x opt_expr (0 sec), ...
+Time spent: 22% 16x opt_merge (0 sec), 22% 16x opt_expr (0 sec), ...

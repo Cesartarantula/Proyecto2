@@ -25,7 +25,7 @@ module fifo # ( parameter N=4, parameter M=2, parameter ADDR_WIDTH=16) // ( para
 );
 
 	//Registros Internos
-	reg [N-1:0] wr_ptr, rd_ptr;  	// dirección de escribir,  // dirección de lectura
+	reg [N-1:0] wr_ptr, rd_ptr, rd_ptr_int, wr_ptr_int;  	// dirección de escribir,  // dirección de lectura
 	reg [M:0] num_mem;  		// contador de control
 
 	reg push_int, pop_int;
@@ -40,19 +40,23 @@ dual_port_memory  #(.DATA_WIDTH(6), .ADDR_WIDTH(2), .MEM_SIZE(3)) memoria
 	       .iReadEnable		(pop_int),
 	       .iWriteEnable		(push_int), 
 	       .iDataIn			(Fifo_Data_in_int),
-	       .iReadAddress		(rd_ptr),
-	       .iWriteAddress		(wr_ptr));
+	       .iReadAddress		(rd_ptr_int),
+	       .iWriteAddress		(wr_ptr_int));
 
 always@(posedge clk) begin
 	if(!reset_L) begin
 	push_int <=0;
 	pop_int <=0;
 	Fifo_Data_in_int <=0;
+	//rd_ptr<=0;
+	//wr_ptr<=0;
 	end
 	else begin
 	push_int <=push;
 	pop_int <=pop;
 	Fifo_Data_in_int <=Fifo_Data_in;
+	rd_ptr_int<=rd_ptr;
+	wr_ptr_int<=wr_ptr;
 	end
 end
 
@@ -322,24 +326,28 @@ always @(posedge clk) begin
 		rd_ptr<=0;
 		num_mem<=0;
 	end
- 	else if (push) begin
-                    num_mem<=num_mem+1;
-                    wr_ptr<=wr_ptr+1;
-		    if (num_mem==4) begin
-                    			num_mem<=num_mem;
-        	    end 
-        end 
-   	else if (pop) begin
-                    num_mem<=num_mem-1;
-                    rd_ptr<= rd_ptr+1;
-		    if (num_mem==0) begin
-                    			num_mem<=num_mem;
-        	    end
-        end
-        else if ((push) && (pop)) begin
+	else if (push && pop) begin
 		num_mem<=num_mem;
 		wr_ptr<= wr_ptr+1;
 		rd_ptr<= rd_ptr+1;
+        end
+ 	else if (push) begin
+			if (num_mem==4) begin
+                    			num_mem<=num_mem;
+ 			end
+			else begin 
+                    		num_mem<=num_mem+1;
+                    		wr_ptr<=wr_ptr+1;
+		    	end
+        end 
+   	else if (pop) begin
+                	    if (num_mem==0) begin
+                    			num_mem<=num_mem;
+        	    	    end
+			    else begin 
+                    		    	num_mem<=num_mem-1;
+                    			rd_ptr<= rd_ptr+1;
+		    	    end
         end
 	else begin
 		num_mem<=num_mem;
