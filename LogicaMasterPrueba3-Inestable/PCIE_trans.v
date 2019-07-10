@@ -14,7 +14,8 @@ module PCIE_trans (	//Entradas
                    	input init,    		//Señal de init proveniente del probador
 			input [5:0]  data_in_principal,  //datos de entrada
 			input push,    		//Señal de push que envia el probador                 
-			//input pop,  		//Señal de pop 
+			input pop_D0, 
+			input pop_D1, 		//Señal de pop 
 
 			//Salidas
 			output [5:0] data_out0, //Salida canal destino cero
@@ -62,9 +63,9 @@ wire [2:0] Umbral_D1;
 reg Pausa_VC_id,pop_MF;
 
 
-reg pop_D0, pop_D1, pausaD0D1, pop_vc0, pop_vc1, FIFO_error, FIFO_empty;
+reg  pausaD0D1, pop_vc0, pop_vc1, FIFO_error, FIFO_empty;
 
-
+//pop_D0, pop_D1
 
 //*******************************************************************************************//
 //Instanciando modulos
@@ -110,8 +111,8 @@ fifo #(.N(4), .M(2), .ADDR_WIDTH(16)) VC0Fifo (.clk(clk),
 						                       .Pausa(Pausa_VC0),
 						                       .Fifo_Empty(Fifo_Empty_VC0),
 						                       .Fifo_Full(Fifo_Full_VC0),
-						                       .Error_Fifo(Error_Fifo_VC0),
-								       .valid_out(valid_out_VC0)); 
+						                       .Error_Fifo(Error_Fifo_VC0));
+								       //.valid_out(valid_out_VC0)); 
 
 //VC1: FIFO (6bitsx16)
 fifo #(.N(4), .M(2), .ADDR_WIDTH(16)) VC1Fifo (		.clk(clk),
@@ -126,8 +127,8 @@ fifo #(.N(4), .M(2), .ADDR_WIDTH(16)) VC1Fifo (		.clk(clk),
 						        .Pausa(Pausa_VC1),
 						        .Fifo_Empty(Fifo_Empty_VC1),
 						        .Fifo_Full(Fifo_Full_VC1),
-						        .Error_Fifo(Error_Fifo_VC1),
-							.valid_out(valid_out_VC1));
+						        .Error_Fifo(Error_Fifo_VC1));
+							//.valid_out(valid_out_VC1));
 
 // Multiplexor posterior a VC0 y VC1
 //Tiene una funcion similar a un Round Robin, prioritiza la transferencia
@@ -196,7 +197,7 @@ fifo #(.N(2), .M(2), .ADDR_WIDTH(4)) D1Fifo (	.clk(clk),
 fsmControl fsm_Control1 (	.clk(clk),
                          	.reset_L(reset_L),
                          	.init(init),
-             	         	.Umbral_MF(Almost_Empty_MF), 	
+             	         	.Umbral_MF(Umbral_MF), 	
 	     			.Umbral_VC0(Umbral_VC0),	
                          	.Umbral_VC1(Umbral_VC1), 	
 	                  	.Umbral_D0(Umbral_D0), 	
@@ -266,10 +267,21 @@ end
         pop_D1<=0;
     end
 end*/
-always@(*) begin
-    pop_D0 = ~Fifo_Empty_D0; 
-	pop_D1 = ~Fifo_Empty_D1;
-end
+//always@(*) begin
+  //  pop_D0 = ~Fifo_Empty_D0; 
+	//pop_D1 = ~Fifo_Empty_D1;
+//end
+
+//always@(posedge clk) begin
+//	if(!reset_L) begin
+  //  		pop_D0 = 0; 
+	//	pop_D1 = 0;
+	//end
+	//else begin
+	//pop_D0 = 0; 
+	//pop_D1 = 0;
+	//end
+//end
 
 //*******************************************************************************************//
 //Transfiere FIFO_error's y FIFO_empty's la maquina de estados, 

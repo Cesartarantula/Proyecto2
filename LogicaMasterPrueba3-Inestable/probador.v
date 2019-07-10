@@ -65,7 +65,26 @@ initial begin
 
    #2;// 4
     data_in_principal<=6'h1A; // 0 1 A
+    
+    #2;
+    data_in_principal<=6'h07;
 
+    
+    #2;
+    data_in_principal<=6'h19;
+    
+    #2;
+    data_in_principal<=6'h33;
+    
+    #2;
+    data_in_principal<=6'h22;
+    
+    #2;
+    data_in_principal<=6'h25;
+    
+    #2;
+    data_in_principal<=6'h2E;
+    
     /////////////////////////////////////////////////D
       
    //#2; 
@@ -76,8 +95,14 @@ initial begin
 	//	pop_D0<=1;
 
 	
-	//	pop_D0<=1;
+	#2;
 
+
+   	pop_D1<=1;
+
+	#14;
+	//	pop_D0<=1;
+	  pop_D0<=1;
 	/////////////////////////////////////////////////
 /*
 	@(posedge clk);		/// 5

@@ -11,6 +11,8 @@ module testbench();
    wire	reset_L;		// From probador.v
    wire	init;			// From probador.v
 
+   wire	pop_D0, pop_D1 ;
+
    wire [1:0]	umbral_MF;	
    wire [3:0]	umbral_VCO;	
    wire [3:0]	umbral_VC1;
@@ -46,6 +48,8 @@ module testbench();
 		      .init			(init),
 		      .data_in_principal	(data_in_principal),
 		      .push			(push),
+			.pop_D0 			(pop_D0),
+		      .pop_D1			(pop_D1),
 		      //.pop			(pop),
 		     // .umbral		(umbral),
 		      // Inputs Cond
@@ -74,7 +78,8 @@ module testbench();
 		      //.umbral		(umbral),
 		      // Inputs Cond
 
-		      //.pop 			(pop),		
+		      .pop_D0 			(pop_D0),
+		      .pop_D1			(pop_D1),		
 	              .active_out		(active_out_cond),
 		      .error_out		(error_out_cond),
 		      .idle_out			(idle_out_cond),
@@ -89,6 +94,8 @@ module testbench();
 		      .data_in_principal	(data_in_principal),
 		      .push			(push),
 		      //.pop			(pop),
+			.pop_D0 			(pop_D0),
+		      .pop_D1			(pop_D1),
 		      .Pausa_MF			(Pausa_MF_synth),
 		      //.umbral		(umbral),
 		      // Inputs Cond
