@@ -1,25 +1,39 @@
 [*]
 [*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
-[*] Tue Jul  9 20:43:37 2019
+[*] Wed Jul 10 22:22:19 2019
 [*]
-[dumpfile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/LogicaMasterPrueba3-Inestable/PCIE_trans.vcd"
-[dumpfile_mtime] "Tue Jul  9 20:40:52 2019"
-[dumpfile_size] 108019
-[savefile] "/home/cesar/Desktop/DigitalesII/Proyecto2/Proyecto2/LogicaMasterPrueba3-Inestable/conexionfinal.gtkw"
+[dumpfile] "/home/xu/Downloads/LogicaMaster_sintesis_jerarquica/PCIE_trans.vcd"
+[dumpfile_mtime] "Wed Jul 10 22:20:17 2019"
+[dumpfile_size] 373055
+[savefile] "/home/xu/Downloads/LogicaMaster_sintesis_jerarquica/conexionfinal.gtkw"
 [timestart] 0
-[size] 1278 719
+[size] 1366 719
 [pos] -1 -1
-*-34.022358 36000000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-33.534782 22000000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] testbench.
-[treeopen] testbench.transac1.
 [treeopen] testbench.transac1.D0Fifo.
 [treeopen] testbench.transac1.D1Fifo.
 [treeopen] testbench.transac1.MainFifo.
 [treeopen] testbench.transac1.VC0Fifo.
+[treeopen] testbench.transacSynth.
 [sst_width] 196
-[signals_width] 223
+[signals_width] 230
 [sst_expanded] 1
 [sst_vpaned_height] 208
+@200
+-Conductual Vs Estructural
+@22
+[color] 3
+testbench.transac1.data_in_principal[5:0]
+[color] 3
+testbench.transac1.data_out0[5:0]
+[color] 3
+testbench.transac1.data_out1[5:0]
+@23
+testbench.transacSynth.data_in_principal[5:0]
+@22
+testbench.transacSynth.data_out0[5:0]
+testbench.transacSynth.data_out1[5:0]
 @200
 -PCIEtrans
 @22
@@ -219,7 +233,149 @@ testbench.transac1.D1Fifo.Fifo_Empty
 testbench.transac1.D1Fifo.Fifo_Full
 testbench.transac1.D1Fifo.Error_Fifo
 testbench.transac1.D1Fifo.Pausa
-@25
+@24
 testbench.transac1.D1Fifo.Umbral[2:0]
+@200
+-Sintitizado
+@22
+testbench.transacSynth.data_in_principal[5:0]
+testbench.transacSynth.data_out0[5:0]
+testbench.transacSynth.data_out1[5:0]
+@200
+-FSM sintetizada
+@28
+testbench.transacSynth.fsm_Control1.init
+testbench.transacSynth.fsm_Control1.Umbral_D0[1:0]
+testbench.transacSynth.fsm_Control1.Umbral_D1[1:0]
+testbench.transacSynth.fsm_Control1.Umbral_MF[1:0]
+@22
+testbench.transacSynth.fsm_Control1.Umbral_VC0[3:0]
+testbench.transacSynth.fsm_Control1.Umbral_VC1[3:0]
+testbench.transacSynth.fsm_Control1.nxt_state[4:0]
+testbench.transacSynth.fsm_Control1.state[4:0]
+testbench.transacSynth.fsm_Control1.Umbrales_I[13:0]
+testbench.transacSynth.fsm_Control1.FIFO_empty[4:0]
+testbench.transacSynth.fsm_Control1.FIFO_error[4:0]
+@28
+testbench.transacSynth.fsm_Control1.active_out
+testbench.transacSynth.fsm_Control1.error_out
+testbench.transacSynth.fsm_Control1.idle_out
+@200
+-Main Fifo synt
+@28
+testbench.transacSynth.MainFifo.Almost_Empty
+testbench.transacSynth.MainFifo.Almost_Full
+testbench.transacSynth.MainFifo.Error_Fifo
+@22
+testbench.transacSynth.MainFifo.Fifo_Data_out[5:0]
+@28
+testbench.transacSynth.MainFifo.Fifo_Empty
+testbench.transacSynth.MainFifo.Fifo_Full
+testbench.transacSynth.MainFifo.Pausa
+testbench.transacSynth.MainFifo.Umbral[2:0]
+testbench.transacSynth.MainFifo.num_mem[2:0]
+testbench.transacSynth.MainFifo.wr_ptr[1:0]
+@200
+-Demux synt
+@28
+testbench.transacSynth.demux_Synth1.valid_0
+testbench.transacSynth.demux_Synth1.valid_1
+testbench.transacSynth.demux_Synth1.valid_in
+@22
+testbench.transacSynth.demux_Synth1.data_in[5:0]
+testbench.transacSynth.demux_Synth1.dataout0[5:0]
+testbench.transacSynth.demux_Synth1.dataout1[5:0]
+@200
+-VC0 synt
+@28
+testbench.transacSynth.VC0Fifo.Almost_Empty
+testbench.transacSynth.VC0Fifo.Almost_Full
+testbench.transacSynth.VC0Fifo.Error_Fifo
+@22
+testbench.transacSynth.VC0Fifo.Fifo_Data_in[5:0]
+testbench.transacSynth.VC0Fifo.Fifo_Data_out[5:0]
+@28
+testbench.transacSynth.VC0Fifo.Fifo_Empty
+testbench.transacSynth.VC0Fifo.Fifo_Full
+testbench.transacSynth.VC0Fifo.num_mem[2:0]
+@22
+testbench.transacSynth.VC0Fifo.Umbral[4:0]
+@28
+testbench.transacSynth.VC0Fifo.Pausa
+@22
+testbench.transacSynth.VC0Fifo.Umbral[4:0]
+@200
+-VC1 synt
+@28
+testbench.transacSynth.VC1Fifo.Almost_Empty
+testbench.transacSynth.VC1Fifo.Almost_Full
+testbench.transacSynth.VC1Fifo.Error_Fifo
+@22
+testbench.transacSynth.VC1Fifo.Fifo_Data_in[5:0]
+testbench.transacSynth.VC1Fifo.Fifo_Data_out[5:0]
+@28
+testbench.transacSynth.VC1Fifo.Fifo_Empty
+testbench.transacSynth.VC1Fifo.Fifo_Full
+@22
+testbench.transacSynth.VC1Fifo.Umbral[4:0]
+@28
+testbench.transacSynth.VC1Fifo.num_mem[2:0]
+testbench.transacSynth.VC1Fifo.Pausa
+@200
+-Mux synt
+@28
+testbench.transacSynth.mux_Synth1.valid_in_VC0
+testbench.transacSynth.mux_Synth1.valid_in_VC1
+testbench.transacSynth.mux_Synth1.valid_out
+@22
+testbench.transacSynth.mux_Synth1.data_in_VC0[5:0]
+testbench.transacSynth.mux_Synth1.data_in_VC1[5:0]
+testbench.transacSynth.mux_Synth1.dataout[5:0]
+@200
+-Demux D0 D1 synt
+@28
+testbench.transacSynth.Demux_Synth_D0_D1_Synth.valid_in
+testbench.transacSynth.Demux_Synth_D0_D1_Synth.valid_0
+testbench.transacSynth.Demux_Synth_D0_D1_Synth.valid_1
+@22
+testbench.transacSynth.Demux_Synth_D0_D1_Synth.data_in[5:0]
+testbench.transacSynth.Demux_Synth_D0_D1_Synth.dataout0[5:0]
+testbench.transacSynth.Demux_Synth_D0_D1_Synth.dataout1[5:0]
+@200
+-D0 syntyh
+@28
+testbench.transacSynth.D0Fifo.Almost_Empty
+testbench.transacSynth.D0Fifo.Almost_Full
+testbench.transacSynth.D0Fifo.Error_Fifo
+@22
+testbench.transacSynth.D0Fifo.Fifo_Data_in[5:0]
+testbench.transacSynth.D0Fifo.Fifo_Data_out[5:0]
+@28
+testbench.transacSynth.D0Fifo.Fifo_Empty
+testbench.transacSynth.D0Fifo.Fifo_Full
+testbench.transacSynth.D0Fifo.Pausa
+testbench.transacSynth.D0Fifo.Umbral[2:0]
+@22
+testbench.transacSynth.D0Fifo.num_mem[4:0]
+@28
+testbench.transacSynth.D0Fifo.pop
+testbench.transacSynth.D0Fifo.push
+@200
+-D1
+@28
+testbench.transacSynth.D1Fifo.Almost_Empty
+testbench.transacSynth.D1Fifo.Almost_Full
+testbench.transacSynth.D1Fifo.Error_Fifo
+@22
+testbench.transacSynth.D1Fifo.Fifo_Data_in[5:0]
+testbench.transacSynth.D1Fifo.Fifo_Data_out[5:0]
+@28
+testbench.transacSynth.D1Fifo.Fifo_Empty
+testbench.transacSynth.D1Fifo.Fifo_Full
+testbench.transacSynth.D1Fifo.Pausa
+testbench.transacSynth.D1Fifo.Umbral[2:0]
+testbench.transacSynth.D1Fifo.num_mem[2:0]
+testbench.transacSynth.D1Fifo.pop
+testbench.transacSynth.D1Fifo.push
 [pattern_trace] 1
 [pattern_trace] 0

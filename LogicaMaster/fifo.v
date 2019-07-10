@@ -25,11 +25,11 @@ module fifo # ( parameter N=4, parameter M=2, parameter ADDR_WIDTH=16) // ( para
 );
 
 	//Registros Internos
-	reg [N-1:0] wr_ptr, rd_ptr, rd_ptr_int, wr_ptr_int;  	// dirección de escribir,  // dirección de lectura
+	reg [N-1:0] wr_ptr, rd_ptr;// rd_ptr_int, wr_ptr_int;  	// dirección de escribir,  // dirección de lectura
 	reg [M:0] num_mem;  		// contador de control
 
-	reg push_int, pop_int;
-	reg [5:0] Fifo_Data_in_int;
+	//reg push_int, pop_int;
+	//reg [5:0] Fifo_Data_in_int;
 
 dual_port_memory  #(.DATA_WIDTH(6), .ADDR_WIDTH(2), .MEM_SIZE(3)) memoria
 (/*AUTOINST*/
@@ -37,13 +37,13 @@ dual_port_memory  #(.DATA_WIDTH(6), .ADDR_WIDTH(2), .MEM_SIZE(3)) memoria
 	       .oDataOut		(Fifo_Data_out),
 	       // Inputs
 	       .Clock			(clk),
-	       .iReadEnable		(pop_int),
-	       .iWriteEnable		(push_int), 
-	       .iDataIn			(Fifo_Data_in_int),
-	       .iReadAddress		(rd_ptr_int),
-	       .iWriteAddress		(wr_ptr_int));
+	       .iReadEnable		(pop),
+	       .iWriteEnable		(push), 
+	       .iDataIn			(Fifo_Data_in),
+	       .iReadAddress		(rd_ptr),
+	       .iWriteAddress		(wr_ptr));
 
-always@(posedge clk) begin
+/*always@(posedge clk) begin
 	if(!reset_L) begin
 	push_int <=0;
 	pop_int <=0;
@@ -58,7 +58,7 @@ always@(posedge clk) begin
 	rd_ptr_int<=rd_ptr;
 	wr_ptr_int<=wr_ptr;
 	end
-end
+end*/
 
 
 //Aqui se determina si el fifo esta lleno o no
