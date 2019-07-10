@@ -3,30 +3,30 @@
 //Definicion del fifo de 6 bit
 module fifo # ( parameter N=4, parameter M=2, parameter ADDR_WIDTH=16) // ( parameter N=4 , parameter ADDR_WIDTH=16) //
 (
-    //Entradas
-    input wire clk,			//viene del probador
-    input wire reset_L,			//viene del probador
-    input wire push,      		//Indica si se escribe un dato 	//push viene del probador
-    input wire pop,      		//Indica si se lee un dato  	//pull viene del probador
-    input wire [5:0] Fifo_Data_in, 	//Entrada de datos del FIFO viene del probador
+    	//Entradas
+	input wire clk,				//viene del probador
+	input wire reset_L,			//viene del probador
+	input wire push,      			//Indica si se escribe un dato 	//push viene del probador
+	input wire pop,      			//Indica si se lee un dato  	//pull viene del probador
+	input wire [5:0] Fifo_Data_in, 		//Entrada de datos del FIFO viene del probador
 
-    //Salidas
-    output [5:0] Fifo_Data_out,		//Salida de datos
+    	//Salidas
+    	output [5:0] Fifo_Data_out,		//Salida de datos
 
-   //Salidas de Control
-    output reg Almost_Empty,	//Indica el valor del UmbralA
-    output reg Almost_Full,	//Indica el valor del UmbralB
-    output reg [N:0] Umbral,     //Aqui se guarda el valor de Umbral
-    output reg Pausa,
-    output reg Fifo_Empty, 	//Indica si el FIFO esta vacio
-    output reg Fifo_Full, 	//Indica si el FIFO esta lleno
-    output reg Error_Fifo 	//Bit de error, se da cuando se da una senal de escritura con el fifo esta lleno 
-				//ó cuando se quiere hacer una lectura y el fifo esta empty
+   	//Salidas de Control
+    	output reg Almost_Empty,		//Indica el valor del UmbralA
+    	output reg Almost_Full,			//Indica el valor del UmbralB
+    	output reg [N:0] Umbral,     		//Aqui se guarda el valor de Umbral
+    	output reg Pausa,
+    	output reg Fifo_Empty, 			//Indica si el FIFO esta vacio
+    	output reg Fifo_Full, 			//Indica si el FIFO esta lleno
+    	output reg Error_Fifo 			//Bit de error, se da cuando se da una senal de escritura con el fifo esta lleno 
+						//ó cuando se quiere hacer una lectura y el fifo esta empty
 );
 
-//Registros Internos
-    reg [N-1:0] wr_ptr, rd_ptr;  // dirección de escribir,  // dirección de lectura
-    reg [M:0] num_mem;  // contador de control
+	//Registros Internos
+	reg [N-1:0] wr_ptr, rd_ptr;  	// dirección de escribir,  // dirección de lectura
+	reg [M:0] num_mem;  		// contador de control
 
 	reg push_int, pop_int;
 	reg [5:0] Fifo_Data_in_int;
@@ -86,15 +86,32 @@ always @(posedge clk) begin
             			Pausa <= 0;
             			Umbral <= num_mem;
 	    		end
-			else if(num_mem == 3) begin
+			else if (num_mem == 2) begin
             			Almost_Empty <= 0; 
-            			Almost_Full <= 1;
+            			Almost_Full <= 1; 
             			Fifo_Empty <= 0;
             			Fifo_Full <= 0; 
+            			Pausa <= 1;//Pausa anticipada.
+            			Umbral <= num_mem;
+	    		end
+			else if(num_mem == 3) begin
+            			Almost_Empty <= 0; 
+            			Almost_Full <= 0;
+            			Fifo_Empty <= 0;
+            			Fifo_Full <= 1; 
             			Pausa <= 1;
              			Umbral <= num_mem;
         		end
         		else if (num_mem == 4) begin
+				//Error_Fifo  <= 1;
+				Almost_Empty <= 0;
+				Almost_Full <= 0;
+            			Fifo_Empty <= 0;
+            			Pausa <= 1;
+            			Fifo_Full  <= 1;
+             			Umbral <= num_mem;
+            		end
+			else if (num_mem == 5) begin
 				//Error_Fifo  <= 1;
             			Almost_Empty <= 0;
             			Fifo_Empty <= 0;
@@ -308,10 +325,16 @@ always @(posedge clk) begin
  	else if (push) begin
                     num_mem<=num_mem+1;
                     wr_ptr<=wr_ptr+1;
+		    if (num_mem==4) begin
+                    			num_mem<=num_mem;
+        	    end 
         end 
    	else if (pop) begin
                     num_mem<=num_mem-1;
                     rd_ptr<= rd_ptr+1;
+		    if (num_mem==0) begin
+                    			num_mem<=num_mem;
+        	    end
         end
         else if ((push) && (pop)) begin
 		num_mem<=num_mem;
@@ -328,26 +351,26 @@ end
 //Determina si ocurrio un error.
 always @(posedge clk) begin
     if (M == 2) begin
-        if (num_mem == 5)begin
+        if (num_mem == 4 && push)begin
             Error_Fifo <= 1; 
-        end else
-        if (Almost_Empty == 1 && pop == 1 && push == 0) begin 
-            Error_Fifo <= 1;
+        end 
+	else if (num_mem == 0 && pop == 1 && push == 0) begin 
+            							Error_Fifo <= 1;
         end
         else begin
             Error_Fifo <= 0;
         end
     end
     else if (M == 4) begin
-        if (num_mem == 17)begin
+        if (num_mem == 16 && push)begin
             Error_Fifo <= 1; 
-        end else
-        if (pop == 1 && num_mem == 0) begin 
-            Error_Fifo <= 1;
+        end 
+	else if (num_mem == 0 && pop == 1 && push == 0) begin 
+            							Error_Fifo <= 1;
         end
         else begin
             Error_Fifo <= 0;
         end
-    end
+	end
 end
 endmodule
